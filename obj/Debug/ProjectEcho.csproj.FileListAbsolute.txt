@@ -1,0 +1,11 @@
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\bin\Debug\ProjectEcho.exe.config
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\bin\Debug\ProjectEcho.exe
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\bin\Debug\ProjectEcho.pdb
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.csprojAssemblyReference.cache
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.Properties.Resources.resources
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.csproj.GenerateResource.cache
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.csproj.CoreCompileInputs.cache
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.exe
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.pdb
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.SettingsForm.resources
+C:\Users\ceseg\source\repos\jasminehn\ProjectEcho\obj\Debug\ProjectEcho.MainForm.resources
