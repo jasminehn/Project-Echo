@@ -19,8 +19,8 @@ namespace ProjectEcho
             InitializeComponent();
             contextPanels[0] = (mainMenuPanel);
             contextPanels[1] = (taskOnePanel);
-            contextPanels[2] = (taskTwoPanel);
-            contextPanels[3] = (taskThreePanel);
+            //contextPanels[2] = (taskTwoPanel);
+            //contextPanels[3] = (taskThreePanel);
 
             currentPanel = contextPanels[0];
             setPanelActive(0);

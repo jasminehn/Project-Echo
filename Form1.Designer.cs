@@ -40,13 +40,14 @@ namespace ProjectEcho
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.forwardButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.titlePanel = new System.Windows.Forms.Panel();
+            this.titleSubtitleLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.taskOnePanel = new System.Windows.Forms.Panel();
-            this.oP = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.reviewList = new System.Windows.Forms.CheckedListBox();
             this.taskThreeList = new System.Windows.Forms.CheckedListBox();
             this.taskTwoList = new System.Windows.Forms.CheckedListBox();
@@ -56,33 +57,36 @@ namespace ProjectEcho
             this.taskThreeButton = new System.Windows.Forms.Button();
             this.taskTwoButton = new System.Windows.Forms.Button();
             this.taskOneButton = new System.Windows.Forms.Button();
-            this.titlePanel = new System.Windows.Forms.Panel();
-            this.titleSubtitleLabel = new System.Windows.Forms.Label();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.taskThreePanel = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.vScrollBar3 = new System.Windows.Forms.VScrollBar();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.taskTwoPanel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.titlePanel.SuspendLayout();
             this.mainMenuPanel.SuspendLayout();
             this.taskOnePanel.SuspendLayout();
-            this.titlePanel.SuspendLayout();
-            this.taskThreePanel.SuspendLayout();
-            this.taskTwoPanel.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextPanel
             // 
+            this.contextPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.contextPanel.AutoSize = true;
             this.contextPanel.BackColor = System.Drawing.Color.DarkBlue;
             this.contextPanel.Controls.Add(this.superTitleLabel);
             this.contextPanel.Controls.Add(this.instructionsButton);
@@ -90,7 +94,7 @@ namespace ProjectEcho
             this.contextPanel.Controls.Add(this.helpButton);
             this.contextPanel.Location = new System.Drawing.Point(0, 0);
             this.contextPanel.Name = "contextPanel";
-            this.contextPanel.Size = new System.Drawing.Size(1015, 33);
+            this.contextPanel.Size = new System.Drawing.Size(1015, 34);
             this.contextPanel.TabIndex = 0;
             // 
             // superTitleLabel
@@ -108,6 +112,7 @@ namespace ProjectEcho
             // 
             // instructionsButton
             // 
+            this.instructionsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.instructionsButton.BackColor = System.Drawing.Color.Snow;
             this.instructionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.instructionsButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +125,7 @@ namespace ProjectEcho
             // 
             // settingsButton
             // 
+            this.settingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
             this.settingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settingsButton.BackgroundImage")));
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -134,6 +140,7 @@ namespace ProjectEcho
             // 
             // helpButton
             // 
+            this.helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.helpButton.BackColor = System.Drawing.Color.White;
             this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,13 +153,14 @@ namespace ProjectEcho
             // 
             // mainPanel
             // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.BackColor = System.Drawing.Color.White;
-            this.mainPanel.Controls.Add(this.panel1);
-            this.mainPanel.Controls.Add(this.mainMenuPanel);
-            this.mainPanel.Controls.Add(this.titlePanel);
-            this.mainPanel.Controls.Add(this.taskThreePanel);
-            this.mainPanel.Controls.Add(this.taskTwoPanel);
             this.mainPanel.Controls.Add(this.taskOnePanel);
+            this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.titlePanel);
+            this.mainPanel.Controls.Add(this.mainMenuPanel);
             this.mainPanel.Location = new System.Drawing.Point(12, 39);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(991, 623);
@@ -160,6 +168,8 @@ namespace ProjectEcho
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.returnToMenuButton);
             this.panel1.Controls.Add(this.forwardButton);
             this.panel1.Controls.Add(this.backButton);
@@ -170,6 +180,7 @@ namespace ProjectEcho
             // 
             // returnToMenuButton
             // 
+            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
             this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
             this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -186,6 +197,7 @@ namespace ProjectEcho
             // 
             // forwardButton
             // 
+            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.forwardButton.BackColor = System.Drawing.Color.Transparent;
             this.forwardButton.FlatAppearance.BorderSize = 0;
             this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -200,6 +212,7 @@ namespace ProjectEcho
             // 
             // backButton
             // 
+            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.backButton.AutoSize = true;
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatAppearance.BorderSize = 0;
@@ -212,6 +225,43 @@ namespace ProjectEcho
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Visible = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // titlePanel
+            // 
+            this.titlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.titlePanel.Controls.Add(this.titleSubtitleLabel);
+            this.titlePanel.Controls.Add(this.titleLabel);
+            this.titlePanel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlePanel.Location = new System.Drawing.Point(15, 16);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Size = new System.Drawing.Size(961, 54);
+            this.titlePanel.TabIndex = 0;
+            this.titlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.titlePanel_Paint);
+            // 
+            // titleSubtitleLabel
+            // 
+            this.titleSubtitleLabel.AutoSize = true;
+            this.titleSubtitleLabel.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleSubtitleLabel.Location = new System.Drawing.Point(6, 33);
+            this.titleSubtitleLabel.Name = "titleSubtitleLabel";
+            this.titleSubtitleLabel.Size = new System.Drawing.Size(584, 18);
+            this.titleSubtitleLabel.TabIndex = 1;
+            this.titleSubtitleLabel.Text = "Please complete the following tasks. Click each button and complete the subtasks." +
+    "";
+            this.titleSubtitleLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(4, 4);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(130, 28);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "WELCOME";
+            this.titleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // mainMenuPanel
             // 
@@ -232,60 +282,51 @@ namespace ProjectEcho
             // 
             // taskOnePanel
             // 
-            this.taskOnePanel.Controls.Add(this.oP);
-            this.taskOnePanel.Controls.Add(this.label4);
-            this.taskOnePanel.Controls.Add(this.vScrollBar1);
-            this.taskOnePanel.Controls.Add(this.checkedListBox3);
-            this.taskOnePanel.Controls.Add(this.label1);
+            this.taskOnePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskOnePanel.AutoScroll = true;
+            this.taskOnePanel.Controls.Add(this.checkedListBox1);
+            this.taskOnePanel.Controls.Add(this.tabControl1);
+            this.taskOnePanel.Controls.Add(this.label6);
             this.taskOnePanel.Location = new System.Drawing.Point(15, 81);
             this.taskOnePanel.Name = "taskOnePanel";
             this.taskOnePanel.Size = new System.Drawing.Size(961, 457);
-            this.taskOnePanel.TabIndex = 11;
+            this.taskOnePanel.TabIndex = 17;
             this.taskOnePanel.Visible = false;
             // 
-            // oP
+            // label5
             // 
-            this.oP.AutoSize = true;
-            this.oP.Location = new System.Drawing.Point(6, 22);
-            this.oP.Name = "oP";
-            this.oP.Size = new System.Drawing.Size(35, 13);
-            this.oP.TabIndex = 16;
-            this.oP.Text = "label2";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(322, 21);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Part A. Context for Learning Information";
             // 
-            // label4
+            // checkedListBox2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(856, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = resources.GetString("label4.Text");
+            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox2.Enabled = false;
+            this.checkedListBox2.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(7, 27);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(682, 356);
+            this.checkedListBox2.TabIndex = 14;
             // 
-            // vScrollBar1
+            // label6
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(921, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(23, 460);
-            this.vScrollBar1.TabIndex = 15;
-            // 
-            // checkedListBox3
-            // 
-            this.checkedListBox3.Enabled = false;
-            this.checkedListBox3.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(6, 50);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(302, 148);
-            this.checkedListBox3.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(868, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(868, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = resources.GetString("label6.Text");
             // 
             // reviewList
             // 
@@ -390,159 +431,136 @@ namespace ProjectEcho
             this.taskOneButton.Text = "Review";
             this.taskOneButton.UseVisualStyleBackColor = false;
             // 
-            // titlePanel
+            // tabControl1
             // 
-            this.titlePanel.Controls.Add(this.titleSubtitleLabel);
-            this.titlePanel.Controls.Add(this.titleLabel);
-            this.titlePanel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titlePanel.Location = new System.Drawing.Point(15, 16);
-            this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(961, 54);
-            this.titlePanel.TabIndex = 0;
-            this.titlePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.titlePanel_Paint);
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(9, 25);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(703, 419);
+            this.tabControl1.TabIndex = 17;
             // 
-            // titleSubtitleLabel
+            // tabPage1
             // 
-            this.titleSubtitleLabel.AutoSize = true;
-            this.titleSubtitleLabel.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleSubtitleLabel.Location = new System.Drawing.Point(6, 33);
-            this.titleSubtitleLabel.Name = "titleSubtitleLabel";
-            this.titleSubtitleLabel.Size = new System.Drawing.Size(584, 18);
-            this.titleSubtitleLabel.TabIndex = 1;
-            this.titleSubtitleLabel.Text = "Please complete the following tasks. Click each button and complete the subtasks." +
-    "";
-            this.titleSubtitleLabel.Click += new System.EventHandler(this.label2_Click);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.checkedListBox2);
+            this.tabPage1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(695, 388);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Part A";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // titleLabel
+            // tabPage2
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(4, 4);
-            this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(130, 28);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "WELCOME";
-            this.titleLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // taskThreePanel
-            // 
-            this.taskThreePanel.Controls.Add(this.label8);
-            this.taskThreePanel.Controls.Add(this.label9);
-            this.taskThreePanel.Controls.Add(this.vScrollBar3);
-            this.taskThreePanel.Controls.Add(this.checkedListBox2);
-            this.taskThreePanel.Controls.Add(this.label10);
-            this.taskThreePanel.Location = new System.Drawing.Point(15, 81);
-            this.taskThreePanel.Name = "taskThreePanel";
-            this.taskThreePanel.Size = new System.Drawing.Size(961, 460);
-            this.taskThreePanel.TabIndex = 17;
-            this.taskThreePanel.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 201);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(856, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = resources.GetString("label9.Text");
-            // 
-            // vScrollBar3
-            // 
-            this.vScrollBar3.Location = new System.Drawing.Point(938, 0);
-            this.vScrollBar3.Name = "vScrollBar3";
-            this.vScrollBar3.Size = new System.Drawing.Size(23, 460);
-            this.vScrollBar3.TabIndex = 15;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.Enabled = false;
-            this.checkedListBox2.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(6, 50);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(302, 148);
-            this.checkedListBox2.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(868, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = resources.GetString("label10.Text");
-            // 
-            // taskTwoPanel
-            // 
-            this.taskTwoPanel.Controls.Add(this.label5);
-            this.taskTwoPanel.Controls.Add(this.label6);
-            this.taskTwoPanel.Controls.Add(this.vScrollBar2);
-            this.taskTwoPanel.Controls.Add(this.checkedListBox1);
-            this.taskTwoPanel.Controls.Add(this.label7);
-            this.taskTwoPanel.Location = new System.Drawing.Point(15, 81);
-            this.taskTwoPanel.Name = "taskTwoPanel";
-            this.taskTwoPanel.Size = new System.Drawing.Size(961, 460);
-            this.taskTwoPanel.TabIndex = 17;
-            this.taskTwoPanel.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 201);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(856, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = resources.GetString("label6.Text");
-            // 
-            // vScrollBar2
-            // 
-            this.vScrollBar2.Location = new System.Drawing.Point(938, 0);
-            this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(23, 460);
-            this.vScrollBar2.TabIndex = 15;
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(695, 388);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Part B";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.Enabled = false;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(6, 50);
+            this.checkedListBox1.Location = new System.Drawing.Point(718, 80);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(302, 148);
-            this.checkedListBox1.TabIndex = 14;
+            this.checkedListBox1.Size = new System.Drawing.Size(225, 364);
+            this.checkedListBox1.TabIndex = 18;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(695, 388);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Part C";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(695, 388);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Part D";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.label7);
+            this.tabPage5.Location = new System.Drawing.Point(4, 27);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(695, 388);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Part E";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 21);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Part B. Plans for Learning Segment";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 21);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Part C. Instructional Materials";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(3, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 21);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Part D. Assessments";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 9);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(868, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = resources.GetString("label7.Text");
+            this.label7.Size = new System.Drawing.Size(238, 21);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Part E. Planning Commentary";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1015, 674);
@@ -557,17 +575,25 @@ namespace ProjectEcho
             this.mainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.titlePanel.ResumeLayout(false);
+            this.titlePanel.PerformLayout();
             this.mainMenuPanel.ResumeLayout(false);
             this.mainMenuPanel.PerformLayout();
             this.taskOnePanel.ResumeLayout(false);
             this.taskOnePanel.PerformLayout();
-            this.titlePanel.ResumeLayout(false);
-            this.titlePanel.PerformLayout();
-            this.taskThreePanel.ResumeLayout(false);
-            this.taskThreePanel.PerformLayout();
-            this.taskTwoPanel.ResumeLayout(false);
-            this.taskTwoPanel.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -586,7 +612,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Button taskThreeButton;
         private System.Windows.Forms.Button taskTwoButton;
         private System.Windows.Forms.Button task1Button;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckedListBox taskOneList;
         private System.Windows.Forms.CheckedListBox taskThreeList;
@@ -598,21 +623,19 @@ namespace ProjectEcho
         private System.Windows.Forms.Button forwardButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Panel taskOnePanel;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label oP;
-        private System.Windows.Forms.Panel taskThreePanel;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.VScrollBar vScrollBar3;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel taskTwoPanel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label7;
     }
 }
