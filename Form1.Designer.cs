@@ -152,6 +152,7 @@ namespace ProjectEcho
             this.mainPanel.Controls.Add(this.titlePanel);
             this.mainPanel.Controls.Add(this.taskThreePanel);
             this.mainPanel.Controls.Add(this.taskTwoPanel);
+            this.mainPanel.Controls.Add(this.taskOnePanel);
             this.mainPanel.Location = new System.Drawing.Point(12, 39);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(991, 623);
@@ -223,7 +224,6 @@ namespace ProjectEcho
             this.mainMenuPanel.Controls.Add(this.taskThreeButton);
             this.mainMenuPanel.Controls.Add(this.taskTwoButton);
             this.mainMenuPanel.Controls.Add(this.taskOneButton);
-            this.mainMenuPanel.Controls.Add(this.taskOnePanel);
             this.mainMenuPanel.Location = new System.Drawing.Point(15, 81);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(958, 460);
@@ -237,9 +237,9 @@ namespace ProjectEcho
             this.taskOnePanel.Controls.Add(this.vScrollBar1);
             this.taskOnePanel.Controls.Add(this.checkedListBox3);
             this.taskOnePanel.Controls.Add(this.label1);
-            this.taskOnePanel.Location = new System.Drawing.Point(773, 387);
+            this.taskOnePanel.Location = new System.Drawing.Point(15, 81);
             this.taskOnePanel.Name = "taskOnePanel";
-            this.taskOnePanel.Size = new System.Drawing.Size(188, 73);
+            this.taskOnePanel.Size = new System.Drawing.Size(961, 457);
             this.taskOnePanel.TabIndex = 11;
             this.taskOnePanel.Visible = false;
             // 

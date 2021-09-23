@@ -86,22 +86,22 @@ namespace ProjectEcho
 
         private void task1Button_Click(object sender, EventArgs e)
         {
-            buildOnePanel();
+            setPanelActive(1);
         }
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            buildTwoPanel();
+            setPanelActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            buildThreePanel();
+            setPanelActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            buildMainPanel();
+            setPanelActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -152,26 +152,6 @@ namespace ProjectEcho
                     forwardButton.Enabled = false;
                 }
             }
-        }
-
-        private void buildMainPanel()
-        {
-            setPanelActive(0);
-        }
-
-        private void buildOnePanel()
-        {
-            setPanelActive(1);
-        }
-
-        private void buildTwoPanel()
-        {
-            setPanelActive(2);
-        }
-
-        private void buildThreePanel()
-        {
-            setPanelActive(3);
         }
     }
 }
