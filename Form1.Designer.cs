@@ -71,7 +71,6 @@ namespace ProjectEcho
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -196,6 +195,7 @@ namespace ProjectEcho
             this.forwardButton.Size = new System.Drawing.Size(51, 55);
             this.forwardButton.TabIndex = 1;
             this.forwardButton.UseVisualStyleBackColor = false;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
             // 
             // backButton
             // 
@@ -214,7 +214,6 @@ namespace ProjectEcho
             // 
             // mainMenuPanel
             // 
-            this.mainMenuPanel.Controls.Add(this.taskOnePanel);
             this.mainMenuPanel.Controls.Add(this.reviewList);
             this.mainMenuPanel.Controls.Add(this.taskThreeList);
             this.mainMenuPanel.Controls.Add(this.taskTwoList);
@@ -224,6 +223,7 @@ namespace ProjectEcho
             this.mainMenuPanel.Controls.Add(this.taskThreeButton);
             this.mainMenuPanel.Controls.Add(this.taskTwoButton);
             this.mainMenuPanel.Controls.Add(this.taskOneButton);
+            this.mainMenuPanel.Controls.Add(this.taskOnePanel);
             this.mainMenuPanel.Location = new System.Drawing.Point(15, 81);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(958, 460);
@@ -232,15 +232,14 @@ namespace ProjectEcho
             // 
             // taskOnePanel
             // 
-            this.taskOnePanel.Controls.Add(this.label2);
             this.taskOnePanel.Controls.Add(this.oP);
             this.taskOnePanel.Controls.Add(this.label4);
             this.taskOnePanel.Controls.Add(this.vScrollBar1);
             this.taskOnePanel.Controls.Add(this.checkedListBox3);
             this.taskOnePanel.Controls.Add(this.label1);
-            this.taskOnePanel.Location = new System.Drawing.Point(0, 0);
+            this.taskOnePanel.Location = new System.Drawing.Point(773, 387);
             this.taskOnePanel.Name = "taskOnePanel";
-            this.taskOnePanel.Size = new System.Drawing.Size(961, 460);
+            this.taskOnePanel.Size = new System.Drawing.Size(188, 73);
             this.taskOnePanel.TabIndex = 11;
             this.taskOnePanel.Visible = false;
             // 
@@ -540,16 +539,6 @@ namespace ProjectEcho
             this.label7.TabIndex = 8;
             this.label7.Text = resources.GetString("label7.Text");
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(282, 330);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "this is a test";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -625,7 +614,6 @@ namespace ProjectEcho
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
     }
 }
 
