@@ -33,9 +33,13 @@ namespace ProjectEcho
             this.contextPanel = new System.Windows.Forms.Panel();
             this.superTitleLabel = new System.Windows.Forms.Label();
             this.instructionsButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.returnToMenuButton = new System.Windows.Forms.Button();
+            this.forwardButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.taskOnePanel = new System.Windows.Forms.Panel();
             this.oP = new System.Windows.Forms.Label();
@@ -67,10 +71,7 @@ namespace ProjectEcho
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.returnToMenuButton = new System.Windows.Forms.Button();
-            this.forwardButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
-            this.settingsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -118,6 +119,20 @@ namespace ProjectEcho
             this.instructionsButton.Text = "INSTRUCTIONS";
             this.instructionsButton.UseVisualStyleBackColor = false;
             // 
+            // settingsButton
+            // 
+            this.settingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.settingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settingsButton.BackgroundImage")));
+            this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.Location = new System.Drawing.Point(977, -1);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(35, 32);
+            this.settingsButton.TabIndex = 0;
+            this.settingsButton.UseVisualStyleBackColor = false;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
             // helpButton
             // 
             this.helpButton.BackColor = System.Drawing.Color.White;
@@ -153,6 +168,50 @@ namespace ProjectEcho
             this.panel1.Size = new System.Drawing.Size(961, 61);
             this.panel1.TabIndex = 10;
             // 
+            // returnToMenuButton
+            // 
+            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
+            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
+            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnToMenuButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMenuButton.Location = new System.Drawing.Point(3, 5);
+            this.returnToMenuButton.Name = "returnToMenuButton";
+            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
+            this.returnToMenuButton.TabIndex = 2;
+            this.returnToMenuButton.UseVisualStyleBackColor = false;
+            this.returnToMenuButton.Visible = false;
+            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
+            // 
+            // forwardButton
+            // 
+            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
+            this.forwardButton.FlatAppearance.BorderSize = 0;
+            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forwardButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
+            this.forwardButton.Location = new System.Drawing.Point(907, 3);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(51, 55);
+            this.forwardButton.TabIndex = 1;
+            this.forwardButton.UseVisualStyleBackColor = false;
+            // 
+            // backButton
+            // 
+            this.backButton.AutoSize = true;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
+            this.backButton.Location = new System.Drawing.Point(850, 3);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(51, 55);
+            this.backButton.TabIndex = 0;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Visible = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // mainMenuPanel
             // 
             this.mainMenuPanel.Controls.Add(this.taskOnePanel);
@@ -173,6 +232,7 @@ namespace ProjectEcho
             // 
             // taskOnePanel
             // 
+            this.taskOnePanel.Controls.Add(this.label2);
             this.taskOnePanel.Controls.Add(this.oP);
             this.taskOnePanel.Controls.Add(this.label4);
             this.taskOnePanel.Controls.Add(this.vScrollBar1);
@@ -480,63 +540,14 @@ namespace ProjectEcho
             this.label7.TabIndex = 8;
             this.label7.Text = resources.GetString("label7.Text");
             // 
-            // returnToMenuButton
+            // label2
             // 
-            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
-            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
-            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnToMenuButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnToMenuButton.Location = new System.Drawing.Point(3, 5);
-            this.returnToMenuButton.Name = "returnToMenuButton";
-            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
-            this.returnToMenuButton.TabIndex = 2;
-            this.returnToMenuButton.UseVisualStyleBackColor = false;
-            this.returnToMenuButton.Visible = false;
-            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
-            // 
-            // forwardButton
-            // 
-            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
-            this.forwardButton.FlatAppearance.BorderSize = 0;
-            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forwardButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
-            this.forwardButton.Location = new System.Drawing.Point(907, 3);
-            this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(51, 55);
-            this.forwardButton.TabIndex = 1;
-            this.forwardButton.UseVisualStyleBackColor = false;
-            // 
-            // backButton
-            // 
-            this.backButton.AutoSize = true;
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.FlatAppearance.BorderSize = 0;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
-            this.backButton.Location = new System.Drawing.Point(850, 3);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(51, 55);
-            this.backButton.TabIndex = 0;
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Visible = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // settingsButton
-            // 
-            this.settingsButton.BackColor = System.Drawing.Color.Transparent;
-            this.settingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settingsButton.BackgroundImage")));
-            this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(977, -1);
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(35, 32);
-            this.settingsButton.TabIndex = 0;
-            this.settingsButton.UseVisualStyleBackColor = false;
-            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(249, 285);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "this is a test";
             // 
             // MainForm
             // 
@@ -613,6 +624,7 @@ namespace ProjectEcho
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
     }
 }
 
