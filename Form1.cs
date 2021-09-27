@@ -160,13 +160,13 @@ namespace ProjectEcho
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = true;
-            openFileDialog.Filter = "Doc files (*.doc)|*.doc";
+            openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx";
 
             if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 foreach(string fileName in openFileDialog.FileNames)
                 {
-                    //Process.Start(fileName);
+                    
                 }
             }
         }
