@@ -160,7 +160,7 @@ namespace ProjectEcho
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = true;
-            //openFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+            openFileDialog.Filter = "Doc files (*.doc)|*.doc";
 
             if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
