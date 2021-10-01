@@ -13,12 +13,17 @@ namespace ProjectEcho
     public partial class MainForm : Form
     {
         private Panel currentPanel = new Panel();
+        public Panel[] contextPanels = new Panel[4];
         public MainForm()
         {
             InitializeComponent();
-            Panel[] contextPanels = {mainMenuPanel, taskOnePanel, taskTwoPanel, taskThreePanel};
-            
-            currentPanel = contextPanels[1];
+            contextPanels[0] = (mainMenuPanel);
+            contextPanels[1] = (taskOnePanel);
+            //contextPanels[2] = (taskTwoPanel);
+            //contextPanels[3] = (taskThreePanel);
+
+            currentPanel = contextPanels[0];
+            setPanelActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
@@ -81,82 +86,89 @@ namespace ProjectEcho
 
         private void task1Button_Click(object sender, EventArgs e)
         {
-            buildOnePanel();
+            setPanelActive(1);
         }
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            buildTwoPanel();
+            setPanelActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            buildThreePanel();
+            setPanelActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            buildMainPanel();
+            setPanelActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-
+            int i = Array.IndexOf(contextPanels, currentPanel);
+            setPanelActive(i - 1);
         }
 
-        private void setPanelActive(Panel p)
+        private void forwardButton_Click(object sender, EventArgs e)
         {
-             
+            int i = Array.IndexOf(contextPanels, currentPanel);
+            setPanelActive(i + 1);
         }
 
-        private void buildMainPanel()
+        private void setPanelActive(int i)
         {
-            returnToMenuButton.Visible = false;
             currentPanel.Enabled = false;
             currentPanel.Visible = false;
-            mainMenuPanel.Enabled = true;
-            mainMenuPanel.Visible = true;
+            currentPanel = contextPanels[i];
+            currentPanel.Enabled = true;
+            currentPanel.Visible = true;
 
-            titleLabel.Text = "MAIN MENU";
+            if(i.Equals(0))
+            {
+                titleLabel.Text = "MAIN MENU";
+                returnToMenuButton.Visible = false;
+                returnToMenuButton.Enabled = false;
+                backButton.Visible = false;
+                backButton.Enabled = false;
+            } else
+            {
+                returnToMenuButton.Visible = true;
+                returnToMenuButton.Enabled = true;
+                backButton.Visible = true;
+                backButton.Enabled = true;
+                if(i.Equals(1))
+                {
+                    titleLabel.Text = "TASK ONE";
+                } else if(i.Equals(2))
+                {
+                    forwardButton.Visible = true;
+                    forwardButton.Enabled = true;
+                    titleLabel.Text = "TASK TWO";
+                } else if(i.Equals(3))
+                {
+                    titleLabel.Text = "TASK THREE";
+                    forwardButton.Visible = false;
+                    forwardButton.Enabled = false;
+                }
+            }
         }
 
-        private void buildOnePanel()
+        private void button1_Click(object sender, EventArgs e)
         {
-            returnToMenuButton.Visible = true;
-            mainMenuPanel.Enabled = false;
-            mainMenuPanel.Visible = false;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.CheckFileExists = true;
+            openFileDialog.AddExtension = true;
+            openFileDialog.Multiselect = true;
+            openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx";
 
-            taskOnePanel.Visible = true;
-            taskOnePanel.Enabled = true;
-            currentPanel = taskOnePanel;
-
-            titleLabel.Text = "TASK ONE";
-        }
-
-        private void buildTwoPanel()
-        {
-            returnToMenuButton.Visible = true;
-            mainMenuPanel.Enabled = false;
-            mainMenuPanel.Visible = false;
-
-            taskTwoPanel.Visible = true;
-            taskTwoPanel.Enabled = true;
-            currentPanel = taskTwoPanel;
-
-            titleLabel.Text = "TASK TWO";
-        }
-
-        private void buildThreePanel()
-        {
-            returnToMenuButton.Visible = true;
-            mainMenuPanel.Enabled = false;
-            mainMenuPanel.Visible = false;
-
-            taskThreePanel.Visible = true;
-            taskThreePanel.Enabled = true;
-            currentPanel = taskThreePanel;
-
-            titleLabel.Text = "TASK THREE";
+            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                foreach(string fileName in openFileDialog.FileNames)
+                {
+                    
+                }
+            }
         }
     }
 }
