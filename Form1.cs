@@ -178,7 +178,7 @@ namespace ProjectEcho
         {
             label9.Text = "";
             FormatChecker fc = new FormatChecker();
-            Boolean [] b = fc.runFormatCheck("blah", 4);
+            Boolean [] b = fc.runFormatCheck("blah", 90);
             label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
         }
     }

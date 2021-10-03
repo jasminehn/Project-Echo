@@ -1,5 +1,6 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
+using System.Collections;
 
 namespace ProjectEcho
 {
@@ -31,11 +32,11 @@ namespace ProjectEcho
 			 * 
 			 */
 
-			Boolean isAligned = checkAlignment(path);
-			Boolean isFontSize = checkFontSize(path);
-			Boolean isArial = checkFont(path);
+			Boolean isAligned = checkAlignment(document);
+			Boolean isFontSize = checkFontSize(document);
+			Boolean isArial = checkFont(document);
 			Boolean isCorrectLength = false;
-			int actualLength = checkLength(path);
+			int actualLength = checkLength(document);
 			if(correctLength == actualLength || actualLength < correctLength)
             {
 				isCorrectLength = true;
@@ -47,27 +48,48 @@ namespace ProjectEcho
 			return isFormatted;
 		}
 
-		public Boolean checkAlignment(String path)
+		public Boolean checkAlignment(Document document)
 		{
 
 			return true;
 		}
 
-		public Boolean checkFontSize(String path)
+		public Boolean checkFontSize(Document document)
 		{
-
+			if(document.Content.Font.Size != 12)
+            {
+				System.Windows.Forms.MessageBox.Show(document.Content.Font.Size.ToString());
+				return false;
+			}
 			return true;
 		}
 
-		public Boolean checkFont(String path)
+		public Boolean checkFont(Document document)
 		{
-
-			return true;
+			Boolean isCorrectFont = true;
+			Font correct = new Font();
+			correct.Name = "Arial";
+			Font blank = new Font();
+			foreach(Microsoft.Office.Interop.Word.Paragraph para in document.Paragraphs)
+			{
+				//System.Windows.Forms.MessageBox.Show(para.)
+				if(para.Range.Font.Name.CompareTo(correct.Name) != 0)
+				{
+                    if(para.Range.Font.Name.CompareTo(blank.Name) != 0)
+                    {
+						System.Windows.Forms.MessageBox.Show(para.Range.Font.Name);
+						isCorrectFont = false;
+						break;
+					} 
+				}
+			}
+			return isCorrectFont;
 		}
 
-		public int checkLength(String path)
+		public int checkLength(Document document)
 		{
-			return 0;
+			System.Windows.Forms.MessageBox.Show(document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString());
+			return document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);
 		}
 	}
 }
