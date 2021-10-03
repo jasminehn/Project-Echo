@@ -14,6 +14,7 @@ namespace ProjectEcho
     {
         private Panel currentPanel = new Panel();
         public Panel[] contextPanels = new Panel[4];
+        public String path;
         public MainForm()
         {
             InitializeComponent();
@@ -159,16 +160,26 @@ namespace ProjectEcho
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
-            openFileDialog.Multiselect = true;
+            openFileDialog.Multiselect = false;
             openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx";
 
             if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 foreach(string fileName in openFileDialog.FileNames)
                 {
-                    
+                    //string sourcePath = @"C:\Users\Public\TestFolder";
+                    //string targetPath = @"C:\Users\Public\TestFolder\SubDir";
+                    //System.IO.File.Copy(fileName, destFile, true);
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label9.Text = "";
+            FormatChecker fc = new FormatChecker();
+            Boolean [] b = fc.runFormatCheck("blah", 4);
+            label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
         }
     }
 }
