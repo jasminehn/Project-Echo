@@ -20,3 +20,14 @@ C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.csproj.Gener
 C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.csproj.CoreCompileInputs.cache
 C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.exe
 C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.pdb
+C:\Users\izzyg\Documents\GitHub\Project-Echo\bin\Debug\ProjectEcho.exe.config
+C:\Users\izzyg\Documents\GitHub\Project-Echo\bin\Debug\ProjectEcho.exe
+C:\Users\izzyg\Documents\GitHub\Project-Echo\bin\Debug\ProjectEcho.pdb
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.AssemblyReference.cache
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.MainForm.resources
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.Properties.Resources.resources
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.SettingsForm.resources
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.GenerateResource.cache
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.CoreCompileInputs.cache
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.exe
+C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.pdb

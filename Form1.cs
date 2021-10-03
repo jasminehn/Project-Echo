@@ -22,6 +22,8 @@ namespace ProjectEcho
             contextPanels[1] = (taskOnePanel);
             //contextPanels[2] = (taskTwoPanel);
             //contextPanels[3] = (taskThreePanel);
+            //contextPanels[4] = (helpPanel)
+            //contextPanels[5] = (instructionsPanel)
 
             currentPanel = contextPanels[0];
             setPanelActive(0);
@@ -132,13 +134,21 @@ namespace ProjectEcho
                 returnToMenuButton.Enabled = false;
                 backButton.Visible = false;
                 backButton.Enabled = false;
+                instructionsButton.Visible = true;
+                instructionsButton.Enabled = true;
+                helpButton.Visible = false;
+                helpButton.Enabled = false;
             } else
             {
                 returnToMenuButton.Visible = true;
                 returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
                 backButton.Enabled = true;
-                if(i.Equals(1))
+                instructionsButton.Visible = false;
+                instructionsButton.Enabled = false;
+                helpButton.Visible = true;
+                helpButton.Enabled = true;
+                if (i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
                 } else if(i.Equals(2))
@@ -180,6 +190,21 @@ namespace ProjectEcho
             FormatChecker fc = new FormatChecker();
             Boolean [] b = fc.runFormatCheck("blah", 90);
             label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void instructionsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
