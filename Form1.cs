@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO; //[JHN change] added system.io namespace
-using System.Web; //[JHN change] added system.web namespace
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +23,6 @@ namespace ProjectEcho
             contextPanels[1] = (taskOnePanel);
             //contextPanels[2] = (taskTwoPanel);
             //contextPanels[3] = (taskThreePanel);
-            //contextPanels[4] = (helpPanel)
-            //contextPanels[5] = (instructionsPanel)
 
             currentPanel = contextPanels[0];
             setPanelActive(0);
@@ -137,21 +133,13 @@ namespace ProjectEcho
                 returnToMenuButton.Enabled = false;
                 backButton.Visible = false;
                 backButton.Enabled = false;
-                instructionsButton.Visible = false;
-                instructionsButton.Enabled = false;
-                helpButton.Visible = true;
-                helpButton.Enabled = true;
             } else
             {
                 returnToMenuButton.Visible = true;
                 returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
                 backButton.Enabled = true;
-                instructionsButton.Visible = true;
-                instructionsButton.Enabled = true;
-                helpButton.Visible = false;
-                helpButton.Enabled = false;
-                if (i.Equals(1))
+                if(i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
                 } else if(i.Equals(2))
@@ -189,22 +177,11 @@ namespace ProjectEcho
                     //string sourcePath = @"C:\Users\Public\TestFolder";
                     //string targetPath = @"C:\Users\Public\TestFolder\SubDir";
                     //System.IO.File.Copy(fileName, destFile, true);
-
-                    //string filePath = openFileDialog.FileName; //[JHN]
-                    string justFileName = Path.GetFileName(fileName); //[JHN] gets only the file name + extension
-
-
-                    string targetPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\UserUploads"; //path for the user uploads folder
-
-                    //MessageBox.Show("\nUploaded: " + justFileName + "\n" + fileName + "\n" + targetPath); //shows paths for testing
-
-                    File.Copy(fileName, Path.Combine(targetPath, justFileName), true); //[JHN] the 'true' means that it will overwrite existing files of the same name
                 }
             }
 
             
             FormatChecker fc = new FormatChecker();
-
             Boolean[] b = fc.runFormatCheck(path, 90);
             //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
             if(b[0].Equals(true))
@@ -227,6 +204,5 @@ namespace ProjectEcho
                 t1paCL.SetItemChecked(3, true); //Length
             }
         }      
-
     }
 }
