@@ -9,7 +9,7 @@ namespace ProjectEcho
 		public static Application ap = new Application();
 		public Boolean[] runFormatCheck(String path, int correctLength)
 		{
-			path = @"C:\Users\ceseg\Desktop\AlterEgo.docx";
+			//path = @"C:\Users\ceseg\Desktop\AlterEgo.docx";
             Document document = ap.Documents.Open(FileName: path, Visible: false, ReadOnly: false);
 
 			/**
@@ -33,9 +33,10 @@ namespace ProjectEcho
 			 */
 
 			Boolean isAligned = checkAlignment(document);
-			Boolean isFontSize = checkFontSize(document);
 			Boolean isArial = checkFont(document);
+			Boolean isFontSize = checkFontSize(document);
 			Boolean isCorrectLength = false;
+
 			int actualLength = checkLength(document);
 			if(correctLength == actualLength || actualLength < correctLength)
             {
@@ -51,7 +52,7 @@ namespace ProjectEcho
 		public Boolean checkAlignment(Document document)
 		{
 
-			return true;
+			return false;
 		}
 
 		public Boolean checkFontSize(Document document)
@@ -68,7 +69,7 @@ namespace ProjectEcho
 		{
 			Boolean isCorrectFont = true;
 			Font correct = new Font();
-			correct.Name = "Arial";
+			correct.Name = "Times New Roman";
 			Font blank = new Font();
 			foreach(Microsoft.Office.Interop.Word.Paragraph para in document.Paragraphs)
 			{

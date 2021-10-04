@@ -41,9 +41,9 @@ namespace ProjectEcho
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.uploadButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.t1paCL = new System.Windows.Forms.CheckedListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -70,8 +70,6 @@ namespace ProjectEcho
             this.taskThreeButton = new System.Windows.Forms.Button();
             this.taskTwoButton = new System.Windows.Forms.Button();
             this.taskOneButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.taskOnePanel.SuspendLayout();
@@ -130,6 +128,7 @@ namespace ProjectEcho
             // settingsButton
             // 
             this.settingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsButton.AutoSize = true;
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
             this.settingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settingsButton.BackgroundImage")));
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -160,6 +159,7 @@ namespace ProjectEcho
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mainPanel.BackColor = System.Drawing.Color.White;
             this.mainPanel.Controls.Add(this.taskOnePanel);
             this.mainPanel.Controls.Add(this.panel1);
@@ -227,11 +227,9 @@ namespace ProjectEcho
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.uploadButton);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.checkedListBox2);
+            this.tabPage1.Controls.Add(this.t1paCL);
             this.tabPage1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -241,15 +239,16 @@ namespace ProjectEcho
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // uploadButton
             // 
-            this.button1.Location = new System.Drawing.Point(410, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 27);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "UPLOAD";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uploadButton.Location = new System.Drawing.Point(524, 352);
+            this.uploadButton.Name = "uploadButton";
+            this.uploadButton.Size = new System.Drawing.Size(165, 27);
+            this.uploadButton.TabIndex = 17;
+            this.uploadButton.Text = "CLICK TO UPLOAD";
+            this.uploadButton.UseVisualStyleBackColor = true;
+            this.uploadButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -262,18 +261,22 @@ namespace ProjectEcho
             this.label5.TabIndex = 16;
             this.label5.Text = "Part A. Context for Learning Information";
             // 
-            // checkedListBox2
+            // t1paCL
             // 
-            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.t1paCL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox2.Enabled = false;
-            this.checkedListBox2.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(534, 6);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(155, 372);
-            this.checkedListBox2.TabIndex = 14;
+            this.t1paCL.Enabled = false;
+            this.t1paCL.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1paCL.FormattingEnabled = true;
+            this.t1paCL.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.t1paCL.Location = new System.Drawing.Point(524, 6);
+            this.t1paCL.Name = "t1paCL";
+            this.t1paCL.Size = new System.Drawing.Size(165, 340);
+            this.t1paCL.TabIndex = 14;
             // 
             // tabPage2
             // 
@@ -416,7 +419,6 @@ namespace ProjectEcho
             // backButton
             // 
             this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.AutoSize = true;
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -586,25 +588,6 @@ namespace ProjectEcho
             this.taskOneButton.Text = "Review";
             this.taskOneButton.UseVisualStyleBackColor = false;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(410, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 145);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 18);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "label9";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -636,7 +619,6 @@ namespace ProjectEcho
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             this.mainMenuPanel.ResumeLayout(false);
@@ -673,7 +655,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Panel taskOnePanel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox t1paCL;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TabControl tabControl1;
@@ -686,10 +668,8 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button uploadButton;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label9;
     }
 }
 
