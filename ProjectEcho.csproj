@@ -116,5 +116,6 @@
   <ItemGroup>
     <None Include="Resources\Copy of Copy of Copy of Copy of Copy of Untitled %281%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
