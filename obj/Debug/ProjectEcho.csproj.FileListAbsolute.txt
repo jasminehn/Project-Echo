@@ -31,3 +31,14 @@ C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.Genera
 C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.CoreCompileInputs.cache
 C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.exe
 C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.pdb
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\bin\Debug\ProjectEcho.exe.config
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\bin\Debug\ProjectEcho.exe
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\bin\Debug\ProjectEcho.pdb
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.AssemblyReference.cache
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.MainForm.resources
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.Properties.Resources.resources
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.SettingsForm.resources
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.GenerateResource.cache
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.csproj.CoreCompileInputs.cache
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.exe
+C:\Users\365ye\OneDrive\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.pdb

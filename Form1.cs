@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO; //[JHN change] added system.io namespace
+using System.Web; //[JHN change] added system.web namespace
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -180,6 +182,16 @@ namespace ProjectEcho
                     //string sourcePath = @"C:\Users\Public\TestFolder";
                     //string targetPath = @"C:\Users\Public\TestFolder\SubDir";
                     //System.IO.File.Copy(fileName, destFile, true);
+
+                    //string filePath = openFileDialog.FileName; //[JHN]
+                    string justFileName = Path.GetFileName(fileName); //[JHN] gets only the file name + extension
+
+
+                    string targetPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\UserUploads"; //path for the user uploads folder
+
+                    //MessageBox.Show("\nUploaded: " + justFileName + "\n" + fileName + "\n" + targetPath); //shows paths for testing
+
+                    File.Copy(fileName, Path.Combine(targetPath, justFileName), true); //[JHN] the 'true' means that it will overwrite existing files of the same name
                 }
             }
         }
