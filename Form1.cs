@@ -168,18 +168,6 @@ namespace ProjectEcho
             }
         }
 
-        private void helpButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void instructionsButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
