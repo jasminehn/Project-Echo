@@ -1,4 +1,4 @@
-﻿
+
 namespace ProjectEcho
 {
     partial class SettingsForm
