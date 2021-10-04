@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -174,11 +175,17 @@ namespace ProjectEcho
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = false;
             openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
+            String path = "";
+            
             if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 foreach(string fileName in openFileDialog.FileNames)
                 {
+                    path = Path.GetFullPath(fileName);
+                    uploadButton.Text = Path.GetFileName(fileName);
+                    //path = openFileDialog.File.FullName;
                     //string sourcePath = @"C:\Users\Public\TestFolder";
                     //string targetPath = @"C:\Users\Public\TestFolder\SubDir";
                     //System.IO.File.Copy(fileName, destFile, true);
@@ -194,29 +201,32 @@ namespace ProjectEcho
                     File.Copy(fileName, Path.Combine(targetPath, justFileName), true); //[JHN] the 'true' means that it will overwrite existing files of the same name
                 }
             }
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            label9.Text = "";
+            
             FormatChecker fc = new FormatChecker();
-            Boolean [] b = fc.runFormatCheck("blah", 90);
-            label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
-        }
 
-        private void helpButton_Click(object sender, EventArgs e)
-        {
+            Boolean[] b = fc.runFormatCheck(path, 90);
+            //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
+            if(b[0].Equals(true))
+            {
+                t1paCL.SetItemChecked(0, true); //Aligned
+            }
 
-        }
+            if(b[1].Equals(true))
+            {
+                t1paCL.SetItemChecked(1, true); //Font
+            }
 
-        private void instructionsButton_Click(object sender, EventArgs e)
-        {
+            if(b[2].Equals(true))
+            {
+                t1paCL.SetItemChecked(2, true); //Font Size
+            }
 
-        }
+            if(b[3].Equals(true))
+            {
+                t1paCL.SetItemChecked(3, true); //Length
+            }
+        }      
 
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
