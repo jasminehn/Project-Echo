@@ -204,7 +204,6 @@ namespace ProjectEcho
 
             
             FormatChecker fc = new FormatChecker();
-<<<<<<< Updated upstream
 
             Boolean[] b = fc.runFormatCheck(path, 90);
             //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
@@ -222,31 +221,6 @@ namespace ProjectEcho
             {
                 t1paCL.SetItemChecked(2, true); //Font Size
             }
-=======
-            Boolean [] b = fc.runFormatCheck("blah", 90);
-            label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
-        }
-
-        private void helpButton_Click(object sender, EventArgs e)
-        {
-           helpForm hf = new helpForm();
-
-            if (hf.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Help opened");
-            }
-        }
-
-        private void instructionsButton_Click(object sender, EventArgs e)
-        {
-            InstructionForm If = new InstructionForm();
-
-            if (If.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Instructions opened");
-            }
-        }
->>>>>>> Stashed changes
 
             if(b[3].Equals(true))
             {
@@ -254,14 +228,5 @@ namespace ProjectEcho
             }
         }      
 
-<<<<<<< Updated upstream
-=======
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> Stashed changes
     }
 }
