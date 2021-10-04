@@ -48,6 +48,3 @@ C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.helpForm.reso
 C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.Form2.resources
 C:\Users\izzyg\Documents\GitHub\Project-Echo\obj\Debug\ProjectEcho.InstructionForm.resources
 >>>>>>> Stashed changes
-C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.Form2.resources
-C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.helpForm.resources
-C:\Users\ceseg\Desktop\DPMidterm\Project-Echo\obj\Debug\ProjectEcho.InstructionForm.resources
