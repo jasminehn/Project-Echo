@@ -133,13 +133,21 @@ namespace ProjectEcho
                 returnToMenuButton.Enabled = false;
                 backButton.Visible = false;
                 backButton.Enabled = false;
+                helpButton.Visible = true;
+                helpButton.Enabled = true;
+                instructionsButton.Visible = false;
+                instructionsButton.Enabled = false;
             } else
             {
                 returnToMenuButton.Visible = true;
                 returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
                 backButton.Enabled = true;
-                if(i.Equals(1))
+                helpButton.Visible = false;
+                helpButton.Enabled = false;
+                instructionsButton.Visible = true;
+                instructionsButton.Enabled = true;
+                if (i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
                 } else if(i.Equals(2))
