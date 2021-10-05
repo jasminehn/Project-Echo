@@ -211,6 +211,16 @@ namespace ProjectEcho
             {
                 t1paCL.SetItemChecked(3, true); //Length
             }
-        }      
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            HelpForm hf = new HelpForm();
+
+            if (hf.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Help opened");
+            }
+        }
     }
 }
