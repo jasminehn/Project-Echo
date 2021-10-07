@@ -327,5 +327,10 @@ namespace ProjectEcho
                 Console.Write("Help opened");
             }
         }
+
+        private void instructionsButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -109,7 +109,7 @@ namespace ProjectEcho
             this.superTitleLabel.Location = new System.Drawing.Point(7, 4);
             this.superTitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.superTitleLabel.Name = "superTitleLabel";
-            this.superTitleLabel.Size = new System.Drawing.Size(389, 25);
+            this.superTitleLabel.Size = new System.Drawing.Size(500, 31);
             this.superTitleLabel.TabIndex = 3;
             this.superTitleLabel.Text = "EDUCATION CAPSTONE CHECKER";
             // 
@@ -193,10 +193,10 @@ namespace ProjectEcho
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1695, 24);
+            this.label8.Location = new System.Drawing.Point(1892, 24);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 24);
+            this.label8.Size = new System.Drawing.Size(111, 29);
             this.label8.TabIndex = 19;
             this.label8.Text = "REVIEW";
             // 
@@ -205,7 +205,7 @@ namespace ProjectEcho
             this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(1699, 50);
+            this.checkedListBox1.Location = new System.Drawing.Point(1896, 50);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(214, 379);
             this.checkedListBox1.TabIndex = 18;
@@ -224,7 +224,7 @@ namespace ProjectEcho
             this.tabControl1.Location = new System.Drawing.Point(9, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1674, 419);
+            this.tabControl1.Size = new System.Drawing.Size(1871, 419);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -234,10 +234,10 @@ namespace ProjectEcho
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.t1paCL);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1666, 388);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1863, 382);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@ namespace ProjectEcho
             this.uploadInfo.Location = new System.Drawing.Point(5, 307);
             this.uploadInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.uploadInfo.Name = "uploadInfo";
-            this.uploadInfo.Size = new System.Drawing.Size(79, 18);
+            this.uploadInfo.Size = new System.Drawing.Size(102, 24);
             this.uploadInfo.TabIndex = 18;
             this.uploadInfo.Text = "Uploaded: ";
             // 
@@ -270,7 +270,7 @@ namespace ProjectEcho
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(290, 20);
+            this.label5.Size = new System.Drawing.Size(353, 25);
             this.label5.TabIndex = 16;
             this.label5.Text = "Part A. Context for Learning Information";
             // 
@@ -288,16 +288,16 @@ namespace ProjectEcho
             "4 pages or less"});
             this.t1paCL.Location = new System.Drawing.Point(525, 6);
             this.t1paCL.Name = "t1paCL";
-            this.t1paCL.Size = new System.Drawing.Size(165, 319);
+            this.t1paCL.Size = new System.Drawing.Size(165, 310);
             this.t1paCL.TabIndex = 14;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1666, 388);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1863, 382);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -309,16 +309,16 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 20);
+            this.label1.Size = new System.Drawing.Size(316, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "Part B. Plans for Learning Segment";
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1666, 388);
+            this.tabPage3.Size = new System.Drawing.Size(1863, 382);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -330,16 +330,16 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 20);
+            this.label2.Size = new System.Drawing.Size(265, 25);
             this.label2.TabIndex = 17;
             this.label2.Text = "Part C. Instructional Materials";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1666, 388);
+            this.tabPage4.Size = new System.Drawing.Size(1863, 382);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -351,16 +351,16 @@ namespace ProjectEcho
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 20);
+            this.label4.Size = new System.Drawing.Size(194, 25);
             this.label4.TabIndex = 18;
             this.label4.Text = "Part D. Assessments";
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label7);
-            this.tabPage5.Location = new System.Drawing.Point(4, 27);
+            this.tabPage5.Location = new System.Drawing.Point(4, 33);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1666, 388);
+            this.tabPage5.Size = new System.Drawing.Size(1863, 382);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -372,7 +372,7 @@ namespace ProjectEcho
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 20);
+            this.label7.Size = new System.Drawing.Size(268, 25);
             this.label7.TabIndex = 18;
             this.label7.Text = "Part E. Planning Commentary";
             // 
@@ -381,7 +381,7 @@ namespace ProjectEcho
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(868, 13);
+            this.label6.Size = new System.Drawing.Size(1155, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = resources.GetString("label6.Text");
             // 
@@ -463,7 +463,7 @@ namespace ProjectEcho
             this.titleSubtitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleSubtitleLabel.Location = new System.Drawing.Point(6, 33);
             this.titleSubtitleLabel.Name = "titleSubtitleLabel";
-            this.titleSubtitleLabel.Size = new System.Drawing.Size(551, 18);
+            this.titleSubtitleLabel.Size = new System.Drawing.Size(693, 24);
             this.titleSubtitleLabel.TabIndex = 1;
             this.titleSubtitleLabel.Text = "Please complete the following tasks. Click each button and complete the subtasks." +
     "";
@@ -476,7 +476,7 @@ namespace ProjectEcho
             this.titleLabel.Location = new System.Drawing.Point(4, 4);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(143, 29);
+            this.titleLabel.Size = new System.Drawing.Size(176, 36);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
             this.titleLabel.Click += new System.EventHandler(this.label1_Click);
@@ -505,7 +505,7 @@ namespace ProjectEcho
             this.reviewList.FormattingEnabled = true;
             this.reviewList.Location = new System.Drawing.Point(718, 233);
             this.reviewList.Name = "reviewList";
-            this.reviewList.Size = new System.Drawing.Size(193, 124);
+            this.reviewList.Size = new System.Drawing.Size(193, 112);
             this.reviewList.TabIndex = 16;
             this.reviewList.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
             // 
@@ -516,7 +516,7 @@ namespace ProjectEcho
             this.taskThreeList.FormattingEnabled = true;
             this.taskThreeList.Location = new System.Drawing.Point(495, 233);
             this.taskThreeList.Name = "taskThreeList";
-            this.taskThreeList.Size = new System.Drawing.Size(193, 124);
+            this.taskThreeList.Size = new System.Drawing.Size(193, 112);
             this.taskThreeList.TabIndex = 15;
             // 
             // taskTwoList
@@ -526,7 +526,7 @@ namespace ProjectEcho
             this.taskTwoList.FormattingEnabled = true;
             this.taskTwoList.Location = new System.Drawing.Point(272, 233);
             this.taskTwoList.Name = "taskTwoList";
-            this.taskTwoList.Size = new System.Drawing.Size(193, 124);
+            this.taskTwoList.Size = new System.Drawing.Size(193, 112);
             this.taskTwoList.TabIndex = 14;
             this.taskTwoList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.taskTwoList_ItemCheck);
             // 
@@ -537,7 +537,7 @@ namespace ProjectEcho
             this.taskOneList.FormattingEnabled = true;
             this.taskOneList.Location = new System.Drawing.Point(49, 233);
             this.taskOneList.Name = "taskOneList";
-            this.taskOneList.Size = new System.Drawing.Size(193, 124);
+            this.taskOneList.Size = new System.Drawing.Size(193, 112);
             this.taskOneList.TabIndex = 13;
             this.taskOneList.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -546,7 +546,7 @@ namespace ProjectEcho
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(44, 201);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(868, 13);
+            this.label3.Size = new System.Drawing.Size(1155, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = resources.GetString("label3.Text");
             // 
