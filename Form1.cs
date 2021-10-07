@@ -39,7 +39,7 @@ namespace ProjectEcho
             string userUploadsPath = Environment.CurrentDirectory + "\\UserUploads";
             try
             {
-                //If the directory doesn't exist, create it
+                //if the directory doesn't exist, create it
                 if (!Directory.Exists(userUploadsPath))
                 {
                     Directory.CreateDirectory(userUploadsPath);
@@ -47,10 +47,8 @@ namespace ProjectEcho
             }
             catch (Exception)
             {
-                //Fail silently
+                //fail silently
             }
-
-
            
         }
 
@@ -181,55 +179,40 @@ namespace ProjectEcho
                 }
             }
 
+            //DISPLAY UPLOADED FILES
 
+            //get data stored in user upload data file (not needed yet)
+            /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+            List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();*/
 
-
-            
-            Console.WriteLine("PLS");
-
-
-
-            //string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
-            //List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();
-
+            //gets task part name (i.e. task 1 part "A")
             string currentTab = "x";
             currentTab = this.tabControl1.SelectedTab.Text;
             char currentTabLetter = currentTab[currentTab.Length - 1];
-
-            //creates name of file based on current task and part (i.e. taskUpload1A) so that when they reupload a file with a different name, it still overwrites the stored file
-            //int i = Array.IndexOf(contextPanels, currentPanel);
-            string uploadedFile = "taskUpload" + i + currentTabLetter;
-
-            //create user uploads data text file
-            string ccc = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
-            Console.WriteLine(ccc);
+            
+            string uploadedFile = "taskUpload" + i + currentTabLetter; //generates folder name based on currently selected task/part (i.e. taskUpload1A)
+            string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile; //finds correct folder path for current section
+            //Console.WriteLine(taskUploadsPath); //test
             try
             {
-                //if the file doesn't exist, create it
-                if (Directory.Exists(ccc))
-                {
-                    Console.WriteLine("BEEP");
-                    string thename = "";
-
-                    DirectoryInfo d = new DirectoryInfo(ccc); //Assuming Test is your Folder
-
-                    FileInfo[] Files = d.GetFiles(); //Getting Text files
+                //if the directory exists, read all files from it
+                if (Directory.Exists(taskUploadsPath))
+                {                    
+                    DirectoryInfo d = new DirectoryInfo(taskUploadsPath); //set directory
+                    FileInfo[] Files = d.GetFiles(); //get all files from the folder
                     string str = "";
 
                     foreach (FileInfo file in Files)
                     {
-                        str = str + file.Name + "\n";
-                        Console.WriteLine(str);
+                        str = str + "\n" + file.Name; //adds each file name to the string
                     }
 
-                    uploadInfo.Text = "Uploaded: " + str; //[JHN] 
-
-                    Console.WriteLine("IT WORKS");
+                    uploadInfo.Text = "Uploaded: " + str; //set upload info text to display all files from the folder
                 }
             }
             catch (Exception)
             {
-                //no
+                //do nothing
             }
             
         }
@@ -258,10 +241,10 @@ namespace ProjectEcho
 
                     string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
                     string extension = Path.GetExtension(fileName); //gets only the file extension
-                    uploadInfo.Text += separatedFileName; //concats new file name
+                    uploadInfo.Text += "\n" + separatedFileName; //concats new file name
 
-                    //create user uploads data text file
-                    string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+                    //create useruploads data text file (not needed right now)
+                    /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
                     try
                     {
                         //if the file doesn't exist, create it
@@ -274,7 +257,7 @@ namespace ProjectEcho
                     {
                         Console.WriteLine("File \"{0}\" already exists", separatedFileName);
                         return;
-                    }
+                    }*/
 
                     //gets task part name (i.e. task 1 part "A")
                     string currentTab = "x";
@@ -283,7 +266,7 @@ namespace ProjectEcho
 
                     //creates name of file based on current task and part (i.e. taskUpload1A) so that when they reupload a file with a different name, it still overwrites the stored file
                     int i = Array.IndexOf(contextPanels, currentPanel);
-                    string uploadedFile = "taskUpload"+i+ currentTabLetter;
+                    string uploadedFile = "taskUpload" + i + currentTabLetter;
 
                     //create user task folder
                     string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
@@ -297,16 +280,14 @@ namespace ProjectEcho
                     }
                     catch (Exception)
                     {
-                        //Fail silently
+                        //fail silently
                     }
 
-                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName);
+                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName); //path to upload the user's file
+                    //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
+                    File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
 
-                    MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //[JHN] shows paths for testing
-
-                    File.Copy(fileName, targetPath, true); //[JHN] the 'true' means that it will overwrite existing files of the same name
-
-                    //writes data enty to file (given file name, original file name, given file path, original file path
+                    //writes data enty to file (given file name, original file name, given file path, original file path (not needed right now)
                     /*string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
                     File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);*/
                 }
