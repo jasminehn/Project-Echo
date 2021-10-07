@@ -34,6 +34,24 @@ namespace ProjectEcho
             taskThreeList.Items.AddRange(taskThreeArray);
             string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
             reviewList.Items.AddRange(reviewArray);
+
+            //create user uploads folder
+            string userUploadsPath = Environment.CurrentDirectory + "\\UserUploads";
+            try
+            {
+                //If the directory doesn't exist, create it
+                if (!Directory.Exists(userUploadsPath))
+                {
+                    Directory.CreateDirectory(userUploadsPath);
+                }
+            }
+            catch (Exception)
+            {
+                //Fail silently
+            }
+
+
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -162,6 +180,58 @@ namespace ProjectEcho
                     forwardButton.Enabled = false;
                 }
             }
+
+
+
+
+            
+            Console.WriteLine("PLS");
+
+
+
+            //string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+            //List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();
+
+            string currentTab = "x";
+            currentTab = this.tabControl1.SelectedTab.Text;
+            char currentTabLetter = currentTab[currentTab.Length - 1];
+
+            //creates name of file based on current task and part (i.e. taskUpload1A) so that when they reupload a file with a different name, it still overwrites the stored file
+            //int i = Array.IndexOf(contextPanels, currentPanel);
+            string uploadedFile = "taskUpload" + i + currentTabLetter;
+
+            //create user uploads data text file
+            string ccc = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
+            Console.WriteLine(ccc);
+            try
+            {
+                //if the file doesn't exist, create it
+                if (Directory.Exists(ccc))
+                {
+                    Console.WriteLine("BEEP");
+                    string thename = "";
+
+                    DirectoryInfo d = new DirectoryInfo(ccc); //Assuming Test is your Folder
+
+                    FileInfo[] Files = d.GetFiles(); //Getting Text files
+                    string str = "";
+
+                    foreach (FileInfo file in Files)
+                    {
+                        str = str + file.Name + "\n";
+                        Console.WriteLine(str);
+                    }
+
+                    uploadInfo.Text = "Uploaded: " + str; //[JHN] 
+
+                    Console.WriteLine("IT WORKS");
+                }
+            }
+            catch (Exception)
+            {
+                //no
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -185,6 +255,60 @@ namespace ProjectEcho
                     //string sourcePath = @"C:\Users\Public\TestFolder";
                     //string targetPath = @"C:\Users\Public\TestFolder\SubDir";
                     //System.IO.File.Copy(fileName, destFile, true);
+
+                    string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
+                    string extension = Path.GetExtension(fileName); //gets only the file extension
+                    uploadInfo.Text += separatedFileName; //concats new file name
+
+                    //create user uploads data text file
+                    string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+                    try
+                    {
+                        //if the file doesn't exist, create it
+                        if (!File.Exists(userUploadsDataPath))
+                        {
+                            File.Create(userUploadsDataPath);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("File \"{0}\" already exists", separatedFileName);
+                        return;
+                    }
+
+                    //gets task part name (i.e. task 1 part "A")
+                    string currentTab = "x";
+                    currentTab = this.tabControl1.SelectedTab.Text;
+                    char currentTabLetter = currentTab[currentTab.Length - 1];
+
+                    //creates name of file based on current task and part (i.e. taskUpload1A) so that when they reupload a file with a different name, it still overwrites the stored file
+                    int i = Array.IndexOf(contextPanels, currentPanel);
+                    string uploadedFile = "taskUpload"+i+ currentTabLetter;
+
+                    //create user task folder
+                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
+                    try
+                    {
+                        //If the directory doesn't exist, create it
+                        if (!Directory.Exists(taskUploadsPath))
+                        {
+                            Directory.CreateDirectory(taskUploadsPath);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        //Fail silently
+                    }
+
+                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName);
+
+                    MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //[JHN] shows paths for testing
+
+                    File.Copy(fileName, targetPath, true); //[JHN] the 'true' means that it will overwrite existing files of the same name
+
+                    //writes data enty to file (given file name, original file name, given file path, original file path
+                    /*string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
+                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);*/
                 }
             }
 
