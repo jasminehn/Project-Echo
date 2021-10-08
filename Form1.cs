@@ -294,9 +294,13 @@ namespace ProjectEcho
             }
 
             
-            FormatChecker fc = new FormatChecker();
-            Boolean[] b = fc.runFormatCheck(path, 90);
-            //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
+            
+            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
+            {
+                uploadInfo.Text = uploadInfo.Text + path;
+                FormatChecker fc = new FormatChecker();
+                Boolean[] b = fc.runFormatCheck(path, 90);
+                            //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
             if(b[0].Equals(true))
             {
                 t1paCL.SetItemChecked(0, true); //Aligned
@@ -316,10 +320,16 @@ namespace ProjectEcho
             {
                 t1paCL.SetItemChecked(3, true); //Length
             }
+                
+            }
+
+
         }
 
+        //Executes when the help button is clicked
         private void helpButton_Click(object sender, EventArgs e)
         {
+            //Creates the form that displays
             HelpForm hf = new HelpForm();
 
             if (hf.ShowDialog() == DialogResult.OK)
@@ -328,6 +338,7 @@ namespace ProjectEcho
             }
         }
 
+        //Executed when the instructions is clicked
         private void instructionsButton_Click(object sender, EventArgs e)
         {
             
