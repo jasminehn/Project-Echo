@@ -341,7 +341,7 @@ namespace ProjectEcho
         //Executed when the instructions is clicked
         private void instructionsButton_Click(object sender, EventArgs e)
         {
-            
+            //We are still figuring out how to approach this
         }
     }
 }
