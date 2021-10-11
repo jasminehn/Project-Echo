@@ -9,6 +9,7 @@ As part of the capstone experience for education majors, they must submit a coll
 - [GitHub](https://github.com/) for easy and efficient version control
 - [Pixlr](https://fontawesome.com/) for creating wireframes and navigation flowcharts
 - [Microsoft.Office.Interop.Word Namespace](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word?view=word-pia) to aid in analyzing document parameters
+- [ProWritingAid API](https://prowritingaid.com/en/API/Documentation) for text processing
 
 ## 💻 How To Setup
 1. Download and install Visual Studio 2019
