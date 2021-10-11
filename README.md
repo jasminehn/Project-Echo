@@ -15,7 +15,7 @@ As part of the capstone experience for education majors, they must submit a coll
 1. Download and install Visual Studio 2019
 2. Clone the main branch to your own device
 3. Open the project solution in Visual Studio
-4. Click the "▶Start" button to run the application <br>
+4. Click the "▶Start" button to run the application; it will look like the one in the image below: <br>
 ![image](https://user-images.githubusercontent.com/88569965/136861151-40a7c7be-d99d-45c3-b74b-df59a6e1c8b9.png)
 
 ## 🖱 Using the app
