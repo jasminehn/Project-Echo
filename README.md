@@ -19,7 +19,7 @@ As part of the capstone experience for education majors, they must submit a coll
 ![image](https://user-images.githubusercontent.com/88569965/136861151-40a7c7be-d99d-45c3-b74b-df59a6e1c8b9.png)
 
 ## 🖱 Using the app
-Currently, Task One is the main component that we've been working on. When you click the "Help" button, a Help window is appears with instructions on how to use the application. From the Main Menu page, click on the golden "Task One" button to navigate to the first task page. From here, you can upload a file and the application will provide feedback based on the font size, font family, page margins, and number of pages. 
+Currently, Task One is the main component that we've been working on. When you click the "Help" button, a Help window appears with instructions on how to use the application. From the Main Menu page, click on the golden "Task One" button to navigate to the first task page. From here, you can upload a file and the application will provide feedback based on the font size, font family, page margins, and number of pages. 
 
 ## 🎨 Color Reference
 | Color          | Hex                                                                | Use
