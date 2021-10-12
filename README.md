@@ -10,6 +10,7 @@ As part of the capstone experience for education majors, they must submit a coll
 - [Pixlr](https://fontawesome.com/) for creating wireframes and navigation flowcharts
 - [Microsoft.Office.Interop.Word Namespace](https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word?view=word-pia) to aid in analyzing document parameters
 - [ProWritingAid API](https://prowritingaid.com/en/API/Documentation) for text processing
+- [Canva](https://www.canva.com/) for UI design
 
 ## 💻 How To Setup
 1. Download and install Visual Studio 2019
@@ -27,6 +28,6 @@ Currently, Task One is the main component that we've been working on. When you c
 | White          | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff` | Background          |
 | Black          | ![#000000](https://via.placeholder.com/10/000000?text=+) `#000000` | Text                |
 | Navy Blue      | ![#00008b](https://via.placeholder.com/10/00008b?text=+) `#00008b` | Accent              |
-| Goldenrod      | ![#daa520](https://via.placeholder.com/10/daa520?text=+) `#daa520` | Task BG             |
-| Ghost White    | ![#f8f8ff](https://via.placeholder.com/10/f8f8ff?text=+) `#f8f8ff` | Review BG           |
+| Goldenrod      | ![#daa520](https://via.placeholder.com/10/daa520?text=+) `#daa520` | Task button BG      |
+| Ghost White    | ![#f8f8ff](https://via.placeholder.com/10/f8f8ff?text=+) `#f8f8ff` | Review button BG    |
 | Egyptian Blue  | ![#0036ad](https://via.placeholder.com/10/0036ad?text=+) `#0036ad` | Buttons             |
