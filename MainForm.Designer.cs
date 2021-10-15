@@ -75,6 +75,19 @@ namespace ProjectEcho
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.taskOnePanel.SuspendLayout();
@@ -89,6 +102,9 @@ namespace ProjectEcho
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextPanel
@@ -235,6 +251,7 @@ namespace ProjectEcho
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkedListBox2);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
@@ -252,16 +269,18 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 20);
+            this.label1.Size = new System.Drawing.Size(206, 20);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Part B. Plans for Learning Segment";
+            this.label1.Text = "Plans for Learning Segment";
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.checkedListBox3);
+            this.tabPage3.Controls.Add(this.panel4);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(938, 388);
+            this.tabPage3.Size = new System.Drawing.Size(894, 388);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -273,16 +292,18 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 20);
+            this.label2.Size = new System.Drawing.Size(164, 20);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Part C. Instructional Materials";
+            this.label2.Text = "Instructional Materials";
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.checkedListBox4);
+            this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(938, 388);
+            this.tabPage4.Size = new System.Drawing.Size(894, 388);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -294,16 +315,18 @@ namespace ProjectEcho
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 20);
+            this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Part D. Assessments";
+            this.label4.Text = "Assessments";
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.checkedListBox5);
+            this.tabPage5.Controls.Add(this.panel6);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(938, 388);
+            this.tabPage5.Size = new System.Drawing.Size(894, 388);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -315,9 +338,9 @@ namespace ProjectEcho
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 20);
+            this.label7.Size = new System.Drawing.Size(164, 20);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Part E. Planning Commentary";
+            this.label7.Text = "Planning Commentary";
             // 
             // label6
             // 
@@ -568,9 +591,9 @@ namespace ProjectEcho
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(290, 20);
+            this.label5.Size = new System.Drawing.Size(238, 20);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Part A. Context for Learning Information";
+            this.label5.Text = "Context for Learning Information";
             // 
             // uploadButton
             // 
@@ -657,6 +680,179 @@ namespace ProjectEcho
             this.button1.Text = "CLICK TO UPLOAD";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.AutoSize = true;
+            this.panel4.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Location = new System.Drawing.Point(-4, 349);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(898, 39);
+            this.panel4.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(11, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(595, 18);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Uploaded: ";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(727, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 27);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "CLICK TO UPLOAD";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.AutoSize = true;
+            this.panel5.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Location = new System.Drawing.Point(-4, 349);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(898, 39);
+            this.panel5.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(11, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(595, 18);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Uploaded: ";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(727, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 27);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "CLICK TO UPLOAD";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.AutoSize = true;
+            this.panel6.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Location = new System.Drawing.Point(-4, 349);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(898, 39);
+            this.panel6.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(11, 9);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(595, 18);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Uploaded: ";
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(727, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 27);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "CLICK TO UPLOAD";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox2.Enabled = false;
+            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.checkedListBox2.Location = new System.Drawing.Point(723, 39);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(165, 304);
+            this.checkedListBox2.TabIndex = 21;
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox3.Enabled = false;
+            this.checkedListBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.checkedListBox3.Location = new System.Drawing.Point(723, 39);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(165, 304);
+            this.checkedListBox3.TabIndex = 21;
+            // 
+            // checkedListBox4
+            // 
+            this.checkedListBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox4.Enabled = false;
+            this.checkedListBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox4.FormattingEnabled = true;
+            this.checkedListBox4.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.checkedListBox4.Location = new System.Drawing.Point(723, 39);
+            this.checkedListBox4.Name = "checkedListBox4";
+            this.checkedListBox4.Size = new System.Drawing.Size(165, 304);
+            this.checkedListBox4.TabIndex = 21;
+            // 
+            // checkedListBox5
+            // 
+            this.checkedListBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox5.Enabled = false;
+            this.checkedListBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox5.FormattingEnabled = true;
+            this.checkedListBox5.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.checkedListBox5.Location = new System.Drawing.Point(723, 39);
+            this.checkedListBox5.Name = "checkedListBox5";
+            this.checkedListBox5.Size = new System.Drawing.Size(165, 304);
+            this.checkedListBox5.TabIndex = 21;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,6 +890,9 @@ namespace ProjectEcho
             this.tabPage1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,5 +945,18 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckedListBox checkedListBox3;
+        private System.Windows.Forms.CheckedListBox checkedListBox4;
+        private System.Windows.Forms.CheckedListBox checkedListBox5;
     }
 }
