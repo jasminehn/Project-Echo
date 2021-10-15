@@ -47,9 +47,9 @@ namespace ProjectEcho
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 581);
+            this.label1.Location = new System.Drawing.Point(964, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(784, 62);
+            this.label1.Size = new System.Drawing.Size(259, 589);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -57,17 +57,17 @@ namespace ProjectEcho
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(534, 10);
+            this.comboBox1.Location = new System.Drawing.Point(942, 10);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(252, 21);
+            this.comboBox1.Size = new System.Drawing.Size(281, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(534, 47);
+            this.comboBox2.Location = new System.Drawing.Point(942, 37);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(252, 21);
+            this.comboBox2.Size = new System.Drawing.Size(281, 21);
             this.comboBox2.TabIndex = 2;
             // 
             // label2
@@ -76,23 +76,23 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(12, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(349, 38);
+            this.label2.Size = new System.Drawing.Size(751, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Select the Task and the Part you would like to read the instructions of in the dr" +
     "op down boxes. OR, search by keyword phrase.";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 48);
+            this.textBox1.Location = new System.Drawing.Point(155, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 20);
+            this.textBox1.Size = new System.Drawing.Size(641, 20);
             this.textBox1.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(461, 18);
+            this.label3.Location = new System.Drawing.Point(869, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 5;
@@ -103,18 +103,19 @@ namespace ProjectEcho
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DarkBlue;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(461, 51);
+            this.label4.Location = new System.Drawing.Point(869, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Select Part:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.DarkBlue;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(12, 51);
+            this.label5.Location = new System.Drawing.Point(12, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 13);
             this.label5.TabIndex = 7;
@@ -132,8 +133,9 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(808, 84);
+            this.panel1.Size = new System.Drawing.Size(1236, 72);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -148,17 +150,17 @@ namespace ProjectEcho
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(7, 121);
+            this.webBrowser1.Location = new System.Drawing.Point(7, 108);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(788, 457);
+            this.webBrowser1.Size = new System.Drawing.Size(951, 602);
             this.webBrowser1.TabIndex = 9;
             // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 652);
+            this.ClientSize = new System.Drawing.Size(1235, 722);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
