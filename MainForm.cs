@@ -49,7 +49,7 @@ namespace ProjectEcho
             {
                 //fail silently
             }
-           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -149,20 +149,12 @@ namespace ProjectEcho
                 returnToMenuButton.Enabled = false;
                 backButton.Visible = false;
                 backButton.Enabled = false;
-                helpButton.Visible = true;
-                helpButton.Enabled = true;
-                instructionsButton.Visible = false;
-                instructionsButton.Enabled = false;
             } else
             {
                 returnToMenuButton.Visible = true;
                 returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
                 backButton.Enabled = true;
-                helpButton.Visible = false;
-                helpButton.Enabled = false;
-                instructionsButton.Visible = true;
-                instructionsButton.Enabled = true;
                 if (i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
@@ -336,12 +328,6 @@ namespace ProjectEcho
             {
                 Console.Write("Help opened");
             }
-        }
-
-        //Executed when the instructions is clicked
-        private void instructionsButton_Click(object sender, EventArgs e)
-        {
-            //We are still figuring out how to approach this
-        }
+        }       
     }
 }
