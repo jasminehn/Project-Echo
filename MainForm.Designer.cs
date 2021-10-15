@@ -72,6 +72,9 @@ namespace ProjectEcho
             this.uploadInfo = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.taskOnePanel.SuspendLayout();
@@ -85,6 +88,7 @@ namespace ProjectEcho
             this.mainMenuPanel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextPanel
@@ -231,11 +235,12 @@ namespace ProjectEcho
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(938, 388);
+            this.tabPage2.Size = new System.Drawing.Size(894, 388);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -617,6 +622,41 @@ namespace ProjectEcho
             this.panel2.Size = new System.Drawing.Size(898, 39);
             this.panel2.TabIndex = 19;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Location = new System.Drawing.Point(-4, 349);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(898, 39);
+            this.panel3.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(11, 9);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(595, 18);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Uploaded: ";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(727, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 27);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "CLICK TO UPLOAD";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,6 +693,7 @@ namespace ProjectEcho
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -702,5 +743,8 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckedListBox t1paCL;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
     }
 }
