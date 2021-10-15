@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjectEcho
 {
-    public partial class Form2 : Form
+    public partial class InstructionsForm : Form
     {
-        public Form2()
+        public InstructionsForm()
         {
             InitializeComponent();
+        }
+
+        private void InstructionsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

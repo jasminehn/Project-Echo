@@ -233,7 +233,7 @@ namespace ProjectEcho
                 foreach(string fileName in openFileDialog.FileNames)
                 {
                     path = Path.GetFullPath(fileName);
-                    uploadButton.Text = Path.GetFileName(fileName);
+                    //uploadButton.Text = Path.GetFileName(fileName);
                     //path = openFileDialog.File.FullName;
                     //string sourcePath = @"C:\Users\Public\TestFolder";
                     //string targetPath = @"C:\Users\Public\TestFolder\SubDir";
@@ -241,7 +241,7 @@ namespace ProjectEcho
 
                     string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
                     string extension = Path.GetExtension(fileName); //gets only the file extension
-                    uploadInfo.Text += "\n" + separatedFileName; //concats new file name
+                    uploadInfo.Text = "Uploaded: " + separatedFileName; //concats new file name
 
                     //create useruploads data text file (not needed right now)
                     /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
