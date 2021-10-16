@@ -178,7 +178,13 @@ namespace ProjectEcho
             this.mainPanel.Controls.Add(this.titlePanel);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.mainPanel.Location = new System.Drawing.Point(12, 39);
+=======
+            this.mainPanel.Controls.Add(this.mainMenuPanel);
+            this.mainPanel.Location = new System.Drawing.Point(16, 48);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.mainPanel.Controls.Add(this.mainMenuPanel);
             this.mainPanel.Location = new System.Drawing.Point(16, 48);
@@ -219,6 +225,7 @@ namespace ProjectEcho
             this.taskOnePanel.Controls.Add(this.label6);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.taskOnePanel.Location = new System.Drawing.Point(160, 5);
             this.taskOnePanel.Name = "taskOnePanel";
             this.taskOnePanel.Size = new System.Drawing.Size(54, 49);
@@ -233,6 +240,12 @@ namespace ProjectEcho
 >>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
+=======
+            this.taskOnePanel.Location = new System.Drawing.Point(20, 100);
+            this.taskOnePanel.Margin = new System.Windows.Forms.Padding(4);
+            this.taskOnePanel.Name = "taskOnePanel";
+            this.taskOnePanel.Size = new System.Drawing.Size(1281, 562);
+>>>>>>> parent of fd111fa (blah)
             this.taskOnePanel.TabIndex = 17;
             this.taskOnePanel.Visible = false;
             // 
@@ -243,8 +256,12 @@ namespace ProjectEcho
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label8.Location = new System.Drawing.Point(3229, 24);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+=======
+            this.label8.Location = new System.Drawing.Point(3336, 30);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.label8.Location = new System.Drawing.Point(3336, 30);
 >>>>>>> parent of fd111fa (blah)
@@ -263,6 +280,7 @@ namespace ProjectEcho
             this.checkedListBox1.FormattingEnabled = true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.checkedListBox1.Location = new System.Drawing.Point(3233, 50);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(214, 4);
@@ -273,10 +291,15 @@ namespace ProjectEcho
             this.checkedListBox1.Size = new System.Drawing.Size(284, 463);
 >>>>>>> parent of fd111fa (blah)
 =======
+=======
+>>>>>>> parent of fd111fa (blah)
             this.checkedListBox1.Location = new System.Drawing.Point(3342, 62);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(284, 463);
+<<<<<<< HEAD
+>>>>>>> parent of fd111fa (blah)
+=======
 >>>>>>> parent of fd111fa (blah)
             this.checkedListBox1.TabIndex = 18;
             // 
@@ -297,7 +320,11 @@ namespace ProjectEcho
             this.tabControl1.SelectedIndex = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabControl1.Size = new System.Drawing.Size(1676, 9);
+=======
+            this.tabControl1.Size = new System.Drawing.Size(2016, 516);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.tabControl1.Size = new System.Drawing.Size(2016, 516);
 >>>>>>> parent of fd111fa (blah)
@@ -317,8 +344,13 @@ namespace ProjectEcho
             this.tabPage1.Name = "tabPage1";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1668, 0);
+=======
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(2008, 479);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(2008, 479);
@@ -341,6 +373,7 @@ namespace ProjectEcho
             this.panel2.Controls.Add(this.uploadButton);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(-4, -39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 39);
@@ -354,6 +387,12 @@ namespace ProjectEcho
 <<<<<<< HEAD
 >>>>>>> parent of fd111fa (blah)
 =======
+>>>>>>> parent of fd111fa (blah)
+=======
+            this.panel2.Location = new System.Drawing.Point(-5, 430);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1198, 48);
 >>>>>>> parent of fd111fa (blah)
             this.panel2.TabIndex = 19;
             // 
@@ -406,10 +445,13 @@ namespace ProjectEcho
             "4 pages or less"});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.t1paCL.Location = new System.Drawing.Point(683, 54);
             this.t1paCL.Name = "t1paCL";
             this.t1paCL.Size = new System.Drawing.Size(165, 4);
 =======
+=======
+>>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
             this.t1paCL.Location = new System.Drawing.Point(965, 48);
@@ -417,6 +459,9 @@ namespace ProjectEcho
             this.t1paCL.Name = "t1paCL";
             this.t1paCL.Size = new System.Drawing.Size(219, 364);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of fd111fa (blah)
+=======
 >>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
@@ -432,8 +477,13 @@ namespace ProjectEcho
             this.tabPage2.Name = "tabPage2";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1668, 0);
+=======
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(2008, 479);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(2008, 479);
@@ -460,9 +510,16 @@ namespace ProjectEcho
             "4 pages or less"});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.checkedListBox2.Location = new System.Drawing.Point(70, 39);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(165, 4);
+=======
+            this.checkedListBox2.Location = new System.Drawing.Point(964, 48);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(219, 364);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.checkedListBox2.Location = new System.Drawing.Point(964, 48);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -487,7 +544,12 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.button1);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel3.Location = new System.Drawing.Point(-4, -39);
+=======
+            this.panel3.Location = new System.Drawing.Point(-5, 430);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.panel3.Location = new System.Drawing.Point(-5, 430);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -544,7 +606,11 @@ namespace ProjectEcho
             this.tabPage3.Name = "tabPage3";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage3.Size = new System.Drawing.Size(1668, 0);
+=======
+            this.tabPage3.Size = new System.Drawing.Size(2008, 479);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.tabPage3.Size = new System.Drawing.Size(2008, 479);
 >>>>>>> parent of fd111fa (blah)
@@ -569,6 +635,7 @@ namespace ProjectEcho
             "4 pages or less"});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.checkedListBox3.Location = new System.Drawing.Point(70, 39);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(165, 4);
@@ -583,6 +650,12 @@ namespace ProjectEcho
 >>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
+=======
+            this.checkedListBox3.Location = new System.Drawing.Point(964, 48);
+            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(219, 364);
+>>>>>>> parent of fd111fa (blah)
             this.checkedListBox3.TabIndex = 21;
             // 
             // panel4
@@ -595,7 +668,12 @@ namespace ProjectEcho
             this.panel4.Controls.Add(this.button2);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel4.Location = new System.Drawing.Point(-4, -39);
+=======
+            this.panel4.Location = new System.Drawing.Point(-5, 430);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.panel4.Location = new System.Drawing.Point(-5, 430);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
@@ -652,7 +730,11 @@ namespace ProjectEcho
             this.tabPage4.Name = "tabPage4";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage4.Size = new System.Drawing.Size(1668, 0);
+=======
+            this.tabPage4.Size = new System.Drawing.Size(2008, 479);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.tabPage4.Size = new System.Drawing.Size(2008, 479);
 >>>>>>> parent of fd111fa (blah)
@@ -677,9 +759,19 @@ namespace ProjectEcho
             "4 pages or less"});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.checkedListBox4.Location = new System.Drawing.Point(70, 39);
             this.checkedListBox4.Name = "checkedListBox4";
             this.checkedListBox4.Size = new System.Drawing.Size(165, 4);
+=======
+=======
+>>>>>>> parent of fd111fa (blah)
+            this.checkedListBox4.Location = new System.Drawing.Point(964, 48);
+            this.checkedListBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.checkedListBox4.Name = "checkedListBox4";
+            this.checkedListBox4.Size = new System.Drawing.Size(219, 364);
+<<<<<<< HEAD
+>>>>>>> parent of fd111fa (blah)
 =======
             this.checkedListBox4.Location = new System.Drawing.Point(964, 48);
             this.checkedListBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -687,10 +779,6 @@ namespace ProjectEcho
             this.checkedListBox4.Size = new System.Drawing.Size(219, 364);
 >>>>>>> parent of fd111fa (blah)
 =======
-            this.checkedListBox4.Location = new System.Drawing.Point(964, 48);
-            this.checkedListBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(219, 364);
 >>>>>>> parent of fd111fa (blah)
             this.checkedListBox4.TabIndex = 21;
             // 
@@ -704,7 +792,12 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.button3);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel5.Location = new System.Drawing.Point(-4, -39);
+=======
+            this.panel5.Location = new System.Drawing.Point(-5, 430);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.panel5.Location = new System.Drawing.Point(-5, 430);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
@@ -761,7 +854,11 @@ namespace ProjectEcho
             this.tabPage5.Name = "tabPage5";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage5.Size = new System.Drawing.Size(1668, 0);
+=======
+            this.tabPage5.Size = new System.Drawing.Size(2008, 479);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.tabPage5.Size = new System.Drawing.Size(2008, 479);
 >>>>>>> parent of fd111fa (blah)
@@ -786,10 +883,13 @@ namespace ProjectEcho
             "4 pages or less"});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.checkedListBox5.Location = new System.Drawing.Point(70, 39);
             this.checkedListBox5.Name = "checkedListBox5";
             this.checkedListBox5.Size = new System.Drawing.Size(165, 4);
 =======
+=======
+>>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
             this.checkedListBox5.Location = new System.Drawing.Point(964, 48);
@@ -797,6 +897,9 @@ namespace ProjectEcho
             this.checkedListBox5.Name = "checkedListBox5";
             this.checkedListBox5.Size = new System.Drawing.Size(219, 364);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of fd111fa (blah)
+=======
 >>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
@@ -812,7 +915,12 @@ namespace ProjectEcho
             this.panel6.Controls.Add(this.button4);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.panel6.Location = new System.Drawing.Point(-4, -39);
+=======
+            this.panel6.Location = new System.Drawing.Point(-5, 430);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> parent of fd111fa (blah)
 =======
             this.panel6.Location = new System.Drawing.Point(-5, 430);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
@@ -989,10 +1097,13 @@ namespace ProjectEcho
             this.mainMenuPanel.Controls.Add(this.taskOneButton);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.mainMenuPanel.Location = new System.Drawing.Point(232, 5);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(56, 49);
 =======
+=======
+>>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
             this.mainMenuPanel.Location = new System.Drawing.Point(20, 100);
@@ -1000,6 +1111,9 @@ namespace ProjectEcho
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(1277, 566);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of fd111fa (blah)
+=======
 >>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
