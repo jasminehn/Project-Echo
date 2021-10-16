@@ -81,6 +81,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="taskOneUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +100,8 @@
     <Compile Include="mainMenuUserControl.Designer.cs">
       <DependentUpon>mainMenuUserControl.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
 =======
@@ -130,6 +133,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="taskOneUserControl.resx">
       <DependentUpon>taskOneUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +143,8 @@
     <EmbeddedResource Include="mainMenuUserControl.resx">
       <DependentUpon>mainMenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> parent of fd111fa (blah)
 =======
 >>>>>>> parent of fd111fa (blah)
 =======
