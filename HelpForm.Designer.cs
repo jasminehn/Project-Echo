@@ -63,7 +63,7 @@ namespace ProjectEcho
             "Task 1",
             "Task 2",
             "Task 3"});
-            this.comboBox1.Location = new System.Drawing.Point(1256, 12);
+            this.comboBox1.Location = new System.Drawing.Point(1203, 12);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(373, 24);
@@ -73,7 +73,7 @@ namespace ProjectEcho
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1256, 46);
+            this.comboBox2.Location = new System.Drawing.Point(1203, 46);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(373, 24);
@@ -104,7 +104,7 @@ namespace ProjectEcho
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(1159, 16);
+            this.label3.Location = new System.Drawing.Point(1108, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
@@ -116,7 +116,7 @@ namespace ProjectEcho
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DarkBlue;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(1159, 50);
+            this.label4.Location = new System.Drawing.Point(1110, 50);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 17);
@@ -185,6 +185,7 @@ namespace ProjectEcho
             this.Controls.Add(this.label6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1665, 936);
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Help";
