@@ -13,19 +13,34 @@ namespace ProjectEcho
 {
     public partial class MainForm : Form
     {
+        public UserControl[] allControls = new UserControl[3];
+        UserControl currentControl = new UserControl();
+       
+        
         private Panel currentPanel = new Panel();
         public Panel[] contextPanels = new Panel[4];
+        
         public String path;
+        
+        
         public MainForm()
         {
             InitializeComponent();
-            contextPanels[0] = (mainMenuPanel);
-            contextPanels[1] = (taskOnePanel);
+
+            allControls[0] = new mainMenuUserControl();
+            allControls[1] = new taskOneUserControl();
+            allControls[2] = new taskTwoUserControl();
+
+            currentControl = allControls[0];
+            setControlActive(0);
+
+            //contextPanels[0] = (mainMenuPanel);
+            //contextPanels[1] = (taskOnePanel);
             //contextPanels[2] = (taskTwoPanel);
             //contextPanels[3] = (taskThreePanel);
 
-            currentPanel = contextPanels[0];
-            setPanelActive(0);
+            //currentPanel = contextPanels[0];
+            setControlActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
@@ -52,7 +67,7 @@ namespace ProjectEcho
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
@@ -104,43 +119,48 @@ namespace ProjectEcho
 
         private void task1Button_Click(object sender, EventArgs e)
         {
-            setPanelActive(1);
+            setControlActive(1);
         }
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(2);
+            setControlActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(3);
+            setControlActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(0);
+            setControlActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             int i = Array.IndexOf(contextPanels, currentPanel);
-            setPanelActive(i - 1);
+            setControlActive(i - 1);
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
             int i = Array.IndexOf(contextPanels, currentPanel);
-            setPanelActive(i + 1);
+            setControlActive(i + 1);
         }
 
-        private void setPanelActive(int i)
+        public void setControlActive(int i)
         {
-            currentPanel.Enabled = false;
-            currentPanel.Visible = false;
-            currentPanel = contextPanels[i];
-            currentPanel.Enabled = true;
-            currentPanel.Visible = true;
+            currentControl.Visible = false;
+            currentControl = allControls[i];
+            currentControl.Visible = true;
+
+
+            //currentPanel.Enabled = false;
+            //currentPanel.Visible = false;
+            //currentPanel = contextPanels[i];
+            //currentPanel.Enabled = true;
+            //currentPanel.Visible = true;
 
             if(i.Equals(0))
             {
@@ -172,7 +192,7 @@ namespace ProjectEcho
             }
 
 
-            // Comment balksdj lasjdf
+
             //DISPLAY UPLOADED FILES
 
             //get data stored in user upload data file (not needed yet)
@@ -210,8 +230,8 @@ namespace ProjectEcho
             }
             
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        /*
+        public String OpenFile()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckFileExists = true;
@@ -221,7 +241,7 @@ namespace ProjectEcho
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
             String path = "";
-            
+
             if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 foreach(string fileName in openFileDialog.FileNames)
@@ -251,7 +271,7 @@ namespace ProjectEcho
                     {
                         Console.WriteLine("File \"{0}\" already exists", separatedFileName);
                         return;
-                    }*/
+                    }
 
                     //gets task part name (i.e. task 1 part "A")
                     string currentTab = "x";
@@ -267,12 +287,12 @@ namespace ProjectEcho
                     try
                     {
                         //If the directory doesn't exist, create it
-                        if (!Directory.Exists(taskUploadsPath))
+                        if(!Directory.Exists(taskUploadsPath))
                         {
                             Directory.CreateDirectory(taskUploadsPath);
                         }
                     }
-                    catch (Exception)
+                    catch(Exception)
                     {
                         //fail silently
                     }
@@ -283,11 +303,17 @@ namespace ProjectEcho
 
                     //writes data enty to file (given file name, original file name, given file path, original file path (not needed right now)
                     /*string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
-                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);*/
+                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);
                 }
             }
+            return path;
+        }
+        */
 
-            
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FileHandler fh = new FileHandler();
+            //String path = fh.OpenFile();
             
             if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
@@ -330,6 +356,11 @@ namespace ProjectEcho
             {
                 Console.Write("Help opened");
             }
-        }       
+        }
+
+        private void mainMenuUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
