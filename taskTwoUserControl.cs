@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectEcho
 {
-    public partial class taskOneUserControl : UserControl
+    public partial class taskTwoUserControl : UserControl
     {
-        public taskOneUserControl()
+        public taskTwoUserControl()
         {
             InitializeComponent();
-        }
-
-        private void uploadButton_Click(object sender, EventArgs e)
-        {
-            String path = FileHandler.OpenFile();
-
-
-            
         }
     }
 }

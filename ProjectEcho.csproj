@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileHandler.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +84,18 @@
     <Compile Include="taskOneUserControl.Designer.cs">
       <DependentUpon>taskOneUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="taskTwoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="taskTwoUserControl.Designer.cs">
+      <DependentUpon>taskTwoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainMenuUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainMenuUserControl.Designer.cs">
+      <DependentUpon>mainMenuUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="taskOneUserControl.resx">
       <DependentUpon>taskOneUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskTwoUserControl.resx">
+      <DependentUpon>taskTwoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainMenuUserControl.resx">
+      <DependentUpon>mainMenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
