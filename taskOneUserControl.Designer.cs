@@ -91,7 +91,7 @@ namespace ProjectEcho
             this.taskOnePanel.Controls.Add(this.label6);
             this.taskOnePanel.Location = new System.Drawing.Point(3, 3);
             this.taskOnePanel.Name = "taskOnePanel";
-            this.taskOnePanel.Size = new System.Drawing.Size(955, 451);
+            this.taskOnePanel.Size = new System.Drawing.Size(955, 457);
             this.taskOnePanel.TabIndex = 18;
             this.taskOnePanel.Visible = false;
             // 
@@ -114,7 +114,7 @@ namespace ProjectEcho
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(2500, 50);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(214, 349);
+            this.checkedListBox1.Size = new System.Drawing.Size(214, 364);
             this.checkedListBox1.TabIndex = 18;
             // 
             // tabControl1
@@ -131,7 +131,7 @@ namespace ProjectEcho
             this.tabControl1.Location = new System.Drawing.Point(9, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(943, 413);
+            this.tabControl1.Size = new System.Drawing.Size(943, 419);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -143,7 +143,7 @@ namespace ProjectEcho
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(935, 382);
+            this.tabPage1.Size = new System.Drawing.Size(935, 388);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@ namespace ProjectEcho
             this.panel2.Controls.Add(this.uploadInfo);
             this.panel2.Controls.Add(this.uploadButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 340);
+            this.panel2.Location = new System.Drawing.Point(3, 346);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(929, 39);
             this.panel2.TabIndex = 19;
@@ -181,7 +181,6 @@ namespace ProjectEcho
             this.uploadButton.TabIndex = 17;
             this.uploadButton.Text = "CLICK TO UPLOAD";
             this.uploadButton.UseVisualStyleBackColor = true;
-            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // label5
             // 
@@ -217,7 +216,7 @@ namespace ProjectEcho
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(935, 388);
+            this.tabPage2.Size = new System.Drawing.Size(941, 388);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -292,7 +291,7 @@ namespace ProjectEcho
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(935, 388);
+            this.tabPage3.Size = new System.Drawing.Size(941, 388);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -367,7 +366,7 @@ namespace ProjectEcho
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(935, 388);
+            this.tabPage4.Size = new System.Drawing.Size(941, 388);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -442,7 +441,7 @@ namespace ProjectEcho
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(935, 388);
+            this.tabPage5.Size = new System.Drawing.Size(941, 388);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -519,12 +518,12 @@ namespace ProjectEcho
             this.label6.TabIndex = 8;
             this.label6.Text = resources.GetString("label6.Text");
             // 
-            // taskOneUserControl
+            // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.taskOnePanel);
-            this.Name = "taskOneUserControl";
+            this.Name = "UserControl2";
             this.Size = new System.Drawing.Size(961, 457);
             this.taskOnePanel.ResumeLayout(false);
             this.taskOnePanel.PerformLayout();

@@ -16,13 +16,5 @@ namespace ProjectEcho
         {
             InitializeComponent();
         }
-
-        private void uploadButton_Click(object sender, EventArgs e)
-        {
-            String path = FileHandler.OpenFile();
-
-
-            
-        }
     }
 }
