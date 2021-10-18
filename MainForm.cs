@@ -50,6 +50,9 @@ namespace ProjectEcho
                 //fail silently
             }
 
+            string fff = Path.Combine(Environment.CurrentDirectory, "Project-Echo\\PDF\\Requirement.pdf");
+            Console.WriteLine(fff);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -328,6 +331,11 @@ namespace ProjectEcho
             {
                 Console.Write("Help opened");
             }
-        }       
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            //for every part's task completed progress is added
+        }
     }
 }
