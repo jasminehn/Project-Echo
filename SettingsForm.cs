@@ -43,7 +43,7 @@ namespace ProjectEcho
             blueyellowSwitch.Text = "OFF";
             redgreenSwitch.Text = "OFF";
             boldSwitch.Text = "OFF";
-            textsizeSlider.Value = (int)label1.Font.Size;
+            textsizeSelect.Value = (decimal)label1.Font.Size;
         }
 
         private void switchButton_Click(object sender, EventArgs e)
@@ -52,15 +52,16 @@ namespace ProjectEcho
             if (on)
             {
                 BackColor = System.Drawing.Color.White;
-                textsizeSlider.BackColor = Color.White;
-                label4.ForeColor = System.Drawing.Color.Black;
+                textsizeSelect.BackColor = Color.White;
+                ForeColor = System.Drawing.Color.Black;
                 on = true;
             }
             else
             {
                 BackColor = System.Drawing.Color.Black;
-                textsizeSlider.BackColor = Color.Black;
-                label4.ForeColor = System.Drawing.Color.White;
+                textsizeSelect.BackColor = Color.Black;
+                textsizeSelect.ForeColor = Color.White;
+                ForeColor = System.Drawing.Color.White;
                 on = false;
             }
         }
@@ -83,40 +84,68 @@ namespace ProjectEcho
         private void grayscaleSwitch_Click(object sender, EventArgs e)
         {
             switchOnOff(grayscaleSwitch);
+            if (on)
+            {
+                //normal
+                on = true;
+            }
+            else
+            {
+                //greyscale
+                on = false;
+            }
         }
 
         private void blueyellowSwitch_Click(object sender, EventArgs e)
         {
             switchOnOff(blueyellowSwitch);
+            if (on)
+            {
+                //normal
+                on = true;
+            }
+            else
+            {
+                //filter
+                on = false;
+            }
         }
 
         private void redgreenSwitch_Click(object sender, EventArgs e)
         {
             switchOnOff(redgreenSwitch);
+            if (on)
+            {
+                //normal
+                on = true;
+            }
+            else
+            {
+                //filter
+                on = false;
+            }
         }
-
-        private void textsizeSlider_Scroll(object sender, EventArgs e)
-        {
-            
-            label1.Font = new Font(label1.Font.FontFamily, textsizeSlider.Value);
-            
-        }
-
+        
         private void boldSwitch_Click(object sender, EventArgs e)
         {
             switchOnOff(boldSwitch);
             if (on)
             {
-                //So far this only changes the font of the buttons
                 Font = new System.Drawing.Font(Font, FontStyle.Regular);
                 on = true;
             }
             else
             {
-                //So far this only changes the font of the buttons
                 Font = new System.Drawing.Font(Font, FontStyle.Bold);
                 on = false;
             }
+            //TODO: Currently only changes text size of buttons
+        }
+
+        private void textsizeSelect_SelectedItemChanged(object sender, EventArgs e)
+        {
+            Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);  
+            //TODO: Currently only changes text size of buttons
         }
     }
 }
