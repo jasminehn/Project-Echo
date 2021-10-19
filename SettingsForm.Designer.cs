@@ -30,6 +30,7 @@ namespace ProjectEcho
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SETTINGS = new System.Windows.Forms.Label();
             this.textsizeSelect = new System.Windows.Forms.NumericUpDown();
             this.boldSwitch = new System.Windows.Forms.Button();
             this.redgreenSwitch = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace ProjectEcho
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SETTINGS = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,17 @@ namespace ProjectEcho
             this.panel1.Size = new System.Drawing.Size(386, 421);
             this.panel1.TabIndex = 0;
             // 
+            // SETTINGS
+            // 
+            this.SETTINGS.AutoSize = true;
+            this.SETTINGS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SETTINGS.Location = new System.Drawing.Point(143, 8);
+            this.SETTINGS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SETTINGS.Name = "SETTINGS";
+            this.SETTINGS.Size = new System.Drawing.Size(143, 29);
+            this.SETTINGS.TabIndex = 1;
+            this.SETTINGS.Text = "SETTINGS";
+            // 
             // textsizeSelect
             // 
             this.textsizeSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,7 +101,7 @@ namespace ProjectEcho
             0,
             0});
             this.textsizeSelect.Name = "textsizeSelect";
-            this.textsizeSelect.Size = new System.Drawing.Size(85, 27);
+            this.textsizeSelect.Size = new System.Drawing.Size(85, 31);
             this.textsizeSelect.TabIndex = 21;
             this.textsizeSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textsizeSelect.Value = new decimal(new int[] {
@@ -128,7 +139,7 @@ namespace ProjectEcho
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(85, 359);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 24);
+            this.label8.Size = new System.Drawing.Size(119, 26);
             this.label8.TabIndex = 18;
             this.label8.Text = "Red-Green";
             // 
@@ -149,7 +160,7 @@ namespace ProjectEcho
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(270, 359);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 24);
+            this.label7.Size = new System.Drawing.Size(129, 26);
             this.label7.TabIndex = 16;
             this.label7.Text = "Blue-Yellow";
             // 
@@ -159,7 +170,7 @@ namespace ProjectEcho
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(85, 296);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 24);
+            this.label6.Size = new System.Drawing.Size(90, 26);
             this.label6.TabIndex = 15;
             this.label6.Text = "Inverted";
             // 
@@ -180,7 +191,7 @@ namespace ProjectEcho
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(270, 296);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 24);
+            this.label5.Size = new System.Drawing.Size(120, 26);
             this.label5.TabIndex = 13;
             this.label5.Text = "Gray Scale";
             // 
@@ -201,7 +212,7 @@ namespace ProjectEcho
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(85, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 24);
+            this.label4.Size = new System.Drawing.Size(118, 26);
             this.label4.TabIndex = 11;
             this.label4.Text = "Dark Mode";
             // 
@@ -222,7 +233,7 @@ namespace ProjectEcho
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(269, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 24);
+            this.label3.Size = new System.Drawing.Size(102, 26);
             this.label3.TabIndex = 9;
             this.label3.Text = "Boldness";
             // 
@@ -232,7 +243,7 @@ namespace ProjectEcho
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 24);
+            this.label2.Size = new System.Drawing.Size(191, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Color Adjustments";
             // 
@@ -242,26 +253,13 @@ namespace ProjectEcho
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 24);
+            this.label1.Size = new System.Drawing.Size(102, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "Text Size";
             // 
-            // SETTINGS
-            // 
-            this.SETTINGS.AutoSize = true;
-            this.SETTINGS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SETTINGS.Location = new System.Drawing.Point(143, 8);
-            this.SETTINGS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SETTINGS.Name = "SETTINGS";
-            this.SETTINGS.Size = new System.Drawing.Size(94, 23);
-            this.SETTINGS.TabIndex = 1;
-            this.SETTINGS.Text = "SETTINGS";
-            // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(423, 428);
             this.Controls.Add(this.panel1);

@@ -53,6 +53,10 @@ namespace ProjectEcho
             string fff = Path.Combine(Environment.CurrentDirectory, "Project-Echo\\PDF\\Requirement.pdf");
             Console.WriteLine(fff);
 
+            
+            API at = new API();
+            API.CallAPI();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
