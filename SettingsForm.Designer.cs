@@ -46,13 +46,25 @@ namespace ProjectEcho
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.darkModeSwitch1 = new ProjectEcho.ToggleControls();
+            this.boldSwitch1 = new ProjectEcho.ToggleControls();
+            this.toggleControls1 = new ProjectEcho.ToggleControls();
+            this.toggleControls2 = new ProjectEcho.ToggleControls();
+            this.toggleControls3 = new ProjectEcho.ToggleControls();
+            this.toggleControls4 = new ProjectEcho.ToggleControls();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.toggleControls4);
+            this.panel1.Controls.Add(this.toggleControls3);
+            this.panel1.Controls.Add(this.toggleControls2);
+            this.panel1.Controls.Add(this.toggleControls1);
+            this.panel1.Controls.Add(this.boldSwitch1);
+            this.panel1.Controls.Add(this.darkModeSwitch1);
             this.panel1.Controls.Add(this.SETTINGS);
             this.panel1.Controls.Add(this.textsizeSelect);
             this.panel1.Controls.Add(this.boldSwitch);
@@ -82,7 +94,7 @@ namespace ProjectEcho
             this.SETTINGS.Location = new System.Drawing.Point(143, 8);
             this.SETTINGS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SETTINGS.Name = "SETTINGS";
-            this.SETTINGS.Size = new System.Drawing.Size(143, 29);
+            this.SETTINGS.Size = new System.Drawing.Size(97, 20);
             this.SETTINGS.TabIndex = 1;
             this.SETTINGS.Text = "SETTINGS";
             // 
@@ -101,7 +113,7 @@ namespace ProjectEcho
             0,
             0});
             this.textsizeSelect.Name = "textsizeSelect";
-            this.textsizeSelect.Size = new System.Drawing.Size(85, 31);
+            this.textsizeSelect.Size = new System.Drawing.Size(85, 23);
             this.textsizeSelect.TabIndex = 21;
             this.textsizeSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textsizeSelect.Value = new decimal(new int[] {
@@ -139,7 +151,7 @@ namespace ProjectEcho
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(85, 359);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 26);
+            this.label8.Size = new System.Drawing.Size(81, 18);
             this.label8.TabIndex = 18;
             this.label8.Text = "Red-Green";
             // 
@@ -160,7 +172,7 @@ namespace ProjectEcho
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(270, 359);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 26);
+            this.label7.Size = new System.Drawing.Size(85, 18);
             this.label7.TabIndex = 16;
             this.label7.Text = "Blue-Yellow";
             // 
@@ -170,7 +182,7 @@ namespace ProjectEcho
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(85, 296);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 26);
+            this.label6.Size = new System.Drawing.Size(59, 18);
             this.label6.TabIndex = 15;
             this.label6.Text = "Inverted";
             // 
@@ -191,7 +203,7 @@ namespace ProjectEcho
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(270, 296);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 26);
+            this.label5.Size = new System.Drawing.Size(81, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "Gray Scale";
             // 
@@ -212,7 +224,7 @@ namespace ProjectEcho
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(85, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 26);
+            this.label4.Size = new System.Drawing.Size(82, 18);
             this.label4.TabIndex = 11;
             this.label4.Text = "Dark Mode";
             // 
@@ -233,7 +245,7 @@ namespace ProjectEcho
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(269, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 26);
+            this.label3.Size = new System.Drawing.Size(70, 18);
             this.label3.TabIndex = 9;
             this.label3.Text = "Boldness";
             // 
@@ -243,7 +255,7 @@ namespace ProjectEcho
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 26);
+            this.label2.Size = new System.Drawing.Size(130, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Color Adjustments";
             // 
@@ -253,9 +265,99 @@ namespace ProjectEcho
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 26);
+            this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Text Size";
+            // 
+            // darkModeSwitch1
+            // 
+            this.darkModeSwitch1.AutoSize = true;
+            this.darkModeSwitch1.BackColor = System.Drawing.Color.White;
+            this.darkModeSwitch1.Location = new System.Drawing.Point(35, 43);
+            this.darkModeSwitch1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.darkModeSwitch1.Name = "darkModeSwitch1";
+            this.darkModeSwitch1.OffBackColor1 = System.Drawing.Color.Gray;
+            this.darkModeSwitch1.OffToggleColor1 = System.Drawing.Color.Gainsboro;
+            this.darkModeSwitch1.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
+            this.darkModeSwitch1.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
+            this.darkModeSwitch1.Size = new System.Drawing.Size(45, 22);
+            this.darkModeSwitch1.TabIndex = 22;
+            this.darkModeSwitch1.UseVisualStyleBackColor = false;
+            // 
+            // boldSwitch1
+            // 
+            this.boldSwitch1.AutoSize = true;
+            this.boldSwitch1.BackColor = System.Drawing.Color.White;
+            this.boldSwitch1.Location = new System.Drawing.Point(213, 135);
+            this.boldSwitch1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.boldSwitch1.Name = "boldSwitch1";
+            this.boldSwitch1.OffBackColor1 = System.Drawing.Color.Gray;
+            this.boldSwitch1.OffToggleColor1 = System.Drawing.Color.Gainsboro;
+            this.boldSwitch1.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
+            this.boldSwitch1.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
+            this.boldSwitch1.Size = new System.Drawing.Size(45, 22);
+            this.boldSwitch1.TabIndex = 23;
+            this.boldSwitch1.UseVisualStyleBackColor = false;
+            // 
+            // toggleControls1
+            // 
+            this.toggleControls1.AutoSize = true;
+            this.toggleControls1.BackColor = System.Drawing.Color.White;
+            this.toggleControls1.Location = new System.Drawing.Point(-4, 301);
+            this.toggleControls1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleControls1.Name = "toggleControls1";
+            this.toggleControls1.OffBackColor1 = System.Drawing.Color.Gray;
+            this.toggleControls1.OffToggleColor1 = System.Drawing.Color.Gainsboro;
+            this.toggleControls1.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
+            this.toggleControls1.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
+            this.toggleControls1.Size = new System.Drawing.Size(45, 22);
+            this.toggleControls1.TabIndex = 24;
+            this.toggleControls1.UseVisualStyleBackColor = false;
+            // 
+            // toggleControls2
+            // 
+            this.toggleControls2.AutoSize = true;
+            this.toggleControls2.BackColor = System.Drawing.Color.White;
+            this.toggleControls2.Location = new System.Drawing.Point(185, 292);
+            this.toggleControls2.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleControls2.Name = "toggleControls2";
+            this.toggleControls2.OffBackColor1 = System.Drawing.Color.Gray;
+            this.toggleControls2.OffToggleColor1 = System.Drawing.Color.Gainsboro;
+            this.toggleControls2.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
+            this.toggleControls2.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
+            this.toggleControls2.Size = new System.Drawing.Size(45, 22);
+            this.toggleControls2.TabIndex = 25;
+            this.toggleControls2.UseVisualStyleBackColor = false;
+            // 
+            // toggleControls3
+            // 
+            this.toggleControls3.AutoSize = true;
+            this.toggleControls3.BackColor = System.Drawing.Color.White;
+            this.toggleControls3.Location = new System.Drawing.Point(0, 361);
+            this.toggleControls3.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleControls3.Name = "toggleControls3";
+            this.toggleControls3.OffBackColor1 = System.Drawing.Color.Gray;
+            this.toggleControls3.OffToggleColor1 = System.Drawing.Color.Gainsboro;
+            this.toggleControls3.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
+            this.toggleControls3.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
+            this.toggleControls3.Size = new System.Drawing.Size(45, 22);
+            this.toggleControls3.TabIndex = 26;
+            this.toggleControls3.UseVisualStyleBackColor = false;
+            // 
+            // toggleControls4
+            // 
+            this.toggleControls4.AutoSize = true;
+            this.toggleControls4.BackColor = System.Drawing.Color.White;
+            this.toggleControls4.Location = new System.Drawing.Point(195, 364);
+            this.toggleControls4.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleControls4.Name = "toggleControls4";
+            this.toggleControls4.OffBackColor1 = System.Drawing.Color.Gray;
+            this.toggleControls4.OffToggleColor1 = System.Drawing.Color.Gainsboro;
+            this.toggleControls4.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
+            this.toggleControls4.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
+            this.toggleControls4.Size = new System.Drawing.Size(45, 22);
+            this.toggleControls4.TabIndex = 27;
+            this.toggleControls4.UseVisualStyleBackColor = false;
             // 
             // SettingsForm
             // 
@@ -295,5 +397,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private ToggleControls toggleControls4;
+        private ToggleControls toggleControls3;
+        private ToggleControls toggleControls2;
+        private ToggleControls toggleControls1;
+        private ToggleControls boldSwitch1;
+        private ToggleControls darkModeSwitch1;
     }
 }
