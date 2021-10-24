@@ -1,7 +1,7 @@
 ﻿
 namespace ProjectEcho
 {
-    partial class taskOneUserControl
+    partial class TaskOneUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProjectEcho
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(taskOneUserControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskOneUserControl));
             this.taskOnePanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -216,7 +216,7 @@ namespace ProjectEcho
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(941, 388);
+            this.tabPage2.Size = new System.Drawing.Size(935, 388);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -291,7 +291,7 @@ namespace ProjectEcho
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(941, 388);
+            this.tabPage3.Size = new System.Drawing.Size(935, 388);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -366,7 +366,7 @@ namespace ProjectEcho
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(941, 388);
+            this.tabPage4.Size = new System.Drawing.Size(935, 388);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -441,7 +441,7 @@ namespace ProjectEcho
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(941, 388);
+            this.tabPage5.Size = new System.Drawing.Size(935, 388);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -518,12 +518,12 @@ namespace ProjectEcho
             this.label6.TabIndex = 8;
             this.label6.Text = resources.GetString("label6.Text");
             // 
-            // UserControl2
+            // taskOneUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.taskOnePanel);
-            this.Name = "UserControl2";
+            this.Name = "taskOneUserControl";
             this.Size = new System.Drawing.Size(961, 457);
             this.taskOnePanel.ResumeLayout(false);
             this.taskOnePanel.PerformLayout();

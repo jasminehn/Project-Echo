@@ -13,18 +13,32 @@ namespace ProjectEcho
 {
     public partial class MainForm : Form
     {
-        private Panel currentPanel = new Panel();
-        public Panel[] contextPanels = new Panel[4];
+        //private Panel currentPanel = new Panel();
+        //public Panel[] contextPanels = new Panel[4];
+        private UserControl currentControl = new UserControl();
+        static TaskOneUserControl t1 = new TaskOneUserControl();
+        static TaskTwoUserControl t2 = new TaskTwoUserControl();
+        public UserControl[] taskControls = new UserControl[4];
+
+        
+
+
         public String path;
         public MainForm()
         {
             InitializeComponent();
-            contextPanels[0] = (mainMenuPanel);
-            contextPanels[1] = (taskOnePanel);
+
+            taskControls[1] = t1;
+            taskControls[2] = t2;
+            taskControls[3] = t1;
+
+            //contextPanels[0] = (mainMenuPanel);
+            //contextPanels[1] = (taskOnePanel);
             //contextPanels[2] = (taskTwoPanel);
             //contextPanels[3] = (taskThreePanel);
 
-            currentPanel = contextPanels[0];
+            currentControl = taskControls[0];
+            //currentPanel = contextPanels[0];
             setPanelActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
@@ -55,7 +69,7 @@ namespace ProjectEcho
 
             
             API at = new API();
-            API.CallAPI();
+            //API.CallAPI();
 
         }
 
@@ -74,27 +88,7 @@ namespace ProjectEcho
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void taskTwoList_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-           
-        }
-
-        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
@@ -116,38 +110,39 @@ namespace ProjectEcho
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(2);
+            //setPanelActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(3);
+            //setPanelActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(0);
+            //setPanelActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            int i = Array.IndexOf(contextPanels, currentPanel);
-            setPanelActive(i - 1);
+            //int i = Array.IndexOf(contextPanels, currentPanel);
+            //setPanelActive(i - 1);
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            int i = Array.IndexOf(contextPanels, currentPanel);
-            setPanelActive(i + 1);
+            //int i = Array.IndexOf(contextPanels, currentPanel);
+            //setPanelActive(i + 1);
         }
 
         private void setPanelActive(int i)
         {
-            currentPanel.Enabled = false;
+          /*  currentPanel.Enabled = false;
             currentPanel.Visible = false;
             currentPanel = contextPanels[i];
             currentPanel.Enabled = true;
             currentPanel.Visible = true;
+          */
 
             if(i.Equals(0))
             {
@@ -186,7 +181,7 @@ namespace ProjectEcho
 
             //gets task part name (i.e. task 1 part "A")
             string currentTab = "x";
-            currentTab = this.tabControl1.SelectedTab.Text;
+            //currentTab = this.tabControl1.SelectedTab.Text;
             char currentTabLetter = currentTab[currentTab.Length - 1];
             
             string uploadedFile = "taskUpload" + i + currentTabLetter; //generates folder name based on currently selected task/part (i.e. taskUpload1A)
@@ -206,7 +201,7 @@ namespace ProjectEcho
                         str = str + "\n" + file.Name; //adds each file name to the string
                     }
 
-                    uploadInfo.Text = "Uploaded: " + str; //set upload info text to display all files from the folder
+                    //uploadInfo.Text = "Uploaded: " + str; //set upload info text to display all files from the folder
                 }
             }
             catch (Exception)
@@ -240,7 +235,7 @@ namespace ProjectEcho
 
                     string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
                     string extension = Path.GetExtension(fileName); //gets only the file extension
-                    uploadInfo.Text = "Uploaded: " + separatedFileName; //concats new file name
+                    //uploadInfo.Text = "Uploaded: " + separatedFileName; //concats new file name
 
                     //create useruploads data text file (not needed right now)
                     /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
@@ -260,15 +255,15 @@ namespace ProjectEcho
 
                     //gets task part name (i.e. task 1 part "A")
                     string currentTab = "x";
-                    currentTab = this.tabControl1.SelectedTab.Text;
+                    //currentTab = this.tabControl1.SelectedTab.Text;
                     char currentTabLetter = currentTab[currentTab.Length - 1];
 
                     //creates name of file based on current task and part (i.e. taskUpload1A) so that when they reupload a file with a different name, it still overwrites the stored file
-                    int i = Array.IndexOf(contextPanels, currentPanel);
-                    string uploadedFile = "taskUpload" + i + currentTabLetter;
+                    //int i = Array.IndexOf(contextPanels, currentPanel);
+                    //string uploadedFile = "taskUpload" + i + currentTabLetter;
 
                     //create user task folder
-                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
+/*                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
                     try
                     {
                         //If the directory doesn't exist, create it
@@ -282,9 +277,9 @@ namespace ProjectEcho
                         //fail silently
                     }
 
-                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName); //path to upload the user's file
+                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName);*/ //path to upload the user's file
                     //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
-                    File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
+                    //File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
 
                     //writes data enty to file (given file name, original file name, given file path, original file path (not needed right now)
                     /*string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
@@ -294,7 +289,7 @@ namespace ProjectEcho
 
             
             
-            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
+/*            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
                 uploadInfo.Text = uploadInfo.Text + path;
                 FormatChecker fc = new FormatChecker();
@@ -320,7 +315,7 @@ namespace ProjectEcho
                 t1paCL.SetItemChecked(3, true); //Length
             }
                 
-            }
+            }*/
 
 
         }
@@ -341,7 +336,5 @@ namespace ProjectEcho
         {
             //for every part's task completed progress is added
         }
-
-
     }
 }

@@ -86,14 +86,20 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="taskOneUserControl.cs">
+    <Compile Include="TaskOneUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="taskOneUserControl.Designer.cs">
-      <DependentUpon>taskOneUserControl.cs</DependentUpon>
+    <Compile Include="TaskOneUserControl.Designer.cs">
+      <DependentUpon>TaskOneUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ToggleControls.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TaskTwoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskTwoUserControl.Designer.cs">
+      <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -117,8 +123,11 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="taskOneUserControl.resx">
-      <DependentUpon>taskOneUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="TaskOneUserControl.resx">
+      <DependentUpon>TaskOneUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskTwoUserControl.resx">
+      <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
