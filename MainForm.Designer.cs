@@ -35,7 +35,6 @@ namespace ProjectEcho
             this.settingsButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.forwardButton = new System.Windows.Forms.Button();
@@ -71,7 +70,7 @@ namespace ProjectEcho
             this.contextPanel.Controls.Add(this.helpButton);
             this.contextPanel.Location = new System.Drawing.Point(0, 0);
             this.contextPanel.Name = "contextPanel";
-            this.contextPanel.Size = new System.Drawing.Size(1015, 36);
+            this.contextPanel.Size = new System.Drawing.Size(1250, 36);
             this.contextPanel.TabIndex = 0;
             // 
             // superTitleLabel
@@ -96,7 +95,7 @@ namespace ProjectEcho
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(977, -1);
+            this.settingsButton.Location = new System.Drawing.Point(1212, -1);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(35, 32);
             this.settingsButton.TabIndex = 0;
@@ -109,7 +108,7 @@ namespace ProjectEcho
             this.helpButton.BackColor = System.Drawing.Color.White;
             this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpButton.Location = new System.Drawing.Point(913, 6);
+            this.helpButton.Location = new System.Drawing.Point(1148, 6);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(58, 23);
             this.helpButton.TabIndex = 1;
@@ -124,25 +123,13 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mainPanel.BackColor = System.Drawing.Color.White;
-            this.mainPanel.Controls.Add(this.progressBar1);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.titlePanel);
             this.mainPanel.Controls.Add(this.mainMenuPanel);
             this.mainPanel.Location = new System.Drawing.Point(12, 39);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(991, 623);
+            this.mainPanel.Size = new System.Drawing.Size(1226, 750);
             this.mainPanel.TabIndex = 1;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.Color.DimGray;
-            this.progressBar1.ForeColor = System.Drawing.Color.LightGreen;
-            this.progressBar1.Location = new System.Drawing.Point(-3, 0);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(997, 11);
-            this.progressBar1.TabIndex = 18;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // panel1
             // 
@@ -151,9 +138,9 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.returnToMenuButton);
             this.panel1.Controls.Add(this.forwardButton);
             this.panel1.Controls.Add(this.backButton);
-            this.panel1.Location = new System.Drawing.Point(15, 547);
+            this.panel1.Location = new System.Drawing.Point(15, 674);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(961, 61);
+            this.panel1.Size = new System.Drawing.Size(1196, 61);
             this.panel1.TabIndex = 10;
             // 
             // returnToMenuButton
@@ -181,7 +168,7 @@ namespace ProjectEcho
             this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
-            this.forwardButton.Location = new System.Drawing.Point(907, 3);
+            this.forwardButton.Location = new System.Drawing.Point(1142, 3);
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(51, 55);
             this.forwardButton.TabIndex = 1;
@@ -195,7 +182,7 @@ namespace ProjectEcho
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
-            this.backButton.Location = new System.Drawing.Point(850, 3);
+            this.backButton.Location = new System.Drawing.Point(1085, 3);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(51, 55);
             this.backButton.TabIndex = 0;
@@ -212,7 +199,7 @@ namespace ProjectEcho
             this.titlePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlePanel.Location = new System.Drawing.Point(15, 16);
             this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(961, 54);
+            this.titlePanel.Size = new System.Drawing.Size(1196, 54);
             this.titlePanel.TabIndex = 0;
             // 
             // titleSubtitleLabel
@@ -252,7 +239,7 @@ namespace ProjectEcho
             this.mainMenuPanel.Controls.Add(this.taskOneButton);
             this.mainMenuPanel.Location = new System.Drawing.Point(15, 81);
             this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(958, 460);
+            this.mainMenuPanel.Size = new System.Drawing.Size(1196, 587);
             this.mainMenuPanel.TabIndex = 2;
             // 
             // reviewList
@@ -362,7 +349,7 @@ namespace ProjectEcho
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1015, 674);
+            this.ClientSize = new System.Drawing.Size(1250, 801);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.contextPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -406,6 +393,5 @@ namespace ProjectEcho
         private System.Windows.Forms.Button returnToMenuButton;
         private System.Windows.Forms.Button forwardButton;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
