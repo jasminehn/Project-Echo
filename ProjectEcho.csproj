@@ -58,7 +58,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API.cs" />
+    <Compile Include="GrammarAPI.cs" />
     <Compile Include="DocumentHandler.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -155,7 +155,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PDF\Requirements.pdf" />
+    <EmbeddedResource Include="PDF\Requirements.pdf" />
     <None Include="Resources\Untitled design %287%29.png" />
   </ItemGroup>
   <ItemGroup>

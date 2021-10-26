@@ -91,34 +91,36 @@ namespace ProjectEcho
             await Task.Delay(10);
 
             //change page depending on selection
-            if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B") || comboBox2.SelectedItem.Equals("Part C")))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=1"));
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=2"));
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 2") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B")))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=3"));
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part A"))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=4"));
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part B"))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=5"));
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part C"))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=6"));
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=7"));
-            }
+                       if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B") || comboBox2.SelectedItem.Equals("Part C")))
+                        {
+                            //webBrowser1.Navigate(new Uri(FileName1 + "#page=1"));
+                            webBrowser1.Navigate(FileName1 + "#page=1");
+                        }
+                        else if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
+                        {
+                            webBrowser1.Navigate(new Uri(FileName1 + "#page=2"));
+                        }
+                        else if (comboBox1.SelectedItem.Equals("Task 2") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B")))
+                        {
+                            webBrowser1.Navigate(new Uri(FileName1 + "#page=3"));
+                        }
+                        else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part A"))
+                        {
+                            webBrowser1.Navigate(new Uri(FileName1 + "#page=4"));
+                        }
+                        else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part B"))
+                        {
+                            webBrowser1.Navigate(new Uri(FileName1 + "#page=5"));
+                        }
+                        else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part C"))
+                        {
+                            webBrowser1.Navigate(new Uri(FileName1 + "#page=6"));
+                        }
+                        else if (comboBox1.SelectedItem.Equals("Task 3") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
+                        {
+                            webBrowser1.Navigate(new Uri(FileName1 + "#page=7"));
+                        }
+            //webBrowser1.Navigate("www.google.com");
 
             webBrowser1.Show(); //display browser after navigating to new page
             //Console.WriteLine(webBrowser1.Url.AbsoluteUri); //print current page (for testing)

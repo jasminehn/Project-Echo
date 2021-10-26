@@ -22,7 +22,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace ProjectEcho
 {
-    public class API
+    public class GrammarAPI
     {
         
         /*
@@ -113,9 +113,5 @@ namespace ProjectEcho
 
                 return "1";
             }
-
-
         }
-
-    
 }

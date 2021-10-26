@@ -101,9 +101,9 @@ namespace ProjectEcho
             "Arial Font",
             "Size 12 Font",
             "4 pages or less"});
-            this.checkedListBox5.Location = new System.Drawing.Point(1027, 94);
+            this.checkedListBox5.Location = new System.Drawing.Point(1002, 407);
             this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(126, 379);
+            this.checkedListBox5.Size = new System.Drawing.Size(159, 64);
             this.checkedListBox5.TabIndex = 21;
             // 
             // tabPage5
