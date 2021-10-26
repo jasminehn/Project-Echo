@@ -30,7 +30,8 @@ namespace ProjectEcho
             InitializeComponent();
 
 
-            taskControls[0] = mainMenu;
+            //taskControls[0] = mainMenu;
+            taskControls[0] = t1;
             taskControls[1] = taskOne;
             taskControls[2] = taskTwo;
             taskControls[3] = t1;
@@ -81,10 +82,7 @@ namespace ProjectEcho
 
         }
 
-        private void titlePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+  
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -113,17 +111,17 @@ namespace ProjectEcho
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            //setPanelActive(2);
+            setPanelActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            //setPanelActive(3);
+            setPanelActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            //setPanelActive(0);
+            setPanelActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -140,15 +138,18 @@ namespace ProjectEcho
 
         public void setPanelActive(int i)
         {
-          /*  currentPanel.Enabled = false;
-            currentPanel.Visible = false;
-            currentPanel = contextPanels[i];
-            currentPanel.Enabled = true;
-            currentPanel.Visible = true;
-          */
-
+            
+             currentControl.Visible = false;
+             currentControl = taskControls[i];
+             currentControl.Visible = true;
+     
             if(i.Equals(0))
             {
+                
+                //currentControl.Visible = false;
+                //currentControl = taskControls[0];
+                mainMenuPanel.Visible = true;
+
                 titleLabel.Text = "MAIN MENU";
                 returnToMenuButton.Visible = false;
                 returnToMenuButton.Enabled = false;
@@ -156,6 +157,7 @@ namespace ProjectEcho
                 backButton.Enabled = false;
             } else
             {
+                mainMenuPanel.Visible = false;
                 returnToMenuButton.Visible = true;
                 returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
@@ -214,9 +216,9 @@ namespace ProjectEcho
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void uploadFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+          /*  OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = false;
@@ -241,7 +243,7 @@ namespace ProjectEcho
                     //uploadInfo.Text = "Uploaded: " + separatedFileName; //concats new file name
 
                     //create useruploads data text file (not needed right now)
-                    /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+                    *//*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
                     try
                     {
                         //if the file doesn't exist, create it
@@ -254,7 +256,7 @@ namespace ProjectEcho
                     {
                         Console.WriteLine("File \"{0}\" already exists", separatedFileName);
                         return;
-                    }*/
+                    }*//*
 
                     //gets task part name (i.e. task 1 part "A")
                     string currentTab = "x";
@@ -266,7 +268,7 @@ namespace ProjectEcho
                     //string uploadedFile = "taskUpload" + i + currentTabLetter;
 
                     //create user task folder
-/*                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
+                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
                     try
                     {
                         //If the directory doesn't exist, create it
@@ -281,44 +283,48 @@ namespace ProjectEcho
                     }
 
                     string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName);*/ //path to upload the user's file
-                    //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
+                    
+                        
+                        
+                        //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
                     //File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
 
                     //writes data enty to file (given file name, original file name, given file path, original file path (not needed right now)
-                    /*string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
-                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);*/
+      /*              string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
+                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);
                 }
             }
 
+            */
             
             
-/*            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
+            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
-                uploadInfo.Text = uploadInfo.Text + path;
+                //uploadInfo.Text = uploadInfo.Text + path;
                 FormatChecker fc = new FormatChecker();
                 Boolean[] b = fc.runFormatCheck(path, 90);
                             //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
             if(b[0].Equals(true))
             {
-                t1paCL.SetItemChecked(0, true); //Aligned
+                //t1paCL.SetItemChecked(0, true); //Aligned
             }
 
             if(b[1].Equals(true))
             {
-                t1paCL.SetItemChecked(1, true); //Font
+                //t1paCL.SetItemChecked(1, true); //Font
             }
 
             if(b[2].Equals(true))
             {
-                t1paCL.SetItemChecked(2, true); //Font Size
+                //t1paCL.SetItemChecked(2, true); //Font Size
             }
 
             if(b[3].Equals(true))
             {
-                t1paCL.SetItemChecked(3, true); //Length
+                //t1paCL.SetItemChecked(3, true); //Length
             }
                 
-            }*/
+            }
 
 
         }
@@ -340,9 +346,6 @@ namespace ProjectEcho
             //for every part's task completed progress is added
         }
 
-        private void mainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }

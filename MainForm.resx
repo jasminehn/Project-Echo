@@ -129,6 +129,9 @@
         WUaP2X8cFsiQTg1dt7/ytQP2EYSUqMrKX8Aw/AKtvxZYM79EfQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAIB8AAAEAIAAkEAAAFgAAACgAAAAgAAAAPgAAAAEAIAAAAAAAgA8AAAAAAAAAAAAAAAAAAAAA
