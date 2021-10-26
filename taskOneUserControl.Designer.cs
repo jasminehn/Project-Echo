@@ -152,9 +152,9 @@ namespace ProjectEcho
             "Arial Font",
             "Size 12 Font",
             "4 pages or less"});
-            this.checkedListBox4.Location = new System.Drawing.Point(1025, 80);
+            this.checkedListBox4.Location = new System.Drawing.Point(1002, 407);
             this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(126, 379);
+            this.checkedListBox4.Size = new System.Drawing.Size(159, 64);
             this.checkedListBox4.TabIndex = 21;
             // 
             // tabPage4
@@ -193,9 +193,9 @@ namespace ProjectEcho
             "Arial Font",
             "Size 12 Font",
             "4 pages or less"});
-            this.checkedListBox3.Location = new System.Drawing.Point(1031, 61);
+            this.checkedListBox3.Location = new System.Drawing.Point(1002, 407);
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(126, 379);
+            this.checkedListBox3.Size = new System.Drawing.Size(159, 64);
             this.checkedListBox3.TabIndex = 21;
             // 
             // label2
@@ -345,9 +345,9 @@ namespace ProjectEcho
             "Arial Font",
             "Size 12 Font",
             "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(1002, 47);
+            this.t1paCL.Location = new System.Drawing.Point(1002, 407);
             this.t1paCL.Name = "t1paCL";
-            this.t1paCL.Size = new System.Drawing.Size(162, 424);
+            this.t1paCL.Size = new System.Drawing.Size(159, 64);
             this.t1paCL.TabIndex = 14;
             // 
             // tabPage2
@@ -375,9 +375,9 @@ namespace ProjectEcho
             "Arial Font",
             "Size 12 Font",
             "4 pages or less"});
-            this.checkedListBox2.Location = new System.Drawing.Point(975, 79);
+            this.checkedListBox2.Location = new System.Drawing.Point(1002, 407);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(166, 364);
+            this.checkedListBox2.Size = new System.Drawing.Size(159, 64);
             this.checkedListBox2.TabIndex = 21;
             // 
             // label1

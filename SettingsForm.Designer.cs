@@ -46,12 +46,6 @@ namespace ProjectEcho
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.darkModeSwitch1 = new ProjectEcho.ToggleControls();
-            this.boldSwitch1 = new ProjectEcho.ToggleControls();
-            this.toggleControls1 = new ProjectEcho.ToggleControls();
-            this.toggleControls2 = new ProjectEcho.ToggleControls();
-            this.toggleControls3 = new ProjectEcho.ToggleControls();
-            this.toggleControls4 = new ProjectEcho.ToggleControls();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).BeginInit();
             this.SuspendLayout();
@@ -59,12 +53,6 @@ namespace ProjectEcho
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.toggleControls4);
-            this.panel1.Controls.Add(this.toggleControls3);
-            this.panel1.Controls.Add(this.toggleControls2);
-            this.panel1.Controls.Add(this.toggleControls1);
-            this.panel1.Controls.Add(this.boldSwitch1);
-            this.panel1.Controls.Add(this.darkModeSwitch1);
             this.panel1.Controls.Add(this.SETTINGS);
             this.panel1.Controls.Add(this.textsizeSelect);
             this.panel1.Controls.Add(this.boldSwitch);
@@ -269,96 +257,6 @@ namespace ProjectEcho
             this.label1.TabIndex = 3;
             this.label1.Text = "Text Size";
             // 
-            // darkModeSwitch1
-            // 
-            this.darkModeSwitch1.AutoSize = true;
-            this.darkModeSwitch1.BackColor = System.Drawing.Color.White;
-            this.darkModeSwitch1.Location = new System.Drawing.Point(35, 43);
-            this.darkModeSwitch1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.darkModeSwitch1.Name = "darkModeSwitch1";
-            this.darkModeSwitch1.OffBackColor1 = System.Drawing.Color.Gray;
-            this.darkModeSwitch1.OffToggleColor1 = System.Drawing.Color.Gainsboro;
-            this.darkModeSwitch1.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
-            this.darkModeSwitch1.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
-            this.darkModeSwitch1.Size = new System.Drawing.Size(45, 22);
-            this.darkModeSwitch1.TabIndex = 22;
-            this.darkModeSwitch1.UseVisualStyleBackColor = false;
-            // 
-            // boldSwitch1
-            // 
-            this.boldSwitch1.AutoSize = true;
-            this.boldSwitch1.BackColor = System.Drawing.Color.White;
-            this.boldSwitch1.Location = new System.Drawing.Point(213, 135);
-            this.boldSwitch1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.boldSwitch1.Name = "boldSwitch1";
-            this.boldSwitch1.OffBackColor1 = System.Drawing.Color.Gray;
-            this.boldSwitch1.OffToggleColor1 = System.Drawing.Color.Gainsboro;
-            this.boldSwitch1.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
-            this.boldSwitch1.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
-            this.boldSwitch1.Size = new System.Drawing.Size(45, 22);
-            this.boldSwitch1.TabIndex = 23;
-            this.boldSwitch1.UseVisualStyleBackColor = false;
-            // 
-            // toggleControls1
-            // 
-            this.toggleControls1.AutoSize = true;
-            this.toggleControls1.BackColor = System.Drawing.Color.White;
-            this.toggleControls1.Location = new System.Drawing.Point(-4, 301);
-            this.toggleControls1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleControls1.Name = "toggleControls1";
-            this.toggleControls1.OffBackColor1 = System.Drawing.Color.Gray;
-            this.toggleControls1.OffToggleColor1 = System.Drawing.Color.Gainsboro;
-            this.toggleControls1.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
-            this.toggleControls1.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
-            this.toggleControls1.Size = new System.Drawing.Size(45, 22);
-            this.toggleControls1.TabIndex = 24;
-            this.toggleControls1.UseVisualStyleBackColor = false;
-            // 
-            // toggleControls2
-            // 
-            this.toggleControls2.AutoSize = true;
-            this.toggleControls2.BackColor = System.Drawing.Color.White;
-            this.toggleControls2.Location = new System.Drawing.Point(185, 292);
-            this.toggleControls2.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleControls2.Name = "toggleControls2";
-            this.toggleControls2.OffBackColor1 = System.Drawing.Color.Gray;
-            this.toggleControls2.OffToggleColor1 = System.Drawing.Color.Gainsboro;
-            this.toggleControls2.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
-            this.toggleControls2.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
-            this.toggleControls2.Size = new System.Drawing.Size(45, 22);
-            this.toggleControls2.TabIndex = 25;
-            this.toggleControls2.UseVisualStyleBackColor = false;
-            // 
-            // toggleControls3
-            // 
-            this.toggleControls3.AutoSize = true;
-            this.toggleControls3.BackColor = System.Drawing.Color.White;
-            this.toggleControls3.Location = new System.Drawing.Point(0, 361);
-            this.toggleControls3.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleControls3.Name = "toggleControls3";
-            this.toggleControls3.OffBackColor1 = System.Drawing.Color.Gray;
-            this.toggleControls3.OffToggleColor1 = System.Drawing.Color.Gainsboro;
-            this.toggleControls3.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
-            this.toggleControls3.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
-            this.toggleControls3.Size = new System.Drawing.Size(45, 22);
-            this.toggleControls3.TabIndex = 26;
-            this.toggleControls3.UseVisualStyleBackColor = false;
-            // 
-            // toggleControls4
-            // 
-            this.toggleControls4.AutoSize = true;
-            this.toggleControls4.BackColor = System.Drawing.Color.White;
-            this.toggleControls4.Location = new System.Drawing.Point(195, 364);
-            this.toggleControls4.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleControls4.Name = "toggleControls4";
-            this.toggleControls4.OffBackColor1 = System.Drawing.Color.Gray;
-            this.toggleControls4.OffToggleColor1 = System.Drawing.Color.Gainsboro;
-            this.toggleControls4.OnBackColor1 = System.Drawing.Color.MediumSlateBlue;
-            this.toggleControls4.OnToggleColor1 = System.Drawing.Color.WhiteSmoke;
-            this.toggleControls4.Size = new System.Drawing.Size(45, 22);
-            this.toggleControls4.TabIndex = 27;
-            this.toggleControls4.UseVisualStyleBackColor = false;
-            // 
             // SettingsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -397,11 +295,5 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private ToggleControls toggleControls4;
-        private ToggleControls toggleControls3;
-        private ToggleControls toggleControls2;
-        private ToggleControls toggleControls1;
-        private ToggleControls boldSwitch1;
-        private ToggleControls darkModeSwitch1;
     }
 }

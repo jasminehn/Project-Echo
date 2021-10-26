@@ -20,8 +20,9 @@ namespace ProjectEcho
         static TaskOneUserControl t1 = new TaskOneUserControl();
         static TaskTwoUserControl t2 = new TaskTwoUserControl();
         public UserControl[] taskControls = new UserControl[4];
+        public HelpForm hf = new HelpForm();
+        int saveHelpResource = 0;
 
-        
 
 
         public String path;
@@ -333,12 +334,18 @@ namespace ProjectEcho
         private void helpButton_Click(object sender, EventArgs e)
         {
             //Creates the form that displays
-            HelpForm hf = new HelpForm();
-
-            if (hf.ShowDialog() == DialogResult.OK)
+            saveHelpResource++;
+            if(saveHelpResource == 0)
             {
-                Console.Write("Help opened");
+                if (hf.ShowDialog() == DialogResult.OK)
+                {
+                    Console.Write("Help opened");
+                }
+            } else
+            {
+                hf.Show();
             }
+            
         }
 
         private void progressBar1_Click(object sender, EventArgs e)

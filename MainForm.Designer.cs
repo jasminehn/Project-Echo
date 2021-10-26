@@ -72,7 +72,7 @@ namespace ProjectEcho
             this.contextPanel.Controls.Add(this.helpButton);
             this.contextPanel.Location = new System.Drawing.Point(0, 0);
             this.contextPanel.Name = "contextPanel";
-            this.contextPanel.Size = new System.Drawing.Size(1250, 36);
+            this.contextPanel.Size = new System.Drawing.Size(1250, 38);
             this.contextPanel.TabIndex = 0;
             // 
             // superTitleLabel
@@ -95,9 +95,11 @@ namespace ProjectEcho
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
             this.settingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settingsButton.BackgroundImage")));
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.settingsButton.FlatAppearance.BorderSize = 0;
+            this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(1212, -1);
+            this.settingsButton.Location = new System.Drawing.Point(1212, 3);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(35, 32);
             this.settingsButton.TabIndex = 0;
