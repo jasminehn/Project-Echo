@@ -116,12 +116,6 @@
     <Compile Include="TaskTwoUserControl.Designer.cs">
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenuUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MainMenuUserControl.Designer.cs">
-      <DependentUpon>MainMenuUserControl.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskTwoUserControl.resx">
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainMenuUserControl.resx">
-      <DependentUpon>MainMenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

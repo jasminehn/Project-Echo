@@ -234,6 +234,10 @@ namespace ProjectEcho
             // 
             // mainMenuPanel
             // 
+            this.mainMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainMenuPanel.AutoSize = true;
             this.mainMenuPanel.Controls.Add(this.reviewList);
             this.mainMenuPanel.Controls.Add(this.taskThreeList);
             this.mainMenuPanel.Controls.Add(this.taskTwoList);
@@ -250,40 +254,44 @@ namespace ProjectEcho
             // 
             // reviewList
             // 
+            this.reviewList.CausesValidation = false;
             this.reviewList.Enabled = false;
             this.reviewList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reviewList.FormattingEnabled = true;
-            this.reviewList.Location = new System.Drawing.Point(733, 249);
+            this.reviewList.Location = new System.Drawing.Point(830, 273);
             this.reviewList.Name = "reviewList";
             this.reviewList.Size = new System.Drawing.Size(193, 79);
             this.reviewList.TabIndex = 34;
             // 
             // taskThreeList
             // 
+            this.taskThreeList.CausesValidation = false;
             this.taskThreeList.Enabled = false;
             this.taskThreeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeList.FormattingEnabled = true;
-            this.taskThreeList.Location = new System.Drawing.Point(510, 249);
+            this.taskThreeList.Location = new System.Drawing.Point(607, 273);
             this.taskThreeList.Name = "taskThreeList";
             this.taskThreeList.Size = new System.Drawing.Size(193, 79);
             this.taskThreeList.TabIndex = 33;
             // 
             // taskTwoList
             // 
+            this.taskTwoList.CausesValidation = false;
             this.taskTwoList.Enabled = false;
             this.taskTwoList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoList.FormattingEnabled = true;
-            this.taskTwoList.Location = new System.Drawing.Point(287, 249);
+            this.taskTwoList.Location = new System.Drawing.Point(384, 273);
             this.taskTwoList.Name = "taskTwoList";
             this.taskTwoList.Size = new System.Drawing.Size(193, 79);
             this.taskTwoList.TabIndex = 32;
             // 
             // taskOneList
             // 
+            this.taskOneList.CausesValidation = false;
             this.taskOneList.Enabled = false;
             this.taskOneList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskOneList.FormattingEnabled = true;
-            this.taskOneList.Location = new System.Drawing.Point(64, 249);
+            this.taskOneList.Location = new System.Drawing.Point(161, 273);
             this.taskOneList.Name = "taskOneList";
             this.taskOneList.Size = new System.Drawing.Size(193, 79);
             this.taskOneList.TabIndex = 31;
@@ -291,7 +299,8 @@ namespace ProjectEcho
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 217);
+            this.label3.CausesValidation = false;
+            this.label3.Location = new System.Drawing.Point(156, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(868, 13);
             this.label3.TabIndex = 30;
@@ -300,9 +309,10 @@ namespace ProjectEcho
             // task1Button
             // 
             this.task1Button.BackColor = System.Drawing.Color.Goldenrod;
+            this.task1Button.CausesValidation = false;
             this.task1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.task1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task1Button.Location = new System.Drawing.Point(64, 66);
+            this.task1Button.Location = new System.Drawing.Point(161, 90);
             this.task1Button.Name = "task1Button";
             this.task1Button.Size = new System.Drawing.Size(193, 134);
             this.task1Button.TabIndex = 29;
@@ -313,9 +323,10 @@ namespace ProjectEcho
             // taskThreeButton
             // 
             this.taskThreeButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.taskThreeButton.CausesValidation = false;
             this.taskThreeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskThreeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeButton.Location = new System.Drawing.Point(510, 66);
+            this.taskThreeButton.Location = new System.Drawing.Point(607, 90);
             this.taskThreeButton.Name = "taskThreeButton";
             this.taskThreeButton.Size = new System.Drawing.Size(193, 134);
             this.taskThreeButton.TabIndex = 28;
@@ -326,9 +337,10 @@ namespace ProjectEcho
             // taskTwoButton
             // 
             this.taskTwoButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.taskTwoButton.CausesValidation = false;
             this.taskTwoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskTwoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTwoButton.Location = new System.Drawing.Point(287, 66);
+            this.taskTwoButton.Location = new System.Drawing.Point(384, 90);
             this.taskTwoButton.Name = "taskTwoButton";
             this.taskTwoButton.Size = new System.Drawing.Size(193, 134);
             this.taskTwoButton.TabIndex = 27;
@@ -339,9 +351,10 @@ namespace ProjectEcho
             // taskOneButton
             // 
             this.taskOneButton.BackColor = System.Drawing.Color.GhostWhite;
+            this.taskOneButton.CausesValidation = false;
             this.taskOneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskOneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskOneButton.Location = new System.Drawing.Point(733, 66);
+            this.taskOneButton.Location = new System.Drawing.Point(830, 90);
             this.taskOneButton.Name = "taskOneButton";
             this.taskOneButton.Size = new System.Drawing.Size(193, 134);
             this.taskOneButton.TabIndex = 26;
@@ -350,6 +363,9 @@ namespace ProjectEcho
             // 
             // taskOne
             // 
+            this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskOne.Location = new System.Drawing.Point(18, 77);
             this.taskOne.Name = "taskOne";
             this.taskOne.Size = new System.Drawing.Size(1190, 591);
@@ -379,6 +395,7 @@ namespace ProjectEcho
             this.contextPanel.ResumeLayout(false);
             this.contextPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
