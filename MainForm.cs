@@ -16,6 +16,7 @@ namespace ProjectEcho
         //private Panel currentPanel = new Panel();
         //public Panel[] contextPanels = new Panel[4];
         private UserControl currentControl = new UserControl();
+        
         static TaskOneUserControl t1 = new TaskOneUserControl();
         static TaskTwoUserControl t2 = new TaskTwoUserControl();
         public UserControl[] taskControls = new UserControl[4];
@@ -28,8 +29,10 @@ namespace ProjectEcho
         {
             InitializeComponent();
 
-            taskControls[1] = t1;
-            taskControls[2] = t2;
+
+            taskControls[0] = mainMenu;
+            taskControls[1] = taskOne;
+            taskControls[2] = taskTwo;
             taskControls[3] = t1;
 
             //contextPanels[0] = (mainMenuPanel);
@@ -40,14 +43,14 @@ namespace ProjectEcho
             currentControl = taskControls[0];
             //currentPanel = contextPanels[0];
             setPanelActive(0);
-            string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
+/*            string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
             taskTwoList.Items.AddRange(taskTwoArray);
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
             taskThreeList.Items.AddRange(taskThreeArray);
             string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
-            reviewList.Items.AddRange(reviewArray);
+            reviewList.Items.AddRange(reviewArray);*/
 
             //create user uploads folder
             string userUploadsPath = Environment.CurrentDirectory + "\\UserUploads";
@@ -135,7 +138,7 @@ namespace ProjectEcho
             //setPanelActive(i + 1);
         }
 
-        private void setPanelActive(int i)
+        public void setPanelActive(int i)
         {
           /*  currentPanel.Enabled = false;
             currentPanel.Visible = false;
@@ -335,6 +338,11 @@ namespace ProjectEcho
         private void progressBar1_Click(object sender, EventArgs e)
         {
             //for every part's task completed progress is added
+        }
+
+        private void mainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

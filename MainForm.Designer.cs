@@ -35,6 +35,7 @@ namespace ProjectEcho
             this.settingsButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.mainMenu = new ProjectEcho.MainMenuUserControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.forwardButton = new System.Windows.Forms.Button();
@@ -42,21 +43,12 @@ namespace ProjectEcho
             this.titlePanel = new System.Windows.Forms.Panel();
             this.titleSubtitleLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.mainMenuPanel = new System.Windows.Forms.Panel();
-            this.reviewList = new System.Windows.Forms.CheckedListBox();
-            this.taskThreeList = new System.Windows.Forms.CheckedListBox();
-            this.taskTwoList = new System.Windows.Forms.CheckedListBox();
-            this.taskOneList = new System.Windows.Forms.CheckedListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.task1Button = new System.Windows.Forms.Button();
-            this.taskThreeButton = new System.Windows.Forms.Button();
-            this.taskTwoButton = new System.Windows.Forms.Button();
-            this.taskOneButton = new System.Windows.Forms.Button();
+            this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.contextPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
-            this.mainMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextPanel
@@ -123,13 +115,23 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mainPanel.BackColor = System.Drawing.Color.White;
+            this.mainPanel.Controls.Add(this.mainMenu);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.titlePanel);
-            this.mainPanel.Controls.Add(this.mainMenuPanel);
+            this.mainPanel.Controls.Add(this.taskOne);
+            this.mainPanel.Controls.Add(this.taskTwo);
             this.mainPanel.Location = new System.Drawing.Point(12, 39);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1226, 750);
             this.mainPanel.TabIndex = 1;
+            // 
+            // mainMenu
+            // 
+            this.mainMenu.Location = new System.Drawing.Point(18, 76);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(1193, 592);
+            this.mainMenu.TabIndex = 12;
+            this.mainMenu.Load += new System.EventHandler(this.mainMenu_Load);
             // 
             // panel1
             // 
@@ -226,121 +228,19 @@ namespace ProjectEcho
             this.titleLabel.Text = "WELCOME";
             this.titleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // mainMenuPanel
+            // taskOne
             // 
-            this.mainMenuPanel.Controls.Add(this.reviewList);
-            this.mainMenuPanel.Controls.Add(this.taskThreeList);
-            this.mainMenuPanel.Controls.Add(this.taskTwoList);
-            this.mainMenuPanel.Controls.Add(this.taskOneList);
-            this.mainMenuPanel.Controls.Add(this.label3);
-            this.mainMenuPanel.Controls.Add(this.task1Button);
-            this.mainMenuPanel.Controls.Add(this.taskThreeButton);
-            this.mainMenuPanel.Controls.Add(this.taskTwoButton);
-            this.mainMenuPanel.Controls.Add(this.taskOneButton);
-            this.mainMenuPanel.Location = new System.Drawing.Point(15, 81);
-            this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(1196, 587);
-            this.mainMenuPanel.TabIndex = 2;
+            this.taskOne.Location = new System.Drawing.Point(18, 77);
+            this.taskOne.Name = "taskOne";
+            this.taskOne.Size = new System.Drawing.Size(1190, 591);
+            this.taskOne.TabIndex = 13;
             // 
-            // reviewList
+            // taskTwo
             // 
-            this.reviewList.Enabled = false;
-            this.reviewList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reviewList.FormattingEnabled = true;
-            this.reviewList.Location = new System.Drawing.Point(718, 233);
-            this.reviewList.Name = "reviewList";
-            this.reviewList.Size = new System.Drawing.Size(193, 79);
-            this.reviewList.TabIndex = 16;
-            // 
-            // taskThreeList
-            // 
-            this.taskThreeList.Enabled = false;
-            this.taskThreeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeList.FormattingEnabled = true;
-            this.taskThreeList.Location = new System.Drawing.Point(495, 233);
-            this.taskThreeList.Name = "taskThreeList";
-            this.taskThreeList.Size = new System.Drawing.Size(193, 79);
-            this.taskThreeList.TabIndex = 15;
-            // 
-            // taskTwoList
-            // 
-            this.taskTwoList.Enabled = false;
-            this.taskTwoList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTwoList.FormattingEnabled = true;
-            this.taskTwoList.Location = new System.Drawing.Point(272, 233);
-            this.taskTwoList.Name = "taskTwoList";
-            this.taskTwoList.Size = new System.Drawing.Size(193, 79);
-            this.taskTwoList.TabIndex = 14;
-            // 
-            // taskOneList
-            // 
-            this.taskOneList.Enabled = false;
-            this.taskOneList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskOneList.FormattingEnabled = true;
-            this.taskOneList.Location = new System.Drawing.Point(49, 233);
-            this.taskOneList.Name = "taskOneList";
-            this.taskOneList.Size = new System.Drawing.Size(193, 79);
-            this.taskOneList.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(868, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = resources.GetString("label3.Text");
-            // 
-            // task1Button
-            // 
-            this.task1Button.BackColor = System.Drawing.Color.Goldenrod;
-            this.task1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.task1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task1Button.Location = new System.Drawing.Point(49, 50);
-            this.task1Button.Name = "task1Button";
-            this.task1Button.Size = new System.Drawing.Size(193, 134);
-            this.task1Button.TabIndex = 7;
-            this.task1Button.Text = "Task One: Planning";
-            this.task1Button.UseVisualStyleBackColor = false;
-            this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
-            // 
-            // taskThreeButton
-            // 
-            this.taskThreeButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.taskThreeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskThreeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeButton.Location = new System.Drawing.Point(495, 50);
-            this.taskThreeButton.Name = "taskThreeButton";
-            this.taskThreeButton.Size = new System.Drawing.Size(193, 134);
-            this.taskThreeButton.TabIndex = 6;
-            this.taskThreeButton.Text = "Task Three: Assessing";
-            this.taskThreeButton.UseVisualStyleBackColor = false;
-            this.taskThreeButton.Click += new System.EventHandler(this.taskThreeButton_Click);
-            // 
-            // taskTwoButton
-            // 
-            this.taskTwoButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.taskTwoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskTwoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTwoButton.Location = new System.Drawing.Point(272, 50);
-            this.taskTwoButton.Name = "taskTwoButton";
-            this.taskTwoButton.Size = new System.Drawing.Size(193, 134);
-            this.taskTwoButton.TabIndex = 5;
-            this.taskTwoButton.Text = "Task Two:   Implementing";
-            this.taskTwoButton.UseVisualStyleBackColor = false;
-            this.taskTwoButton.Click += new System.EventHandler(this.taskTwoButton_Click);
-            // 
-            // taskOneButton
-            // 
-            this.taskOneButton.BackColor = System.Drawing.Color.GhostWhite;
-            this.taskOneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskOneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskOneButton.Location = new System.Drawing.Point(718, 50);
-            this.taskOneButton.Name = "taskOneButton";
-            this.taskOneButton.Size = new System.Drawing.Size(193, 134);
-            this.taskOneButton.TabIndex = 1;
-            this.taskOneButton.Text = "Review";
-            this.taskOneButton.UseVisualStyleBackColor = false;
+            this.taskTwo.Location = new System.Drawing.Point(15, 76);
+            this.taskTwo.Name = "taskTwo";
+            this.taskTwo.Size = new System.Drawing.Size(1193, 592);
+            this.taskTwo.TabIndex = 14;
             // 
             // MainForm
             // 
@@ -362,8 +262,6 @@ namespace ProjectEcho
             this.panel1.ResumeLayout(false);
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
-            this.mainMenuPanel.ResumeLayout(false);
-            this.mainMenuPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,21 +275,14 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel titlePanel;
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Panel mainMenuPanel;
-        private System.Windows.Forms.Button taskOneButton;
         private System.Windows.Forms.Label titleSubtitleLabel;
-        private System.Windows.Forms.Button taskThreeButton;
-        private System.Windows.Forms.Button taskTwoButton;
-        private System.Windows.Forms.Button task1Button;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox taskOneList;
-        private System.Windows.Forms.CheckedListBox taskThreeList;
-        private System.Windows.Forms.CheckedListBox taskTwoList;
-        private System.Windows.Forms.CheckedListBox reviewList;
         private System.Windows.Forms.Label superTitleLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button returnToMenuButton;
         private System.Windows.Forms.Button forwardButton;
         private System.Windows.Forms.Button backButton;
+        private MainMenuUserControl mainMenu;
+        private TaskOneUserControl taskOne;
+        private TaskTwoUserControl taskTwo;
     }
 }

@@ -191,5 +191,15 @@ namespace ProjectEcho
         {
 
         }
+
+        private void taskOnePanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
