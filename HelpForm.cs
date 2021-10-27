@@ -21,8 +21,8 @@ namespace ProjectEcho
         string FileName1 = string.Format("{0}PDF\\Requirements.pdf", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\"))); //jump back relative to the .exe-Path to the Requirements document path
         string url;
         //static ChromiumWebBrowser = new ChromiumWebBrowser();
-        List<int> foundPages;
-        //int nextPage = 0; //not needed yet
+
+        private int focusFlag = 0;
 
 
         public HelpForm()
@@ -235,39 +235,38 @@ namespace ProjectEcho
             {
                 //Cef.Shutdown();
             }
-        }
+        }               
 
-        //searches for all occurrences of given word and returns a list of pages that the word is on
-        public List<int> ReadPdfFile(string fileName, String searthText)
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            List<int> pages = new List<int>();
-            if (File.Exists(fileName))
+            if (textBox1.Text.Length <= 0)
             {
-                PdfReader pdfReader = new PdfReader(fileName);
-                for (int page = 1; page <= pdfReader.NumberOfPages; page++)
-                {
-                    ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
-
-                    string currentPageText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
-                    if (currentPageText.Contains(searthText))
-                    {
-                        pages.Add(page);
-                    }
-                }
-                pdfReader.Close();
+                //this will clear all search result
+                chrome.StopFinding(true);
             }
-            return pages;
+            else
+            {
+                chrome.Find(0, textBox1.Text, true, false, false);
+            }
         }
 
-        private void searchButton_Click(object sender, EventArgs e)
+        private void prevButton_Click(object sender, EventArgs e)
         {
-            string keyword = textBox1.Text;
-            //ReadPdfFile(FileName1, textBox1.Text).ForEach(Console.WriteLine); //prints pages that the keyword appears on
-            foundPages = ReadPdfFile(FileName1, keyword);
-            url = FileName1 + "#page=" + foundPages.First(); //navigates to the page of the first occurrence of keyword
-            urlBox.Text = url;
-            chrome.Reload();
-            chrome.Load(url);
+            chrome.Find(1, textBox1.Text, false, false, true);
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            chrome.Find(1, textBox1.Text, true, false, true);
+        }
+
+        private void HelpForm_MouseEnter(object sender, EventArgs e)
+        {
+            if (focusFlag < 1)
+            {
+                this.Focus();
+                ++focusFlag;
+            }
         }
     }
 }

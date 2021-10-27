@@ -39,12 +39,13 @@ namespace ProjectEcho
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.prevButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.ChromiumBrowser = new System.Windows.Forms.Panel();
             this.urlBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.searchButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@ namespace ProjectEcho
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(674, 26);
             this.textBox1.TabIndex = 4;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // label3
             // 
@@ -151,7 +153,8 @@ namespace ProjectEcho
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Controls.Add(this.searchButton);
+            this.panel1.Controls.Add(this.nextButton);
+            this.panel1.Controls.Add(this.prevButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label4);
@@ -165,6 +168,28 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2010, 111);
             this.panel1.TabIndex = 8;
+            // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(994, 54);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(72, 35);
+            this.nextButton.TabIndex = 12;
+            this.nextButton.Text = "NEXT";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // prevButton
+            // 
+            this.prevButton.Location = new System.Drawing.Point(914, 54);
+            this.prevButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.prevButton.Name = "prevButton";
+            this.prevButton.Size = new System.Drawing.Size(72, 35);
+            this.prevButton.TabIndex = 11;
+            this.prevButton.Text = "PREV";
+            this.prevButton.UseVisualStyleBackColor = true;
+            this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
             // button1
             // 
@@ -223,17 +248,6 @@ namespace ProjectEcho
             this.panel2.Size = new System.Drawing.Size(422, 1111);
             this.panel2.TabIndex = 11;
             // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(914, 53);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(112, 35);
-            this.searchButton.TabIndex = 9;
-            this.searchButton.Text = "SEARCH";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -252,6 +266,7 @@ namespace ProjectEcho
             this.Text = "Help";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HelpForm_FormClosing);
             this.Load += new System.EventHandler(this.HelpForm_Load);
+            this.MouseEnter += new System.EventHandler(this.HelpForm_MouseEnter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -276,6 +291,7 @@ namespace ProjectEcho
         private System.Windows.Forms.TextBox urlBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button prevButton;
     }
 }
