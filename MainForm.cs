@@ -45,14 +45,14 @@ namespace ProjectEcho
             currentControl = taskControls[0];
             //currentPanel = contextPanels[0];
             setPanelActive(0);
-/*            string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
+            string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
             taskTwoList.Items.AddRange(taskTwoArray);
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
             taskThreeList.Items.AddRange(taskThreeArray);
             string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
-            reviewList.Items.AddRange(reviewArray);*/
+            reviewList.Items.AddRange(reviewArray);
 
             //create user uploads folder
             string userUploadsPath = Environment.CurrentDirectory + "\\UserUploads";

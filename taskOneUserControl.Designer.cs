@@ -45,9 +45,7 @@ namespace ProjectEcho
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.uploadButton = new System.Windows.Forms.Button();
-            this.uploadInfo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.t1paCL = new System.Windows.Forms.CheckedListBox();
@@ -66,18 +64,23 @@ namespace ProjectEcho
             this.panel6 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.uploadInfo = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.taskOnePanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -263,10 +266,9 @@ namespace ProjectEcho
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.t1paCL);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -276,42 +278,18 @@ namespace ProjectEcho
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel1.Controls.Add(this.uploadButton);
-            this.panel1.Controls.Add(this.uploadInfo);
-            this.panel1.ForeColor = System.Drawing.Color.OldLace;
-            this.panel1.Location = new System.Drawing.Point(0, 477);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1170, 39);
-            this.panel1.TabIndex = 20;
-            // 
             // uploadButton
             // 
             this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uploadButton.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton.ForeColor = System.Drawing.Color.Black;
-            this.uploadButton.Location = new System.Drawing.Point(1002, 6);
+            this.uploadButton.Location = new System.Drawing.Point(954, 40);
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(159, 27);
             this.uploadButton.TabIndex = 17;
             this.uploadButton.Text = "CLICK TO UPLOAD";
             this.uploadButton.UseVisualStyleBackColor = true;
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
-            // 
-            // uploadInfo
-            // 
-            this.uploadInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadInfo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.uploadInfo.Location = new System.Drawing.Point(5, 6);
-            this.uploadInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.uploadInfo.Name = "uploadInfo";
-            this.uploadInfo.Size = new System.Drawing.Size(982, 24);
-            this.uploadInfo.TabIndex = 18;
-            this.uploadInfo.Text = "Uploaded: ";
             // 
             // panel2
             // 
@@ -326,11 +304,11 @@ namespace ProjectEcho
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(238, 20);
+            this.label5.Size = new System.Drawing.Size(304, 23);
             this.label5.TabIndex = 16;
             this.label5.Text = "Context for Learning Information";
             // 
@@ -345,9 +323,9 @@ namespace ProjectEcho
             "Arial Font",
             "Size 12 Font",
             "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(1002, 407);
+            this.t1paCL.Location = new System.Drawing.Point(13, 145);
             this.t1paCL.Name = "t1paCL";
-            this.t1paCL.Size = new System.Drawing.Size(159, 64);
+            this.t1paCL.Size = new System.Drawing.Size(180, 79);
             this.t1paCL.TabIndex = 14;
             // 
             // tabPage2
@@ -534,6 +512,56 @@ namespace ProjectEcho
             this.label11.TabIndex = 18;
             this.label11.Text = "Uploaded: ";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.uploadInfo);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.uploadButton);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.t1paCL);
+            this.panel7.Location = new System.Drawing.Point(8, 29);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1153, 481);
+            this.panel7.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(418, 18);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(10, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(793, 61);
+            this.label13.TabIndex = 16;
+            this.label13.Text = resources.GetString("label13.Text");
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(9, 121);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 20);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "FORMAT AND STYLE:";
+            // 
+            // uploadInfo
+            // 
+            this.uploadInfo.AutoSize = true;
+            this.uploadInfo.Location = new System.Drawing.Point(248, 341);
+            this.uploadInfo.Name = "uploadInfo";
+            this.uploadInfo.Size = new System.Drawing.Size(54, 18);
+            this.uploadInfo.TabIndex = 19;
+            this.uploadInfo.Text = "label15";
+            // 
             // TaskOneUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,13 +580,14 @@ namespace ProjectEcho
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -581,14 +610,12 @@ namespace ProjectEcho
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label uploadInfo;
         private System.Windows.Forms.Button uploadButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckedListBox t1paCL;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label10;
@@ -601,5 +628,10 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label uploadInfo;
     }
 }
