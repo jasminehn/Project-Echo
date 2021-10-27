@@ -69,12 +69,9 @@ namespace ProjectEcho
                 //fail silently
             }
 
-            string fff = Path.Combine(Environment.CurrentDirectory, "Project-Echo\\PDF\\Requirement.pdf");
-            Console.WriteLine(fff);
-
             
-            GrammarAPI at = new GrammarAPI();
-            //API.CallAPI();
+            //GrammarAPI at = new GrammarAPI();
+            GrammarAPI.CallAPI();
 
         }
 
