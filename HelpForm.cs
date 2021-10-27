@@ -10,15 +10,19 @@ using System.Windows.Forms;
 using System.IO;
 using CefSharp.WinForms;
 using CefSharp;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace ProjectEcho
 {
     public partial class HelpForm : Form
     {        
         static string ProgramPath = AppDomain.CurrentDomain.BaseDirectory; //get direct path to the program        
-        string FileName1 = string.Format("{0}PDF\\Requirements.pdf", Path.GetFullPath(Path.Combine(ProgramPath, @"..\..\"))); //jump back relative to the .exe-Path to the Requirements document path
+        string FileName1 = string.Format("{0}PDF\\Requirements.pdf", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\"))); //jump back relative to the .exe-Path to the Requirements document path
         string url;
         //static ChromiumWebBrowser = new ChromiumWebBrowser();
+        List<int> foundPages;
+        //int nextPage = 0; //not needed yet
 
 
         public HelpForm()
@@ -231,6 +235,39 @@ namespace ProjectEcho
             {
                 //Cef.Shutdown();
             }
+        }
+
+        //searches for all occurrences of given word and returns a list of pages that the word is on
+        public List<int> ReadPdfFile(string fileName, String searthText)
+        {
+            List<int> pages = new List<int>();
+            if (File.Exists(fileName))
+            {
+                PdfReader pdfReader = new PdfReader(fileName);
+                for (int page = 1; page <= pdfReader.NumberOfPages; page++)
+                {
+                    ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+
+                    string currentPageText = PdfTextExtractor.GetTextFromPage(pdfReader, page, strategy);
+                    if (currentPageText.Contains(searthText))
+                    {
+                        pages.Add(page);
+                    }
+                }
+                pdfReader.Close();
+            }
+            return pages;
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string keyword = textBox1.Text;
+            //ReadPdfFile(FileName1, textBox1.Text).ForEach(Console.WriteLine); //prints pages that the keyword appears on
+            foundPages = ReadPdfFile(FileName1, keyword);
+            url = FileName1 + "#page=" + foundPages.First(); //navigates to the page of the first occurrence of keyword
+            urlBox.Text = url;
+            chrome.Reload();
+            chrome.Load(url);
         }
     }
 }
