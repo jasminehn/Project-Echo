@@ -25,9 +25,10 @@ namespace ProjectEcho
 
         private void uploadButton_Click(object sender, EventArgs e)
         {
+            //Format Checker Boxes
             DocumentHandler dh = new DocumentHandler();
             String path = dh.uploadDocument();
-
+            uploadInfo.Text = "well im here?";
             if(path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
                 uploadInfo.Text = uploadInfo.Text + path;
@@ -54,7 +55,10 @@ namespace ProjectEcho
                     t1paCL.SetItemChecked(3, true); //Length
                 }
 
+                //Grammar Check 
             }
+            String report = GrammarAPI.ReturnReport(path);
+            label23.Text = report;
         }
     }
 }

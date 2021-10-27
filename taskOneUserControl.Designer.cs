@@ -82,6 +82,7 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.uploadButton = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -517,6 +518,7 @@ namespace ProjectEcho
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel1);
             this.panel7.Controls.Add(this.label15);
@@ -722,6 +724,14 @@ namespace ProjectEcho
             this.uploadButton.UseVisualStyleBackColor = true;
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
+            // label23
+            // 
+            this.label23.Location = new System.Drawing.Point(423, 138);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(341, 274);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "label23";
+            // 
             // TaskOneUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -810,5 +820,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label23;
     }
 }

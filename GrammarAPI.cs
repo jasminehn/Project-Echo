@@ -24,13 +24,15 @@ namespace ProjectEcho
 {
     public class GrammarAPI
     {
+        public static String pog = "";
 
-        public static async Task CallAPI()
+        public static async Task CallAPI(String path)
         {
 
             var first = "";
             var second = " ";
-            string mytext = OpenWordprocessingDocumentReadonly("C:\\Users\\365ye\\OneDrive\\Desktop\\TestDoc1.docx");
+            //string mytext = OpenWordprocessingDocumentReadonly("C:\\Users\\365ye\\OneDrive\\Desktop\\TestDoc1.docx");
+            string mytext = OpenWordprocessingDocumentReadonly(path);
             Console.WriteLine("****" + mytext);
             var words = mytext.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             int len = mytext.Length;
@@ -59,10 +61,14 @@ namespace ProjectEcho
             }
 
             //  len 11542 sublen 1542
-
-
         }
 
+        public static String ReturnReport(String path)
+        {
+            CallAPI(path);
+
+            return pog;
+        }
 
         public static async Task GrammarCheck(string text)
         {
@@ -88,6 +94,7 @@ namespace ProjectEcho
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 string s = getReport(body);
+                
                 Console.WriteLine(s);
                 //Console.WriteLine(body);
             }
