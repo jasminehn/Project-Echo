@@ -31,29 +31,44 @@ namespace ProjectEcho
 
             var first = "";
             var second = " ";
-            //string mytext = OpenWordprocessingDocumentReadonly("C:\\Users\\365ye\\OneDrive\\Desktop\\TestDoc1.docx");
+            var third = " ";
             string mytext = OpenWordprocessingDocumentReadonly(path);
             Console.WriteLine("****" + mytext);
-            var words = mytext.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var words = mytext.Split(new[] { ' ' } , StringSplitOptions.RemoveEmptyEntries);
             int len = mytext.Length;
-            int subLen = len - 10000;
-            Console.WriteLine("len " + len + " sublen " + subLen);
+            int subLen;
 
-            if (len > 10000)
+            if (len > 20000)
             {
+                subLen = len - 20000;
+                first = mytext.Substring(0, 10000);
+                second = mytext.Substring(10000, 10000);
+                third = mytext.Substring(20000, subLen);
+                Console.WriteLine("first " + first);
+                Console.WriteLine(" second " + second);
+                Console.WriteLine(" third " + third);
+            }
+            else if (len > 10000)
+            {
+                subLen = len - 10000;
                 first = mytext.Substring(0, 10000);
                 second = mytext.Substring(10000, subLen);
-
                 Console.WriteLine("first " + first + " second" + second);
             }
 
             try
             {
-                await GrammarCheck(mytext).ConfigureAwait(false);
+                await GrammarCheck(first).ConfigureAwait(false);
                 if (mytext.Length > 10000)
                 {
                     await GrammarCheck(second).ConfigureAwait(false);
+                    if (mytext.Length > 20000)
+                    {
+                        Console.WriteLine("*** over 20,000 characters");
+                        await GrammarCheck(third).ConfigureAwait(false);
+                    }
                 }
+
             }
             catch (Exception ex)
             {
@@ -61,10 +76,12 @@ namespace ProjectEcho
             }
 
             //  len 11542 sublen 1542
+
         }
 
         public static String ReturnReport(String path)
         {
+
             CallAPI(path);
 
             return pog;
@@ -94,10 +111,10 @@ namespace ProjectEcho
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 string s = getReport(body);
-                
                 Console.WriteLine(s);
                 //Console.WriteLine(body);
             }
+
 
         }
         //Converts docx files to string
@@ -116,7 +133,8 @@ namespace ProjectEcho
                 return body.InnerText.ToString();
             }
 
-            //return "1";
+            //return "1"; //unreachable code
+
         }
 
         //This method will clean up the JSON file so that the report is user friendly
@@ -124,6 +142,8 @@ namespace ProjectEcho
         {
 
             // string docText = "words.. words.. match: spell check";
+
+
             string cutString = text.Split(new string[] { "matches" }, StringSplitOptions.None).Last();
 
 
