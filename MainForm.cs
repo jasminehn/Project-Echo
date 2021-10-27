@@ -44,7 +44,7 @@ namespace ProjectEcho
 
             currentControl = taskControls[0];
             //currentPanel = contextPanels[0];
-            setPanelActive(0);
+            setControlActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
@@ -71,7 +71,7 @@ namespace ProjectEcho
 
             
             //GrammarAPI at = new GrammarAPI();
-            GrammarAPI.CallAPI();
+            //GrammarAPI.CallAPI();
 
         }
 
@@ -104,37 +104,37 @@ namespace ProjectEcho
 
         private void task1Button_Click(object sender, EventArgs e)
         {
-            setPanelActive(1);
+            setControlActive(1);
         }
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(2);
+            setControlActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(3);
+            setControlActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(0);
+            setControlActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            //int i = Array.IndexOf(contextPanels, currentPanel);
-            //setPanelActive(i - 1);
+            int i = Array.IndexOf(taskControls, currentControl);
+            setControlActive(i - 1);
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            //int i = Array.IndexOf(contextPanels, currentPanel);
-            //setPanelActive(i + 1);
+            int i = Array.IndexOf(taskControls, currentControl);
+            setControlActive(i + 1);
         }
 
-        public void setPanelActive(int i)
+        public void setControlActive(int i)
         {
             
              currentControl.Visible = false;
@@ -143,11 +143,7 @@ namespace ProjectEcho
      
             if(i.Equals(0))
             {
-                
-                //currentControl.Visible = false;
-                //currentControl = taskControls[0];
                 mainMenuPanel.Visible = true;
-
                 titleLabel.Text = "MAIN MENU";
                 returnToMenuButton.Visible = false;
                 returnToMenuButton.Enabled = false;
@@ -179,8 +175,8 @@ namespace ProjectEcho
             //DISPLAY UPLOADED FILES
 
             //get data stored in user upload data file (not needed yet)
-            /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
-            List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();*/
+            string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+            List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();
 
             //gets task part name (i.e. task 1 part "A")
             string currentTab = "x";
@@ -294,37 +290,6 @@ namespace ProjectEcho
             }
 
             */
-            
-            
-            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
-            {
-                //uploadInfo.Text = uploadInfo.Text + path;
-                FormatChecker fc = new FormatChecker();
-                Boolean[] b = fc.runFormatCheck(path, 90);
-                            //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
-            if(b[0].Equals(true))
-            {
-                //t1paCL.SetItemChecked(0, true); //Aligned
-            }
-
-            if(b[1].Equals(true))
-            {
-                //t1paCL.SetItemChecked(1, true); //Font
-            }
-
-            if(b[2].Equals(true))
-            {
-                //t1paCL.SetItemChecked(2, true); //Font Size
-            }
-
-            if(b[3].Equals(true))
-            {
-                //t1paCL.SetItemChecked(3, true); //Length
-            }
-                
-            }
-
-
         }
 
         //Executes when the help button is clicked

@@ -25,7 +25,7 @@ namespace ProjectEcho
             {
                 foreach(string fileName in openFileDialog.FileNames)
                 {
-                    path = Path.GetFullPath(fileName);
+                    //path = Path.GetFullPath(fileName);
                     //uploadButton.Text = Path.GetFileName(fileName);
                     //path = openFileDialog.File.FullName;
                     //string sourcePath = @"C:\Users\Public\TestFolder";
