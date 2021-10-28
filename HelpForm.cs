@@ -34,7 +34,7 @@ namespace ProjectEcho
         private void HelpForm_Load(object sender, EventArgs e)
         {
             url = FileName1;
-            comboBox2.Visible = false;
+            comboBox2.Enabled = false;
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
             chrome = new ChromiumWebBrowser(url);
@@ -55,11 +55,11 @@ namespace ProjectEcho
         {
             if (comboBox1.SelectedItem != null)
             {
-                comboBox2.Visible = true;
+                comboBox2.Enabled = true;
             }
             else
             {
-                comboBox2.Visible = false;
+                comboBox2.Enabled = false;
             }
 
             string[] task1 = { "Part A", "Part B", "Part C", "Part D", "Part E" };
