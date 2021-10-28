@@ -175,12 +175,12 @@ namespace ProjectEcho
             //DISPLAY UPLOADED FILES
 
             //get data stored in user upload data file (not needed yet)
-            string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
-            List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();
-
+            /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+            List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();*/
+            /*
             //gets task part name (i.e. task 1 part "A")
             string currentTab = "x";
-            //currentTab = this.tabControl1.SelectedTab.Text;
+            currentTab = this.tabControl1.SelectedTab.Text;
             char currentTabLetter = currentTab[currentTab.Length - 1];
             
             string uploadedFile = "taskUpload" + i + currentTabLetter; //generates folder name based on currently selected task/part (i.e. taskUpload1A)
@@ -206,7 +206,7 @@ namespace ProjectEcho
             catch (Exception)
             {
                 //do nothing
-            }
+            }*/
             
         }
 

@@ -13,9 +13,14 @@ namespace ProjectEcho
 {
     public partial class TaskOneUserControl : UserControl
     {
+        DocumentHandler dh = new DocumentHandler();
+        string currentTab;
+
         public TaskOneUserControl()
         {
             InitializeComponent();
+            currentTab = this.tabControl1.SelectedTab.Text;
+            uploadInfo.Text = "Uploaded: " + dh.displayDocuments(1, currentTab);
         }
 
         private void taskOnePanel_Paint_1(object sender, PaintEventArgs e)
@@ -26,12 +31,16 @@ namespace ProjectEcho
         private void uploadButton_Click(object sender, EventArgs e)
         {
             //Format Checker Boxes
-            DocumentHandler dh = new DocumentHandler();
-            String path = dh.uploadDocument();
-            uploadInfo.Text = "well im here?";
-            if(path.EndsWith(".docx") || path.EndsWith(".doc"))
+            //DocumentHandler dh = new DocumentHandler();
+            //string currentTab = this.tabControl1.SelectedTab.Text;
+
+            String path = dh.uploadDocument(1, currentTab);
+
+            //uploadInfo.Text = "well im here?";
+            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
-                uploadInfo.Text = uploadInfo.Text + path;
+                //uploadInfo.Text = uploadInfo.Text + path;
+                uploadInfo.Text = "Uploaded: " + dh.displayDocuments(1, currentTab); //updates text displaying the previously uploaded files
                 FormatChecker fc = new FormatChecker();
                 Boolean[] b = fc.runFormatCheck(path, 90);
                 label9.Text = "correct alignment  " + b[0] + "   " + "correct font  " + b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
