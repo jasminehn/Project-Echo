@@ -37,6 +37,7 @@ namespace ProjectEcho
             comboBox2.Enabled = false;
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
+            Cef.EnableHighDPISupport();
             chrome = new ChromiumWebBrowser(url);
             this.ChromiumBrowser.Controls.Add(chrome);
             chrome.AddressChanged += Chrome_AddressChanged;
