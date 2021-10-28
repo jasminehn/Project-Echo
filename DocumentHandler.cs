@@ -36,11 +36,9 @@ namespace ProjectEcho
                     char currentTabLetter = currentTab[currentTab.Length - 1];
 
                     //creates name of folder based on current task and part (i.e. taskUpload1A)
-                    //NOTE: have the folder 
                     string uploadedFile = "taskUpload" + currentTask + currentTabLetter;
 
                     //create user task folder
-
                     string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
                     try
                     {
@@ -56,10 +54,13 @@ namespace ProjectEcho
                     }
 
                     string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName); //path to upload the user's file
-                    //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
 
-                    
-
+                    //deletes all files in task/part folder
+                    DirectoryInfo di = new DirectoryInfo(taskUploadsPath);
+                    foreach (FileInfo file in di.GetFiles())
+                    {
+                        file.Delete();
+                    }
 
                     File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
                     
