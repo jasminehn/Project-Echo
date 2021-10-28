@@ -164,39 +164,19 @@ namespace ProjectEcho
         
         private void boldSwitch_Click(object sender, EventArgs e)
         {
-            //switchOnOff(boldSwitch);
-            var controls = getAll(this, typeof(Label));
-            if (on)
-            {
-                Font = new System.Drawing.Font(Font, FontStyle.Regular);
-                foreach (Control c in controls)
-                {
-                    c.Font = new System.Drawing.Font(Font, FontStyle.Regular);
-                }
-                on = true;
-            }
-            else
-            {
-                Font = new System.Drawing.Font(Font, FontStyle.Bold);
-                foreach (Control c in controls)
-                {
-                    c.Font = new System.Drawing.Font(Font, FontStyle.Bold);
-                }
-                on = false;
-            }
-            //TODO: Currently only changes text size of buttons
+
         }
 
         private void textsizeSelect_SelectedItemChanged(object sender, EventArgs e)
         {
-            Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);  
+            Font = new Font("Century Gothic", (float)textsizeSelect.Value);  
             //TODO: Currently only changes text size of buttons            
 
             var controls = getAll(this, typeof(Label));
             foreach (Control c in controls)
             {
                 //Console.WriteLine(c.ToString()); //print name of each label (for testing)
-                c.Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);
+                c.Font = new Font("Century Gothic", (float)textsizeSelect.Value);
             }
         }
 
@@ -212,7 +192,7 @@ namespace ProjectEcho
 
         private void switchButton1_CheckedChanged(object sender, EventArgs e)
         {
-            switchOnOff(switchButton1);
+            switchOnOff(darkModeToggle);
             if (on)
             {
                 /*
