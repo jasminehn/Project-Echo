@@ -33,11 +33,20 @@ namespace ProjectEcho
             this.label6 = new System.Windows.Forms.Label();
             this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.taskOnePanel = new System.Windows.Forms.Panel();
@@ -45,58 +54,52 @@ namespace ProjectEcho
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.uploadButton = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label21 = new System.Windows.Forms.Label();
+            this.uploadInfo1 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.t1paCL = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.t1paCL = new System.Windows.Forms.CheckedListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.uploadInfo = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.uploadButton = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
+            this.grammarErrorsBox = new System.Windows.Forms.ListBox();
+            this.uploadInfo = new System.Windows.Forms.LinkLabel();
             this.tabPage5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.taskOnePanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -135,6 +138,42 @@ namespace ProjectEcho
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.ForeColor = System.Drawing.Color.OldLace;
+            this.panel6.Location = new System.Drawing.Point(0, 477);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1170, 39);
+            this.panel6.TabIndex = 22;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(1002, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(159, 27);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "CLICK TO UPLOAD";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(5, 6);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(982, 24);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Uploaded: ";
             // 
             // label7
             // 
@@ -186,6 +225,42 @@ namespace ProjectEcho
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.ForeColor = System.Drawing.Color.OldLace;
+            this.panel5.Location = new System.Drawing.Point(0, 477);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1170, 39);
+            this.panel5.TabIndex = 22;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(1002, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(159, 27);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "CLICK TO UPLOAD";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(5, 6);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(982, 24);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Uploaded: ";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel4);
@@ -197,6 +272,42 @@ namespace ProjectEcho
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.ForeColor = System.Drawing.Color.OldLace;
+            this.panel4.Location = new System.Drawing.Point(0, 477);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1170, 39);
+            this.panel4.TabIndex = 22;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(1002, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 27);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "CLICK TO UPLOAD";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(5, 6);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(982, 24);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Uploaded: ";
             // 
             // checkedListBox3
             // 
@@ -294,6 +405,246 @@ namespace ProjectEcho
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.grammarErrorsBox);
+            this.panel7.Controls.Add(this.checkedListBox6);
+            this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.panel1);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.t1paCL);
+            this.panel7.Location = new System.Drawing.Point(8, 29);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1153, 481);
+            this.panel7.TabIndex = 21;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(258, 129);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(231, 32);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "FOUND GRAMMAR ISSUES:";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel9.Controls.Add(this.uploadButton);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Location = new System.Drawing.Point(853, 13);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(284, 66);
+            this.panel9.TabIndex = 34;
+            // 
+            // uploadButton
+            // 
+            this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.uploadButton.FlatAppearance.BorderSize = 0;
+            this.uploadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uploadButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.uploadButton.Location = new System.Drawing.Point(216, 7);
+            this.uploadButton.Name = "uploadButton";
+            this.uploadButton.Size = new System.Drawing.Size(50, 56);
+            this.uploadButton.TabIndex = 17;
+            this.uploadButton.UseVisualStyleBackColor = true;
+            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label17.Location = new System.Drawing.Point(17, 26);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(182, 18);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "CLICK HERE TO UPLOAD:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.uploadInfo);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.uploadInfo1);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.progressBar3);
+            this.panel1.Controls.Add(this.progressBar2);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Location = new System.Drawing.Point(853, 123);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 289);
+            this.panel1.TabIndex = 32;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.progressBar1.Location = new System.Drawing.Point(12, 29);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(254, 28);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 21;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(188, 156);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(78, 16);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "ANALYZING...";
+            // 
+            // uploadInfo1
+            // 
+            this.uploadInfo1.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo1.Location = new System.Drawing.Point(12, 218);
+            this.uploadInfo1.Name = "uploadInfo1";
+            this.uploadInfo1.Size = new System.Drawing.Size(254, 53);
+            this.uploadInfo1.TabIndex = 19;
+            this.uploadInfo1.Text = "       ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(8, 152);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(78, 20);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "CONTENT:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(8, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(148, 20);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "FORMAT AND STYLE:";
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.progressBar3.Location = new System.Drawing.Point(12, 175);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(254, 28);
+            this.progressBar3.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar3.TabIndex = 29;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.progressBar2.Location = new System.Drawing.Point(12, 101);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(254, 28);
+            this.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar2.TabIndex = 25;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(188, 10);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(78, 16);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "ANALYZING...";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(8, 78);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(96, 20);
+            this.label20.TabIndex = 26;
+            this.label20.Text = "GRAMMAR:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(188, 82);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(78, 16);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "ANALYZING...";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(20, 246);
+            this.label15.MinimumSize = new System.Drawing.Size(96, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 20);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "GRAMMAR:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(20, 132);
+            this.label14.MinimumSize = new System.Drawing.Size(148, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 20);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "FORMAT AND STYLE:";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(10, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(793, 61);
+            this.label13.TabIndex = 16;
+            this.label13.Text = resources.GetString("label13.Text");
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(418, 18);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
+            // 
+            // t1paCL
+            // 
+            this.t1paCL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.t1paCL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t1paCL.Enabled = false;
+            this.t1paCL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1paCL.FormattingEnabled = true;
+            this.t1paCL.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.t1paCL.Location = new System.Drawing.Point(37, 155);
+            this.t1paCL.MinimumSize = new System.Drawing.Size(180, 72);
+            this.t1paCL.Name = "t1paCL";
+            this.t1paCL.Size = new System.Drawing.Size(180, 72);
+            this.t1paCL.TabIndex = 14;
+            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
@@ -315,23 +666,6 @@ namespace ProjectEcho
             this.label5.TabIndex = 16;
             this.label5.Text = "Context for Learning Information";
             // 
-            // t1paCL
-            // 
-            this.t1paCL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.t1paCL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.t1paCL.Enabled = false;
-            this.t1paCL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t1paCL.FormattingEnabled = true;
-            this.t1paCL.Items.AddRange(new object[] {
-            "1\" Margins",
-            "Arial Font",
-            "Size 12 Font",
-            "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(37, 155);
-            this.t1paCL.Name = "t1paCL";
-            this.t1paCL.Size = new System.Drawing.Size(180, 72);
-            this.t1paCL.TabIndex = 14;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel3);
@@ -344,33 +678,6 @@ namespace ProjectEcho
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox2.Enabled = false;
-            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "1\" Margins",
-            "Arial Font",
-            "Size 12 Font",
-            "4 pages or less"});
-            this.checkedListBox2.Location = new System.Drawing.Point(1002, 407);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(159, 64);
-            this.checkedListBox2.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Plans for Learning Segment";
             // 
             // panel3
             // 
@@ -408,329 +715,71 @@ namespace ProjectEcho
             this.label3.TabIndex = 18;
             this.label3.Text = "Uploaded: ";
             // 
-            // panel4
+            // checkedListBox2
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.ForeColor = System.Drawing.Color.OldLace;
-            this.panel4.Location = new System.Drawing.Point(0, 477);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1170, 39);
-            this.panel4.TabIndex = 22;
+            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox2.Enabled = false;
+            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "1\" Margins",
+            "Arial Font",
+            "Size 12 Font",
+            "4 pages or less"});
+            this.checkedListBox2.Location = new System.Drawing.Point(1002, 407);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(159, 64);
+            this.checkedListBox2.TabIndex = 21;
             // 
-            // button2
+            // label1
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1002, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 27);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "CLICK TO UPLOAD";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Plans for Learning Segment";
             // 
-            // label9
+            // checkedListBox6
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(5, 6);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(982, 24);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Uploaded: ";
+            this.checkedListBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox6.Enabled = false;
+            this.checkedListBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox6.FormattingEnabled = true;
+            this.checkedListBox6.Items.AddRange(new object[] {
+            "No Spelling Issues",
+            "No Grammar Issues",
+            "No Style Issues"});
+            this.checkedListBox6.Location = new System.Drawing.Point(37, 275);
+            this.checkedListBox6.MinimumSize = new System.Drawing.Size(180, 72);
+            this.checkedListBox6.Name = "checkedListBox6";
+            this.checkedListBox6.Size = new System.Drawing.Size(180, 72);
+            this.checkedListBox6.TabIndex = 36;
             // 
-            // panel5
+            // grammarErrorsBox
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.ForeColor = System.Drawing.Color.OldLace;
-            this.panel5.Location = new System.Drawing.Point(0, 477);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1170, 39);
-            this.panel5.TabIndex = 22;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(1002, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 27);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "CLICK TO UPLOAD";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(5, 6);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(982, 24);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Uploaded: ";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel6.Controls.Add(this.button4);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.ForeColor = System.Drawing.Color.OldLace;
-            this.panel6.Location = new System.Drawing.Point(0, 477);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1170, 39);
-            this.panel6.TabIndex = 22;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(1002, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 27);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "CLICK TO UPLOAD";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(5, 6);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(982, 24);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Uploaded: ";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label23);
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.panel1);
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.t1paCL);
-            this.panel7.Location = new System.Drawing.Point(8, 29);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1153, 481);
-            this.panel7.TabIndex = 21;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(418, 18);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(793, 61);
-            this.label13.TabIndex = 16;
-            this.label13.Text = resources.GetString("label13.Text");
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(20, 132);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 20);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "FORMAT AND STYLE:";
+            this.grammarErrorsBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarErrorsBox.FormattingEnabled = true;
+            this.grammarErrorsBox.ItemHeight = 20;
+            this.grammarErrorsBox.Location = new System.Drawing.Point(262, 164);
+            this.grammarErrorsBox.Name = "grammarErrorsBox";
+            this.grammarErrorsBox.Size = new System.Drawing.Size(460, 164);
+            this.grammarErrorsBox.TabIndex = 37;
             // 
             // uploadInfo
             // 
-            this.uploadInfo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadInfo.Location = new System.Drawing.Point(12, 218);
+            this.uploadInfo.AutoSize = true;
+            this.uploadInfo.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo.LinkColor = System.Drawing.Color.White;
+            this.uploadInfo.Location = new System.Drawing.Point(17, 271);
             this.uploadInfo.Name = "uploadInfo";
-            this.uploadInfo.Size = new System.Drawing.Size(254, 47);
-            this.uploadInfo.TabIndex = 19;
-            this.uploadInfo.Text = "       ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(20, 246);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 20);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "GRAMMAR:";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar1.Location = new System.Drawing.Point(12, 29);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(254, 28);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 21;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(8, 6);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(148, 20);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "FORMAT AND STYLE:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label17.Location = new System.Drawing.Point(17, 26);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(182, 18);
-            this.label17.TabIndex = 23;
-            this.label17.Text = "CLICK HERE TO UPLOAD:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(8, 78);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 20);
-            this.label20.TabIndex = 26;
-            this.label20.Text = "GRAMMAR:";
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar2.Location = new System.Drawing.Point(12, 101);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(254, 28);
-            this.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar2.TabIndex = 25;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(188, 82);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(78, 16);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "ANALYZING...";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(188, 10);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 16);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "ANALYZING...";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(188, 156);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 16);
-            this.label21.TabIndex = 31;
-            this.label21.Text = "ANALYZING...";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(8, 152);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(78, 20);
-            this.label22.TabIndex = 30;
-            this.label22.Text = "CONTENT:";
-            // 
-            // progressBar3
-            // 
-            this.progressBar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar3.Location = new System.Drawing.Point(12, 175);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(254, 28);
-            this.progressBar3.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar3.TabIndex = 29;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.progressBar1);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.uploadInfo);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.progressBar3);
-            this.panel1.Controls.Add(this.progressBar2);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(853, 123);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 289);
-            this.panel1.TabIndex = 32;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel9.Controls.Add(this.uploadButton);
-            this.panel9.Controls.Add(this.label17);
-            this.panel9.Location = new System.Drawing.Point(853, 13);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(284, 66);
-            this.panel9.TabIndex = 34;
-            // 
-            // uploadButton
-            // 
-            this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
-            this.uploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.uploadButton.FlatAppearance.BorderSize = 0;
-            this.uploadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uploadButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.uploadButton.Location = new System.Drawing.Point(216, 7);
-            this.uploadButton.Name = "uploadButton";
-            this.uploadButton.Size = new System.Drawing.Size(50, 56);
-            this.uploadButton.TabIndex = 17;
-            this.uploadButton.UseVisualStyleBackColor = true;
-            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
-            // 
-            // label23
-            // 
-            this.label23.Location = new System.Drawing.Point(423, 138);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(341, 274);
-            this.label23.TabIndex = 35;
-            this.label23.Text = "label23";
+            this.uploadInfo.Size = new System.Drawing.Size(16, 18);
+            this.uploadInfo.TabIndex = 32;
+            this.uploadInfo.TabStop = true;
+            this.uploadInfo.Text = "  ";
             // 
             // TaskOneUserControl
             // 
@@ -741,27 +790,27 @@ namespace ProjectEcho
             this.Size = new System.Drawing.Size(1196, 591);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.taskOnePanel.ResumeLayout(false);
             this.taskOnePanel.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -806,7 +855,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label uploadInfo;
+        private System.Windows.Forms.Label uploadInfo1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label15;
@@ -821,5 +870,8 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListBox grammarErrorsBox;
+        private System.Windows.Forms.CheckedListBox checkedListBox6;
+        private System.Windows.Forms.LinkLabel uploadInfo;
     }
 }
