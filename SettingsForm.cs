@@ -189,7 +189,7 @@ namespace ProjectEcho
 
         private void textsizeSelect_SelectedItemChanged(object sender, EventArgs e)
         {
-            Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);  
+            Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);
             //TODO: Currently only changes text size of buttons            
 
             var controls = getAll(this, typeof(Label));
@@ -328,6 +328,19 @@ namespace ProjectEcho
             {
                 //filter
                 on = false;
+            }
+        }
+
+        private void textsizeSelect_ValueChanged(object sender, EventArgs e)
+        {
+            Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);
+            //TODO: Currently only changes text size of buttons            
+
+            var controls = getAll(this, typeof(Label));
+            foreach (Control c in controls)
+            {
+                //Console.WriteLine(c.ToString()); //print name of each label (for testing)
+                c.Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);
             }
         }
     }
