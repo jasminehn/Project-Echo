@@ -602,6 +602,35 @@ namespace ProjectEcho
             this.label22.TabIndex = 30;
             this.label22.Text = "CONTENT:";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(188, 156);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(78, 16);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "ANALYZING...";
+            // 
+            // uploadInfo1
+            // 
+            this.uploadInfo1.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo1.Location = new System.Drawing.Point(12, 218);
+            this.uploadInfo1.Name = "uploadInfo1";
+            this.uploadInfo1.Size = new System.Drawing.Size(254, 53);
+            this.uploadInfo1.TabIndex = 19;
+            this.uploadInfo1.Text = "       ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(8, 152);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(78, 20);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "CONTENT:";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
