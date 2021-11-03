@@ -20,7 +20,7 @@ namespace ProjectEcho
         {
             InitializeComponent();
             currentTab = this.tabControl1.SelectedTab.Text;
-            uploadInfo.Text = "Uploaded: " + dh.displayDocuments(1, currentTab);
+            uploadInfo1.Text = "Uploaded: " + dh.displayDocuments(1, currentTab);
         }
 
         private void taskOnePanel_Paint_1(object sender, PaintEventArgs e)
@@ -31,6 +31,11 @@ namespace ProjectEcho
         private void uploadButton_Click(object sender, EventArgs e)
         {
             //Format Checker Boxes
+            t1paCL.SetItemChecked(0, false); //Aligned
+            t1paCL.SetItemChecked(1, false); //Font
+            t1paCL.SetItemChecked(2, false); //Font Size
+            t1paCL.SetItemChecked(3, false); //Length
+
             //DocumentHandler dh = new DocumentHandler();
             //string currentTab = this.tabControl1.SelectedTab.Text;
 
@@ -40,9 +45,9 @@ namespace ProjectEcho
             if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
                 //uploadInfo.Text = uploadInfo.Text + path;
-                uploadInfo.Text = "Uploaded: " + dh.displayDocuments(1, currentTab); //updates text displaying the previously uploaded files
+                uploadInfo1.Text = "Uploaded: " + dh.displayDocuments(1, currentTab); //updates text displaying the previously uploaded files
                 FormatChecker fc = new FormatChecker();
-                Boolean[] b = fc.runFormatCheck(path, 90);
+                Boolean[] b = fc.runFormatCheck(path, 4);
                 label9.Text = "correct alignment  " + b[0] + "   " + "correct font  " + b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
                 if(b[0].Equals(true))
                 {

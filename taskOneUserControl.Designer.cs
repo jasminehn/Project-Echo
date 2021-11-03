@@ -62,7 +62,7 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label21 = new System.Windows.Forms.Label();
-            this.uploadInfo = new System.Windows.Forms.Label();
+            this.uploadInfo1 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
@@ -85,6 +85,8 @@ namespace ProjectEcho
             this.label1 = new System.Windows.Forms.Label();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.grammarErrorsBox = new System.Windows.Forms.ListBox();
+            this.uploadInfo = new System.Windows.Forms.LinkLabel();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -115,7 +117,7 @@ namespace ProjectEcho
             // 
             this.checkedListBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox5.Enabled = false;
-            this.checkedListBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox5.FormattingEnabled = true;
             this.checkedListBox5.Items.AddRange(new object[] {
             "1\" Margins",
@@ -166,7 +168,7 @@ namespace ProjectEcho
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label11.Location = new System.Drawing.Point(5, 6);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -178,7 +180,7 @@ namespace ProjectEcho
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(3, 3);
             this.label7.Name = "label7";
@@ -189,7 +191,7 @@ namespace ProjectEcho
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Name = "label4";
@@ -201,7 +203,7 @@ namespace ProjectEcho
             // 
             this.checkedListBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox4.Enabled = false;
-            this.checkedListBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox4.FormattingEnabled = true;
             this.checkedListBox4.Items.AddRange(new object[] {
             "1\" Margins",
@@ -252,7 +254,7 @@ namespace ProjectEcho
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label10.Location = new System.Drawing.Point(5, 6);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -300,7 +302,7 @@ namespace ProjectEcho
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(5, 6);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -313,7 +315,7 @@ namespace ProjectEcho
             // 
             this.checkedListBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox3.Enabled = false;
-            this.checkedListBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox3.FormattingEnabled = true;
             this.checkedListBox3.Items.AddRange(new object[] {
             "1\" Margins",
@@ -328,7 +330,7 @@ namespace ProjectEcho
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Name = "label2";
@@ -356,7 +358,7 @@ namespace ProjectEcho
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(2731, 24);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
@@ -396,7 +398,7 @@ namespace ProjectEcho
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -413,6 +415,11 @@ namespace ProjectEcho
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.checkedListBox6);
             this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.grammarErrorsBox);
+            this.panel7.Controls.Add(this.checkedListBox6);
+            this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.panel1);
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.label13);
@@ -439,6 +446,19 @@ namespace ProjectEcho
             this.panel9.Controls.Add(this.uploadButton);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Location = new System.Drawing.Point(25, 35);
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(258, 129);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(231, 32);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "FOUND GRAMMAR ISSUES:";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel9.Controls.Add(this.uploadButton);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Location = new System.Drawing.Point(853, 13);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 66);
             this.panel9.TabIndex = 34;
@@ -511,14 +531,66 @@ namespace ProjectEcho
             this.label21.TabIndex = 31;
             this.label21.Text = "ANALYZING...";
             // 
-            // uploadInfo
+            // label17
             // 
-            this.uploadInfo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadInfo.Location = new System.Drawing.Point(12, 218);
-            this.uploadInfo.Name = "uploadInfo";
-            this.uploadInfo.Size = new System.Drawing.Size(254, 47);
-            this.uploadInfo.TabIndex = 19;
-            this.uploadInfo.Text = "       ";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label17.Location = new System.Drawing.Point(17, 26);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(182, 18);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "CLICK HERE TO UPLOAD:";
+            // 
+            // label22
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.uploadInfo);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.uploadInfo1);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.progressBar3);
+            this.panel1.Controls.Add(this.progressBar2);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Location = new System.Drawing.Point(853, 123);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 289);
+            this.panel1.TabIndex = 32;
+            // 
+            // progressBar1
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(8, 152);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(78, 20);
+            this.label22.TabIndex = 30;
+            this.label22.Text = "CONTENT:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(188, 156);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(78, 16);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "ANALYZING...";
+            // 
+            // uploadInfo1
+            // 
+            this.uploadInfo1.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo1.Location = new System.Drawing.Point(12, 218);
+            this.uploadInfo1.Name = "uploadInfo1";
+            this.uploadInfo1.Size = new System.Drawing.Size(254, 53);
+            this.uploadInfo1.TabIndex = 19;
+            this.uploadInfo1.Text = "       ";
             // 
             // label22
             // 
@@ -593,6 +665,7 @@ namespace ProjectEcho
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(20, 246);
+            this.label15.MinimumSize = new System.Drawing.Size(96, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(96, 20);
             this.label15.TabIndex = 20;
@@ -603,6 +676,7 @@ namespace ProjectEcho
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(20, 132);
+            this.label14.MinimumSize = new System.Drawing.Size(148, 20);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(148, 20);
             this.label14.TabIndex = 18;
@@ -629,6 +703,7 @@ namespace ProjectEcho
             // 
             // t1paCL
             // 
+            this.t1paCL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.t1paCL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.t1paCL.Enabled = false;
             this.t1paCL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -639,6 +714,7 @@ namespace ProjectEcho
             "Size 12 Font",
             "4 pages or less"});
             this.t1paCL.Location = new System.Drawing.Point(37, 155);
+            this.t1paCL.MinimumSize = new System.Drawing.Size(180, 72);
             this.t1paCL.Name = "t1paCL";
             this.t1paCL.Size = new System.Drawing.Size(180, 72);
             this.t1paCL.TabIndex = 14;
@@ -742,30 +818,42 @@ namespace ProjectEcho
             // 
             // checkedListBox6
             // 
+            this.checkedListBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox6.Enabled = false;
             this.checkedListBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox6.FormattingEnabled = true;
             this.checkedListBox6.Items.AddRange(new object[] {
-            "1\" Margins",
-            "Arial Font",
-            "Size 12 Font",
-            "4 pages or less"});
-            this.checkedListBox6.Location = new System.Drawing.Point(37, 269);
+            "No Spelling Issues",
+            "No Grammar Issues",
+            "No Style Issues"});
+            this.checkedListBox6.Location = new System.Drawing.Point(37, 275);
+            this.checkedListBox6.MinimumSize = new System.Drawing.Size(180, 72);
             this.checkedListBox6.Name = "checkedListBox6";
             this.checkedListBox6.Size = new System.Drawing.Size(180, 72);
             this.checkedListBox6.TabIndex = 36;
             // 
-            // panel8
+            // grammarErrorsBox
             // 
-            this.panel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.panel1);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(821, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(332, 481);
-            this.panel8.TabIndex = 37;
+            this.grammarErrorsBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarErrorsBox.FormattingEnabled = true;
+            this.grammarErrorsBox.ItemHeight = 20;
+            this.grammarErrorsBox.Location = new System.Drawing.Point(262, 164);
+            this.grammarErrorsBox.Name = "grammarErrorsBox";
+            this.grammarErrorsBox.Size = new System.Drawing.Size(460, 164);
+            this.grammarErrorsBox.TabIndex = 37;
+            // 
+            // uploadInfo
+            // 
+            this.uploadInfo.AutoSize = true;
+            this.uploadInfo.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo.LinkColor = System.Drawing.Color.White;
+            this.uploadInfo.Location = new System.Drawing.Point(17, 271);
+            this.uploadInfo.Name = "uploadInfo";
+            this.uploadInfo.Size = new System.Drawing.Size(16, 18);
+            this.uploadInfo.TabIndex = 32;
+            this.uploadInfo.TabStop = true;
+            this.uploadInfo.Text = "  ";
             // 
             // TaskOneUserControl
             // 
@@ -797,7 +885,6 @@ namespace ProjectEcho
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -842,7 +929,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label uploadInfo;
+        private System.Windows.Forms.Label uploadInfo1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label15;
@@ -857,7 +944,8 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListBox grammarErrorsBox;
         private System.Windows.Forms.CheckedListBox checkedListBox6;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.LinkLabel uploadInfo;
     }
 }
