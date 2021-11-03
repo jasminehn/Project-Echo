@@ -44,7 +44,7 @@ namespace ProjectEcho
             this.invertedToggle = new ProjectEcho.SwitchButton();
             this.grayscaleToggle = new ProjectEcho.SwitchButton();
             this.boldnessToggle = new ProjectEcho.SwitchButton();
-            this.switchButton1 = new ProjectEcho.SwitchButton();
+            //this.switchButton1 = new ProjectEcho.SwitchButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,7 +58,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.invertedToggle);
             this.panel1.Controls.Add(this.grayscaleToggle);
             this.panel1.Controls.Add(this.boldnessToggle);
-            this.panel1.Controls.Add(this.switchButton1);
+            //this.panel1.Controls.Add(this.switchButton1);
             this.panel1.Controls.Add(this.textsizeSelect);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -333,13 +333,13 @@ namespace ProjectEcho
             // 
             // switchButton1
             // 
-            this.switchButton1.Location = new System.Drawing.Point(304, 202);
-            this.switchButton1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.switchButton1.Name = "switchButton1";
-            this.switchButton1.Size = new System.Drawing.Size(52, 22);
-            this.switchButton1.TabIndex = 22;
-            this.switchButton1.UseVisualStyleBackColor = true;
-            this.switchButton1.CheckedChanged += new System.EventHandler(this.switchButton1_CheckedChanged);
+            //this.switchButton1.Location = new System.Drawing.Point(304, 202);
+            //this.switchButton1.MinimumSize = new System.Drawing.Size(45, 22);
+           // this.switchButton1.Name = "switchButton1";
+            //this.switchButton1.Size = new System.Drawing.Size(52, 22);
+            //this.switchButton1.TabIndex = 22;
+            //this.switchButton1.UseVisualStyleBackColor = true;
+            //this.switchButton1.CheckedChanged += new System.EventHandler(this.switchButton1_CheckedChanged);
             // 
             // SettingsForm
             // 

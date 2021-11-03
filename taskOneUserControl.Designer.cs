@@ -84,7 +84,7 @@ namespace ProjectEcho
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            //this.panel8 = new System.Windows.Forms.Panel();
             this.grammarErrorsBox = new System.Windows.Forms.ListBox();
             this.uploadInfo = new System.Windows.Forms.LinkLabel();
             this.tabPage5.SuspendLayout();
@@ -101,7 +101,7 @@ namespace ProjectEcho
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel8.SuspendLayout();
+            //this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -412,7 +412,7 @@ namespace ProjectEcho
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.panel8);
+            //this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.checkedListBox6);
             this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.grammarErrorsBox);
