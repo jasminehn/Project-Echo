@@ -30,6 +30,8 @@ namespace ProjectEcho
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.switchButton = new ProjectEcho.SwitchButton();
+            this.blueyellowLabel = new System.Windows.Forms.Label();
             this.blueyellowToggle = new ProjectEcho.SwitchButton();
             this.redgreenToggle = new ProjectEcho.SwitchButton();
             this.invertedToggle = new ProjectEcho.SwitchButton();
@@ -44,8 +46,6 @@ namespace ProjectEcho
             this.label2 = new System.Windows.Forms.Label();
             this.textsizeLabel = new System.Windows.Forms.Label();
             this.SETTINGS = new System.Windows.Forms.Label();
-            this.blueyellowLabel = new System.Windows.Forms.Label();
-            this.darkmodeToggle = new ProjectEcho.SwitchButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@ namespace ProjectEcho
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.darkmodeToggle);
+            this.panel1.Controls.Add(this.switchButton);
             this.panel1.Controls.Add(this.blueyellowLabel);
             this.panel1.Controls.Add(this.blueyellowToggle);
             this.panel1.Controls.Add(this.redgreenToggle);
@@ -73,6 +73,26 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 329);
             this.panel1.TabIndex = 2;
+            // 
+            // switchButton
+            // 
+            this.switchButton.Location = new System.Drawing.Point(304, 202);
+            this.switchButton.MinimumSize = new System.Drawing.Size(45, 22);
+            this.switchButton.Name = "switchButton";
+            this.switchButton.Size = new System.Drawing.Size(52, 22);
+            this.switchButton.TabIndex = 29;
+            this.switchButton.UseVisualStyleBackColor = true;
+            this.switchButton.CheckedChanged += new System.EventHandler(this.switchButton_Click);
+            // 
+            // blueyellowLabel
+            // 
+            this.blueyellowLabel.AutoSize = true;
+            this.blueyellowLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueyellowLabel.Location = new System.Drawing.Point(25, 282);
+            this.blueyellowLabel.Name = "blueyellowLabel";
+            this.blueyellowLabel.Size = new System.Drawing.Size(131, 22);
+            this.blueyellowLabel.TabIndex = 28;
+            this.blueyellowLabel.Text = "BLUE-YELLOW";
             // 
             // blueyellowToggle
             // 
@@ -139,7 +159,7 @@ namespace ProjectEcho
             0,
             0});
             this.textsizeSelect.Name = "textsizeSelect";
-            this.textsizeSelect.Size = new System.Drawing.Size(73, 23);
+            this.textsizeSelect.Size = new System.Drawing.Size(73, 27);
             this.textsizeSelect.TabIndex = 21;
             this.textsizeSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textsizeSelect.Value = new decimal(new int[] {
@@ -155,7 +175,7 @@ namespace ProjectEcho
             this.redgreenLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.redgreenLabel.Location = new System.Drawing.Point(25, 169);
             this.redgreenLabel.Name = "redgreenLabel";
-            this.redgreenLabel.Size = new System.Drawing.Size(99, 18);
+            this.redgreenLabel.Size = new System.Drawing.Size(115, 22);
             this.redgreenLabel.TabIndex = 18;
             this.redgreenLabel.Text = "RED-GREEN";
             // 
@@ -165,7 +185,7 @@ namespace ProjectEcho
             this.invertedLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.invertedLabel.Location = new System.Drawing.Point(25, 132);
             this.invertedLabel.Name = "invertedLabel";
-            this.invertedLabel.Size = new System.Drawing.Size(82, 18);
+            this.invertedLabel.Size = new System.Drawing.Size(98, 22);
             this.invertedLabel.TabIndex = 15;
             this.invertedLabel.Text = "INVERTED";
             // 
@@ -175,7 +195,7 @@ namespace ProjectEcho
             this.grayscaleLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grayscaleLabel.Location = new System.Drawing.Point(25, 243);
             this.grayscaleLabel.Name = "grayscaleLabel";
-            this.grayscaleLabel.Size = new System.Drawing.Size(101, 18);
+            this.grayscaleLabel.Size = new System.Drawing.Size(128, 22);
             this.grayscaleLabel.TabIndex = 13;
             this.grayscaleLabel.Text = "GRAY SCALE";
             // 
@@ -185,7 +205,7 @@ namespace ProjectEcho
             this.darkmodeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.darkmodeLabel.Location = new System.Drawing.Point(25, 206);
             this.darkmodeLabel.Name = "darkmodeLabel";
-            this.darkmodeLabel.Size = new System.Drawing.Size(99, 18);
+            this.darkmodeLabel.Size = new System.Drawing.Size(125, 22);
             this.darkmodeLabel.TabIndex = 11;
             this.darkmodeLabel.Text = "DARK MODE";
             // 
@@ -195,7 +215,7 @@ namespace ProjectEcho
             this.boldnessLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boldnessLabel.Location = new System.Drawing.Point(24, 54);
             this.boldnessLabel.Name = "boldnessLabel";
-            this.boldnessLabel.Size = new System.Drawing.Size(90, 18);
+            this.boldnessLabel.Size = new System.Drawing.Size(103, 22);
             this.boldnessLabel.TabIndex = 9;
             this.boldnessLabel.Text = "BOLDNESS";
             // 
@@ -205,7 +225,7 @@ namespace ProjectEcho
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 18);
+            this.label2.Size = new System.Drawing.Size(197, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "COLOR ADJUSTMENT";
             // 
@@ -215,7 +235,7 @@ namespace ProjectEcho
             this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textsizeLabel.Location = new System.Drawing.Point(24, 16);
             this.textsizeLabel.Name = "textsizeLabel";
-            this.textsizeLabel.Size = new System.Drawing.Size(82, 18);
+            this.textsizeLabel.Size = new System.Drawing.Size(86, 22);
             this.textsizeLabel.TabIndex = 3;
             this.textsizeLabel.Text = "TEXT SIZE";
             // 
@@ -226,28 +246,9 @@ namespace ProjectEcho
             this.SETTINGS.Location = new System.Drawing.Point(26, 10);
             this.SETTINGS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SETTINGS.Name = "SETTINGS";
-            this.SETTINGS.Size = new System.Drawing.Size(97, 20);
+            this.SETTINGS.Size = new System.Drawing.Size(94, 23);
             this.SETTINGS.TabIndex = 3;
             this.SETTINGS.Text = "SETTINGS";
-            // 
-            // blueyellowLabel
-            // 
-            this.blueyellowLabel.AutoSize = true;
-            this.blueyellowLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blueyellowLabel.Location = new System.Drawing.Point(25, 282);
-            this.blueyellowLabel.Name = "blueyellowLabel";
-            this.blueyellowLabel.Size = new System.Drawing.Size(114, 18);
-            this.blueyellowLabel.TabIndex = 28;
-            this.blueyellowLabel.Text = "BLUE-YELLOW";
-            // 
-            // darkmodeToggle
-            // 
-            this.darkmodeToggle.Location = new System.Drawing.Point(304, 202);
-            this.darkmodeToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.darkmodeToggle.Name = "darkmodeToggle";
-            this.darkmodeToggle.Size = new System.Drawing.Size(52, 22);
-            this.darkmodeToggle.TabIndex = 29;
-            this.darkmodeToggle.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
@@ -278,7 +279,7 @@ namespace ProjectEcho
         private SwitchButton invertedToggle;
         private SwitchButton grayscaleToggle;
         private SwitchButton boldnessToggle;
-        private SwitchButton darkmodeToggle;
+        private SwitchButton switchButton;
         private System.Windows.Forms.NumericUpDown textsizeSelect;
         private System.Windows.Forms.Label redgreenLabel;
         private System.Windows.Forms.Label invertedLabel;
