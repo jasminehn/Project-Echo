@@ -30,53 +30,103 @@ namespace ProjectEcho
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textsizeSelect = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SETTINGS = new System.Windows.Forms.Label();
             this.blueyellowToggle = new ProjectEcho.SwitchButton();
             this.redgreenToggle = new ProjectEcho.SwitchButton();
             this.invertedToggle = new ProjectEcho.SwitchButton();
             this.grayscaleToggle = new ProjectEcho.SwitchButton();
             this.boldnessToggle = new ProjectEcho.SwitchButton();
-            //this.switchButton1 = new ProjectEcho.SwitchButton();
+            this.textsizeSelect = new System.Windows.Forms.NumericUpDown();
+            this.redgreenLabel = new System.Windows.Forms.Label();
+            this.invertedLabel = new System.Windows.Forms.Label();
+            this.grayscaleLabel = new System.Windows.Forms.Label();
+            this.darkmodeLabel = new System.Windows.Forms.Label();
+            this.boldnessLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textsizeLabel = new System.Windows.Forms.Label();
+            this.SETTINGS = new System.Windows.Forms.Label();
+            this.blueyellowLabel = new System.Windows.Forms.Label();
+            this.darkmodeToggle = new ProjectEcho.SwitchButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.darkmodeToggle);
+            this.panel1.Controls.Add(this.blueyellowLabel);
             this.panel1.Controls.Add(this.blueyellowToggle);
             this.panel1.Controls.Add(this.redgreenToggle);
             this.panel1.Controls.Add(this.invertedToggle);
             this.panel1.Controls.Add(this.grayscaleToggle);
             this.panel1.Controls.Add(this.boldnessToggle);
-            //this.panel1.Controls.Add(this.switchButton1);
             this.panel1.Controls.Add(this.textsizeSelect);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.redgreenLabel);
+            this.panel1.Controls.Add(this.invertedLabel);
+            this.panel1.Controls.Add(this.grayscaleLabel);
+            this.panel1.Controls.Add(this.darkmodeLabel);
+            this.panel1.Controls.Add(this.boldnessLabel);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textsizeLabel);
             this.panel1.Location = new System.Drawing.Point(18, 33);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 329);
             this.panel1.TabIndex = 2;
             // 
+            // blueyellowToggle
+            // 
+            this.blueyellowToggle.Location = new System.Drawing.Point(304, 278);
+            this.blueyellowToggle.MinimumSize = new System.Drawing.Size(45, 22);
+            this.blueyellowToggle.Name = "blueyellowToggle";
+            this.blueyellowToggle.Size = new System.Drawing.Size(52, 22);
+            this.blueyellowToggle.TabIndex = 27;
+            this.blueyellowToggle.UseVisualStyleBackColor = true;
+            this.blueyellowToggle.CheckedChanged += new System.EventHandler(this.blueyellowToggle_CheckedChanged);
+            // 
+            // redgreenToggle
+            // 
+            this.redgreenToggle.Location = new System.Drawing.Point(304, 165);
+            this.redgreenToggle.MinimumSize = new System.Drawing.Size(45, 22);
+            this.redgreenToggle.Name = "redgreenToggle";
+            this.redgreenToggle.Size = new System.Drawing.Size(52, 22);
+            this.redgreenToggle.TabIndex = 26;
+            this.redgreenToggle.UseVisualStyleBackColor = true;
+            this.redgreenToggle.CheckedChanged += new System.EventHandler(this.redgreenToggle_CheckedChanged);
+            // 
+            // invertedToggle
+            // 
+            this.invertedToggle.Location = new System.Drawing.Point(304, 128);
+            this.invertedToggle.MinimumSize = new System.Drawing.Size(45, 22);
+            this.invertedToggle.Name = "invertedToggle";
+            this.invertedToggle.Size = new System.Drawing.Size(52, 22);
+            this.invertedToggle.TabIndex = 25;
+            this.invertedToggle.UseVisualStyleBackColor = true;
+            this.invertedToggle.CheckedChanged += new System.EventHandler(this.invertedToggle_CheckedChanged);
+            // 
+            // grayscaleToggle
+            // 
+            this.grayscaleToggle.Location = new System.Drawing.Point(304, 239);
+            this.grayscaleToggle.MinimumSize = new System.Drawing.Size(45, 22);
+            this.grayscaleToggle.Name = "grayscaleToggle";
+            this.grayscaleToggle.Size = new System.Drawing.Size(52, 22);
+            this.grayscaleToggle.TabIndex = 24;
+            this.grayscaleToggle.UseVisualStyleBackColor = true;
+            this.grayscaleToggle.CheckedChanged += new System.EventHandler(this.grayscaleToggle_CheckedChanged);
+            // 
+            // boldnessToggle
+            // 
+            this.boldnessToggle.Location = new System.Drawing.Point(304, 55);
+            this.boldnessToggle.MinimumSize = new System.Drawing.Size(45, 22);
+            this.boldnessToggle.Name = "boldnessToggle";
+            this.boldnessToggle.Size = new System.Drawing.Size(52, 22);
+            this.boldnessToggle.TabIndex = 23;
+            this.boldnessToggle.UseVisualStyleBackColor = true;
+            this.boldnessToggle.CheckedChanged += new System.EventHandler(this.boldnessToggle_CheckedChanged);
+            // 
             // textsizeSelect
             // 
-            this.textsizeSelect.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textsizeSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textsizeSelect.Location = new System.Drawing.Point(283, 16);
             this.textsizeSelect.Maximum = new decimal(new int[] {
             20,
@@ -89,7 +139,7 @@ namespace ProjectEcho
             0,
             0});
             this.textsizeSelect.Name = "textsizeSelect";
-            this.textsizeSelect.Size = new System.Drawing.Size(73, 31);
+            this.textsizeSelect.Size = new System.Drawing.Size(73, 23);
             this.textsizeSelect.TabIndex = 21;
             this.textsizeSelect.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textsizeSelect.Value = new decimal(new int[] {
@@ -99,247 +149,105 @@ namespace ProjectEcho
             0});
             this.textsizeSelect.ValueChanged += new System.EventHandler(this.textsizeSelect_ValueChanged);
             // 
-            // label8
+            // redgreenLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 169);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 29);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "RED-GREEN";
+            this.redgreenLabel.AutoSize = true;
+            this.redgreenLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redgreenLabel.Location = new System.Drawing.Point(25, 169);
+            this.redgreenLabel.Name = "redgreenLabel";
+            this.redgreenLabel.Size = new System.Drawing.Size(99, 18);
+            this.redgreenLabel.TabIndex = 18;
+            this.redgreenLabel.Text = "RED-GREEN";
             // 
-            // label7
+            // invertedLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 282);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 29);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "BLUE-YELLOW";
+            this.invertedLabel.AutoSize = true;
+            this.invertedLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invertedLabel.Location = new System.Drawing.Point(25, 132);
+            this.invertedLabel.Name = "invertedLabel";
+            this.invertedLabel.Size = new System.Drawing.Size(82, 18);
+            this.invertedLabel.TabIndex = 15;
+            this.invertedLabel.Text = "INVERTED";
             // 
-            // label6
+            // grayscaleLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 29);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "INVERTED";
+            this.grayscaleLabel.AutoSize = true;
+            this.grayscaleLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grayscaleLabel.Location = new System.Drawing.Point(25, 243);
+            this.grayscaleLabel.Name = "grayscaleLabel";
+            this.grayscaleLabel.Size = new System.Drawing.Size(101, 18);
+            this.grayscaleLabel.TabIndex = 13;
+            this.grayscaleLabel.Text = "GRAY SCALE";
             // 
-            // label5
+            // darkmodeLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 243);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 29);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "GRAY SCALE";
+            this.darkmodeLabel.AutoSize = true;
+            this.darkmodeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkmodeLabel.Location = new System.Drawing.Point(25, 206);
+            this.darkmodeLabel.Name = "darkmodeLabel";
+            this.darkmodeLabel.Size = new System.Drawing.Size(99, 18);
+            this.darkmodeLabel.TabIndex = 11;
+            this.darkmodeLabel.Text = "DARK MODE";
             // 
-            // label4
+            // boldnessLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 29);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "DARK MODE";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "BOLDNESS";
+            this.boldnessLabel.AutoSize = true;
+            this.boldnessLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boldnessLabel.Location = new System.Drawing.Point(24, 54);
+            this.boldnessLabel.Name = "boldnessLabel";
+            this.boldnessLabel.Size = new System.Drawing.Size(90, 18);
+            this.boldnessLabel.TabIndex = 9;
+            this.boldnessLabel.Text = "BOLDNESS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 29);
+            this.label2.Size = new System.Drawing.Size(183, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "COLOR ADJUSTMENT";
             // 
-            // label1
+            // textsizeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 29);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "TEXT SIZE";
+            this.textsizeLabel.AutoSize = true;
+            this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textsizeLabel.Location = new System.Drawing.Point(24, 16);
+            this.textsizeLabel.Name = "textsizeLabel";
+            this.textsizeLabel.Size = new System.Drawing.Size(82, 18);
+            this.textsizeLabel.TabIndex = 3;
+            this.textsizeLabel.Text = "TEXT SIZE";
             // 
-            // panel1
+            // SETTINGS
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.blueyellowToggle);
-            this.panel1.Controls.Add(this.redgreenToggle);
-            this.panel1.Controls.Add(this.invertedToggle);
-            this.panel1.Controls.Add(this.grayscaleToggle);
-            this.panel1.Controls.Add(this.boldnessToggle);
-            this.panel1.Controls.Add(this.darkModeToggle);
-            this.panel1.Controls.Add(this.textsizeSelect);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(18, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 329);
-            this.panel1.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 282);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "BLUE-YELLOW";
-            // 
-            // blueyellowToggle
-            // 
-            this.blueyellowToggle.Location = new System.Drawing.Point(304, 278);
-            this.blueyellowToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.blueyellowToggle.Name = "blueyellowToggle";
-            this.blueyellowToggle.Size = new System.Drawing.Size(52, 22);
-            this.blueyellowToggle.TabIndex = 27;
-            this.blueyellowToggle.UseVisualStyleBackColor = true;
-            this.blueyellowToggle.CheckedChanged += new System.EventHandler(this.blueyellowToggle_CheckedChanged);
-            // 
-            // redgreenToggle
-            // 
-            this.redgreenToggle.Location = new System.Drawing.Point(304, 165);
-            this.redgreenToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.redgreenToggle.Name = "redgreenToggle";
-            this.redgreenToggle.Size = new System.Drawing.Size(52, 22);
-            this.redgreenToggle.TabIndex = 26;
-            this.redgreenToggle.UseVisualStyleBackColor = true;
-            this.redgreenToggle.CheckedChanged += new System.EventHandler(this.redgreenToggle_CheckedChanged);
-            // 
-            // invertedToggle
-            // 
-            this.invertedToggle.Location = new System.Drawing.Point(304, 128);
-            this.invertedToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.invertedToggle.Name = "invertedToggle";
-            this.invertedToggle.Size = new System.Drawing.Size(52, 22);
-            this.invertedToggle.TabIndex = 25;
-            this.invertedToggle.UseVisualStyleBackColor = true;
-            this.invertedToggle.CheckedChanged += new System.EventHandler(this.invertedToggle_CheckedChanged);
-            // 
-            // grayscaleToggle
-            // 
-            this.grayscaleToggle.Location = new System.Drawing.Point(304, 239);
-            this.grayscaleToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.grayscaleToggle.Name = "grayscaleToggle";
-            this.grayscaleToggle.Size = new System.Drawing.Size(52, 22);
-            this.grayscaleToggle.TabIndex = 24;
-            this.grayscaleToggle.UseVisualStyleBackColor = true;
-            this.grayscaleToggle.CheckedChanged += new System.EventHandler(this.grayscaleToggle_CheckedChanged);
-            // 
-            // boldnessToggle
-            // 
-            this.boldnessToggle.Location = new System.Drawing.Point(304, 55);
-            this.boldnessToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.boldnessToggle.Name = "boldnessToggle";
-            this.boldnessToggle.Size = new System.Drawing.Size(52, 22);
-            this.boldnessToggle.TabIndex = 23;
-            this.boldnessToggle.UseVisualStyleBackColor = true;
-            this.boldnessToggle.CheckedChanged += new System.EventHandler(this.boldnessToggle_CheckedChanged);
-            // 
-            // darkModeToggle
-            // 
-            this.darkModeToggle.Location = new System.Drawing.Point(304, 202);
-            this.darkModeToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.darkModeToggle.Name = "darkModeToggle";
-            this.darkModeToggle.Size = new System.Drawing.Size(52, 22);
-            this.darkModeToggle.TabIndex = 22;
-            this.darkModeToggle.UseVisualStyleBackColor = true;
-            this.darkModeToggle.CheckedChanged += new System.EventHandler(this.switchButton1_CheckedChanged);
             this.SETTINGS.AutoSize = true;
-            this.SETTINGS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SETTINGS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SETTINGS.Location = new System.Drawing.Point(26, 10);
             this.SETTINGS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SETTINGS.Name = "SETTINGS";
-            this.SETTINGS.Size = new System.Drawing.Size(143, 29);
+            this.SETTINGS.Size = new System.Drawing.Size(97, 20);
             this.SETTINGS.TabIndex = 3;
             this.SETTINGS.Text = "SETTINGS";
             // 
-            // blueyellowToggle
+            // blueyellowLabel
             // 
-            this.blueyellowToggle.Location = new System.Drawing.Point(304, 278);
-            this.blueyellowToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.blueyellowToggle.Name = "blueyellowToggle";
-            this.blueyellowToggle.Size = new System.Drawing.Size(52, 22);
-            this.blueyellowToggle.TabIndex = 27;
-            this.blueyellowToggle.UseVisualStyleBackColor = true;
-            this.blueyellowToggle.CheckedChanged += new System.EventHandler(this.blueyellowToggle_CheckedChanged);
+            this.blueyellowLabel.AutoSize = true;
+            this.blueyellowLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blueyellowLabel.Location = new System.Drawing.Point(25, 282);
+            this.blueyellowLabel.Name = "blueyellowLabel";
+            this.blueyellowLabel.Size = new System.Drawing.Size(114, 18);
+            this.blueyellowLabel.TabIndex = 28;
+            this.blueyellowLabel.Text = "BLUE-YELLOW";
             // 
-            // redgreenToggle
+            // darkmodeToggle
             // 
-            this.redgreenToggle.Location = new System.Drawing.Point(304, 165);
-            this.redgreenToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.redgreenToggle.Name = "redgreenToggle";
-            this.redgreenToggle.Size = new System.Drawing.Size(52, 22);
-            this.redgreenToggle.TabIndex = 26;
-            this.redgreenToggle.UseVisualStyleBackColor = true;
-            this.redgreenToggle.CheckedChanged += new System.EventHandler(this.redgreenToggle_CheckedChanged);
-            // 
-            // invertedToggle
-            // 
-            this.invertedToggle.Location = new System.Drawing.Point(304, 128);
-            this.invertedToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.invertedToggle.Name = "invertedToggle";
-            this.invertedToggle.Size = new System.Drawing.Size(52, 22);
-            this.invertedToggle.TabIndex = 25;
-            this.invertedToggle.UseVisualStyleBackColor = true;
-            this.invertedToggle.CheckedChanged += new System.EventHandler(this.invertedToggle_CheckedChanged);
-            // 
-            // grayscaleToggle
-            // 
-            this.grayscaleToggle.Location = new System.Drawing.Point(304, 239);
-            this.grayscaleToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.grayscaleToggle.Name = "grayscaleToggle";
-            this.grayscaleToggle.Size = new System.Drawing.Size(52, 22);
-            this.grayscaleToggle.TabIndex = 24;
-            this.grayscaleToggle.UseVisualStyleBackColor = true;
-            this.grayscaleToggle.CheckedChanged += new System.EventHandler(this.grayscaleToggle_CheckedChanged);
-            // 
-            // boldnessToggle
-            // 
-            this.boldnessToggle.Location = new System.Drawing.Point(304, 55);
-            this.boldnessToggle.MinimumSize = new System.Drawing.Size(45, 22);
-            this.boldnessToggle.Name = "boldnessToggle";
-            this.boldnessToggle.Size = new System.Drawing.Size(52, 22);
-            this.boldnessToggle.TabIndex = 23;
-            this.boldnessToggle.UseVisualStyleBackColor = true;
-            this.boldnessToggle.CheckedChanged += new System.EventHandler(this.boldnessToggle_CheckedChanged);
-            // 
-            // switchButton1
-            // 
-            //this.switchButton1.Location = new System.Drawing.Point(304, 202);
-            //this.switchButton1.MinimumSize = new System.Drawing.Size(45, 22);
-           // this.switchButton1.Name = "switchButton1";
-            //this.switchButton1.Size = new System.Drawing.Size(52, 22);
-            //this.switchButton1.TabIndex = 22;
-            //this.switchButton1.UseVisualStyleBackColor = true;
-            //this.switchButton1.CheckedChanged += new System.EventHandler(this.switchButton1_CheckedChanged);
+            this.darkmodeToggle.Location = new System.Drawing.Point(304, 202);
+            this.darkmodeToggle.MinimumSize = new System.Drawing.Size(45, 22);
+            this.darkmodeToggle.Name = "darkmodeToggle";
+            this.darkmodeToggle.Size = new System.Drawing.Size(52, 22);
+            this.darkmodeToggle.TabIndex = 29;
+            this.darkmodeToggle.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
@@ -354,9 +262,9 @@ namespace ProjectEcho
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textsizeSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,16 +278,16 @@ namespace ProjectEcho
         private SwitchButton invertedToggle;
         private SwitchButton grayscaleToggle;
         private SwitchButton boldnessToggle;
-        private SwitchButton darkModeToggle;
+        private SwitchButton darkmodeToggle;
         private System.Windows.Forms.NumericUpDown textsizeSelect;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label redgreenLabel;
+        private System.Windows.Forms.Label invertedLabel;
+        private System.Windows.Forms.Label grayscaleLabel;
+        private System.Windows.Forms.Label darkmodeLabel;
+        private System.Windows.Forms.Label boldnessLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label textsizeLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label blueyellowLabel;
     }
 }

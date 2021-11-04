@@ -62,7 +62,7 @@ namespace ProjectEcho
             blueyellowSwitch.Text = "OFF";
             redgreenSwitch.Text = "OFF";
             boldSwitch.Text = "OFF";*/
-            textsizeSelect.Value = (decimal)label1.Font.Size;
+            textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
         }
 
         private void switchButton_Click(object sender, EventArgs e)
@@ -192,7 +192,7 @@ namespace ProjectEcho
 
         private void switchButton1_CheckedChanged(object sender, EventArgs e)
         {
-            switchOnOff(darkModeToggle);
+            //switchOnOff(darkModeToggle);
             if (on)
             {
                 /*
