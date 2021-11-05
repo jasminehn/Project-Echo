@@ -117,16 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>- In the upper right-hand corner, there are buttons for Instructions when you are in a task, Help on the main page, and the gear for settings visible on all pages. 
-   ~ Note: You are currently in the Help section.
-- On the main page, below each Task section is a checklist of the sub-tasks. They will be checked off once you have correctly completed that whole sub-section.
-- The Instructions Tab, shown on task pages, indicates how each task section should be completed according to the handbook. 
-- In settings, you may change the accessibility and reset your progress which will erase all your progress and uploads
-- The review button can be assessed [when…/ at any time] and will generate a complete checklist report for each task and sub-task section in detail.
-- [how each tab on a task works]
-- [review section]</value>
-  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

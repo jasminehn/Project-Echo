@@ -13,19 +13,38 @@ namespace ProjectEcho
 {
     public partial class MainForm : Form
     {
-        private Panel currentPanel = new Panel();
-        public Panel[] contextPanels = new Panel[4];
+        //private Panel currentPanel = new Panel();
+        //public Panel[] contextPanels = new Panel[4];
+        private UserControl currentControl = new UserControl();
+        
+        static TaskOneUserControl t1 = new TaskOneUserControl();
+        static TaskTwoUserControl t2 = new TaskTwoUserControl();
+        public UserControl[] taskControls = new UserControl[4];
+        public HelpForm hf = new HelpForm();
+        int saveHelpResource = 0;
+
+
+
         public String path;
         public MainForm()
         {
             InitializeComponent();
-            contextPanels[0] = (mainMenuPanel);
-            contextPanels[1] = (taskOnePanel);
+
+
+            //taskControls[0] = mainMenu;
+            taskControls[0] = t1;
+            taskControls[1] = taskOne;
+            taskControls[2] = taskTwo;
+            taskControls[3] = t1;
+
+            //contextPanels[0] = (mainMenuPanel);
+            //contextPanels[1] = (taskOnePanel);
             //contextPanels[2] = (taskTwoPanel);
             //contextPanels[3] = (taskThreePanel);
 
-            currentPanel = contextPanels[0];
-            setPanelActive(0);
+            currentControl = taskControls[0];
+            //currentPanel = contextPanels[0];
+            setControlActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
@@ -50,8 +69,9 @@ namespace ProjectEcho
                 //fail silently
             }
 
-            string fff = Path.Combine(Environment.CurrentDirectory, "Project-Echo\\PDF\\Requirement.pdf");
-            Console.WriteLine(fff);
+            
+            //GrammarAPI at = new GrammarAPI();
+            //GrammarAPI.CallAPI();
 
         }
 
@@ -60,37 +80,14 @@ namespace ProjectEcho
 
         }
 
-        private void titlePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+  
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void taskTwoList_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-           
-        }
-
-        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
@@ -107,46 +104,46 @@ namespace ProjectEcho
 
         private void task1Button_Click(object sender, EventArgs e)
         {
-            setPanelActive(1);
+            setControlActive(1);
         }
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(2);
+            setControlActive(2);
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(3);
+            setControlActive(3);
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
-            setPanelActive(0);
+            setControlActive(0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            int i = Array.IndexOf(contextPanels, currentPanel);
-            setPanelActive(i - 1);
+            int i = Array.IndexOf(taskControls, currentControl);
+            setControlActive(i - 1);
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            int i = Array.IndexOf(contextPanels, currentPanel);
-            setPanelActive(i + 1);
+            int i = Array.IndexOf(taskControls, currentControl);
+            setControlActive(i + 1);
         }
 
-        private void setPanelActive(int i)
+        public void setControlActive(int i)
         {
-            currentPanel.Enabled = false;
-            currentPanel.Visible = false;
-            currentPanel = contextPanels[i];
-            currentPanel.Enabled = true;
-            currentPanel.Visible = true;
-
+            
+             currentControl.Visible = false;
+             currentControl = taskControls[i];
+             currentControl.Visible = true;
+     
             if(i.Equals(0))
             {
+                mainMenuPanel.Visible = true;
                 titleLabel.Text = "MAIN MENU";
                 returnToMenuButton.Visible = false;
                 returnToMenuButton.Enabled = false;
@@ -154,6 +151,7 @@ namespace ProjectEcho
                 backButton.Enabled = false;
             } else
             {
+                mainMenuPanel.Visible = false;
                 returnToMenuButton.Visible = true;
                 returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
@@ -179,7 +177,7 @@ namespace ProjectEcho
             //get data stored in user upload data file (not needed yet)
             /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
             List<string> lies = File.ReadAllLines(userUploadsDataPath).ToList();*/
-
+            /*
             //gets task part name (i.e. task 1 part "A")
             string currentTab = "x";
             currentTab = this.tabControl1.SelectedTab.Text;
@@ -202,19 +200,19 @@ namespace ProjectEcho
                         str = str + "\n" + file.Name; //adds each file name to the string
                     }
 
-                    uploadInfo.Text = "Uploaded: " + str; //set upload info text to display all files from the folder
+                    //uploadInfo.Text = "Uploaded: " + str; //set upload info text to display all files from the folder
                 }
             }
             catch (Exception)
             {
                 //do nothing
-            }
+            }*/
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void uploadFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+          /*  OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = false;
@@ -236,10 +234,10 @@ namespace ProjectEcho
 
                     string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
                     string extension = Path.GetExtension(fileName); //gets only the file extension
-                    uploadInfo.Text = "Uploaded: " + separatedFileName; //concats new file name
+                    //uploadInfo.Text = "Uploaded: " + separatedFileName; //concats new file name
 
                     //create useruploads data text file (not needed right now)
-                    /*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
+                    *//*string userUploadsDataPath = Environment.CurrentDirectory + "\\UserUploads" + "\\uploadsData.txt";
                     try
                     {
                         //if the file doesn't exist, create it
@@ -252,16 +250,16 @@ namespace ProjectEcho
                     {
                         Console.WriteLine("File \"{0}\" already exists", separatedFileName);
                         return;
-                    }*/
+                    }*//*
 
                     //gets task part name (i.e. task 1 part "A")
                     string currentTab = "x";
-                    currentTab = this.tabControl1.SelectedTab.Text;
+                    //currentTab = this.tabControl1.SelectedTab.Text;
                     char currentTabLetter = currentTab[currentTab.Length - 1];
 
                     //creates name of file based on current task and part (i.e. taskUpload1A) so that when they reupload a file with a different name, it still overwrites the stored file
-                    int i = Array.IndexOf(contextPanels, currentPanel);
-                    string uploadedFile = "taskUpload" + i + currentTabLetter;
+                    //int i = Array.IndexOf(contextPanels, currentPanel);
+                    //string uploadedFile = "taskUpload" + i + currentTabLetter;
 
                     //create user task folder
                     string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
@@ -278,64 +276,45 @@ namespace ProjectEcho
                         //fail silently
                     }
 
-                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName); //path to upload the user's file
-                    //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
-                    File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
+                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName);*/ //path to upload the user's file
+                    
+                        
+                        
+                        //MessageBox.Show("\nUPLOADED: " + separatedFileName + "\nFROM: " + fileName + "\nTO: " + targetPath +"\n"+ uploadedFile); //shows paths for testing
+                    //File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
 
                     //writes data enty to file (given file name, original file name, given file path, original file path (not needed right now)
-                    /*string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
-                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);*/
+      /*              string userDataEntry = uploadedFile + ',' + separatedFileName + ',' + targetPath + ',' + fileName;
+                    File.AppendAllText(userUploadsDataPath, userDataEntry + Environment.NewLine);
                 }
             }
 
-            
-            
-            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
-            {
-                uploadInfo.Text = uploadInfo.Text + path;
-                FormatChecker fc = new FormatChecker();
-                Boolean[] b = fc.runFormatCheck(path, 90);
-                            //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  "  +b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
-            if(b[0].Equals(true))
-            {
-                t1paCL.SetItemChecked(0, true); //Aligned
-            }
-
-            if(b[1].Equals(true))
-            {
-                t1paCL.SetItemChecked(1, true); //Font
-            }
-
-            if(b[2].Equals(true))
-            {
-                t1paCL.SetItemChecked(2, true); //Font Size
-            }
-
-            if(b[3].Equals(true))
-            {
-                t1paCL.SetItemChecked(3, true); //Length
-            }
-                
-            }
-
-
+            */
         }
 
         //Executes when the help button is clicked
         private void helpButton_Click(object sender, EventArgs e)
         {
             //Creates the form that displays
-            HelpForm hf = new HelpForm();
-
-            if (hf.ShowDialog() == DialogResult.OK)
+            saveHelpResource++;
+            if(saveHelpResource == 0)
             {
-                Console.Write("Help opened");
+                if (hf.ShowDialog() == DialogResult.OK)
+                {
+                    Console.Write("Help opened");
+                }
+            } else
+            {
+                hf.Show();
             }
+            
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
             //for every part's task completed progress is added
         }
+
+  
     }
 }

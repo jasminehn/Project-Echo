@@ -51,13 +51,27 @@ namespace ProjectEcho
 
 		public Boolean checkAlignment(Document document)
 		{
+			int correctMargin = 1;
 
-			return false;
+			//1 inch = 72 points
+			float leftMargin = document.PageSetup.LeftMargin / 72;
+			float rightMargin = document.PageSetup.RightMargin / 72;
+			float topMargin = document.PageSetup.TopMargin / 72;
+			float bottomMargin = document.PageSetup.BottomMargin / 72;
+
+			//if any margins are not one inch
+			if ((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
+            {
+				System.Windows.Forms.MessageBox.Show("Left margin: "+leftMargin.ToString());
+				return false;
+            }
+			//System.Windows.Forms.MessageBox.Show("Left margin (YAY): " + document.PageSetup.LeftMargin.ToString());
+			return true;
 		}
 
 		public Boolean checkFontSize(Document document)
 		{
-			if(document.Content.Font.Size != 12)
+			if(document.Content.Font.Size != 11)
             {
 				System.Windows.Forms.MessageBox.Show(document.Content.Font.Size.ToString());
 				return false;
@@ -69,7 +83,7 @@ namespace ProjectEcho
 		{
 			Boolean isCorrectFont = true;
 			Font correct = new Font();
-			correct.Name = "Times New Roman";
+			correct.Name = "Arial";
 			Font blank = new Font();
 			foreach(Microsoft.Office.Interop.Word.Paragraph para in document.Paragraphs)
 			{

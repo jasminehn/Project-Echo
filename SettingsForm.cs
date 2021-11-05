@@ -14,22 +14,18 @@ namespace ProjectEcho
     {
         bool on = true;
 
-        private void switchOnOff(Button button)
-        {
-            if (on)
-            {
-                button.Text = "ON";
-                button.BackColor = Color.LimeGreen;
-                on = false;
-            }
-            else
-            {
-                button.Text = "OFF";
-                button.BackColor = Color.DarkGray;
-                on = true;
-            }
-        }
+        //button colors
+        Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
+        Color buttonOffColor = SystemColors.ControlDark;
 
+        //light mode colors
+        Color lightBG = Color.WhiteSmoke;
+        Color lightText = Color.Black;
+
+        //dark mode colors
+        Color darkBG = ColorTranslator.FromHtml("#121113");
+        Color darkText = Color.WhiteSmoke;
+        
         public SettingsForm()
         {
             InitializeComponent();
@@ -37,53 +33,72 @@ namespace ProjectEcho
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            darkModeSwitch.Text = "OFF";
+            /*darkModeSwitch.Text = "OFF";
             invertedSwitch.Text = "OFF";
             grayscaleSwitch.Text = "OFF";
             blueyellowSwitch.Text = "OFF";
             redgreenSwitch.Text = "OFF";
-            boldSwitch.Text = "OFF";
-            textsizeSelect.Value = (decimal)label1.Font.Size;
+            boldSwitch.Text = "OFF";*/
+            textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
         }
 
         private void switchButton_Click(object sender, EventArgs e)
         {
-            switchOnOff(darkModeSwitch);
+            on = switchButton.Checked;
             if (on)
-            {
-                BackColor = System.Drawing.Color.White;
-                textsizeSelect.BackColor = Color.White;
-                ForeColor = System.Drawing.Color.Black;
-                on = true;
-            }
-            else
-            {
-                BackColor = System.Drawing.Color.Black;
+            {                
+                BackColor = darkBG;
+                panel1.BackColor = darkBG;
+                ForeColor = Color.White; //changes all text color
                 textsizeSelect.BackColor = Color.Black;
                 textsizeSelect.ForeColor = Color.White;
-                ForeColor = System.Drawing.Color.White;
+                
+                on = true;
+            }
+            else //DARK MODE ON
+            {
+                BackColor = lightBG;
+                panel1.BackColor = lightBG;
+                ForeColor = Color.Black; //changes all text color
+                textsizeSelect.BackColor = Color.White;
+                textsizeSelect.ForeColor = Color.Black;
+
                 on = false;
             }
         }
-
-        private void invertedSwitch_Click(object sender, EventArgs e)
+       public IEnumerable<Control> getAll(Control control, Type type)
         {
-            switchOnOff(invertedSwitch);
+            var controls = control.Controls.Cast<Control>();
+            return controls.SelectMany(ctrl => getAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
+        }
+
+        private void boldnessToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            on = boldnessToggle.Checked;
+            var controls = getAll(this, typeof(Label));
             if (on)
             {
-                //normal
-                on = true;
+                Font = new System.Drawing.Font(Font, FontStyle.Bold);
+                foreach (Control c in controls)
+                {
+                    c.Font = new System.Drawing.Font(Font, FontStyle.Bold);
+                }
+                on = false;
             }
             else
             {
-                //inverted
-                on = false;
+                Font = new System.Drawing.Font(Font, FontStyle.Regular);
+                foreach (Control c in controls)
+                {
+                    c.Font = new System.Drawing.Font(Font, FontStyle.Regular);
+                }
+                on = true;
             }
         }
 
-        private void grayscaleSwitch_Click(object sender, EventArgs e)
+        private void grayscaleToggle_CheckedChanged(object sender, EventArgs e)
         {
-            switchOnOff(grayscaleSwitch);
+            on = grayscaleToggle.Checked;
             if (on)
             {
                 //normal
@@ -96,9 +111,24 @@ namespace ProjectEcho
             }
         }
 
-        private void blueyellowSwitch_Click(object sender, EventArgs e)
+        private void invertedToggle_CheckedChanged(object sender, EventArgs e)
         {
-            switchOnOff(blueyellowSwitch);
+            on = invertedToggle.Checked;
+            if (on)
+            {
+                //normal
+                on = true;
+            }
+            else
+            {
+                //inverted
+                on = false;
+            }
+        }
+
+        private void redgreenToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            on = blueyellowToggle.Checked;
             if (on)
             {
                 //normal
@@ -111,9 +141,9 @@ namespace ProjectEcho
             }
         }
 
-        private void redgreenSwitch_Click(object sender, EventArgs e)
+        private void blueyellowToggle_CheckedChanged(object sender, EventArgs e)
         {
-            switchOnOff(redgreenSwitch);
+            on = blueyellowToggle.Checked;
             if (on)
             {
                 //normal
@@ -125,27 +155,23 @@ namespace ProjectEcho
                 on = false;
             }
         }
-        
-        private void boldSwitch_Click(object sender, EventArgs e)
-        {
-            switchOnOff(boldSwitch);
-            if (on)
-            {
-                Font = new System.Drawing.Font(Font, FontStyle.Regular);
-                on = true;
-            }
-            else
-            {
-                Font = new System.Drawing.Font(Font, FontStyle.Bold);
-                on = false;
-            }
-            //TODO: Currently only changes text size of buttons
-        }
 
-        private void textsizeSelect_SelectedItemChanged(object sender, EventArgs e)
+        private void textsizeSelect_ValueChanged(object sender, EventArgs e)
         {
-            Font = new Font("Microsoft Sans Serif", (float)textsizeSelect.Value);  
-            //TODO: Currently only changes text size of buttons
+            Font = new Font("Century Gothic", (float)textsizeSelect.Value);
+
+            var controls = getAll(this, typeof(Label));
+            foreach (Control c in controls)
+            {
+                if(boldnessToggle.Checked)
+                {
+                    c.Font = new Font("Century Gothic", (float)textsizeSelect.Value, FontStyle.Bold);
+                }
+                else
+                {
+                    c.Font = new Font("Century Gothic", (float)textsizeSelect.Value, FontStyle.Regular);
+                }               
+            }
         }
     }
 }
