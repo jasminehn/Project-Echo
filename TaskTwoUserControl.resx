@@ -123,7 +123,14 @@
   <data name="label6.Text" xml:space="preserve">
     <value>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>While not needed for submission, the edTPA requires that you obtain signed permission slips for each student shown in video submissions. In this section, please record the names of each student shown, and upload a scan of each permission slip. It is possible that the edTPA will request these permission slips from you.
+</value>
+  </data>
   <data name="label13.Text" xml:space="preserve">
+    <value>The first clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
     <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
 
 </value>
@@ -131,9 +138,4 @@
   <metadata name="eventLog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>154, 17</value>
   </metadata>
-  <data name="label29.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
-
-</value>
-  </data>
 </root>
