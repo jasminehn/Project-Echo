@@ -1,40 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-//using Microsoft.AspNetCore.Hosting;
-//using Microsoft.Extensions.Configuration;
-//using Microsoft.Extensions.Hosting;
-//using Microsoft.Extensions.Logging;
-using System.Net.Http.Headers;
 using System.Net.Http;
-using RestSharp;
-//using System.Reflection.Metadata;
-using System.IO;
-using System.IO.Compression;
-using System.Xml;
 using System.Diagnostics;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Newtonsoft.Json;
+using System.Xml.Linq;
+using System.Text.Json;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
+using System.Xml.Serialization;
+using Json.Net;
+using DocumentFormat.OpenXml.Vml.Spreadsheet;
+using System.Data.Common;
+using System.Collections;
+
 
 namespace ProjectEcho
 {
     public class GrammarAPI
     {
         public static String pog = "";
+        public static String idk = "it dont work";
 
-        public static async Task CallAPI(String path)
+        public static async Task CallAPI(String filePath)
         {
-
             var first = "";
             var second = " ";
             var third = " ";
-            string mytext = OpenWordprocessingDocumentReadonly(path);
+            string mytext = OpenWordprocessingDocumentReadonly(filePath);
             Console.WriteLine("****" + mytext);
-            var words = mytext.Split(new[] { ' ' } , StringSplitOptions.RemoveEmptyEntries);
+            var words = mytext.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries);
             int len = mytext.Length;
             int subLen;
 
@@ -65,7 +63,9 @@ namespace ProjectEcho
                     if (mytext.Length > 20000)
                     {
                         Console.WriteLine("*** over 20,000 characters");
+
                         await GrammarCheck(third).ConfigureAwait(false);
+
                     }
                 }
 
@@ -75,9 +75,8 @@ namespace ProjectEcho
                 Trace.WriteLine(ex);
             }
 
-            //  len 11542 sublen 1542
-
         }
+
 
         public static String ReturnReport(String path)
         {
@@ -87,6 +86,15 @@ namespace ProjectEcho
             return pog;
         }
 
+        //takes a path and returns the output of the grammar api; used for calling the API in other classes
+        public static string yeet(string path)
+        {
+            CallAPI(path);
+
+            return idk;
+        }
+
+        
         public static async Task GrammarCheck(string text)
         {
 
@@ -110,13 +118,37 @@ namespace ProjectEcho
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                string s = getReport(body);
-                Console.WriteLine(s);
-                //Console.WriteLine(body);
+                var v = JsonConvert.DeserializeObject<dynamic>(body);
+                bool item = v.software.premium;
+                bool warn = v.warnings.incompleteResults;
+                string grammarReport = " ";
+                List<string> reportList = new List<string>();
+                foreach (var i in v.matches)
+                {
+                    grammarReport = "Sentence: " + i.sentence + "\n Message: " + i.message + " Offset: " + i.offset.ToString() + "\n Replacements: " + i.replacements + "\n";
+                    reportList.Add(grammarReport);
+                }
+                
+                for (int i = 0; i < reportList.Count; i++)
+                {
+                    reportList[i] = reportList[i].Replace("[", "");
+                    reportList[i] = reportList[i].Replace("]", "");
+                    reportList[i] = reportList[i].Replace("{", "");
+                    reportList[i] = reportList[i].Replace("}", "");
+
+                }
+                
+                Console.WriteLine(string.Join(" ", reportList));
+                //idk = string.Join(" ", reportList); //only gets the last report bc it's overwritten each time GrammarCheck is called :(
+                
+                // string s = getReport(body);
+
             }
 
-
         }
+
+
+
         //Converts docx files to string
         public static string OpenWordprocessingDocumentReadonly(string filepath)
         {
@@ -134,25 +166,69 @@ namespace ProjectEcho
             }
 
             //return "1"; //unreachable code
-
         }
+
+
+
 
         //This method will clean up the JSON file so that the report is user friendly
         public static string getReport(string text)
         {
 
             // string docText = "words.. words.. match: spell check";
-
+            string s = "words..... offset: 20";
+            int i = s.IndexOf("offset");
+            //Console.WriteLine("the index is " + i);
+            string n = s.Substring(i, 10);
+            // Console.WriteLine("new string*** " + n);
 
             string cutString = text.Split(new string[] { "matches" }, StringSplitOptions.None).Last();
+            string offSetVals = " ";
 
 
-            //  Console.WriteLine("Old string " + text);
-            Console.WriteLine("New string " + cutString);
+            // Console.WriteLine("Old string " + text);
+            // Console.WriteLine("New string " + cutString);
             return cutString;
-
 
         }
 
+        /*
+        public static List<string> ReturnReport(List<string> report)
+        {
+
+            return report;
+        }
+        */
     }
+    public class Warnings
+    {
+        public bool incompleteResults { get; set; }
+    }
+
+    public class Software
+    {
+
+        public string software { get; set; }
+        public string name { get; set; }
+        public string version { get; set; }
+        public string apiVersion { get; set; }
+        public bool premium { get; set; }
+        public string premiumHint { get; set; }
+        public string status { get; set; }
+
+
+    }
+
+    public class Matches
+    {
+        public string matches { get; set; }
+        public string message { get; set; }
+        public string shortMessage { get; set; }
+        public string replacements { get; set; }
+        public int offset { get; set; }
+        public int length { get; set; }
+        public string sentence { get; set; }
+
+    }
+
 }
