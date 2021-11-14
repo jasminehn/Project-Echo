@@ -12,7 +12,6 @@ namespace ProjectEcho
 {
     public partial class SettingsForm : Form
     {
-        bool on = true;
 
         //button colors
         Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
@@ -44,16 +43,13 @@ namespace ProjectEcho
 
         private void switchButton_Click(object sender, EventArgs e)
         {
-            on = switchButton.Checked; //sets on to current toggle bool
-            if (on)
+            if (switchButton.Checked)
             {                
                 BackColor = darkBG;
                 panel1.BackColor = darkBG;
                 ForeColor = Color.White; //changes all text color
                 textsizeSelect.BackColor = Color.Black;
                 textsizeSelect.ForeColor = Color.White;
-                
-                on = true;
             }
             else //DARK MODE ON
             {
@@ -62,8 +58,6 @@ namespace ProjectEcho
                 ForeColor = Color.Black; //changes all text color
                 textsizeSelect.BackColor = Color.White;
                 textsizeSelect.ForeColor = Color.Black;
-
-                on = false;
             }
         }
        public IEnumerable<Control> getAll(Control control, Type type)
@@ -74,16 +68,14 @@ namespace ProjectEcho
 
         private void boldnessToggle_CheckedChanged(object sender, EventArgs e)
         {
-            on = boldnessToggle.Checked; //sets on to current toggle bool
             var controls = getAll(this, typeof(Label));
-            if (on)
+            if (boldnessToggle.Checked)
             {
                 Font = new System.Drawing.Font(Font, FontStyle.Bold);
                 foreach (Control c in controls)
                 {
                     c.Font = new System.Drawing.Font(Font, FontStyle.Bold);
                 }
-                on = false;
             }
             else
             {
@@ -92,10 +84,9 @@ namespace ProjectEcho
                 {
                     c.Font = new System.Drawing.Font(Font, FontStyle.Regular);
                 }
-                on = true;
             }
         }
-
+        /*
         private void grayscaleToggle_CheckedChanged(object sender, EventArgs e)
         {
             on = grayscaleToggle.Checked; //sets on to current toggle bool
@@ -154,7 +145,7 @@ namespace ProjectEcho
                 //filter
                 on = false;
             }
-        }
+        }*/
 
         private void textsizeSelect_ValueChanged(object sender, EventArgs e)
         {
@@ -165,19 +156,22 @@ namespace ProjectEcho
             
             foreach (Control c in controls)
             {
-                float ogSize = Font.Size;
-                float adjFontSize = (float)textsizeSelect.Value + Font.Size;
-                c.Font = new Font("Century Gothic", adjFontSize);
+                //float ogSize = Font.Size;
+                //float adjFontSize = (float)textsizeSelect.Value + Font.Size;
+                //c.Font = new Font("Century Gothic", adjFontSize);
 
-                /*if (boldnessToggle.Checked)
+                if (boldnessToggle.Checked)
                 {
-                    
+                    float ogSize = Font.Size;
+                    float adjFontSize = (float)textsizeSelect.Value +ogSize;
                     c.Font = new Font("Century Gothic", adjFontSize, FontStyle.Bold);
                 }
                 else
                 {
+                    float ogSize = Font.Size;
+                    float adjFontSize = (float)textsizeSelect.Value + ogSize;
                     c.Font = new Font("Century Gothic", adjFontSize, FontStyle.Regular);
-                }*/
+                }
             }
         }
     }
