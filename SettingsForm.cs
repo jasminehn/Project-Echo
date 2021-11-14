@@ -39,12 +39,12 @@ namespace ProjectEcho
             blueyellowSwitch.Text = "OFF";
             redgreenSwitch.Text = "OFF";
             boldSwitch.Text = "OFF";*/
-            textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
+            //textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
         }
 
         private void switchButton_Click(object sender, EventArgs e)
         {
-            on = switchButton.Checked;
+            on = switchButton.Checked; //sets on to current toggle bool
             if (on)
             {                
                 BackColor = darkBG;
@@ -74,7 +74,7 @@ namespace ProjectEcho
 
         private void boldnessToggle_CheckedChanged(object sender, EventArgs e)
         {
-            on = boldnessToggle.Checked;
+            on = boldnessToggle.Checked; //sets on to current toggle bool
             var controls = getAll(this, typeof(Label));
             if (on)
             {
@@ -98,7 +98,7 @@ namespace ProjectEcho
 
         private void grayscaleToggle_CheckedChanged(object sender, EventArgs e)
         {
-            on = grayscaleToggle.Checked;
+            on = grayscaleToggle.Checked; //sets on to current toggle bool
             if (on)
             {
                 //normal
@@ -113,7 +113,7 @@ namespace ProjectEcho
 
         private void invertedToggle_CheckedChanged(object sender, EventArgs e)
         {
-            on = invertedToggle.Checked;
+            on = invertedToggle.Checked; //sets on to current toggle bool
             if (on)
             {
                 //normal
@@ -128,7 +128,7 @@ namespace ProjectEcho
 
         private void redgreenToggle_CheckedChanged(object sender, EventArgs e)
         {
-            on = blueyellowToggle.Checked;
+            on = blueyellowToggle.Checked; //sets on to current toggle bool
             if (on)
             {
                 //normal
@@ -143,7 +143,7 @@ namespace ProjectEcho
 
         private void blueyellowToggle_CheckedChanged(object sender, EventArgs e)
         {
-            on = blueyellowToggle.Checked;
+            on = blueyellowToggle.Checked; //sets on to current toggle bool
             if (on)
             {
                 //normal
@@ -158,19 +158,26 @@ namespace ProjectEcho
 
         private void textsizeSelect_ValueChanged(object sender, EventArgs e)
         {
-            Font = new Font("Century Gothic", (float)textsizeSelect.Value);
+            //TODO: increase text size individually, not set all to one
 
             var controls = getAll(this, typeof(Label));
+            //Font = new Font("Century Gothic", 12);
+            
             foreach (Control c in controls)
             {
-                if(boldnessToggle.Checked)
+                float ogSize = Font.Size;
+                float adjFontSize = (float)textsizeSelect.Value + Font.Size;
+                c.Font = new Font("Century Gothic", adjFontSize);
+
+                /*if (boldnessToggle.Checked)
                 {
-                    c.Font = new Font("Century Gothic", (float)textsizeSelect.Value, FontStyle.Bold);
+                    
+                    c.Font = new Font("Century Gothic", adjFontSize, FontStyle.Bold);
                 }
                 else
                 {
-                    c.Font = new Font("Century Gothic", (float)textsizeSelect.Value, FontStyle.Regular);
-                }               
+                    c.Font = new Font("Century Gothic", adjFontSize, FontStyle.Regular);
+                }*/
             }
         }
     }
