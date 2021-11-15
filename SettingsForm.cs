@@ -48,16 +48,16 @@ namespace ProjectEcho
                 BackColor = darkBG;
                 panel1.BackColor = darkBG;
                 ForeColor = Color.White; //changes all text color
-                textsizeSelect.BackColor = Color.Black;
-                textsizeSelect.ForeColor = Color.White;
+                textsizeAdjust.BackColor = Color.Black;
+                textsizeAdjust.ForeColor = Color.White;
             }
             else //DARK MODE ON
             {
                 BackColor = lightBG;
                 panel1.BackColor = lightBG;
                 ForeColor = Color.Black; //changes all text color
-                textsizeSelect.BackColor = Color.White;
-                textsizeSelect.ForeColor = Color.Black;
+                textsizeAdjust.BackColor = Color.White;
+                textsizeAdjust.ForeColor = Color.Black;
             }
         }
        public IEnumerable<Control> getAll(Control control, Type type)
@@ -145,34 +145,24 @@ namespace ProjectEcho
                 //filter
                 on = false;
             }
-        }*/
+        } */
 
-        private void textsizeSelect_ValueChanged(object sender, EventArgs e)
+        private void textsizeAdjust_Scroll(object sender, EventArgs e)
         {
-            //TODO: increase text size individually, not set all to one
-
             var controls = getAll(this, typeof(Label));
             //Font = new Font("Century Gothic", 12);
-            
+
             foreach (Control c in controls)
             {
-                //float ogSize = Font.Size;
-                //float adjFontSize = (float)textsizeSelect.Value + Font.Size;
-                //c.Font = new Font("Century Gothic", adjFontSize);
-
-                if (boldnessToggle.Checked)
-                {
-                    float ogSize = Font.Size;
-                    float adjFontSize = (float)textsizeSelect.Value +ogSize;
-                    c.Font = new Font("Century Gothic", adjFontSize, FontStyle.Bold);
-                }
-                else
-                {
-                    float ogSize = Font.Size;
-                    float adjFontSize = (float)textsizeSelect.Value + ogSize;
-                    c.Font = new Font("Century Gothic", adjFontSize, FontStyle.Regular);
-                }
+                float ogSize = c.Font.Size;
+                float adjFontSize = (float)textsizeAdjust.SmallChange + ogSize;
+                c.Font = new Font("Century Gothic", adjFontSize);
             }
+        }
+
+        private void applyButton_Click(object sender, EventArgs e)
+        {
+            //TODO: Apply and save to form for reloading
         }
     }
 }
