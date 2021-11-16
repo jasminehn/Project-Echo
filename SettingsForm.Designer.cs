@@ -30,12 +30,12 @@ namespace ProjectEcho
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textsizeAdjust = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
             this.darkmodeLabel = new System.Windows.Forms.Label();
             this.boldnessLabel = new System.Windows.Forms.Label();
             this.textsizeLabel = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
-            this.textsizeAdjust = new System.Windows.Forms.TrackBar();
             this.switchButton = new ProjectEcho.SwitchButton();
             this.boldnessToggle = new ProjectEcho.SwitchButton();
             this.panel1.SuspendLayout();
@@ -57,6 +57,16 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 212);
             this.panel1.TabIndex = 2;
+            // 
+            // textsizeAdjust
+            // 
+            this.textsizeAdjust.Location = new System.Drawing.Point(147, 38);
+            this.textsizeAdjust.Maximum = 6;
+            this.textsizeAdjust.Name = "textsizeAdjust";
+            this.textsizeAdjust.Size = new System.Drawing.Size(142, 56);
+            this.textsizeAdjust.TabIndex = 4;
+            this.textsizeAdjust.TabStop = false;
+            this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
             // 
             // label3
             // 
@@ -111,15 +121,6 @@ namespace ProjectEcho
             this.applyButton.Text = "Apply";
             this.applyButton.UseVisualStyleBackColor = true;
             this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
-            // 
-            // textsizeAdjust
-            // 
-            this.textsizeAdjust.Location = new System.Drawing.Point(147, 38);
-            this.textsizeAdjust.Name = "textsizeAdjust";
-            this.textsizeAdjust.Size = new System.Drawing.Size(142, 56);
-            this.textsizeAdjust.TabIndex = 4;
-            this.textsizeAdjust.TabStop = false;
-            this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
             // 
             // switchButton
             // 

@@ -48,16 +48,22 @@ namespace ProjectEcho
                 BackColor = darkBG;
                 panel1.BackColor = darkBG;
                 ForeColor = Color.White; //changes all text color
+                //Changes color for slider
                 textsizeAdjust.BackColor = Color.Black;
                 textsizeAdjust.ForeColor = Color.White;
+                //Changes color for button
+                applyButton.BackColor = Color.Black;
             }
             else //DARK MODE ON
             {
                 BackColor = lightBG;
                 panel1.BackColor = lightBG;
                 ForeColor = Color.Black; //changes all text color
+                //Changes color for slider
                 textsizeAdjust.BackColor = Color.White;
                 textsizeAdjust.ForeColor = Color.Black;
+                //Changes color for button
+                applyButton.BackColor = Color.White;
             }
         }
        public IEnumerable<Control> getAll(Control control, Type type)
@@ -74,7 +80,9 @@ namespace ProjectEcho
                 Font = new System.Drawing.Font(Font, FontStyle.Bold);
                 foreach (Control c in controls)
                 {
-                    c.Font = new System.Drawing.Font(Font, FontStyle.Bold);
+                    FontFamily fam = c.Font.FontFamily;
+                    float s = c.Font.Size;
+                    c.Font = new System.Drawing.Font(fam, s, FontStyle.Bold);
                 }
             }
             else
@@ -82,7 +90,9 @@ namespace ProjectEcho
                 Font = new System.Drawing.Font(Font, FontStyle.Regular);
                 foreach (Control c in controls)
                 {
-                    c.Font = new System.Drawing.Font(Font, FontStyle.Regular);
+                    FontFamily fam = c.Font.FontFamily;
+                    float s = c.Font.Size;
+                    c.Font = new System.Drawing.Font(fam, s, FontStyle.Regular);
                 }
             }
         }
@@ -146,18 +156,55 @@ namespace ProjectEcho
                 on = false;
             }
         } */
+        float prev = 0;
 
         private void textsizeAdjust_Scroll(object sender, EventArgs e)
         {
             var controls = getAll(this, typeof(Label));
-            //Font = new Font("Century Gothic", 12);
+            
+            float curr = textsizeAdjust.Value; // gets current font size
 
-            foreach (Control c in controls)
+            //Checks if the slider val is getting larger or smaller
+            if (prev < curr)
             {
-                float ogSize = c.Font.Size;
-                float adjFontSize = (float)textsizeAdjust.SmallChange + ogSize;
-                c.Font = new Font("Century Gothic", adjFontSize);
+                foreach (Control c in controls)
+                {
+                    FontFamily fon = Font.FontFamily; //Sets font family 
+                    FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                    float adjSize = c.Font.Size + curr;
+                    c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+                }
+                prev = curr; //Sets prev to current size for next interation
             }
+            else
+            {
+                //If the slider is set back down to 0, it subs 0. This subs 1 as it should
+                if(curr == 0)
+                {
+                    foreach (Control c in controls)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+
+                        c.Font = new Font(fon, adjSize, sty);
+                    }
+                }
+                else
+                {
+                    foreach (Control c in controls)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - curr;
+
+                        c.Font = new Font(fon, adjSize, sty);
+                    }
+                }
+                
+                prev = curr;
+            }
+            
         }
 
         private void applyButton_Click(object sender, EventArgs e)
