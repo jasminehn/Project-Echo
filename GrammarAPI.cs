@@ -27,10 +27,13 @@ namespace ProjectEcho
 
         public static async Task CallAPI(String filePath)
         {
+
+            GrammarAPI api = new GrammarAPI();
             var first = "";
             var second = " ";
             var third = " ";
             string mytext = OpenWordprocessingDocumentReadonly(filePath);
+            api.glossaryCheck(mytext);
             Console.WriteLine("****" + mytext);
             var words = mytext.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries);
             int len = mytext.Length;
@@ -158,11 +161,13 @@ namespace ProjectEcho
                 WordprocessingDocument.Open(filepath, false))
             {
 
-                Body body = wordDocument.MainDocumentPart.Document.Body;
+                Body docInfo = wordDocument.MainDocumentPart.Document.Body;
 
-                string s = body.InnerText.ToString();
+                string docString = docInfo.InnerText.ToString();
 
-                return body.InnerText.ToString();
+                //return docInfo.InnerText.ToString();
+                return docString;
+
             }
 
             //return "1"; //unreachable code
@@ -199,6 +204,53 @@ namespace ProjectEcho
             return report;
         }
         */
+
+        public bool glossaryCheck(string documentString)
+        {
+
+            string[] glossary = {"academic language","active nature of young children's learning:","aligned",
+                   "artifacts:","assessment","personal assets","cultural assets","community assets",
+                   "central focus","commentary","engaging children in learning","evaluation criteria",
+                    "evidence","interdisciplinary","learning environment","learning experience",
+                    "learning objectives", "multimodal nature of young children's learning",
+                    "patterns of learning", "planned supports","prior academic learning and prerequisite skills",
+                    "rapport","respect","rubrics","variety of learners","whole child"};
+            List<string> missingWrods = new List<string>();
+            string word = "";
+            bool wordExists = true;
+
+
+            for (int i = 0; i < glossary.Length; i++)
+            {
+                if (documentString.Contains(glossary[i]))
+                {
+
+                    Console.WriteLine("Found word");
+                }
+                else
+                {
+                    word = glossary[i];
+                    missingWrods.Add(word);
+                    wordExists = false;
+
+
+                }
+
+            }
+            if (!wordExists)
+            {
+                foreach (var i in missingWrods)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+            
+            return wordExists;
+
+        }
+
+
     }
     public class Warnings
     {
