@@ -39,6 +39,11 @@ namespace ProjectEcho
             redgreenSwitch.Text = "OFF";
             boldSwitch.Text = "OFF";*/
             //textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
+
+            //Applies user settings upon loading
+            boldnessToggle.Checked = Properties.Settings.Default.boldness;
+            switchButton.Checked = Properties.Settings.Default.darkmode;
+            //TODO: save settings for text size
         }
 
         private void switchButton_Click(object sender, EventArgs e)
@@ -209,7 +214,10 @@ namespace ProjectEcho
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            //TODO: Apply and save to form for reloading
+            //Apply and save to form for reloading
+            Properties.Settings.Default.boldness = boldnessToggle.Checked;
+            Properties.Settings.Default.darkmode = switchButton.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }
