@@ -50,9 +50,9 @@ namespace ProjectEcho.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public float textsize {
+        public int textsize {
             get {
-                return ((float)(this["textsize"]));
+                return ((int)(this["textsize"]));
             }
             set {
                 this["textsize"] = value;

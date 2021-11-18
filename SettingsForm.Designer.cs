@@ -32,12 +32,12 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.textsizeAdjust = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.switchButton = new ProjectEcho.SwitchButton();
+            this.boldnessToggle = new ProjectEcho.SwitchButton();
             this.darkmodeLabel = new System.Windows.Forms.Label();
             this.boldnessLabel = new System.Windows.Forms.Label();
             this.textsizeLabel = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
-            this.switchButton = new ProjectEcho.SwitchButton();
-            this.boldnessToggle = new ProjectEcho.SwitchButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textsizeAdjust)).BeginInit();
             this.SuspendLayout();
@@ -63,10 +63,11 @@ namespace ProjectEcho
             this.textsizeAdjust.Location = new System.Drawing.Point(147, 38);
             this.textsizeAdjust.Maximum = 6;
             this.textsizeAdjust.Name = "textsizeAdjust";
-            this.textsizeAdjust.Size = new System.Drawing.Size(142, 56);
+            this.textsizeAdjust.Size = new System.Drawing.Size(142, 45);
             this.textsizeAdjust.TabIndex = 4;
             this.textsizeAdjust.TabStop = false;
             this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
+            this.textsizeAdjust.ValueChanged += new System.EventHandler(this.textsizeAdjust_ValueChanged);
             // 
             // label3
             // 
@@ -75,52 +76,9 @@ namespace ProjectEcho
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 28);
+            this.label3.Size = new System.Drawing.Size(98, 22);
             this.label3.TabIndex = 31;
             this.label3.Text = "SETTINGS";
-            // 
-            // darkmodeLabel
-            // 
-            this.darkmodeLabel.AutoSize = true;
-            this.darkmodeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.darkmodeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkmodeLabel.Location = new System.Drawing.Point(24, 160);
-            this.darkmodeLabel.Name = "darkmodeLabel";
-            this.darkmodeLabel.Size = new System.Drawing.Size(118, 23);
-            this.darkmodeLabel.TabIndex = 11;
-            this.darkmodeLabel.Text = "Dark Mode";
-            // 
-            // boldnessLabel
-            // 
-            this.boldnessLabel.AutoSize = true;
-            this.boldnessLabel.BackColor = System.Drawing.Color.Transparent;
-            this.boldnessLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boldnessLabel.Location = new System.Drawing.Point(24, 100);
-            this.boldnessLabel.Name = "boldnessLabel";
-            this.boldnessLabel.Size = new System.Drawing.Size(94, 23);
-            this.boldnessLabel.TabIndex = 9;
-            this.boldnessLabel.Text = "Boldness";
-            // 
-            // textsizeLabel
-            // 
-            this.textsizeLabel.AutoSize = true;
-            this.textsizeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textsizeLabel.Location = new System.Drawing.Point(24, 42);
-            this.textsizeLabel.Name = "textsizeLabel";
-            this.textsizeLabel.Size = new System.Drawing.Size(89, 23);
-            this.textsizeLabel.TabIndex = 3;
-            this.textsizeLabel.Text = "Text Size";
-            // 
-            // applyButton
-            // 
-            this.applyButton.Location = new System.Drawing.Point(126, 231);
-            this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(95, 34);
-            this.applyButton.TabIndex = 3;
-            this.applyButton.Text = "Apply";
-            this.applyButton.UseVisualStyleBackColor = true;
-            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // switchButton
             // 
@@ -141,6 +99,49 @@ namespace ProjectEcho
             this.boldnessToggle.TabIndex = 23;
             this.boldnessToggle.UseVisualStyleBackColor = true;
             this.boldnessToggle.CheckedChanged += new System.EventHandler(this.boldnessToggle_CheckedChanged);
+            // 
+            // darkmodeLabel
+            // 
+            this.darkmodeLabel.AutoSize = true;
+            this.darkmodeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.darkmodeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkmodeLabel.Location = new System.Drawing.Point(24, 160);
+            this.darkmodeLabel.Name = "darkmodeLabel";
+            this.darkmodeLabel.Size = new System.Drawing.Size(96, 21);
+            this.darkmodeLabel.TabIndex = 11;
+            this.darkmodeLabel.Text = "Dark Mode";
+            // 
+            // boldnessLabel
+            // 
+            this.boldnessLabel.AutoSize = true;
+            this.boldnessLabel.BackColor = System.Drawing.Color.Transparent;
+            this.boldnessLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boldnessLabel.Location = new System.Drawing.Point(24, 100);
+            this.boldnessLabel.Name = "boldnessLabel";
+            this.boldnessLabel.Size = new System.Drawing.Size(75, 21);
+            this.boldnessLabel.TabIndex = 9;
+            this.boldnessLabel.Text = "Boldness";
+            // 
+            // textsizeLabel
+            // 
+            this.textsizeLabel.AutoSize = true;
+            this.textsizeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textsizeLabel.Location = new System.Drawing.Point(24, 42);
+            this.textsizeLabel.Name = "textsizeLabel";
+            this.textsizeLabel.Size = new System.Drawing.Size(75, 21);
+            this.textsizeLabel.TabIndex = 3;
+            this.textsizeLabel.Text = "Text Size";
+            // 
+            // applyButton
+            // 
+            this.applyButton.Location = new System.Drawing.Point(126, 231);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(95, 34);
+            this.applyButton.TabIndex = 3;
+            this.applyButton.Text = "Apply";
+            this.applyButton.UseVisualStyleBackColor = true;
+            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // SettingsForm
             // 
