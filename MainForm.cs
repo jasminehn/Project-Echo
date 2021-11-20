@@ -29,21 +29,12 @@ namespace ProjectEcho
         public MainForm()
         {
             InitializeComponent();
-
-
-            //taskControls[0] = mainMenu;
             taskControls[0] = t1;
             taskControls[1] = taskOne;
             taskControls[2] = taskTwo;
             taskControls[3] = t1;
-
-            //contextPanels[0] = (mainMenuPanel);
-            //contextPanels[1] = (taskOnePanel);
-            //contextPanels[2] = (taskTwoPanel);
-            //contextPanels[3] = (taskThreePanel);
-
             currentControl = taskControls[0];
-            //currentPanel = contextPanels[0];
+            taskOne.Visible = false;
             setControlActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
@@ -109,6 +100,7 @@ namespace ProjectEcho
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
+            titleLabel.Text = ("tf man");
             setControlActive(2);
         }
 
@@ -136,39 +128,37 @@ namespace ProjectEcho
 
         public void setControlActive(int i)
         {
-            
+             
              currentControl.Visible = false;
              currentControl = taskControls[i];
              currentControl.Visible = true;
      
             if(i.Equals(0))
             {
-                mainMenuPanel.Visible = true;
                 titleLabel.Text = "MAIN MENU";
+                mainMenuPanel.Visible = true;  
                 returnToMenuButton.Visible = false;
-                returnToMenuButton.Enabled = false;
                 backButton.Visible = false;
-                backButton.Enabled = false;
+                
             } else
             {
                 mainMenuPanel.Visible = false;
                 returnToMenuButton.Visible = true;
-                returnToMenuButton.Enabled = true;
                 backButton.Visible = true;
-                backButton.Enabled = true;
+               
                 if (i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
+                    forwardButton.Visible = true;
                 } else if(i.Equals(2))
                 {
-                    forwardButton.Visible = true;
-                    forwardButton.Enabled = true;
                     titleLabel.Text = "TASK TWO";
-                } else if(i.Equals(3))
+                    forwardButton.Visible = true;
+                }
+                else if(i.Equals(3))
                 {
                     titleLabel.Text = "TASK THREE";
                     forwardButton.Visible = false;
-                    forwardButton.Enabled = false;
                 }
             }
             
