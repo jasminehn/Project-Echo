@@ -150,7 +150,5 @@ namespace ProjectEcho
             //string report = GrammarAPI.yeet(path); //this method kinda works, will fix so that it returns a list instead of a string
             label23.Text = report;
         }
-
-        
     }
 }

@@ -176,6 +176,9 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -208,6 +211,7 @@ namespace ProjectEcho
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel27.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -223,9 +227,9 @@ namespace ProjectEcho
             // 
             this.tabPage5.Controls.Add(this.label71);
             this.tabPage5.Controls.Add(this.panel6);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1170, 514);
+            this.tabPage5.Size = new System.Drawing.Size(1170, 516);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -237,7 +241,7 @@ namespace ProjectEcho
             this.label71.ForeColor = System.Drawing.Color.Black;
             this.label71.Location = new System.Drawing.Point(3, 4);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(235, 22);
+            this.label71.Size = new System.Drawing.Size(217, 23);
             this.label71.TabIndex = 27;
             this.label71.Text = "Planning Commentary";
             // 
@@ -389,7 +393,7 @@ namespace ProjectEcho
             this.label61.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label61.Location = new System.Drawing.Point(17, 26);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(206, 20);
+            this.label61.Size = new System.Drawing.Size(182, 18);
             this.label61.TabIndex = 23;
             this.label61.Text = "CLICK HERE TO UPLOAD:";
             // 
@@ -537,7 +541,7 @@ namespace ProjectEcho
             this.label70.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(10, 13);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(468, 20);
+            this.label70.Size = new System.Drawing.Size(418, 18);
             this.label70.TabIndex = 15;
             this.label70.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
             // 
@@ -545,9 +549,9 @@ namespace ProjectEcho
             // 
             this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1170, 514);
+            this.tabPage4.Size = new System.Drawing.Size(1170, 516);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -700,7 +704,7 @@ namespace ProjectEcho
             this.label50.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label50.Location = new System.Drawing.Point(17, 26);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(206, 20);
+            this.label50.Size = new System.Drawing.Size(182, 18);
             this.label50.TabIndex = 23;
             this.label50.Text = "CLICK HERE TO UPLOAD:";
             // 
@@ -848,7 +852,7 @@ namespace ProjectEcho
             this.label59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(10, 13);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(468, 20);
+            this.label59.Size = new System.Drawing.Size(418, 18);
             this.label59.TabIndex = 15;
             this.label59.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
             // 
@@ -859,7 +863,7 @@ namespace ProjectEcho
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 22);
+            this.label4.Size = new System.Drawing.Size(123, 23);
             this.label4.TabIndex = 25;
             this.label4.Text = "Assessments";
             // 
@@ -867,9 +871,9 @@ namespace ProjectEcho
             // 
             this.tabPage3.Controls.Add(this.panel4);
             this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1170, 514);
+            this.tabPage3.Size = new System.Drawing.Size(1170, 516);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1022,7 +1026,7 @@ namespace ProjectEcho
             this.label38.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label38.Location = new System.Drawing.Point(17, 26);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(206, 20);
+            this.label38.Size = new System.Drawing.Size(182, 18);
             this.label38.TabIndex = 23;
             this.label38.Text = "CLICK HERE TO UPLOAD:";
             // 
@@ -1170,7 +1174,7 @@ namespace ProjectEcho
             this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(10, 13);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(468, 20);
+            this.label47.Size = new System.Drawing.Size(418, 18);
             this.label47.TabIndex = 15;
             this.label47.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
             // 
@@ -1181,7 +1185,7 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(4, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 22);
+            this.label2.Size = new System.Drawing.Size(211, 23);
             this.label2.TabIndex = 24;
             this.label2.Text = "Instructional Materials";
             // 
@@ -1209,7 +1213,7 @@ namespace ProjectEcho
             this.label8.Location = new System.Drawing.Point(2731, 24);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 22);
+            this.label8.Size = new System.Drawing.Size(76, 23);
             this.label8.TabIndex = 19;
             this.label8.Text = "REVIEW";
             // 
@@ -1246,10 +1250,10 @@ namespace ProjectEcho
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1170, 514);
+            this.tabPage1.Size = new System.Drawing.Size(1170, 516);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1259,6 +1263,7 @@ namespace ProjectEcho
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Controls.Add(this.panel27);
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel9);
@@ -1276,7 +1281,7 @@ namespace ProjectEcho
             this.panel10.Controls.Add(this.grammarErrorsBox);
             this.panel10.Location = new System.Drawing.Point(262, 123);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(390, 230);
+            this.panel10.Size = new System.Drawing.Size(278, 327);
             this.panel10.TabIndex = 39;
             // 
             // label23
@@ -1295,7 +1300,7 @@ namespace ProjectEcho
             this.grammarErrorsBox.ItemHeight = 20;
             this.grammarErrorsBox.Location = new System.Drawing.Point(7, 30);
             this.grammarErrorsBox.Name = "grammarErrorsBox";
-            this.grammarErrorsBox.Size = new System.Drawing.Size(373, 184);
+            this.grammarErrorsBox.Size = new System.Drawing.Size(266, 284);
             this.grammarErrorsBox.TabIndex = 37;
             // 
             // panel8
@@ -1306,7 +1311,7 @@ namespace ProjectEcho
             this.panel8.Controls.Add(this.label15);
             this.panel8.Location = new System.Drawing.Point(13, 123);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(243, 230);
+            this.panel8.Size = new System.Drawing.Size(243, 327);
             this.panel8.TabIndex = 38;
             // 
             // checkedListBox6
@@ -1320,7 +1325,7 @@ namespace ProjectEcho
             "No Spelling Issues",
             "No Grammar Issues",
             "No Style Issues"});
-            this.checkedListBox6.Location = new System.Drawing.Point(21, 150);
+            this.checkedListBox6.Location = new System.Drawing.Point(21, 146);
             this.checkedListBox6.MinimumSize = new System.Drawing.Size(180, 72);
             this.checkedListBox6.Name = "checkedListBox6";
             this.checkedListBox6.Size = new System.Drawing.Size(180, 72);
@@ -1359,7 +1364,7 @@ namespace ProjectEcho
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(4, 121);
+            this.label15.Location = new System.Drawing.Point(4, 123);
             this.label15.MinimumSize = new System.Drawing.Size(96, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(96, 20);
@@ -1402,7 +1407,7 @@ namespace ProjectEcho
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label17.Location = new System.Drawing.Point(17, 26);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(206, 20);
+            this.label17.Size = new System.Drawing.Size(182, 18);
             this.label17.TabIndex = 23;
             this.label17.Text = "CLICK HERE TO UPLOAD:";
             // 
@@ -1550,7 +1555,7 @@ namespace ProjectEcho
             this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(10, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(468, 20);
+            this.label12.Size = new System.Drawing.Size(418, 18);
             this.label12.TabIndex = 15;
             this.label12.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
             // 
@@ -1559,7 +1564,7 @@ namespace ProjectEcho
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 511);
+            this.panel2.Location = new System.Drawing.Point(3, 513);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1164, 0);
             this.panel2.TabIndex = 19;
@@ -1571,7 +1576,7 @@ namespace ProjectEcho
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(340, 22);
+            this.label5.Size = new System.Drawing.Size(304, 23);
             this.label5.TabIndex = 16;
             this.label5.Text = "Context for Learning Information";
             // 
@@ -1579,10 +1584,10 @@ namespace ProjectEcho
             // 
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1170, 514);
+            this.tabPage2.Size = new System.Drawing.Size(1170, 516);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1735,7 +1740,7 @@ namespace ProjectEcho
             this.label26.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label26.Location = new System.Drawing.Point(17, 26);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(206, 20);
+            this.label26.Size = new System.Drawing.Size(182, 18);
             this.label26.TabIndex = 23;
             this.label26.Text = "CLICK HERE TO UPLOAD:";
             // 
@@ -1883,7 +1888,7 @@ namespace ProjectEcho
             this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(10, 13);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(468, 20);
+            this.label35.Size = new System.Drawing.Size(418, 18);
             this.label35.TabIndex = 15;
             this.label35.Text = "STEP ONE: GRAMMAR AND DETAIL REQUIREMENTS CHECK";
             // 
@@ -1894,9 +1899,37 @@ namespace ProjectEcho
             this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(3, 3);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(283, 22);
+            this.label24.Size = new System.Drawing.Size(257, 23);
             this.label24.TabIndex = 23;
             this.label24.Text = "Plans for Learning Segment";
+            // 
+            // panel27
+            // 
+            this.panel27.Controls.Add(this.label28);
+            this.panel27.Controls.Add(this.listBox1);
+            this.panel27.Location = new System.Drawing.Point(546, 123);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(278, 327);
+            this.panel27.TabIndex = 40;
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(3, 7);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(231, 20);
+            this.label28.TabIndex = 35;
+            this.label28.Text = "CONTENT ANALYSIS:";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(7, 30);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(266, 284);
+            this.listBox1.TabIndex = 37;
             // 
             // TaskOneUserControl
             // 
@@ -1963,6 +1996,7 @@ namespace ProjectEcho
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel27.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2115,5 +2149,8 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

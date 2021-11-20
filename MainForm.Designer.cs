@@ -390,7 +390,7 @@ namespace ProjectEcho
             this.Controls.Add(this.contextPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "W";
+            this.Text = "Education Capstone Checker";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextPanel.ResumeLayout(false);
             this.contextPanel.PerformLayout();
