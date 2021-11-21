@@ -7,7 +7,7 @@ namespace ProjectEcho
     internal class FormatChecker
     {
 		public static Application ap = new Application();
-		public static int progress = 0;
+		public int progress = 0;
 		public Boolean[] runFormatCheck(String path, int correctLength)
 		{
 			//path = @"C:\Users\ceseg\Desktop\AlterEgo.docx";

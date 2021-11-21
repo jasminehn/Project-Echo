@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectEcho
@@ -7,6 +8,8 @@ namespace ProjectEcho
     {
         DocumentHandler dh = new DocumentHandler();
         FormatChecker fc = new FormatChecker();
+        public static bool complete = false;
+
         //string currentTab; //not needed right now but might be used in the future
 
         public TaskOneUserControl()
@@ -55,7 +58,7 @@ namespace ProjectEcho
         /// <param name="taskPart">The task part (i.e. "A", "B", etc.)</param>
         /// <param name="formatCL">The formt checkedListBox being used by the current task</param>
         /// <param name="uploadInfoLabel">The label containing the names of the uploaded documents</param>
-        public void checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel) //, Label reportLabel)
+        public async void checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel) //, Label reportLabel)
         {
             formatCL.ClearSelected(); //clears all format checker boxes            
             String path = dh.uploadDocument(taskNum, taskPart);
@@ -66,7 +69,6 @@ namespace ProjectEcho
                 uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
                 //FormatChecker fc = new FormatChecker(); //moved to line 17 to avoid an RPC server error (happens when it attempts to open Word while it's already running)
                 Boolean[] itemsChecked = fc.runFormatCheck(path, 4);
-                //label9.Text = "correct alignment  " + b[0] + "   " + "correct font  " + b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
 
                 for(int i=0; i<itemsChecked.Length; i++)
                 {
@@ -81,5 +83,6 @@ namespace ProjectEcho
             string report = GrammarAPI.yeet(path); //this method kinda works, will fix so that it returns a list instead of a string
             grammarBox.Text = report;
         }
+
     }
 }

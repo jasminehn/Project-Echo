@@ -207,7 +207,6 @@ namespace ProjectEcho
 
         public bool glossaryCheck(string documentString)
         {
-
             string[] glossary = {"academic language","active nature of young children's learning:","aligned",
                    "artifacts:","assessment","personal assets","cultural assets","community assets",
                    "central focus","commentary","engaging children in learning","evaluation criteria",
@@ -215,7 +214,7 @@ namespace ProjectEcho
                     "learning objectives", "multimodal nature of young children's learning",
                     "patterns of learning", "planned supports","prior academic learning and prerequisite skills",
                     "rapport","respect","rubrics","variety of learners","whole child"};
-            List<string> missingWrods = new List<string>();
+            List<string> missingWords = new List<string>();
             string word = "";
             bool wordExists = true;
 
@@ -230,7 +229,7 @@ namespace ProjectEcho
                 else
                 {
                     word = glossary[i];
-                    missingWrods.Add(word);
+                    missingWords.Add(word);
                     wordExists = false;
 
 
@@ -239,7 +238,7 @@ namespace ProjectEcho
             }
             if (!wordExists)
             {
-                foreach (var i in missingWrods)
+                foreach (var i in missingWords)
                 {
                     Console.WriteLine(i);
                 }

@@ -125,6 +125,7 @@ namespace ProjectEcho
             this.label28 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.grammarBox = new System.Windows.Forms.TextBox();
             this.foundGrammarIssuesLabel = new System.Windows.Forms.Label();
             this.grammarErrorsBox = new System.Windows.Forms.ListBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -137,13 +138,13 @@ namespace ProjectEcho
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uploadInfo = new System.Windows.Forms.LinkLabel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.formatProgressBar = new System.Windows.Forms.ProgressBar();
             this.label21 = new System.Windows.Forms.Label();
             this.uploadInfo1 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.contentProgressBar = new System.Windows.Forms.ProgressBar();
+            this.grammarProgressBar = new System.Windows.Forms.ProgressBar();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -179,7 +180,7 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.grammarBox = new System.Windows.Forms.TextBox();
+            this.warningLabel = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -1204,7 +1205,6 @@ namespace ProjectEcho
             this.taskOnePanel.Name = "taskOnePanel";
             this.taskOnePanel.Size = new System.Drawing.Size(1190, 585);
             this.taskOnePanel.TabIndex = 19;
-            
             // 
             // label8
             // 
@@ -1264,6 +1264,7 @@ namespace ProjectEcho
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Controls.Add(this.warningLabel);
             this.panel7.Controls.Add(this.panel27);
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.panel8);
@@ -1271,6 +1272,7 @@ namespace ProjectEcho
             this.panel7.Controls.Add(this.panel1);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label12);
+            this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(8, 29);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1153, 481);
@@ -1313,6 +1315,14 @@ namespace ProjectEcho
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(278, 327);
             this.panel10.TabIndex = 39;
+            // 
+            // grammarBox
+            // 
+            this.grammarBox.Location = new System.Drawing.Point(7, 60);
+            this.grammarBox.Multiline = true;
+            this.grammarBox.Name = "grammarBox";
+            this.grammarBox.Size = new System.Drawing.Size(266, 254);
+            this.grammarBox.TabIndex = 38;
             // 
             // foundGrammarIssuesLabel
             // 
@@ -1407,7 +1417,7 @@ namespace ProjectEcho
             this.panel9.BackColor = System.Drawing.Color.DarkBlue;
             this.panel9.Controls.Add(this.uploadButton1A);
             this.panel9.Controls.Add(this.label17);
-            this.panel9.Location = new System.Drawing.Point(853, 13);
+            this.panel9.Location = new System.Drawing.Point(865, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 66);
             this.panel9.TabIndex = 34;
@@ -1446,18 +1456,18 @@ namespace ProjectEcho
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Controls.Add(this.uploadInfo);
-            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.formatProgressBar);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.uploadInfo1);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.progressBar3);
-            this.panel1.Controls.Add(this.progressBar2);
+            this.panel1.Controls.Add(this.contentProgressBar);
+            this.panel1.Controls.Add(this.grammarProgressBar);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(853, 123);
+            this.panel1.Location = new System.Drawing.Point(865, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 289);
             this.panel1.TabIndex = 32;
@@ -1474,14 +1484,14 @@ namespace ProjectEcho
             this.uploadInfo.TabStop = true;
             this.uploadInfo.Text = "  ";
             // 
-            // progressBar1
+            // formatProgressBar
             // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar1.Location = new System.Drawing.Point(12, 29);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(254, 28);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 21;
+            this.formatProgressBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.formatProgressBar.Location = new System.Drawing.Point(12, 29);
+            this.formatProgressBar.Name = "formatProgressBar";
+            this.formatProgressBar.Size = new System.Drawing.Size(254, 28);
+            this.formatProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.formatProgressBar.TabIndex = 21;
             // 
             // label21
             // 
@@ -1522,23 +1532,23 @@ namespace ProjectEcho
             this.label16.TabIndex = 22;
             this.label16.Text = "FORMAT AND STYLE:";
             // 
-            // progressBar3
+            // contentProgressBar
             // 
-            this.progressBar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar3.Location = new System.Drawing.Point(12, 175);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(254, 28);
-            this.progressBar3.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar3.TabIndex = 29;
+            this.contentProgressBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.contentProgressBar.Location = new System.Drawing.Point(12, 175);
+            this.contentProgressBar.Name = "contentProgressBar";
+            this.contentProgressBar.Size = new System.Drawing.Size(254, 28);
+            this.contentProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.contentProgressBar.TabIndex = 29;
             // 
-            // progressBar2
+            // grammarProgressBar
             // 
-            this.progressBar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar2.Location = new System.Drawing.Point(12, 101);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(254, 28);
-            this.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar2.TabIndex = 25;
+            this.grammarProgressBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grammarProgressBar.Location = new System.Drawing.Point(12, 101);
+            this.grammarProgressBar.Name = "grammarProgressBar";
+            this.grammarProgressBar.Size = new System.Drawing.Size(254, 28);
+            this.grammarProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.grammarProgressBar.TabIndex = 25;
             // 
             // label18
             // 
@@ -1933,13 +1943,15 @@ namespace ProjectEcho
             this.label24.TabIndex = 23;
             this.label24.Text = "Plans for Learning Segment";
             // 
-            // grammarBox
+            // warningLabel
             // 
-            this.grammarBox.Location = new System.Drawing.Point(7, 60);
-            this.grammarBox.Multiline = true;
-            this.grammarBox.Name = "grammarBox";
-            this.grammarBox.Size = new System.Drawing.Size(266, 254);
-            this.grammarBox.TabIndex = 38;
+            this.warningLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningLabel.Location = new System.Drawing.Point(865, 69);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(284, 55);
+            this.warningLabel.TabIndex = 41;
+            this.warningLabel.Text = "Warning: Please save your Document and close out of Microsoft Word before uploadi" +
+    "ng.";
             // 
             // TaskOneUserControl
             // 
@@ -2034,15 +2046,15 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label uploadInfo1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar formatProgressBar;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar contentProgressBar;
+        private System.Windows.Forms.ProgressBar grammarProgressBar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -2164,5 +2176,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox grammarBox;
+        private System.Windows.Forms.Label warningLabel;
     }
 }
