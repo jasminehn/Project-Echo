@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectEcho
@@ -30,60 +22,9 @@ namespace ProjectEcho
             uploadInfo1E.Text = "Uploaded: " + dh.displayDocuments(1, "E");
         }
 
-        private void taskOnePanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void uploadButton_Click(object sender, EventArgs e)
         {
             checkDocument(1, "A", t1paCL, uploadInfo1);
-
-            //The code below is commented out because it's being used in another method (checkDocument)
-            /*
-            //Format Checker Boxes
-            t1paCL.SetItemChecked(0, false); //Aligned
-            t1paCL.SetItemChecked(1, false); //Font
-            t1paCL.SetItemChecked(2, false); //Font Size
-            t1paCL.SetItemChecked(3, false); //Length
-
-
-            String path = dh.uploadDocument(1, "A");
-
-            //uploadInfo.Text = "well im here?";
-            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
-            {
-                //uploadInfo.Text = uploadInfo.Text + path;
-                uploadInfo1.Text = "Uploaded: " + dh.displayDocuments(1, "A"); //updates text displaying the previously uploaded files
-                //FormatChecker fc = new FormatChecker();
-                Boolean[] b = fc.runFormatCheck(path, 4);
-                label9.Text = "correct alignment  " + b[0] + "   " + "correct font  " + b[1] + "   " + "correct size  " + b[2] + "   " + "correct length" + b[3];
-                if(b[0].Equals(true))
-                {
-                    t1paCL.SetItemChecked(0, true); //Aligned
-                }
-
-                if(b[1].Equals(true))
-                {
-                    t1paCL.SetItemChecked(1, true); //Font
-                }
-
-                if(b[2].Equals(true))
-                {
-                    t1paCL.SetItemChecked(2, true); //Font Size
-                }
-
-                if(b[3].Equals(true))
-                {
-                    t1paCL.SetItemChecked(3, true); //Length
-                }
-
-                //Grammar Check 
-            }
-            String report = GrammarAPI.ReturnReport(path);
-            //string report = GrammarAPI.yeet(path); //this method kinda works, will fix so that it returns a list instead of a string
-            label23.Text = report;
-            */
         }
 
         private void uploadButton1B_Click(object sender, EventArgs e)
@@ -116,17 +57,7 @@ namespace ProjectEcho
         /// <param name="uploadInfoLabel">The label containing the names of the uploaded documents</param>
         public void checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel) //, Label reportLabel)
         {
-            //Format Checker Boxes
-            //the code below is commented out because the code on line 128 accounts for differing numbers of checkedList items
-            /*
-            formatCL.SetItemChecked(0, false); //Aligned
-            formatCL.SetItemChecked(1, false); //Font
-            formatCL.SetItemChecked(2, false); //Font Size
-            formatCL.SetItemChecked(3, false); //Length
-            */
-
             formatCL.ClearSelected(); //clears all format checker boxes            
-
             String path = dh.uploadDocument(taskNum, taskPart);
 
             //uploadInfo.Text = "well im here?";
@@ -144,8 +75,8 @@ namespace ProjectEcho
                         formatCL.SetItemChecked(i, true);
                     }
                 }
-
             }
+
             //String report = GrammarAPI.ReturnReport(path);
             string report = GrammarAPI.yeet(path); //this method kinda works, will fix so that it returns a list instead of a string
             grammarBox.Text = report;

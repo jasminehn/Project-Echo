@@ -7,6 +7,7 @@ namespace ProjectEcho
     internal class FormatChecker
     {
 		public static Application ap = new Application();
+		public static int progress = 0;
 		public Boolean[] runFormatCheck(String path, int correctLength)
 		{
 			//path = @"C:\Users\ceseg\Desktop\AlterEgo.docx";
@@ -66,6 +67,7 @@ namespace ProjectEcho
 				return false;
             }
 			//System.Windows.Forms.MessageBox.Show("Left margin (YAY): " + document.PageSetup.LeftMargin.ToString());
+			progress += 25;
 			return true;
 		}
 
@@ -76,6 +78,7 @@ namespace ProjectEcho
 				System.Windows.Forms.MessageBox.Show(document.Content.Font.Size.ToString());
 				return false;
 			}
+			progress += 25;
 			return true;
 		}
 
@@ -98,12 +101,14 @@ namespace ProjectEcho
 					} 
 				}
 			}
+			progress += 25;
 			return isCorrectFont;
 		}
 
 		public int checkLength(Document document)
 		{
 			System.Windows.Forms.MessageBox.Show(document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString());
+			progress += 25;
 			return document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);
 		}
 	}

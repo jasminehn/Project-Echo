@@ -1204,7 +1204,7 @@ namespace ProjectEcho
             this.taskOnePanel.Name = "taskOnePanel";
             this.taskOnePanel.Size = new System.Drawing.Size(1190, 585);
             this.taskOnePanel.TabIndex = 19;
-            this.taskOnePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.taskOnePanel_Paint_1);
+            
             // 
             // label8
             // 
