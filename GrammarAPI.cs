@@ -23,7 +23,7 @@ namespace ProjectEcho
     public class GrammarAPI
     {
         public static String pog = "";
-        public static String idk = "it dont work";
+        public static String idk = "";
 
         public static async Task CallAPI(String filePath)
         {
@@ -90,14 +90,26 @@ namespace ProjectEcho
         }
 
         //takes a path and returns the output of the grammar api; used for calling the API in other classes
-        public static string yeet(string path)
+        /*public static string yeet(string path)
         {
             CallAPI(path);
 
             return idk;
+        }*/
+
+        public static async Task plswork(string path)
+        {
+            await CallAPI(path);
+
+            //Console.WriteLine("(in plswork) " + idk);
+
+            /*await Task.Run(() =>
+            {
+                CallAPI(path);
+            });*/
         }
 
-        
+
         public static async Task GrammarCheck(string text)
         {
 
@@ -142,8 +154,14 @@ namespace ProjectEcho
                 }
                 
                 Console.WriteLine(string.Join(" ", reportList));
+
+
+                idk += string.Join(" ", reportList);
+
+
+
                 //idk = string.Join(" ", reportList); //only gets the last report bc it's overwritten each time GrammarCheck is called :(
-                
+
                 // string s = getReport(body);
 
             }

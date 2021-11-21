@@ -25,9 +25,9 @@ namespace ProjectEcho
             uploadInfo1E.Text = "Uploaded: " + dh.displayDocuments(1, "E");
         }
 
-        private void uploadButton_Click(object sender, EventArgs e)
+        private async void uploadButton_Click(object sender, EventArgs e)
         {
-            checkDocument(1, "A", t1paCL, uploadInfo1);
+            await checkDocument(1, "A", t1paCL, uploadInfo1);
         }
 
         private void uploadButton1B_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace ProjectEcho
         /// <param name="taskPart">The task part (i.e. "A", "B", etc.)</param>
         /// <param name="formatCL">The formt checkedListBox being used by the current task</param>
         /// <param name="uploadInfoLabel">The label containing the names of the uploaded documents</param>
-        public async void checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel) //, Label reportLabel)
+        public async Task checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel) //, Label reportLabel)
         {
             formatCL.ClearSelected(); //clears all format checker boxes            
             String path = dh.uploadDocument(taskNum, taskPart);
@@ -79,8 +79,14 @@ namespace ProjectEcho
                 }
             }
 
-            //String report = GrammarAPI.ReturnReport(path);
-            string report = GrammarAPI.yeet(path); //this method kinda works, will fix so that it returns a list instead of a string
+
+
+            await GrammarAPI.plswork(path);
+
+
+            string report = GrammarAPI.idk;
+
+            //Console.WriteLine(report);
             grammarBox.Text = report;
         }
 
