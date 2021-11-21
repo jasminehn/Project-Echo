@@ -55,7 +55,12 @@ namespace ProjectEcho
                 first = mytext.Substring(0, 10000);
                 second = mytext.Substring(10000, subLen);
                 Console.WriteLine("first " + first + " second" + second);
-            } 
+            }
+            else
+            {
+                first = mytext;
+                Console.WriteLine("first " + first);
+            }
 
             try
             {
