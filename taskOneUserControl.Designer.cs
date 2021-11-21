@@ -121,6 +121,7 @@ namespace ProjectEcho
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.warningLabel = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -180,7 +181,6 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.warningLabel = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -1278,6 +1278,16 @@ namespace ProjectEcho
             this.panel7.Size = new System.Drawing.Size(1153, 481);
             this.panel7.TabIndex = 21;
             // 
+            // warningLabel
+            // 
+            this.warningLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningLabel.Location = new System.Drawing.Point(865, 69);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(284, 55);
+            this.warningLabel.TabIndex = 41;
+            this.warningLabel.Text = "Warning: Please save your Document and close out of Microsoft Word before uploadi" +
+    "ng.";
+            // 
             // panel27
             // 
             this.panel27.Controls.Add(this.label28);
@@ -1321,6 +1331,7 @@ namespace ProjectEcho
             this.grammarBox.Location = new System.Drawing.Point(7, 60);
             this.grammarBox.Multiline = true;
             this.grammarBox.Name = "grammarBox";
+            this.grammarBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarBox.Size = new System.Drawing.Size(266, 254);
             this.grammarBox.TabIndex = 38;
             // 
@@ -1942,16 +1953,6 @@ namespace ProjectEcho
             this.label24.Size = new System.Drawing.Size(257, 23);
             this.label24.TabIndex = 23;
             this.label24.Text = "Plans for Learning Segment";
-            // 
-            // warningLabel
-            // 
-            this.warningLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningLabel.Location = new System.Drawing.Point(865, 69);
-            this.warningLabel.Name = "warningLabel";
-            this.warningLabel.Size = new System.Drawing.Size(284, 55);
-            this.warningLabel.TabIndex = 41;
-            this.warningLabel.Text = "Warning: Please save your Document and close out of Microsoft Word before uploadi" +
-    "ng.";
             // 
             // TaskOneUserControl
             // 

@@ -55,7 +55,7 @@ namespace ProjectEcho
                 first = mytext.Substring(0, 10000);
                 second = mytext.Substring(10000, subLen);
                 Console.WriteLine("first " + first + " second" + second);
-            }
+            } 
 
             try
             {
@@ -80,33 +80,9 @@ namespace ProjectEcho
 
         }
 
-
-        public static String ReturnReport(String path)
-        {
-
-            CallAPI(path);
-
-            return pog;
-        }
-
-        //takes a path and returns the output of the grammar api; used for calling the API in other classes
-        /*public static string yeet(string path)
-        {
-            CallAPI(path);
-
-            return idk;
-        }*/
-
         public static async Task plswork(string path)
         {
             await CallAPI(path);
-
-            //Console.WriteLine("(in plswork) " + idk);
-
-            /*await Task.Run(() =>
-            {
-                CallAPI(path);
-            });*/
         }
 
 
@@ -118,17 +94,18 @@ namespace ProjectEcho
             {
                 Method = HttpMethod.Post,
                 RequestUri = new Uri("https://grammarbot.p.rapidapi.com/check"),
-                Headers =
-    {
-        { "x-rapidapi-host", "grammarbot.p.rapidapi.com" },
-        { "x-rapidapi-key", "e844609f92msha17811bf70a2da7p1ba5b1jsndb8101bcd3e5" },
-    },
-                Content = new FormUrlEncodedContent(new Dictionary<string, string>
-    {
-        { "text", text }, //the text variable is the string that was converted from the docx file
-        { "language", "en-US" },
-    }),
+                Headers = {
+                    { "x-rapidapi-host", "grammarbot.p.rapidapi.com" }, 
+                    { "x-rapidapi-key", "e844609f92msha17811bf70a2da7p1ba5b1jsndb8101bcd3e5" }, 
+                },
+                
+                //the text variable is the string that was converted from the docx file
+                Content = new FormUrlEncodedContent(new Dictionary<string, string> {
+                    { "text", text },
+                    { "language", "en-US" },
+                }),
             };
+
             using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
@@ -150,22 +127,13 @@ namespace ProjectEcho
                     reportList[i] = reportList[i].Replace("]", "");
                     reportList[i] = reportList[i].Replace("{", "");
                     reportList[i] = reportList[i].Replace("}", "");
-
                 }
                 
                 Console.WriteLine(string.Join(" ", reportList));
-
-
                 idk += string.Join(" ", reportList);
-
-
-
                 //idk = string.Join(" ", reportList); //only gets the last report bc it's overwritten each time GrammarCheck is called :(
-
                 // string s = getReport(body);
-
             }
-
         }
 
 
@@ -208,20 +176,9 @@ namespace ProjectEcho
             string cutString = text.Split(new string[] { "matches" }, StringSplitOptions.None).Last();
             string offSetVals = " ";
 
-
-            // Console.WriteLine("Old string " + text);
-            // Console.WriteLine("New string " + cutString);
             return cutString;
 
         }
-
-        /*
-        public static List<string> ReturnReport(List<string> report)
-        {
-
-            return report;
-        }
-        */
 
         public bool glossaryCheck(string documentString)
         {

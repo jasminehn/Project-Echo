@@ -127,66 +127,7 @@ namespace ProjectEcho
                 }
             }
         }
-        /*
-        private void grayscaleToggle_CheckedChanged(object sender, EventArgs e)
-        {
-            on = grayscaleToggle.Checked; //sets on to current toggle bool
-            if (on)
-            {
-                //normal
-                on = true;
-            }
-            else
-            {
-                //greyscale
-                on = false;
-            }
-        }
 
-        private void invertedToggle_CheckedChanged(object sender, EventArgs e)
-        {
-            on = invertedToggle.Checked; //sets on to current toggle bool
-            if (on)
-            {
-                //normal
-                on = true;
-            }
-            else
-            {
-                //inverted
-                on = false;
-            }
-        }
-
-        private void redgreenToggle_CheckedChanged(object sender, EventArgs e)
-        {
-            on = blueyellowToggle.Checked; //sets on to current toggle bool
-            if (on)
-            {
-                //normal
-                on = true;
-            }
-            else
-            {
-                //filter
-                on = false;
-            }
-        }
-
-        private void blueyellowToggle_CheckedChanged(object sender, EventArgs e)
-        {
-            on = blueyellowToggle.Checked; //sets on to current toggle bool
-            if (on)
-            {
-                //normal
-                on = true;
-            }
-            else
-            {
-                //filter
-                on = false;
-            }
-        } */
         float prev = 0;
 
         private void textsizeAdjust_Scroll(object sender, EventArgs e)

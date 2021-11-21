@@ -13,10 +13,7 @@ namespace ProjectEcho
 {
     public partial class MainForm : Form
     {
-        //private Panel currentPanel = new Panel();
-        //public Panel[] contextPanels = new Panel[4];
         private UserControl currentControl = new UserControl();
-        
         static TaskOneUserControl t1 = new TaskOneUserControl();
         static TaskTwoUserControl t2 = new TaskTwoUserControl();
         public UserControl[] taskControls = new UserControl[4];
@@ -59,8 +56,6 @@ namespace ProjectEcho
             {
                 //fail silently
             }
-            //GrammarAPI at = new GrammarAPI();
-            //GrammarAPI.CallAPI("insert test path here");
         }
 
 
