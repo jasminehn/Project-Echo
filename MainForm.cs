@@ -59,11 +59,8 @@ namespace ProjectEcho
             {
                 //fail silently
             }
-
-            
             //GrammarAPI at = new GrammarAPI();
             //GrammarAPI.CallAPI("insert test path here");
-
         }
 
 
@@ -85,7 +82,6 @@ namespace ProjectEcho
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            titleLabel.Text = ("tf man");
             setControlActive(2);
         }
 
@@ -164,14 +160,6 @@ namespace ProjectEcho
             {
                 hf.Show();
             }
-            
         }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-            //for every part's task completed progress is added
-        }
-
-  
     }
 }
