@@ -121,8 +121,11 @@ namespace ProjectEcho
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
+            this.foundGrammarIssuesLabel = new System.Windows.Forms.Label();
             this.grammarErrorsBox = new System.Windows.Forms.ListBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
@@ -176,9 +179,7 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.grammarBox = new System.Windows.Forms.TextBox();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -201,6 +202,7 @@ namespace ProjectEcho
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel27.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -211,7 +213,6 @@ namespace ProjectEcho
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel27.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -1275,23 +1276,52 @@ namespace ProjectEcho
             this.panel7.Size = new System.Drawing.Size(1153, 481);
             this.panel7.TabIndex = 21;
             // 
+            // panel27
+            // 
+            this.panel27.Controls.Add(this.label28);
+            this.panel27.Controls.Add(this.listBox1);
+            this.panel27.Location = new System.Drawing.Point(546, 123);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(278, 327);
+            this.panel27.TabIndex = 40;
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(3, 7);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(231, 20);
+            this.label28.TabIndex = 35;
+            this.label28.Text = "CONTENT ANALYSIS:";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(7, 30);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(266, 284);
+            this.listBox1.TabIndex = 37;
+            // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.label23);
+            this.panel10.Controls.Add(this.grammarBox);
+            this.panel10.Controls.Add(this.foundGrammarIssuesLabel);
             this.panel10.Controls.Add(this.grammarErrorsBox);
             this.panel10.Location = new System.Drawing.Point(262, 123);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(278, 327);
             this.panel10.TabIndex = 39;
             // 
-            // label23
+            // foundGrammarIssuesLabel
             // 
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(3, 7);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(231, 20);
-            this.label23.TabIndex = 35;
-            this.label23.Text = "FOUND GRAMMAR ISSUES:";
+            this.foundGrammarIssuesLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foundGrammarIssuesLabel.Location = new System.Drawing.Point(3, 7);
+            this.foundGrammarIssuesLabel.Name = "foundGrammarIssuesLabel";
+            this.foundGrammarIssuesLabel.Size = new System.Drawing.Size(231, 20);
+            this.foundGrammarIssuesLabel.TabIndex = 35;
+            this.foundGrammarIssuesLabel.Text = "FOUND GRAMMAR ISSUES:";
             // 
             // grammarErrorsBox
             // 
@@ -1300,7 +1330,7 @@ namespace ProjectEcho
             this.grammarErrorsBox.ItemHeight = 20;
             this.grammarErrorsBox.Location = new System.Drawing.Point(7, 30);
             this.grammarErrorsBox.Name = "grammarErrorsBox";
-            this.grammarErrorsBox.Size = new System.Drawing.Size(266, 284);
+            this.grammarErrorsBox.Size = new System.Drawing.Size(266, 24);
             this.grammarErrorsBox.TabIndex = 37;
             // 
             // panel8
@@ -1903,33 +1933,13 @@ namespace ProjectEcho
             this.label24.TabIndex = 23;
             this.label24.Text = "Plans for Learning Segment";
             // 
-            // panel27
+            // grammarBox
             // 
-            this.panel27.Controls.Add(this.label28);
-            this.panel27.Controls.Add(this.listBox1);
-            this.panel27.Location = new System.Drawing.Point(546, 123);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(278, 327);
-            this.panel27.TabIndex = 40;
-            // 
-            // label28
-            // 
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(3, 7);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(231, 20);
-            this.label28.TabIndex = 35;
-            this.label28.Text = "CONTENT ANALYSIS:";
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(7, 30);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(266, 284);
-            this.listBox1.TabIndex = 37;
+            this.grammarBox.Location = new System.Drawing.Point(7, 60);
+            this.grammarBox.Multiline = true;
+            this.grammarBox.Name = "grammarBox";
+            this.grammarBox.Size = new System.Drawing.Size(266, 254);
+            this.grammarBox.TabIndex = 38;
             // 
             // TaskOneUserControl
             // 
@@ -1978,7 +1988,9 @@ namespace ProjectEcho
             this.tabPage1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel27.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -1996,7 +2008,6 @@ namespace ProjectEcho
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel27.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2035,7 +2046,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label foundGrammarIssuesLabel;
         private System.Windows.Forms.ListBox grammarErrorsBox;
         private System.Windows.Forms.CheckedListBox checkedListBox6;
         private System.Windows.Forms.LinkLabel uploadInfo;
@@ -2152,5 +2163,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox grammarBox;
     }
 }
