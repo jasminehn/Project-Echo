@@ -19,16 +19,23 @@ namespace ProjectEcho
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            //tableLayoutPanel1.RowCount += 1;
+            /**
+             *  KNOWN BUG:
+             *  ADDING CONTROLS CAUSES THE LAST ROW'S HEIGHT TO SLOWLY GET LARGER AND LARGER
+             *  
+             */
             Control[] controls = new Control[2];
             controls[0] = new TextBox { Text = "", Height = 26, Width = 672, Anchor = AnchorStyles.Left, AutoSize = true };
             controls[1] = new CheckBox { Anchor = AnchorStyles.Left, AutoSize = true };
             tableLayoutPanel1.Controls.AddRange(controls);
-            //tableLayoutPanel1.Controls.AddRange
-            //if((tableLayoutPanel1.Height + 39) < tableLayoutPanel1.MaximumSize.Height)
-            tableLayoutPanel1.Height += 39;
-            /* TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
+           
+            if((tableLayoutPanel1.Height + 39) < tableLayoutPanel1.MaximumSize.Height)
+            {
+                tableLayoutPanel1.Height += 39;
+            }
+            
+            
+            TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
              foreach(RowStyle style in styles)
              {
                  if(style.SizeType != SizeType.Absolute)
@@ -40,9 +47,7 @@ namespace ProjectEcho
              foreach(RowStyle sizes in styles)
              {  
                  sizes.Height = 39;
-             }*/
-            //tableLayoutPanel1.RowStyles(Size)
-            //tableLayoutPanel1.RowStyles.Add
+             }
         }
 
         private void button2_Click(object sender, EventArgs e)
