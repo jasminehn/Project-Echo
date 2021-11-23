@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Storage.FileProperties;
 
 namespace ProjectEcho
 {
@@ -93,11 +94,12 @@ namespace ProjectEcho
                     }
                 }
 
+                VideoProperties videoProperties = await file.Properties.GetVideoPropertiesAsync();
             //clipOneFrame.URL = path;
-            clipOneFrame.SetMedia(path);
-                //clipOneFrame.Ctlcontrols.play();
-                //clipOneFrame.launchURL(path);
-            }
+            //clipOneFrame.SetMedia(path);
+            //clipOneFrame.Ctlcontrols.play();
+            //clipOneFrame.launchURL(path);
+        }
         }
     }
 
