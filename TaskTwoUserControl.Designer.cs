@@ -41,23 +41,18 @@ namespace ProjectEcho
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.grammarErrorsBox = new System.Windows.Forms.ListBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.t1paCL = new System.Windows.Forms.CheckedListBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.uploadButton = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label16 = new System.Windows.Forms.Label();
@@ -96,8 +91,8 @@ namespace ProjectEcho
             this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.label31 = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.addRowLabel = new System.Windows.Forms.Label();
+            this.clipOneFrame = new Vlc.DotNet.Forms.VlcControl();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.taskOnePanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -106,15 +101,14 @@ namespace ProjectEcho
             this.panel11.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -196,13 +190,13 @@ namespace ProjectEcho
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.44934F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.55066F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.85339F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.14661F));
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBox1, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 78);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(55, 78);
             this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(915, 419);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(915, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -218,9 +212,9 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(683, 1);
+            this.label21.Location = new System.Drawing.Point(742, 1);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(228, 39);
+            this.label21.Size = new System.Drawing.Size(169, 39);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP \r\nOBTAINED?\r\n";
             // 
@@ -233,26 +227,45 @@ namespace ProjectEcho
             this.label11.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(4, 1);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(672, 39);
+            this.label11.Size = new System.Drawing.Size(731, 39);
             this.label11.TabIndex = 1;
             this.label11.Text = "STUDENT NAME\r\n";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox1.Location = new System.Drawing.Point(4, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(672, 26);
+            this.textBox1.TabIndex = 20;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(742, 57);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // panel11
             // 
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.addRowLabel);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.button3);
-            this.panel11.Location = new System.Drawing.Point(1040, 78);
+            this.panel11.Location = new System.Drawing.Point(989, 78);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(65, 28);
+            this.panel11.Size = new System.Drawing.Size(178, 48);
             this.panel11.TabIndex = 22;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(9, 2);
+            this.button2.Location = new System.Drawing.Point(24, 22);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 23);
+            this.button2.Size = new System.Drawing.Size(51, 23);
             this.button2.TabIndex = 19;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
@@ -261,9 +274,9 @@ namespace ProjectEcho
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(39, 2);
+            this.button3.Location = new System.Drawing.Point(81, 22);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 23);
+            this.button3.Size = new System.Drawing.Size(51, 23);
             this.button3.TabIndex = 20;
             this.button3.Text = "+";
             this.button3.UseVisualStyleBackColor = true;
@@ -297,9 +310,9 @@ namespace ProjectEcho
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.clipOneFrame);
+            this.panel7.Controls.Add(this.uploadButton);
             this.panel7.Controls.Add(this.panel6);
-            this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel1);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label12);
@@ -308,40 +321,10 @@ namespace ProjectEcho
             this.panel7.Size = new System.Drawing.Size(1153, 481);
             this.panel7.TabIndex = 21;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label23);
-            this.panel8.Controls.Add(this.grammarErrorsBox);
-            this.panel8.Location = new System.Drawing.Point(363, 123);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(470, 289);
-            this.panel8.TabIndex = 39;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(3, 7);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(231, 19);
-            this.label23.TabIndex = 35;
-            this.label23.Text = "FOUND GRAMMAR ISSUES:";
-            // 
-            // grammarErrorsBox
-            // 
-            this.grammarErrorsBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarErrorsBox.FormattingEnabled = true;
-            this.grammarErrorsBox.ItemHeight = 20;
-            this.grammarErrorsBox.Location = new System.Drawing.Point(7, 29);
-            this.grammarErrorsBox.Name = "grammarErrorsBox";
-            this.grammarErrorsBox.Size = new System.Drawing.Size(450, 244);
-            this.grammarErrorsBox.TabIndex = 37;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.t1paCL);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.checkedListBox6);
-            this.panel6.Controls.Add(this.label15);
             this.panel6.Location = new System.Drawing.Point(13, 123);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(239, 260);
@@ -377,73 +360,23 @@ namespace ProjectEcho
             this.label14.TabIndex = 18;
             this.label14.Text = "VIDEO FORMAT AND QUALITY:";
             // 
-            // checkedListBox6
-            // 
-            this.checkedListBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkedListBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox6.Enabled = false;
-            this.checkedListBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox6.FormattingEnabled = true;
-            this.checkedListBox6.Items.AddRange(new object[] {
-            "No Spelling Issues",
-            "No Grammar Issues",
-            "No Style Issues"});
-            this.checkedListBox6.Location = new System.Drawing.Point(24, 149);
-            this.checkedListBox6.MinimumSize = new System.Drawing.Size(180, 72);
-            this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(180, 72);
-            this.checkedListBox6.TabIndex = 36;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 120);
-            this.label15.MinimumSize = new System.Drawing.Size(96, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 20);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "GRAMMAR:";
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel9.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel9.Controls.Add(this.uploadButton);
-            this.panel9.Controls.Add(this.label17);
-            this.panel9.Location = new System.Drawing.Point(853, 13);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(284, 66);
-            this.panel9.TabIndex = 34;
-            // 
             // uploadButton
             // 
             this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
             this.uploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.uploadButton.FlatAppearance.BorderSize = 0;
             this.uploadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.uploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uploadButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.uploadButton.Location = new System.Drawing.Point(216, 7);
+            this.uploadButton.Location = new System.Drawing.Point(636, 256);
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(50, 56);
             this.uploadButton.TabIndex = 17;
             this.uploadButton.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label17.Location = new System.Drawing.Point(17, 26);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(182, 18);
-            this.label17.TabIndex = 23;
-            this.label17.Text = "CLICK HERE TO UPLOAD:";
+            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // panel1
             // 
@@ -456,7 +389,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(853, 123);
+            this.panel1.Location = new System.Drawing.Point(850, 227);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 153);
             this.panel1.TabIndex = 32;
@@ -869,23 +802,27 @@ namespace ProjectEcho
             // 
             this.eventLog1.SynchronizingObject = this;
             // 
-            // textBox1
+            // addRowLabel
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(4, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(672, 26);
-            this.textBox1.TabIndex = 20;
+            this.addRowLabel.AutoSize = true;
+            this.addRowLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addRowLabel.Location = new System.Drawing.Point(0, 0);
+            this.addRowLabel.Name = "addRowLabel";
+            this.addRowLabel.Size = new System.Drawing.Size(152, 18);
+            this.addRowLabel.TabIndex = 21;
+            this.addRowLabel.Text = "Add/Remove Rows:";
             // 
-            // checkBox1
+            // clipOneFrame
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(683, 57);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 21;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.clipOneFrame.BackColor = System.Drawing.Color.Black;
+            this.clipOneFrame.Location = new System.Drawing.Point(279, 123);
+            this.clipOneFrame.Name = "clipOneFrame";
+            this.clipOneFrame.Size = new System.Drawing.Size(351, 189);
+            this.clipOneFrame.Spu = -1;
+            this.clipOneFrame.TabIndex = 39;
+            this.clipOneFrame.Text = "clipOneFrame";
+            this.clipOneFrame.VlcLibDirectory = null;
+            this.clipOneFrame.VlcMediaplayerOptions = null;
             // 
             // TaskTwoUserControl
             // 
@@ -902,15 +839,13 @@ namespace ProjectEcho
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -922,6 +857,7 @@ namespace ProjectEcho
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -936,19 +872,13 @@ namespace ProjectEcho
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ListBox grammarErrorsBox;
-        private System.Windows.Forms.CheckedListBox checkedListBox6;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button uploadButton;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -982,7 +912,6 @@ namespace ProjectEcho
         private System.Windows.Forms.CheckedListBox checkedListBox3;
         private System.Windows.Forms.Label label31;
         private System.Diagnostics.EventLog eventLog1;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TabPage permissionSlipTab;
@@ -995,5 +924,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label addRowLabel;
+        private Vlc.DotNet.Forms.VlcControl clipOneFrame;
     }
 }
