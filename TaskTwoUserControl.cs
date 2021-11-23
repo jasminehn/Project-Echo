@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Windows.Storage.FileProperties;
+using Windows.Storage;
+
 
 namespace ProjectEcho
 {
@@ -17,7 +18,7 @@ namespace ProjectEcho
         public TaskTwoUserControl()
         {
             InitializeComponent();
-            this.clipOneFrame.Enabled = true;
+            //this.clipOneFrame.Enabled = true;
             //clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
             //clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
         }
@@ -74,11 +75,11 @@ namespace ProjectEcho
             }
         }
 
-        private void uploadButton_Click(object sender, EventArgs e)
-        {
+            private async void uploadButton_Click(object sender, EventArgs e)
+            {
         
-        OpenFileDialog openFileDialog = new OpenFileDialog();
-        openFileDialog.CheckFileExists = true;
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.CheckFileExists = true;
                 openFileDialog.AddExtension = true;
                 openFileDialog.Multiselect = false;
                 openFileDialog.Filter = "Video Files(*.mp4; *.mov)|*.mp4; *.mov";
@@ -91,15 +92,39 @@ namespace ProjectEcho
                     foreach(string fileName in openFileDialog.FileNames)
                     {
                         path = Path.GetFullPath(fileName);
+                        await analyzeVideoAsync(path);
                     }
                 }
 
-                VideoProperties videoProperties = await file.Properties.GetVideoPropertiesAsync();
-            //clipOneFrame.URL = path;
-            //clipOneFrame.SetMedia(path);
-            //clipOneFrame.Ctlcontrols.play();
-            //clipOneFrame.launchURL(path);
+                
+                clipOneFrame.URL = path;
+                //clipOneFrame.SetMedia(path);
+                clipOneFrame.Ctlcontrols.play();
+                //clipOneFrame.launchURL(path);
+            }
+
+            private async Task analyzeVideoAsync(String path)
+            {
+                Windows.Storage.StorageFolder storageFolder =
+                Windows.Storage.ApplicationData.Current.LocalFolder;
+                Windows.Storage.StorageFile sampleFile = await storageFolder.CreateFileAsync(path,
+                Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+       
+                //VideoProperties videoProperties = await sampleFile.Properties.GetVideoPropertiesAsync();
+                //Console.WriteLine("CLARE:: " + videoProperties.Duration);
+   
+            }
+
+        private void t1paCL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 

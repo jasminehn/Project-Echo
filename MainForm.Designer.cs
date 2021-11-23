@@ -347,7 +347,6 @@ namespace ProjectEcho
             this.titleSubtitleLabel.TabIndex = 1;
             this.titleSubtitleLabel.Text = "Please complete the following tasks. Click each button and complete the subtasks." +
     "";
-            
             // 
             // titleLabel
             // 
@@ -359,7 +358,6 @@ namespace ProjectEcho
             this.titleLabel.Size = new System.Drawing.Size(130, 28);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
-            
             // 
             // taskOne
             // 
@@ -391,7 +389,6 @@ namespace ProjectEcho
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Education Capstone Checker";
-            
             this.contextPanel.ResumeLayout(false);
             this.contextPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
