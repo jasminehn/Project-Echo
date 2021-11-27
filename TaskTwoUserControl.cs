@@ -20,12 +20,13 @@ namespace ProjectEcho
         public TaskTwoUserControl()
         {
             InitializeComponent();
-            this.clipOneFrame.uiMode = "none";
+            this.clipOneFrame.uiMode = "mini";
             this.clipOneFrame.Enabled = true;
             
             //clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
-            //clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
-            //this.clipTwoFrame.uiMode = "none";
+            this.clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
+            this.clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
+            this.clipTwoFrame.uiMode = "mini";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -87,7 +88,7 @@ namespace ProjectEcho
                 openFileDialog.CheckFileExists = true;
                 openFileDialog.AddExtension = true;
                 openFileDialog.Multiselect = false;
-                openFileDialog.Filter = "Video Files(*.mp4; *.mov)|*.mp4; *.mov";
+                openFileDialog.Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov";
                 openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
                 String path = "";
@@ -136,6 +137,11 @@ namespace ProjectEcho
         private void permissionSlipTab_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clipOneFrame.Ctlcontrols.play();
         }
     }
     }

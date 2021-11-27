@@ -1269,10 +1269,11 @@ namespace ProjectEcho
             // 
             // warningLabel
             // 
+            this.warningLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.warningLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningLabel.Location = new System.Drawing.Point(865, 69);
+            this.warningLabel.Location = new System.Drawing.Point(852, 104);
             this.warningLabel.Name = "warningLabel";
-            this.warningLabel.Size = new System.Drawing.Size(284, 55);
+            this.warningLabel.Size = new System.Drawing.Size(287, 39);
             this.warningLabel.TabIndex = 41;
             this.warningLabel.Text = "Warning: Please save your Document and close out of Microsoft Word before uploadi" +
     "ng.";
@@ -1417,7 +1418,7 @@ namespace ProjectEcho
             this.panel9.BackColor = System.Drawing.Color.DarkBlue;
             this.panel9.Controls.Add(this.uploadButton1A);
             this.panel9.Controls.Add(this.label17);
-            this.panel9.Location = new System.Drawing.Point(853, -22);
+            this.panel9.Location = new System.Drawing.Point(855, 38);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 66);
             this.panel9.TabIndex = 34;
@@ -1467,7 +1468,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(853, 98);
+            this.panel1.Location = new System.Drawing.Point(855, 158);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 289);
             this.panel1.TabIndex = 32;
@@ -1477,7 +1478,7 @@ namespace ProjectEcho
             this.uploadInfo.AutoSize = true;
             this.uploadInfo.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadInfo.LinkColor = System.Drawing.Color.White;
-            this.uploadInfo.Location = new System.Drawing.Point(17, 271);
+            this.uploadInfo.Location = new System.Drawing.Point(17, 242);
             this.uploadInfo.Name = "uploadInfo";
             this.uploadInfo.Size = new System.Drawing.Size(16, 18);
             this.uploadInfo.TabIndex = 32;
@@ -1526,7 +1527,7 @@ namespace ProjectEcho
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(8, 6);
+            this.label16.Location = new System.Drawing.Point(8, 2);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 20);
             this.label16.TabIndex = 22;
