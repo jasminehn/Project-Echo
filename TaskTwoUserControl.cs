@@ -25,7 +25,7 @@ namespace ProjectEcho
             
             //clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
             this.clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
-            this.clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
+            //this.clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
             this.clipTwoFrame.uiMode = "mini";
         }
 
