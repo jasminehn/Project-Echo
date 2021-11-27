@@ -27,7 +27,13 @@ namespace ProjectEcho
 
         private async void uploadButton_Click(object sender, EventArgs e)
         {
-            await checkDocument(1, "A", t1paCL, uploadInfo1);
+            try
+            {
+                await checkDocument(1, "A", t1paCL, uploadInfo1);
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
         private void uploadButton1B_Click(object sender, EventArgs e)

@@ -26,6 +26,7 @@ namespace ProjectEcho
         public MainForm()
         {
             InitializeComponent();
+            //MainForm.CenterToScreen();
             taskControls[0] = t1;
             taskControls[1] = taskOne;
             taskControls[2] = taskTwo;
@@ -155,6 +156,11 @@ namespace ProjectEcho
             {
                 hf.Show();
             }
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

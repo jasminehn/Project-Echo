@@ -13,14 +13,19 @@ using Windows.Storage;
 
 namespace ProjectEcho
 {
+
     public partial class TaskTwoUserControl : UserControl
     {
+
         public TaskTwoUserControl()
         {
             InitializeComponent();
-            //this.clipOneFrame.Enabled = true;
+            this.clipOneFrame.uiMode = "none";
+            this.clipOneFrame.Enabled = true;
+            
             //clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
             //clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
+            //this.clipTwoFrame.uiMode = "none";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -95,12 +100,7 @@ namespace ProjectEcho
                         await analyzeVideoAsync(path);
                     }
                 }
-
-                
-                clipOneFrame.URL = path;
-                //clipOneFrame.SetMedia(path);
-                clipOneFrame.Ctlcontrols.play();
-                //clipOneFrame.launchURL(path);
+                PlayFile(path);
             }
 
             private async Task analyzeVideoAsync(String path)
@@ -116,12 +116,24 @@ namespace ProjectEcho
    
             }
 
+        private void PlayFile(String path)
+        {
+            clipOneFrame.URL = path;
+            //clipOneFrame.Ctlcontrols.play();
+        }
+
+ 
         private void t1paCL_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void permissionSlipTab_Click(object sender, EventArgs e)
         {
 
         }
