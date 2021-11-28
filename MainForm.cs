@@ -89,7 +89,7 @@ namespace ProjectEcho
 
 
 
-        private void settingsButton_Click(object sender, EventArgs e)
+/*        private void settingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm sf = new SettingsForm();
 
@@ -97,7 +97,7 @@ namespace ProjectEcho
             {
                 Console.Write("Settings opened");
             }
-        }
+        }*/
 
         private void task1Button_Click(object sender, EventArgs e)
         {
@@ -171,7 +171,7 @@ namespace ProjectEcho
         }        
 
         //Executes when the help button is clicked
-        private void helpButton_Click(object sender, EventArgs e)
+/*        private void helpButton_Click(object sender, EventArgs e)
         {
             //Creates the form that displays
             saveHelpResource++;
@@ -185,11 +185,38 @@ namespace ProjectEcho
             {
                 hf.Show();
             }
-        }
+        }*/
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Creates the form that displays
+            saveHelpResource++;
+            if(saveHelpResource == 0)
+            {
+                if(hf.ShowDialog() == DialogResult.OK)
+                {
+                    Console.Write("Help opened");
+                }
+            }
+            else
+            {
+                hf.Show();
+            }
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm sf = new SettingsForm();
+
+            if(sf.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Settings opened");
+            }
         }
     }
 }
