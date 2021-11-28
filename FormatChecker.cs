@@ -6,12 +6,14 @@ namespace ProjectEcho
 {
     internal class FormatChecker
     {
-		public static Application ap = new Application();
+		//public static Application ap = new Application();
 		public int progress = 0;
 		public Boolean[] runFormatCheck(String path, int correctLength)
 		{
+			Application ap = new Application();
+
 			//path = @"C:\Users\ceseg\Desktop\AlterEgo.docx";
-            Document document = ap.Documents.Open(FileName: path, Visible: false, ReadOnly: false);
+			Document document = ap.Documents.Open(FileName: path, Visible: false, ReadOnly: false);
 
 			/**
 			 *                                 ConfirmConversions: false,
@@ -46,7 +48,14 @@ namespace ProjectEcho
 			Boolean[] isFormatted = {isAligned, isArial, isFontSize, isCorrectLength};
 
 			document.Close();
-			//ap.Quit();
+			
+			ap.Quit();
+
+			/*if (ap != null)
+				System.Runtime.InteropServices.Marshal.ReleaseComObject(ap);
+
+			ap = null;*/
+
 			return isFormatted;
 		}
 

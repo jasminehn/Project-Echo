@@ -36,24 +36,52 @@ namespace ProjectEcho
             }
         }
 
-        private void uploadButton1B_Click(object sender, EventArgs e)
-        {
-            checkDocument(1, "B", formatCheckList1B, uploadInfo1B);            
+        private async void uploadButton1B_Click(object sender, EventArgs e)
+        {            
+            try
+            {
+                await checkDocument(1, "B", formatCheckList1B, uploadInfo1B);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
-        private void uploadButton1C_Click(object sender, EventArgs e)
-        {
-            checkDocument(1, "C", formatCheckList1C, uploadInfo1C);
+        private async void uploadButton1C_Click(object sender, EventArgs e)
+        {           
+            try
+            {
+                await checkDocument(1, "C", formatCheckList1C, uploadInfo1C);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
-        private void uploadButton1D_Click(object sender, EventArgs e)
-        {
-            checkDocument(1, "D", formatCheckList1D, uploadInfo1D);
+        private async void uploadButton1D_Click(object sender, EventArgs e)
+        {            
+            try
+            {
+                await checkDocument(1, "D", formatCheckList1D, uploadInfo1D);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
-        private void uploadButton1E_Click(object sender, EventArgs e)
-        {
-            checkDocument(1, "E", formatCheckList1E, uploadInfo1E);
+        private async void uploadButton1E_Click(object sender, EventArgs e)
+        {            
+            try
+            {
+                await checkDocument(1, "E", formatCheckList1E, uploadInfo1E);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
         /// <summary>
