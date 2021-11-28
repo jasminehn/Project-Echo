@@ -37,18 +37,18 @@ namespace ProjectEcho
              *  
              */
             Control[] controls = new Control[2];
-            controls[0] = new TextBox { Text = "", Height = 26, Width = 672, Anchor = AnchorStyles.Left, AutoSize = true };
+            controls[0] = new TextBox { Text = "", Height = 25, Width = 672, Anchor = AnchorStyles.Left, AutoSize = true };
             controls[1] = new CheckBox { Anchor = AnchorStyles.Left, AutoSize = true };
             tableLayoutPanel1.Controls.AddRange(controls);
 
-            if((tableLayoutPanel1.Height + 39) < tableLayoutPanel1.MaximumSize.Height)
+            if((tableLayoutPanel1.Height + 25) < tableLayoutPanel1.MaximumSize.Height)
             {
-                tableLayoutPanel1.Height += 39;
+                tableLayoutPanel1.Height += 25;
             }
 
 
-            TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
-            foreach(RowStyle style in styles)
+           TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
+           foreach(RowStyle style in styles)
             {
                 if(style.SizeType != SizeType.Absolute)
                 {
@@ -58,7 +58,7 @@ namespace ProjectEcho
 
             foreach(RowStyle sizes in styles)
             {
-                sizes.Height = 39;
+                sizes.Height = 25;
             }
         }
 
@@ -142,6 +142,21 @@ namespace ProjectEcho
         private void button4_Click(object sender, EventArgs e)
         {
             clipOneFrame.Ctlcontrols.play();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taskOnePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }

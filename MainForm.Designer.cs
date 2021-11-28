@@ -235,7 +235,7 @@ namespace ProjectEcho
             this.mainMenuPanel.Controls.Add(this.taskOneButton);
             this.mainMenuPanel.Location = new System.Drawing.Point(3, 80);
             this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(1558, 743);
+            this.mainMenuPanel.Size = new System.Drawing.Size(1555, 740);
             this.mainMenuPanel.TabIndex = 15;
             // 
             // reviewList
@@ -366,19 +366,23 @@ namespace ProjectEcho
             // 
             this.taskTwo.AutoSize = true;
             this.taskTwo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.taskTwo.BackColor = System.Drawing.Color.DarkBlue;
             this.taskTwo.Location = new System.Drawing.Point(0, 80);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(1561, 743);
+            this.taskTwo.Size = new System.Drawing.Size(1482, 712);
             this.taskTwo.TabIndex = 17;
             this.taskTwo.Visible = false;
             // 
             // taskOne
             // 
+            this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskOne.AutoSize = true;
             this.taskOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskOne.Location = new System.Drawing.Point(0, 80);
             this.taskOne.Name = "taskOne";
-            this.taskOne.Size = new System.Drawing.Size(1561, 740);
+            this.taskOne.Size = new System.Drawing.Size(1558, 740);
             this.taskOne.TabIndex = 16;
             // 
             // MainForm

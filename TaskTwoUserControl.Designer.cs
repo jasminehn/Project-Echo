@@ -32,26 +32,10 @@ namespace ProjectEcho
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskTwoUserControl));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.taskOnePanel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.clipTwoFrame = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.uploadButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.clipOneFrame = new AxWMPLib.AxWindowsMediaPlayer();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.permissionSlipTab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -62,15 +46,8 @@ namespace ProjectEcho
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.eventLog1 = new System.Diagnostics.EventLog();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -78,154 +55,46 @@ namespace ProjectEcho
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.eventLog1 = new System.Diagnostics.EventLog();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.clipOneFrame = new AxWMPLib.AxWindowsMediaPlayer();
+            this.clipTwoFrame = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.taskOnePanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clipTwoFrame)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.permissionSlipTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.panel7.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clipTwoFrame)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(868, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = resources.GetString("label6.Text");
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(1769, 65);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(175, 859);
-            this.checkedListBox1.TabIndex = 18;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1765, 24);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 23);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "REVIEW";
-            // 
-            // taskOnePanel
-            // 
-            this.taskOnePanel.AutoScroll = true;
-            this.taskOnePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.taskOnePanel.Controls.Add(this.button5);
-            this.taskOnePanel.Controls.Add(this.button4);
-            this.taskOnePanel.Controls.Add(this.panel1);
-            this.taskOnePanel.Controls.Add(this.clipTwoFrame);
-            this.taskOnePanel.Controls.Add(this.panel5);
-            this.taskOnePanel.Controls.Add(this.uploadButton);
-            this.taskOnePanel.Controls.Add(this.button1);
-            this.taskOnePanel.Controls.Add(this.clipOneFrame);
-            this.taskOnePanel.Controls.Add(this.label8);
-            this.taskOnePanel.Controls.Add(this.checkedListBox1);
-            this.taskOnePanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.taskOnePanel.Location = new System.Drawing.Point(1131, 13);
-            this.taskOnePanel.MaximumSize = new System.Drawing.Size(437, 700);
-            this.taskOnePanel.Name = "taskOnePanel";
-            this.taskOnePanel.Size = new System.Drawing.Size(437, 700);
-            this.taskOnePanel.TabIndex = 20;
-            // 
-            // button5
-            // 
-            this.button5.ForeColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(320, 296);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 23);
-            this.button5.TabIndex = 50;
-            this.button5.Text = "stop";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.Color.Green;
-            this.button4.Location = new System.Drawing.Point(279, 296);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 23);
-            this.button4.TabIndex = 49;
-            this.button4.Text = "start";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.progressBar1);
-            this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(67, 598);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 56);
-            this.panel1.TabIndex = 48;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(249, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 16);
-            this.label16.TabIndex = 49;
-            this.label16.Text = "ANALYZING...";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(8, 6);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(148, 20);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "FORMAT AND STYLE:";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar1.Location = new System.Drawing.Point(12, 29);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(315, 14);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 25;
-            // 
-            // clipTwoFrame
-            // 
-            this.clipTwoFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clipTwoFrame.Enabled = true;
-            this.clipTwoFrame.Location = new System.Drawing.Point(67, 376);
-            this.clipTwoFrame.Name = "clipTwoFrame";
-            this.clipTwoFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipTwoFrame.OcxState")));
-            this.clipTwoFrame.Size = new System.Drawing.Size(342, 216);
-            this.clipTwoFrame.TabIndex = 47;
-            this.clipTwoFrame.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // panel5
             // 
@@ -235,9 +104,9 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.progressBar4);
             this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Location = new System.Drawing.Point(67, 234);
+            this.panel5.Location = new System.Drawing.Point(570, 252);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(342, 56);
+            this.panel5.Size = new System.Drawing.Size(327, 56);
             this.panel5.TabIndex = 46;
             // 
             // label10
@@ -265,103 +134,39 @@ namespace ProjectEcho
             this.progressBar4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.progressBar4.Location = new System.Drawing.Point(12, 29);
             this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(315, 14);
+            this.progressBar4.Size = new System.Drawing.Size(303, 15);
             this.progressBar4.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar4.TabIndex = 25;
             // 
-            // uploadButton
-            // 
-            this.uploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
-            this.uploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.uploadButton.FlatAppearance.BorderSize = 0;
-            this.uploadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uploadButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.uploadButton.Location = new System.Drawing.Point(11, 181);
-            this.uploadButton.Name = "uploadButton";
-            this.uploadButton.Size = new System.Drawing.Size(50, 58);
-            this.uploadButton.TabIndex = 17;
-            this.uploadButton.UseVisualStyleBackColor = true;
-            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(11, 537);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 55);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // clipOneFrame
-            // 
-            this.clipOneFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clipOneFrame.Enabled = true;
-            this.clipOneFrame.Location = new System.Drawing.Point(67, 12);
-            this.clipOneFrame.Name = "clipOneFrame";
-            this.clipOneFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipOneFrame.OcxState")));
-            this.clipOneFrame.Size = new System.Drawing.Size(342, 216);
-            this.clipOneFrame.TabIndex = 20;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.permissionSlipTab);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 16);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1122, 697);
-            this.tabControl1.TabIndex = 17;
-            // 
-            // permissionSlipTab
-            // 
-            this.permissionSlipTab.Controls.Add(this.tableLayoutPanel1);
-            this.permissionSlipTab.Controls.Add(this.panel11);
-            this.permissionSlipTab.Controls.Add(this.label7);
-            this.permissionSlipTab.Location = new System.Drawing.Point(4, 27);
-            this.permissionSlipTab.Name = "permissionSlipTab";
-            this.permissionSlipTab.Size = new System.Drawing.Size(1114, 666);
-            this.permissionSlipTab.TabIndex = 4;
-            this.permissionSlipTab.Text = "Permission Slips";
-            this.permissionSlipTab.UseVisualStyleBackColor = true;
-            this.permissionSlipTab.Click += new System.EventHandler(this.permissionSlipTab_Click);
-            // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.03546F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.96454F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.98204F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.01796F));
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 78);
-            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(600, 400);
-            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(600, 80);
+            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 159);
+            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(510, 500);
+            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(400, 80);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 86);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(510, 80);
             this.tableLayoutPanel1.TabIndex = 18;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label21
             // 
@@ -369,25 +174,27 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(452, 1);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(292, 9);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(144, 39);
+            this.label21.Size = new System.Drawing.Size(145, 21);
             this.label21.TabIndex = 19;
-            this.label21.Text = "PERMISSION SLIP \r\nOBTAINED?\r\n";
+            this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(4, 50);
+            this.textBox1.Location = new System.Drawing.Point(2, 51);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(441, 26);
+            this.textBox1.Size = new System.Drawing.Size(273, 20);
             this.textBox1.TabIndex = 20;
             // 
             // checkBox1
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(452, 56);
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox1.Location = new System.Drawing.Point(295, 50);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 21;
@@ -400,37 +207,39 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(4, 1);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(9, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(441, 39);
+            this.label11.Size = new System.Drawing.Size(136, 18);
             this.label11.TabIndex = 1;
             this.label11.Text = "STUDENT NAME\r\n";
             // 
             // panel11
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.Controls.Add(this.addRowLabel);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.button3);
-            this.panel11.Location = new System.Drawing.Point(917, 79);
+            this.panel11.Location = new System.Drawing.Point(287, 121);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(178, 48);
+            this.panel11.Size = new System.Drawing.Size(223, 30);
             this.panel11.TabIndex = 22;
             // 
             // addRowLabel
             // 
+            this.addRowLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.addRowLabel.AutoSize = true;
-            this.addRowLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.addRowLabel.Location = new System.Drawing.Point(0, 0);
+            this.addRowLabel.ForeColor = System.Drawing.Color.White;
+            this.addRowLabel.Location = new System.Drawing.Point(2, 8);
             this.addRowLabel.Name = "addRowLabel";
-            this.addRowLabel.Size = new System.Drawing.Size(152, 18);
+            this.addRowLabel.Size = new System.Drawing.Size(104, 13);
             this.addRowLabel.TabIndex = 21;
             this.addRowLabel.Text = "Add/Remove Rows:";
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(24, 22);
+            this.button2.Location = new System.Drawing.Point(112, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(51, 23);
             this.button2.TabIndex = 19;
@@ -441,7 +250,7 @@ namespace ProjectEcho
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(81, 22);
+            this.button3.Location = new System.Drawing.Point(169, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(51, 23);
             this.button3.TabIndex = 20;
@@ -451,123 +260,38 @@ namespace ProjectEcho
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 9);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(9, 39);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(705, 66);
+            this.label7.Size = new System.Drawing.Size(501, 117);
             this.label7.TabIndex = 17;
             this.label7.Text = resources.GetString("label7.Text");
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // tabPage1
+            // eventLog1
             // 
-            this.tabPage1.Controls.Add(this.panel7);
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(827, 666);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Video Analysis";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.eventLog1.SynchronizingObject = this;
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.panel3);
-            this.panel7.Controls.Add(this.panel4);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.label4);
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.clipOneFrame);
             this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.panel10);
+            this.panel7.Controls.Add(this.panel5);
             this.panel7.Controls.Add(this.panel6);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Location = new System.Drawing.Point(15, 29);
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Location = new System.Drawing.Point(544, 1);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(790, 477);
-            this.panel7.TabIndex = 21;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(261, 387);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(256, 81);
-            this.panel3.TabIndex = 45;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 26);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "label1";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.checkedListBox2);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(16, 387);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(239, 81);
-            this.panel4.TabIndex = 44;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox2.Enabled = false;
-            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "500 megabytes or less",
-            "Less than 11 minutes long",
-            "Greater than 3 minutes long",
-            "Adequate volume"});
-            this.checkedListBox2.Location = new System.Drawing.Point(3, 1);
-            this.checkedListBox2.MinimumSize = new System.Drawing.Size(180, 72);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(208, 72);
-            this.checkedListBox2.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, -84);
-            this.label2.MinimumSize = new System.Drawing.Size(148, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 20);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "VIDEO FORMAT AND QUALITY:";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 264);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(772, 53);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "EDIT THIS TEXT LATER\r\n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 226);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(391, 18);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "CLIP TWO: ENTIRE CLASS/LARGE GROUP INTERACTION";
+            this.panel7.Size = new System.Drawing.Size(914, 322);
+            this.panel7.TabIndex = 24;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(258, 129);
+            this.panel8.Location = new System.Drawing.Point(264, 143);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(259, 84);
             this.panel8.TabIndex = 41;
@@ -584,7 +308,7 @@ namespace ProjectEcho
             // 
             this.panel6.Controls.Add(this.t1paCL);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Location = new System.Drawing.Point(13, 129);
+            this.panel6.Location = new System.Drawing.Point(19, 143);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(239, 84);
             this.panel6.TabIndex = 38;
@@ -606,7 +330,6 @@ namespace ProjectEcho
             this.t1paCL.Name = "t1paCL";
             this.t1paCL.Size = new System.Drawing.Size(208, 72);
             this.t1paCL.TabIndex = 14;
-            this.t1paCL.SelectedIndexChanged += new System.EventHandler(this.t1paCL_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -623,9 +346,9 @@ namespace ProjectEcho
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 43);
+            this.label13.Location = new System.Drawing.Point(3, 38);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(775, 77);
+            this.label13.Size = new System.Drawing.Size(565, 110);
             this.label13.TabIndex = 16;
             this.label13.Text = resources.GetString("label13.Text");
             // 
@@ -633,36 +356,255 @@ namespace ProjectEcho
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 13);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(6, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(390, 18);
             this.label12.TabIndex = 15;
             this.label12.Text = "CLIP ONE: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 663);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(821, 0);
-            this.panel2.TabIndex = 19;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(8, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(304, 23);
-            this.label5.TabIndex = 16;
+            this.label5.TabIndex = 23;
             this.label5.Text = "Context for Learning Information";
             // 
-            // eventLog1
+            // panel9
             // 
-            this.eventLog1.SynchronizingObject = this;
+            this.panel9.BackColor = System.Drawing.Color.Navy;
+            this.panel9.Controls.Add(this.panel3);
+            this.panel9.Controls.Add(this.panel2);
+            this.panel9.Controls.Add(this.panel7);
+            this.panel9.Location = new System.Drawing.Point(4, 13);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1475, 696);
+            this.panel9.TabIndex = 21;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.panel11);
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(525, 696);
+            this.panel2.TabIndex = 25;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel10.Controls.Add(this.label12);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(914, 29);
+            this.panel10.TabIndex = 26;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Navy;
+            this.panel12.Controls.Add(this.label6);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(914, 29);
+            this.panel12.TabIndex = 46;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(6, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(391, 18);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "CLIP TWO: ENTIRE CLASS/LARGE GROUP INTERACTION";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.clipTwoFrame);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel12);
+            this.panel3.Controls.Add(this.panel13);
+            this.panel3.Location = new System.Drawing.Point(544, 354);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(914, 333);
+            this.panel3.TabIndex = 42;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(264, 161);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(259, 84);
+            this.panel4.TabIndex = 41;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 26);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "label1";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.checkedListBox2);
+            this.panel13.Controls.Add(this.label2);
+            this.panel13.Location = new System.Drawing.Point(19, 161);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(239, 84);
+            this.panel13.TabIndex = 38;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox2.Enabled = false;
+            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "500 megabytes or less",
+            "Less than 11 minutes long",
+            "Greater than 3 minutes long",
+            "Adequate volume"});
+            this.checkedListBox2.Location = new System.Drawing.Point(3, 3);
+            this.checkedListBox2.MinimumSize = new System.Drawing.Size(180, 72);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(208, 72);
+            this.checkedListBox2.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, -82);
+            this.label2.MinimumSize = new System.Drawing.Size(148, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(225, 20);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "VIDEO FORMAT AND QUALITY:";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(583, 110);
+            this.label3.TabIndex = 47;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(502, 253);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 55);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // clipOneFrame
+            // 
+            this.clipOneFrame.Enabled = true;
+            this.clipOneFrame.Location = new System.Drawing.Point(570, 62);
+            this.clipOneFrame.Name = "clipOneFrame";
+            this.clipOneFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipOneFrame.OcxState")));
+            this.clipOneFrame.Size = new System.Drawing.Size(327, 184);
+            this.clipOneFrame.TabIndex = 47;
+            // 
+            // clipTwoFrame
+            // 
+            this.clipTwoFrame.Enabled = true;
+            this.clipTwoFrame.Location = new System.Drawing.Point(570, 60);
+            this.clipTwoFrame.Name = "clipTwoFrame";
+            this.clipTwoFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipTwoFrame.OcxState")));
+            this.clipTwoFrame.Size = new System.Drawing.Size(327, 184);
+            this.clipTwoFrame.TabIndex = 50;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.panel1.Location = new System.Drawing.Point(570, 251);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(328, 56);
+            this.panel1.TabIndex = 49;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(249, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "ANALYZING...";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(8, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 20);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "FORMAT AND STYLE:";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.progressBar1.Location = new System.Drawing.Point(12, 29);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(301, 15);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 25;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.Location = new System.Drawing.Point(502, 252);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 55);
+            this.button4.TabIndex = 48;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // TaskTwoUserControl
             // 
@@ -670,62 +612,46 @@ namespace ProjectEcho
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.taskOnePanel);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.tabControl1);
+            this.BackColor = System.Drawing.Color.DarkBlue;
+            this.Controls.Add(this.panel9);
             this.Name = "TaskTwoUserControl";
-            this.Size = new System.Drawing.Size(1568, 716);
+            this.Size = new System.Drawing.Size(1482, 712);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.taskOnePanel.ResumeLayout(false);
-            this.taskOnePanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clipTwoFrame)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.permissionSlipTab.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clipTwoFrame)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel taskOnePanel;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button uploadButton;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckedListBox t1paCL;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
         private System.Diagnostics.EventLog eventLog1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TabPage permissionSlipTab;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label11;
@@ -736,27 +662,38 @@ namespace ProjectEcho
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label addRowLabel;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel8;
-        private AxWMPLib.AxWindowsMediaPlayer clipOneFrame;
-        private System.Windows.Forms.Button button1;
-        private AxWMPLib.AxWindowsMediaPlayer clipTwoFrame;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.CheckedListBox t1paCL;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button button1;
+        private AxWMPLib.AxWindowsMediaPlayer clipTwoFrame;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button4;
+        private AxWMPLib.AxWindowsMediaPlayer clipOneFrame;
     }
 }
