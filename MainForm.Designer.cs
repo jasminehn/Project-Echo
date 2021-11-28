@@ -56,8 +56,8 @@ namespace ProjectEcho
             this.taskTwoButton = new System.Windows.Forms.Button();
             this.taskOneButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
+            this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -362,15 +362,6 @@ namespace ProjectEcho
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
-            // taskOne
-            // 
-            this.taskOne.AutoSize = true;
-            this.taskOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.taskOne.Location = new System.Drawing.Point(0, 80);
-            this.taskOne.Name = "taskOne";
-            this.taskOne.Size = new System.Drawing.Size(1561, 740);
-            this.taskOne.TabIndex = 16;
-            // 
             // taskTwo
             // 
             this.taskTwo.AutoSize = true;
@@ -380,6 +371,15 @@ namespace ProjectEcho
             this.taskTwo.Size = new System.Drawing.Size(1561, 743);
             this.taskTwo.TabIndex = 17;
             this.taskTwo.Visible = false;
+            // 
+            // taskOne
+            // 
+            this.taskOne.AutoSize = true;
+            this.taskOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.taskOne.Location = new System.Drawing.Point(0, 80);
+            this.taskOne.Name = "taskOne";
+            this.taskOne.Size = new System.Drawing.Size(1561, 740);
+            this.taskOne.TabIndex = 16;
             // 
             // MainForm
             // 

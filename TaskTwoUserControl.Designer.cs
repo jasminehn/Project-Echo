@@ -147,7 +147,7 @@ namespace ProjectEcho
             this.taskOnePanel.Controls.Add(this.label8);
             this.taskOnePanel.Controls.Add(this.checkedListBox1);
             this.taskOnePanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.taskOnePanel.Location = new System.Drawing.Point(940, 13);
+            this.taskOnePanel.Location = new System.Drawing.Point(1131, 13);
             this.taskOnePanel.MaximumSize = new System.Drawing.Size(437, 700);
             this.taskOnePanel.Name = "taskOnePanel";
             this.taskOnePanel.Size = new System.Drawing.Size(437, 700);
@@ -325,7 +325,7 @@ namespace ProjectEcho
             this.tabControl1.Location = new System.Drawing.Point(3, 16);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(835, 697);
+            this.tabControl1.Size = new System.Drawing.Size(1122, 697);
             this.tabControl1.TabIndex = 17;
             // 
             // permissionSlipTab
@@ -335,7 +335,7 @@ namespace ProjectEcho
             this.permissionSlipTab.Controls.Add(this.label7);
             this.permissionSlipTab.Location = new System.Drawing.Point(4, 27);
             this.permissionSlipTab.Name = "permissionSlipTab";
-            this.permissionSlipTab.Size = new System.Drawing.Size(827, 666);
+            this.permissionSlipTab.Size = new System.Drawing.Size(1114, 666);
             this.permissionSlipTab.TabIndex = 4;
             this.permissionSlipTab.Text = "Permission Slips";
             this.permissionSlipTab.UseVisualStyleBackColor = true;
@@ -412,7 +412,7 @@ namespace ProjectEcho
             this.panel11.Controls.Add(this.addRowLabel);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.button3);
-            this.panel11.Location = new System.Drawing.Point(630, 79);
+            this.panel11.Location = new System.Drawing.Point(917, 79);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(178, 48);
             this.panel11.TabIndex = 22;
@@ -674,7 +674,7 @@ namespace ProjectEcho
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tabControl1);
             this.Name = "TaskTwoUserControl";
-            this.Size = new System.Drawing.Size(1377, 716);
+            this.Size = new System.Drawing.Size(1568, 716);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.taskOnePanel.ResumeLayout(false);
             this.taskOnePanel.PerformLayout();
