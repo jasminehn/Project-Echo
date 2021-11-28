@@ -40,30 +40,38 @@ namespace ProjectEcho
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
-            this.reviewList = new System.Windows.Forms.CheckedListBox();
             this.taskThreeList = new System.Windows.Forms.CheckedListBox();
             this.taskTwoList = new System.Windows.Forms.CheckedListBox();
             this.taskOneList = new System.Windows.Forms.CheckedListBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
             this.taskThreeButton = new System.Windows.Forms.Button();
             this.taskTwoButton = new System.Windows.Forms.Button();
-            this.taskOneButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.recentFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.clearLocalFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.taskOneButton = new System.Windows.Forms.Button();
+            this.reviewList = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.mainMenuPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,11 +183,8 @@ namespace ProjectEcho
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.viewToolStripMenuItem,
             this.settingsToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -189,21 +194,13 @@ namespace ProjectEcho
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.recentFilesToolStripMenuItem,
+            this.clearLocalFilesToolStripMenuItem,
+            this.exitApplicationToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
             // 
             // settingsToolStripMenuItem
             // 
@@ -219,39 +216,18 @@ namespace ProjectEcho
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // mainMenuPanel
             // 
             this.mainMenuPanel.BackColor = System.Drawing.Color.White;
+            this.mainMenuPanel.Controls.Add(this.panel5);
+            this.mainMenuPanel.Controls.Add(this.panel4);
+            this.mainMenuPanel.Controls.Add(this.panel3);
             this.mainMenuPanel.Controls.Add(this.reviewList);
-            this.mainMenuPanel.Controls.Add(this.taskThreeList);
-            this.mainMenuPanel.Controls.Add(this.taskTwoList);
-            this.mainMenuPanel.Controls.Add(this.taskOneList);
-            this.mainMenuPanel.Controls.Add(this.label3);
-            this.mainMenuPanel.Controls.Add(this.task1Button);
-            this.mainMenuPanel.Controls.Add(this.taskThreeButton);
-            this.mainMenuPanel.Controls.Add(this.taskTwoButton);
             this.mainMenuPanel.Controls.Add(this.taskOneButton);
             this.mainMenuPanel.Location = new System.Drawing.Point(3, 80);
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(1555, 740);
             this.mainMenuPanel.TabIndex = 15;
-            // 
-            // reviewList
-            // 
-            this.reviewList.CausesValidation = false;
-            this.reviewList.Enabled = false;
-            this.reviewList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reviewList.FormattingEnabled = true;
-            this.reviewList.Location = new System.Drawing.Point(998, 357);
-            this.reviewList.Name = "reviewList";
-            this.reviewList.Size = new System.Drawing.Size(193, 79);
-            this.reviewList.TabIndex = 34;
             // 
             // taskThreeList
             // 
@@ -259,7 +235,7 @@ namespace ProjectEcho
             this.taskThreeList.Enabled = false;
             this.taskThreeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeList.FormattingEnabled = true;
-            this.taskThreeList.Location = new System.Drawing.Point(775, 357);
+            this.taskThreeList.Location = new System.Drawing.Point(44, 55);
             this.taskThreeList.Name = "taskThreeList";
             this.taskThreeList.Size = new System.Drawing.Size(193, 79);
             this.taskThreeList.TabIndex = 33;
@@ -270,41 +246,32 @@ namespace ProjectEcho
             this.taskTwoList.Enabled = false;
             this.taskTwoList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoList.FormattingEnabled = true;
-            this.taskTwoList.Location = new System.Drawing.Point(552, 357);
+            this.taskTwoList.Location = new System.Drawing.Point(44, 55);
             this.taskTwoList.Name = "taskTwoList";
             this.taskTwoList.Size = new System.Drawing.Size(193, 79);
             this.taskTwoList.TabIndex = 32;
             // 
             // taskOneList
             // 
+            this.taskOneList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.taskOneList.CausesValidation = false;
             this.taskOneList.Enabled = false;
             this.taskOneList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskOneList.FormattingEnabled = true;
-            this.taskOneList.Location = new System.Drawing.Point(329, 357);
+            this.taskOneList.Location = new System.Drawing.Point(38, 55);
             this.taskOneList.Name = "taskOneList";
-            this.taskOneList.Size = new System.Drawing.Size(193, 79);
+            this.taskOneList.Size = new System.Drawing.Size(193, 75);
             this.taskOneList.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.CausesValidation = false;
-            this.label3.Location = new System.Drawing.Point(324, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(868, 13);
-            this.label3.TabIndex = 30;
-            this.label3.Text = resources.GetString("label3.Text");
             // 
             // task1Button
             // 
-            this.task1Button.BackColor = System.Drawing.Color.Goldenrod;
+            this.task1Button.BackColor = System.Drawing.Color.White;
             this.task1Button.CausesValidation = false;
             this.task1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.task1Button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task1Button.Location = new System.Drawing.Point(329, 174);
+            this.task1Button.Location = new System.Drawing.Point(24, 523);
             this.task1Button.Name = "task1Button";
-            this.task1Button.Size = new System.Drawing.Size(193, 134);
+            this.task1Button.Size = new System.Drawing.Size(230, 74);
             this.task1Button.TabIndex = 29;
             this.task1Button.Text = "Task One: Planning";
             this.task1Button.UseVisualStyleBackColor = false;
@@ -312,13 +279,13 @@ namespace ProjectEcho
             // 
             // taskThreeButton
             // 
-            this.taskThreeButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.taskThreeButton.BackColor = System.Drawing.Color.White;
             this.taskThreeButton.CausesValidation = false;
             this.taskThreeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeButton.Location = new System.Drawing.Point(775, 174);
+            this.taskThreeButton.Location = new System.Drawing.Point(24, 525);
             this.taskThreeButton.Name = "taskThreeButton";
-            this.taskThreeButton.Size = new System.Drawing.Size(193, 134);
+            this.taskThreeButton.Size = new System.Drawing.Size(230, 72);
             this.taskThreeButton.TabIndex = 28;
             this.taskThreeButton.Text = "Task Three: Assessing";
             this.taskThreeButton.UseVisualStyleBackColor = false;
@@ -326,30 +293,17 @@ namespace ProjectEcho
             // 
             // taskTwoButton
             // 
-            this.taskTwoButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.taskTwoButton.BackColor = System.Drawing.Color.White;
             this.taskTwoButton.CausesValidation = false;
             this.taskTwoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTwoButton.Location = new System.Drawing.Point(552, 174);
+            this.taskTwoButton.Location = new System.Drawing.Point(24, 525);
             this.taskTwoButton.Name = "taskTwoButton";
-            this.taskTwoButton.Size = new System.Drawing.Size(193, 134);
+            this.taskTwoButton.Size = new System.Drawing.Size(230, 72);
             this.taskTwoButton.TabIndex = 27;
             this.taskTwoButton.Text = "Task Two:   Implementing";
             this.taskTwoButton.UseVisualStyleBackColor = false;
             this.taskTwoButton.Click += new System.EventHandler(this.taskTwoButton_Click);
-            // 
-            // taskOneButton
-            // 
-            this.taskOneButton.BackColor = System.Drawing.Color.GhostWhite;
-            this.taskOneButton.CausesValidation = false;
-            this.taskOneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskOneButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskOneButton.Location = new System.Drawing.Point(999, 174);
-            this.taskOneButton.Name = "taskOneButton";
-            this.taskOneButton.Size = new System.Drawing.Size(193, 134);
-            this.taskOneButton.TabIndex = 26;
-            this.taskOneButton.Text = "Review";
-            this.taskOneButton.UseVisualStyleBackColor = false;
             // 
             // mainPanel
             // 
@@ -364,16 +318,27 @@ namespace ProjectEcho
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1561, 907);
             this.mainPanel.TabIndex = 1;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // recentFilesToolStripMenuItem
+            // 
+            this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
+            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recentFilesToolStripMenuItem.Text = "Recent Files";
+            // 
+            // exitApplicationToolStripMenuItem
+            // 
+            this.exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
+            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitApplicationToolStripMenuItem.Text = "Exit Application";
+            this.exitApplicationToolStripMenuItem.Click += new System.EventHandler(this.exitApplicationToolStripMenuItem_Click);
             // 
             // taskTwo
             // 
-            this.taskTwo.AutoSize = true;
             this.taskTwo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskTwo.BackColor = System.Drawing.Color.DarkBlue;
             this.taskTwo.Location = new System.Drawing.Point(0, 80);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(1482, 712);
+            this.taskTwo.Size = new System.Drawing.Size(1482, 756);
             this.taskTwo.TabIndex = 17;
             this.taskTwo.Visible = false;
             // 
@@ -388,6 +353,99 @@ namespace ProjectEcho
             this.taskOne.Name = "taskOne";
             this.taskOne.Size = new System.Drawing.Size(1558, 740);
             this.taskOne.TabIndex = 16;
+            // 
+            // clearLocalFilesToolStripMenuItem
+            // 
+            this.clearLocalFilesToolStripMenuItem.Name = "clearLocalFilesToolStripMenuItem";
+            this.clearLocalFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearLocalFilesToolStripMenuItem.Text = "Clear Local Files";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.task1Button);
+            this.panel3.Controls.Add(this.taskOneList);
+            this.panel3.Location = new System.Drawing.Point(35, 33);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(283, 634);
+            this.panel3.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(34, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "TASK ONE: PLANNING";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.taskTwoButton);
+            this.panel4.Controls.Add(this.taskTwoList);
+            this.panel4.Location = new System.Drawing.Point(342, 33);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(283, 634);
+            this.panel4.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(245, 23);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "TASK TWO: IMPLEMENTING";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.taskThreeButton);
+            this.panel5.Controls.Add(this.taskThreeList);
+            this.panel5.Location = new System.Drawing.Point(649, 33);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(283, 634);
+            this.panel5.TabIndex = 37;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(245, 23);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "TASK TWO: IMPLEMENTING";
+            // 
+            // taskOneButton
+            // 
+            this.taskOneButton.BackColor = System.Drawing.Color.GhostWhite;
+            this.taskOneButton.CausesValidation = false;
+            this.taskOneButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.taskOneButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskOneButton.Location = new System.Drawing.Point(1107, 33);
+            this.taskOneButton.Name = "taskOneButton";
+            this.taskOneButton.Size = new System.Drawing.Size(193, 134);
+            this.taskOneButton.TabIndex = 26;
+            this.taskOneButton.Text = "Review";
+            this.taskOneButton.UseVisualStyleBackColor = false;
+            // 
+            // reviewList
+            // 
+            this.reviewList.CausesValidation = false;
+            this.reviewList.Enabled = false;
+            this.reviewList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reviewList.FormattingEnabled = true;
+            this.reviewList.Location = new System.Drawing.Point(1106, 216);
+            this.reviewList.Name = "reviewList";
+            this.reviewList.Size = new System.Drawing.Size(193, 79);
+            this.reviewList.TabIndex = 34;
             // 
             // MainForm
             // 
@@ -413,9 +471,14 @@ namespace ProjectEcho
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.mainMenuPanel.ResumeLayout(false);
-            this.mainMenuPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,23 +495,28 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Panel mainMenuPanel;
-        private System.Windows.Forms.CheckedListBox reviewList;
         private System.Windows.Forms.CheckedListBox taskThreeList;
         private System.Windows.Forms.CheckedListBox taskTwoList;
         private System.Windows.Forms.CheckedListBox taskOneList;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button task1Button;
         private System.Windows.Forms.Button taskThreeButton;
         private System.Windows.Forms.Button taskTwoButton;
-        private System.Windows.Forms.Button taskOneButton;
         private System.Windows.Forms.Panel mainPanel;
         private TaskOneUserControl taskOne;
         private TaskTwoUserControl taskTwo;
+        private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearLocalFilesToolStripMenuItem;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckedListBox reviewList;
+        private System.Windows.Forms.Button taskOneButton;
     }
 }
