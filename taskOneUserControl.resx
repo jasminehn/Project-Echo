@@ -131,10 +131,10 @@
 
 </value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
-  </data>
   <data name="label34.Text" xml:space="preserve">
     <value>According to the edTPA 2019 Rubric, these are exact specifications of the Plans for Learning Segment submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
 </root>

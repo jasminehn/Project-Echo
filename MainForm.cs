@@ -93,6 +93,7 @@ namespace ProjectEcho
 
         private void backButton_Click(object sender, EventArgs e)
         {
+
             int i = Array.IndexOf(taskControls, currentControl);
             setControlActive(i - 1);
         }
