@@ -1,40 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-//using Microsoft.AspNetCore.Hosting;
-//using Microsoft.Extensions.Configuration;
-//using Microsoft.Extensions.Hosting;
-//using Microsoft.Extensions.Logging;
-using System.Net.Http.Headers;
 using System.Net.Http;
-using RestSharp;
-//using System.Reflection.Metadata;
-using System.IO;
-using System.IO.Compression;
-using System.Xml;
 using System.Diagnostics;
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Newtonsoft.Json;
+using System.Xml.Linq;
+using System.Text.Json;
+using System.Net.Http.Json;
+using System.Text.Json.Serialization;
+using System.Xml.Serialization;
+using Json.Net;
+using DocumentFormat.OpenXml.Vml.Spreadsheet;
+using System.Data.Common;
+using System.Collections;
+
 
 namespace ProjectEcho
 {
     public class GrammarAPI
     {
         public static String pog = "";
+        public static String idk = "";
 
-        public static async Task CallAPI(String path)
+        public static async Task CallAPI(String filePath)
         {
 
+            GrammarAPI api = new GrammarAPI();
             var first = "";
             var second = " ";
             var third = " ";
-            string mytext = OpenWordprocessingDocumentReadonly(path);
+            string mytext = OpenWordprocessingDocumentReadonly(filePath);
+            api.glossaryCheck(mytext);
             Console.WriteLine("****" + mytext);
-            var words = mytext.Split(new[] { ' ' } , StringSplitOptions.RemoveEmptyEntries);
+            var words = mytext.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries);
             int len = mytext.Length;
             int subLen;
 
@@ -55,6 +56,11 @@ namespace ProjectEcho
                 second = mytext.Substring(10000, subLen);
                 Console.WriteLine("first " + first + " second" + second);
             }
+            else
+            {
+                first = mytext;
+                Console.WriteLine("first " + first);
+            }
 
             try
             {
@@ -65,7 +71,9 @@ namespace ProjectEcho
                     if (mytext.Length > 20000)
                     {
                         Console.WriteLine("*** over 20,000 characters");
+
                         await GrammarCheck(third).ConfigureAwait(false);
+
                     }
                 }
 
@@ -75,17 +83,13 @@ namespace ProjectEcho
                 Trace.WriteLine(ex);
             }
 
-            //  len 11542 sublen 1542
-
         }
 
-        public static String ReturnReport(String path)
+        public static async Task plswork(string path)
         {
-
-            CallAPI(path);
-
-            return pog;
+            await CallAPI(path);
         }
+
 
         public static async Task GrammarCheck(string text)
         {
@@ -95,28 +99,50 @@ namespace ProjectEcho
             {
                 Method = HttpMethod.Post,
                 RequestUri = new Uri("https://grammarbot.p.rapidapi.com/check"),
-                Headers =
-    {
-        { "x-rapidapi-host", "grammarbot.p.rapidapi.com" },
-        { "x-rapidapi-key", "e844609f92msha17811bf70a2da7p1ba5b1jsndb8101bcd3e5" },
-    },
-                Content = new FormUrlEncodedContent(new Dictionary<string, string>
-    {
-        { "text", text }, //the text variable is the string that was converted from the docx file
-        { "language", "en-US" },
-    }),
+                Headers = {
+                    { "x-rapidapi-host", "grammarbot.p.rapidapi.com" }, 
+                    { "x-rapidapi-key", "e844609f92msha17811bf70a2da7p1ba5b1jsndb8101bcd3e5" }, 
+                },
+                
+                //the text variable is the string that was converted from the docx file
+                Content = new FormUrlEncodedContent(new Dictionary<string, string> {
+                    { "text", text },
+                    { "language", "en-US" },
+                }),
             };
+
             using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                string s = getReport(body);
-                Console.WriteLine(s);
-                //Console.WriteLine(body);
+                var v = JsonConvert.DeserializeObject<dynamic>(body);
+                bool item = v.software.premium;
+                bool warn = v.warnings.incompleteResults;
+                string grammarReport = " ";
+                List<string> reportList = new List<string>();
+                foreach (var i in v.matches)
+                {
+                    grammarReport = "Sentence: " + i.sentence + "\n Message: " + i.message + " Offset: " + i.offset.ToString() + "\n Replacements: " + i.replacements + "\n";
+                    reportList.Add(grammarReport);
+                }
+                
+                for (int i = 0; i < reportList.Count; i++)
+                {
+                    reportList[i] = reportList[i].Replace("[", "");
+                    reportList[i] = reportList[i].Replace("]", "");
+                    reportList[i] = reportList[i].Replace("{", "");
+                    reportList[i] = reportList[i].Replace("}", "");
+                }
+                
+                Console.WriteLine(string.Join(" ", reportList));
+                idk += string.Join(" ", reportList);
+                //idk = string.Join(" ", reportList); //only gets the last report bc it's overwritten each time GrammarCheck is called :(
+                // string s = getReport(body);
             }
-
-
         }
+
+
+
         //Converts docx files to string
         public static string OpenWordprocessingDocumentReadonly(string filepath)
         {
@@ -126,33 +152,114 @@ namespace ProjectEcho
                 WordprocessingDocument.Open(filepath, false))
             {
 
-                Body body = wordDocument.MainDocumentPart.Document.Body;
+                Body docInfo = wordDocument.MainDocumentPart.Document.Body;
 
-                string s = body.InnerText.ToString();
+                string docString = docInfo.InnerText.ToString();
 
-                return body.InnerText.ToString();
+                //return docInfo.InnerText.ToString();
+                return docString;
+
             }
 
             //return "1"; //unreachable code
-
         }
+
+
+
 
         //This method will clean up the JSON file so that the report is user friendly
         public static string getReport(string text)
         {
 
             // string docText = "words.. words.. match: spell check";
-
+            string s = "words..... offset: 20";
+            int i = s.IndexOf("offset");
+            //Console.WriteLine("the index is " + i);
+            string n = s.Substring(i, 10);
+            // Console.WriteLine("new string*** " + n);
 
             string cutString = text.Split(new string[] { "matches" }, StringSplitOptions.None).Last();
+            string offSetVals = " ";
 
-
-            //  Console.WriteLine("Old string " + text);
-            Console.WriteLine("New string " + cutString);
             return cutString;
-
 
         }
 
+        public bool glossaryCheck(string documentString)
+        {
+            string[] glossary = {"academic language","active nature of young children's learning:","aligned",
+                   "artifacts:","assessment","personal assets","cultural assets","community assets",
+                   "central focus","commentary","engaging children in learning","evaluation criteria",
+                    "evidence","interdisciplinary","learning environment","learning experience",
+                    "learning objectives", "multimodal nature of young children's learning",
+                    "patterns of learning", "planned supports","prior academic learning and prerequisite skills",
+                    "rapport","respect","rubrics","variety of learners","whole child"};
+            List<string> missingWords = new List<string>();
+            string word = "";
+            bool wordExists = true;
+
+
+            for (int i = 0; i < glossary.Length; i++)
+            {
+                if (documentString.Contains(glossary[i]))
+                {
+
+                    Console.WriteLine("Found word");
+                }
+                else
+                {
+                    word = glossary[i];
+                    missingWords.Add(word);
+                    wordExists = false;
+
+
+                }
+
+            }
+            if (!wordExists)
+            {
+                foreach (var i in missingWords)
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+            
+            return wordExists;
+
+        }
+
+
     }
+    public class Warnings
+    {
+        public bool incompleteResults { get; set; }
+    }
+
+    public class Software
+    {
+
+        public string software { get; set; }
+        public string name { get; set; }
+        public string version { get; set; }
+        public string apiVersion { get; set; }
+        public bool premium { get; set; }
+        public string premiumHint { get; set; }
+        public string status { get; set; }
+
+
+    }
+
+    public class Matches
+    {
+        public string matches { get; set; }
+        public string message { get; set; }
+        public string shortMessage { get; set; }
+        public string replacements { get; set; }
+        public int offset { get; set; }
+        public int length { get; set; }
+        public string sentence { get; set; }
+
+    }
+
 }

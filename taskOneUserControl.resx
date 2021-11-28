@@ -117,12 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label6.Text" xml:space="preserve">
-    <value>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
+  <data name="label69.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Planning Commentary submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
+  <data name="label58.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Assessments submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Instructional Materials submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
 
 </value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Plans for Learning Segment submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
 </root>
