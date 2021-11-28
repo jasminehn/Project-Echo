@@ -180,7 +180,6 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -1191,7 +1190,6 @@ namespace ProjectEcho
             this.taskOnePanel.Controls.Add(this.label8);
             this.taskOnePanel.Controls.Add(this.checkedListBox1);
             this.taskOnePanel.Controls.Add(this.tabControl1);
-            this.taskOnePanel.Controls.Add(this.label6);
             this.taskOnePanel.Location = new System.Drawing.Point(3, 3);
             this.taskOnePanel.Name = "taskOnePanel";
             this.taskOnePanel.Size = new System.Drawing.Size(1501, 787);
@@ -1228,10 +1226,10 @@ namespace ProjectEcho
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 13);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1501, 774);
+            this.tabControl1.Size = new System.Drawing.Size(1501, 787);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -1243,7 +1241,7 @@ namespace ProjectEcho
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1493, 743);
+            this.tabPage1.Size = new System.Drawing.Size(1493, 756);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1264,14 +1262,14 @@ namespace ProjectEcho
             this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(8, 29);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1464, 670);
+            this.panel7.Size = new System.Drawing.Size(1464, 683);
             this.panel7.TabIndex = 21;
             // 
             // warningLabel
             // 
             this.warningLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.warningLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningLabel.Location = new System.Drawing.Point(1177, 112);
+            this.warningLabel.Location = new System.Drawing.Point(1177, 118);
             this.warningLabel.Name = "warningLabel";
             this.warningLabel.Size = new System.Drawing.Size(284, 48);
             this.warningLabel.TabIndex = 41;
@@ -1418,7 +1416,7 @@ namespace ProjectEcho
             this.panel9.BackColor = System.Drawing.Color.DarkBlue;
             this.panel9.Controls.Add(this.uploadButton1A);
             this.panel9.Controls.Add(this.label17);
-            this.panel9.Location = new System.Drawing.Point(1177, 43);
+            this.panel9.Location = new System.Drawing.Point(1177, 49);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 66);
             this.panel9.TabIndex = 34;
@@ -1468,7 +1466,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(1177, 163);
+            this.panel1.Location = new System.Drawing.Point(1177, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 289);
             this.panel1.TabIndex = 32;
@@ -1605,7 +1603,7 @@ namespace ProjectEcho
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 740);
+            this.panel2.Location = new System.Drawing.Point(3, 753);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1487, 0);
             this.panel2.TabIndex = 19;
@@ -1944,16 +1942,6 @@ namespace ProjectEcho
             this.label24.TabIndex = 23;
             this.label24.Text = "Plans for Learning Segment";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(868, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = resources.GetString("label6.Text");
-            // 
             // TaskOneUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2177,6 +2165,5 @@ namespace ProjectEcho
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox grammarBox;
         private System.Windows.Forms.Label warningLabel;
-        private System.Windows.Forms.Label label6;
     }
 }

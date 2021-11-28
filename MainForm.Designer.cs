@@ -29,6 +29,7 @@ namespace ProjectEcho
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.returnToMenuButton = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@ namespace ProjectEcho
             this.label3 = new System.Windows.Forms.Label();
             this.taskOneButton = new System.Windows.Forms.Button();
             this.reviewList = new System.Windows.Forms.CheckedListBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -447,6 +449,10 @@ namespace ProjectEcho
             this.reviewList.Size = new System.Drawing.Size(193, 79);
             this.reviewList.TabIndex = 34;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,5 +524,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox reviewList;
         private System.Windows.Forms.Button taskOneButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

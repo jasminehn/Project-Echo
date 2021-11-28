@@ -189,5 +189,10 @@ namespace ProjectEcho
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            //toolTip1.SetToolTip(helpToolStripMenuItem, "View the edTPA Submission Rubric");
+        }
     }
 }
