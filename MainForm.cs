@@ -56,7 +56,7 @@ namespace ProjectEcho
              */
             taskControls[0] = t1; // purposely empty
             taskControls[1] = taskOne; // taskOne is created in the Designer
-            taskControls[2] = taskTwo; // taskTwo is created in the Designer
+            taskControls[2] = taskTwoUserControl1; // taskTwo is created in the Designer
             taskControls[3] = taskOne;  // Will be changed once Task Three is built.
 
             currentControl = taskControls[0]; // When the 
@@ -68,8 +68,8 @@ namespace ProjectEcho
             taskTwoList.Items.AddRange(taskTwoArray);
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
             taskThreeList.Items.AddRange(taskThreeArray);
-            string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
-            reviewList.Items.AddRange(reviewArray);
+            //string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
+            //reviewList.Items.AddRange(reviewArray);
 
             //create user uploads folder
             string userUploadsPath = Environment.CurrentDirectory + "\\UserUploads";
@@ -192,7 +192,7 @@ namespace ProjectEcho
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
-            //toolTip1.SetToolTip(helpToolStripMenuItem, "View the edTPA Submission Rubric");
+            toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
         }
     }
 }
