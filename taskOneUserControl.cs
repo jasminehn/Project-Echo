@@ -123,6 +123,5 @@ namespace ProjectEcho
             //Console.WriteLine(report);
             grammarBox.Text = report;
         }
-
     }
 }
