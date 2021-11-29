@@ -126,6 +126,9 @@
   <data name="label46.Text" xml:space="preserve">
     <value>According to the edTPA 2019 Rubric, these are exact specifications of the Instructional Materials submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
   </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Plans for Learning Segment submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -533,8 +536,5 @@
     <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
 
 </value>
-  </data>
-  <data name="label34.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Plans for Learning Segment submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
   </data>
 </root>
