@@ -104,7 +104,7 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.progressBar4);
             this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Location = new System.Drawing.Point(617, 252);
+            this.panel5.Location = new System.Drawing.Point(584, 251);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(327, 56);
             this.panel5.TabIndex = 46;
@@ -287,7 +287,7 @@ namespace ProjectEcho
             this.panel7.Controls.Add(this.button1);
             this.panel7.Location = new System.Drawing.Point(544, 15);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(961, 322);
+            this.panel7.Size = new System.Drawing.Size(930, 322);
             this.panel7.TabIndex = 24;
             // 
             // panel8
@@ -313,7 +313,7 @@ namespace ProjectEcho
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(961, 29);
+            this.panel10.Size = new System.Drawing.Size(930, 29);
             this.panel10.TabIndex = 26;
             // 
             // label12
@@ -386,7 +386,7 @@ namespace ProjectEcho
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(549, 253);
+            this.button1.Location = new System.Drawing.Point(442, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 55);
             this.button1.TabIndex = 22;
@@ -431,7 +431,7 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.panel13);
             this.panel3.Location = new System.Drawing.Point(544, 394);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(961, 331);
+            this.panel3.Size = new System.Drawing.Size(930, 331);
             this.panel3.TabIndex = 42;
             // 
             // panel1
@@ -442,7 +442,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(617, 251);
+            this.panel1.Location = new System.Drawing.Point(553, 251);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 56);
             this.panel1.TabIndex = 49;
@@ -487,7 +487,7 @@ namespace ProjectEcho
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(549, 252);
+            this.button4.Location = new System.Drawing.Point(442, 254);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 53);
             this.button4.TabIndex = 48;
@@ -525,7 +525,7 @@ namespace ProjectEcho
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(961, 29);
+            this.panel12.Size = new System.Drawing.Size(930, 29);
             this.panel12.TabIndex = 46;
             // 
             // label6
@@ -596,7 +596,7 @@ namespace ProjectEcho
             // clipTwoFrame
             // 
             this.clipTwoFrame.Enabled = true;
-            this.clipTwoFrame.Location = new System.Drawing.Point(617, 61);
+            this.clipTwoFrame.Location = new System.Drawing.Point(584, 61);
             this.clipTwoFrame.Name = "clipTwoFrame";
             this.clipTwoFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipTwoFrame.OcxState")));
             this.clipTwoFrame.Size = new System.Drawing.Size(327, 184);
@@ -605,7 +605,7 @@ namespace ProjectEcho
             // clipOneFrame
             // 
             this.clipOneFrame.Enabled = true;
-            this.clipOneFrame.Location = new System.Drawing.Point(618, 62);
+            this.clipOneFrame.Location = new System.Drawing.Point(584, 62);
             this.clipOneFrame.Name = "clipOneFrame";
             this.clipOneFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipOneFrame.OcxState")));
             this.clipOneFrame.Size = new System.Drawing.Size(327, 184);
@@ -617,7 +617,7 @@ namespace ProjectEcho
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.DarkBlue;
+            this.BackColor = System.Drawing.Color.Navy;
             this.Controls.Add(this.panel9);
             this.Name = "TaskTwoUserControl";
             this.Size = new System.Drawing.Size(1529, 809);

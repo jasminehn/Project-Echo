@@ -243,7 +243,7 @@ namespace ProjectEcho
             this.mainMenuPanel.Controls.Add(this.panel3);
             this.mainMenuPanel.Location = new System.Drawing.Point(0, 80);
             this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(1916, 874);
+            this.mainMenuPanel.Size = new System.Drawing.Size(1926, 874);
             this.mainMenuPanel.TabIndex = 15;
             // 
             // panel5
