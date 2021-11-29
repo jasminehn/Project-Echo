@@ -386,7 +386,7 @@ namespace ProjectEcho
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(442, 252);
+            this.button1.Location = new System.Drawing.Point(528, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 55);
             this.button1.TabIndex = 22;
@@ -442,9 +442,9 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(553, 251);
+            this.panel1.Location = new System.Drawing.Point(584, 251);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 56);
+            this.panel1.Size = new System.Drawing.Size(327, 56);
             this.panel1.TabIndex = 49;
             // 
             // label4
@@ -487,7 +487,7 @@ namespace ProjectEcho
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(442, 254);
+            this.button4.Location = new System.Drawing.Point(528, 254);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 53);
             this.button4.TabIndex = 48;
