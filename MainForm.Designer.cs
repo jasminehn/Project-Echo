@@ -252,9 +252,9 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.taskThreeButton);
             this.panel5.Controls.Add(this.taskThreeList);
-            this.panel5.Location = new System.Drawing.Point(1189, 53);
+            this.panel5.Location = new System.Drawing.Point(1284, 29);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(423, 634);
+            this.panel5.Size = new System.Drawing.Size(593, 803);
             this.panel5.TabIndex = 37;
             // 
             // label3
@@ -274,9 +274,9 @@ namespace ProjectEcho
             this.taskThreeButton.CausesValidation = false;
             this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskThreeButton.Location = new System.Drawing.Point(21, 572);
+            this.taskThreeButton.Location = new System.Drawing.Point(16, 732);
             this.taskThreeButton.Name = "taskThreeButton";
-            this.taskThreeButton.Size = new System.Drawing.Size(386, 48);
+            this.taskThreeButton.Size = new System.Drawing.Size(559, 48);
             this.taskThreeButton.TabIndex = 28;
             this.taskThreeButton.Text = "CLICK HERE TO GO TO TASK THREE";
             this.taskThreeButton.UseVisualStyleBackColor = false;
@@ -302,9 +302,9 @@ namespace ProjectEcho
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.taskTwoButton);
             this.panel4.Controls.Add(this.taskTwoList);
-            this.panel4.Location = new System.Drawing.Point(739, 53);
+            this.panel4.Location = new System.Drawing.Point(658, 29);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(423, 634);
+            this.panel4.Size = new System.Drawing.Size(593, 803);
             this.panel4.TabIndex = 36;
             // 
             // label2
@@ -324,9 +324,9 @@ namespace ProjectEcho
             this.taskTwoButton.CausesValidation = false;
             this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskTwoButton.Location = new System.Drawing.Point(24, 572);
+            this.taskTwoButton.Location = new System.Drawing.Point(15, 732);
             this.taskTwoButton.Name = "taskTwoButton";
-            this.taskTwoButton.Size = new System.Drawing.Size(386, 48);
+            this.taskTwoButton.Size = new System.Drawing.Size(559, 48);
             this.taskTwoButton.TabIndex = 27;
             this.taskTwoButton.Text = "CLICK HERE TO GO TO TASK TWO";
             this.taskTwoButton.UseVisualStyleBackColor = false;
@@ -352,9 +352,9 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.task1Button);
             this.panel3.Controls.Add(this.taskOneList);
-            this.panel3.Location = new System.Drawing.Point(289, 53);
+            this.panel3.Location = new System.Drawing.Point(32, 29);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(423, 634);
+            this.panel3.Size = new System.Drawing.Size(593, 803);
             this.panel3.TabIndex = 35;
             // 
             // label1
@@ -374,9 +374,9 @@ namespace ProjectEcho
             this.task1Button.CausesValidation = false;
             this.task1Button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.task1Button.ForeColor = System.Drawing.Color.Navy;
-            this.task1Button.Location = new System.Drawing.Point(21, 572);
+            this.task1Button.Location = new System.Drawing.Point(13, 732);
             this.task1Button.Name = "task1Button";
-            this.task1Button.Size = new System.Drawing.Size(386, 48);
+            this.task1Button.Size = new System.Drawing.Size(559, 48);
             this.task1Button.TabIndex = 29;
             this.task1Button.Text = "CLICK HERE TO GO TO TASK ONE";
             this.task1Button.UseVisualStyleBackColor = false;
