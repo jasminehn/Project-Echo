@@ -32,9 +32,6 @@ namespace ProjectEcho
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.returnToMenuButton = new System.Windows.Forms.Button();
-            this.forwardButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.titleSubtitleLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
@@ -60,9 +57,12 @@ namespace ProjectEcho
             this.task1Button = new System.Windows.Forms.Button();
             this.taskOneList = new System.Windows.Forms.CheckedListBox();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.returnToMenuButton = new System.Windows.Forms.Button();
+            this.forwardButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.taskTwoUserControl1 = new ProjectEcho.TaskTwoUserControl();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,53 +85,6 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1904, 81);
             this.panel1.TabIndex = 10;
-            // 
-            // returnToMenuButton
-            // 
-            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
-            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
-            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnToMenuButton.Location = new System.Drawing.Point(12, 16);
-            this.returnToMenuButton.Name = "returnToMenuButton";
-            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
-            this.returnToMenuButton.TabIndex = 2;
-            this.returnToMenuButton.UseVisualStyleBackColor = false;
-            this.returnToMenuButton.Visible = false;
-            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
-            // 
-            // forwardButton
-            // 
-            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
-            this.forwardButton.FlatAppearance.BorderSize = 0;
-            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
-            this.forwardButton.Location = new System.Drawing.Point(1845, 3);
-            this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(51, 55);
-            this.forwardButton.TabIndex = 1;
-            this.forwardButton.UseVisualStyleBackColor = false;
-            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.FlatAppearance.BorderSize = 0;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
-            this.backButton.Location = new System.Drawing.Point(1788, 3);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(51, 55);
-            this.backButton.TabIndex = 0;
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Visible = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // titlePanel
             // 
@@ -252,9 +205,9 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.taskThreeButton);
             this.panel5.Controls.Add(this.taskThreeList);
-            this.panel5.Location = new System.Drawing.Point(1284, 29);
+            this.panel5.Location = new System.Drawing.Point(1299, 15);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(593, 803);
+            this.panel5.Size = new System.Drawing.Size(593, 842);
             this.panel5.TabIndex = 37;
             // 
             // label3
@@ -272,11 +225,12 @@ namespace ProjectEcho
             // 
             this.taskThreeButton.BackColor = System.Drawing.Color.White;
             this.taskThreeButton.CausesValidation = false;
+            this.taskThreeButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskThreeButton.Location = new System.Drawing.Point(16, 732);
+            this.taskThreeButton.Location = new System.Drawing.Point(0, 794);
             this.taskThreeButton.Name = "taskThreeButton";
-            this.taskThreeButton.Size = new System.Drawing.Size(559, 48);
+            this.taskThreeButton.Size = new System.Drawing.Size(593, 48);
             this.taskThreeButton.TabIndex = 28;
             this.taskThreeButton.Text = "CLICK HERE TO GO TO TASK THREE";
             this.taskThreeButton.UseVisualStyleBackColor = false;
@@ -302,9 +256,9 @@ namespace ProjectEcho
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.taskTwoButton);
             this.panel4.Controls.Add(this.taskTwoList);
-            this.panel4.Location = new System.Drawing.Point(658, 29);
+            this.panel4.Location = new System.Drawing.Point(658, 15);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(593, 803);
+            this.panel4.Size = new System.Drawing.Size(593, 842);
             this.panel4.TabIndex = 36;
             // 
             // label2
@@ -322,11 +276,12 @@ namespace ProjectEcho
             // 
             this.taskTwoButton.BackColor = System.Drawing.Color.White;
             this.taskTwoButton.CausesValidation = false;
+            this.taskTwoButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskTwoButton.Location = new System.Drawing.Point(15, 732);
+            this.taskTwoButton.Location = new System.Drawing.Point(0, 794);
             this.taskTwoButton.Name = "taskTwoButton";
-            this.taskTwoButton.Size = new System.Drawing.Size(559, 48);
+            this.taskTwoButton.Size = new System.Drawing.Size(593, 48);
             this.taskTwoButton.TabIndex = 27;
             this.taskTwoButton.Text = "CLICK HERE TO GO TO TASK TWO";
             this.taskTwoButton.UseVisualStyleBackColor = false;
@@ -341,20 +296,20 @@ namespace ProjectEcho
             this.taskTwoList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoList.ForeColor = System.Drawing.Color.White;
             this.taskTwoList.FormattingEnabled = true;
-            this.taskTwoList.Location = new System.Drawing.Point(38, 55);
+            this.taskTwoList.Location = new System.Drawing.Point(24, 65);
             this.taskTwoList.Name = "taskTwoList";
             this.taskTwoList.Size = new System.Drawing.Size(201, 75);
             this.taskTwoList.TabIndex = 32;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel3.BackColor = System.Drawing.Color.Navy;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.task1Button);
             this.panel3.Controls.Add(this.taskOneList);
-            this.panel3.Location = new System.Drawing.Point(32, 29);
+            this.panel3.Location = new System.Drawing.Point(12, 15);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(593, 803);
+            this.panel3.Size = new System.Drawing.Size(593, 842);
             this.panel3.TabIndex = 35;
             // 
             // label1
@@ -362,7 +317,7 @@ namespace ProjectEcho
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 10);
+            this.label1.Location = new System.Drawing.Point(9, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 23);
             this.label1.TabIndex = 30;
@@ -372,11 +327,12 @@ namespace ProjectEcho
             // 
             this.task1Button.BackColor = System.Drawing.Color.White;
             this.task1Button.CausesValidation = false;
+            this.task1Button.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.task1Button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.task1Button.ForeColor = System.Drawing.Color.Navy;
-            this.task1Button.Location = new System.Drawing.Point(13, 732);
+            this.task1Button.Location = new System.Drawing.Point(0, 794);
             this.task1Button.Name = "task1Button";
-            this.task1Button.Size = new System.Drawing.Size(559, 48);
+            this.task1Button.Size = new System.Drawing.Size(593, 48);
             this.task1Button.TabIndex = 29;
             this.task1Button.Text = "CLICK HERE TO GO TO TASK ONE";
             this.task1Button.UseVisualStyleBackColor = false;
@@ -384,16 +340,16 @@ namespace ProjectEcho
             // 
             // taskOneList
             // 
-            this.taskOneList.BackColor = System.Drawing.Color.Goldenrod;
+            this.taskOneList.BackColor = System.Drawing.Color.Navy;
             this.taskOneList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.taskOneList.CausesValidation = false;
             this.taskOneList.Enabled = false;
-            this.taskOneList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskOneList.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskOneList.ForeColor = System.Drawing.Color.White;
             this.taskOneList.FormattingEnabled = true;
-            this.taskOneList.Location = new System.Drawing.Point(38, 55);
+            this.taskOneList.Location = new System.Drawing.Point(36, 55);
             this.taskOneList.Name = "taskOneList";
-            this.taskOneList.Size = new System.Drawing.Size(201, 75);
+            this.taskOneList.Size = new System.Drawing.Size(494, 126);
             this.taskOneList.TabIndex = 31;
             // 
             // mainPanel
@@ -410,6 +366,57 @@ namespace ProjectEcho
             this.mainPanel.Size = new System.Drawing.Size(1904, 1041);
             this.mainPanel.TabIndex = 1;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // returnToMenuButton
+            // 
+            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
+            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
+            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMenuButton.Location = new System.Drawing.Point(12, 16);
+            this.returnToMenuButton.Name = "returnToMenuButton";
+            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
+            this.returnToMenuButton.TabIndex = 2;
+            this.returnToMenuButton.UseVisualStyleBackColor = false;
+            this.returnToMenuButton.Visible = false;
+            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
+            // 
+            // forwardButton
+            // 
+            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
+            this.forwardButton.FlatAppearance.BorderSize = 0;
+            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
+            this.forwardButton.Location = new System.Drawing.Point(1845, 3);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(51, 55);
+            this.forwardButton.TabIndex = 1;
+            this.forwardButton.UseVisualStyleBackColor = false;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
+            this.backButton.Location = new System.Drawing.Point(1788, 3);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(51, 55);
+            this.backButton.TabIndex = 0;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Visible = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // taskOne
             // 
             this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -417,6 +424,7 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.taskOne.AutoSize = true;
             this.taskOne.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.taskOne.BackColor = System.Drawing.Color.Navy;
             this.taskOne.Location = new System.Drawing.Point(0, 80);
             this.taskOne.Name = "taskOne";
             this.taskOne.Size = new System.Drawing.Size(1904, 871);
@@ -431,10 +439,6 @@ namespace ProjectEcho
             this.taskTwoUserControl1.Name = "taskTwoUserControl1";
             this.taskTwoUserControl1.Size = new System.Drawing.Size(1941, 874);
             this.taskTwoUserControl1.TabIndex = 17;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // MainForm
             // 
