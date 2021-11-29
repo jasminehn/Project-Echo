@@ -56,8 +56,8 @@ namespace ProjectEcho
              */
             taskControls[0] = t1; // purposely empty
             taskControls[1] = taskOne; // taskOne is created in the Designer
-            taskControls[2] = taskTwo; // taskTwo is created in the Designer
-            taskControls[3] = t1;  // Will be changed once Task Three is built.
+            taskControls[2] = taskTwoUserControl1; // taskTwo is created in the Designer
+            taskControls[3] = taskOne;  // Will be changed once Task Three is built.
 
             currentControl = taskControls[0]; // When the 
             taskOne.Visible = false;
@@ -68,8 +68,8 @@ namespace ProjectEcho
             taskTwoList.Items.AddRange(taskTwoArray);
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
             taskThreeList.Items.AddRange(taskThreeArray);
-            string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
-            reviewList.Items.AddRange(reviewArray);
+            //string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
+            //reviewList.Items.AddRange(reviewArray);
 
             //create user uploads folder
             string userUploadsPath = Environment.CurrentDirectory + "\\UserUploads";
@@ -84,18 +84,6 @@ namespace ProjectEcho
             catch (Exception)
             {
                 //fail silently
-            }
-        }
-
-
-
-        private void settingsButton_Click(object sender, EventArgs e)
-        {
-            SettingsForm sf = new SettingsForm();
-
-            if(sf.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Settings opened");
             }
         }
 
@@ -170,26 +158,41 @@ namespace ProjectEcho
             
         }        
 
-        //Executes when the help button is clicked
-        private void helpButton_Click(object sender, EventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Creates the form that displays
             saveHelpResource++;
             if(saveHelpResource == 0)
             {
-                if (hf.ShowDialog() == DialogResult.OK)
+                if(hf.ShowDialog() == DialogResult.OK)
                 {
                     Console.Write("Help opened");
                 }
-            } else
+            }
+            else
             {
                 hf.Show();
             }
         }
 
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SettingsForm sf = new SettingsForm();
 
+            if(sf.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Settings opened");
+            }
+        }
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
         }
     }
 }

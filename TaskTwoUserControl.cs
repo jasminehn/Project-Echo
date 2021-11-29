@@ -20,13 +20,13 @@ namespace ProjectEcho
         public TaskTwoUserControl()
         {
             InitializeComponent();
-            this.clipOneFrame.uiMode = "mini";
-            this.clipOneFrame.Enabled = true;
+            //this.clipOneFrame.uiMode = "mini";
+            //this.clipOneFrame.Enabled = true;
             
             //clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
-            this.clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
+            //this.clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
             //this.clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
-            this.clipTwoFrame.uiMode = "mini";
+            //this.clipTwoFrame.uiMode = "mini";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace ProjectEcho
 
         private void PlayFile(String path)
         {
-            clipOneFrame.URL = path;
+            //clipOneFrame.URL = path;
             //clipOneFrame.Ctlcontrols.play();
         }
 
@@ -141,7 +141,7 @@ namespace ProjectEcho
 
         private void button4_Click(object sender, EventArgs e)
         {
-            clipOneFrame.Ctlcontrols.play();
+            //clipOneFrame.Ctlcontrols.play();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
