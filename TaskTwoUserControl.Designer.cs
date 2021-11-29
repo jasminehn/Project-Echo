@@ -47,7 +47,6 @@ namespace ProjectEcho
             this.label7 = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.clipOneFrame = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -59,7 +58,6 @@ namespace ProjectEcho
             this.label5 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.clipTwoFrame = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -102,24 +100,30 @@ namespace ProjectEcho
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clipTwoFrame)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel28.SuspendLayout();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -130,7 +134,7 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.progressBar4);
             this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Location = new System.Drawing.Point(584, 251);
+            this.panel5.Location = new System.Drawing.Point(13, 275);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(327, 56);
             this.panel5.TabIndex = 46;
@@ -336,31 +340,21 @@ namespace ProjectEcho
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.clipOneFrame);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.panel5);
             this.panel7.Controls.Add(this.panel6);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.button1);
-            this.panel7.Location = new System.Drawing.Point(544, 15);
+            this.panel7.Location = new System.Drawing.Point(560, 24);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(930, 322);
+            this.panel7.Size = new System.Drawing.Size(768, 343);
             this.panel7.TabIndex = 24;
-            // 
-            // clipOneFrame
-            // 
-            this.clipOneFrame.Enabled = true;
-            this.clipOneFrame.Location = new System.Drawing.Point(584, 62);
-            this.clipOneFrame.Name = "clipOneFrame";
-            this.clipOneFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipOneFrame.OcxState")));
-            this.clipOneFrame.Size = new System.Drawing.Size(327, 184);
-            this.clipOneFrame.TabIndex = 47;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(264, 143);
+            this.panel8.Location = new System.Drawing.Point(264, 146);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(259, 84);
             this.panel8.TabIndex = 41;
@@ -380,7 +374,7 @@ namespace ProjectEcho
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(930, 29);
+            this.panel10.Size = new System.Drawing.Size(768, 29);
             this.panel10.TabIndex = 26;
             // 
             // label12
@@ -398,7 +392,7 @@ namespace ProjectEcho
             // 
             this.panel6.Controls.Add(this.t1paCL);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Location = new System.Drawing.Point(19, 143);
+            this.panel6.Location = new System.Drawing.Point(19, 146);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(239, 84);
             this.panel6.TabIndex = 38;
@@ -436,7 +430,7 @@ namespace ProjectEcho
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 38);
+            this.label13.Location = new System.Drawing.Point(10, 39);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(565, 110);
             this.label13.TabIndex = 16;
@@ -460,38 +454,29 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.AutoSize = true;
             this.panel9.BackColor = System.Drawing.Color.Navy;
+            this.panel9.Controls.Add(this.panel28);
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.panel7);
             this.panel9.Controls.Add(this.panel2);
             this.panel9.Location = new System.Drawing.Point(4, 13);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1522, 793);
+            this.panel9.Size = new System.Drawing.Size(1862, 800);
             this.panel9.TabIndex = 21;
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.clipTwoFrame);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.panel12);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel13);
-            this.panel3.Location = new System.Drawing.Point(544, 394);
+            this.panel3.Location = new System.Drawing.Point(560, 380);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(930, 331);
+            this.panel3.Size = new System.Drawing.Size(768, 343);
             this.panel3.TabIndex = 42;
-            // 
-            // clipTwoFrame
-            // 
-            this.clipTwoFrame.Enabled = true;
-            this.clipTwoFrame.Location = new System.Drawing.Point(584, 61);
-            this.clipTwoFrame.Name = "clipTwoFrame";
-            this.clipTwoFrame.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("clipTwoFrame.OcxState")));
-            this.clipTwoFrame.Size = new System.Drawing.Size(327, 184);
-            this.clipTwoFrame.TabIndex = 50;
             // 
             // panel1
             // 
@@ -501,7 +486,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(584, 251);
+            this.panel1.Location = new System.Drawing.Point(13, 274);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 56);
             this.panel1.TabIndex = 49;
@@ -542,7 +527,7 @@ namespace ProjectEcho
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(930, 29);
+            this.panel12.Size = new System.Drawing.Size(768, 29);
             this.panel12.TabIndex = 46;
             // 
             // label6
@@ -632,7 +617,7 @@ namespace ProjectEcho
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(513, 793);
+            this.panel2.Size = new System.Drawing.Size(513, 800);
             this.panel2.TabIndex = 25;
             // 
             // button4
@@ -646,9 +631,9 @@ namespace ProjectEcho
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(528, 254);
+            this.button4.Location = new System.Drawing.Point(703, 36);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 53);
+            this.button4.Size = new System.Drawing.Size(50, 65);
             this.button4.TabIndex = 48;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -663,9 +648,9 @@ namespace ProjectEcho
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(528, 252);
+            this.button1.Location = new System.Drawing.Point(703, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 55);
+            this.button1.Size = new System.Drawing.Size(50, 76);
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -892,6 +877,60 @@ namespace ProjectEcho
             this.checkBox14.TabIndex = 47;
             this.checkBox14.UseVisualStyleBackColor = true;
             // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Transparent;
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Controls.Add(this.pictureBox1);
+            this.panel28.Location = new System.Drawing.Point(1430, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(429, 766);
+            this.panel28.TabIndex = 43;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel29.Controls.Add(this.label16);
+            this.panel29.Controls.Add(this.richTextBox1);
+            this.panel29.Location = new System.Drawing.Point(30, 57);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(387, 699);
+            this.panel29.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("MV Boli", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(115, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(172, 21);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "TASK TWO NOTES";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.AcceptsTab = true;
+            this.richTextBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(14, 36);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox1.Size = new System.Drawing.Size(361, 591);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "Want to leave some notes for your future self? Write them here.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(399, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // TaskTwoUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -901,7 +940,7 @@ namespace ProjectEcho
             this.BackColor = System.Drawing.Color.Navy;
             this.Controls.Add(this.panel9);
             this.Name = "TaskTwoUserControl";
-            this.Size = new System.Drawing.Size(1529, 809);
+            this.Size = new System.Drawing.Size(1869, 816);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -910,7 +949,6 @@ namespace ProjectEcho
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.clipOneFrame)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -919,7 +957,6 @@ namespace ProjectEcho
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.clipTwoFrame)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -930,6 +967,10 @@ namespace ProjectEcho
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.panel28.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -975,13 +1016,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button1;
-        private AxWMPLib.AxWindowsMediaPlayer clipTwoFrame;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button button4;
-        private AxWMPLib.AxWindowsMediaPlayer clipOneFrame;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -1008,5 +1047,10 @@ namespace ProjectEcho
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
