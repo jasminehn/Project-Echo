@@ -184,6 +184,11 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -220,6 +225,7 @@ namespace ProjectEcho
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel30.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -1312,6 +1318,7 @@ namespace ProjectEcho
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Controls.Add(this.panel30);
             this.panel7.Controls.Add(this.warningLabel);
             this.panel7.Controls.Add(this.panel27);
             this.panel7.Controls.Add(this.panel10);
@@ -1341,7 +1348,7 @@ namespace ProjectEcho
             // 
             this.panel27.Controls.Add(this.label28);
             this.panel27.Controls.Add(this.listBox1);
-            this.panel27.Location = new System.Drawing.Point(546, 123);
+            this.panel27.Location = new System.Drawing.Point(739, 252);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(223, 409);
             this.panel27.TabIndex = 40;
@@ -1349,9 +1356,9 @@ namespace ProjectEcho
             // label28
             // 
             this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(3, 7);
+            this.label28.Location = new System.Drawing.Point(6, 7);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(217, 20);
+            this.label28.Size = new System.Drawing.Size(172, 20);
             this.label28.TabIndex = 35;
             this.label28.Text = "CONTENT ANALYSIS:";
             // 
@@ -1370,7 +1377,7 @@ namespace ProjectEcho
             this.panel10.Controls.Add(this.grammarBox);
             this.panel10.Controls.Add(this.foundGrammarIssuesLabel);
             this.panel10.Controls.Add(this.grammarErrorsBox);
-            this.panel10.Location = new System.Drawing.Point(262, 123);
+            this.panel10.Location = new System.Drawing.Point(382, 252);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(278, 409);
             this.panel10.TabIndex = 39;
@@ -1405,13 +1412,15 @@ namespace ProjectEcho
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.label40);
+            this.panel8.Controls.Add(this.checkedListBox2);
             this.panel8.Controls.Add(this.checkedListBox6);
             this.panel8.Controls.Add(this.t1paCL);
             this.panel8.Controls.Add(this.label14);
             this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(13, 123);
+            this.panel8.Location = new System.Drawing.Point(14, 113);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(243, 327);
+            this.panel8.Size = new System.Drawing.Size(991, 126);
             this.panel8.TabIndex = 38;
             // 
             // checkedListBox6
@@ -1425,7 +1434,7 @@ namespace ProjectEcho
             "No Spelling Issues",
             "No Grammar Issues",
             "No Style Issues"});
-            this.checkedListBox6.Location = new System.Drawing.Point(21, 146);
+            this.checkedListBox6.Location = new System.Drawing.Point(368, 34);
             this.checkedListBox6.MinimumSize = new System.Drawing.Size(180, 72);
             this.checkedListBox6.Name = "checkedListBox6";
             this.checkedListBox6.Size = new System.Drawing.Size(180, 72);
@@ -1443,7 +1452,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font",
             "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(21, 30);
+            this.t1paCL.Location = new System.Drawing.Point(8, 34);
             this.t1paCL.MinimumSize = new System.Drawing.Size(180, 72);
             this.t1paCL.Name = "t1paCL";
             this.t1paCL.Size = new System.Drawing.Size(180, 72);
@@ -1458,18 +1467,18 @@ namespace ProjectEcho
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(148, 20);
             this.label14.TabIndex = 18;
-            this.label14.Text = "FORMAT AND STYLE:";
+            this.label14.Text = "FORMAT AND STYLE";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(4, 123);
+            this.label15.Location = new System.Drawing.Point(364, 7);
             this.label15.MinimumSize = new System.Drawing.Size(96, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(96, 20);
             this.label15.TabIndex = 20;
-            this.label15.Text = "GRAMMAR:";
+            this.label15.Text = "GRAMMAR";
             // 
             // panel9
             // 
@@ -1990,6 +1999,58 @@ namespace ProjectEcho
             this.label24.TabIndex = 23;
             this.label24.Text = "Plans for Learning Segment";
             // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.textBox1);
+            this.panel30.Controls.Add(this.label23);
+            this.panel30.Location = new System.Drawing.Point(22, 252);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(278, 409);
+            this.panel30.TabIndex = 42;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 60);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(268, 334);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(3, 7);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(231, 20);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "FORMAT AND STYLE FEEDBACK:";
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox2.Enabled = false;
+            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "Contains all required words"});
+            this.checkedListBox2.Location = new System.Drawing.Point(725, 34);
+            this.checkedListBox2.MinimumSize = new System.Drawing.Size(180, 72);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(209, 72);
+            this.checkedListBox2.TabIndex = 37;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(721, 7);
+            this.label40.MinimumSize = new System.Drawing.Size(96, 20);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(96, 20);
+            this.label40.TabIndex = 38;
+            this.label40.Text = "CONTENT";
+            // 
             // TaskOneUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2063,6 +2124,8 @@ namespace ProjectEcho
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2222,5 +2285,10 @@ namespace ProjectEcho
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
     }
 }
