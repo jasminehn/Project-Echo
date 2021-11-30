@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectEcho
 {
-    class DocumentHandler
+    internal class DocumentHandler
     {
         public String uploadDocument(int currentTask, string currentPart)
         {
@@ -28,7 +24,7 @@ namespace ProjectEcho
                     path = Path.GetFullPath(fileName);
 
                     string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
-                    string extension = Path.GetExtension(fileName); //gets only the file extension                    
+                    string extension = Path.GetExtension(fileName); //gets only the file extension
 
                     //gets task part name (i.e. task 1 part "A")
                     string currentTab = "x"; //placeholder
@@ -57,15 +53,13 @@ namespace ProjectEcho
 
                     //deletes all files in task/part folder
                     DirectoryInfo di = new DirectoryInfo(taskUploadsPath);
-                    foreach (FileInfo file in di.GetFiles())
+                    foreach(FileInfo file in di.GetFiles())
                     {
                         file.Delete();
                     }
 
                     File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
-                    
                 }
-
             }
             return path;
         }
@@ -84,20 +78,19 @@ namespace ProjectEcho
             try
             {
                 //if the directory exists, read all files from it
-                if (Directory.Exists(taskUploadsPath))
+                if(Directory.Exists(taskUploadsPath))
                 {
                     DirectoryInfo d = new DirectoryInfo(taskUploadsPath); //set directory
                     FileInfo[] Files = d.GetFiles(); //get all files from the folder
                     //string str = "";
 
-                    foreach (FileInfo file in Files)
+                    foreach(FileInfo file in Files)
                     {
                         str = str + "\n" + file.Name; //adds each file name to the string
                     }
-
                 }
             }
-            catch (Exception)
+            catch(Exception)
             {
                 //do nothing
             }
@@ -106,8 +99,6 @@ namespace ProjectEcho
 
         public void addToDirectory()
         {
-
         }
     }
-    
 }
