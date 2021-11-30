@@ -31,7 +31,7 @@ namespace ProjectEcho
                     string extension = Path.GetExtension(fileName); //gets only the file extension                    
 
                     //gets task part name (i.e. task 1 part "A")
-                    string currentTab = "x";
+                    string currentTab = "x"; //placeholder
                     currentTab = currentPart;
                     char currentTabLetter = currentTab[currentTab.Length - 1];
 
