@@ -81,7 +81,7 @@ namespace ProjectEcho
             this.t1paCL = new System.Windows.Forms.CheckedListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.clipOneUpload = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -207,7 +207,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.Controls.Add(this.checkBox12, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.checkBox13, 0, 13);
             this.tableLayoutPanel1.Controls.Add(this.checkBox14, 1, 14);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 159);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 161);
             this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(510, 500);
             this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(400, 400);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -505,7 +505,7 @@ namespace ProjectEcho
             this.panel11.Controls.Add(this.addRowLabel);
             this.panel11.Controls.Add(this.button2);
             this.panel11.Controls.Add(this.button3);
-            this.panel11.Location = new System.Drawing.Point(287, 121);
+            this.panel11.Location = new System.Drawing.Point(291, 125);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(223, 30);
             this.panel11.TabIndex = 22;
@@ -548,7 +548,7 @@ namespace ProjectEcho
             // 
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 39);
+            this.label7.Location = new System.Drawing.Point(21, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(501, 117);
             this.label7.TabIndex = 17;
@@ -568,7 +568,7 @@ namespace ProjectEcho
             this.panel7.Controls.Add(this.panel5);
             this.panel7.Controls.Add(this.panel6);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.clipOneUpload);
             this.panel7.Location = new System.Drawing.Point(581, 24);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(768, 343);
@@ -660,29 +660,30 @@ namespace ProjectEcho
             this.label13.TabIndex = 16;
             this.label13.Text = resources.GetString("label13.Text");
             // 
-            // button1
+            // clipOneUpload
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.clipOneUpload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(703, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 76);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
+            this.clipOneUpload.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.clipOneUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.clipOneUpload.FlatAppearance.BorderSize = 0;
+            this.clipOneUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.clipOneUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clipOneUpload.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clipOneUpload.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.clipOneUpload.Location = new System.Drawing.Point(703, 39);
+            this.clipOneUpload.Name = "clipOneUpload";
+            this.clipOneUpload.Size = new System.Drawing.Size(50, 76);
+            this.clipOneUpload.TabIndex = 22;
+            this.clipOneUpload.UseVisualStyleBackColor = true;
+            this.clipOneUpload.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(8, 6);
+            this.label5.Location = new System.Drawing.Point(20, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(304, 23);
             this.label5.TabIndex = 23;
@@ -768,7 +769,7 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel13);
-            this.panel3.Location = new System.Drawing.Point(581, 380);
+            this.panel3.Location = new System.Drawing.Point(581, 413);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(768, 343);
             this.panel3.TabIndex = 42;
@@ -919,7 +920,6 @@ namespace ProjectEcho
             // 
             // panel2
             // 
-            this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.label5);
@@ -929,7 +929,7 @@ namespace ProjectEcho
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(513, 800);
+            this.panel2.Size = new System.Drawing.Size(555, 800);
             this.panel2.TabIndex = 25;
             // 
             // TaskTwoUserControl
@@ -956,7 +956,6 @@ namespace ProjectEcho
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
@@ -1016,7 +1015,7 @@ namespace ProjectEcho
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button clipOneUpload;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;

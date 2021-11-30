@@ -5,24 +5,25 @@ using System.Windows.Forms;
 namespace ProjectEcho
 {
     /**
-     * 
-     * 
-     * 
+     *
+     *
+     *
      * Author(s): C. Segrue, J. Nelson
      */
+
     public partial class TaskOneUserControl : UserControl
     {
-        DocumentHandler dh = new DocumentHandler();
-        FormatChecker fc = new FormatChecker();
+        private DocumentHandler dh = new DocumentHandler();
+        private FormatChecker fc = new FormatChecker();
         public static bool complete = false;
 
-        Label l1;
-        Label l2;
-        Label l3;
-        Label l4;
-        Label l5;
-        Label l6;
-        Label l7;
+        private Label l1;
+        private Label l2;
+        private Label l3;
+        private Label l4;
+        private Label l5;
+        private Label l6;
+        private Label l7;
 
         //string currentTab; //not needed right now but might be used in the future
 
@@ -45,8 +46,8 @@ namespace ProjectEcho
             {
                 l1 = label74; l2 = label77; l3 = label76; l4 = label75; l5 = label63; l6 = label72; l7 = label73;
                 await checkDocument(1, "A", t1paCL, uploadInfo1, grammarBox, missingWordList1A);
-            } 
-            catch (Exception ex)
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
@@ -59,12 +60,11 @@ namespace ProjectEcho
                 l1 = label29; l2 = label3; l3 = label25; l4 = label26; l5 = label31; l6 = label30; l7 = label27;
                 await checkDocument(1, "B", formatCheckList1B, uploadInfo1B, grammarErrors1B, missingWordList1B);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
         }
-
 
         private async void uploadButton1C_Click(object sender, EventArgs e)
         {
@@ -72,7 +72,7 @@ namespace ProjectEcho
             {
                 await checkDocument(1, "C", formatCheckList1C, uploadInfo1C, grammarErrors1C, missingWordList1C);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
@@ -84,7 +84,7 @@ namespace ProjectEcho
             {
                 await checkDocument(1, "D", formatCheckList1D, uploadInfo1D, grammarErrors1D, missingWordList1D);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
@@ -96,36 +96,42 @@ namespace ProjectEcho
             {
                 await checkDocument(1, "E", formatCheckList1E, uploadInfo1E, grammarErrors1E, missingWordList1E);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
         }
 
-
         /// <summary>
-        /// This method programatically executed the uploading and checking of a document. Because each task part 
-        /// has unique names for certain labels, this is necessary to avoid repeated code.
+        /// This method programatically executed the uploading and checking of a
+        /// document. Because each task part has unique names for certain
+        /// labels, this is necessary to avoid repeated code.
         /// </summary>
-        /// <param name="taskNum">The task number, which in this class will always be "1"</param>
+        /// <param name="taskNum">
+        /// The task number, which in this class will always be "1"
+        /// </param>
         /// <param name="taskPart">The task part (i.e. "A", "B", etc.)</param>
-        /// <param name="formatCL">The formt checkedListBox being used by the current task</param>
-        /// <param name="uploadInfoLabel">The label containing the names of the uploaded documents</param>
+        /// <param name="formatCL">
+        /// The formt checkedListBox being used by the current task
+        /// </param>
+        /// <param name="uploadInfoLabel">
+        /// The label containing the names of the uploaded documents
+        /// </param>
         public async Task checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel, TextBox grammarErrorsTextBox, ListBox missingWordsListBox) //, Label reportLabel)
         {
-            formatCL.ClearSelected(); //clears all format checker boxes            
+            formatCL.ClearSelected(); //clears all format checker boxes
             String path = dh.uploadDocument(taskNum, taskPart);
 
             //uploadInfo.Text = "well im here?";
-            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
+            if(path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
                 uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
                 //FormatChecker fc = new FormatChecker(); //moved to line 17 to avoid an RPC server error (happens when it attempts to open Word while it's already running)
                 Boolean[] itemsChecked = fc.runFormatCheck(path, 4);
 
-                for(int i=0; i<itemsChecked.Length; i++)
+                for(int i = 0; i < itemsChecked.Length; i++)
                 {
-                    if (itemsChecked[i].Equals(true))
+                    if(itemsChecked[i].Equals(true))
                     {
                         formatCL.SetItemChecked(i, true);
                     }
@@ -142,10 +148,7 @@ namespace ProjectEcho
                 l7.Text = fc.pageNumFB;
             }
 
-
-
             await GrammarAPI.returnReport(path);
-
 
             string report = GrammarAPI.idk;
 
@@ -155,9 +158,6 @@ namespace ProjectEcho
             grammarBox.Text = report;
 
             missingWordList1A.DataSource = GrammarAPI.dogs;
-
-
-
         }
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)
@@ -168,10 +168,8 @@ namespace ProjectEcho
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             //save notes as they type
-            Properties.Settings.Default.t1notes = richTextBox1.Text; 
+            Properties.Settings.Default.t1notes = richTextBox1.Text;
             Properties.Settings.Default.Save();
         }
-
-        
     }
 }
