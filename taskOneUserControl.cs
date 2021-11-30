@@ -111,6 +111,15 @@ namespace ProjectEcho
                         formatCL.SetItemChecked(i, true);
                     }
                 }
+
+                label74.Text = fc.leftMarginFB;
+                label77.Text = fc.rightMarginFB;
+                label76.Text = fc.topMarginFB;
+                label75.Text = fc.bottomMarginFB;
+
+                label63.Text = fc.fontTypeFB;
+                label72.Text = fc.fontSizeFB;
+                label73.Text = fc.pageNumFB;
             }
 
 

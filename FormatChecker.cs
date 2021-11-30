@@ -8,6 +8,18 @@ namespace ProjectEcho
     {
 		//public static Application ap = new Application();
 		public int progress = 0;
+
+		//feedback variables
+		public string leftMarginFB = "";
+		public string rightMarginFB = "";
+		public string topMarginFB = "";
+		public string bottomMarginFB = "";
+		
+		public string marginFB = "";
+		public string fontTypeFB = "";
+		public string fontSizeFB = "";
+		public string pageNumFB = "";
+
 		public Boolean[] runFormatCheck(String path, int correctLength)
 		{
 			Application ap = new Application();
@@ -72,10 +84,20 @@ namespace ProjectEcho
 			//if any margins are not one inch
 			if ((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
             {
-				System.Windows.Forms.MessageBox.Show("Left margin: "+leftMargin.ToString());
+				//System.Windows.Forms.MessageBox.Show("Left margin: "+leftMargin.ToString());
+				/*leftMarginFB = "Left margin: " + leftMargin.ToString();
+				rightMarginFB = "Right margin: " + rightMargin.ToString();
+				topMarginFB = "Top margin: " + topMargin.ToString();
+				bottomMarginFB = "Bottom margin: " + bottomMargin.ToString();*/
+				
 				return false;
             }
-			//System.Windows.Forms.MessageBox.Show("Left margin (YAY): " + document.PageSetup.LeftMargin.ToString());
+			//marginFB = "Left margin: " + leftMargin.ToString() + "\nRight margin: " + rightMargin.ToString() + "\nTop margin: " + topMargin.ToString() + "\nBottom margin: " + bottomMargin.ToString();
+
+			leftMarginFB = "Left margin: " + leftMargin.ToString();
+			rightMarginFB = "Right margin: " + rightMargin.ToString();
+			topMarginFB = "Top margin: " + topMargin.ToString();
+			bottomMarginFB = "Bottom margin: " + bottomMargin.ToString();
 			progress += 25;
 			return true;
 		}
@@ -84,9 +106,12 @@ namespace ProjectEcho
 		{
 			if(document.Content.Font.Size != 11)
             {
-				System.Windows.Forms.MessageBox.Show(document.Content.Font.Size.ToString());
+				//System.Windows.Forms.MessageBox.Show(document.Content.Font.Size.ToString());
+				
+				
 				return false;
 			}
+			fontSizeFB = "Font size: " + document.Content.Font.Size.ToString();
 			progress += 25;
 			return true;
 		}
@@ -97,26 +122,34 @@ namespace ProjectEcho
 			Font correct = new Font();
 			correct.Name = "Arial";
 			Font blank = new Font();
+			string beep = "";
 			foreach(Microsoft.Office.Interop.Word.Paragraph para in document.Paragraphs)
 			{
-				//System.Windows.Forms.MessageBox.Show(para.)
-				if(para.Range.Font.Name.CompareTo(correct.Name) != 0)
+				beep = para.Range.Font.Name;
+				if (para.Range.Font.Name.CompareTo(correct.Name) != 0)
 				{
                     if(para.Range.Font.Name.CompareTo(blank.Name) != 0)
                     {
-						System.Windows.Forms.MessageBox.Show(para.Range.Font.Name);
+						//System.Windows.Forms.MessageBox.Show(para.Range.Font.Name);
+
+						
 						isCorrectFont = false;
 						break;
 					} 
 				}
+
+				
 			}
+			fontTypeFB = "Font type: " + beep;
 			progress += 25;
 			return isCorrectFont;
 		}
 
 		public int checkLength(Document document)
 		{
-			System.Windows.Forms.MessageBox.Show(document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString());
+			//System.Windows.Forms.MessageBox.Show(document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString());
+
+			pageNumFB = "Number of pages: " + document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString();
 			progress += 25;
 			return document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);
 		}
