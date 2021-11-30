@@ -10,6 +10,13 @@ using System.Windows.Forms;
 
 namespace ProjectEcho
 {
+    /**
+     * 
+     * 
+     * 
+     * 
+     * Author(s): J. Nelson, I. Gnagy
+     */
     public partial class SettingsForm : Form
     {
 

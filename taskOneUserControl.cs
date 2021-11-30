@@ -4,6 +4,12 @@ using System.Windows.Forms;
 
 namespace ProjectEcho
 {
+    /**
+     * 
+     * 
+     * 
+     * Author(s): C. Segrue, J. Nelson
+     */
     public partial class TaskOneUserControl : UserControl
     {
         DocumentHandler dh = new DocumentHandler();

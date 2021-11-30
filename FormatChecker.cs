@@ -4,6 +4,11 @@ using System.Collections;
 
 namespace ProjectEcho
 {
+	/**
+	 * 
+	 * 
+	 * Author(s): C. Segrue
+	 */
     internal class FormatChecker
     {
 		//public static Application ap = new Application();

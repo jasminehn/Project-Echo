@@ -20,6 +20,12 @@ using System.Collections;
 
 namespace ProjectEcho
 {
+    /**
+     * 
+     * 
+     * 
+     * Author(s): E. MacDonald, J. Nelson
+     */
     public class GrammarAPI
     {
         public static String pog = "";

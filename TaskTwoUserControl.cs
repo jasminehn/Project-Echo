@@ -13,6 +13,13 @@ using Windows.Storage;
 
 namespace ProjectEcho
 {
+    /**
+     * 
+     * 
+     * 
+     * 
+     * Author(s): C. Segrue
+     */
 
     public partial class TaskTwoUserControl : UserControl
     {

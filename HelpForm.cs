@@ -15,6 +15,16 @@ using iTextSharp.text.pdf.parser;
 
 namespace ProjectEcho
 {
+    /**
+     * The HelpForm was made to help lead students to the best pre-existing edTPA documentation 
+     * to assist them in their submission. Using a Chromium Browser, we display locally stored
+     * .pdf files and direct them to the correct page of the document using combo boxes.
+     * 
+     * There is definitely room to add more documentation here, but for now, we are using
+     * only one edTPA document.
+     * 
+     * Authors: J. Nelson, C. Segrue
+     */
     public partial class HelpForm : Form
     {        
         static string ProgramPath = AppDomain.CurrentDomain.BaseDirectory; //get direct path to the program        
@@ -37,8 +47,9 @@ namespace ProjectEcho
             comboBox2.Enabled = false;
             CefSettings settings = new CefSettings();
             Cef.Initialize(settings);
-            Cef.EnableHighDPISupport();
-            chrome = new ChromiumWebBrowser(url);
+            Cef.EnableHighDPISupport(); // One some computers, mostly laptops, the Browser will jutt out to the
+                                        // right and a little down. This line has fixed our issue as far as we can tell.
+            chrome = new ChromiumWebBrowser(url); // Currently we only have one file that we are displaying to users.
             this.ChromiumBrowser.Controls.Add(chrome);
             chrome.AddressChanged += Chrome_AddressChanged;
         }
@@ -89,85 +100,16 @@ namespace ProjectEcho
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /**          
-            //manual browser refresh; this is needed in order to actually change the page (this method must be async)
-            //webBrowser1.AllowNavigation = true; //i dont think this line is needed but i'm leaving it here for now just in case
-            // webBrowser1.Hide(); //hide browser while navigating to new page
-            //webBrowser1.Navigate("about:blank");
-            await Task.Delay(10);
-
-            //change page depending on selection
-            if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B") || comboBox2.SelectedItem.Equals("Part C")))
-            {
-                //webBrowser1.Navigate(new Uri(FileName1 + "#page=1"));
-                //webBrowser1.Navigate(FileName1 + "#page=1");
-                //webBrowser1.Show();
-                url = FileName1 + "#page=1";
-                chrome.Load(url);
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
-            {
-                // webBrowser1.Navigate(new Uri(FileName1 + "#page=2"));
-                //webBrowser1.Show();
-                url = FileName1 + "#page=2";
-                chrome.Load(url);
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 2") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B")))
-            {
-                //webBrowser1.Navigate(new Uri(FileName1 + "#page=3"));
-                //webBrowser1.Show();
-                url = FileName1 + "#page=3";
-                chrome.Load(url);
-                chrome.Refresh();
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part A"))
-            {
-                //webBrowser1.Navigate(new Uri(FileName1 + "#page=4"));
-                //webBrowser1.Show();
-                url = FileName1 + "#page=4";
-                chrome.Load(url);
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part B"))
-            {
-                //webBrowser1.Navigate(new Uri(FileName1 + "#page=5"));
-                //webBrowser1.Show();
-                url = FileName1 + "#page=5";
-                chrome.Load(url);
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part C"))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=6"));
-                webBrowser1.Show();
-                webBrowser1.Show();
-                url = FileName1 + "#page=6";
-                chrome.Load(url);
-            }
-            else if (comboBox1.SelectedItem.Equals("Task 3") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
-            {
-                webBrowser1.Navigate(new Uri(FileName1 + "#page=7"));
-                webBrowser1.Show();
-                webBrowser1.Show();
-                url = FileName1 + "#page=7";
-                chrome.Load(url);
-            }
-            //webBrowser1.Navigate("www.google.com");
-
-            //webBrowser1.Show(); //display browser after navigating to new page
-            //Console.WriteLine(webBrowser1.Url.AbsoluteUri); //print current page (for testing)
-            */
+           // Does nothing
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            //manual browser refresh; this is needed in order to actually change the page (this method must be async)
-            //webBrowser1.AllowNavigation = true; //i dont think this line is needed but i'm leaving it here for now just in case
-            // webBrowser1.Hide(); //hide browser while navigating to new page
-            //webBrowser1.Navigate("about:blank");
-            await Task.Delay(10);
+            await Task.Delay(10); // Do we still need a delay?
 
             if(comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
             {
-                urlBox.Text = "idk why we here but we are";
+                // urlBox.Text = "idk why we here but we are";
                 // do nothing
             } else
             {
@@ -215,15 +157,8 @@ namespace ProjectEcho
                     urlBox.Text = url;
                     chrome.Reload();
                 }
-
                 chrome.Load(url);
-                //webBrowser1.Navigate("www.google.com");
-
-                //webBrowser1.Show(); //display browser after navigating to new page
-                //Console.WriteLine(webBrowser1.Url.AbsoluteUri); //print current page (for testing)
             }
-
-
         }
 
         private void HelpForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -234,7 +169,10 @@ namespace ProjectEcho
                 this.Hide();
             } else
             {
-                //Cef.Shutdown();
+                // Normally we would do the following line of code, but since we want the user to be able
+                // to open the HelpForm more than once per run, we do nothin.
+
+                // Cef.Shutdown();
             }
         }               
 
