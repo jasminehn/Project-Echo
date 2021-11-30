@@ -24,7 +24,12 @@ namespace ProjectEcho
     {
         public static String pog = "";
         public static String idk = "";
+
         static int feedbackCount = 0;
+        string wordsFound = "FOUND: ";
+        string wordsMissing = "MISSING: ";
+
+        public static List<string> dogs = new List<string>();
 
         public static async Task CallAPI(String filePath)
         {
@@ -208,8 +213,10 @@ namespace ProjectEcho
             {
                 if (documentString.Contains(glossary[i]))
                 {
-
                     Console.WriteLine("Found word");
+
+                    wordsFound = wordsFound + ( " " + glossary[i] ) + "\n";
+                    
                 }
                 else
                 {
@@ -217,7 +224,9 @@ namespace ProjectEcho
                     missingWords.Add(word);
                     wordExists = false;
 
+                    wordsMissing = wordsMissing + ( " " + glossary[i] ) + "\n";
 
+                    dogs.Add(glossary[i]);
                 }
 
             }

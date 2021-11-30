@@ -1449,7 +1449,7 @@ namespace ProjectEcho
             // 
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(5, 85);
+            this.label77.Location = new System.Drawing.Point(15, 86);
             this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(95, 17);
@@ -1460,7 +1460,7 @@ namespace ProjectEcho
             // 
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(5, 126);
+            this.label76.Location = new System.Drawing.Point(15, 127);
             this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(85, 17);
@@ -1471,7 +1471,7 @@ namespace ProjectEcho
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(5, 166);
+            this.label75.Location = new System.Drawing.Point(15, 167);
             this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(110, 17);
@@ -1482,7 +1482,7 @@ namespace ProjectEcho
             // 
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(5, 46);
+            this.label74.Location = new System.Drawing.Point(15, 47);
             this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(85, 17);
@@ -1492,7 +1492,7 @@ namespace ProjectEcho
             // label73
             // 
             this.label73.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(4, 344);
+            this.label73.Location = new System.Drawing.Point(14, 345);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(330, 25);
@@ -1502,7 +1502,7 @@ namespace ProjectEcho
             // label72
             // 
             this.label72.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(4, 286);
+            this.label72.Location = new System.Drawing.Point(14, 287);
             this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(168, 25);
@@ -1512,7 +1512,7 @@ namespace ProjectEcho
             // label63
             // 
             this.label63.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(4, 222);
+            this.label63.Location = new System.Drawing.Point(14, 223);
             this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(271, 29);
@@ -1522,7 +1522,7 @@ namespace ProjectEcho
             // label52
             // 
             this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(4, 11);
+            this.label52.Location = new System.Drawing.Point(14, 12);
             this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(168, 25);
@@ -1572,8 +1572,7 @@ namespace ProjectEcho
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(229, 20);
             this.label28.TabIndex = 35;
-            this.label28.Text = "CONTENT ANALYSIS:";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
+            this.label28.Text = "MISSING WORDS:";
             // 
             // listBox1
             // 
@@ -1737,7 +1736,6 @@ namespace ProjectEcho
             this.label15.Size = new System.Drawing.Size(128, 25);
             this.label15.TabIndex = 20;
             this.label15.Text = "GRAMMAR";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // panel9
             // 

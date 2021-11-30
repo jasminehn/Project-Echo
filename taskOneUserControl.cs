@@ -131,16 +131,8 @@ namespace ProjectEcho
 
             //Console.WriteLine(report);
             grammarBox.Text = report;
-        }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
+            listBox1.DataSource = GrammarAPI.dogs;
         }
     }
 }
