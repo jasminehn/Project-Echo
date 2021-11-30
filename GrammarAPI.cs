@@ -91,7 +91,7 @@ namespace ProjectEcho
 
         }
 
-        public static async Task plswork(string path)
+        public static async Task returnReport(string path)
         {
             await CallAPI(path);
         }
@@ -146,7 +146,6 @@ namespace ProjectEcho
                 
                 Console.WriteLine(string.Join(" ", reportList));
                 idk += string.Join(" ", reportList);
-                //idk = string.Join(" ", reportList); //only gets the last report bc it's overwritten each time GrammarCheck is called :(
                 // string s = getReport(body);
             }
         }

@@ -10,6 +10,14 @@ namespace ProjectEcho
         FormatChecker fc = new FormatChecker();
         public static bool complete = false;
 
+        Label l1;
+        Label l2;
+        Label l3;
+        Label l4;
+        Label l5;
+        Label l6;
+        Label l7;
+
         //string currentTab; //not needed right now but might be used in the future
 
         public TaskOneUserControl()
@@ -29,18 +37,21 @@ namespace ProjectEcho
         {
             try
             {
-                await checkDocument(1, "A", t1paCL, uploadInfo1);
-            } catch (Exception ex)
+                l1 = label74; l2 = label77; l3 = label76; l4 = label75; l5 = label63; l6 = label72; l7 = label73;
+                await checkDocument(1, "A", t1paCL, uploadInfo1, grammarBox, missingWordList1A);
+            } 
+            catch (Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
         }
 
         private async void uploadButton1B_Click(object sender, EventArgs e)
-        {            
+        {
             try
             {
-                await checkDocument(1, "B", formatCheckList1B, uploadInfo1B);
+                l1 = label29; l2 = label3; l3 = label25; l4 = label26; l5 = label31; l6 = label30; l7 = label27;
+                await checkDocument(1, "B", formatCheckList1B, uploadInfo1B, grammarErrors1B, missingWordList1B);
             }
             catch (Exception ex)
             {
@@ -48,11 +59,12 @@ namespace ProjectEcho
             }
         }
 
+
         private async void uploadButton1C_Click(object sender, EventArgs e)
-        {           
+        {
             try
             {
-                await checkDocument(1, "C", formatCheckList1C, uploadInfo1C);
+                await checkDocument(1, "C", formatCheckList1C, uploadInfo1C, grammarErrors1C, missingWordList1C);
             }
             catch (Exception ex)
             {
@@ -61,10 +73,10 @@ namespace ProjectEcho
         }
 
         private async void uploadButton1D_Click(object sender, EventArgs e)
-        {            
+        {
             try
             {
-                await checkDocument(1, "D", formatCheckList1D, uploadInfo1D);
+                await checkDocument(1, "D", formatCheckList1D, uploadInfo1D, grammarErrors1D, missingWordList1D);
             }
             catch (Exception ex)
             {
@@ -73,16 +85,17 @@ namespace ProjectEcho
         }
 
         private async void uploadButton1E_Click(object sender, EventArgs e)
-        {            
+        {
             try
             {
-                await checkDocument(1, "E", formatCheckList1E, uploadInfo1E);
+                await checkDocument(1, "E", formatCheckList1E, uploadInfo1E, grammarErrors1E, missingWordList1E);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
             }
         }
+
 
         /// <summary>
         /// This method programatically executed the uploading and checking of a document. Because each task part 
@@ -92,7 +105,7 @@ namespace ProjectEcho
         /// <param name="taskPart">The task part (i.e. "A", "B", etc.)</param>
         /// <param name="formatCL">The formt checkedListBox being used by the current task</param>
         /// <param name="uploadInfoLabel">The label containing the names of the uploaded documents</param>
-        public async Task checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel) //, Label reportLabel)
+        public async Task checkDocument(int taskNum, string taskPart, CheckedListBox formatCL, Label uploadInfoLabel, TextBox grammarErrorsTextBox, ListBox missingWordsListBox) //, Label reportLabel)
         {
             formatCL.ClearSelected(); //clears all format checker boxes            
             String path = dh.uploadDocument(taskNum, taskPart);
@@ -113,19 +126,19 @@ namespace ProjectEcho
                 }
 
                 //this stuff below will be changed to task-specific variables
-                label74.Text = fc.leftMarginFB;
-                label77.Text = fc.rightMarginFB;
-                label76.Text = fc.topMarginFB;
-                label75.Text = fc.bottomMarginFB;
+                l1.Text = fc.leftMarginFB;
+                l2.Text = fc.rightMarginFB;
+                l3.Text = fc.topMarginFB;
+                l4.Text = fc.bottomMarginFB;
 
-                label63.Text = fc.fontTypeFB;
-                label72.Text = fc.fontSizeFB;
-                label73.Text = fc.pageNumFB;
+                l5.Text = fc.fontTypeFB;
+                l6.Text = fc.fontSizeFB;
+                l7.Text = fc.pageNumFB;
             }
 
 
 
-            await GrammarAPI.plswork(path);
+            await GrammarAPI.returnReport(path);
 
 
             string report = GrammarAPI.idk;
@@ -135,7 +148,7 @@ namespace ProjectEcho
             //Console.WriteLine(report);
             grammarBox.Text = report;
 
-            listBox1.DataSource = GrammarAPI.dogs;
+            missingWordList1A.DataSource = GrammarAPI.dogs;
 
 
 
@@ -152,5 +165,7 @@ namespace ProjectEcho
             Properties.Settings.Default.t1notes = richTextBox1.Text; 
             Properties.Settings.Default.Save();
         }
+
+        
     }
 }
