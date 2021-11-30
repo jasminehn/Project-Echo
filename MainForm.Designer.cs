@@ -48,36 +48,36 @@ namespace ProjectEcho
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.taskThreeButton = new System.Windows.Forms.Button();
             this.taskThreeList = new System.Windows.Forms.CheckedListBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.taskTwoButton = new System.Windows.Forms.Button();
             this.taskTwoList = new System.Windows.Forms.CheckedListBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
             this.taskOneList = new System.Windows.Forms.CheckedListBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.taskOne = new ProjectEcho.TaskOneUserControl();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.taskTwoUserControl1 = new ProjectEcho.TaskTwoUserControl();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.mainMenuPanel.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.mainPanel.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -258,10 +258,20 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.taskThreeButton);
             this.panel5.Controls.Add(this.taskThreeList);
-            this.panel5.Location = new System.Drawing.Point(1157, 17);
+            this.panel5.Location = new System.Drawing.Point(879, 17);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(407, 630);
             this.panel5.TabIndex = 37;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(407, 48);
+            this.panel8.TabIndex = 34;
             // 
             // label3
             // 
@@ -312,10 +322,20 @@ namespace ProjectEcho
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.taskTwoButton);
             this.panel4.Controls.Add(this.taskTwoList);
-            this.panel4.Location = new System.Drawing.Point(744, 17);
+            this.panel4.Location = new System.Drawing.Point(450, 17);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(407, 629);
             this.panel4.TabIndex = 36;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(407, 48);
+            this.panel7.TabIndex = 33;
             // 
             // label2
             // 
@@ -367,10 +387,20 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.task1Button);
             this.panel3.Controls.Add(this.taskOneList);
-            this.panel3.Location = new System.Drawing.Point(331, 17);
+            this.panel3.Location = new System.Drawing.Point(21, 17);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(407, 630);
             this.panel3.TabIndex = 35;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(405, 48);
+            this.panel6.TabIndex = 32;
             // 
             // label1
             // 
@@ -442,40 +472,6 @@ namespace ProjectEcho
             this.taskOne.Size = new System.Drawing.Size(1931, 895);
             this.taskOne.TabIndex = 16;
             // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(405, 48);
-            this.panel6.TabIndex = 32;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(407, 48);
-            this.panel7.TabIndex = 33;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(407, 48);
-            this.panel8.TabIndex = 34;
-            // 
             // taskTwoUserControl1
             // 
             this.taskTwoUserControl1.AutoSize = true;
@@ -485,6 +481,10 @@ namespace ProjectEcho
             this.taskTwoUserControl1.Name = "taskTwoUserControl1";
             this.taskTwoUserControl1.Size = new System.Drawing.Size(1947, 890);
             this.taskTwoUserControl1.TabIndex = 17;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // MainForm
             // 
@@ -511,16 +511,16 @@ namespace ProjectEcho
             this.menuStrip1.PerformLayout();
             this.mainMenuPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
-            this.mainPanel.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
