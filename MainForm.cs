@@ -46,6 +46,7 @@ namespace ProjectEcho
          * 
          * 
          */
+
         public MainForm()
         {
             InitializeComponent();
@@ -109,7 +110,6 @@ namespace ProjectEcho
 
         private void backButton_Click(object sender, EventArgs e)
         {
-
             int i = Array.IndexOf(taskControls, currentControl);
             setControlActive(i - 1);
         }
@@ -122,17 +122,17 @@ namespace ProjectEcho
 
         public void setControlActive(int i)
         {
-             
-             currentControl.Visible = false;
-             currentControl = taskControls[i];
-             currentControl.Visible = true;
+             currentControl.Visible = false; // Set the current control to invisible
+             currentControl = taskControls[i]; // reset the global currentControl variable to the new position in the array
+             currentControl.Visible = true; // set this new control visible
      
-            if(i.Equals(0))
+            if(i.Equals(0)) // First position is the Main Menu
             {
                 titleLabel.Text = "MAIN MENU";
-                mainMenuPanel.Visible = true;  
+                mainMenuPanel.Visible = true;  // Same sort of operation as the controls above, but we need to do it for the panel which
+                                               // is not a control
                 returnToMenuButton.Visible = false;
-                backButton.Visible = false;
+                backButton.Visible = false; // Nothing to go back to, set this invisible so we can't use it
                 
             } else
             {
@@ -143,7 +143,8 @@ namespace ProjectEcho
                 if (i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
-                    forwardButton.Visible = true;
+                    forwardButton.Visible = true; // All of these guarentee that if they aren't visible/invisible
+                                                  // when they need to be, they will get changed.
                 } else if(i.Equals(2))
                 {
                     titleLabel.Text = "TASK TWO";
@@ -158,20 +159,44 @@ namespace ProjectEcho
             
         }        
 
+        /* The Tool Strip is the list of items displated along the top of the application.
+         * 
+         * At the moment, we have three items displayed.
+         *      - File
+         *      - Settings
+         *      - Help
+         * 
+         * Settings and Help have their own Designers and code, so please navigate there
+         * if you would like to see what those are doing.
+         *
+         */
+
+        // Creates the HelpForm after user clicks the Help tool menu item
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Creates the form that displays
-            saveHelpResource++;
+            
+
+            /* We use a Chromium Browser in the Help Form. For more details, see the HelpForm.cs file.
+             * One of the limitations of this Browser is that it can only be instantiated once
+             * The reason we have this saveHelpResource variable is to be sure that we only try to build
+             * the Chromium Browser once.
+             * 
+             * 
+             * 
+             */
+            saveHelpResource++; 
             if(saveHelpResource == 0)
             {
                 if(hf.ShowDialog() == DialogResult.OK)
                 {
-                    Console.Write("Help opened");
+                    Console.Write("Help opened"); //Debug
                 }
             }
             else
             {
-                hf.Show();
+                hf.Show(); // In the HelpForm, you can see that the Form is
+                           // never really destroyed until the whole Application is
+                           // shut down.
             }
         }
 
@@ -187,9 +212,10 @@ namespace ProjectEcho
 
         private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            System.Windows.Forms.Application.Exit(); // Exits out of the whole application
         }
 
+        // Not working
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
             toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
