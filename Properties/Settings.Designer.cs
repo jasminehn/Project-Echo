@@ -58,5 +58,17 @@ namespace ProjectEcho.Properties {
                 this["textsize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Want to leave some notes for your future self? Write them here.")]
+        public string t1notes {
+            get {
+                return ((string)(this["t1notes"]));
+            }
+            set {
+                this["t1notes"] = value;
+            }
+        }
     }
 }

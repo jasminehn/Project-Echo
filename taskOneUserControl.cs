@@ -112,6 +112,7 @@ namespace ProjectEcho
                     }
                 }
 
+                //this stuff below will be changed to task-specific variables
                 label74.Text = fc.leftMarginFB;
                 label77.Text = fc.rightMarginFB;
                 label76.Text = fc.topMarginFB;
@@ -129,10 +130,27 @@ namespace ProjectEcho
 
             string report = GrammarAPI.idk;
 
+            //this stuff below will be changed to task-specific variables
+
             //Console.WriteLine(report);
             grammarBox.Text = report;
 
             listBox1.DataSource = GrammarAPI.dogs;
+
+
+
+        }
+
+        private void TaskOneUserControl_Load(object sender, EventArgs e)
+        {
+            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            //save notes as they type
+            Properties.Settings.Default.t1notes = richTextBox1.Text; 
+            Properties.Settings.Default.Save();
         }
     }
 }

@@ -11,5 +11,8 @@
     <Setting Name="textsize" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="t1notes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Want to leave some notes for your future self? Write them here.</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

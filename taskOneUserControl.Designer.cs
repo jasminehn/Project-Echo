@@ -1349,6 +1349,7 @@ namespace ProjectEcho
             this.richTextBox1.Size = new System.Drawing.Size(481, 727);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Want to leave some notes for your future self? Write them here.";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -1579,7 +1580,7 @@ namespace ProjectEcho
             this.listBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(18, 223);
+            this.listBox1.Location = new System.Drawing.Point(19, 223);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(357, 384);
@@ -2315,7 +2316,7 @@ namespace ProjectEcho
             this.panel31.Controls.Add(this.label72);
             this.panel31.Controls.Add(this.label63);
             this.panel31.Controls.Add(this.label52);
-            this.panel31.Location = new System.Drawing.Point(18, 223);
+            this.panel31.Location = new System.Drawing.Point(19, 223);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(353, 384);
             this.panel31.TabIndex = 50;
@@ -2330,6 +2331,7 @@ namespace ProjectEcho
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TaskOneUserControl";
             this.Size = new System.Drawing.Size(2507, 992);
+            this.Load += new System.EventHandler(this.TaskOneUserControl_Load);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel6.ResumeLayout(false);
