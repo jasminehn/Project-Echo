@@ -24,6 +24,7 @@ namespace ProjectEcho
     {
         public static String pog = "";
         public static String idk = "";
+        static int feedbackCount = 0;
 
         public static async Task CallAPI(String filePath)
         {
@@ -113,6 +114,8 @@ namespace ProjectEcho
 
             using (var response = await client.SendAsync(request))
             {
+                
+                
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 var v = JsonConvert.DeserializeObject<dynamic>(body);
@@ -122,7 +125,9 @@ namespace ProjectEcho
                 List<string> reportList = new List<string>();
                 foreach (var i in v.matches)
                 {
-                    grammarReport = "Sentence: " + i.sentence + "\n Message: " + i.message + " Offset: " + i.offset.ToString() + "\n Replacements: " + i.replacements + "\n";
+                    feedbackCount = feedbackCount + 1;
+
+                    grammarReport = "ERROR #"+ feedbackCount + "\r\n Sentence: " + i.sentence + "\r\n Message: " + i.message + "\r\n Offset: " + i.offset.ToString() + "\r\n Replacements: " + i.replacements + "\r\n";
                     reportList.Add(grammarReport);
                 }
                 

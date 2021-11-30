@@ -1495,7 +1495,7 @@ namespace ProjectEcho
             this.label73.Location = new System.Drawing.Point(4, 344);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(257, 25);
+            this.label73.Size = new System.Drawing.Size(330, 25);
             this.label73.TabIndex = 42;
             this.label73.Text = "Document length:";
             // 
@@ -1602,6 +1602,8 @@ namespace ProjectEcho
             // 
             // grammarBox
             // 
+            this.grammarBox.AcceptsReturn = true;
+            this.grammarBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarBox.Location = new System.Drawing.Point(19, 223);
             this.grammarBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grammarBox.Multiline = true;
@@ -1685,7 +1687,7 @@ namespace ProjectEcho
             "No Spelling Issues",
             "No Grammar Issues",
             "No Style Issues"});
-            this.checkedListBox6.Location = new System.Drawing.Point(38, 66);
+            this.checkedListBox6.Location = new System.Drawing.Point(19, 63);
             this.checkedListBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox6.MinimumSize = new System.Drawing.Size(240, 89);
             this.checkedListBox6.Name = "checkedListBox6";
@@ -1705,7 +1707,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font",
             "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(16, 76);
+            this.t1paCL.Location = new System.Drawing.Point(27, 63);
             this.t1paCL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.t1paCL.MinimumSize = new System.Drawing.Size(240, 89);
             this.t1paCL.Name = "t1paCL";
