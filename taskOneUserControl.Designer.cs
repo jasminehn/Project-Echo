@@ -1442,7 +1442,7 @@ namespace ProjectEcho
             this.panel30.Location = new System.Drawing.Point(26, 19);
             this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(371, 636);
+            this.panel30.Size = new System.Drawing.Size(390, 635);
             this.panel30.TabIndex = 42;
             // 
             // label77
@@ -1492,7 +1492,7 @@ namespace ProjectEcho
             // label73
             // 
             this.label73.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(4, 358);
+            this.label73.Location = new System.Drawing.Point(4, 344);
             this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(257, 25);
@@ -1532,7 +1532,7 @@ namespace ProjectEcho
             // label23
             // 
             this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(14, 175);
+            this.label23.Location = new System.Drawing.Point(14, 185);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(308, 25);
@@ -1558,16 +1558,16 @@ namespace ProjectEcho
             this.panel27.Controls.Add(this.listBox1);
             this.panel27.Controls.Add(this.label40);
             this.panel27.Controls.Add(this.checkedListBox2);
-            this.panel27.Location = new System.Drawing.Point(922, 19);
+            this.panel27.Location = new System.Drawing.Point(902, 19);
             this.panel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(371, 635);
+            this.panel27.Size = new System.Drawing.Size(390, 635);
             this.panel27.TabIndex = 40;
             // 
             // label28
             // 
             this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(14, 175);
+            this.label28.Location = new System.Drawing.Point(14, 185);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(229, 20);
@@ -1580,10 +1580,10 @@ namespace ProjectEcho
             this.listBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(18, 219);
+            this.listBox1.Location = new System.Drawing.Point(18, 223);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(336, 404);
+            this.listBox1.Size = new System.Drawing.Size(357, 384);
             this.listBox1.TabIndex = 37;
             // 
             // panel10
@@ -1597,23 +1597,23 @@ namespace ProjectEcho
             this.panel10.Location = new System.Drawing.Point(464, 19);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(371, 632);
+            this.panel10.Size = new System.Drawing.Size(390, 635);
             this.panel10.TabIndex = 39;
             // 
             // grammarBox
             // 
-            this.grammarBox.Location = new System.Drawing.Point(19, 217);
+            this.grammarBox.Location = new System.Drawing.Point(19, 223);
             this.grammarBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grammarBox.Multiline = true;
             this.grammarBox.Name = "grammarBox";
             this.grammarBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarBox.Size = new System.Drawing.Size(332, 406);
+            this.grammarBox.Size = new System.Drawing.Size(354, 384);
             this.grammarBox.TabIndex = 38;
             // 
             // foundGrammarIssuesLabel
             // 
             this.foundGrammarIssuesLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foundGrammarIssuesLabel.Location = new System.Drawing.Point(15, 176);
+            this.foundGrammarIssuesLabel.Location = new System.Drawing.Point(15, 185);
             this.foundGrammarIssuesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.foundGrammarIssuesLabel.Name = "foundGrammarIssuesLabel";
             this.foundGrammarIssuesLabel.Size = new System.Drawing.Size(308, 25);
@@ -1648,7 +1648,7 @@ namespace ProjectEcho
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(140, 9);
+            this.label40.Location = new System.Drawing.Point(127, 9);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.MinimumSize = new System.Drawing.Size(128, 25);
             this.label40.Name = "label40";
@@ -1666,7 +1666,7 @@ namespace ProjectEcho
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
             "Contains all required words"});
-            this.checkedListBox2.Location = new System.Drawing.Point(18, 63);
+            this.checkedListBox2.Location = new System.Drawing.Point(37, 63);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox2.MinimumSize = new System.Drawing.Size(240, 89);
             this.checkedListBox2.Name = "checkedListBox2";
@@ -1685,7 +1685,7 @@ namespace ProjectEcho
             "No Spelling Issues",
             "No Grammar Issues",
             "No Style Issues"});
-            this.checkedListBox6.Location = new System.Drawing.Point(19, 63);
+            this.checkedListBox6.Location = new System.Drawing.Point(38, 66);
             this.checkedListBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox6.MinimumSize = new System.Drawing.Size(240, 89);
             this.checkedListBox6.Name = "checkedListBox6";
@@ -1705,7 +1705,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font",
             "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(18, 67);
+            this.t1paCL.Location = new System.Drawing.Point(16, 76);
             this.t1paCL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.t1paCL.MinimumSize = new System.Drawing.Size(240, 89);
             this.t1paCL.Name = "t1paCL";
@@ -1716,7 +1716,7 @@ namespace ProjectEcho
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(67, 9);
+            this.label14.Location = new System.Drawing.Point(52, 9);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.MinimumSize = new System.Drawing.Size(197, 25);
             this.label14.Name = "label14";
@@ -1728,7 +1728,7 @@ namespace ProjectEcho
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(131, 9);
+            this.label15.Location = new System.Drawing.Point(111, 9);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.MinimumSize = new System.Drawing.Size(128, 25);
             this.label15.Name = "label15";
@@ -2306,6 +2306,7 @@ namespace ProjectEcho
             // panel31
             // 
             this.panel31.BackColor = System.Drawing.Color.White;
+            this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel31.Controls.Add(this.label77);
             this.panel31.Controls.Add(this.label76);
             this.panel31.Controls.Add(this.label75);
@@ -2314,9 +2315,9 @@ namespace ProjectEcho
             this.panel31.Controls.Add(this.label72);
             this.panel31.Controls.Add(this.label63);
             this.panel31.Controls.Add(this.label52);
-            this.panel31.Location = new System.Drawing.Point(10, 217);
+            this.panel31.Location = new System.Drawing.Point(18, 223);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(342, 406);
+            this.panel31.Size = new System.Drawing.Size(353, 384);
             this.panel31.TabIndex = 50;
             // 
             // TaskOneUserControl
