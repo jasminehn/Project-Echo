@@ -32,6 +32,9 @@ namespace ProjectEcho
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.returnToMenuButton = new System.Windows.Forms.Button();
+            this.forwardButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.titleSubtitleLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
@@ -60,12 +63,10 @@ namespace ProjectEcho
             this.task1Button = new System.Windows.Forms.Button();
             this.taskOneList = new System.Windows.Forms.CheckedListBox();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.returnToMenuButton = new System.Windows.Forms.Button();
-            this.forwardButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.taskTwoUserControl1 = new ProjectEcho.TaskTwoUserControl();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -91,6 +92,53 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1904, 81);
             this.panel1.TabIndex = 10;
+            // 
+            // returnToMenuButton
+            // 
+            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
+            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
+            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMenuButton.Location = new System.Drawing.Point(12, 16);
+            this.returnToMenuButton.Name = "returnToMenuButton";
+            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
+            this.returnToMenuButton.TabIndex = 2;
+            this.returnToMenuButton.UseVisualStyleBackColor = false;
+            this.returnToMenuButton.Visible = false;
+            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
+            // 
+            // forwardButton
+            // 
+            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
+            this.forwardButton.FlatAppearance.BorderSize = 0;
+            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
+            this.forwardButton.Location = new System.Drawing.Point(1845, 3);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(51, 55);
+            this.forwardButton.TabIndex = 1;
+            this.forwardButton.UseVisualStyleBackColor = false;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
+            this.backButton.Location = new System.Drawing.Point(1788, 3);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(51, 55);
+            this.backButton.TabIndex = 0;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Visible = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // titlePanel
             // 
@@ -197,6 +245,7 @@ namespace ProjectEcho
             // mainMenuPanel
             // 
             this.mainMenuPanel.BackColor = System.Drawing.Color.White;
+            this.mainMenuPanel.Controls.Add(this.button1);
             this.mainMenuPanel.Controls.Add(this.panel5);
             this.mainMenuPanel.Controls.Add(this.panel4);
             this.mainMenuPanel.Controls.Add(this.panel3);
@@ -412,57 +461,6 @@ namespace ProjectEcho
             this.mainPanel.Size = new System.Drawing.Size(1904, 1041);
             this.mainPanel.TabIndex = 1;
             // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // returnToMenuButton
-            // 
-            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
-            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
-            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnToMenuButton.Location = new System.Drawing.Point(12, 16);
-            this.returnToMenuButton.Name = "returnToMenuButton";
-            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
-            this.returnToMenuButton.TabIndex = 2;
-            this.returnToMenuButton.UseVisualStyleBackColor = false;
-            this.returnToMenuButton.Visible = false;
-            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
-            // 
-            // forwardButton
-            // 
-            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
-            this.forwardButton.FlatAppearance.BorderSize = 0;
-            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
-            this.forwardButton.Location = new System.Drawing.Point(1845, 3);
-            this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(51, 55);
-            this.forwardButton.TabIndex = 1;
-            this.forwardButton.UseVisualStyleBackColor = false;
-            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.FlatAppearance.BorderSize = 0;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
-            this.backButton.Location = new System.Drawing.Point(1788, 3);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(51, 55);
-            this.backButton.TabIndex = 0;
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Visible = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
             // taskOne
             // 
             this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -485,6 +483,20 @@ namespace ProjectEcho
             this.taskTwoUserControl1.Name = "taskTwoUserControl1";
             this.taskTwoUserControl1.Size = new System.Drawing.Size(1947, 890);
             this.taskTwoUserControl1.TabIndex = 17;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1475, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -562,5 +574,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private TaskTwoUserControl taskTwoUserControl1;
+        private System.Windows.Forms.Button button1;
     }
 }

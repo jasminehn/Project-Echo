@@ -220,5 +220,15 @@ namespace ProjectEcho
         {
             toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TaskOneGuide oneGuide = new TaskOneGuide();
+
+            if(oneGuide.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Guide opened");
+            }
+        }
     }
 }
