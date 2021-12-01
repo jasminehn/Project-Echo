@@ -118,7 +118,6 @@ namespace ProjectEcho
                 {
                     if(para.Range.Font.Name.CompareTo(blank.Name) != 0)
                     {
-                        //System.Windows.Forms.MessageBox.Show(para.Range.Font.Name);
                         isCorrectFont = false;
                         break;
                     }

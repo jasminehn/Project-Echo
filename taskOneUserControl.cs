@@ -148,11 +148,9 @@ namespace ProjectEcho
                 l7.Text = fc.pageNumFB;
             }
 
-            await GrammarAPI.returnReport(path);
+            await GrammarAPI.returnReport(path); //execute API call
 
-            string report = GrammarAPI.idk;
-
-            //this stuff below will be changed to task-specific variables
+            string report = GrammarAPI.reportOutput;
 
             //Console.WriteLine(report);
             grammarErrorsTextBox.Text = report;

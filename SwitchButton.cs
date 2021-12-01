@@ -11,6 +11,12 @@ using System.ComponentModel;
 
 namespace ProjectEcho
 {
+    /**
+	 *
+	 *
+	 * Author(s): J. Nelson
+	 */
+
     class SwitchButton : CheckBox
     {
         private Color onBackColor = ColorTranslator.FromHtml("#5ac993");

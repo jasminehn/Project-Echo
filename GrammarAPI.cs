@@ -22,7 +22,7 @@ namespace ProjectEcho
         public static String pog = "";
         public static String reportOutput = "";
 
-        private static int feedbackCount = 0;
+        private static int errorCount = 0; //keeps track of how many grammar errors are found
         private string wordsFound = "FOUND: ";
         private string wordsMissing = "MISSING: ";
 
@@ -86,6 +86,8 @@ namespace ProjectEcho
 
         public static async Task returnReport(string path)
         {
+            reportOutput = ""; //reset report output each time it's called
+            errorCount = 0; //reset error count
             await CallAPI(path);
         }
 
@@ -119,9 +121,9 @@ namespace ProjectEcho
                 List<string> reportList = new List<string>();
                 foreach(var i in v.matches)
                 {
-                    feedbackCount = feedbackCount + 1;
+                    errorCount = errorCount + 1;
 
-                    grammarReport = "ERROR #" + feedbackCount + "\r\n Sentence: " + i.sentence + "\r\n Message: " + i.message + "\r\n Offset: " + i.offset.ToString() + "\r\n Replacements: " + i.replacements + "\r\n";
+                    grammarReport = "ERROR #" + errorCount + "\r\n Sentence: " + i.sentence + "\r\n Message: " + i.message + "\r\n Location: " + i.offset.ToString() + " characters \r\n Replacements: " + i.replacements + "\r\n";
                     reportList.Add(grammarReport);
                 }
 
@@ -133,7 +135,7 @@ namespace ProjectEcho
                     reportList[i] = reportList[i].Replace("}", "");
                 }
 
-                Console.WriteLine(string.Join(" ", reportList));
+                //Console.WriteLine(string.Join(" ", reportList));
                 reportOutput += string.Join(" ", reportList);
                 // string s = getReport(body);
             }
@@ -175,8 +177,8 @@ namespace ProjectEcho
 
         public bool glossaryCheck(string documentString)
         {
-            string[] glossary = {"academic language","active nature of young children's learning:","aligned",
-                   "artifacts:","assessment","personal assets","cultural assets","community assets",
+            string[] glossary = {"academic language","active nature of young children's learning","aligned",
+                   "artifacts","assessment","personal assets","cultural assets","community assets",
                    "central focus","commentary","engaging children in learning","evaluation criteria",
                     "evidence","interdisciplinary","learning environment","learning experience",
                     "learning objectives", "multimodal nature of young children's learning",

@@ -70,5 +70,17 @@ namespace ProjectEcho.Properties {
                 this["t1notes"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Want to leave some notes for your future self? Write them here.")]
+        public string t2notes {
+            get {
+                return ((string)(this["t2notes"]));
+            }
+            set {
+                this["t2notes"] = value;
+            }
+        }
     }
 }

@@ -124,5 +124,19 @@ namespace ProjectEcho
         private void label7_Click(object sender, EventArgs e)
         {
         }
+
+        private void TaskTwoUserControl_Load(object sender, EventArgs e)
+        {
+            richTextBox1.Text = Properties.Settings.Default.t2notes; //load last saved notes
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            //save notes as they type
+            Properties.Settings.Default.t2notes = richTextBox1.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        
     }
 }

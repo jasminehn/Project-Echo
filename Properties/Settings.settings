@@ -14,5 +14,8 @@
     <Setting Name="t1notes" Type="System.String" Scope="User">
       <Value Profile="(Default)">Want to leave some notes for your future self? Write them here.</Value>
     </Setting>
+    <Setting Name="t2notes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Want to leave some notes for your future self? Write them here.</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
