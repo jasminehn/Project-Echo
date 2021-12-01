@@ -57,7 +57,7 @@ namespace ProjectEcho
         {
             try
             {
-                l1 = label29; l2 = label3; l3 = label25; l4 = label26; l5 = label31; l6 = label30; l7 = label27;
+                l1 = leftMarginLabel1B; l2 = rightMarginLabel1B; l3 = topMarginLabel1B; l4 = bottomMarginLabel1B; l5 = fontTypeLabel1B; l6 = fontSizeLabel1B; l7 = docLengthLabel1B;
                 await checkDocument(1, "B", formatCheckList1B, uploadInfo1B, grammarErrors1B, missingWordList1B);
             }
             catch(Exception ex)
