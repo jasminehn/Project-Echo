@@ -11,26 +11,21 @@ namespace ProjectEcho
 
     internal class FormatChecker
     {
-        //public static Application ap = new Application();
         public int progress = 0;
 
         //feedback variables
-        public string leftMarginFB = "";
-
-        public string rightMarginFB = "";
-        public string topMarginFB = "";
-        public string bottomMarginFB = "";
-
-        public string marginFB = "";
-        public string fontTypeFB = "";
-        public string fontSizeFB = "";
-        public string pageNumFB = "";
+        public string leftMarginFB = "Left margin: ";
+        public string rightMarginFB = "Right margin: ";
+        public string topMarginFB = "Top margin: ";
+        public string bottomMarginFB = "Bottom margin: ";
+        public string fontTypeFB = "Font type: ";
+        public string fontSizeFB = "Font size: ";
+        public string pageNumFB = "Document length: ";
 
         public Boolean[] runFormatCheck(String path, int correctLength)
         {
             Application ap = new Application();
 
-            //path = @"C:\Users\ceseg\Desktop\AlterEgo.docx";
             Document document = ap.Documents.Open(FileName: path, Visible: false, ReadOnly: false);
 
             /**
@@ -69,11 +64,6 @@ namespace ProjectEcho
 
             ap.Quit();
 
-            /*if (ap != null)
-				System.Runtime.InteropServices.Marshal.ReleaseComObject(ap);
-
-			ap = null;*/
-
             return isFormatted;
         }
 
@@ -87,31 +77,28 @@ namespace ProjectEcho
             float topMargin = document.PageSetup.TopMargin / 72;
             float bottomMargin = document.PageSetup.BottomMargin / 72;
 
-            //if any margins are not one inch
-            if((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
-            {
-                //System.Windows.Forms.MessageBox.Show("Left margin: "+leftMargin.ToString());
-                return false;
-            }
-            //marginFB = "Left margin: " + leftMargin.ToString() + "\nRight margin: " + rightMargin.ToString() + "\nTop margin: " + topMargin.ToString() + "\nBottom margin: " + bottomMargin.ToString();
-
             leftMarginFB = "Left margin: " + leftMargin.ToString() + "\"";
             rightMarginFB = "Right margin: " + rightMargin.ToString() + "\"";
             topMarginFB = "Top margin: " + topMargin.ToString() + "\"";
             bottomMarginFB = "Bottom margin: " + bottomMargin.ToString() + "\"";
+
+            //if any margins are not one inch
+            if((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
+            {
+                return false;
+            }
+
             progress += 25;
             return true;
         }
 
         public Boolean checkFontSize(Document document)
         {
+            fontSizeFB = "Font size: " + document.Content.Font.Size.ToString() + "pt";
             if(document.Content.Font.Size != 11)
             {
-                //System.Windows.Forms.MessageBox.Show(document.Content.Font.Size.ToString());
-
                 return false;
-            }
-            fontSizeFB = "Font size: " + document.Content.Font.Size.ToString() + "pt";
+            }            
             progress += 25;
             return true;
         }
@@ -145,8 +132,6 @@ namespace ProjectEcho
 
         public int checkLength(Document document)
         {
-            //System.Windows.Forms.MessageBox.Show(document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString());
-
             pageNumFB = "Document length: " + document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString() + " page(s)";
             progress += 25;
             return document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);

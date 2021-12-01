@@ -155,9 +155,8 @@ namespace ProjectEcho
             //this stuff below will be changed to task-specific variables
 
             //Console.WriteLine(report);
-            grammarBox.Text = report;
-
-            missingWordList1A.DataSource = GrammarAPI.dogs;
+            grammarErrorsTextBox.Text = report;
+            missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
         }
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)

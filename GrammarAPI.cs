@@ -20,13 +20,13 @@ namespace ProjectEcho
     public class GrammarAPI
     {
         public static String pog = "";
-        public static String idk = "";
+        public static String reportOutput = "";
 
         private static int feedbackCount = 0;
         private string wordsFound = "FOUND: ";
         private string wordsMissing = "MISSING: ";
 
-        public static List<string> dogs = new List<string>();
+        public static List<string> glossaryWordList = new List<string>();
 
         public static async Task CallAPI(String filePath)
         {
@@ -134,7 +134,7 @@ namespace ProjectEcho
                 }
 
                 Console.WriteLine(string.Join(" ", reportList));
-                idk += string.Join(" ", reportList);
+                reportOutput += string.Join(" ", reportList);
                 // string s = getReport(body);
             }
         }
@@ -202,7 +202,7 @@ namespace ProjectEcho
 
                     wordsMissing = wordsMissing + (" " + glossary[i]) + "\n";
 
-                    dogs.Add(glossary[i]);
+                    glossaryWordList.Add(glossary[i]);
                 }
             }
             if(!wordExists)
