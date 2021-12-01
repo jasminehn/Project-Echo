@@ -136,6 +136,7 @@ namespace ProjectEcho
             Properties.Settings.Default.t2notes = richTextBox1.Text;
             Properties.Settings.Default.Save();
         }
+
         
     }
 }
