@@ -103,6 +103,7 @@ namespace ProjectEcho
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
         {
+
             setControlActive(0);
         }
 
@@ -130,6 +131,7 @@ namespace ProjectEcho
                 mainMenuPanel.Visible = true;  // Same sort of operation as the controls above, but we need to do it for the panel which
                                                // is not a control
                 returnToMenuButton.Visible = false;
+                forwardButton.Visible = true;
                 backButton.Visible = false; // Nothing to go back to, set this invisible so we can't use it
                 
             } else
