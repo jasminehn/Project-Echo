@@ -44,7 +44,7 @@ namespace ProjectEcho
         {
             try
             {
-                l1 = label74; l2 = label77; l3 = label76; l4 = label75; l5 = label63; l6 = label72; l7 = label73;
+                l1 = leftMarginLabel1A; l2 = rightMarginLabel1A; l3 = topMarginLabel1A; l4 = bottomMarginLabel1A; l5 = fontTypeLabel1A; l6 = fontSizeLabel1A; l7 = docLengthLabel1A;
                 await checkDocument(1, "A", t1paCL, uploadInfo1, grammarBox, missingWordList1A);
             }
             catch(Exception ex)
@@ -57,7 +57,7 @@ namespace ProjectEcho
         {
             try
             {
-                l1 = label29; l2 = label3; l3 = label25; l4 = label26; l5 = label31; l6 = label30; l7 = label27;
+                l1 = leftMarginLabel1B; l2 = rightMarginLabel1B; l3 = topMarginLabel1B; l4 = bottomMarginLabel1B; l5 = fontTypeLabel1B; l6 = fontSizeLabel1B; l7 = docLengthLabel1B;
                 await checkDocument(1, "B", formatCheckList1B, uploadInfo1B, grammarErrors1B, missingWordList1B);
             }
             catch(Exception ex)
@@ -70,6 +70,7 @@ namespace ProjectEcho
         {
             try
             {
+                l1 = leftMarginLabel1C; l2 = rightMarginLabel1C; l3 = topMarginLabel1C; l4 = bottomMarginLabel1C; l5 = fontTypeLabel1C; l6 = fontSizeLabel1C; l7 = docLengthLabel1C;
                 await checkDocument(1, "C", formatCheckList1C, uploadInfo1C, grammarErrors1C, missingWordList1C);
             }
             catch(Exception ex)
@@ -82,6 +83,7 @@ namespace ProjectEcho
         {
             try
             {
+                l1 = leftMarginLabel1D; l2 = rightMarginLabel1D; l3 = topMarginLabel1D; l4 = bottomMarginLabel1D; l5 = fontTypeLabel1D; l6 = fontSizeLabel1D; l7 = docLengthLabel1D;
                 await checkDocument(1, "D", formatCheckList1D, uploadInfo1D, grammarErrors1D, missingWordList1D);
             }
             catch(Exception ex)
@@ -94,6 +96,7 @@ namespace ProjectEcho
         {
             try
             {
+                l1 = leftMarginLabel1E; l2 = rightMarginLabel1E; l3 = topMarginLabel1E; l4 = bottomMarginLabel1E; l5 = fontTypeLabel1E; l6 = fontSizeLabel1E; l7 = docLengthLabel1E;
                 await checkDocument(1, "E", formatCheckList1E, uploadInfo1E, grammarErrors1E, missingWordList1E);
             }
             catch(Exception ex)
@@ -152,7 +155,6 @@ namespace ProjectEcho
 
             string report = GrammarAPI.reportOutput;
 
-            //Console.WriteLine(report);
             grammarErrorsTextBox.Text = report;
             missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
         }
