@@ -1,38 +1,38 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectEcho
 {
     /**
-     * 
-     * 
-     * 
-     * 
+     *
+     *
+     *
+     *
      * Author(s): J. Nelson, I. Gnagy
      */
+
     public partial class SettingsForm : Form
     {
-
         //button colors
-        Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
-        Color buttonOffColor = SystemColors.ControlDark;
+        private Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
+
+        private Color buttonOffColor = SystemColors.ControlDark;
 
         //light mode colors
-        Color lightBG = Color.WhiteSmoke;
-        Color lightText = Color.Black;
+        private Color lightBG = Color.WhiteSmoke;
+
+        private Color lightText = Color.Black;
 
         //dark mode colors
-        Color darkBG = ColorTranslator.FromHtml("#121113");
-        Color darkText = Color.WhiteSmoke;
+        private Color darkBG = ColorTranslator.FromHtml("#121113");
 
-        int textSizeOffset = 0; //keeps track of how much the text size has changed
+        private Color darkText = Color.WhiteSmoke;
+
+        private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
         public SettingsForm()
         {
@@ -59,22 +59,21 @@ namespace ProjectEcho
 
             //changes text size to current saved value
             var controls = getAll(this, typeof(Label));
-            foreach (Control c in controls)
+            foreach(Control c in controls)
             {
-                FontFamily fon = Font.FontFamily; //Sets font family 
+                FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            
         }
-        
+
         private void switchButton_Click(object sender, EventArgs e)
         {
             //Checks darkmode toggle
-            if (switchButton.Checked) //ON
-            {                
+            if(switchButton.Checked) //ON
+            {
                 BackColor = darkBG;
                 panel1.BackColor = darkBG;
                 ForeColor = Color.White; //changes all text color
@@ -101,7 +100,7 @@ namespace ProjectEcho
             }
         }
 
-       public IEnumerable<Control> getAll(Control control, Type type)
+        public IEnumerable<Control> getAll(Control control, Type type)
         {
             var controls = control.Controls.Cast<Control>();
             return controls.SelectMany(ctrl => getAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
@@ -112,9 +111,9 @@ namespace ProjectEcho
             var controls = getAll(this, typeof(Label)); //Finds all labels
 
             //Checks boldness toggles
-            if (boldnessToggle.Checked) //ON
+            if(boldnessToggle.Checked) //ON
             {
-                foreach (Control c in controls) //Changes every label indivdually
+                foreach(Control c in controls) //Changes every label indivdually
                 {
                     FontFamily fam = c.Font.FontFamily; //Sets current font style
                     float s = c.Font.Size; //Sets current font size
@@ -125,7 +124,7 @@ namespace ProjectEcho
             }
             else //OFF
             {
-                foreach (Control c in controls)
+                foreach(Control c in controls)
                 {
                     FontFamily fam = c.Font.FontFamily;
                     float s = c.Font.Size;
@@ -135,21 +134,20 @@ namespace ProjectEcho
             }
         }
 
-        float prev = 0;
+        private float prev = 0;
 
         private void textsizeAdjust_Scroll(object sender, EventArgs e)
         {
-            
             var controls = getAll(this, typeof(Label)); //Finds all labels
-            
+
             float curr = textsizeAdjust.Value; // gets current font size
 
             //Checks if the slider val is getting larger or smaller
-            if (prev < curr)
+            if(prev < curr)
             {
-                foreach (Control c in controls) //Changes every label indivdually
+                foreach(Control c in controls) //Changes every label indivdually
                 {
-                    FontFamily fon = Font.FontFamily; //Sets font family 
+                    FontFamily fon = Font.FontFamily; //Sets font family
                     FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                     float adjSize = c.Font.Size + 1;
 
@@ -164,7 +162,7 @@ namespace ProjectEcho
                 //If the slider is set back down to 0, it subtracts 1 instead of 0
                 if(curr == 0)
                 {
-                    foreach (Control c in controls)
+                    foreach(Control c in controls)
                     {
                         FontFamily fon = Font.FontFamily;
                         FontStyle sty = c.Font.Style;
@@ -175,7 +173,7 @@ namespace ProjectEcho
                 }
                 else
                 {
-                    foreach (Control c in controls)
+                    foreach(Control c in controls)
                     {
                         FontFamily fon = Font.FontFamily;
                         FontStyle sty = c.Font.Style;
@@ -185,12 +183,11 @@ namespace ProjectEcho
                     }
                     //textSizeOffset = textSizeOffset - 1; //decreases offset
                 }
-                
+
                 prev = curr;
             }
             textSizeOffset = textsizeAdjust.Value;
             Console.WriteLine("CURRENT OFFSET:" + textSizeOffset); //prints offset for testing (should only be an int between 0 and 6)
-
         }
 
         private void applyButton_Click(object sender, EventArgs e)
@@ -204,7 +201,6 @@ namespace ProjectEcho
 
         private void textsizeAdjust_ValueChanged(object sender, EventArgs e)
         {
-            
         }
     }
 }
