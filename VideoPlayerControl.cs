@@ -13,33 +13,38 @@ namespace ProjectEcho
     public partial class VideoPlayerControl : UserControl
     {
         private Boolean playState = false;
+        private String path = @"C:\Users\ceseg\Videos\wow.mp4";
         public VideoPlayerControl()
         {
             InitializeComponent();
-            textBox1.Text = @"C:\Users\ceseg\Videos\wow.mp4";
-            vlcControl1.SetMedia(new Uri(textBox1.Text));
-            //vlcControl1.Play(new Uri(textBox1.Text));
-        }
-
-        private void selectVideo_Click(object sender, EventArgs e)
-        {
-            vlcControl1.Play(new Uri(textBox1.Text));
+            
+            vlcControl1.SetMedia(new Uri(path));
+            long duration = vlcControl1.Time;
+            Console.WriteLine("CLARE:: " + duration);
         }
 
         private void playPauseButton_Click(object sender, EventArgs e)
         {
             if(playState == false)
             {
+                playPauseButton.Image = ProjectEcho.Properties.Resources.pauseButtonImage;
                 vlcControl1.Play();
-                button3.Text = "Play";
                 playState = true;
+                //long duration = vlcControl1.Time;
+                //long duration = vlcControl1.GetMedia.Duration.Milliseconds;
+                //Console.WriteLine("CLARE:: " + duration);
             }
             else if(playState == true)
             {
+                playPauseButton.Image = ProjectEcho.Properties.Resources.playButtonImage;
                 vlcControl1.Pause();
-                button3.Text = "Pause";
                 playState = false;
             }
+        }
+
+        private void volumeBar_ValueChanged(object sender, decimal value)
+        {
+            vlcControl1.Audio.Volume = (int) value * 10;
         }
     }
 }
