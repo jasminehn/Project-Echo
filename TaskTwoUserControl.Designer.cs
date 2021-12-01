@@ -176,7 +176,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.tableLayoutPanel1.Controls.Add(this.textBox14, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
@@ -227,7 +227,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 407);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(491, 407);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -248,7 +248,7 @@ namespace ProjectEcho
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(307, 2);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(177, 25);
+            this.label21.Size = new System.Drawing.Size(179, 25);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
@@ -608,7 +608,7 @@ namespace ProjectEcho
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(6, 6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(439, 20);
+            this.label12.Size = new System.Drawing.Size(390, 18);
             this.label12.TabIndex = 15;
             this.label12.Text = "CLIP ONE: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 
@@ -685,7 +685,7 @@ namespace ProjectEcho
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(20, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(340, 22);
+            this.label5.Size = new System.Drawing.Size(304, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "Context for Learning Information";
             // 
@@ -851,7 +851,7 @@ namespace ProjectEcho
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(440, 20);
+            this.label6.Size = new System.Drawing.Size(391, 18);
             this.label6.TabIndex = 15;
             this.label6.Text = "CLIP TWO: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 

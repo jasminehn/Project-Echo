@@ -59,21 +59,34 @@ namespace ProjectEcho
             }
         }
 
+        // minus rows button click
         private void button2_Click(object sender, EventArgs e)
         {
-            if(tableLayoutPanel1.RowCount != 2)
+            Console.WriteLine("CLARE:: Number of Controls: " + tableLayoutPanel1.Controls.Count);
+            Console.WriteLine("CLARE:: Number of ROWSs: " + tableLayoutPanel1.RowCount);
+            
+            if(tableLayoutPanel1.Controls.Count > 30)
             {
-                this.tableLayoutPanel1.RowStyles.RemoveAt(tableLayoutPanel1.RowCount - 1);
-                this.tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.RowCount - 1);
-                tableLayoutPanel1.RowCount -= 1;
-                tableLayoutPanel1.Height -= 39;
+                tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
+                tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
 
-                TableLayoutRowStyleCollection styles = this.tableLayoutPanel1.RowStyles;
+                if((tableLayoutPanel1.Height - 25) < tableLayoutPanel1.MinimumSize.Height)
+                {
+                    tableLayoutPanel1.Height -= 25;
+                }
 
+                TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
                 foreach(RowStyle style in styles)
                 {
-                    style.SizeType = SizeType.Percent;
-                    style.Height = 100 / tableLayoutPanel1.RowCount;
+                    if(style.SizeType != SizeType.Absolute)
+                    {
+                        style.SizeType = SizeType.Absolute;
+                    }
+                }
+
+                foreach(RowStyle sizes in styles)
+                {
+                    sizes.Height = 25;
                 }
             }
         }
