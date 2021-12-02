@@ -35,6 +35,7 @@ namespace ProjectEcho
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.videoPlayerControl1 = new ProjectEcho.VideoPlayerControl();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@ namespace ProjectEcho
             this.vlcControl1.BackColor = System.Drawing.Color.Black;
             this.vlcControl1.Location = new System.Drawing.Point(12, 12);
             this.vlcControl1.Name = "vlcControl1";
-            this.vlcControl1.Size = new System.Drawing.Size(718, 426);
+            this.vlcControl1.Size = new System.Drawing.Size(402, 321);
             this.vlcControl1.Spu = -1;
             this.vlcControl1.TabIndex = 0;
             this.vlcControl1.Text = "vlcControl1";
@@ -52,7 +53,7 @@ namespace ProjectEcho
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 445);
+            this.button1.Location = new System.Drawing.Point(14, 366);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -62,7 +63,7 @@ namespace ProjectEcho
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(94, 444);
+            this.button2.Location = new System.Drawing.Point(96, 365);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -72,7 +73,7 @@ namespace ProjectEcho
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(176, 444);
+            this.button3.Location = new System.Drawing.Point(178, 365);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -82,17 +83,25 @@ namespace ProjectEcho
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 475);
+            this.textBox1.Location = new System.Drawing.Point(12, 339);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(597, 20);
+            this.textBox1.Size = new System.Drawing.Size(402, 20);
             this.textBox1.TabIndex = 4;
+            // 
+            // videoPlayerControl1
+            // 
+            this.videoPlayerControl1.Location = new System.Drawing.Point(429, 21);
+            this.videoPlayerControl1.Name = "videoPlayerControl1";
+            this.videoPlayerControl1.Size = new System.Drawing.Size(723, 541);
+            this.videoPlayerControl1.TabIndex = 5;
             // 
             // TaskOneGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(743, 577);
+            this.ClientSize = new System.Drawing.Size(1164, 689);
+            this.Controls.Add(this.videoPlayerControl1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -114,5 +123,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
+        private VideoPlayerControl videoPlayerControl1;
     }
 }
