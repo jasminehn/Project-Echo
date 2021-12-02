@@ -225,34 +225,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TaskOneGuide.cs" />
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TaskOneGuide.Designer.cs">
       <DependentUpon>TaskOneGuide.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundedButton.cs" />
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GrammarAPI.cs" />
     <Compile Include="DocumentHandler.cs" />
     <Compile Include="MainForm.cs" />
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormatChecker.cs" />
     <Compile Include="HelpForm.cs" />
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsForm.cs" />
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SwitchButton.cs" />
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TaskOneUserControl.cs" />
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TaskOneUserControl.Designer.cs">
       <DependentUpon>TaskOneUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ToggleControls.cs" />
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TaskTwoUserControl.cs" />
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="TaskTwoUserControl.Designer.cs">
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
     </Compile>
