@@ -275,6 +275,8 @@
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="VideoPlayerControl.cs" />
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="VideoPlayerControl.Designer.cs">
       <DependentUpon>VideoPlayerControl.cs</DependentUpon>
     </Compile>
