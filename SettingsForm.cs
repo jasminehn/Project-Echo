@@ -34,14 +34,6 @@ namespace ProjectEcho
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            /*darkModeSwitch.Text = "OFF";
-            invertedSwitch.Text = "OFF";
-            grayscaleSwitch.Text = "OFF";
-            blueyellowSwitch.Text = "OFF";
-            redgreenSwitch.Text = "OFF";
-            boldSwitch.Text = "OFF";*/
-            //textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
-
             //Applies user settings upon loading
             boldnessToggle.Checked = Properties.Settings.Default.boldness;
             switchButton.Checked = Properties.Settings.Default.darkmode;
@@ -176,32 +168,43 @@ namespace ProjectEcho
 
                         c.Font = new Font(fon, adjSize, sty);
                     }
-                    //textSizeOffset = textSizeOffset - 1; //decreases offset
                 }
-                
                 prev = curr;
             }
             textSizeOffset = textsizeAdjust.Value;
-            Console.WriteLine("CURRENT OFFSET:" + textSizeOffset); //prints offset for testing (should only be an int between 0 and 6)
 
         }
 
         private void applyButton_Click(object sender, EventArgs e)
         {
-            //Apply and save to form for reloading
-            Properties.Settings.Default.boldness = boldnessToggle.Checked;
-            Properties.Settings.Default.darkmode = switchButton.Checked;
-            Properties.Settings.Default.textsize = textSizeOffset;
-            Properties.Settings.Default.Save();
+            string warning = "Settings will be saved and appliaction will restart. Are you sure you would like to continue?";
 
+            if (MessageBox.Show(warning, "Message", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                //Apply and save to form for reloading
+                Properties.Settings.Default.boldness = boldnessToggle.Checked;
+                Properties.Settings.Default.darkmode = switchButton.Checked;
+                Properties.Settings.Default.textsize = textSizeOffset;
+                Properties.Settings.Default.Save();
 
+                Environment.Exit(0);
+            }
+            else
+            {
+                this.Close();
+            }
 
-            this.Close();
+            
         }
 
         private void textsizeAdjust_ValueChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //MainForm.ActiveForm MainForm_Load
         }
     }
 }
