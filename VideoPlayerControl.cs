@@ -16,7 +16,7 @@ namespace ProjectEcho
         public VideoPlayerControl()
         {
             InitializeComponent();
-            textBox1.Text = @"C:\Users\ceseg\Videos\wow.mp4";
+            textBox1.Text = "C:\\Users\\365ye\\OneDrive\\Desktop\\wow.mp4";
             vlcControl1.SetMedia(new Uri(textBox1.Text));
             //vlcControl1.Play(new Uri(textBox1.Text));
         }
@@ -31,13 +31,13 @@ namespace ProjectEcho
             if(playState == false)
             {
                 vlcControl1.Play();
-                button3.Text = "Play";
+                //button3.Text = "Play";
                 playState = true;
             }
             else if(playState == true)
             {
                 vlcControl1.Pause();
-                button3.Text = "Pause";
+                //button3.Text = "Pause";
                 playState = false;
             }
         }

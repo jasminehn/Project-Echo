@@ -1,4 +1,4 @@
-﻿
+﻿using System.IO;
 namespace ProjectEcho
 {
     partial class VideoPlayerControl
@@ -125,8 +125,11 @@ namespace ProjectEcho
             this.Controls.Add(this.timePositionBar);
             this.Name = "VideoPlayerControl";
             this.Size = new System.Drawing.Size(723, 541);
+            //vlcControl1.VlcLibDirectory = new DirectoryInfo("C:\\Users\\365ye\\OneDrive\\Desktop\\libvlc\\win-x32");
+            vlcControl1.VlcLibDirectory = new DirectoryInfo("C:\\Users\\365ye\\OneDrive\\Documents\\GitHub\\Project-Echo\\libvlc\\win-x32");
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timePositionBar)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
