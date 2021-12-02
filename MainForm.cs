@@ -42,6 +42,8 @@ namespace ProjectEcho
 
         public String path;
 
+        private InterfaceHandler ih = new InterfaceHandler(); //Creates new instance of InterfaceHandler
+
         /**
          * 
          * 
@@ -85,6 +87,11 @@ namespace ProjectEcho
             {
                 //fail silently
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ih.toggleBoldness(Properties.Settings.Default.boldness, this);
         }
 
         private void task1Button_Click(object sender, EventArgs e)
@@ -194,5 +201,7 @@ namespace ProjectEcho
         {
             toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
         }
+
+        
     }
 }

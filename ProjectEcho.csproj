@@ -212,6 +212,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterfaceHandler.cs" />
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
