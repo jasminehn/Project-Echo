@@ -63,7 +63,7 @@ namespace ProjectEcho
         private void button2_Click(object sender, EventArgs e)
         {
             Console.WriteLine("CLARE:: Number of Controls: " + tableLayoutPanel1.Controls.Count);
-            Console.WriteLine("CLARE:: Number of ROWS: " + tableLayoutPanel1.RowCount);
+            Console.WriteLine("CLARE:: Number of ROWSs: " + tableLayoutPanel1.RowCount);
             
             if(tableLayoutPanel1.Controls.Count > 30)
             {
