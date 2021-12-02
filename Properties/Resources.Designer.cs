@@ -133,26 +133,6 @@ namespace ProjectEcho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pauseButtonImage {
-            get {
-                object obj = ResourceManager.GetObject("pauseButtonImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap playButtonImage {
-            get {
-                object obj = ResourceManager.GetObject("playButtonImage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Untitled_design__13_ {
             get {
                 object obj = ResourceManager.GetObject("Untitled design (13)", resourceCulture);
