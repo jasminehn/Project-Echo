@@ -81,20 +81,17 @@ namespace ProjectEcho
             this.t1paCL = new System.Windows.Forms.CheckedListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.clipOneUpload = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -104,6 +101,9 @@ namespace ProjectEcho
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.clipOneUpload = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -116,13 +116,13 @@ namespace ProjectEcho
             this.panel9.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,7 +176,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tableLayoutPanel1.Controls.Add(this.textBox14, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
@@ -227,7 +227,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 407);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(497, 407);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -248,7 +248,7 @@ namespace ProjectEcho
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(307, 2);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(181, 25);
+            this.label21.Size = new System.Drawing.Size(185, 25);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
@@ -608,7 +608,7 @@ namespace ProjectEcho
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(6, 6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(390, 18);
+            this.label12.Size = new System.Drawing.Size(439, 20);
             this.label12.TabIndex = 15;
             this.label12.Text = "CLIP ONE: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 
@@ -660,24 +660,6 @@ namespace ProjectEcho
             this.label13.TabIndex = 16;
             this.label13.Text = resources.GetString("label13.Text");
             // 
-            // clipOneUpload
-            // 
-            this.clipOneUpload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.clipOneUpload.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
-            this.clipOneUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.clipOneUpload.FlatAppearance.BorderSize = 0;
-            this.clipOneUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.clipOneUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clipOneUpload.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clipOneUpload.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clipOneUpload.Location = new System.Drawing.Point(703, 39);
-            this.clipOneUpload.Name = "clipOneUpload";
-            this.clipOneUpload.Size = new System.Drawing.Size(50, 76);
-            this.clipOneUpload.TabIndex = 22;
-            this.clipOneUpload.UseVisualStyleBackColor = true;
-            this.clipOneUpload.Click += new System.EventHandler(this.uploadButton_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -685,7 +667,7 @@ namespace ProjectEcho
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(20, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 23);
+            this.label5.Size = new System.Drawing.Size(340, 22);
             this.label5.TabIndex = 23;
             this.label5.Text = "Context for Learning Information";
             // 
@@ -749,17 +731,6 @@ namespace ProjectEcho
             this.richTextBox1.Text = "Want to leave some notes for your future self? Write them here.";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -817,23 +788,6 @@ namespace ProjectEcho
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 25;
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(703, 36);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 65);
-            this.button4.TabIndex = 48;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Goldenrod;
@@ -851,7 +805,7 @@ namespace ProjectEcho
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(391, 18);
+            this.label6.Size = new System.Drawing.Size(440, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "CLIP TWO: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 
@@ -933,6 +887,52 @@ namespace ProjectEcho
             this.panel2.Size = new System.Drawing.Size(555, 800);
             this.panel2.TabIndex = 25;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(399, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.Location = new System.Drawing.Point(703, 36);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 65);
+            this.button4.TabIndex = 48;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // clipOneUpload
+            // 
+            this.clipOneUpload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clipOneUpload.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.clipOneUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.clipOneUpload.FlatAppearance.BorderSize = 0;
+            this.clipOneUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.clipOneUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clipOneUpload.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clipOneUpload.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.clipOneUpload.Location = new System.Drawing.Point(703, 39);
+            this.clipOneUpload.Name = "clipOneUpload";
+            this.clipOneUpload.Size = new System.Drawing.Size(50, 76);
+            this.clipOneUpload.TabIndex = 22;
+            this.clipOneUpload.UseVisualStyleBackColor = true;
+            this.clipOneUpload.Click += new System.EventHandler(this.uploadButton_Click);
+            // 
             // TaskTwoUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -961,7 +961,6 @@ namespace ProjectEcho
             this.panel28.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -972,6 +971,7 @@ namespace ProjectEcho
             this.panel13.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

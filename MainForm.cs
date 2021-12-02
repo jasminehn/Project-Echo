@@ -39,6 +39,7 @@ namespace ProjectEcho
         private UserControl currentControl = new UserControl(); // Every time the user switches pages, this value gets set to
                                                                 // one of the existing pages in the UserControl array.                                                     
         public static TaskOneUserControl t1 = new TaskOneUserControl();  // purposely empty         
+        
         public HelpForm hf = new HelpForm(); // Globally available
         int saveHelpResource = 0; // The HelpForm has never been opened, so set to zero.
         public String path;
@@ -55,7 +56,7 @@ namespace ProjectEcho
             taskControls[0] = t1; // purposely empty
             taskControls[1] = taskOne; // taskOne is created in the Designer
             taskControls[2] = taskTwoUserControl1; // taskTwo is created in the Designer
-            taskControls[3] = taskOne;  // Will be changed once Task Three is built.
+            taskControls[3] = taskThreeUserControl1;  // Will be changed once Task Three is built.
 
             currentControl = taskControls[0]; // When the 
             taskOne.Visible = false;

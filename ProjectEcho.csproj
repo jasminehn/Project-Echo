@@ -262,6 +262,12 @@
     <Compile Include="TaskOneUserControl.Designer.cs">
       <DependentUpon>TaskOneUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaskThreeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskThreeUserControl.Designer.cs">
+      <DependentUpon>TaskThreeUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ToggleControls.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskOneUserControl.resx">
       <DependentUpon>TaskOneUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskThreeUserControl.resx">
+      <DependentUpon>TaskThreeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaskTwoUserControl.resx">
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
