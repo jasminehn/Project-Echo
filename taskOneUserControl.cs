@@ -137,6 +137,9 @@ namespace ProjectEcho
                     }
                 }
 
+                checkedListBox6.SetItemChecked(1, true); //DELETE LATER
+                checkedListBox6.SetItemChecked(2, true); //DELETE LATER
+
                 //this stuff below will be changed to task-specific variables
                 l1.Text = fc.leftMarginFB;
                 l2.Text = fc.rightMarginFB;
