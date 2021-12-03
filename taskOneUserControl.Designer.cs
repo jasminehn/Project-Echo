@@ -602,11 +602,13 @@ namespace ProjectEcho
             // grammarErrors1E
             // 
             this.grammarErrors1E.AcceptsReturn = true;
+            this.grammarErrors1E.BackColor = System.Drawing.Color.White;
             this.grammarErrors1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1E.Location = new System.Drawing.Point(19, 223);
             this.grammarErrors1E.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1E.Multiline = true;
             this.grammarErrors1E.Name = "grammarErrors1E";
+            this.grammarErrors1E.ReadOnly = true;
             this.grammarErrors1E.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarErrors1E.Size = new System.Drawing.Size(354, 384);
             this.grammarErrors1E.TabIndex = 38;
@@ -1145,11 +1147,13 @@ namespace ProjectEcho
             // grammarErrors1D
             // 
             this.grammarErrors1D.AcceptsReturn = true;
+            this.grammarErrors1D.BackColor = System.Drawing.Color.White;
             this.grammarErrors1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1D.Location = new System.Drawing.Point(19, 223);
             this.grammarErrors1D.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1D.Multiline = true;
             this.grammarErrors1D.Name = "grammarErrors1D";
+            this.grammarErrors1D.ReadOnly = true;
             this.grammarErrors1D.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarErrors1D.Size = new System.Drawing.Size(354, 384);
             this.grammarErrors1D.TabIndex = 38;
@@ -1688,11 +1692,13 @@ namespace ProjectEcho
             // grammarErrors1C
             // 
             this.grammarErrors1C.AcceptsReturn = true;
+            this.grammarErrors1C.BackColor = System.Drawing.Color.White;
             this.grammarErrors1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1C.Location = new System.Drawing.Point(19, 223);
             this.grammarErrors1C.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1C.Multiline = true;
             this.grammarErrors1C.Name = "grammarErrors1C";
+            this.grammarErrors1C.ReadOnly = true;
             this.grammarErrors1C.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarErrors1C.Size = new System.Drawing.Size(354, 384);
             this.grammarErrors1C.TabIndex = 38;
@@ -2348,11 +2354,13 @@ namespace ProjectEcho
             // grammarBox
             // 
             this.grammarBox.AcceptsReturn = true;
+            this.grammarBox.BackColor = System.Drawing.Color.White;
             this.grammarBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarBox.Location = new System.Drawing.Point(19, 223);
             this.grammarBox.Margin = new System.Windows.Forms.Padding(4);
             this.grammarBox.Multiline = true;
             this.grammarBox.Name = "grammarBox";
+            this.grammarBox.ReadOnly = true;
             this.grammarBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarBox.Size = new System.Drawing.Size(354, 384);
             this.grammarBox.TabIndex = 38;
@@ -2915,11 +2923,13 @@ namespace ProjectEcho
             // grammarErrors1B
             // 
             this.grammarErrors1B.AcceptsReturn = true;
+            this.grammarErrors1B.BackColor = System.Drawing.Color.White;
             this.grammarErrors1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1B.Location = new System.Drawing.Point(19, 223);
             this.grammarErrors1B.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1B.Multiline = true;
             this.grammarErrors1B.Name = "grammarErrors1B";
+            this.grammarErrors1B.ReadOnly = true;
             this.grammarErrors1B.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarErrors1B.Size = new System.Drawing.Size(354, 384);
             this.grammarErrors1B.TabIndex = 38;
