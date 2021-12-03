@@ -91,19 +91,6 @@ namespace ProjectEcho
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ih.toggleBoldness(Properties.Settings.Default.boldness, panel1);
-            ih.toggleBoldness(Properties.Settings.Default.boldness, taskOne);
-            ih.toggleBoldness(Properties.Settings.Default.boldness, taskTwoUserControl1);
-            ih.toggleBoldness(Properties.Settings.Default.boldness, mainMenuPanel);
-            ih.toggleBoldness(Properties.Settings.Default.boldness, mainPanel);
-            
-
-            //ih.toggleDarkMode(Properties.Settings.Default.darkmode, );
-            //ih.toggleDarkMode(Properties.Settings.Default.darkmode, );
-            ih.toggleDarkMode(Properties.Settings.Default.darkmode, mainMenuPanel);
-            ih.toggleDarkMode(Properties.Settings.Default.darkmode, mainPanel);
-            ih.toggleDarkMode(Properties.Settings.Default.darkmode, panel1);
-
             ih.adjustTextSize(Properties.Settings.Default.textsize, taskOne);
             ih.adjustTextSize(Properties.Settings.Default.textsize, taskTwoUserControl1);
             ih.adjustTextSize(Properties.Settings.Default.textsize, mainMenuPanel);
