@@ -231,5 +231,67 @@ namespace ProjectEcho
                 Console.Write("Guide opened");
             }
         }
+        public IEnumerable<Control> getAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+            return controls.SelectMany(ctrl => getAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
+        }
+
+        private float prev = 0;
+        private int textSizeOffset = 0; //keeps track of how much the text size has changed
+        private void textsizeAdjust_Scroll(object sender, EventArgs e)
+        {
+            var controls = getAll(this, typeof(Label)); //Finds all labels
+
+            float curr = textsizeAdjust.Value; // gets current font size
+
+            //Checks if the slider val is getting larger or smaller
+            if (prev < curr)
+            {
+                foreach (Control c in controls) //Changes every label indivdually
+                {
+                    FontFamily fon = Font.FontFamily; //Sets font family
+                    FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                    float adjSize = c.Font.Size + 1;
+
+                    //Passes in family, style, and changes to new size
+                    c.Font = new Font(fon, adjSize, sty);
+                }
+                //textSizeOffset = textSizeOffset + 1; //increases offset
+                prev = curr; //Sets prev to current size for next interation
+            }
+            else
+            {
+                //If the slider is set back down to 0, it subtracts 1 instead of 0
+                if (curr == 0)
+                {
+                    foreach (Control c in controls)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+
+                        c.Font = new Font(fon, adjSize, sty);
+                    }
+                }
+                else
+                {
+                    foreach (Control c in controls)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+
+                        c.Font = new Font(fon, adjSize, sty);
+                    }
+                    //textSizeOffset = textSizeOffset - 1; //decreases offset
+                }
+
+                prev = curr;
+            }
+            textSizeOffset = textsizeAdjust.Value;
+            Properties.Settings.Default.textsize = textSizeOffset;
+            Properties.Settings.Default.Save();
+        }
     }
 }
