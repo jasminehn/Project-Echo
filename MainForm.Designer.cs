@@ -207,7 +207,7 @@ namespace ProjectEcho
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1924, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -218,7 +218,7 @@ namespace ProjectEcho
             this.clearLocalFilesToolStripMenuItem,
             this.exitApplicationToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // recentFilesToolStripMenuItem
@@ -243,7 +243,7 @@ namespace ProjectEcho
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -502,21 +502,21 @@ namespace ProjectEcho
             // 
             // textsizeAdjust
             // 
-            this.textsizeAdjust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textsizeAdjust.Location = new System.Drawing.Point(896, 20);
+            this.textsizeAdjust.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textsizeAdjust.Location = new System.Drawing.Point(896, 32);
             this.textsizeAdjust.Maximum = 6;
             this.textsizeAdjust.Name = "textsizeAdjust";
             this.textsizeAdjust.Size = new System.Drawing.Size(250, 56);
             this.textsizeAdjust.TabIndex = 36;
-            this.textsizeAdjust.TabStop = false;
             this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
             // 
             // textsizeLabel
             // 
+            this.textsizeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textsizeLabel.AutoSize = true;
             this.textsizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textsizeLabel.Location = new System.Drawing.Point(790, 25);
+            this.textsizeLabel.Location = new System.Drawing.Point(779, 39);
             this.textsizeLabel.Name = "textsizeLabel";
             this.textsizeLabel.Size = new System.Drawing.Size(91, 23);
             this.textsizeLabel.TabIndex = 37;
@@ -576,6 +576,7 @@ namespace ProjectEcho
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Education Capstone Checker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.titlePanel.ResumeLayout(false);

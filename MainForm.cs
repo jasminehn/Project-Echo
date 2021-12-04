@@ -86,6 +86,23 @@ namespace ProjectEcho
             }
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
+
+            //changes text size to current saved value
+            var controls = getAll(this, typeof(Label));
+            foreach (Control c in controls)
+            {
+                FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+        }
+
         // On-click events for the buttons on the MainForm
         private void task1Button_Click(object sender, EventArgs e)
         {
@@ -293,5 +310,7 @@ namespace ProjectEcho
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.Save();
         }
+
+        
     }
 }
