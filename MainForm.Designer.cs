@@ -47,6 +47,7 @@ namespace ProjectEcho
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -171,7 +172,7 @@ namespace ProjectEcho
             this.titleLabel.Location = new System.Drawing.Point(4, 5);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(130, 28);
+            this.titleLabel.Size = new System.Drawing.Size(144, 30);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
             // 
@@ -245,6 +246,7 @@ namespace ProjectEcho
             // mainMenuPanel
             // 
             this.mainMenuPanel.BackColor = System.Drawing.Color.White;
+            this.mainMenuPanel.Controls.Add(this.button1);
             this.mainMenuPanel.Controls.Add(this.panel5);
             this.mainMenuPanel.Controls.Add(this.panel4);
             this.mainMenuPanel.Controls.Add(this.panel3);
@@ -252,6 +254,17 @@ namespace ProjectEcho
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(1914, 890);
             this.mainMenuPanel.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1475, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -284,7 +297,7 @@ namespace ProjectEcho
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(108, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 23);
+            this.label3.Size = new System.Drawing.Size(239, 22);
             this.label3.TabIndex = 30;
             this.label3.Text = "TASK THREE: ASSESSING";
             // 
@@ -348,7 +361,7 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(97, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 23);
+            this.label2.Size = new System.Drawing.Size(269, 22);
             this.label2.TabIndex = 30;
             this.label2.Text = "TASK TWO: IMPLEMENTING";
             // 
@@ -413,7 +426,7 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(109, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.Size = new System.Drawing.Size(226, 22);
             this.label1.TabIndex = 30;
             this.label1.Text = "TASK ONE: PLANNING";
             // 
@@ -483,16 +496,13 @@ namespace ProjectEcho
             this.taskTwoUserControl1.Name = "taskTwoUserControl1";
             this.taskTwoUserControl1.Size = new System.Drawing.Size(1947, 890);
             this.taskTwoUserControl1.TabIndex = 17;
-            // 
-            // taskThreeUserControl1
-            // 
+
             this.taskThreeUserControl1.AutoSize = true;
             this.taskThreeUserControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskThreeUserControl1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskThreeUserControl1.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeUserControl1.Location = new System.Drawing.Point(0, 80);
             this.taskThreeUserControl1.Name = "taskThreeUserControl1";
-            this.taskThreeUserControl1.Size = new System.Drawing.Size(1887, 810);
+            this.taskThreeUserControl1.Size = new System.Drawing.Size(1947, 890);
             this.taskThreeUserControl1.TabIndex = 17;
             // 
             // toolTip1
@@ -576,5 +586,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel6;
         private TaskTwoUserControl taskTwoUserControl1;
         private TaskThreeUserControl taskThreeUserControl1;
+        private System.Windows.Forms.Button button1;
     }
 }
