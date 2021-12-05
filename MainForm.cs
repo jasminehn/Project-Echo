@@ -241,12 +241,7 @@ namespace ProjectEcho
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaskOneGuide oneGuide = new TaskOneGuide();
-
-            if(oneGuide.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Guide opened");
-            }
+           
         }
         public IEnumerable<Control> getAll(Control control, Type type)
         {
@@ -311,6 +306,14 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TaskOneGuide oneGuide = new TaskOneGuide();
+
+            if (oneGuide.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Guide opened");
+            }
+        }
     }
 }

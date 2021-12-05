@@ -46,7 +46,7 @@ namespace ProjectEcho
 
         private void TaskOneGuide_Load(object sender, EventArgs e)
         {
-            textBox1.Text = @"C:\Users\ceseg\Videos\wow.mp4";
+            textBox1.Text = @"C:\Users\JP003306\Downloads\emberslo.mp4";
         }
     }
 }
