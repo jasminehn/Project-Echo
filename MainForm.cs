@@ -139,13 +139,18 @@ namespace ProjectEcho
 
         public void setControlActive(int i)
         {
+             headerPanel.Dock = DockStyle.Top;
              currentControl.Visible = false; // Set the current control to invisible
+             currentControl.Dock = DockStyle.None;
              currentControl = taskControls[i]; // reset the global currentControl variable to the new position in the array
+             currentControl.Dock = DockStyle.Fill;
              currentControl.Visible = true; // set this new control visible
      
             if(i.Equals(0)) // First position is the Main Menu
             {
                 titleLabel.Text = "MAIN MENU";
+                currentControl.Dock = DockStyle.None;
+                mainMenuPanel.Dock = DockStyle.Fill;
                 mainMenuPanel.Visible = true;  // Same sort of operation as the controls above, but we need to do it for the panel which
                                                // is not a control
                 returnToMenuButton.Visible = false;
@@ -155,6 +160,7 @@ namespace ProjectEcho
             } else
             {
                 mainMenuPanel.Visible = false;
+                mainMenuPanel.Dock = DockStyle.None;
                 returnToMenuButton.Visible = true;
                 backButton.Visible = true;
                
