@@ -3,6 +3,8 @@ using CefSharp.WinForms;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Drawing;
 
 namespace ProjectEcho
 {
@@ -26,6 +28,9 @@ namespace ProjectEcho
 
         private int focusFlag = 0;
 
+        SettingsHandler settingsHandler = new SettingsHandler();
+        private int textSizeOffset = 0; //keeps track of how much the text size has changed     
+
         public HelpForm()
         {
             InitializeComponent();
@@ -35,6 +40,17 @@ namespace ProjectEcho
 
         private void HelpForm_Load(object sender, EventArgs e)
         {
+            //Apply saved display settings
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            var controls = settingsHandler.getAll(this, typeof(Label));
+            foreach(Control c in controls)
+            {
+                FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+
             url = FileName1;
             comboBox2.Enabled = false;
             CefSettings settings = new CefSettings();
