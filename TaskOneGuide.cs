@@ -15,6 +15,8 @@ namespace ProjectEcho
     {
         public TaskOneGuide()
         {
+            //vlcControl1.VlcLibDirectory = Properties.vlclib;
+
             InitializeComponent();
         }
 

@@ -103,7 +103,7 @@ namespace ProjectEcho
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1247, 577);
-            this.Controls.Add(this.videoPlayerControl1);
+            //this.Controls.Add(this.videoPlayerControl1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

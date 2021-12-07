@@ -64,9 +64,9 @@ namespace ProjectEcho
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
             string[] taskTwoArray = { "Video Clips", "Commentary" };
-            taskTwoList.Items.AddRange(taskTwoArray);
+            //taskTwoList.Items.AddRange(taskTwoArray);
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
-            taskThreeList.Items.AddRange(taskThreeArray);
+            //taskThreeList.Items.AddRange(taskThreeArray);
             //string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
             //reviewList.Items.AddRange(reviewArray);
 
