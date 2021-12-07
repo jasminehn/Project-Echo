@@ -150,7 +150,7 @@ namespace ProjectEcho
             this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(129, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 22);
+            this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 31;
             this.label3.Text = "SETTINGS";
             // 
@@ -161,7 +161,7 @@ namespace ProjectEcho
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(95, 34);
             this.applyButton.TabIndex = 3;
-            this.applyButton.Text = "SAVE";
+            this.applyButton.Text = "APPLY";
             this.applyButton.UseVisualStyleBackColor = true;
             this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
