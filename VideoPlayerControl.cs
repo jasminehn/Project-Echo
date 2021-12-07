@@ -8,28 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vlc.DotNet.Forms;
 
 namespace ProjectEcho
 {
     public partial class VideoPlayerControl : UserControl
     {
+        public VlcControl videoControl1 = new VlcControl();
         public VideoPlayerControl()
         {
-            //This will give us the full name path of the executable file:
-            //i.e. C:\Program Files\MyApplication\MyApplication.exe
             String strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
             Console.WriteLine("CLARE:: location of app " + strExeFilePath);
-            //This will strip just the working path name:
-            //C:\Program Files\MyApplication
             String strWorkPath = System.IO.Path.GetDirectoryName(strExeFilePath);
             Console.WriteLine("CLARE:: work path " + strWorkPath);
             string appPath = strWorkPath + @"\vlclib";
+            
 
             try
             {
                 var libDirectory = new DirectoryInfo(appPath);
                 
-                vlcControl1.VlcLibDirectory = libDirectory;
+                videoControl1.VlcLibDirectory = libDirectory;
             }
             catch (Exception e)
             {
@@ -38,6 +37,9 @@ namespace ProjectEcho
 
 
             InitializeComponent();
+            videoControl1.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
+            videoControl1.Dock = DockStyle.Fill;
+            this.videoControlPanel.Controls.Add(videoControl1);
             //var libDirectory = new DirectoryInfo(appPath);
 
             
@@ -46,7 +48,7 @@ namespace ProjectEcho
         private void button1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("CLARE:: YA GOT HERE");
-            vlcControl1.Play(new Uri(@"C:\Users\JP003306\Downloads\emberslo.mp4"));
+            //vlcControl1.Play(new Uri(@"C:\Users\JP003306\Downloads\emberslo.mp4"));
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)

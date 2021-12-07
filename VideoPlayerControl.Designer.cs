@@ -29,28 +29,14 @@ namespace ProjectEcho
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoPlayerControl));
-            this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
             this.button1 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.durationLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
+            this.videoControlPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // vlcControl1
-            // 
-            this.vlcControl1.BackColor = System.Drawing.Color.Black;
-            this.vlcControl1.Location = new System.Drawing.Point(3, 3);
-            this.vlcControl1.Name = "vlcControl1";
-            this.vlcControl1.Size = new System.Drawing.Size(585, 393);
-            this.vlcControl1.Spu = -1;
-            this.vlcControl1.TabIndex = 0;
-            this.vlcControl1.Text = "vlcControl1";
-            this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
-            this.vlcControl1.VlcMediaplayerOptions = null;
             // 
             // button1
             // 
@@ -92,17 +78,24 @@ namespace ProjectEcho
             this.durationLabel.TabIndex = 3;
             this.durationLabel.Text = "00:00";
             // 
+            // videoControlPanel
+            // 
+            this.videoControlPanel.BackColor = System.Drawing.Color.Black;
+            this.videoControlPanel.Location = new System.Drawing.Point(6, 3);
+            this.videoControlPanel.Name = "videoControlPanel";
+            this.videoControlPanel.Size = new System.Drawing.Size(579, 382);
+            this.videoControlPanel.TabIndex = 4;
+            // 
             // VideoPlayerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Controls.Add(this.videoControlPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.vlcControl1);
             this.ForeColor = System.Drawing.Color.Lavender;
             this.Name = "VideoPlayerControl";
             this.Size = new System.Drawing.Size(591, 492);
-            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -111,11 +104,10 @@ namespace ProjectEcho
         }
 
         #endregion
-
-        private Vlc.DotNet.Forms.VlcControl vlcControl1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label durationLabel;
+        private System.Windows.Forms.Panel videoControlPanel;
     }
 }
