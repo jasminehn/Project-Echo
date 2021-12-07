@@ -44,6 +44,10 @@ namespace ProjectEcho
         int saveHelpResource = 0; // The HelpForm has never been opened, so set to zero.
         public String path;
 
+        //var allLabels = getAll(this, typeof(Label)); //Finds all labels
+
+        SettingsHandler settingsHandler = new SettingsHandler();
+
         public MainForm()
         {
             InitializeComponent();
@@ -88,12 +92,19 @@ namespace ProjectEcho
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
-            textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
+            {
+                FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
 
-            //changes text size to current saved value
-            var controls = getAll(this, typeof(Label));
-            foreach (Control c in controls)
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
+            foreach (Control c in checkedlistboxes)
             {
                 FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
@@ -224,15 +235,7 @@ namespace ProjectEcho
             }
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SettingsForm sf = new SettingsForm();
-
-            if(sf.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Settings opened");
-            }
-        }
+        
 
         private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -249,16 +252,17 @@ namespace ProjectEcho
         {
            
         }
-        public IEnumerable<Control> getAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
-            return controls.SelectMany(ctrl => getAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
-        }
+
+        
 
         private float prev = 0;
-        private int textSizeOffset = 0; //keeps track of how much the text size has changed
+        private int textSizeOffset = 0; //keeps track of how much the text size has changed        
+
+
+
         private void textsizeAdjust_Scroll(object sender, EventArgs e)
         {
+            /*
             var labels = getAll(this, typeof(Label)); //Finds all labels
             var checkLists = getAll(this, typeof(CheckedListBox)); //Finds all labels
 
@@ -335,6 +339,7 @@ namespace ProjectEcho
             textSizeOffset = textsizeAdjust.Value;
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.Save();
+            */
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -344,6 +349,16 @@ namespace ProjectEcho
             if (oneGuide.ShowDialog() == DialogResult.OK)
             {
                 Console.Write("Guide opened");
+            }
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm sf = new SettingsForm(this, hf); //pass in the main form and the helpform to the settings form
+
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Settings opened");
             }
         }
     }

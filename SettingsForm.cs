@@ -17,6 +17,8 @@ namespace ProjectEcho
 
     public partial class SettingsForm : Form
     {
+        SettingsHandler settingsHandler = new SettingsHandler();
+
         //button colors
         private Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
 
@@ -34,37 +36,34 @@ namespace ProjectEcho
 
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
-        public SettingsForm()
+        //MainForm main = new MainForm();
+
+        MainForm mainForm;
+        HelpForm helpForm;
+
+        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput)
         {
             InitializeComponent();
+            mainForm = mainFormInput;
+            helpForm = helpFormInput;
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            /*darkModeSwitch.Text = "OFF";
-            invertedSwitch.Text = "OFF";
-            grayscaleSwitch.Text = "OFF";
-            blueyellowSwitch.Text = "OFF";
-            redgreenSwitch.Text = "OFF";
-            boldSwitch.Text = "OFF";*/
-            //textsizeSelect.Value = (decimal)textsizeLabel.Font.Size;
+            //Apply saved display settings upon loading
 
-            //Applies user settings upon loading
             boldnessToggle.Checked = Properties.Settings.Default.boldness;
             switchButton.Checked = Properties.Settings.Default.darkmode;
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             //Console.WriteLine("offset:"+textSizeOffset); //print offsetat start for texting
-            //Console.WriteLine(Properties.Settings.Default.textsize);
             textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
-
-            //changes text size to current saved value
-            var controls = getAll(this, typeof(Label));
+            
+            var controls = settingsHandler.getAll(this, typeof(Label));
             foreach(Control c in controls)
             {
                 FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
-
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
         }
@@ -100,20 +99,29 @@ namespace ProjectEcho
             }
         }
 
-        public IEnumerable<Control> getAll(Control control, Type type)
-        {
-            var controls = control.Controls.Cast<Control>();
-            return controls.SelectMany(ctrl => getAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
-        }
-
         private void boldnessToggle_CheckedChanged(object sender, EventArgs e)
         {
-            var controls = getAll(this, typeof(Label)); //Finds all labels
+            var labels = settingsHandler.getAll(mainForm, typeof(Label)); //Finds all labels in main form
+            var checkLists = settingsHandler.getAll(mainForm, typeof(CheckedListBox)); //Finds all checkedlistboxes in main form
+
+            var settingsLabels = settingsHandler.getAll(this, typeof(Label)); //Finds all labels in settings form
+            labels = labels.Concat(settingsLabels); //adds settings form labels to label IEnumerable
+
+            var helpLabels = settingsHandler.getAll(helpForm, typeof(Label)); //Finds all labels in help form
+            labels = labels.Concat(helpLabels); //adds help form labels to label IEnumerable
 
             //Checks boldness toggles
-            if(boldnessToggle.Checked) //ON
+            if (boldnessToggle.Checked) //ON
             {
-                foreach(Control c in controls) //Changes every label indivdually
+                foreach(Control c in labels) //Changes every label indivdually
+                {
+                    FontFamily fam = c.Font.FontFamily; //Sets current font style
+                    float s = c.Font.Size; //Sets current font size
+
+                    //Passes in font style, size and changes to bold
+                    c.Font = new System.Drawing.Font(fam, s, FontStyle.Bold);
+                }
+                foreach(CheckedListBox c in checkLists) //Changes every label indivdually
                 {
                     FontFamily fam = c.Font.FontFamily; //Sets current font style
                     float s = c.Font.Size; //Sets current font size
@@ -124,7 +132,14 @@ namespace ProjectEcho
             }
             else //OFF
             {
-                foreach(Control c in controls)
+                foreach(Control c in labels)
+                {
+                    FontFamily fam = c.Font.FontFamily;
+                    float s = c.Font.Size;
+
+                    c.Font = new System.Drawing.Font(fam, s, FontStyle.Regular);
+                }
+                foreach(CheckedListBox c in checkLists)
                 {
                     FontFamily fam = c.Font.FontFamily;
                     float s = c.Font.Size;
@@ -138,14 +153,21 @@ namespace ProjectEcho
 
         private void textsizeAdjust_Scroll(object sender, EventArgs e)
         {
-            var controls = getAll(this, typeof(Label)); //Finds all labels
+            var labels = settingsHandler.getAll(mainForm, typeof(Label)); //Finds all labels in main form
+            var checkLists = settingsHandler.getAll(mainForm, typeof(CheckedListBox)); //Finds all checkedlistboxes in main form
+
+            var settingsLabels = settingsHandler.getAll(this, typeof(Label)); //Finds all labels in settings form
+            labels = labels.Concat(settingsLabels); //adds settings form labels to label IEnumerable
+
+            var helpLabels = settingsHandler.getAll(helpForm, typeof(Label)); //Finds all labels in help form
+            labels = labels.Concat(helpLabels); //adds help form labels to label IEnumerable
 
             float curr = textsizeAdjust.Value; // gets current font size
 
             //Checks if the slider val is getting larger or smaller
-            if(prev < curr)
+            if (prev < curr)
             {
-                foreach(Control c in controls) //Changes every label indivdually
+                foreach (Control c in labels) //Changes every label indivdually
                 {
                     FontFamily fon = Font.FontFamily; //Sets font family
                     FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
@@ -154,15 +176,22 @@ namespace ProjectEcho
                     //Passes in family, style, and changes to new size
                     c.Font = new Font(fon, adjSize, sty);
                 }
-                //textSizeOffset = textSizeOffset + 1; //increases offset
+                foreach (CheckedListBox c in checkLists)
+                {
+                    FontFamily fon = Font.FontFamily;
+                    FontStyle sty = c.Font.Style;
+                    float adjSize = c.Font.Size + 1;
+
+                    c.Font = new System.Drawing.Font(fon, adjSize, sty);
+                }
                 prev = curr; //Sets prev to current size for next interation
             }
             else
             {
                 //If the slider is set back down to 0, it subtracts 1 instead of 0
-                if(curr == 0)
+                if (curr == 0)
                 {
-                    foreach(Control c in controls)
+                    foreach (Control c in labels)
                     {
                         FontFamily fon = Font.FontFamily;
                         FontStyle sty = c.Font.Style;
@@ -170,16 +199,32 @@ namespace ProjectEcho
 
                         c.Font = new Font(fon, adjSize, sty);
                     }
+                    foreach (CheckedListBox c in checkLists)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+
+                        c.Font = new System.Drawing.Font(fon, adjSize, sty);
+                    }
                 }
                 else
                 {
-                    foreach(Control c in controls)
+                    foreach (Control c in labels)
                     {
                         FontFamily fon = Font.FontFamily;
                         FontStyle sty = c.Font.Style;
                         float adjSize = c.Font.Size - 1;
 
                         c.Font = new Font(fon, adjSize, sty);
+                    }
+                    foreach (CheckedListBox c in checkLists)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+
+                        c.Font = new System.Drawing.Font(fon, adjSize, sty);
                     }
                     //textSizeOffset = textSizeOffset - 1; //decreases offset
                 }
@@ -187,7 +232,8 @@ namespace ProjectEcho
                 prev = curr;
             }
             textSizeOffset = textsizeAdjust.Value;
-            Console.WriteLine("CURRENT OFFSET:" + textSizeOffset); //prints offset for testing (should only be an int between 0 and 6)
+            Properties.Settings.Default.textsize = textSizeOffset;
+            Properties.Settings.Default.Save();            
         }
 
         private void applyButton_Click(object sender, EventArgs e)
@@ -201,6 +247,7 @@ namespace ProjectEcho
 
         private void textsizeAdjust_ValueChanged(object sender, EventArgs e)
         {
+
         }
     }
 }
