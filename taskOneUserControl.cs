@@ -30,7 +30,6 @@ namespace ProjectEcho
         public TaskOneUserControl()
         {
             InitializeComponent();
-            //currentTab = this.tabControl1.SelectedTab.Text; //not needed right now but might be used in the future
 
             //Displays the currently uploaded documents for each task part
             uploadInfo1.Text = "Uploaded: " + dh.displayDocuments(1, "A");

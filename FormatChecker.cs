@@ -6,7 +6,7 @@ namespace ProjectEcho
     /**
 	 *
 	 *
-	 * Author(s): C. Segrue
+	 * Author(s): C. Segrue, J. Nelson
 	 */
 
     internal class FormatChecker
@@ -72,7 +72,7 @@ namespace ProjectEcho
         {
             int correctMargin = 1;
 
-            //1 inch = 72 points
+            //Gets left, right, top, and bottom margins (return value is in points, 1 inch = 72 points)
             float leftMargin = document.PageSetup.LeftMargin / 72;
             float rightMargin = document.PageSetup.RightMargin / 72;
             float topMargin = document.PageSetup.TopMargin / 72;
@@ -83,7 +83,7 @@ namespace ProjectEcho
             topMarginFB = "Top margin: " + topMargin.ToString() + "\"";
             bottomMarginFB = "Bottom margin: " + bottomMargin.ToString() + "\"";
 
-            //if any margins are not one inch
+            //If any margins are not one inch, return false
             if((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
             {
                 return false;
@@ -132,9 +132,10 @@ namespace ProjectEcho
 
         public int checkLength(Document document)
         {
-            pageNumFB = "Document length: " + document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument).ToString() + " page(s)";
+            int numPages = document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);
+            pageNumFB = "Document length: " + numPages.ToString() + " page(s)";
             progress += 25;
-            return document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);
+            return numPages;
         }
     }
 }
