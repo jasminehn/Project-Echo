@@ -243,8 +243,6 @@ namespace ProjectEcho
             Properties.Settings.Default.darkmode = switchButton.Checked;
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.Save();
-
-            this.Close();
         }
 
         private void textsizeAdjust_ValueChanged(object sender, EventArgs e)
