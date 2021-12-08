@@ -117,36 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label125.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
-
-</value>
-  </data>
-  <data name="label113.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
-
-</value>
-  </data>
-  <data name="label101.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
-
-</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
-
-</value>
-  </data>
-  <data name="label89.Text" xml:space="preserve">
-    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
-
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZIAAAAyCAYAAAB26V2gAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAXOBJREFUeF7tvQd0FFfyPdwayTmv867jOu467Tp7nXNO62wvDtgEAyZHgQCJjEiS
+        wAAADsABataJCQAAXOBJREFUeF7tvQd0FFfyPdwayTmv867jOu467Tp7nXNO62wvDtgEAyZHgQCJjEiS
         UEAZJUCIIBAooYxyzjkLBRAZDErT371vuketYQQSP9u7/++oz6kzmu5+Ne/dqrpV1d0zkn6rbemSZdLJ
         X49Ljzz8lMWw//wobd68ZayHh0+7i8u6o+vXB1jzHFmWpQPtreLV3BYWFimtdfKSPD18db4+AXi/630v
         r/XVLi7up728fNwx7uL6+lppb9Jei+qKSmVU3y05OUWKjY2VdoTu1IWHR0hxsXGP+/r6pbm5eXSvW+cR
@@ -543,6 +518,31 @@
         Q4lkSIZkSIZkSM5PFM4fSiRDMiRDMiRDcn6icP5QIhmSIRmSIRmS8xOF84cSyZAMyZAMyZCcnyicP5RI
         hmRIhmRIhuT8ROH8oUQyJEMyJEMyJOcnCucPJZIhGZIhGZIhOT9ROH8okQzJkAzJkAzJ+YnC+UOJZEiG
         ZEiGZEjOTxTOH0okQzIkQzIkQ3J+onD+ABKJJP1/zYdPVIqg/CsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
+
+</value>
+  </data>
+  <data name="label89.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
+
+</value>
+  </data>
+  <data name="label101.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
+
+</value>
+  </data>
+  <data name="label113.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
+
+</value>
+  </data>
+  <data name="label125.Text" xml:space="preserve">
+    <value>According to the edTPA 2019 Rubric, these are exact specifications of the Context for Learning Information submission. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.
+
 </value>
   </data>
 </root>
