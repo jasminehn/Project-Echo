@@ -34,8 +34,6 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.forwardButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.textsizeAdjust = new System.Windows.Forms.TrackBar();
-            this.textsizeLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
@@ -48,6 +46,7 @@ namespace ProjectEcho
             this.clearLocalFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlContainerPanel = new System.Windows.Forms.Panel();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,9 +68,7 @@ namespace ProjectEcho
             this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.taskThreeUserControl1 = new ProjectEcho.TaskThreeUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textsizeAdjust)).BeginInit();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -92,8 +89,6 @@ namespace ProjectEcho
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.forwardButton);
             this.panel1.Controls.Add(this.backButton);
-            this.panel1.Controls.Add(this.textsizeAdjust);
-            this.panel1.Controls.Add(this.textsizeLabel);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.returnToMenuButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -131,30 +126,6 @@ namespace ProjectEcho
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Visible = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // textsizeAdjust
-            // 
-            this.textsizeAdjust.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textsizeAdjust.Location = new System.Drawing.Point(636, 22);
-            this.textsizeAdjust.Margin = new System.Windows.Forms.Padding(2);
-            this.textsizeAdjust.Maximum = 6;
-            this.textsizeAdjust.Name = "textsizeAdjust";
-            this.textsizeAdjust.Size = new System.Drawing.Size(188, 45);
-            this.textsizeAdjust.TabIndex = 36;
-            this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
-            // 
-            // textsizeLabel
-            // 
-            this.textsizeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textsizeLabel.AutoSize = true;
-            this.textsizeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textsizeLabel.Location = new System.Drawing.Point(548, 28);
-            this.textsizeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.textsizeLabel.Name = "textsizeLabel";
-            this.textsizeLabel.Size = new System.Drawing.Size(78, 21);
-            this.textsizeLabel.TabIndex = 37;
-            this.textsizeLabel.Text = "TEXT SIZE";
             // 
             // button2
             // 
@@ -278,6 +249,13 @@ namespace ProjectEcho
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // controlContainerPanel
             // 
@@ -514,7 +492,7 @@ namespace ProjectEcho
             this.taskOne.AutoScroll = true;
             this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
             this.taskOne.Location = new System.Drawing.Point(698, 47);
-            this.taskOne.Margin = new System.Windows.Forms.Padding(4);
+            this.taskOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
             this.taskOne.Name = "taskOne";
             this.taskOne.Size = new System.Drawing.Size(269, 294);
@@ -536,17 +514,10 @@ namespace ProjectEcho
             this.taskTwo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
             this.taskTwo.Location = new System.Drawing.Point(338, 41);
-            this.taskTwo.Margin = new System.Windows.Forms.Padding(4);
+            this.taskTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(1915, 793);
+            this.taskTwo.Size = new System.Drawing.Size(2553, 976);
             this.taskTwo.TabIndex = 17;
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -566,8 +537,6 @@ namespace ProjectEcho
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textsizeAdjust)).EndInit();
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             this.headerPanel.ResumeLayout(false);
@@ -609,7 +578,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Button task1Button;
         private System.Windows.Forms.Button taskThreeButton;
         private System.Windows.Forms.Button taskTwoButton;
-        private System.Windows.Forms.Panel mainPanel;
         private TaskOneUserControl taskOne;
         private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitApplicationToolStripMenuItem;
@@ -627,11 +595,10 @@ namespace ProjectEcho
         private TaskTwoUserControl taskTwo;
         private TaskThreeUserControl taskThreeUserControl1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TrackBar textsizeAdjust;
-        private System.Windows.Forms.Label textsizeLabel;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel mainMenuPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        public System.Windows.Forms.Panel mainPanel;
+        public System.Windows.Forms.Panel mainMenuPanel;
     }
 }

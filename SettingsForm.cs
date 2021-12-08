@@ -34,6 +34,8 @@ namespace ProjectEcho
 
         private Color darkText = Color.WhiteSmoke;
 
+        private Color backgroundColor;
+
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
         //MainForm main = new MainForm();
@@ -57,7 +59,9 @@ namespace ProjectEcho
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             //Console.WriteLine("offset:"+textSizeOffset); //print offsetat start for texting
             textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
-            
+
+            backgroundColor = Properties.Settings.Default.bgcolor;
+
             var controls = settingsHandler.getAll(this, typeof(Label));
             foreach(Control c in controls)
             {
@@ -73,6 +77,7 @@ namespace ProjectEcho
             //Checks darkmode toggle
             if(switchButton.Checked) //ON
             {
+                /*
                 BackColor = darkBG;
                 panel1.BackColor = darkBG;
                 ForeColor = Color.White; //changes all text color
@@ -83,9 +88,36 @@ namespace ProjectEcho
 
                 //Changes color for button
                 applyButton.BackColor = Color.Black;
+
+                //main form changes 
+                mainForm.BackColor = darkBG;
+                mainForm.mainMenuPanel.BackColor = darkBG;
+                mainForm.mainPanel.BackColor = darkBG;
+                */
+
+
+                backgroundColor = ColorTranslator.FromHtml("#121113");
+
+                BackColor = backgroundColor;
+                panel1.BackColor = backgroundColor;
+                ForeColor = Color.White; //changes all text color
+
+                //Changes color for slider
+                textsizeAdjust.BackColor = backgroundColor;
+                textsizeAdjust.ForeColor = Color.White;
+
+                //Changes color for button
+                applyButton.BackColor = backgroundColor;
+
+                //main form changes 
+                mainForm.BackColor = backgroundColor;
+                mainForm.mainMenuPanel.BackColor = backgroundColor;
+                mainForm.mainPanel.BackColor = backgroundColor;
             }
             else //OFF
             {
+                /*
+
                 BackColor = lightBG;
                 panel1.BackColor = lightBG;
                 ForeColor = Color.Black; //changes all text color
@@ -96,6 +128,30 @@ namespace ProjectEcho
 
                 //Changes color for button
                 applyButton.BackColor = Color.White;
+
+                //main form changes 
+                mainForm.BackColor = lightBG;
+                mainForm.mainMenuPanel.BackColor = lightBG;
+                mainForm.mainPanel.BackColor = lightBG;
+                */
+
+                backgroundColor = Color.White;
+
+                BackColor = backgroundColor;
+                panel1.BackColor = backgroundColor;
+                ForeColor = Color.Black; //changes all text color
+
+                //Changes color for slider
+                textsizeAdjust.BackColor = backgroundColor;
+                textsizeAdjust.ForeColor = Color.Black;
+
+                //Changes color for button
+                applyButton.BackColor = backgroundColor;
+
+                //main form changes 
+                mainForm.BackColor = backgroundColor;
+                mainForm.mainMenuPanel.BackColor = backgroundColor;
+                mainForm.mainPanel.BackColor = backgroundColor;
             }
         }
 
@@ -233,7 +289,7 @@ namespace ProjectEcho
             }
             textSizeOffset = textsizeAdjust.Value;
             Properties.Settings.Default.textsize = textSizeOffset;
-            Properties.Settings.Default.Save();            
+            Properties.Settings.Default.Save();
         }
 
         private void applyButton_Click(object sender, EventArgs e)
@@ -242,7 +298,10 @@ namespace ProjectEcho
             Properties.Settings.Default.boldness = boldnessToggle.Checked;
             Properties.Settings.Default.darkmode = switchButton.Checked;
             Properties.Settings.Default.textsize = textSizeOffset;
+            Properties.Settings.Default.bgcolor = backgroundColor;
             Properties.Settings.Default.Save();
+
+            this.Close(); //close settings menu when they save te settings
         }
 
         private void textsizeAdjust_ValueChanged(object sender, EventArgs e)

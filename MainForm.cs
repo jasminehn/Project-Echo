@@ -49,6 +49,8 @@ namespace ProjectEcho
         SettingsHandler settingsHandler = new SettingsHandler();
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
+        
+
         public MainForm()
         {
             InitializeComponent();
@@ -120,6 +122,14 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
+
+            Panel[] panels = new Panel[] { mainPanel, mainMenuPanel };
+
+            foreach (Panel p in panels)
+            {
+                p.BackColor = Properties.Settings.Default.bgcolor;
+            }
+            BackColor = Properties.Settings.Default.bgcolor;
         }
 
         // On-click events for the buttons on the MainForm

@@ -17,5 +17,8 @@
     <Setting Name="t2notes" Type="System.String" Scope="User">
       <Value Profile="(Default)">Want to leave some notes for your future self? Write them here.</Value>
     </Setting>
+    <Setting Name="bgcolor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
