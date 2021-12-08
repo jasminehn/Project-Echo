@@ -258,6 +258,7 @@ namespace ProjectEcho
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -307,6 +308,10 @@ namespace ProjectEcho
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -315,7 +320,7 @@ namespace ProjectEcho
             this.tabPage5.Controls.Add(this.label71);
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1851, 766);
+            this.tabPage5.Size = new System.Drawing.Size(1008, 747);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Part E";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -816,7 +821,7 @@ namespace ProjectEcho
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1851, 766);
+            this.tabPage4.Size = new System.Drawing.Size(1008, 747);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Part D";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1317,7 +1322,7 @@ namespace ProjectEcho
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1851, 766);
+            this.tabPage3.Size = new System.Drawing.Size(1008, 747);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Part C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1820,10 +1825,10 @@ namespace ProjectEcho
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Location = new System.Drawing.Point(13, 15);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1442, 800);
+            this.tabControl1.Size = new System.Drawing.Size(1385, 744);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
@@ -1835,7 +1840,7 @@ namespace ProjectEcho
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(1434, 769);
+            this.tabPage1.Size = new System.Drawing.Size(1377, 713);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Part A";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1854,14 +1859,14 @@ namespace ProjectEcho
             this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(8, 29);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1402, 697);
+            this.panel7.Size = new System.Drawing.Size(1345, 641);
             this.panel7.TabIndex = 21;
             // 
             // warningLabel
             // 
             this.warningLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.warningLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningLabel.Location = new System.Drawing.Point(1106, 205);
+            this.warningLabel.Location = new System.Drawing.Point(1049, 177);
             this.warningLabel.Name = "warningLabel";
             this.warningLabel.Size = new System.Drawing.Size(284, 48);
             this.warningLabel.TabIndex = 41;
@@ -2161,7 +2166,7 @@ namespace ProjectEcho
             this.panel9.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel9.Controls.Add(this.uploadButton1A);
             this.panel9.Controls.Add(this.label17);
-            this.panel9.Location = new System.Drawing.Point(1106, 136);
+            this.panel9.Location = new System.Drawing.Point(1049, 108);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(284, 66);
             this.panel9.TabIndex = 34;
@@ -2210,7 +2215,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(1106, 256);
+            this.panel1.Location = new System.Drawing.Point(1049, 228);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 289);
             this.panel1.TabIndex = 32;
@@ -2336,9 +2341,9 @@ namespace ProjectEcho
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 766);
+            this.panel2.Location = new System.Drawing.Point(3, 710);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1428, 0);
+            this.panel2.Size = new System.Drawing.Size(1371, 0);
             this.panel2.TabIndex = 19;
             // 
             // label5
@@ -2359,7 +2364,7 @@ namespace ProjectEcho
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1851, 766);
+            this.tabPage2.Size = new System.Drawing.Size(1008, 747);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2859,10 +2864,9 @@ namespace ProjectEcho
             this.panel28.BackColor = System.Drawing.Color.Transparent;
             this.panel28.Controls.Add(this.panel29);
             this.panel28.Controls.Add(this.pictureBox1);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel28.Location = new System.Drawing.Point(1451, 0);
+            this.panel28.Location = new System.Drawing.Point(22, 3);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(429, 806);
+            this.panel28.Size = new System.Drawing.Size(399, 766);
             this.panel28.TabIndex = 21;
             // 
             // panel29
@@ -2909,14 +2913,32 @@ namespace ProjectEcho
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.panel28);
+            this.splitContainer1.Size = new System.Drawing.Size(1880, 806);
+            this.splitContainer1.SplitterDistance = 1414;
+            this.splitContainer1.TabIndex = 22;
+            // 
             // TaskOneUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Controls.Add(this.panel28);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "TaskOneUserControl";
             this.Size = new System.Drawing.Size(1880, 806);
             this.Load += new System.EventHandler(this.TaskOneUserControl_Load);
@@ -3010,6 +3032,10 @@ namespace ProjectEcho
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3243,5 +3269,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
