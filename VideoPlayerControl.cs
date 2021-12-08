@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,30 +16,13 @@ namespace ProjectEcho
         {
             //This will give us the full name path of the executable file:
             //i.e. C:\Program Files\MyApplication\MyApplication.exe
-            String strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            Console.WriteLine("CLARE:: location of app " + strExeFilePath);
+            //string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
             //This will strip just the working path name:
             //C:\Program Files\MyApplication
-            String strWorkPath = System.IO.Path.GetDirectoryName(strExeFilePath);
-            Console.WriteLine("CLARE:: work path " + strWorkPath);
-            string appPath = strWorkPath + @"\vlclib";
-
-            try
-            {
-                var libDirectory = new DirectoryInfo(appPath);
-                
-                vlcControl1.VlcLibDirectory = libDirectory;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Setting libdir failed. Stack Trace: " + e);
-            }
-
-
+            //string strWorkPath = System.IO.Path.GetDirectoryName(strExeFilePath);
+            //string appPath = strWorkPath + @"\Project-Echo\vlclib";
+            //vlcControl1.VlcLibDirectory.MoveTo(appPath);
             InitializeComponent();
-            //var libDirectory = new DirectoryInfo(appPath);
-
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
