@@ -170,7 +170,7 @@ namespace ProjectEcho
             // Console.WriteLine("new string*** " + n);
 
             string cutString = text.Split(new string[] { "matches" }, StringSplitOptions.None).Last();
-            //string offSetVals = " ";
+            string offSetVals = " ";
 
             return cutString;
         }
