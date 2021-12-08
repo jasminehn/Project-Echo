@@ -701,7 +701,7 @@ namespace ProjectEcho
             this.panel9.Controls.Add(this.panel2);
             this.panel9.Location = new System.Drawing.Point(4, 13);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1883, 800);
+            this.panel9.Size = new System.Drawing.Size(1883, 792);
             this.panel9.TabIndex = 21;
             // 
             // panel28
@@ -928,7 +928,7 @@ namespace ProjectEcho
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(555, 800);
+            this.panel2.Size = new System.Drawing.Size(555, 792);
             this.panel2.TabIndex = 25;
             // 
             // TaskTwoUserControl
@@ -941,7 +941,7 @@ namespace ProjectEcho
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.Controls.Add(this.panel9);
             this.Name = "TaskTwoUserControl";
-            this.Size = new System.Drawing.Size(1890, 816);
+            this.Size = new System.Drawing.Size(1915, 816);
             this.Load += new System.EventHandler(this.TaskTwoUserControl_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

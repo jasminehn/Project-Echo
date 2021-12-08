@@ -52,7 +52,11 @@ namespace ProjectEcho
         public MainForm()
         {
             InitializeComponent();
-            
+            mainMenuPanel.Dock = DockStyle.Fill;
+
+            mainMenuPanel.AutoSize = true;
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.AutoSize = true;
             
             /* While all of the tasks are made with User Controls, the Main Menu is built with a normal panel. 
              * We would've made it with a User Control, but we switched to User Controls later in the game and 

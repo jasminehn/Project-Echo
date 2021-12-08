@@ -307,12 +307,11 @@ namespace ProjectEcho
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.taskThreeButton);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 161);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(256, 75);
@@ -360,11 +359,10 @@ namespace ProjectEcho
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.taskTwoButton);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 82);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(256, 73);
@@ -412,13 +410,12 @@ namespace ProjectEcho
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.task1Button);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(256, 73);
@@ -483,11 +480,11 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.taskOne.AutoScroll = true;
             this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskOne.Location = new System.Drawing.Point(710, 41);
+            this.taskOne.Location = new System.Drawing.Point(698, 47);
             this.taskOne.Margin = new System.Windows.Forms.Padding(4);
             this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
             this.taskOne.Name = "taskOne";
-            this.taskOne.Size = new System.Drawing.Size(269, 366);
+            this.taskOne.Size = new System.Drawing.Size(269, 294);
             this.taskOne.TabIndex = 16;
             // 
             // taskTwo
@@ -503,7 +500,7 @@ namespace ProjectEcho
             // 
             this.taskThreeUserControl1.BackColor = System.Drawing.Color.MidnightBlue;
             this.taskThreeUserControl1.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeUserControl1.Location = new System.Drawing.Point(993, 44);
+            this.taskThreeUserControl1.Location = new System.Drawing.Point(986, 5);
             this.taskThreeUserControl1.Name = "taskThreeUserControl1";
             this.taskThreeUserControl1.Size = new System.Drawing.Size(318, 248);
             this.taskThreeUserControl1.TabIndex = 17;
@@ -530,6 +527,9 @@ namespace ProjectEcho
             // 
             // mainMenuPanel
             // 
+            this.mainMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainMenuPanel.Controls.Add(this.tableLayoutPanel1);
             this.mainMenuPanel.Location = new System.Drawing.Point(35, 41);
             this.mainMenuPanel.Name = "mainMenuPanel";
