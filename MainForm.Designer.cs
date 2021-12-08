@@ -34,8 +34,6 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.forwardButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.textsizeAdjust = new System.Windows.Forms.TrackBar();
-            this.textsizeLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
@@ -48,6 +46,7 @@ namespace ProjectEcho
             this.clearLocalFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlContainerPanel = new System.Windows.Forms.Panel();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -63,15 +62,13 @@ namespace ProjectEcho
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.taskThreeUserControl1 = new ProjectEcho.TaskThreeUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textsizeAdjust)).BeginInit();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -92,8 +89,6 @@ namespace ProjectEcho
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.forwardButton);
             this.panel1.Controls.Add(this.backButton);
-            this.panel1.Controls.Add(this.textsizeAdjust);
-            this.panel1.Controls.Add(this.textsizeLabel);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.returnToMenuButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -131,30 +126,6 @@ namespace ProjectEcho
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Visible = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // textsizeAdjust
-            // 
-            this.textsizeAdjust.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textsizeAdjust.Location = new System.Drawing.Point(636, 22);
-            this.textsizeAdjust.Margin = new System.Windows.Forms.Padding(2);
-            this.textsizeAdjust.Maximum = 6;
-            this.textsizeAdjust.Name = "textsizeAdjust";
-            this.textsizeAdjust.Size = new System.Drawing.Size(188, 45);
-            this.textsizeAdjust.TabIndex = 36;
-            this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
-            // 
-            // textsizeLabel
-            // 
-            this.textsizeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textsizeLabel.AutoSize = true;
-            this.textsizeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.textsizeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textsizeLabel.Location = new System.Drawing.Point(548, 28);
-            this.textsizeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.textsizeLabel.Name = "textsizeLabel";
-            this.textsizeLabel.Size = new System.Drawing.Size(78, 21);
-            this.textsizeLabel.TabIndex = 37;
-            this.textsizeLabel.Text = "TEXT SIZE";
             // 
             // button2
             // 
@@ -214,7 +185,7 @@ namespace ProjectEcho
             this.titleLabel.Location = new System.Drawing.Point(4, 5);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(144, 30);
+            this.titleLabel.Size = new System.Drawing.Size(130, 28);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
             // 
@@ -278,6 +249,13 @@ namespace ProjectEcho
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // controlContainerPanel
             // 
@@ -355,7 +333,7 @@ namespace ProjectEcho
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 22);
+            this.label3.Size = new System.Drawing.Size(220, 23);
             this.label3.TabIndex = 30;
             this.label3.Text = "TASK THREE: ASSESSING";
             // 
@@ -406,7 +384,7 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 22);
+            this.label2.Size = new System.Drawing.Size(245, 23);
             this.label2.TabIndex = 30;
             this.label2.Text = "TASK TWO: IMPLEMENTING";
             // 
@@ -459,7 +437,7 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 22);
+            this.label1.Size = new System.Drawing.Size(205, 23);
             this.label1.TabIndex = 30;
             this.label1.Text = "TASK ONE: PLANNING";
             // 
@@ -479,6 +457,20 @@ namespace ProjectEcho
             this.task1Button.UseVisualStyleBackColor = false;
             this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
             // 
+            // taskOne
+            // 
+            this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskOne.AutoScroll = true;
+            this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
+            this.taskOne.Location = new System.Drawing.Point(36, 300);
+            this.taskOne.Margin = new System.Windows.Forms.Padding(4);
+            this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
+            this.taskOne.Name = "taskOne";
+            this.taskOne.Size = new System.Drawing.Size(269, 294);
+            this.taskOne.TabIndex = 16;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1475, 208);
@@ -489,36 +481,6 @@ namespace ProjectEcho
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.AutoSize = true;
-            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainPanel.BackColor = System.Drawing.Color.White;
-            this.mainPanel.Controls.Add(this.controlContainerPanel);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1370, 749);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // taskOne
-            // 
-            this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskOne.AutoScroll = true;
-            this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskOne.Location = new System.Drawing.Point(698, 47);
-            this.taskOne.Margin = new System.Windows.Forms.Padding(4);
-            this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
-            this.taskOne.Name = "taskOne";
-            this.taskOne.Size = new System.Drawing.Size(269, 294);
-            this.taskOne.TabIndex = 16;
             // 
             // taskThreeUserControl1
             // 
@@ -535,18 +497,27 @@ namespace ProjectEcho
             this.taskTwo.AutoSize = true;
             this.taskTwo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwo.Location = new System.Drawing.Point(338, 41);
+            this.taskTwo.Location = new System.Drawing.Point(327, 41);
             this.taskTwo.Margin = new System.Windows.Forms.Padding(4);
             this.taskTwo.Name = "taskTwo";
             this.taskTwo.Size = new System.Drawing.Size(1915, 793);
             this.taskTwo.TabIndex = 17;
             // 
-            // settingsToolStripMenuItem
+            // mainPanel
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.BackColor = System.Drawing.Color.White;
+            this.mainPanel.Controls.Add(this.controlContainerPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1370, 749);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // MainForm
             // 
@@ -566,8 +537,6 @@ namespace ProjectEcho
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textsizeAdjust)).EndInit();
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             this.headerPanel.ResumeLayout(false);
@@ -627,8 +596,6 @@ namespace ProjectEcho
         private TaskTwoUserControl taskTwo;
         private TaskThreeUserControl taskThreeUserControl1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TrackBar textsizeAdjust;
-        private System.Windows.Forms.Label textsizeLabel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel mainMenuPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

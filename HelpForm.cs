@@ -42,12 +42,22 @@ namespace ProjectEcho
         {
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
-            var controls = settingsHandler.getAll(this, typeof(Label));
-            foreach(Control c in controls)
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
             {
                 FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
+            foreach (Control c in checkedlistboxes)
+            {
+                FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
 
