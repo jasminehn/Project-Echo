@@ -127,11 +127,14 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <data name="label13.Text" xml:space="preserve">
+    <value>The first clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZIAAAAyCAYAAAB26V2gAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAXOBJREFUeF7tvQd0FFfyPdwayTmv867jOu467Tp7nXNO62wvDtgEAyZHgQCJjEiS
+        wwAADsMBx2+oZAAAXOBJREFUeF7tvQd0FFfyPdwayTmv867jOu467Tp7nXNO62wvDtgEAyZHgQCJjEiS
         UEAZJUCIIBAooYxyzjkLBRAZDErT371vuketYQQSP9u7/++oz6kzmu5+Ne/dqrpV1d0zkn6rbemSZdLJ
         X49Ljzz8lMWw//wobd68ZayHh0+7i8u6o+vXB1jzHFmWpQPtreLV3BYWFimtdfKSPD18db4+AXi/630v
         r/XVLi7up728fNwx7uL6+lppb9Jei+qKSmVU3y05OUWKjY2VdoTu1IWHR0hxsXGP+/r6pbm5eXSvW+cR
@@ -531,9 +534,6 @@
 </value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>The first clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
     <value>The first clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
   </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
