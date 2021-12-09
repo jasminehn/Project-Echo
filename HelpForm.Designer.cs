@@ -43,18 +43,8 @@ namespace ProjectEcho
             this.button1 = new System.Windows.Forms.Button();
             this.ChromiumBrowser = new System.Windows.Forms.Panel();
             this.urlBox = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageUserFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewUploadedFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearAllUploadedFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -150,9 +140,9 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 75);
+            this.panel1.Size = new System.Drawing.Size(1340, 102);
             this.panel1.TabIndex = 8;
             // 
             // nextButton
@@ -209,81 +199,13 @@ namespace ProjectEcho
             this.urlBox.Size = new System.Drawing.Size(1043, 20);
             this.urlBox.TabIndex = 10;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.infoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1334, 24);
-            this.menuStrip1.TabIndex = 11;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageUserFilesToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // manageUserFilesToolStripMenuItem
-            // 
-            this.manageUserFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewUploadedFilesToolStripMenuItem,
-            this.clearAllUploadedFilesToolStripMenuItem});
-            this.manageUserFilesToolStripMenuItem.Name = "manageUserFilesToolStripMenuItem";
-            this.manageUserFilesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.manageUserFilesToolStripMenuItem.Text = "Manage User Files";
-            // 
-            // viewUploadedFilesToolStripMenuItem
-            // 
-            this.viewUploadedFilesToolStripMenuItem.Name = "viewUploadedFilesToolStripMenuItem";
-            this.viewUploadedFilesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.viewUploadedFilesToolStripMenuItem.Text = "View Uploaded Files";
-            // 
-            // clearAllUploadedFilesToolStripMenuItem
-            // 
-            this.clearAllUploadedFilesToolStripMenuItem.Name = "clearAllUploadedFilesToolStripMenuItem";
-            this.clearAllUploadedFilesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.clearAllUploadedFilesToolStripMenuItem.Text = "Clear All Uploaded Files";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userManualToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
-            // 
-            // userManualToolStripMenuItem
-            // 
-            this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
-            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.userManualToolStripMenuItem.Text = "User Manual";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Location = new System.Drawing.Point(-4, 99);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1344, 594);
@@ -297,10 +219,8 @@ namespace ProjectEcho
             this.Controls.Add(this.urlBox);
             this.Controls.Add(this.ChromiumBrowser);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1251, 684);
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -310,8 +230,6 @@ namespace ProjectEcho
             this.MouseEnter += new System.EventHandler(this.HelpForm_MouseEnter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,15 +249,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button prevButton;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageUserFilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewUploadedFilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clearAllUploadedFilesToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
     }
 }

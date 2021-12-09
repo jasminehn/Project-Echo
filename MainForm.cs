@@ -54,6 +54,8 @@ namespace ProjectEcho
         public MainForm()
         {
             InitializeComponent();
+            Rectangle resolution = Screen.PrimaryScreen.Bounds;
+            Console.WriteLine("CLARE:: SCREEN SIZE " + resolution.ToString());
             mainMenuPanel.Dock = DockStyle.Fill;
 
             mainMenuPanel.AutoSize = true;
