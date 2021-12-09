@@ -106,5 +106,17 @@ namespace ProjectEcho.Properties {
                 this["bgmain"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
+        public global::System.Drawing.Color fcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["fcolor"]));
+            }
+            set {
+                this["fcolor"] = value;
+            }
+        }
     }
 }

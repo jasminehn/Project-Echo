@@ -21,21 +21,19 @@ namespace ProjectEcho
 
         //button colors
         private Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
-
         private Color buttonOffColor = SystemColors.ControlDark;
 
         //light mode colors
         private Color lightBG = Color.WhiteSmoke;
-
         private Color lightText = Color.Black;
 
         //dark mode colors
         private Color darkBG = ColorTranslator.FromHtml("#121113");
-
         private Color darkText = Color.WhiteSmoke;
 
         private Color backgroundColor;
         private Color backgroundMain;
+        private Color forecolor;
 
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
@@ -43,26 +41,32 @@ namespace ProjectEcho
 
         MainForm mainForm;
         HelpForm helpForm;
+        TaskOneUserControl taskone;
+        TaskTwoUserControl tasktwo;
+        TaskThreeUserControl taskthree;
 
-        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput)
+        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput, TaskOneUserControl taskOneInput, TaskTwoUserControl taskTwoInput, TaskThreeUserControl taskThreeInput)
         {
             InitializeComponent();
             mainForm = mainFormInput;
             helpForm = helpFormInput;
+            taskone = taskOneInput;
+            tasktwo = taskTwoInput;
+            taskthree = taskThreeInput;
+
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             //Apply saved display settings upon loading
-
             boldnessToggle.Checked = Properties.Settings.Default.boldness;
             switchButton.Checked = Properties.Settings.Default.darkmode;
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
-            //Console.WriteLine("offset:"+textSizeOffset); //print offsetat start for texting
             textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
 
             backgroundColor = Properties.Settings.Default.bgcolor;
             backgroundMain = Properties.Settings.Default.bgmain;
+            forecolor = Properties.Settings.Default.fcolor;
 
             var controls = settingsHandler.getAll(this, typeof(Label));
             foreach(Control c in controls)
@@ -79,83 +83,57 @@ namespace ProjectEcho
             //Checks darkmode toggle
             if(switchButton.Checked) //ON
             {
-                /*
-                BackColor = darkBG;
-                panel1.BackColor = darkBG;
-                ForeColor = Color.White; //changes all text color
-
-                //Changes color for slider
-                textsizeAdjust.BackColor = Color.Black;
-                textsizeAdjust.ForeColor = Color.White;
-
-                //Changes color for button
-                applyButton.BackColor = Color.Black;
-
-                //main form changes 
-                mainForm.BackColor = darkBG;
-                mainForm.mainMenuPanel.BackColor = darkBG;
-                mainForm.mainPanel.BackColor = darkBG;
-                */
-
-
-                backgroundColor = ColorTranslator.FromHtml("#121113");
-                backgroundMain = ColorTranslator.FromHtml("#0A070E");
-
+                backgroundColor = Color.Black;
+                backgroundMain = Color.Black;
+                forecolor = Color.White;
+                
                 BackColor = backgroundColor;
                 panel1.BackColor = backgroundColor;
-                ForeColor = Color.White; //changes all text color
+                panel1.ForeColor = forecolor;
+                ForeColor = forecolor; //changes all text color
 
                 //Changes color for slider
                 textsizeAdjust.BackColor = backgroundColor;
-                textsizeAdjust.ForeColor = Color.White;
+                textsizeAdjust.ForeColor = forecolor;
 
                 //Changes color for button
                 applyButton.BackColor = backgroundColor;
+                applyButton.ForeColor = forecolor;
 
                 //main form changes 
                 mainForm.BackColor = backgroundMain;
                 mainForm.mainMenuPanel.BackColor = backgroundColor;
                 mainForm.mainPanel.BackColor = backgroundColor;
+                mainForm.ForeColor = forecolor;
+                mainForm.mainMenuPanel.ForeColor = forecolor;
+                mainForm.mainPanel.ForeColor = forecolor;
             }
             else //OFF
             {
-                /*
-
-                BackColor = lightBG;
-                panel1.BackColor = lightBG;
-                ForeColor = Color.Black; //changes all text color
-
-                //Changes color for slider
-                textsizeAdjust.BackColor = Color.White;
-                textsizeAdjust.ForeColor = Color.Black;
-
-                //Changes color for button
-                applyButton.BackColor = Color.White;
-
-                //main form changes 
-                mainForm.BackColor = lightBG;
-                mainForm.mainMenuPanel.BackColor = lightBG;
-                mainForm.mainPanel.BackColor = lightBG;
-                */
-
                 backgroundColor = Color.White;
-                backgroundMain = SystemColors.Control;
+                backgroundMain = Color.White;
+                forecolor = Color.Black;
 
                 BackColor = backgroundColor;
                 panel1.BackColor = backgroundColor;
-                ForeColor = Color.Black; //changes all text color
+                panel1.ForeColor = forecolor;
+                ForeColor = forecolor; //changes all text color
 
                 //Changes color for slider
                 textsizeAdjust.BackColor = backgroundColor;
-                textsizeAdjust.ForeColor = Color.Black;
+                textsizeAdjust.ForeColor = forecolor;
 
                 //Changes color for button
                 applyButton.BackColor = backgroundColor;
+                applyButton.ForeColor = forecolor;
 
                 //main form changes 
                 mainForm.BackColor = backgroundMain;
                 mainForm.mainMenuPanel.BackColor = backgroundColor;
                 mainForm.mainPanel.BackColor = backgroundColor;
+                mainForm.ForeColor = forecolor;
+                mainForm.mainMenuPanel.ForeColor = forecolor;
+                mainForm.mainPanel.ForeColor = forecolor;
             }
         }
 
@@ -304,6 +282,7 @@ namespace ProjectEcho
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.bgcolor = backgroundColor;
             Properties.Settings.Default.bgmain= backgroundMain;
+            Properties.Settings.Default.fcolor = forecolor;
             Properties.Settings.Default.Save();
 
             this.Close(); //close settings menu when they save te settings
