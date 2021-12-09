@@ -161,7 +161,7 @@ namespace ProjectEcho
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)
         {
-            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
+            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes 
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
