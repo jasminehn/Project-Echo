@@ -68,6 +68,18 @@ namespace ProjectEcho
             this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.taskThree = new ProjectEcho.TaskThreeUserControl();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -82,6 +94,9 @@ namespace ProjectEcho
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -280,9 +295,9 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainMenuPanel.Controls.Add(this.tableLayoutPanel1);
-            this.mainMenuPanel.Location = new System.Drawing.Point(35, 41);
+            this.mainMenuPanel.Location = new System.Drawing.Point(50, 46);
             this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(270, 251);
+            this.mainMenuPanel.Size = new System.Drawing.Size(540, 388);
             this.mainMenuPanel.TabIndex = 40;
             // 
             // tableLayoutPanel1
@@ -298,19 +313,20 @@ namespace ProjectEcho
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(262, 239);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(534, 385);
             this.tableLayoutPanel1.TabIndex = 39;
             // 
             // panel5
             // 
             this.panel5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.tableLayoutPanel2);
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.taskThreeButton);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 161);
+            this.panel5.Location = new System.Drawing.Point(3, 259);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(256, 75);
+            this.panel5.Size = new System.Drawing.Size(528, 123);
             this.panel5.TabIndex = 37;
             // 
             // panel8
@@ -320,7 +336,7 @@ namespace ProjectEcho
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(44, 48);
+            this.panel8.Size = new System.Drawing.Size(316, 48);
             this.panel8.TabIndex = 34;
             // 
             // label3
@@ -345,9 +361,9 @@ namespace ProjectEcho
             this.taskThreeButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskThreeButton.Location = new System.Drawing.Point(44, 0);
+            this.taskThreeButton.Location = new System.Drawing.Point(316, 0);
             this.taskThreeButton.Name = "taskThreeButton";
-            this.taskThreeButton.Size = new System.Drawing.Size(212, 75);
+            this.taskThreeButton.Size = new System.Drawing.Size(212, 123);
             this.taskThreeButton.TabIndex = 28;
             this.taskThreeButton.Text = "CLICK HERE TO GO TO TASK THREE";
             this.taskThreeButton.UseVisualStyleBackColor = false;
@@ -356,12 +372,13 @@ namespace ProjectEcho
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.tableLayoutPanel3);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.taskTwoButton);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 82);
+            this.panel4.Location = new System.Drawing.Point(3, 131);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(256, 73);
+            this.panel4.Size = new System.Drawing.Size(528, 122);
             this.panel4.TabIndex = 36;
             // 
             // panel7
@@ -371,7 +388,7 @@ namespace ProjectEcho
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(44, 48);
+            this.panel7.Size = new System.Drawing.Size(316, 48);
             this.panel7.TabIndex = 33;
             // 
             // label2
@@ -396,9 +413,9 @@ namespace ProjectEcho
             this.taskTwoButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwoButton.Location = new System.Drawing.Point(44, 0);
+            this.taskTwoButton.Location = new System.Drawing.Point(316, 0);
             this.taskTwoButton.Name = "taskTwoButton";
-            this.taskTwoButton.Size = new System.Drawing.Size(212, 73);
+            this.taskTwoButton.Size = new System.Drawing.Size(212, 122);
             this.taskTwoButton.TabIndex = 27;
             this.taskTwoButton.Text = "CLICK HERE TO GO TO TASK TWO";
             this.taskTwoButton.UseVisualStyleBackColor = false;
@@ -409,12 +426,13 @@ namespace ProjectEcho
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.tableLayoutPanel4);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.task1Button);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(256, 73);
+            this.panel3.Size = new System.Drawing.Size(528, 122);
             this.panel3.TabIndex = 35;
             // 
             // panel6
@@ -424,7 +442,7 @@ namespace ProjectEcho
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(43, 48);
+            this.panel6.Size = new System.Drawing.Size(315, 48);
             this.panel6.TabIndex = 32;
             // 
             // label1
@@ -449,9 +467,9 @@ namespace ProjectEcho
             this.task1Button.Dock = System.Windows.Forms.DockStyle.Right;
             this.task1Button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.task1Button.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.task1Button.Location = new System.Drawing.Point(43, 0);
+            this.task1Button.Location = new System.Drawing.Point(315, 0);
             this.task1Button.Name = "task1Button";
-            this.task1Button.Size = new System.Drawing.Size(211, 71);
+            this.task1Button.Size = new System.Drawing.Size(211, 120);
             this.task1Button.TabIndex = 29;
             this.task1Button.Text = "CLICK HERE TO GO TO TASK ONE";
             this.task1Button.UseVisualStyleBackColor = false;
@@ -472,7 +490,7 @@ namespace ProjectEcho
             // 
             this.mainPanel.AutoSize = true;
             this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainPanel.BackColor = System.Drawing.Color.White;
+            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
             this.mainPanel.Controls.Add(this.controlContainerPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
@@ -491,7 +509,7 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.taskOne.AutoScroll = true;
             this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskOne.Location = new System.Drawing.Point(324, 41);
+            this.taskOne.Location = new System.Drawing.Point(996, 297);
             this.taskOne.Margin = new System.Windows.Forms.Padding(4);
             this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
             this.taskOne.Name = "taskOne";
@@ -523,6 +541,156 @@ namespace ProjectEcho
             this.taskThree.Name = "taskThree";
             this.taskThree.Size = new System.Drawing.Size(318, 248);
             this.taskThree.TabIndex = 17;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.button4, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.checkedListBox1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 48);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(316, 75);
+            this.tableLayoutPanel2.TabIndex = 35;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(108, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 69);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Location = new System.Drawing.Point(213, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 69);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox1.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(3, 3);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(99, 69);
+            this.checkedListBox1.TabIndex = 2;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.checkedListBox2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button5, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button6, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 48);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(316, 74);
+            this.tableLayoutPanel3.TabIndex = 36;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Location = new System.Drawing.Point(213, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 68);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Location = new System.Drawing.Point(108, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 68);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Controls.Add(this.checkedListBox3, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button7, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button8, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 48);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(315, 72);
+            this.tableLayoutPanel4.TabIndex = 36;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.Location = new System.Drawing.Point(213, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 66);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button8.Location = new System.Drawing.Point(108, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(99, 66);
+            this.button8.TabIndex = 0;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox2.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(3, 3);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(99, 68);
+            this.checkedListBox2.TabIndex = 3;
+            // 
+            // checkedListBox3
+            // 
+            this.checkedListBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkedListBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox3.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(3, 3);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(99, 66);
+            this.checkedListBox3.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -561,6 +729,9 @@ namespace ProjectEcho
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.mainPanel.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,5 +775,17 @@ namespace ProjectEcho
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         public System.Windows.Forms.Panel mainPanel;
         public System.Windows.Forms.Panel mainMenuPanel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox checkedListBox3;
     }
 }
