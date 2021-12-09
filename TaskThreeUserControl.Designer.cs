@@ -2386,12 +2386,13 @@ namespace ProjectEcho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.Controls.Add(this.panel28);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "TaskThreeUserControl";
-            this.Size = new System.Drawing.Size(1883, 800);
+            this.Size = new System.Drawing.Size(1866, 783);
             this.panel28.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();

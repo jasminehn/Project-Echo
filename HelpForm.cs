@@ -23,6 +23,7 @@ namespace ProjectEcho
     {
         private static string ProgramPath = AppDomain.CurrentDomain.BaseDirectory; //get direct path to the program
         private string FileName1 = string.Format("{0}PDF\\Requirements.pdf", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\"))); //jump back relative to the .exe-Path to the Requirements document path
+        private string FileName2 = string.Format("{0}PDF\\MakingGoodChoices.pdf", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\")));
         private string url;
         //static ChromiumWebBrowser = new ChromiumWebBrowser();
 
@@ -31,7 +32,7 @@ namespace ProjectEcho
         SettingsHandler settingsHandler = new SettingsHandler();
         private int textSizeOffset = 0; //keeps track of how much the text size has changed     
 
-        public HelpForm()
+        public HelpForm(String document, int page)
         {
             InitializeComponent();
         }
@@ -53,8 +54,8 @@ namespace ProjectEcho
 
             url = FileName1;
             comboBox2.Enabled = false;
-            CefSettings settings = new CefSettings();
-            Cef.Initialize(settings);
+            CefSettings helpBrowser = new CefSettings();
+            Cef.Initialize(helpBrowser);
             Cef.EnableHighDPISupport(); // One some computers, mostly laptops, the Browser will jutt out to the
                                         // right and a little down. This line
                                         // has fixed our issue as far as we can tell.

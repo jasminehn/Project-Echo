@@ -66,8 +66,8 @@ namespace ProjectEcho
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.taskOne = new ProjectEcho.TaskOneUserControl();
-            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
+            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -185,7 +185,7 @@ namespace ProjectEcho
             this.titleLabel.Location = new System.Drawing.Point(4, 5);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(144, 30);
+            this.titleLabel.Size = new System.Drawing.Size(130, 28);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
             // 
@@ -266,9 +266,9 @@ namespace ProjectEcho
             this.controlContainerPanel.BackColor = System.Drawing.Color.White;
             this.controlContainerPanel.Controls.Add(this.mainMenuPanel);
             this.controlContainerPanel.Controls.Add(this.taskOne);
+            this.controlContainerPanel.Controls.Add(this.taskTwo);
             this.controlContainerPanel.Controls.Add(this.button1);
             this.controlContainerPanel.Controls.Add(this.taskThree);
-            this.controlContainerPanel.Controls.Add(this.taskTwo);
             this.controlContainerPanel.Location = new System.Drawing.Point(3, 83);
             this.controlContainerPanel.Name = "controlContainerPanel";
             this.controlContainerPanel.Size = new System.Drawing.Size(1359, 587);
@@ -333,7 +333,7 @@ namespace ProjectEcho
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 22);
+            this.label3.Size = new System.Drawing.Size(220, 23);
             this.label3.TabIndex = 30;
             this.label3.Text = "TASK THREE: ASSESSING";
             // 
@@ -384,7 +384,7 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 22);
+            this.label2.Size = new System.Drawing.Size(245, 23);
             this.label2.TabIndex = 30;
             this.label2.Text = "TASK TWO: IMPLEMENTING";
             // 
@@ -437,7 +437,7 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 22);
+            this.label1.Size = new System.Drawing.Size(205, 23);
             this.label1.TabIndex = 30;
             this.label1.Text = "TASK ONE: PLANNING";
             // 
@@ -491,33 +491,31 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.taskOne.AutoScroll = true;
             this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskOne.Location = new System.Drawing.Point(698, 47);
-            this.taskOne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.taskOne.Location = new System.Drawing.Point(324, 41);
+            this.taskOne.Margin = new System.Windows.Forms.Padding(4);
             this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
             this.taskOne.Name = "taskOne";
-            this.taskOne.Size = new System.Drawing.Size(269, 294);
+            this.taskOne.Size = new System.Drawing.Size(269, 251);
             this.taskOne.TabIndex = 16;
-            // 
-            // taskThreeUserControl1
-            // 
-            this.taskThree.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskThree.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThree.Location = new System.Drawing.Point(986, 5);
-            this.taskThree.Name = "taskThreeUserControl1";
-            this.taskThree.Size = new System.Drawing.Size(318, 248);
-            this.taskThree.TabIndex = 17;
             // 
             // taskTwo
             // 
             this.taskTwo.AutoScroll = true;
-            this.taskTwo.AutoSize = true;
-            this.taskTwo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwo.Location = new System.Drawing.Point(338, 41);
-            this.taskTwo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.taskTwo.Location = new System.Drawing.Point(624, 41);
+            this.taskTwo.Margin = new System.Windows.Forms.Padding(4);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(2553, 976);
+            this.taskTwo.Size = new System.Drawing.Size(235, 251);
             this.taskTwo.TabIndex = 17;
+            // 
+            // taskThree
+            // 
+            this.taskThree.BackColor = System.Drawing.Color.MidnightBlue;
+            this.taskThree.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskThree.Location = new System.Drawing.Point(908, 48);
+            this.taskThree.Name = "taskThree";
+            this.taskThree.Size = new System.Drawing.Size(318, 248);
+            this.taskThree.TabIndex = 17;
             // 
             // MainForm
             // 
@@ -544,7 +542,6 @@ namespace ProjectEcho
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.controlContainerPanel.ResumeLayout(false);
-            this.controlContainerPanel.PerformLayout();
             this.mainMenuPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

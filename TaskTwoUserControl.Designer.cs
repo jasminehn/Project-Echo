@@ -134,7 +134,7 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.progressBar4);
             this.panel5.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel5.Location = new System.Drawing.Point(13, 275);
+            this.panel5.Location = new System.Drawing.Point(19, 250);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(327, 56);
             this.panel5.TabIndex = 46;
@@ -176,7 +176,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
             this.tableLayoutPanel1.Controls.Add(this.textBox14, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
@@ -227,7 +227,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(499, 407);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(501, 407);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -248,7 +248,7 @@ namespace ProjectEcho
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(307, 2);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(187, 25);
+            this.label21.Size = new System.Drawing.Size(189, 25);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
@@ -570,7 +570,7 @@ namespace ProjectEcho
             this.panel7.Controls.Add(this.clipOneUpload);
             this.panel7.Location = new System.Drawing.Point(581, 24);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(768, 343);
+            this.panel7.Size = new System.Drawing.Size(584, 343);
             this.panel7.TabIndex = 24;
             // 
             // panel8
@@ -597,7 +597,7 @@ namespace ProjectEcho
             this.panel10.ForeColor = System.Drawing.Color.Black;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(768, 29);
+            this.panel10.Size = new System.Drawing.Size(584, 29);
             this.panel10.TabIndex = 26;
             // 
             // label12
@@ -670,7 +670,7 @@ namespace ProjectEcho
             this.clipOneUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clipOneUpload.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clipOneUpload.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clipOneUpload.Location = new System.Drawing.Point(703, 39);
+            this.clipOneUpload.Location = new System.Drawing.Point(513, 250);
             this.clipOneUpload.Name = "clipOneUpload";
             this.clipOneUpload.Size = new System.Drawing.Size(50, 76);
             this.clipOneUpload.TabIndex = 22;
@@ -690,18 +690,17 @@ namespace ProjectEcho
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.AutoScroll = true;
             this.panel9.AutoSize = true;
             this.panel9.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel9.Controls.Add(this.panel28);
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.panel7);
             this.panel9.Controls.Add(this.panel2);
-            this.panel9.Location = new System.Drawing.Point(4, 13);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1883, 792);
+            this.panel9.Size = new System.Drawing.Size(1640, 788);
             this.panel9.TabIndex = 21;
             // 
             // panel28
@@ -709,7 +708,7 @@ namespace ProjectEcho
             this.panel28.BackColor = System.Drawing.Color.Transparent;
             this.panel28.Controls.Add(this.panel29);
             this.panel28.Controls.Add(this.pictureBox1);
-            this.panel28.Location = new System.Drawing.Point(1430, 0);
+            this.panel28.Location = new System.Drawing.Point(1180, 3);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(450, 766);
             this.panel28.TabIndex = 43;
@@ -770,7 +769,7 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.panel13);
             this.panel3.Location = new System.Drawing.Point(581, 413);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(768, 343);
+            this.panel3.Size = new System.Drawing.Size(584, 343);
             this.panel3.TabIndex = 42;
             // 
             // panel1
@@ -781,7 +780,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.panel1.Location = new System.Drawing.Point(13, 274);
+            this.panel1.Location = new System.Drawing.Point(19, 265);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 56);
             this.panel1.TabIndex = 49;
@@ -826,7 +825,7 @@ namespace ProjectEcho
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(703, 36);
+            this.button4.Location = new System.Drawing.Point(513, 256);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 65);
             this.button4.TabIndex = 48;
@@ -839,7 +838,7 @@ namespace ProjectEcho
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(768, 29);
+            this.panel12.Size = new System.Drawing.Size(584, 29);
             this.panel12.TabIndex = 46;
             // 
             // label6
@@ -928,7 +927,7 @@ namespace ProjectEcho
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(555, 792);
+            this.panel2.Size = new System.Drawing.Size(555, 788);
             this.panel2.TabIndex = 25;
             // 
             // TaskTwoUserControl
@@ -937,11 +936,10 @@ namespace ProjectEcho
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.Controls.Add(this.panel9);
             this.Name = "TaskTwoUserControl";
-            this.Size = new System.Drawing.Size(1915, 816);
+            this.Size = new System.Drawing.Size(1640, 788);
             this.Load += new System.EventHandler(this.TaskTwoUserControl_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
