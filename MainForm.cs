@@ -129,7 +129,8 @@ namespace ProjectEcho
             {
                 p.BackColor = Properties.Settings.Default.bgcolor;
             }
-            BackColor = Properties.Settings.Default.bgcolor;
+            //BackColor = Properties.Settings.Default.bgcolor;
+            BackColor = Properties.Settings.Default.bgmain;
         }
 
         // On-click events for the buttons on the MainForm

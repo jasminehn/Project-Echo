@@ -94,5 +94,17 @@ namespace ProjectEcho.Properties {
                 this["bgcolor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Control")]
+        public global::System.Drawing.Color bgmain {
+            get {
+                return ((global::System.Drawing.Color)(this["bgmain"]));
+            }
+            set {
+                this["bgmain"] = value;
+            }
+        }
     }
 }

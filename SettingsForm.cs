@@ -35,6 +35,7 @@ namespace ProjectEcho
         private Color darkText = Color.WhiteSmoke;
 
         private Color backgroundColor;
+        private Color backgroundMain;
 
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
@@ -61,6 +62,7 @@ namespace ProjectEcho
             textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
 
             backgroundColor = Properties.Settings.Default.bgcolor;
+            backgroundMain = Properties.Settings.Default.bgmain;
 
             var controls = settingsHandler.getAll(this, typeof(Label));
             foreach(Control c in controls)
@@ -97,6 +99,7 @@ namespace ProjectEcho
 
 
                 backgroundColor = ColorTranslator.FromHtml("#121113");
+                backgroundMain = ColorTranslator.FromHtml("#0A070E");
 
                 BackColor = backgroundColor;
                 panel1.BackColor = backgroundColor;
@@ -110,7 +113,7 @@ namespace ProjectEcho
                 applyButton.BackColor = backgroundColor;
 
                 //main form changes 
-                mainForm.BackColor = backgroundColor;
+                mainForm.BackColor = backgroundMain;
                 mainForm.mainMenuPanel.BackColor = backgroundColor;
                 mainForm.mainPanel.BackColor = backgroundColor;
             }
@@ -136,6 +139,7 @@ namespace ProjectEcho
                 */
 
                 backgroundColor = Color.White;
+                backgroundMain = SystemColors.Control;
 
                 BackColor = backgroundColor;
                 panel1.BackColor = backgroundColor;
@@ -149,7 +153,7 @@ namespace ProjectEcho
                 applyButton.BackColor = backgroundColor;
 
                 //main form changes 
-                mainForm.BackColor = backgroundColor;
+                mainForm.BackColor = backgroundMain;
                 mainForm.mainMenuPanel.BackColor = backgroundColor;
                 mainForm.mainPanel.BackColor = backgroundColor;
             }
@@ -299,6 +303,7 @@ namespace ProjectEcho
             Properties.Settings.Default.darkmode = switchButton.Checked;
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.bgcolor = backgroundColor;
+            Properties.Settings.Default.bgmain= backgroundMain;
             Properties.Settings.Default.Save();
 
             this.Close(); //close settings menu when they save te settings
