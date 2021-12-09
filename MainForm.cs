@@ -40,10 +40,7 @@ namespace ProjectEcho
                                                                 // one of the existing pages in the UserControl array.                                                     
         public static TaskOneUserControl t1 = new TaskOneUserControl();  // purposely empty         
         
-        public HelpForm helpf = new HelpForm(); // Globally available
-        public TaskOneUserControl task1 = new TaskOneUserControl();
-        public TaskTwoUserControl task2 = new TaskTwoUserControl();
-        public TaskThreeUserControl task3 = new TaskThreeUserControl();
+        public HelpForm hf = new HelpForm(); // Globally available
         int saveHelpResource = 0; // The HelpForm has never been opened, so set to zero.
         public String path;
 
@@ -111,23 +108,6 @@ namespace ProjectEcho
         private void MainForm_Load(object sender, EventArgs e)
         {
             //Apply saved display settings
-            Color background = Properties.Settings.Default.bgcolor;
-            Color forecolor = Properties.Settings.Default.fcolor;
-            var panels = settingsHandler.getAll(this, typeof(Panel));
-            foreach (Panel p in panels)
-            {
-                p.BackColor = background;
-                p.ForeColor = forecolor;
-            }
-            var tabs = settingsHandler.getAll(this, typeof(TabControl));
-            foreach (TabControl t in tabs)
-            {
-                t.BackColor = background;
-                t.ForeColor = forecolor;
-            }
-            BackColor = background;
-            ForeColor = forecolor;
-
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in labels)
@@ -147,6 +127,15 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
+
+            Panel[] panels = new Panel[] { mainPanel, mainMenuPanel };
+
+            foreach (Panel p in panels)
+            {
+                p.BackColor = Properties.Settings.Default.bgcolor;
+            }
+            //BackColor = Properties.Settings.Default.bgcolor;
+            BackColor = Properties.Settings.Default.bgmain;
         }
 
         // On-click events for the buttons on the MainForm
@@ -257,14 +246,14 @@ namespace ProjectEcho
             saveHelpResource++; 
             if(saveHelpResource == 0)
             {
-                if(helpf.ShowDialog() == DialogResult.OK)
+                if(hf.ShowDialog() == DialogResult.OK)
                 {
                     Console.Write("Help opened"); //Debug
                 }
             }
             else
             {
-                helpf.Show(); // In the HelpForm, you can see that the Form is
+                hf.Show(); // In the HelpForm, you can see that the Form is
                            // never really destroyed until the whole Application is
                            // shut down.
             }
@@ -303,7 +292,7 @@ namespace ProjectEcho
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SettingsForm sf = new SettingsForm(this, helpf, task1, task2, task3 ); //pass in the main form and the helpform to the settings form
+            SettingsForm sf = new SettingsForm(this, hf); //pass in the main form and the helpform to the settings form
 
             if (sf.ShowDialog() == DialogResult.OK)
             {
