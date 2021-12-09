@@ -62,6 +62,7 @@ namespace ProjectEcho
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.AutoSize = true;
             
+            
             /* While all of the tasks are made with User Controls, the Main Menu is built with a normal panel. 
              * We would've made it with a User Control, but we switched to User Controls later in the game and 
              * switching the Main Menu would have forced us to mess with our Save State code.
@@ -70,12 +71,14 @@ namespace ProjectEcho
             taskControls[0] = t1; // purposely empty
             taskControls[1] = taskOne; // taskOne is created in the Designer
             taskControls[2] = taskTwo; // taskTwo is created in the Designer
-            taskControls[3] = taskThreeUserControl1;  // Will be changed once Task Three is built.
+            taskControls[3] = taskThree;  // Will be changed once Task Three is built.
+
+            //this.taskThreeUserControl1.tabControl1.Fore
 
             currentControl = taskControls[0]; // When the 
             taskOne.Visible = false;
             taskTwo.Visible = false;
-            taskThreeUserControl1.Visible = false;
+            taskThree.Visible = false;
             setControlActive(0);
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             //taskOneList.Items.AddRange(taskOneArray);
