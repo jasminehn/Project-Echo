@@ -66,7 +66,7 @@ namespace ProjectEcho
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.taskOne = new ProjectEcho.TaskOneUserControl();
-            this.taskThreeUserControl1 = new ProjectEcho.TaskThreeUserControl();
+            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
@@ -267,7 +267,7 @@ namespace ProjectEcho
             this.controlContainerPanel.Controls.Add(this.mainMenuPanel);
             this.controlContainerPanel.Controls.Add(this.taskOne);
             this.controlContainerPanel.Controls.Add(this.button1);
-            this.controlContainerPanel.Controls.Add(this.taskThreeUserControl1);
+            this.controlContainerPanel.Controls.Add(this.taskThree);
             this.controlContainerPanel.Controls.Add(this.taskTwo);
             this.controlContainerPanel.Location = new System.Drawing.Point(3, 83);
             this.controlContainerPanel.Name = "controlContainerPanel";
@@ -500,12 +500,12 @@ namespace ProjectEcho
             // 
             // taskThreeUserControl1
             // 
-            this.taskThreeUserControl1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskThreeUserControl1.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeUserControl1.Location = new System.Drawing.Point(986, 5);
-            this.taskThreeUserControl1.Name = "taskThreeUserControl1";
-            this.taskThreeUserControl1.Size = new System.Drawing.Size(318, 248);
-            this.taskThreeUserControl1.TabIndex = 17;
+            this.taskThree.BackColor = System.Drawing.Color.MidnightBlue;
+            this.taskThree.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskThree.Location = new System.Drawing.Point(986, 5);
+            this.taskThree.Name = "taskThreeUserControl1";
+            this.taskThree.Size = new System.Drawing.Size(318, 248);
+            this.taskThree.TabIndex = 17;
             // 
             // taskTwo
             // 
@@ -593,7 +593,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private TaskTwoUserControl taskTwo;
-        private TaskThreeUserControl taskThreeUserControl1;
+        private TaskThreeUserControl taskThree;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
