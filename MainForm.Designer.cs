@@ -500,19 +500,26 @@ namespace ProjectEcho
             // 
             // taskTwo
             // 
+            this.taskTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskTwo.AutoScroll = true;
             this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwo.Location = new System.Drawing.Point(624, 41);
+            this.taskTwo.Location = new System.Drawing.Point(625, 46);
             this.taskTwo.Margin = new System.Windows.Forms.Padding(4);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(235, 251);
+            this.taskTwo.Size = new System.Drawing.Size(314, 246);
             this.taskTwo.TabIndex = 17;
             // 
             // taskThree
             // 
+            this.taskThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskThree.AutoScroll = true;
             this.taskThree.BackColor = System.Drawing.Color.MidnightBlue;
             this.taskThree.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThree.Location = new System.Drawing.Point(908, 48);
+            this.taskThree.Location = new System.Drawing.Point(996, 41);
             this.taskThree.Name = "taskThree";
             this.taskThree.Size = new System.Drawing.Size(318, 248);
             this.taskThree.TabIndex = 17;

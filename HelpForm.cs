@@ -32,7 +32,7 @@ namespace ProjectEcho
         SettingsHandler settingsHandler = new SettingsHandler();
         private int textSizeOffset = 0; //keeps track of how much the text size has changed     
 
-        public HelpForm(String document, int page)
+        public HelpForm()
         {
             InitializeComponent();
         }
