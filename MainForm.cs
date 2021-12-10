@@ -2,25 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
-   /**
-    *  To the next owners --
-    *  Welcome to the Education Capstone Checker Application. This application is designed to improve the scores 
-    *  of John Carroll students submitting to the Ohio Board of Education. Along with documentation that we have
-    *  written, I would like to give you all a bit of a background in the technology you may be using while 
-    *  updating/upgrading this project.
-    *  
-    *  We have used a number of existing libraries, with their own documentation guides. 
-    *  
-    *  
-    *  Authors: C. Segrue, J. Nelson, E. MacDonald, I. Gnagy
-    */
+/**
+ *  To the next owners --
+ *  Welcome to the Education Capstone Checker Application. This application is designed to improve the scores 
+ *  of John Carroll students submitting to the Ohio Board of Education. Along with documentation that we have
+ *  written, I would like to give you all a bit of a background in the technology you may be using while 
+ *  updating/upgrading this project.
+ *  
+ *  We have used a number of existing libraries, with their own documentation guides. 
+ *  
+ *  
+ *  Authors: C. Segrue, J. Nelson, E. MacDonald, I. Gnagy
+ */
 namespace ProjectEcho
 {
     /** Each task is built with something called a 'User Control'. If you take a look at the Designer, you can get 
@@ -37,7 +39,7 @@ namespace ProjectEcho
     {
         public UserControl[] taskControls = new UserControl[4]; // Creating an array to store every task for navigation purposes
         private UserControl currentControl = new UserControl(); // Every time the user switches pages, this value gets set to
-                                                                // one of the existing pages in the UserControl array.                                                     
+        private static string ProgramPath = AppDomain.CurrentDomain.BaseDirectory; //get direct path to the program                                                        // one of the existing pages in the UserControl array.                                                     
         public static TaskOneUserControl t1 = new TaskOneUserControl();  // purposely empty         
         
         public HelpForm hf = new HelpForm(); // Globally available
@@ -116,7 +118,7 @@ namespace ProjectEcho
             var labels = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in labels)
             {
-                FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -125,7 +127,7 @@ namespace ProjectEcho
             var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
             foreach (Control c in checkedlistboxes)
             {
-                FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -301,6 +303,23 @@ namespace ProjectEcho
             {
                 Console.Write("Settings opened");
             }
+        }
+
+        private void t1videoLaunchButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("CLARE:: ENTERED METHOD");
+            MediaPlayer mp = new MediaPlayer();
+            String video = string.Format("{0}Videos\\taskOneVideo", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\")));
+            Uri uri = new Uri(video);
+            try
+            {
+                mp.Open(uri);
+                mp.Play();
+            } catch (Exception ex)
+            {
+                Console.WriteLine("CLARE:: " + ex);
+            }
+           
         }
     }
 }

@@ -666,6 +666,7 @@ namespace ProjectEcho
             this.t1videoLaunchButton.TabIndex = 0;
             this.t1videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK ONE";
             this.t1videoLaunchButton.UseVisualStyleBackColor = false;
+            this.t1videoLaunchButton.Click += new System.EventHandler(this.t1videoLaunchButton_Click);
             // 
             // task1Button
             // 
