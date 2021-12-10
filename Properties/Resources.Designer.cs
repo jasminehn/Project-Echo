@@ -73,6 +73,16 @@ namespace ProjectEcho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cameraIcon {
+            get {
+                object obj = ResourceManager.GetObject("cameraIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled {
             get {
                 object obj = ResourceManager.GetObject("Copy of Copy of Copy of Copy of Copy of Untitled", resourceCulture);
@@ -143,6 +153,16 @@ namespace ProjectEcho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap testIcon {
+            get {
+                object obj = ResourceManager.GetObject("testIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Untitled_design__13_ {
             get {
                 object obj = ResourceManager.GetObject("Untitled design (13)", resourceCulture);
@@ -176,6 +196,16 @@ namespace ProjectEcho.Properties {
         internal static System.Drawing.Bitmap videoIcon {
             get {
                 object obj = ResourceManager.GetObject("videoIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap writingIcon {
+            get {
+                object obj = ResourceManager.GetObject("writingIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

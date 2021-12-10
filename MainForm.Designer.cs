@@ -49,37 +49,37 @@ namespace ProjectEcho
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
             this.taskThreeList = new System.Windows.Forms.CheckedListBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.taskThreeButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.taskTwoList = new System.Windows.Forms.CheckedListBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.taskTwoButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.taskOneList = new System.Windows.Forms.CheckedListBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.task1Button = new System.Windows.Forms.Button();
-            this.taskOne = new ProjectEcho.TaskOneUserControl();
-            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.button1 = new System.Windows.Forms.Button();
-            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.forwardButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.returnToMenuButton = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.t3videoLaunchButton = new System.Windows.Forms.Button();
+            this.taskThreeButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.t2videoLaunchButton = new System.Windows.Forms.Button();
+            this.taskTwoButton = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.t1videoLaunchButton = new System.Windows.Forms.Button();
+            this.task1Button = new System.Windows.Forms.Button();
+            this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
+            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -285,9 +285,9 @@ namespace ProjectEcho
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.button4, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.t3videoLaunchButton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.taskThreeList, 0, 0);
@@ -298,20 +298,6 @@ namespace ProjectEcho
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(316, 75);
             this.tableLayoutPanel2.TabIndex = 35;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Goldenrod;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::ProjectEcho.Properties.Resources.bookIcon;
-            this.button4.Location = new System.Drawing.Point(240, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 69);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "READ THE DOCUMENTATION FOR TASK THREE";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // taskThreeList
             // 
@@ -324,7 +310,7 @@ namespace ProjectEcho
             this.taskThreeList.Location = new System.Drawing.Point(8, 8);
             this.taskThreeList.Margin = new System.Windows.Forms.Padding(8);
             this.taskThreeList.Name = "taskThreeList";
-            this.taskThreeList.Size = new System.Drawing.Size(142, 59);
+            this.taskThreeList.Size = new System.Drawing.Size(173, 59);
             this.taskThreeList.TabIndex = 2;
             // 
             // panel8
@@ -351,22 +337,6 @@ namespace ProjectEcho
             this.label3.TabIndex = 30;
             this.label3.Text = "TASK THREE: ASSESSING";
             // 
-            // taskThreeButton
-            // 
-            this.taskThreeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.taskThreeButton.BackColor = System.Drawing.Color.White;
-            this.taskThreeButton.CausesValidation = false;
-            this.taskThreeButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskThreeButton.Location = new System.Drawing.Point(316, 0);
-            this.taskThreeButton.Name = "taskThreeButton";
-            this.taskThreeButton.Size = new System.Drawing.Size(212, 123);
-            this.taskThreeButton.TabIndex = 28;
-            this.taskThreeButton.Text = "CLICK HERE TO GO TO TASK THREE";
-            this.taskThreeButton.UseVisualStyleBackColor = false;
-            this.taskThreeButton.Click += new System.EventHandler(this.taskThreeButton_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -382,9 +352,9 @@ namespace ProjectEcho
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.Controls.Add(this.taskTwoList, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.t2videoLaunchButton, 1, 0);
@@ -407,22 +377,8 @@ namespace ProjectEcho
             this.taskTwoList.Location = new System.Drawing.Point(8, 8);
             this.taskTwoList.Margin = new System.Windows.Forms.Padding(8);
             this.taskTwoList.Name = "taskTwoList";
-            this.taskTwoList.Size = new System.Drawing.Size(142, 58);
+            this.taskTwoList.Size = new System.Drawing.Size(173, 58);
             this.taskTwoList.TabIndex = 3;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Goldenrod;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::ProjectEcho.Properties.Resources.bookIcon;
-            this.button5.Location = new System.Drawing.Point(240, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(73, 68);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "READ THE DOCUMENTATION FOR TASK TWO";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -448,22 +404,6 @@ namespace ProjectEcho
             this.label2.TabIndex = 30;
             this.label2.Text = "TASK TWO: IMPLEMENTING";
             // 
-            // taskTwoButton
-            // 
-            this.taskTwoButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.taskTwoButton.BackColor = System.Drawing.Color.White;
-            this.taskTwoButton.CausesValidation = false;
-            this.taskTwoButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTwoButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwoButton.Location = new System.Drawing.Point(316, 0);
-            this.taskTwoButton.Name = "taskTwoButton";
-            this.taskTwoButton.Size = new System.Drawing.Size(212, 122);
-            this.taskTwoButton.TabIndex = 27;
-            this.taskTwoButton.Text = "CLICK HERE TO GO TO TASK TWO";
-            this.taskTwoButton.UseVisualStyleBackColor = false;
-            this.taskTwoButton.Click += new System.EventHandler(this.taskTwoButton_Click);
-            // 
             // panel3
             // 
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -481,9 +421,9 @@ namespace ProjectEcho
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Controls.Add(this.taskOneList, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button7, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.t1videoLaunchButton, 1, 0);
@@ -508,7 +448,7 @@ namespace ProjectEcho
             this.taskOneList.Location = new System.Drawing.Point(8, 8);
             this.taskOneList.Margin = new System.Windows.Forms.Padding(8);
             this.taskOneList.Name = "taskOneList";
-            this.taskOneList.Size = new System.Drawing.Size(141, 54);
+            this.taskOneList.Size = new System.Drawing.Size(173, 54);
             this.taskOneList.TabIndex = 3;
             // 
             // panel6
@@ -535,50 +475,6 @@ namespace ProjectEcho
             this.label1.TabIndex = 30;
             this.label1.Text = "TASK ONE: PLANNING";
             // 
-            // task1Button
-            // 
-            this.task1Button.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.task1Button.BackColor = System.Drawing.Color.White;
-            this.task1Button.CausesValidation = false;
-            this.task1Button.Dock = System.Windows.Forms.DockStyle.Right;
-            this.task1Button.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task1Button.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.task1Button.Location = new System.Drawing.Point(315, 0);
-            this.task1Button.Name = "task1Button";
-            this.task1Button.Size = new System.Drawing.Size(211, 120);
-            this.task1Button.TabIndex = 29;
-            this.task1Button.Text = "CLICK HERE TO GO TO TASK ONE";
-            this.task1Button.UseVisualStyleBackColor = false;
-            this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
-            // 
-            // taskOne
-            // 
-            this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskOne.AutoScroll = true;
-            this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskOne.Location = new System.Drawing.Point(993, 205);
-            this.taskOne.Margin = new System.Windows.Forms.Padding(0);
-            this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
-            this.taskOne.Name = "taskOne";
-            this.taskOne.Size = new System.Drawing.Size(269, 150);
-            this.taskOne.TabIndex = 16;
-            // 
-            // taskTwo
-            // 
-            this.taskTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskTwo.AutoScroll = true;
-            this.taskTwo.AutoSize = true;
-            this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwo.Location = new System.Drawing.Point(993, 49);
-            this.taskTwo.Margin = new System.Windows.Forms.Padding(0);
-            this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(1633, 772);
-            this.taskTwo.TabIndex = 17;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1475, 208);
@@ -589,20 +485,6 @@ namespace ProjectEcho
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // taskThree
-            // 
-            this.taskThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskThree.AutoScroll = true;
-            this.taskThree.BackColor = System.Drawing.Color.MidnightBlue;
-            this.taskThree.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThree.Location = new System.Drawing.Point(993, 362);
-            this.taskThree.Margin = new System.Windows.Forms.Padding(0);
-            this.taskThree.Name = "taskThree";
-            this.taskThree.Size = new System.Drawing.Size(269, 147);
-            this.taskThree.TabIndex = 17;
             // 
             // mainPanel
             // 
@@ -667,44 +549,106 @@ namespace ProjectEcho
             this.returnToMenuButton.Visible = false;
             this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Goldenrod;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::ProjectEcho.Properties.Resources.bookIcon;
+            this.button4.Location = new System.Drawing.Point(255, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(58, 69);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "READ THE DOCUMENTATION FOR TASK THREE";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // t3videoLaunchButton
             // 
             this.t3videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
             this.t3videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t3videoLaunchButton.ForeColor = System.Drawing.Color.White;
             this.t3videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
-            this.t3videoLaunchButton.Location = new System.Drawing.Point(161, 3);
+            this.t3videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t3videoLaunchButton.Name = "t3videoLaunchButton";
-            this.t3videoLaunchButton.Size = new System.Drawing.Size(73, 69);
+            this.t3videoLaunchButton.Size = new System.Drawing.Size(57, 69);
             this.t3videoLaunchButton.TabIndex = 0;
             this.t3videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK THREE";
             this.t3videoLaunchButton.UseVisualStyleBackColor = false;
+            // 
+            // taskThreeButton
+            // 
+            this.taskThreeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.taskThreeButton.BackColor = System.Drawing.Color.White;
+            this.taskThreeButton.CausesValidation = false;
+            this.taskThreeButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
+            this.taskThreeButton.Image = global::ProjectEcho.Properties.Resources.testIcon;
+            this.taskThreeButton.Location = new System.Drawing.Point(316, 0);
+            this.taskThreeButton.Name = "taskThreeButton";
+            this.taskThreeButton.Size = new System.Drawing.Size(212, 123);
+            this.taskThreeButton.TabIndex = 28;
+            this.taskThreeButton.Text = "CLICK HERE TO GO TO TASK THREE";
+            this.taskThreeButton.UseVisualStyleBackColor = false;
+            this.taskThreeButton.Click += new System.EventHandler(this.taskThreeButton_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Goldenrod;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::ProjectEcho.Properties.Resources.bookIcon;
+            this.button5.Location = new System.Drawing.Point(255, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(58, 68);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "READ THE DOCUMENTATION FOR TASK TWO";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // t2videoLaunchButton
             // 
             this.t2videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
             this.t2videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t2videoLaunchButton.ForeColor = System.Drawing.Color.White;
             this.t2videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
-            this.t2videoLaunchButton.Location = new System.Drawing.Point(161, 3);
+            this.t2videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t2videoLaunchButton.Name = "t2videoLaunchButton";
-            this.t2videoLaunchButton.Size = new System.Drawing.Size(73, 68);
+            this.t2videoLaunchButton.Size = new System.Drawing.Size(57, 68);
             this.t2videoLaunchButton.TabIndex = 0;
             this.t2videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK TWO";
             this.t2videoLaunchButton.UseVisualStyleBackColor = false;
+            // 
+            // taskTwoButton
+            // 
+            this.taskTwoButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.taskTwoButton.BackColor = System.Drawing.Color.White;
+            this.taskTwoButton.CausesValidation = false;
+            this.taskTwoButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskTwoButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.taskTwoButton.Image = global::ProjectEcho.Properties.Resources.cameraIcon;
+            this.taskTwoButton.Location = new System.Drawing.Point(316, 0);
+            this.taskTwoButton.Name = "taskTwoButton";
+            this.taskTwoButton.Size = new System.Drawing.Size(212, 122);
+            this.taskTwoButton.TabIndex = 27;
+            this.taskTwoButton.Text = "CLICK HERE TO GO TO TASK TWO";
+            this.taskTwoButton.UseVisualStyleBackColor = false;
+            this.taskTwoButton.Click += new System.EventHandler(this.taskTwoButton_Click);
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Goldenrod;
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::ProjectEcho.Properties.Resources.bookIcon;
-            this.button7.Location = new System.Drawing.Point(238, 3);
+            this.button7.Location = new System.Drawing.Point(255, 3);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(74, 66);
+            this.button7.Size = new System.Drawing.Size(57, 66);
             this.button7.TabIndex = 1;
             this.button7.Text = "READ THE DOCUMENTATION FOR TASK ONE";
             this.button7.UseVisualStyleBackColor = false;
@@ -713,15 +657,74 @@ namespace ProjectEcho
             // 
             this.t1videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
             this.t1videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t1videoLaunchButton.ForeColor = System.Drawing.Color.White;
             this.t1videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
-            this.t1videoLaunchButton.Location = new System.Drawing.Point(160, 3);
+            this.t1videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t1videoLaunchButton.Name = "t1videoLaunchButton";
-            this.t1videoLaunchButton.Size = new System.Drawing.Size(72, 66);
+            this.t1videoLaunchButton.Size = new System.Drawing.Size(57, 66);
             this.t1videoLaunchButton.TabIndex = 0;
             this.t1videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK ONE";
             this.t1videoLaunchButton.UseVisualStyleBackColor = false;
+            // 
+            // task1Button
+            // 
+            this.task1Button.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.task1Button.BackColor = System.Drawing.Color.White;
+            this.task1Button.CausesValidation = false;
+            this.task1Button.Dock = System.Windows.Forms.DockStyle.Right;
+            this.task1Button.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.task1Button.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.task1Button.Image = global::ProjectEcho.Properties.Resources.writingIcon;
+            this.task1Button.Location = new System.Drawing.Point(315, 0);
+            this.task1Button.Name = "task1Button";
+            this.task1Button.Size = new System.Drawing.Size(211, 120);
+            this.task1Button.TabIndex = 29;
+            this.task1Button.Text = "CLICK HERE TO GO TO TASK ONE";
+            this.task1Button.UseVisualStyleBackColor = false;
+            this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
+            // 
+            // taskOne
+            // 
+            this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskOne.AutoScroll = true;
+            this.taskOne.BackColor = System.Drawing.Color.MidnightBlue;
+            this.taskOne.Location = new System.Drawing.Point(993, 205);
+            this.taskOne.Margin = new System.Windows.Forms.Padding(0);
+            this.taskOne.MaximumSize = new System.Drawing.Size(2507, 992);
+            this.taskOne.Name = "taskOne";
+            this.taskOne.Size = new System.Drawing.Size(269, 150);
+            this.taskOne.TabIndex = 16;
+            // 
+            // taskTwo
+            // 
+            this.taskTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskTwo.AutoScroll = true;
+            this.taskTwo.AutoSize = true;
+            this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
+            this.taskTwo.Location = new System.Drawing.Point(993, 49);
+            this.taskTwo.Margin = new System.Windows.Forms.Padding(0);
+            this.taskTwo.Name = "taskTwo";
+            this.taskTwo.Size = new System.Drawing.Size(1633, 772);
+            this.taskTwo.TabIndex = 17;
+            // 
+            // taskThree
+            // 
+            this.taskThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskThree.AutoScroll = true;
+            this.taskThree.BackColor = System.Drawing.Color.MidnightBlue;
+            this.taskThree.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskThree.Location = new System.Drawing.Point(993, 362);
+            this.taskThree.Margin = new System.Windows.Forms.Padding(0);
+            this.taskThree.Name = "taskThree";
+            this.taskThree.Size = new System.Drawing.Size(269, 147);
+            this.taskThree.TabIndex = 17;
             // 
             // MainForm
             // 

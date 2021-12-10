@@ -551,6 +551,9 @@
   <ItemGroup>
     <None Include="Resources\videoIcon.png" />
     <None Include="Resources\bookIcon.png" />
+    <None Include="Resources\writingIcon.png" />
+    <None Include="Resources\cameraIcon.png" />
+    <None Include="Resources\testIcon.png" />
     <Content Include="vlclib\AUTHORS.txt" />
     <Content Include="vlclib\axvlc.dll" />
     <Content Include="vlclib\COPYING.txt" />
