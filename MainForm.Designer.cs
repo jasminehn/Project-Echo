@@ -74,12 +74,12 @@ namespace ProjectEcho
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.taskOne = new ProjectEcho.TaskOneUserControl();
             this.taskTwo = new ProjectEcho.TaskTwoUserControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.taskThree = new ProjectEcho.TaskThreeUserControl();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -348,24 +348,29 @@ namespace ProjectEcho
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Goldenrod;
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(240, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(73, 69);
             this.button4.TabIndex = 1;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "READ THE DOCUMENTATION FOR TASK THREE";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // t3videoLaunchButton
             // 
+            this.t3videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
             this.t3videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3videoLaunchButton.ForeColor = System.Drawing.Color.White;
             this.t3videoLaunchButton.Location = new System.Drawing.Point(161, 3);
             this.t3videoLaunchButton.Name = "t3videoLaunchButton";
             this.t3videoLaunchButton.Size = new System.Drawing.Size(73, 69);
             this.t3videoLaunchButton.TabIndex = 0;
-            this.t3videoLaunchButton.Text = "WATCH TUTORIAL VIDEO";
-            this.t3videoLaunchButton.UseVisualStyleBackColor = true;
+            this.t3videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK THREE";
+            this.t3videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // taskThreeList
             // 
@@ -466,24 +471,29 @@ namespace ProjectEcho
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Goldenrod;
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(240, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(73, 68);
             this.button5.TabIndex = 1;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "READ THE DOCUMENTATION FOR TASK TWO";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // t2videoLaunchButton
             // 
+            this.t2videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
             this.t2videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2videoLaunchButton.ForeColor = System.Drawing.Color.White;
             this.t2videoLaunchButton.Location = new System.Drawing.Point(161, 3);
             this.t2videoLaunchButton.Name = "t2videoLaunchButton";
             this.t2videoLaunchButton.Size = new System.Drawing.Size(73, 68);
             this.t2videoLaunchButton.TabIndex = 0;
-            this.t2videoLaunchButton.Text = "WATCH TUTORIAL VIDEO";
-            this.t2videoLaunchButton.UseVisualStyleBackColor = true;
+            this.t2videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK TWO";
+            this.t2videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -574,24 +584,29 @@ namespace ProjectEcho
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.Goldenrod;
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(238, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(74, 66);
             this.button7.TabIndex = 1;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Text = "READ THE DOCUMENTATION FOR TASK ONE";
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // t1videoLaunchButton
             // 
+            this.t1videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
             this.t1videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1videoLaunchButton.ForeColor = System.Drawing.Color.White;
             this.t1videoLaunchButton.Location = new System.Drawing.Point(160, 3);
             this.t1videoLaunchButton.Name = "t1videoLaunchButton";
             this.t1videoLaunchButton.Size = new System.Drawing.Size(72, 66);
             this.t1videoLaunchButton.TabIndex = 0;
-            this.t1videoLaunchButton.Text = "WATCH TUTORIAL VIDEO";
-            this.t1videoLaunchButton.UseVisualStyleBackColor = true;
+            this.t1videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK ONE";
+            this.t1videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -633,33 +648,6 @@ namespace ProjectEcho
             this.task1Button.UseVisualStyleBackColor = false;
             this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1475, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.AutoSize = true;
-            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.mainPanel.Controls.Add(this.controlContainerPanel);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1370, 749);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
             // taskOne
             // 
             this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -680,12 +668,24 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.taskTwo.AutoScroll = true;
+            this.taskTwo.AutoSize = true;
             this.taskTwo.BackColor = System.Drawing.Color.MidnightBlue;
             this.taskTwo.Location = new System.Drawing.Point(993, 49);
             this.taskTwo.Margin = new System.Windows.Forms.Padding(0);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(269, 149);
+            this.taskTwo.Size = new System.Drawing.Size(1633, 772);
             this.taskTwo.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1475, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // taskThree
             // 
@@ -700,6 +700,22 @@ namespace ProjectEcho
             this.taskThree.Name = "taskThree";
             this.taskThree.Size = new System.Drawing.Size(269, 147);
             this.taskThree.TabIndex = 17;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.mainPanel.Controls.Add(this.controlContainerPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1370, 749);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // MainForm
             // 
@@ -726,6 +742,7 @@ namespace ProjectEcho
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.controlContainerPanel.ResumeLayout(false);
+            this.controlContainerPanel.PerformLayout();
             this.mainMenuPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
