@@ -3017,7 +3017,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label warningLabel;
         private System.Windows.Forms.Panel panel8;
@@ -3239,5 +3238,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label125;
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.Label label71;
+        public System.Windows.Forms.TabPage tabPage1;
     }
 }

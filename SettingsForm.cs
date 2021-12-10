@@ -31,17 +31,24 @@ namespace ProjectEcho
         //creates vars for repeated use
         private Color backgroundColor;
         private Color backgroundMain;
+        private Color fontColor;
 
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
         MainForm mainForm;
         HelpForm helpForm;
+        TaskOneUserControl taskOne;
+        TaskTwoUserControl taskTwo;
+        TaskThreeUserControl taskThree;
 
-        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput)
+        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput, TaskOneUserControl taskOneInput, TaskTwoUserControl taskTwoInput, TaskThreeUserControl taskThreeInput)
         {
             InitializeComponent();
             mainForm = mainFormInput;
             helpForm = helpFormInput;
+            taskOne = taskOneInput;
+            taskTwo = taskTwoInput;
+            taskThree = taskThreeInput;
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
@@ -54,6 +61,7 @@ namespace ProjectEcho
 
             backgroundColor = Properties.Settings.Default.bgcolor;
             backgroundMain = Properties.Settings.Default.bgmain;
+            fontColor = Properties.Settings.Default.fcolor;
 
             var controls = settingsHandler.getAll(this, typeof(Label));
             foreach(Control c in controls)
@@ -68,42 +76,39 @@ namespace ProjectEcho
         private void switchButton_Click(object sender, EventArgs e)
         {
             //Checks darkmode toggle
-            if(switchButton.Checked) //ON
+            if (switchButton.Checked) //ON
             {
                 backgroundColor = ColorTranslator.FromHtml("#121113");
                 backgroundMain = ColorTranslator.FromHtml("#0A070E");
-
-                BackColor = backgroundColor;
-                panel1.BackColor = backgroundColor;
-                ForeColor = Color.White; //changes all text color
-                //Changes color for slider
-                textsizeAdjust.BackColor = backgroundColor;
-                textsizeAdjust.ForeColor = Color.White;
-                //Changes color for button
-                applyButton.BackColor = backgroundColor;
-                //main form changes 
-                mainForm.BackColor = backgroundMain;
-                mainForm.mainMenuPanel.BackColor = backgroundColor;
-                mainForm.mainPanel.BackColor = backgroundColor;
+                fontColor = Color.White;                
             }
             else //OFF
             {
                 backgroundColor = Color.White;
                 backgroundMain = SystemColors.Control;
-
-                BackColor = backgroundColor;
-                panel1.BackColor = backgroundColor;
-                
-                ForeColor = Color.Black;
-                textsizeAdjust.BackColor = backgroundColor;
-                textsizeAdjust.ForeColor = Color.Black;
-                
-                applyButton.BackColor = backgroundColor;
-                
-                mainForm.BackColor = backgroundMain;
-                mainForm.mainMenuPanel.BackColor = backgroundColor;
-                mainForm.mainPanel.BackColor = backgroundColor;
+                fontColor = Color.Black;                
             }
+
+            //settings menu changes
+            BackColor = backgroundColor;
+            panel1.BackColor = backgroundColor;
+            ForeColor = fontColor; 
+            
+            //Changes color for slider
+            textsizeAdjust.BackColor = backgroundColor;
+            textsizeAdjust.ForeColor = fontColor;
+            
+            //Changes color for button
+            applyButton.BackColor = backgroundColor;
+
+            //main form changes 
+            mainForm.BackColor = backgroundMain;
+            mainForm.mainMenuPanel.BackColor = backgroundColor;
+            mainForm.mainPanel.BackColor = backgroundColor;
+
+            //task 1 changes
+            taskOne.tabPage1.BackColor = backgroundColor;
+            taskOne.tabPage1.ForeColor = fontColor;
         }
 
         private void boldnessToggle_CheckedChanged(object sender, EventArgs e)

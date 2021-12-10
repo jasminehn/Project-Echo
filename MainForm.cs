@@ -297,7 +297,7 @@ namespace ProjectEcho
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SettingsForm sf = new SettingsForm(this, hf); //pass in the main form and the helpform to the settings form
+            SettingsForm sf = new SettingsForm(this, hf, taskOne, taskTwo, taskThree); //pass in the main form and the helpform to the settings form
 
             if (sf.ShowDialog() == DialogResult.OK)
             {
