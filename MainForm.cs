@@ -308,13 +308,13 @@ namespace ProjectEcho
         private void t1videoLaunchButton_Click(object sender, EventArgs e)
         {
             Console.WriteLine("CLARE:: ENTERED METHOD");
-            MediaPlayer mp = new MediaPlayer();
+            WMPLib.WindowsMediaPlayer mp = new WMPLib.WindowsMediaPlayer();
             String video = string.Format("{0}Videos\\taskOneVideo", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\")));
             Uri uri = new Uri(video);
             try
             {
-                mp.Open(uri);
-                mp.Play();
+                //mp.
+                mp.newMedia(video);
             } catch (Exception ex)
             {
                 Console.WriteLine("CLARE:: " + ex);
