@@ -549,6 +549,8 @@
     <None Include="Resources\notebookSpirals.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\videoIcon.png" />
+    <None Include="Resources\bookIcon.png" />
     <Content Include="vlclib\AUTHORS.txt" />
     <Content Include="vlclib\axvlc.dll" />
     <Content Include="vlclib\COPYING.txt" />

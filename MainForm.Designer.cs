@@ -32,10 +32,7 @@ namespace ProjectEcho
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.forwardButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.returnToMenuButton = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.titleSubtitleLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
@@ -53,7 +50,6 @@ namespace ProjectEcho
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
-            this.t3videoLaunchButton = new System.Windows.Forms.Button();
             this.taskThreeList = new System.Windows.Forms.CheckedListBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,15 +58,12 @@ namespace ProjectEcho
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.taskTwoList = new System.Windows.Forms.CheckedListBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.t2videoLaunchButton = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.taskTwoButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.taskOneList = new System.Windows.Forms.CheckedListBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.t1videoLaunchButton = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
@@ -80,6 +73,13 @@ namespace ProjectEcho
             this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.forwardButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.returnToMenuButton = new System.Windows.Forms.Button();
+            this.t3videoLaunchButton = new System.Windows.Forms.Button();
+            this.t2videoLaunchButton = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.t1videoLaunchButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -112,36 +112,6 @@ namespace ProjectEcho
             this.panel1.Size = new System.Drawing.Size(1370, 73);
             this.panel1.TabIndex = 10;
             // 
-            // forwardButton
-            // 
-            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
-            this.forwardButton.FlatAppearance.BorderSize = 0;
-            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
-            this.forwardButton.Location = new System.Drawing.Point(1311, 7);
-            this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(51, 55);
-            this.forwardButton.TabIndex = 1;
-            this.forwardButton.UseVisualStyleBackColor = false;
-            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
-            // 
-            // backButton
-            // 
-            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.FlatAppearance.BorderSize = 0;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
-            this.backButton.Location = new System.Drawing.Point(1254, 8);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(51, 55);
-            this.backButton.TabIndex = 0;
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Visible = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(270, 32);
@@ -151,23 +121,6 @@ namespace ProjectEcho
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // returnToMenuButton
-            // 
-            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
-            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
-            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnToMenuButton.Location = new System.Drawing.Point(12, 8);
-            this.returnToMenuButton.Name = "returnToMenuButton";
-            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
-            this.returnToMenuButton.TabIndex = 2;
-            this.returnToMenuButton.UseVisualStyleBackColor = false;
-            this.returnToMenuButton.Visible = false;
-            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
             // 
             // titlePanel
             // 
@@ -352,25 +305,13 @@ namespace ProjectEcho
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button4.Location = new System.Drawing.Point(240, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(73, 69);
             this.button4.TabIndex = 1;
             this.button4.Text = "READ THE DOCUMENTATION FOR TASK THREE";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // t3videoLaunchButton
-            // 
-            this.t3videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.t3videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t3videoLaunchButton.ForeColor = System.Drawing.Color.White;
-            this.t3videoLaunchButton.Location = new System.Drawing.Point(161, 3);
-            this.t3videoLaunchButton.Name = "t3videoLaunchButton";
-            this.t3videoLaunchButton.Size = new System.Drawing.Size(73, 69);
-            this.t3videoLaunchButton.TabIndex = 0;
-            this.t3videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK THREE";
-            this.t3videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // taskThreeList
             // 
@@ -475,25 +416,13 @@ namespace ProjectEcho
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button5.Location = new System.Drawing.Point(240, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(73, 68);
             this.button5.TabIndex = 1;
             this.button5.Text = "READ THE DOCUMENTATION FOR TASK TWO";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // t2videoLaunchButton
-            // 
-            this.t2videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.t2videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t2videoLaunchButton.ForeColor = System.Drawing.Color.White;
-            this.t2videoLaunchButton.Location = new System.Drawing.Point(161, 3);
-            this.t2videoLaunchButton.Name = "t2videoLaunchButton";
-            this.t2videoLaunchButton.Size = new System.Drawing.Size(73, 68);
-            this.t2videoLaunchButton.TabIndex = 0;
-            this.t2videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK TWO";
-            this.t2videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -581,32 +510,6 @@ namespace ProjectEcho
             this.taskOneList.Name = "taskOneList";
             this.taskOneList.Size = new System.Drawing.Size(141, 54);
             this.taskOneList.TabIndex = 3;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Goldenrod;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(238, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(74, 66);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "READ THE DOCUMENTATION FOR TASK ONE";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // t1videoLaunchButton
-            // 
-            this.t1videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.t1videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t1videoLaunchButton.ForeColor = System.Drawing.Color.White;
-            this.t1videoLaunchButton.Location = new System.Drawing.Point(160, 3);
-            this.t1videoLaunchButton.Name = "t1videoLaunchButton";
-            this.t1videoLaunchButton.Size = new System.Drawing.Size(72, 66);
-            this.t1videoLaunchButton.TabIndex = 0;
-            this.t1videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK ONE";
-            this.t1videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -716,6 +619,109 @@ namespace ProjectEcho
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // forwardButton
+            // 
+            this.forwardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.forwardButton.BackColor = System.Drawing.Color.Transparent;
+            this.forwardButton.FlatAppearance.BorderSize = 0;
+            this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
+            this.forwardButton.Location = new System.Drawing.Point(1311, 7);
+            this.forwardButton.Name = "forwardButton";
+            this.forwardButton.Size = new System.Drawing.Size(51, 55);
+            this.forwardButton.TabIndex = 1;
+            this.forwardButton.UseVisualStyleBackColor = false;
+            this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
+            // 
+            // backButton
+            // 
+            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
+            this.backButton.Location = new System.Drawing.Point(1254, 8);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(51, 55);
+            this.backButton.TabIndex = 0;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Visible = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // returnToMenuButton
+            // 
+            this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
+            this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.returnToMenuButton.FlatAppearance.BorderSize = 0;
+            this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToMenuButton.Location = new System.Drawing.Point(12, 8);
+            this.returnToMenuButton.Name = "returnToMenuButton";
+            this.returnToMenuButton.Size = new System.Drawing.Size(151, 53);
+            this.returnToMenuButton.TabIndex = 2;
+            this.returnToMenuButton.UseVisualStyleBackColor = false;
+            this.returnToMenuButton.Visible = false;
+            this.returnToMenuButton.Click += new System.EventHandler(this.returnToMenuButton_Click);
+            // 
+            // t3videoLaunchButton
+            // 
+            this.t3videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.t3videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3videoLaunchButton.ForeColor = System.Drawing.Color.White;
+            this.t3videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
+            this.t3videoLaunchButton.Location = new System.Drawing.Point(161, 3);
+            this.t3videoLaunchButton.Name = "t3videoLaunchButton";
+            this.t3videoLaunchButton.Size = new System.Drawing.Size(73, 69);
+            this.t3videoLaunchButton.TabIndex = 0;
+            this.t3videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK THREE";
+            this.t3videoLaunchButton.UseVisualStyleBackColor = false;
+            // 
+            // t2videoLaunchButton
+            // 
+            this.t2videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.t2videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2videoLaunchButton.ForeColor = System.Drawing.Color.White;
+            this.t2videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
+            this.t2videoLaunchButton.Location = new System.Drawing.Point(161, 3);
+            this.t2videoLaunchButton.Name = "t2videoLaunchButton";
+            this.t2videoLaunchButton.Size = new System.Drawing.Size(73, 68);
+            this.t2videoLaunchButton.TabIndex = 0;
+            this.t2videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK TWO";
+            this.t2videoLaunchButton.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Goldenrod;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = global::ProjectEcho.Properties.Resources.bookIcon;
+            this.button7.Location = new System.Drawing.Point(238, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(74, 66);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "READ THE DOCUMENTATION FOR TASK ONE";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // t1videoLaunchButton
+            // 
+            this.t1videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.t1videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1videoLaunchButton.ForeColor = System.Drawing.Color.White;
+            this.t1videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
+            this.t1videoLaunchButton.Location = new System.Drawing.Point(160, 3);
+            this.t1videoLaunchButton.Name = "t1videoLaunchButton";
+            this.t1videoLaunchButton.Size = new System.Drawing.Size(72, 66);
+            this.t1videoLaunchButton.TabIndex = 0;
+            this.t1videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK ONE";
+            this.t1videoLaunchButton.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
