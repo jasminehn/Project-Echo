@@ -69,7 +69,7 @@ namespace ProjectEcho
         {
             try
             {
-
+                l1 = leftMarginLabel1C; l2 = rightMarginLabel1C; l3 = topMarginLabel1C; l4 = bottomMarginLabel1C; l5 = fontTypeLabel1C; l6 = fontSizeLabel1C; l7 = docLengthLabel1C;
                 await checkDocument(1, "C", formatCheckList1C, uploadInfo1C, grammarErrors1C, missingWordList1C);
             }
             catch(Exception ex)
@@ -82,6 +82,7 @@ namespace ProjectEcho
         {
             try
             {
+                l1 = leftMarginLabel1D; l2 = rightMarginLabel1D; l3 = topMarginLabel1D; l4 = bottomMarginLabel1D; l5 = fontTypeLabel1D; l6 = fontSizeLabel1D; l7 = docLengthLabel1D;
                 await checkDocument(1, "D", formatCheckList1D, uploadInfo1D, grammarErrors1D, missingWordList1D);
             }
             catch(Exception ex)
@@ -94,6 +95,7 @@ namespace ProjectEcho
         {
             try
             {
+                l1 = leftMarginLabel1E; l2 = rightMarginLabel1E; l3 = topMarginLabel1E; l4 = bottomMarginLabel1E; l5 = fontTypeLabel1E; l6 = fontSizeLabel1E; l7 = docLengthLabel1E;
                 await checkDocument(1, "E", formatCheckList1E, uploadInfo1E, grammarErrors1E, missingWordList1E);
             }
             catch(Exception ex)

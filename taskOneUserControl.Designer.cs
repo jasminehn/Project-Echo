@@ -593,7 +593,7 @@ namespace ProjectEcho
             this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(10, 150);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(172, 16);
+            this.label28.Size = new System.Drawing.Size(216, 19);
             this.label28.TabIndex = 35;
             this.label28.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1115,7 +1115,7 @@ namespace ProjectEcho
             this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(10, 150);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(172, 16);
+            this.label35.Size = new System.Drawing.Size(209, 20);
             this.label35.TabIndex = 35;
             this.label35.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1614,7 +1614,7 @@ namespace ProjectEcho
             this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(10, 150);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(172, 16);
+            this.label47.Size = new System.Drawing.Size(215, 20);
             this.label47.TabIndex = 35;
             this.label47.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -2113,7 +2113,7 @@ namespace ProjectEcho
             this.label59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(10, 150);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(172, 16);
+            this.label59.Size = new System.Drawing.Size(216, 20);
             this.label59.TabIndex = 35;
             this.label59.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -2613,7 +2613,7 @@ namespace ProjectEcho
             this.label70.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(10, 150);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(172, 16);
+            this.label70.Size = new System.Drawing.Size(207, 20);
             this.label70.TabIndex = 35;
             this.label70.Text = "SUGGESTED TERMINOLOGY:";
             // 
