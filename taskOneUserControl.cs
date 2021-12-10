@@ -69,6 +69,7 @@ namespace ProjectEcho
         {
             try
             {
+
                 await checkDocument(1, "C", formatCheckList1C, uploadInfo1C, grammarErrors1C, missingWordList1C);
             }
             catch(Exception ex)
