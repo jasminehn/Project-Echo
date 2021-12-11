@@ -157,12 +157,6 @@
   <ItemGroup>
     <Compile Include="ProgressInformation.cs" />
     <Compile Include="SettingsHandler.cs" />
-    <Compile Include="TaskOneGuide.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TaskOneGuide.Designer.cs">
-      <DependentUpon>TaskOneGuide.cs</DependentUpon>
-    </Compile>
     <Compile Include="GrammarAPI.cs" />
     <Compile Include="DocumentHandler.cs" />
     <Compile Include="MainForm.cs">
@@ -234,9 +228,6 @@
     </Compile>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TaskOneGuide.resx">
-      <DependentUpon>TaskOneGuide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaskOneUserControl.resx">
       <DependentUpon>TaskOneUserControl.cs</DependentUpon>

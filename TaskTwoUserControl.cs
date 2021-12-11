@@ -22,22 +22,10 @@ namespace ProjectEcho
         public TaskTwoUserControl()
         {
             InitializeComponent();
-            //this.clipOneFrame.uiMode = "mini";
-            //this.clipOneFrame.Enabled = true;
-
-            //clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
-            //this.clipOneFrame.URL= @"C:\Users\ceseg\Desktop\testClip.mp4";
-            //this.clipOneFrame.openPlayer(@"C:\Users\ceseg\Desktop\testClip.mp4");
-            //this.clipTwoFrame.uiMode = "mini";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void AddRowButton_Click(object sender, EventArgs e)
         {
-            /**
-             *  KNOWN BUG:
-             *  ADDING CONTROLS CAUSES THE LAST ROW'S HEIGHT TO SLOWLY GET LARGER AND LARGER
-             *
-             */
             Control[] controls = new Control[2];
             controls[0] = new TextBox { Text = "", Height = 25, Width = 672, Anchor = AnchorStyles.Left, AutoSize = true };
             controls[1] = new CheckBox { Anchor = AnchorStyles.Left, AutoSize = true };
@@ -64,7 +52,7 @@ namespace ProjectEcho
         }
 
         // minus rows button click
-        private void button2_Click(object sender, EventArgs e)
+        private void RemoveRowButton_Click(object sender, EventArgs e)
         {
             Console.WriteLine("CLARE:: Number of Controls: " + tableLayoutPanel1.Controls.Count);
             Console.WriteLine("CLARE:: Number of ROWSs: " + tableLayoutPanel1.RowCount);
@@ -95,21 +83,22 @@ namespace ProjectEcho
             }
         }
 
-        private async void FirstUploadButton_Click(object sender, EventArgs e)
+        private void FirstUploadButton_Click(object sender, EventArgs e)
         {
             firstVideoPath = OpenFile();
-           // PlayFile(path);
+
         }
 
         private String OpenFile()
         {
-            //String strPath = "";
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.CheckFileExists = true;
-            openFileDialog.AddExtension = true;
-            openFileDialog.Multiselect = false;
-            openFileDialog.Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                CheckFileExists = true,
+                AddExtension = true,
+                Multiselect = false,
+                Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            };
 
             String path = "";
 
@@ -118,13 +107,13 @@ namespace ProjectEcho
                 foreach (string fileName in openFileDialog.FileNames)
                 {
                     path = Path.GetFullPath(fileName);
-                    //await analyzeVideoAsync(path);
+                    AnalyzeVideoAsync(path);
                 }
             }
             return path;
         }
 
-        private async Task analyzeVideoAsync(String path)
+        private async Task AnalyzeVideoAsync(String path)
         {
             //Windows.Storage.StorageFolder storageFolder =
             //Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -142,15 +131,11 @@ namespace ProjectEcho
                 Process.Start(path);
             } catch (Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
             
             //clipOneFrame.URL = path;
             //clipOneFrame.Ctlcontrols.play();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
         }
 
         private void TaskTwoUserControl_Load(object sender, EventArgs e)
@@ -158,7 +143,7 @@ namespace ProjectEcho
             richTextBox1.Text = Properties.Settings.Default.t2notes; //load last saved notes
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {
             //save notes as they type
             Properties.Settings.Default.t2notes = richTextBox1.Text;

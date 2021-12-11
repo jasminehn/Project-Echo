@@ -772,7 +772,7 @@ namespace ProjectEcho
             this.uploadButton1A.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1A.TabIndex = 17;
             this.uploadButton1A.UseVisualStyleBackColor = true;
-            this.uploadButton1A.Click += new System.EventHandler(this.uploadButton1A_Click);
+            this.uploadButton1A.Click += new System.EventHandler(this.UploadButton1A_Click);
             // 
             // label17
             // 
@@ -1327,7 +1327,7 @@ namespace ProjectEcho
             this.uploadButton1B.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1B.TabIndex = 17;
             this.uploadButton1B.UseVisualStyleBackColor = true;
-            this.uploadButton1B.Click += new System.EventHandler(this.uploadButton1B_Click);
+            this.uploadButton1B.Click += new System.EventHandler(this.UploadButton1B_Click);
             // 
             // label81
             // 
@@ -1870,7 +1870,7 @@ namespace ProjectEcho
             this.uploadButton1C.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1C.TabIndex = 17;
             this.uploadButton1C.UseVisualStyleBackColor = true;
-            this.uploadButton1C.Click += new System.EventHandler(this.uploadButton1C_Click);
+            this.uploadButton1C.Click += new System.EventHandler(this.UploadButton1C_Click);
             // 
             // label93
             // 
@@ -2957,7 +2957,7 @@ namespace ProjectEcho
             this.uploadButton1E.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1E.TabIndex = 17;
             this.uploadButton1E.UseVisualStyleBackColor = true;
-            this.uploadButton1E.Click += new System.EventHandler(this.uploadButton1E_Click);
+            this.uploadButton1E.Click += new System.EventHandler(this.UploadButton1E_Click);
             // 
             // label117
             // 
