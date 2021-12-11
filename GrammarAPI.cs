@@ -26,6 +26,10 @@ namespace ProjectEcho
         private string wordsFound = "FOUND: ";
         private string wordsMissing = "MISSING: ";
 
+        public static int spellingErrorCount = 0;
+        public static int grammarErrorCount = 0;
+        public static int styleErrorCount = 0;
+
         public static List<string> glossaryWordList = new List<string>();
 
         public static async Task CallAPI(String filePath)
@@ -88,6 +92,10 @@ namespace ProjectEcho
         {
             reportOutput = ""; //reset report output each time it's called
             errorCount = 0; //reset error count
+            spellingErrorCount = 0;
+            grammarErrorCount = 0;
+            styleErrorCount = 0;
+
             await CallAPI(path);
         }
 
@@ -122,8 +130,27 @@ namespace ProjectEcho
                 foreach(var i in v.matches)
                 {
                     errorCount = errorCount + 1;
+                    string errorID = i.rule.category.id;
 
-                    grammarReport = "ERROR #" + errorCount + "\r\n Sentence: " + i.sentence + "\r\n Message: " + i.message + "\r\n Location: " + i.offset.ToString() + " characters \r\n Replacements: " + i.replacements + "\r\n";
+                    grammarReport = "ERROR #" + errorCount + "\r\n Sentence: " + i.sentence + "\r\n Message: " + i.message + "\r\n Location: " + i.offset.ToString() + " characters \r\n Replacements: " + i.replacements + "\r\n" + "_____________________________" + "\r\n";
+                    Console.WriteLine("ERROR #" + errorCount + "   error type:" + errorID);
+                    
+                    if (errorID == "TYPOS")
+                    {
+                        spellingErrorCount = spellingErrorCount + 1;
+                    }
+                    else if(new[] { "GRAMMAR", "CASING", "PUNCTUATION" }.Contains(errorID))
+                    {
+                        grammarErrorCount = grammarErrorCount + 1;
+                    }
+                    else
+                    {
+                        styleErrorCount = styleErrorCount + 1;
+                    }
+
+                    Console.WriteLine("spelling error count: "+ spellingErrorCount);
+                    Console.WriteLine("grammar error count: " + grammarErrorCount);
+                    Console.WriteLine("style error count: " + styleErrorCount);
                     reportList.Add(grammarReport);
                 }
 
