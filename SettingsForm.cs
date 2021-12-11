@@ -75,104 +75,40 @@ namespace ProjectEcho
 
         private void switchButton_Click(object sender, EventArgs e)
         {
-            Color currback = this.BackColor;
-            Color currfont = this.ForeColor;
-
             //Checks darkmode toggle
             if (switchButton.Checked) //ON
-            { 
+            {
                 backgroundColor = ColorTranslator.FromHtml("#121113");
                 backgroundMain = ColorTranslator.FromHtml("#0A070E");
-                fontColor = Color.White;
-
-                if(currback == Color.White)
-                {
-                    BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //settings menu changes
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //Changes color for slider
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    //Changes color for button
-                    applyButton.BackColor = backgroundColor;
-
-                    //main form changes 
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
-                }
-                else
-                {
-                    BackColor = currback;
-                    ForeColor = currfont;
-
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    applyButton.BackColor = backgroundColor;
-
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
-                }
+                fontColor = Color.White;                
             }
             else //OFF
             {
                 backgroundColor = Color.White;
-                backgroundMain = Color.White;
-                fontColor = Color.Black;
-
-                if (currback == ColorTranslator.FromHtml("#121113"))
-                {
-                    BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //settings menu changes
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //Changes color for slider
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    //Changes color for button
-                    applyButton.BackColor = backgroundColor;
-
-                    //main form changes 
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
-                }
-                else
-                {
-                    BackColor = currback;
-                    ForeColor = currfont;
-
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    applyButton.BackColor = backgroundColor;
-
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
-                }
+                backgroundMain = SystemColors.Control;
+                fontColor = Color.Black;                
             }
+
+            //settings menu changes
+            BackColor = backgroundColor;
+            panel1.BackColor = backgroundColor;
+            ForeColor = fontColor; 
+            
+            //Changes color for slider
+            textsizeAdjust.BackColor = backgroundColor;
+            textsizeAdjust.ForeColor = fontColor;
+            
+            //Changes color for button
+            applyButton.BackColor = backgroundColor;
+
+            //main form changes 
+            mainForm.BackColor = backgroundMain;
+            mainForm.mainMenuPanel.BackColor = backgroundColor;
+            mainForm.mainPanel.BackColor = backgroundColor;
+
+            //task 1 changes
+            taskOne.tabPage1.BackColor = backgroundColor;
+            taskOne.tabPage1.ForeColor = fontColor;
         }
 
         private void boldnessToggle_CheckedChanged(object sender, EventArgs e)
