@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace ProjectEcho
 {
@@ -124,13 +125,43 @@ namespace ProjectEcho
             formatCL.ClearSelected(); //clears all format checker boxes
             grammarCL.ClearSelected(); //clears all grammar checker boxes
 
+            //progress bar stuff
+            List<string> flist = new List<string>();
+            List<string> glist = new List<string>();
+            List<string> clist = new List<string>();
+            for (int i = 0; i < 100; i++)
+            {
+                flist.Add(i.ToString());
+                glist.Add(i.ToString());
+                clist.Add(i.ToString());
+            }
+            var fprogress = new Progress<ProgressInformation>();
+            fprogress.ProgressChanged += (o, report) =>
+            {
+                formatProgressBar.Value = report.PercentComplete;
+                formatProgressBar.Update();
+            };
+            var gprogress = new Progress<ProgressInformation>();
+            gprogress.ProgressChanged += (o, report) =>
+            {
+                grammarProgressBar.Value = report.PercentComplete;
+                grammarProgressBar.Update();
+            };
+            var cprogress = new Progress<ProgressInformation>();
+            cprogress.ProgressChanged += (o, report) =>
+            {
+                contentProgressBar.Value = report.PercentComplete;
+                contentProgressBar.Update();
+            };
+
             String path = dh.uploadDocument(taskNum, taskPart);
 
             //uploadInfo.Text = "well im here?";
             if(path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
+                await processData(flist, fprogress); //PROGRESS BAR
+
                 uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
-                //FormatChecker fc = new FormatChecker(); //moved to line 17 to avoid an RPC server error (happens when it attempts to open Word while it's already running)
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
 
                 for(int i = 0; i < formatCL.Items.Count; i++)
@@ -152,11 +183,13 @@ namespace ProjectEcho
                 l7.Text = fc.pageNumFB;
             }
 
+            await processData(glist, gprogress);//PROGRES SBAR
+
             await GrammarAPI.returnReport(path); //execute API call
 
-            string report = GrammarAPI.reportOutput;
+            string grammarReport = GrammarAPI.reportOutput;
 
-            grammarErrorsTextBox.Text = report;
+            grammarErrorsTextBox.Text = grammarReport;
 
             if(GrammarAPI.spellingErrorCount == 0)
             {
@@ -170,6 +203,8 @@ namespace ProjectEcho
             {
                 grammarCL.SetItemChecked(2, true);
             }
+
+            await processData(clist, cprogress);//PROGRESS BAR
 
             missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
             if(missingWordsListBox.Items.Count == 0)
@@ -190,6 +225,20 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        
+        private Task processData(List<string> list, IProgress<ProgressInformation> progress)
+        {
+            int index = 1;
+            int totalProcess = list.Count;
+            var progressInfo = new ProgressInformation();
+            return Task.Run(() =>
+            {
+                for (int i = 0; i < totalProcess; i++)
+                {
+                    progressInfo.PercentComplete = index++ * 100 / totalProcess;
+                    progress.Report(progressInfo);
+                    System.Threading.Thread.Sleep(10); //used to siulate length of operation
+                }
+            });
+        }
     }
 }
