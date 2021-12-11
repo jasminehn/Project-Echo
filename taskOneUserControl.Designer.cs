@@ -51,7 +51,7 @@ namespace ProjectEcho
             this.fontTypeLabel1A = new System.Windows.Forms.Label();
             this.marginsLabel1A = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.t1paCL = new System.Windows.Forms.CheckedListBox();
+            this.formatCheckList1A = new System.Windows.Forms.CheckedListBox();
             this.label23 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace ProjectEcho
             this.label40 = new System.Windows.Forms.Label();
             this.contentCheckList1A = new System.Windows.Forms.CheckedListBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.grammarBox = new System.Windows.Forms.TextBox();
+            this.grammarErrors1A = new System.Windows.Forms.TextBox();
             this.foundGrammarIssuesLabel = new System.Windows.Forms.Label();
             this.grammarErrorsBox = new System.Windows.Forms.ListBox();
             this.grammarCheckList1A = new System.Windows.Forms.CheckedListBox();
@@ -70,7 +70,7 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.formatProgressBar = new System.Windows.Forms.ProgressBar();
             this.label21 = new System.Windows.Forms.Label();
-            this.uploadInfo1 = new System.Windows.Forms.Label();
+            this.uploadInfo1A = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.contentProgressBar = new System.Windows.Forms.ProgressBar();
@@ -103,7 +103,7 @@ namespace ProjectEcho
             this.label35 = new System.Windows.Forms.Label();
             this.missingWordList1B = new System.Windows.Forms.ListBox();
             this.label78 = new System.Windows.Forms.Label();
-            this.contentCheckListB = new System.Windows.Forms.CheckedListBox();
+            this.contentCheckList1B = new System.Windows.Forms.CheckedListBox();
             this.panel32 = new System.Windows.Forms.Panel();
             this.grammarErrors1B = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
@@ -147,7 +147,7 @@ namespace ProjectEcho
             this.label47 = new System.Windows.Forms.Label();
             this.missingWordList1C = new System.Windows.Forms.ListBox();
             this.label83 = new System.Windows.Forms.Label();
-            this.contentCheckListC = new System.Windows.Forms.CheckedListBox();
+            this.contentCheckList1C = new System.Windows.Forms.CheckedListBox();
             this.panel35 = new System.Windows.Forms.Panel();
             this.grammarErrors1C = new System.Windows.Forms.TextBox();
             this.label91 = new System.Windows.Forms.Label();
@@ -191,7 +191,7 @@ namespace ProjectEcho
             this.label59 = new System.Windows.Forms.Label();
             this.missingWordList1D = new System.Windows.Forms.ListBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.contentCheckListD = new System.Windows.Forms.CheckedListBox();
+            this.contentCheckList1D = new System.Windows.Forms.CheckedListBox();
             this.panel38 = new System.Windows.Forms.Panel();
             this.grammarErrors1D = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
@@ -235,7 +235,7 @@ namespace ProjectEcho
             this.label70 = new System.Windows.Forms.Label();
             this.missingWordList1E = new System.Windows.Forms.ListBox();
             this.label107 = new System.Windows.Forms.Label();
-            this.contentCheckListE = new System.Windows.Forms.CheckedListBox();
+            this.contentCheckList1E = new System.Windows.Forms.CheckedListBox();
             this.panel41 = new System.Windows.Forms.Panel();
             this.grammarErrors1E = new System.Windows.Forms.TextBox();
             this.label115 = new System.Windows.Forms.Label();
@@ -436,7 +436,7 @@ namespace ProjectEcho
             this.panel30.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel30.Controls.Add(this.panel31);
             this.panel30.Controls.Add(this.label14);
-            this.panel30.Controls.Add(this.t1paCL);
+            this.panel30.Controls.Add(this.formatCheckList1A);
             this.panel30.Controls.Add(this.label23);
             this.panel30.Location = new System.Drawing.Point(20, 15);
             this.panel30.Name = "panel30";
@@ -548,24 +548,24 @@ namespace ProjectEcho
             this.label14.TabIndex = 18;
             this.label14.Text = "FORMAT AND STYLE";
             // 
-            // t1paCL
+            // formatCheckList1A
             // 
-            this.t1paCL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.t1paCL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.t1paCL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.t1paCL.Enabled = false;
-            this.t1paCL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t1paCL.FormattingEnabled = true;
-            this.t1paCL.Items.AddRange(new object[] {
+            this.formatCheckList1A.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.formatCheckList1A.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.formatCheckList1A.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.formatCheckList1A.Enabled = false;
+            this.formatCheckList1A.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatCheckList1A.FormattingEnabled = true;
+            this.formatCheckList1A.Items.AddRange(new object[] {
             "1\" Margins on All Sides",
             "Arial Font",
             "Size 11 Font",
             "4 pages or less"});
-            this.t1paCL.Location = new System.Drawing.Point(20, 51);
-            this.t1paCL.MinimumSize = new System.Drawing.Size(180, 72);
-            this.t1paCL.Name = "t1paCL";
-            this.t1paCL.Size = new System.Drawing.Size(180, 72);
-            this.t1paCL.TabIndex = 14;
+            this.formatCheckList1A.Location = new System.Drawing.Point(20, 51);
+            this.formatCheckList1A.MinimumSize = new System.Drawing.Size(180, 72);
+            this.formatCheckList1A.Name = "formatCheckList1A";
+            this.formatCheckList1A.Size = new System.Drawing.Size(180, 72);
+            this.formatCheckList1A.TabIndex = 14;
             // 
             // label23
             // 
@@ -593,7 +593,7 @@ namespace ProjectEcho
             this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(10, 150);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(216, 19);
+            this.label28.Size = new System.Drawing.Size(273, 19);
             this.label28.TabIndex = 35;
             this.label28.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -637,7 +637,7 @@ namespace ProjectEcho
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Controls.Add(this.grammarBox);
+            this.panel10.Controls.Add(this.grammarErrors1A);
             this.panel10.Controls.Add(this.foundGrammarIssuesLabel);
             this.panel10.Controls.Add(this.grammarErrorsBox);
             this.panel10.Controls.Add(this.grammarCheckList1A);
@@ -647,16 +647,16 @@ namespace ProjectEcho
             this.panel10.Size = new System.Drawing.Size(292, 516);
             this.panel10.TabIndex = 39;
             // 
-            // grammarBox
+            // grammarErrors1A
             // 
-            this.grammarBox.AcceptsReturn = true;
-            this.grammarBox.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarBox.Location = new System.Drawing.Point(14, 181);
-            this.grammarBox.Multiline = true;
-            this.grammarBox.Name = "grammarBox";
-            this.grammarBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarBox.Size = new System.Drawing.Size(266, 313);
-            this.grammarBox.TabIndex = 38;
+            this.grammarErrors1A.AcceptsReturn = true;
+            this.grammarErrors1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarErrors1A.Location = new System.Drawing.Point(14, 181);
+            this.grammarErrors1A.Multiline = true;
+            this.grammarErrors1A.Name = "grammarErrors1A";
+            this.grammarErrors1A.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grammarErrors1A.Size = new System.Drawing.Size(266, 313);
+            this.grammarErrors1A.TabIndex = 38;
             // 
             // foundGrammarIssuesLabel
             // 
@@ -753,7 +753,7 @@ namespace ProjectEcho
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.formatProgressBar);
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.uploadInfo1);
+            this.panel1.Controls.Add(this.uploadInfo1A);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.contentProgressBar);
@@ -786,15 +786,15 @@ namespace ProjectEcho
             this.label21.TabIndex = 31;
             this.label21.Text = "ANALYZING...";
             // 
-            // uploadInfo1
+            // uploadInfo1A
             // 
-            this.uploadInfo1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.uploadInfo1.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadInfo1.Location = new System.Drawing.Point(12, 218);
-            this.uploadInfo1.Name = "uploadInfo1";
-            this.uploadInfo1.Size = new System.Drawing.Size(254, 53);
-            this.uploadInfo1.TabIndex = 19;
-            this.uploadInfo1.Text = "       ";
+            this.uploadInfo1A.BackColor = System.Drawing.Color.MidnightBlue;
+            this.uploadInfo1A.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo1A.Location = new System.Drawing.Point(12, 218);
+            this.uploadInfo1A.Name = "uploadInfo1A";
+            this.uploadInfo1A.Size = new System.Drawing.Size(254, 53);
+            this.uploadInfo1A.TabIndex = 19;
+            this.uploadInfo1A.Text = "       ";
             // 
             // label22
             // 
@@ -1105,7 +1105,7 @@ namespace ProjectEcho
             this.panel14.Controls.Add(this.label35);
             this.panel14.Controls.Add(this.missingWordList1B);
             this.panel14.Controls.Add(this.label78);
-            this.panel14.Controls.Add(this.contentCheckListB);
+            this.panel14.Controls.Add(this.contentCheckList1B);
             this.panel14.Location = new System.Drawing.Point(676, 15);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(292, 516);
@@ -1116,7 +1116,7 @@ namespace ProjectEcho
             this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(10, 150);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(209, 20);
+            this.label35.Size = new System.Drawing.Size(273, 20);
             this.label35.TabIndex = 35;
             this.label35.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1141,21 +1141,21 @@ namespace ProjectEcho
             this.label78.TabIndex = 38;
             this.label78.Text = "CONTENT";
             // 
-            // contentCheckListB
+            // contentCheckList1B
             // 
-            this.contentCheckListB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.contentCheckListB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.contentCheckListB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contentCheckListB.Enabled = false;
-            this.contentCheckListB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contentCheckListB.FormattingEnabled = true;
-            this.contentCheckListB.Items.AddRange(new object[] {
+            this.contentCheckList1B.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentCheckList1B.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contentCheckList1B.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contentCheckList1B.Enabled = false;
+            this.contentCheckList1B.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentCheckList1B.FormattingEnabled = true;
+            this.contentCheckList1B.Items.AddRange(new object[] {
             "Contains all required words"});
-            this.contentCheckListB.Location = new System.Drawing.Point(28, 51);
-            this.contentCheckListB.MinimumSize = new System.Drawing.Size(180, 72);
-            this.contentCheckListB.Name = "contentCheckListB";
-            this.contentCheckListB.Size = new System.Drawing.Size(209, 72);
-            this.contentCheckListB.TabIndex = 37;
+            this.contentCheckList1B.Location = new System.Drawing.Point(28, 51);
+            this.contentCheckList1B.MinimumSize = new System.Drawing.Size(180, 72);
+            this.contentCheckList1B.Name = "contentCheckList1B";
+            this.contentCheckList1B.Size = new System.Drawing.Size(209, 72);
+            this.contentCheckList1B.TabIndex = 37;
             // 
             // panel32
             // 
@@ -1605,7 +1605,7 @@ namespace ProjectEcho
             this.panel18.Controls.Add(this.label47);
             this.panel18.Controls.Add(this.missingWordList1C);
             this.panel18.Controls.Add(this.label83);
-            this.panel18.Controls.Add(this.contentCheckListC);
+            this.panel18.Controls.Add(this.contentCheckList1C);
             this.panel18.Location = new System.Drawing.Point(676, 15);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(292, 516);
@@ -1616,7 +1616,7 @@ namespace ProjectEcho
             this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(10, 150);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(215, 20);
+            this.label47.Size = new System.Drawing.Size(273, 20);
             this.label47.TabIndex = 35;
             this.label47.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1641,21 +1641,21 @@ namespace ProjectEcho
             this.label83.TabIndex = 38;
             this.label83.Text = "CONTENT";
             // 
-            // contentCheckListC
+            // contentCheckList1C
             // 
-            this.contentCheckListC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.contentCheckListC.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.contentCheckListC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contentCheckListC.Enabled = false;
-            this.contentCheckListC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contentCheckListC.FormattingEnabled = true;
-            this.contentCheckListC.Items.AddRange(new object[] {
+            this.contentCheckList1C.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentCheckList1C.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contentCheckList1C.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contentCheckList1C.Enabled = false;
+            this.contentCheckList1C.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentCheckList1C.FormattingEnabled = true;
+            this.contentCheckList1C.Items.AddRange(new object[] {
             "Contains all required words"});
-            this.contentCheckListC.Location = new System.Drawing.Point(28, 51);
-            this.contentCheckListC.MinimumSize = new System.Drawing.Size(180, 72);
-            this.contentCheckListC.Name = "contentCheckListC";
-            this.contentCheckListC.Size = new System.Drawing.Size(209, 72);
-            this.contentCheckListC.TabIndex = 37;
+            this.contentCheckList1C.Location = new System.Drawing.Point(28, 51);
+            this.contentCheckList1C.MinimumSize = new System.Drawing.Size(180, 72);
+            this.contentCheckList1C.Name = "contentCheckList1C";
+            this.contentCheckList1C.Size = new System.Drawing.Size(209, 72);
+            this.contentCheckList1C.TabIndex = 37;
             // 
             // panel35
             // 
@@ -2105,7 +2105,7 @@ namespace ProjectEcho
             this.panel22.Controls.Add(this.label59);
             this.panel22.Controls.Add(this.missingWordList1D);
             this.panel22.Controls.Add(this.label95);
-            this.panel22.Controls.Add(this.contentCheckListD);
+            this.panel22.Controls.Add(this.contentCheckList1D);
             this.panel22.Location = new System.Drawing.Point(676, 15);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(292, 516);
@@ -2116,7 +2116,7 @@ namespace ProjectEcho
             this.label59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(10, 150);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(216, 20);
+            this.label59.Size = new System.Drawing.Size(273, 20);
             this.label59.TabIndex = 35;
             this.label59.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -2141,21 +2141,21 @@ namespace ProjectEcho
             this.label95.TabIndex = 38;
             this.label95.Text = "CONTENT";
             // 
-            // contentCheckListD
+            // contentCheckList1D
             // 
-            this.contentCheckListD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.contentCheckListD.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.contentCheckListD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contentCheckListD.Enabled = false;
-            this.contentCheckListD.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contentCheckListD.FormattingEnabled = true;
-            this.contentCheckListD.Items.AddRange(new object[] {
+            this.contentCheckList1D.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentCheckList1D.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contentCheckList1D.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contentCheckList1D.Enabled = false;
+            this.contentCheckList1D.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentCheckList1D.FormattingEnabled = true;
+            this.contentCheckList1D.Items.AddRange(new object[] {
             "Contains all required words"});
-            this.contentCheckListD.Location = new System.Drawing.Point(28, 51);
-            this.contentCheckListD.MinimumSize = new System.Drawing.Size(180, 72);
-            this.contentCheckListD.Name = "contentCheckListD";
-            this.contentCheckListD.Size = new System.Drawing.Size(209, 72);
-            this.contentCheckListD.TabIndex = 37;
+            this.contentCheckList1D.Location = new System.Drawing.Point(28, 51);
+            this.contentCheckList1D.MinimumSize = new System.Drawing.Size(180, 72);
+            this.contentCheckList1D.Name = "contentCheckList1D";
+            this.contentCheckList1D.Size = new System.Drawing.Size(209, 72);
+            this.contentCheckList1D.TabIndex = 37;
             // 
             // panel38
             // 
@@ -2606,7 +2606,7 @@ namespace ProjectEcho
             this.panel26.Controls.Add(this.label70);
             this.panel26.Controls.Add(this.missingWordList1E);
             this.panel26.Controls.Add(this.label107);
-            this.panel26.Controls.Add(this.contentCheckListE);
+            this.panel26.Controls.Add(this.contentCheckList1E);
             this.panel26.Location = new System.Drawing.Point(676, 15);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(292, 516);
@@ -2617,7 +2617,7 @@ namespace ProjectEcho
             this.label70.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(10, 150);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(207, 20);
+            this.label70.Size = new System.Drawing.Size(273, 20);
             this.label70.TabIndex = 35;
             this.label70.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -2642,21 +2642,21 @@ namespace ProjectEcho
             this.label107.TabIndex = 38;
             this.label107.Text = "CONTENT";
             // 
-            // contentCheckListE
+            // contentCheckList1E
             // 
-            this.contentCheckListE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.contentCheckListE.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.contentCheckListE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contentCheckListE.Enabled = false;
-            this.contentCheckListE.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contentCheckListE.FormattingEnabled = true;
-            this.contentCheckListE.Items.AddRange(new object[] {
+            this.contentCheckList1E.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentCheckList1E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contentCheckList1E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contentCheckList1E.Enabled = false;
+            this.contentCheckList1E.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentCheckList1E.FormattingEnabled = true;
+            this.contentCheckList1E.Items.AddRange(new object[] {
             "Contains all required words"});
-            this.contentCheckListE.Location = new System.Drawing.Point(28, 51);
-            this.contentCheckListE.MinimumSize = new System.Drawing.Size(180, 72);
-            this.contentCheckListE.Name = "contentCheckListE";
-            this.contentCheckListE.Size = new System.Drawing.Size(209, 72);
-            this.contentCheckListE.TabIndex = 37;
+            this.contentCheckList1E.Location = new System.Drawing.Point(28, 51);
+            this.contentCheckList1E.MinimumSize = new System.Drawing.Size(180, 72);
+            this.contentCheckList1E.Name = "contentCheckList1E";
+            this.contentCheckList1E.Size = new System.Drawing.Size(209, 72);
+            this.contentCheckList1E.TabIndex = 37;
             // 
             // panel41
             // 
@@ -3033,7 +3033,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label fontTypeLabel1A;
         private System.Windows.Forms.Label marginsLabel1A;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckedListBox t1paCL;
+        private System.Windows.Forms.CheckedListBox formatCheckList1A;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label28;
@@ -3041,7 +3041,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.CheckedListBox contentCheckList1A;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox grammarBox;
+        private System.Windows.Forms.TextBox grammarErrors1A;
         private System.Windows.Forms.Label foundGrammarIssuesLabel;
         private System.Windows.Forms.ListBox grammarErrorsBox;
         private System.Windows.Forms.CheckedListBox grammarCheckList1A;
@@ -3052,7 +3052,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ProgressBar formatProgressBar;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label uploadInfo1;
+        private System.Windows.Forms.Label uploadInfo1A;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ProgressBar contentProgressBar;
@@ -3085,7 +3085,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ListBox missingWordList1B;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.CheckedListBox contentCheckListB;
+        private System.Windows.Forms.CheckedListBox contentCheckList1B;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.TextBox grammarErrors1B;
         private System.Windows.Forms.Label label79;
@@ -3129,7 +3129,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.ListBox missingWordList1C;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.CheckedListBox contentCheckListC;
+        private System.Windows.Forms.CheckedListBox contentCheckList1C;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.TextBox grammarErrors1C;
         private System.Windows.Forms.Label label91;
@@ -3173,7 +3173,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.ListBox missingWordList1D;
         private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.CheckedListBox contentCheckListD;
+        private System.Windows.Forms.CheckedListBox contentCheckList1D;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.TextBox grammarErrors1D;
         private System.Windows.Forms.Label label103;
@@ -3217,7 +3217,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.ListBox missingWordList1E;
         private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.CheckedListBox contentCheckListE;
+        private System.Windows.Forms.CheckedListBox contentCheckList1E;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.TextBox grammarErrors1E;
         private System.Windows.Forms.Label label115;

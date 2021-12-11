@@ -35,9 +35,9 @@ namespace ProjectEcho
         public static async Task CallAPI(String filePath)
         {
             GrammarAPI api = new GrammarAPI();
-            var first = "";
-            var second = " ";
-            var third = " ";
+            var firstDocSegment = "";
+            var secondDocSegment = " ";
+            var thirdDocSegment = " ";
             string mytext = OpenWordprocessingDocumentReadonly(filePath);
             api.glossaryCheck(mytext);
             Console.WriteLine("****" + mytext);
@@ -48,37 +48,37 @@ namespace ProjectEcho
             if(len > 20000)
             {
                 subLen = len - 20000;
-                first = mytext.Substring(0, 10000);
-                second = mytext.Substring(10000, 10000);
-                third = mytext.Substring(20000, subLen);
-                Console.WriteLine("first " + first);
-                Console.WriteLine(" second " + second);
-                Console.WriteLine(" third " + third);
+                firstDocSegment = mytext.Substring(0, 10000);
+                secondDocSegment = mytext.Substring(10000, 10000);
+                thirdDocSegment = mytext.Substring(20000, subLen);
+                Console.WriteLine("first " + firstDocSegment);
+                Console.WriteLine(" second " + secondDocSegment);
+                Console.WriteLine(" third " + thirdDocSegment);
             }
             else if(len > 10000)
             {
                 subLen = len - 10000;
-                first = mytext.Substring(0, 10000);
-                second = mytext.Substring(10000, subLen);
-                Console.WriteLine("first " + first + " second" + second);
+                firstDocSegment = mytext.Substring(0, 10000);
+                secondDocSegment = mytext.Substring(10000, subLen);
+                Console.WriteLine("first " + firstDocSegment + " second" + secondDocSegment);
             }
             else
             {
-                first = mytext;
-                Console.WriteLine("first " + first);
+                firstDocSegment = mytext;
+                Console.WriteLine("first " + firstDocSegment);
             }
 
             try
             {
-                await GrammarCheck(first).ConfigureAwait(false);
+                await GrammarCheck(firstDocSegment).ConfigureAwait(false);
                 if(mytext.Length > 10000)
                 {
-                    await GrammarCheck(second).ConfigureAwait(false);
+                    await GrammarCheck(secondDocSegment).ConfigureAwait(false);
                     if(mytext.Length > 20000)
                     {
                         Console.WriteLine("*** over 20,000 characters");
 
-                        await GrammarCheck(third).ConfigureAwait(false);
+                        await GrammarCheck(thirdDocSegment).ConfigureAwait(false);
                     }
                 }
             }
@@ -132,7 +132,7 @@ namespace ProjectEcho
                     errorCount = errorCount + 1;
                     string errorID = i.rule.category.id;
 
-                    grammarReport = "ERROR #" + errorCount + "\r\n Sentence: " + i.sentence + "\r\n Message: " + i.message + "\r\n Location: " + i.offset.ToString() + " characters \r\n Replacements: " + i.replacements + "\r\n" + "_____________________________" + "\r\n";
+                    grammarReport = "ERROR #" + errorCount + "\r\n\r\nSentence: " + i.sentence + "\r\n\r\nMessage: " + i.message + "\r\n\r\nLocation: " + i.offset.ToString() + " characters \r\n\r\nReplacements: " + i.replacements + "\r\n" + "_____________________________" + "\r\n\r\n";
                     Console.WriteLine("ERROR #" + errorCount + "   error type:" + errorID);
                     
                     if (errorID == "TYPOS")
@@ -219,7 +219,7 @@ namespace ProjectEcho
             {
                 if(documentString.Contains(glossary[i]))
                 {
-                    Console.WriteLine("Found word");
+                    //Console.WriteLine("Found word");
 
                     wordsFound = wordsFound + (" " + glossary[i]) + "\n";
                 }
@@ -238,7 +238,7 @@ namespace ProjectEcho
             {
                 foreach(var i in missingWords)
                 {
-                    Console.WriteLine(i);
+                    //Console.WriteLine(i);
                 }
             }
 
