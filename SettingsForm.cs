@@ -21,48 +21,47 @@ namespace ProjectEcho
 
         //button colors
         private Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
-
         private Color buttonOffColor = SystemColors.ControlDark;
-
         //light mode colors
         private Color lightBG = Color.WhiteSmoke;
-
         private Color lightText = Color.Black;
-
         //dark mode colors
         private Color darkBG = ColorTranslator.FromHtml("#121113");
-
         private Color darkText = Color.WhiteSmoke;
-
+        //creates vars for repeated use
         private Color backgroundColor;
         private Color backgroundMain;
+        private Color fontColor;
 
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
-        //MainForm main = new MainForm();
-
         MainForm mainForm;
         HelpForm helpForm;
+        TaskOneUserControl taskOne;
+        TaskTwoUserControl taskTwo;
+        TaskThreeUserControl taskThree;
 
-        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput)
+        public SettingsForm(MainForm mainFormInput, HelpForm helpFormInput, TaskOneUserControl taskOneInput, TaskTwoUserControl taskTwoInput, TaskThreeUserControl taskThreeInput)
         {
             InitializeComponent();
             mainForm = mainFormInput;
             helpForm = helpFormInput;
+            taskOne = taskOneInput;
+            taskTwo = taskTwoInput;
+            taskThree = taskThreeInput;
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             //Apply saved display settings upon loading
-
             boldnessToggle.Checked = Properties.Settings.Default.boldness;
             switchButton.Checked = Properties.Settings.Default.darkmode;
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
-            //Console.WriteLine("offset:"+textSizeOffset); //print offsetat start for texting
             textsizeAdjust.Value = Properties.Settings.Default.textsize; //sets slider to saved value
 
             backgroundColor = Properties.Settings.Default.bgcolor;
             backgroundMain = Properties.Settings.Default.bgmain;
+            fontColor = Properties.Settings.Default.fcolor;
 
             var controls = settingsHandler.getAll(this, typeof(Label));
             foreach(Control c in controls)
@@ -77,86 +76,39 @@ namespace ProjectEcho
         private void switchButton_Click(object sender, EventArgs e)
         {
             //Checks darkmode toggle
-            if(switchButton.Checked) //ON
+            if (switchButton.Checked) //ON
             {
-                /*
-                BackColor = darkBG;
-                panel1.BackColor = darkBG;
-                ForeColor = Color.White; //changes all text color
-
-                //Changes color for slider
-                textsizeAdjust.BackColor = Color.Black;
-                textsizeAdjust.ForeColor = Color.White;
-
-                //Changes color for button
-                applyButton.BackColor = Color.Black;
-
-                //main form changes 
-                mainForm.BackColor = darkBG;
-                mainForm.mainMenuPanel.BackColor = darkBG;
-                mainForm.mainPanel.BackColor = darkBG;
-                */
-
-
                 backgroundColor = ColorTranslator.FromHtml("#121113");
                 backgroundMain = ColorTranslator.FromHtml("#0A070E");
-
-                BackColor = backgroundColor;
-                panel1.BackColor = backgroundColor;
-                ForeColor = Color.White; //changes all text color
-
-                //Changes color for slider
-                textsizeAdjust.BackColor = backgroundColor;
-                textsizeAdjust.ForeColor = Color.White;
-
-                //Changes color for button
-                applyButton.BackColor = backgroundColor;
-
-                //main form changes 
-                mainForm.BackColor = backgroundMain;
-                mainForm.mainMenuPanel.BackColor = backgroundColor;
-                mainForm.mainPanel.BackColor = backgroundColor;
+                fontColor = Color.White;                
             }
             else //OFF
             {
-                /*
-
-                BackColor = lightBG;
-                panel1.BackColor = lightBG;
-                ForeColor = Color.Black; //changes all text color
-
-                //Changes color for slider
-                textsizeAdjust.BackColor = Color.White;
-                textsizeAdjust.ForeColor = Color.Black;
-
-                //Changes color for button
-                applyButton.BackColor = Color.White;
-
-                //main form changes 
-                mainForm.BackColor = lightBG;
-                mainForm.mainMenuPanel.BackColor = lightBG;
-                mainForm.mainPanel.BackColor = lightBG;
-                */
-
                 backgroundColor = Color.White;
                 backgroundMain = SystemColors.Control;
-
-                BackColor = backgroundColor;
-                panel1.BackColor = backgroundColor;
-                ForeColor = Color.Black; //changes all text color
-
-                //Changes color for slider
-                textsizeAdjust.BackColor = backgroundColor;
-                textsizeAdjust.ForeColor = Color.Black;
-
-                //Changes color for button
-                applyButton.BackColor = backgroundColor;
-
-                //main form changes 
-                mainForm.BackColor = backgroundMain;
-                mainForm.mainMenuPanel.BackColor = backgroundColor;
-                mainForm.mainPanel.BackColor = backgroundColor;
+                fontColor = Color.Black;                
             }
+
+            //settings menu changes
+            BackColor = backgroundColor;
+            panel1.BackColor = backgroundColor;
+            ForeColor = fontColor; 
+            
+            //Changes color for slider
+            textsizeAdjust.BackColor = backgroundColor;
+            textsizeAdjust.ForeColor = fontColor;
+            
+            //Changes color for button
+            applyButton.BackColor = backgroundColor;
+
+            //main form changes 
+            mainForm.BackColor = backgroundMain;
+            mainForm.mainMenuPanel.BackColor = backgroundColor;
+            mainForm.mainPanel.BackColor = backgroundColor;
+
+            //task 1 changes
+            taskOne.tabPage1.BackColor = backgroundColor;
+            taskOne.tabPage1.ForeColor = fontColor;
         }
 
         private void boldnessToggle_CheckedChanged(object sender, EventArgs e)
@@ -196,14 +148,12 @@ namespace ProjectEcho
                 {
                     FontFamily fam = c.Font.FontFamily;
                     float s = c.Font.Size;
-
                     c.Font = new System.Drawing.Font(fam, s, FontStyle.Regular);
                 }
                 foreach(CheckedListBox c in checkLists)
                 {
                     FontFamily fam = c.Font.FontFamily;
                     float s = c.Font.Size;
-
                     c.Font = new System.Drawing.Font(fam, s, FontStyle.Regular);
                 }
             }
@@ -232,7 +182,6 @@ namespace ProjectEcho
                     FontFamily fon = Font.FontFamily; //Sets font family
                     FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                     float adjSize = c.Font.Size + 1;
-
                     //Passes in family, style, and changes to new size
                     c.Font = new Font(fon, adjSize, sty);
                 }
@@ -241,54 +190,26 @@ namespace ProjectEcho
                     FontFamily fon = Font.FontFamily;
                     FontStyle sty = c.Font.Style;
                     float adjSize = c.Font.Size + 1;
-
                     c.Font = new System.Drawing.Font(fon, adjSize, sty);
                 }
                 prev = curr; //Sets prev to current size for next interation
             }
             else
             {
-                //If the slider is set back down to 0, it subtracts 1 instead of 0
-                if (curr == 0)
+                foreach (Control c in labels)
                 {
-                    foreach (Control c in labels)
-                    {
-                        FontFamily fon = Font.FontFamily;
-                        FontStyle sty = c.Font.Style;
-                        float adjSize = c.Font.Size - 1;
-
-                        c.Font = new Font(fon, adjSize, sty);
-                    }
-                    foreach (CheckedListBox c in checkLists)
-                    {
-                        FontFamily fon = Font.FontFamily;
-                        FontStyle sty = c.Font.Style;
-                        float adjSize = c.Font.Size - 1;
-
-                        c.Font = new System.Drawing.Font(fon, adjSize, sty);
-                    }
+                    FontFamily fon = Font.FontFamily;
+                    FontStyle sty = c.Font.Style;
+                    float adjSize = c.Font.Size - 1;
+                    c.Font = new Font(fon, adjSize, sty);
                 }
-                else
+                foreach (CheckedListBox c in checkLists)
                 {
-                    foreach (Control c in labels)
-                    {
-                        FontFamily fon = Font.FontFamily;
-                        FontStyle sty = c.Font.Style;
-                        float adjSize = c.Font.Size - 1;
-
-                        c.Font = new Font(fon, adjSize, sty);
-                    }
-                    foreach (CheckedListBox c in checkLists)
-                    {
-                        FontFamily fon = Font.FontFamily;
-                        FontStyle sty = c.Font.Style;
-                        float adjSize = c.Font.Size - 1;
-
-                        c.Font = new System.Drawing.Font(fon, adjSize, sty);
-                    }
-                    //textSizeOffset = textSizeOffset - 1; //decreases offset
+                    FontFamily fon = Font.FontFamily;
+                    FontStyle sty = c.Font.Style;
+                    float adjSize = c.Font.Size - 1;
+                    c.Font = new System.Drawing.Font(fon, adjSize, sty);
                 }
-
                 prev = curr;
             }
             textSizeOffset = textsizeAdjust.Value;

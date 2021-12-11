@@ -132,13 +132,13 @@ namespace ProjectEcho
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.rightMarginLabel1C = new System.Windows.Forms.Label();
+            this.topMarginLabel1C = new System.Windows.Forms.Label();
+            this.bottomMarginLabel1C = new System.Windows.Forms.Label();
+            this.docLengthLabel1C = new System.Windows.Forms.Label();
+            this.leftMarginLabel1C = new System.Windows.Forms.Label();
+            this.fontSizeLabel1C = new System.Windows.Forms.Label();
+            this.fontTypeLabel1C = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.formatCheckList1C = new System.Windows.Forms.CheckedListBox();
@@ -176,13 +176,13 @@ namespace ProjectEcho
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
+            this.rightMarginLabel1D = new System.Windows.Forms.Label();
+            this.topMarginLabel1D = new System.Windows.Forms.Label();
+            this.bottomMarginLabel1D = new System.Windows.Forms.Label();
+            this.docLengthLabel1D = new System.Windows.Forms.Label();
+            this.leftMarginLabel1D = new System.Windows.Forms.Label();
+            this.fontSizeLabel1D = new System.Windows.Forms.Label();
+            this.fontTypeLabel1D = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.formatCheckList1D = new System.Windows.Forms.CheckedListBox();
@@ -220,13 +220,13 @@ namespace ProjectEcho
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
+            this.rightMarginLabel1E = new System.Windows.Forms.Label();
+            this.topMarginLabel1E = new System.Windows.Forms.Label();
+            this.bottomMarginLabel1E = new System.Windows.Forms.Label();
+            this.docLengthLabel1E = new System.Windows.Forms.Label();
+            this.leftMarginLabel1E = new System.Windows.Forms.Label();
+            this.fontSizeLabel1E = new System.Windows.Forms.Label();
+            this.fontTypeLabel1E = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.formatCheckList1E = new System.Windows.Forms.CheckedListBox();
@@ -593,7 +593,7 @@ namespace ProjectEcho
             this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(10, 150);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(172, 16);
+            this.label28.Size = new System.Drawing.Size(216, 19);
             this.label28.TabIndex = 35;
             this.label28.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1082,8 +1082,7 @@ namespace ProjectEcho
             this.formatCheckList1B.Items.AddRange(new object[] {
             "1\" Margins on All Sides",
             "Arial Font",
-            "Size 11 Font",
-            "4 pages or less"});
+            "Size 11 Font"});
             this.formatCheckList1B.Location = new System.Drawing.Point(20, 51);
             this.formatCheckList1B.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList1B.Name = "formatCheckList1B";
@@ -1116,7 +1115,7 @@ namespace ProjectEcho
             this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(10, 150);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(172, 16);
+            this.label35.Size = new System.Drawing.Size(209, 20);
             this.label35.TabIndex = 35;
             this.label35.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1470,13 +1469,13 @@ namespace ProjectEcho
             // 
             this.panel17.BackColor = System.Drawing.Color.White;
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.label36);
-            this.panel17.Controls.Add(this.label37);
-            this.panel17.Controls.Add(this.label38);
-            this.panel17.Controls.Add(this.label39);
-            this.panel17.Controls.Add(this.label41);
-            this.panel17.Controls.Add(this.label42);
-            this.panel17.Controls.Add(this.label43);
+            this.panel17.Controls.Add(this.rightMarginLabel1C);
+            this.panel17.Controls.Add(this.topMarginLabel1C);
+            this.panel17.Controls.Add(this.bottomMarginLabel1C);
+            this.panel17.Controls.Add(this.docLengthLabel1C);
+            this.panel17.Controls.Add(this.leftMarginLabel1C);
+            this.panel17.Controls.Add(this.fontSizeLabel1C);
+            this.panel17.Controls.Add(this.fontTypeLabel1C);
             this.panel17.Controls.Add(this.label44);
             this.panel17.Location = new System.Drawing.Point(14, 181);
             this.panel17.Margin = new System.Windows.Forms.Padding(2);
@@ -1484,72 +1483,72 @@ namespace ProjectEcho
             this.panel17.Size = new System.Drawing.Size(265, 312);
             this.panel17.TabIndex = 50;
             // 
-            // label36
+            // rightMarginLabel1C
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(11, 70);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(95, 17);
-            this.label36.TabIndex = 49;
-            this.label36.Text = "Right margin:";
+            this.rightMarginLabel1C.AutoSize = true;
+            this.rightMarginLabel1C.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightMarginLabel1C.Location = new System.Drawing.Point(11, 70);
+            this.rightMarginLabel1C.Name = "rightMarginLabel1C";
+            this.rightMarginLabel1C.Size = new System.Drawing.Size(95, 17);
+            this.rightMarginLabel1C.TabIndex = 49;
+            this.rightMarginLabel1C.Text = "Right margin:";
             // 
-            // label37
+            // topMarginLabel1C
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(11, 103);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(85, 17);
-            this.label37.TabIndex = 48;
-            this.label37.Text = "Top margin:";
+            this.topMarginLabel1C.AutoSize = true;
+            this.topMarginLabel1C.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topMarginLabel1C.Location = new System.Drawing.Point(11, 103);
+            this.topMarginLabel1C.Name = "topMarginLabel1C";
+            this.topMarginLabel1C.Size = new System.Drawing.Size(85, 17);
+            this.topMarginLabel1C.TabIndex = 48;
+            this.topMarginLabel1C.Text = "Top margin:";
             // 
-            // label38
+            // bottomMarginLabel1C
             // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(11, 136);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(110, 17);
-            this.label38.TabIndex = 47;
-            this.label38.Text = "Bottom margin:";
+            this.bottomMarginLabel1C.AutoSize = true;
+            this.bottomMarginLabel1C.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bottomMarginLabel1C.Location = new System.Drawing.Point(11, 136);
+            this.bottomMarginLabel1C.Name = "bottomMarginLabel1C";
+            this.bottomMarginLabel1C.Size = new System.Drawing.Size(110, 17);
+            this.bottomMarginLabel1C.TabIndex = 47;
+            this.bottomMarginLabel1C.Text = "Bottom margin:";
             // 
-            // label39
+            // docLengthLabel1C
             // 
-            this.label39.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(10, 280);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(248, 20);
-            this.label39.TabIndex = 42;
-            this.label39.Text = "Document length:";
+            this.docLengthLabel1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docLengthLabel1C.Location = new System.Drawing.Point(10, 280);
+            this.docLengthLabel1C.Name = "docLengthLabel1C";
+            this.docLengthLabel1C.Size = new System.Drawing.Size(248, 20);
+            this.docLengthLabel1C.TabIndex = 42;
+            this.docLengthLabel1C.Text = "Document length:";
             // 
-            // label41
+            // leftMarginLabel1C
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(11, 38);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(85, 17);
-            this.label41.TabIndex = 46;
-            this.label41.Text = "Left margin:";
+            this.leftMarginLabel1C.AutoSize = true;
+            this.leftMarginLabel1C.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leftMarginLabel1C.Location = new System.Drawing.Point(11, 38);
+            this.leftMarginLabel1C.Name = "leftMarginLabel1C";
+            this.leftMarginLabel1C.Size = new System.Drawing.Size(85, 17);
+            this.leftMarginLabel1C.TabIndex = 46;
+            this.leftMarginLabel1C.Text = "Left margin:";
             // 
-            // label42
+            // fontSizeLabel1C
             // 
-            this.label42.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(10, 233);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(126, 20);
-            this.label42.TabIndex = 41;
-            this.label42.Text = "Font size:";
+            this.fontSizeLabel1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fontSizeLabel1C.Location = new System.Drawing.Point(10, 233);
+            this.fontSizeLabel1C.Name = "fontSizeLabel1C";
+            this.fontSizeLabel1C.Size = new System.Drawing.Size(126, 20);
+            this.fontSizeLabel1C.TabIndex = 41;
+            this.fontSizeLabel1C.Text = "Font size:";
             // 
-            // label43
+            // fontTypeLabel1C
             // 
-            this.label43.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(10, 187);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(203, 24);
-            this.label43.TabIndex = 40;
-            this.label43.Text = "Font type:";
+            this.fontTypeLabel1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fontTypeLabel1C.Location = new System.Drawing.Point(10, 187);
+            this.fontTypeLabel1C.Name = "fontTypeLabel1C";
+            this.fontTypeLabel1C.Size = new System.Drawing.Size(203, 24);
+            this.fontTypeLabel1C.TabIndex = 40;
+            this.fontTypeLabel1C.Text = "Font type:";
             // 
             // label44
             // 
@@ -1582,8 +1581,7 @@ namespace ProjectEcho
             this.formatCheckList1C.Items.AddRange(new object[] {
             "1\" Margins on All Sides",
             "Arial Font",
-            "Size 11 Font",
-            "4 pages or less"});
+            "Size 11 Font"});
             this.formatCheckList1C.Location = new System.Drawing.Point(20, 51);
             this.formatCheckList1C.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList1C.Name = "formatCheckList1C";
@@ -1616,7 +1614,7 @@ namespace ProjectEcho
             this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(10, 150);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(172, 16);
+            this.label47.Size = new System.Drawing.Size(215, 20);
             this.label47.TabIndex = 35;
             this.label47.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -1970,13 +1968,13 @@ namespace ProjectEcho
             // 
             this.panel21.BackColor = System.Drawing.Color.White;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Controls.Add(this.label48);
-            this.panel21.Controls.Add(this.label49);
-            this.panel21.Controls.Add(this.label50);
-            this.panel21.Controls.Add(this.label51);
-            this.panel21.Controls.Add(this.label53);
-            this.panel21.Controls.Add(this.label54);
-            this.panel21.Controls.Add(this.label55);
+            this.panel21.Controls.Add(this.rightMarginLabel1D);
+            this.panel21.Controls.Add(this.topMarginLabel1D);
+            this.panel21.Controls.Add(this.bottomMarginLabel1D);
+            this.panel21.Controls.Add(this.docLengthLabel1D);
+            this.panel21.Controls.Add(this.leftMarginLabel1D);
+            this.panel21.Controls.Add(this.fontSizeLabel1D);
+            this.panel21.Controls.Add(this.fontTypeLabel1D);
             this.panel21.Controls.Add(this.label56);
             this.panel21.Location = new System.Drawing.Point(14, 181);
             this.panel21.Margin = new System.Windows.Forms.Padding(2);
@@ -1984,72 +1982,72 @@ namespace ProjectEcho
             this.panel21.Size = new System.Drawing.Size(265, 312);
             this.panel21.TabIndex = 50;
             // 
-            // label48
+            // rightMarginLabel1D
             // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(11, 70);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(95, 17);
-            this.label48.TabIndex = 49;
-            this.label48.Text = "Right margin:";
+            this.rightMarginLabel1D.AutoSize = true;
+            this.rightMarginLabel1D.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightMarginLabel1D.Location = new System.Drawing.Point(11, 70);
+            this.rightMarginLabel1D.Name = "rightMarginLabel1D";
+            this.rightMarginLabel1D.Size = new System.Drawing.Size(95, 17);
+            this.rightMarginLabel1D.TabIndex = 49;
+            this.rightMarginLabel1D.Text = "Right margin:";
             // 
-            // label49
+            // topMarginLabel1D
             // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(11, 103);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(85, 17);
-            this.label49.TabIndex = 48;
-            this.label49.Text = "Top margin:";
+            this.topMarginLabel1D.AutoSize = true;
+            this.topMarginLabel1D.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topMarginLabel1D.Location = new System.Drawing.Point(11, 103);
+            this.topMarginLabel1D.Name = "topMarginLabel1D";
+            this.topMarginLabel1D.Size = new System.Drawing.Size(85, 17);
+            this.topMarginLabel1D.TabIndex = 48;
+            this.topMarginLabel1D.Text = "Top margin:";
             // 
-            // label50
+            // bottomMarginLabel1D
             // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(11, 136);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(110, 17);
-            this.label50.TabIndex = 47;
-            this.label50.Text = "Bottom margin:";
+            this.bottomMarginLabel1D.AutoSize = true;
+            this.bottomMarginLabel1D.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bottomMarginLabel1D.Location = new System.Drawing.Point(11, 136);
+            this.bottomMarginLabel1D.Name = "bottomMarginLabel1D";
+            this.bottomMarginLabel1D.Size = new System.Drawing.Size(110, 17);
+            this.bottomMarginLabel1D.TabIndex = 47;
+            this.bottomMarginLabel1D.Text = "Bottom margin:";
             // 
-            // label51
+            // docLengthLabel1D
             // 
-            this.label51.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(10, 280);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(248, 20);
-            this.label51.TabIndex = 42;
-            this.label51.Text = "Document length:";
+            this.docLengthLabel1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docLengthLabel1D.Location = new System.Drawing.Point(10, 280);
+            this.docLengthLabel1D.Name = "docLengthLabel1D";
+            this.docLengthLabel1D.Size = new System.Drawing.Size(248, 20);
+            this.docLengthLabel1D.TabIndex = 42;
+            this.docLengthLabel1D.Text = "Document length:";
             // 
-            // label53
+            // leftMarginLabel1D
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(11, 38);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(85, 17);
-            this.label53.TabIndex = 46;
-            this.label53.Text = "Left margin:";
+            this.leftMarginLabel1D.AutoSize = true;
+            this.leftMarginLabel1D.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leftMarginLabel1D.Location = new System.Drawing.Point(11, 38);
+            this.leftMarginLabel1D.Name = "leftMarginLabel1D";
+            this.leftMarginLabel1D.Size = new System.Drawing.Size(85, 17);
+            this.leftMarginLabel1D.TabIndex = 46;
+            this.leftMarginLabel1D.Text = "Left margin:";
             // 
-            // label54
+            // fontSizeLabel1D
             // 
-            this.label54.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(10, 233);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(126, 20);
-            this.label54.TabIndex = 41;
-            this.label54.Text = "Font size:";
+            this.fontSizeLabel1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fontSizeLabel1D.Location = new System.Drawing.Point(10, 233);
+            this.fontSizeLabel1D.Name = "fontSizeLabel1D";
+            this.fontSizeLabel1D.Size = new System.Drawing.Size(126, 20);
+            this.fontSizeLabel1D.TabIndex = 41;
+            this.fontSizeLabel1D.Text = "Font size:";
             // 
-            // label55
+            // fontTypeLabel1D
             // 
-            this.label55.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(10, 187);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(203, 24);
-            this.label55.TabIndex = 40;
-            this.label55.Text = "Font type:";
+            this.fontTypeLabel1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fontTypeLabel1D.Location = new System.Drawing.Point(10, 187);
+            this.fontTypeLabel1D.Name = "fontTypeLabel1D";
+            this.fontTypeLabel1D.Size = new System.Drawing.Size(203, 24);
+            this.fontTypeLabel1D.TabIndex = 40;
+            this.fontTypeLabel1D.Text = "Font type:";
             // 
             // label56
             // 
@@ -2082,8 +2080,7 @@ namespace ProjectEcho
             this.formatCheckList1D.Items.AddRange(new object[] {
             "1\" Margins on All Sides",
             "Arial Font",
-            "Size 11 Font",
-            "4 pages or less"});
+            "Size 11 Font"});
             this.formatCheckList1D.Location = new System.Drawing.Point(20, 51);
             this.formatCheckList1D.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList1D.Name = "formatCheckList1D";
@@ -2116,7 +2113,7 @@ namespace ProjectEcho
             this.label59.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(10, 150);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(172, 16);
+            this.label59.Size = new System.Drawing.Size(216, 20);
             this.label59.TabIndex = 35;
             this.label59.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -2470,13 +2467,13 @@ namespace ProjectEcho
             // 
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel25.Controls.Add(this.label11);
-            this.panel25.Controls.Add(this.label60);
-            this.panel25.Controls.Add(this.label61);
-            this.panel25.Controls.Add(this.label62);
-            this.panel25.Controls.Add(this.label64);
-            this.panel25.Controls.Add(this.label65);
-            this.panel25.Controls.Add(this.label66);
+            this.panel25.Controls.Add(this.rightMarginLabel1E);
+            this.panel25.Controls.Add(this.topMarginLabel1E);
+            this.panel25.Controls.Add(this.bottomMarginLabel1E);
+            this.panel25.Controls.Add(this.docLengthLabel1E);
+            this.panel25.Controls.Add(this.leftMarginLabel1E);
+            this.panel25.Controls.Add(this.fontSizeLabel1E);
+            this.panel25.Controls.Add(this.fontTypeLabel1E);
             this.panel25.Controls.Add(this.label67);
             this.panel25.Location = new System.Drawing.Point(14, 181);
             this.panel25.Margin = new System.Windows.Forms.Padding(2);
@@ -2484,72 +2481,72 @@ namespace ProjectEcho
             this.panel25.Size = new System.Drawing.Size(265, 312);
             this.panel25.TabIndex = 50;
             // 
-            // label11
+            // rightMarginLabel1E
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(11, 70);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 17);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "Right margin:";
+            this.rightMarginLabel1E.AutoSize = true;
+            this.rightMarginLabel1E.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightMarginLabel1E.Location = new System.Drawing.Point(11, 70);
+            this.rightMarginLabel1E.Name = "rightMarginLabel1E";
+            this.rightMarginLabel1E.Size = new System.Drawing.Size(95, 17);
+            this.rightMarginLabel1E.TabIndex = 49;
+            this.rightMarginLabel1E.Text = "Right margin:";
             // 
-            // label60
+            // topMarginLabel1E
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(11, 103);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(85, 17);
-            this.label60.TabIndex = 48;
-            this.label60.Text = "Top margin:";
+            this.topMarginLabel1E.AutoSize = true;
+            this.topMarginLabel1E.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topMarginLabel1E.Location = new System.Drawing.Point(11, 103);
+            this.topMarginLabel1E.Name = "topMarginLabel1E";
+            this.topMarginLabel1E.Size = new System.Drawing.Size(85, 17);
+            this.topMarginLabel1E.TabIndex = 48;
+            this.topMarginLabel1E.Text = "Top margin:";
             // 
-            // label61
+            // bottomMarginLabel1E
             // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(11, 136);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(110, 17);
-            this.label61.TabIndex = 47;
-            this.label61.Text = "Bottom margin:";
+            this.bottomMarginLabel1E.AutoSize = true;
+            this.bottomMarginLabel1E.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bottomMarginLabel1E.Location = new System.Drawing.Point(11, 136);
+            this.bottomMarginLabel1E.Name = "bottomMarginLabel1E";
+            this.bottomMarginLabel1E.Size = new System.Drawing.Size(110, 17);
+            this.bottomMarginLabel1E.TabIndex = 47;
+            this.bottomMarginLabel1E.Text = "Bottom margin:";
             // 
-            // label62
+            // docLengthLabel1E
             // 
-            this.label62.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(10, 280);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(248, 20);
-            this.label62.TabIndex = 42;
-            this.label62.Text = "Document length:";
+            this.docLengthLabel1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docLengthLabel1E.Location = new System.Drawing.Point(10, 280);
+            this.docLengthLabel1E.Name = "docLengthLabel1E";
+            this.docLengthLabel1E.Size = new System.Drawing.Size(248, 20);
+            this.docLengthLabel1E.TabIndex = 42;
+            this.docLengthLabel1E.Text = "Document length:";
             // 
-            // label64
+            // leftMarginLabel1E
             // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(11, 38);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(85, 17);
-            this.label64.TabIndex = 46;
-            this.label64.Text = "Left margin:";
+            this.leftMarginLabel1E.AutoSize = true;
+            this.leftMarginLabel1E.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leftMarginLabel1E.Location = new System.Drawing.Point(11, 38);
+            this.leftMarginLabel1E.Name = "leftMarginLabel1E";
+            this.leftMarginLabel1E.Size = new System.Drawing.Size(85, 17);
+            this.leftMarginLabel1E.TabIndex = 46;
+            this.leftMarginLabel1E.Text = "Left margin:";
             // 
-            // label65
+            // fontSizeLabel1E
             // 
-            this.label65.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(10, 233);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(126, 20);
-            this.label65.TabIndex = 41;
-            this.label65.Text = "Font size:";
+            this.fontSizeLabel1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fontSizeLabel1E.Location = new System.Drawing.Point(10, 233);
+            this.fontSizeLabel1E.Name = "fontSizeLabel1E";
+            this.fontSizeLabel1E.Size = new System.Drawing.Size(126, 20);
+            this.fontSizeLabel1E.TabIndex = 41;
+            this.fontSizeLabel1E.Text = "Font size:";
             // 
-            // label66
+            // fontTypeLabel1E
             // 
-            this.label66.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(10, 187);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(203, 24);
-            this.label66.TabIndex = 40;
-            this.label66.Text = "Font type:";
+            this.fontTypeLabel1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fontTypeLabel1E.Location = new System.Drawing.Point(10, 187);
+            this.fontTypeLabel1E.Name = "fontTypeLabel1E";
+            this.fontTypeLabel1E.Size = new System.Drawing.Size(203, 24);
+            this.fontTypeLabel1E.TabIndex = 40;
+            this.fontTypeLabel1E.Text = "Font type:";
             // 
             // label67
             // 
@@ -2583,7 +2580,7 @@ namespace ProjectEcho
             "1\" Margins on All Sides",
             "Arial Font",
             "Size 11 Font",
-            "4 pages or less"});
+            "9 pages or less"});
             this.formatCheckList1E.Location = new System.Drawing.Point(20, 51);
             this.formatCheckList1E.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList1E.Name = "formatCheckList1E";
@@ -2616,7 +2613,7 @@ namespace ProjectEcho
             this.label70.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(10, 150);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(172, 16);
+            this.label70.Size = new System.Drawing.Size(207, 20);
             this.label70.TabIndex = 35;
             this.label70.Text = "SUGGESTED TERMINOLOGY:";
             // 
@@ -3017,7 +3014,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label warningLabel;
         private System.Windows.Forms.Panel panel8;
@@ -3113,13 +3109,13 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label rightMarginLabel1C;
+        private System.Windows.Forms.Label topMarginLabel1C;
+        private System.Windows.Forms.Label bottomMarginLabel1C;
+        private System.Windows.Forms.Label docLengthLabel1C;
+        private System.Windows.Forms.Label leftMarginLabel1C;
+        private System.Windows.Forms.Label fontSizeLabel1C;
+        private System.Windows.Forms.Label fontTypeLabel1C;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.CheckedListBox formatCheckList1C;
@@ -3157,13 +3153,13 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label rightMarginLabel1D;
+        private System.Windows.Forms.Label topMarginLabel1D;
+        private System.Windows.Forms.Label bottomMarginLabel1D;
+        private System.Windows.Forms.Label docLengthLabel1D;
+        private System.Windows.Forms.Label leftMarginLabel1D;
+        private System.Windows.Forms.Label fontSizeLabel1D;
+        private System.Windows.Forms.Label fontTypeLabel1D;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.CheckedListBox formatCheckList1D;
@@ -3201,13 +3197,13 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label rightMarginLabel1E;
+        private System.Windows.Forms.Label topMarginLabel1E;
+        private System.Windows.Forms.Label bottomMarginLabel1E;
+        private System.Windows.Forms.Label docLengthLabel1E;
+        private System.Windows.Forms.Label leftMarginLabel1E;
+        private System.Windows.Forms.Label fontSizeLabel1E;
+        private System.Windows.Forms.Label fontTypeLabel1E;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.CheckedListBox formatCheckList1E;
@@ -3239,5 +3235,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label125;
         private System.Windows.Forms.Label label126;
         private System.Windows.Forms.Label label71;
+        public System.Windows.Forms.TabPage tabPage1;
     }
 }
