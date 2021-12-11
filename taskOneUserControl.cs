@@ -160,6 +160,7 @@ namespace ProjectEcho
             if(path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
                 await processData(flist, fprogress); //PROGRESS BAR
+                
 
                 uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
@@ -181,9 +182,11 @@ namespace ProjectEcho
                 l5.Text = fc.fontTypeFB;
                 l6.Text = fc.fontSizeFB;
                 l7.Text = fc.pageNumFB;
+                label18.Text = "FINISHED";
             }
 
             await processData(glist, gprogress);//PROGRES SBAR
+            
 
             await GrammarAPI.returnReport(path); //execute API call
 
@@ -203,14 +206,15 @@ namespace ProjectEcho
             {
                 grammarCL.SetItemChecked(2, true);
             }
+            label19.Text = "FINISHED";
 
             await processData(clist, cprogress);//PROGRESS BAR
-
             missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
             if(missingWordsListBox.Items.Count == 0)
             {
                 contentCL.SetItemChecked(0, true);
             }
+            label21.Text = "FINISHED";
         }
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)

@@ -788,6 +788,7 @@ namespace ProjectEcho
             this.label21.Size = new System.Drawing.Size(78, 16);
             this.label21.TabIndex = 31;
             this.label21.Text = "ANALYZING...";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // uploadInfo1A
             // 
@@ -844,6 +845,7 @@ namespace ProjectEcho
             this.label18.Size = new System.Drawing.Size(78, 16);
             this.label18.TabIndex = 28;
             this.label18.Text = "ANALYZING...";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label20
             // 
@@ -864,6 +866,7 @@ namespace ProjectEcho
             this.label19.Size = new System.Drawing.Size(78, 16);
             this.label19.TabIndex = 27;
             this.label19.Text = "ANALYZING...";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label13
             // 
