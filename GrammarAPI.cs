@@ -129,7 +129,7 @@ namespace ProjectEcho
                 List<string> reportList = new List<string>();
                 foreach(var i in v.matches)
                 {
-                    errorCount = errorCount + 1;
+                    errorCount++;
                     string errorID = i.rule.category.id;
 
                     grammarReport = "                      Error #" + errorCount + "\r\n\r\nSENTENCE: " + i.sentence + "\r\n\r\nISSUE: " + i.message + "\r\n\r\nLOCATION: " + i.offset.ToString() + " characters \r\n\r\nSUGGESTION(S): " + i.replacements + "\r\n" + "_____________________________" + "\r\n\r\n";
@@ -137,11 +137,11 @@ namespace ProjectEcho
                     
                     if (errorID == "TYPOS")
                     {
-                        spellingErrorCount = spellingErrorCount + 1;
+                        spellingErrorCount++;
                     }
                     else if(new[] { "GRAMMAR", "CASING", "PUNCTUATION" }.Contains(errorID))
                     {
-                        grammarErrorCount = grammarErrorCount + 1;
+                        grammarErrorCount++;
                     }
                     else
                     {
@@ -197,7 +197,7 @@ namespace ProjectEcho
             // Console.WriteLine("new string*** " + n);
 
             string cutString = text.Split(new string[] { "matches" }, StringSplitOptions.None).Last();
-            string offSetVals = " ";
+            //string offSetVals = " ";
 
             return cutString;
         }
@@ -292,7 +292,7 @@ namespace ProjectEcho
         }
     }
 
-    public class Matches
+/*    public class Matches
     {
         public string matches
         {
@@ -327,6 +327,6 @@ namespace ProjectEcho
         public string sentence
         {
             get; set;
-        }
-    }
+        }*/
+    
 }
