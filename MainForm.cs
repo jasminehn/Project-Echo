@@ -315,6 +315,7 @@ namespace ProjectEcho
             {
                 //mp.
                 mp.newMedia(video);
+                mp.URL = uri.ToString();
             } catch (Exception ex)
             {
                 Console.WriteLine("CLARE:: " + ex);

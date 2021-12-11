@@ -34,7 +34,6 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.forwardButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.titleSubtitleLabel = new System.Windows.Forms.Label();
@@ -74,12 +73,12 @@ namespace ProjectEcho
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
-            this.taskOne = new ProjectEcho.TaskOneUserControl();
-            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.button1 = new System.Windows.Forms.Button();
-            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
+            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -104,7 +103,6 @@ namespace ProjectEcho
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.forwardButton);
             this.panel1.Controls.Add(this.backButton);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.returnToMenuButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 676);
@@ -141,16 +139,6 @@ namespace ProjectEcho
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Visible = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(270, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // returnToMenuButton
             // 
@@ -658,6 +646,33 @@ namespace ProjectEcho
             this.task1Button.UseVisualStyleBackColor = false;
             this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1475, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.mainPanel.Controls.Add(this.controlContainerPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1364, 749);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // taskOne
             // 
             this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -686,17 +701,6 @@ namespace ProjectEcho
             this.taskTwo.Size = new System.Drawing.Size(1633, 772);
             this.taskTwo.TabIndex = 17;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1475, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // taskThree
             // 
             this.taskThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -710,22 +714,6 @@ namespace ProjectEcho
             this.taskThree.Name = "taskThree";
             this.taskThree.Size = new System.Drawing.Size(263, 147);
             this.taskThree.TabIndex = 17;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.AutoSize = true;
-            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.mainPanel.Controls.Add(this.controlContainerPanel);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1364, 749);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // MainForm
             // 
@@ -806,7 +794,6 @@ namespace ProjectEcho
         private TaskTwoUserControl taskTwo;
         private TaskThreeUserControl taskThree;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         public System.Windows.Forms.Panel mainPanel;
