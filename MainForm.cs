@@ -307,7 +307,8 @@ namespace ProjectEcho
 
         private void t1videoLaunchButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("CLARE:: ENTERED METHOD");
+            System.Diagnostics.Process.Start("https://youtu.be/IsNq-4qV1ZY");
+           /* Console.WriteLine("CLARE:: ENTERED METHOD");
             WMPLib.WindowsMediaPlayer mp = new WMPLib.WindowsMediaPlayer();
             String video = string.Format("{0}Videos\\taskOneVideo", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\")));
             Uri uri = new Uri(video);
@@ -319,8 +320,18 @@ namespace ProjectEcho
             } catch (Exception ex)
             {
                 Console.WriteLine("CLARE:: " + ex);
-            }
+            }*/
            
+        }
+
+        private void t2videoLaunchButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://youtu.be/AwW2rk4-aNA");
+        }
+
+        private void t3videoLaunchButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://youtu.be/HSD9YrP_4pc");
         }
     }
 }

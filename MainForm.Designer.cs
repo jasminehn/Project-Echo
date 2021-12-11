@@ -361,6 +361,7 @@ namespace ProjectEcho
             this.t3videoLaunchButton.TabIndex = 0;
             this.t3videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK THREE";
             this.t3videoLaunchButton.UseVisualStyleBackColor = false;
+            this.t3videoLaunchButton.Click += new System.EventHandler(this.t3videoLaunchButton_Click);
             // 
             // taskThreeList
             // 
@@ -487,6 +488,7 @@ namespace ProjectEcho
             this.t2videoLaunchButton.TabIndex = 0;
             this.t2videoLaunchButton.Text = "WATCH TUTORIAL VIDEO FOR TASK TWO";
             this.t2videoLaunchButton.UseVisualStyleBackColor = false;
+            this.t2videoLaunchButton.Click += new System.EventHandler(this.t2videoLaunchButton_Click);
             // 
             // panel7
             // 
