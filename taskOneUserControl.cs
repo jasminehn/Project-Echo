@@ -1,6 +1,16 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows.Media;
+
 
 namespace ProjectEcho
 {
@@ -8,7 +18,7 @@ namespace ProjectEcho
      *
      *
      *
-     * Author(s): C. Segrue, J. Nelson
+     * Author(s): C. Segrue, J. Nelson, I. Gnagy
      */
 
     public partial class TaskOneUserControl : UserControl
@@ -25,6 +35,8 @@ namespace ProjectEcho
         private Label l6;
         private Label l7;
 
+        SettingsHandler settingsHandler = new SettingsHandler();
+        private int textSizeOffset = 0; //keeps track of how much the text size has changed
         //string currentTab; //not needed right now but might be used in the future
 
         public TaskOneUserControl()
@@ -181,6 +193,35 @@ namespace ProjectEcho
         private void TaskOneUserControl_Load(object sender, EventArgs e)
         {
             richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes 
+            
+            //Apply saved display settings
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
+            {
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
+            foreach (Control c in checkedlistboxes)
+            {
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+
+            TabPage[] tabs = new TabPage[] { tabPage1, tabPage2, tabPage3, tabPage4, tabPage5 };
+            foreach (Control c in tabs)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+            }
+            BackColor = Properties.Settings.Default.bgmain;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

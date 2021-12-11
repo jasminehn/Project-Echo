@@ -135,12 +135,11 @@ namespace ProjectEcho
             }
 
             Panel[] panels = new Panel[] { mainPanel, mainMenuPanel };
-
+            //var panels = settingsHandler.getAll(this, typeof(Panel));
             foreach (Panel p in panels)
             {
                 p.BackColor = Properties.Settings.Default.bgcolor;
             }
-            //BackColor = Properties.Settings.Default.bgcolor;
             BackColor = Properties.Settings.Default.bgmain;
         }
 

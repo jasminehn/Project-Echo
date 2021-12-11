@@ -3,6 +3,14 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Media;
 
 namespace ProjectEcho
 {
@@ -11,14 +19,25 @@ namespace ProjectEcho
      *
      *
      *
-     * Author(s): C. Segrue
+     * Author(s): C. Segrue, I. Gnagy
      */
 
     
     public partial class TaskTwoUserControl : UserControl
     {
+<<<<<<< Updated upstream
         public String firstVideoPath = "";
         public String secondVideoPath = "";
+=======
+<<<<<<< HEAD
+        SettingsHandler settingsHandler = new SettingsHandler();
+        private int textSizeOffset = 0; //keeps track of how much the text size has changed
+
+=======
+        public String firstVideoPath = "";
+        public String secondVideoPath = "";
+>>>>>>> 2a6ac0e0b334120df791de8c8e5264c14fe3d95b
+>>>>>>> Stashed changes
         public TaskTwoUserControl()
         {
             InitializeComponent();
@@ -156,6 +175,37 @@ namespace ProjectEcho
         private void TaskTwoUserControl_Load(object sender, EventArgs e)
         {
             richTextBox1.Text = Properties.Settings.Default.t2notes; //load last saved notes
+
+            //Apply saved display settings
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
+            {
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
+            foreach (Control c in checkedlistboxes)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+
+            Panel[] panels = new Panel[] { panel3, panel7};
+            foreach (Control c in panels)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+            }
+            BackColor = Properties.Settings.Default.bgmain;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
