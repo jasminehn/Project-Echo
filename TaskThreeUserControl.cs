@@ -17,7 +17,12 @@ namespace ProjectEcho
             InitializeComponent();
         }
 
-        private void label70_Click(object sender, EventArgs e)
+        private void UploadButton3A1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UploadButton3A2_Click(object sender, EventArgs e)
         {
 
         }

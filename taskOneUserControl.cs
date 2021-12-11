@@ -105,21 +105,9 @@ namespace ProjectEcho
             }
         }
 
-        /// <summary>
-        /// This method programatically executed the uploading and checking of a
-        /// document. Because each task part has unique names for certain
-        /// labels, this is necessary to avoid repeated code.
-        /// </summary>
-        /// <param name="taskNum">
-        /// The task number, which in this class will always be "1"
-        /// </param>
-        /// <param name="taskPart">The task part (i.e. "A", "B", etc.)</param>
-        /// <param name="formatCL">
-        /// The formt checkedListBox being used by the current task
-        /// </param>
-        /// <param name="uploadInfoLabel">
-        /// The label containing the names of the uploaded documents
-        /// </param>
+        /* This method programatically executed the uploading and checking of a document. 
+         * Because each task part has unique names for certain labels, this is necessary to avoid repeated code.
+        */
         public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel, CheckedListBox formatCL, CheckedListBox grammarCL, TextBox grammarErrorsTextBox, CheckedListBox contentCL, ListBox missingWordsListBox, int pageCount)
         {
             formatCL.ClearSelected(); //clears all format checker boxes
