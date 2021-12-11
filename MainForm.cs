@@ -279,12 +279,7 @@ namespace ProjectEcho
         {
            
         }
-
-        private void textsizeAdjust_Scroll(object sender, EventArgs e)
-        {
-            
-        }
-
+/*
         private void button2_Click(object sender, EventArgs e)
         {
             TaskOneGuide oneGuide = new TaskOneGuide();
@@ -293,7 +288,7 @@ namespace ProjectEcho
             {
                 Console.Write("Guide opened");
             }
-        }
+        }*/
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -307,21 +302,7 @@ namespace ProjectEcho
 
         private void t1videoLaunchButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://youtu.be/IsNq-4qV1ZY");
-           /* Console.WriteLine("CLARE:: ENTERED METHOD");
-            WMPLib.WindowsMediaPlayer mp = new WMPLib.WindowsMediaPlayer();
-            String video = string.Format("{0}Videos\\taskOneVideo", System.IO.Path.GetFullPath(System.IO.Path.Combine(ProgramPath, @"..\..\")));
-            Uri uri = new Uri(video);
-            try
-            {
-                //mp.
-                mp.newMedia(video);
-                mp.URL = uri.ToString();
-            } catch (Exception ex)
-            {
-                Console.WriteLine("CLARE:: " + ex);
-            }*/
-           
+            System.Diagnostics.Process.Start("https://youtu.be/IsNq-4qV1ZY");  
         }
 
         private void t2videoLaunchButton_Click(object sender, EventArgs e)

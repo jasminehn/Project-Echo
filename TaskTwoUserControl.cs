@@ -115,10 +115,10 @@ namespace ProjectEcho
 
         private async Task analyzeVideoAsync(String path)
         {
-            Windows.Storage.StorageFolder storageFolder =
-            Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile = await storageFolder.CreateFileAsync(path,
-            Windows.Storage.CreationCollisionOption.ReplaceExisting);
+            //Windows.Storage.StorageFolder storageFolder =
+            //Windows.Storage.ApplicationData.Current.LocalFolder;
+            //Windows.Storage.StorageFile sampleFile = await storageFolder.CreateFileAsync(path,
+            //Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
             //VideoProperties videoProperties = await sampleFile.Properties.GetVideoPropertiesAsync();
             //Console.WriteLine("CLARE:: " + videoProperties.Duration);

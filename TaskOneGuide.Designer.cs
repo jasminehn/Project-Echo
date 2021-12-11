@@ -45,6 +45,6 @@ namespace ProjectEcho
         }
 
         #endregion
-        private VideoPlayerControl videoPlayerControl1;
+        //private VideoPlayerControl videoPlayerControl1;
     }
 }
