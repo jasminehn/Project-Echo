@@ -485,6 +485,7 @@
     <None Include="Resources\writingIcon.png" />
     <None Include="Resources\cameraIcon.png" />
     <None Include="Resources\testIcon.png" />
+    <None Include="Resources\playButton.png" />
     <Content Include="vlclib\AUTHORS.txt" />
     <Content Include="vlclib\axvlc.dll" />
     <Content Include="vlclib\COPYING.txt" />

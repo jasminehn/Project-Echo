@@ -73,6 +73,7 @@ namespace ProjectEcho
             this.label7 = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -90,11 +91,12 @@ namespace ProjectEcho
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.secondPlayButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button4 = new System.Windows.Forms.Button();
+            this.SecondUploadButton = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -176,7 +178,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
             this.tableLayoutPanel1.Controls.Add(this.textBox14, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
@@ -227,9 +229,8 @@ namespace ProjectEcho
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(503, 407);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(510, 407);
             this.tableLayoutPanel1.TabIndex = 18;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // textBox14
             // 
@@ -248,7 +249,7 @@ namespace ProjectEcho
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(307, 2);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(191, 25);
+            this.label21.Size = new System.Drawing.Size(203, 25);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
@@ -553,7 +554,7 @@ namespace ProjectEcho
             this.label7.Size = new System.Drawing.Size(501, 117);
             this.label7.TabIndex = 17;
             this.label7.Text = resources.GetString("label7.Text");
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            
             // 
             // eventLog1
             // 
@@ -562,6 +563,7 @@ namespace ProjectEcho
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.panel5);
@@ -572,6 +574,19 @@ namespace ProjectEcho
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(584, 343);
             this.panel7.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::ProjectEcho.Properties.Resources.playButton;
+            this.button1.Location = new System.Drawing.Point(503, 255);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 51);
+            this.button1.TabIndex = 47;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.FirstPlayButton_Click);
             // 
             // panel8
             // 
@@ -670,12 +685,12 @@ namespace ProjectEcho
             this.clipOneUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clipOneUpload.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clipOneUpload.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.clipOneUpload.Location = new System.Drawing.Point(513, 250);
+            this.clipOneUpload.Location = new System.Drawing.Point(451, 256);
             this.clipOneUpload.Name = "clipOneUpload";
-            this.clipOneUpload.Size = new System.Drawing.Size(50, 76);
+            this.clipOneUpload.Size = new System.Drawing.Size(56, 76);
             this.clipOneUpload.TabIndex = 22;
             this.clipOneUpload.UseVisualStyleBackColor = true;
-            this.clipOneUpload.Click += new System.EventHandler(this.uploadButton_Click);
+            this.clipOneUpload.Click += new System.EventHandler(this.FirstUploadButton_Click);
             // 
             // label5
             // 
@@ -761,8 +776,9 @@ namespace ProjectEcho
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.secondPlayButton);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.SecondUploadButton);
             this.panel3.Controls.Add(this.panel12);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel4);
@@ -771,6 +787,19 @@ namespace ProjectEcho
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(584, 343);
             this.panel3.TabIndex = 42;
+            // 
+            // secondPlayButton
+            // 
+            this.secondPlayButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.secondPlayButton.FlatAppearance.BorderSize = 0;
+            this.secondPlayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secondPlayButton.Image = global::ProjectEcho.Properties.Resources.playButton;
+            this.secondPlayButton.Location = new System.Drawing.Point(507, 265);
+            this.secondPlayButton.Name = "secondPlayButton";
+            this.secondPlayButton.Size = new System.Drawing.Size(60, 51);
+            this.secondPlayButton.TabIndex = 50;
+            this.secondPlayButton.UseVisualStyleBackColor = true;
+            this.secondPlayButton.Click += new System.EventHandler(this.SecondPlayButton_Click);
             // 
             // panel1
             // 
@@ -814,22 +843,23 @@ namespace ProjectEcho
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 25;
             // 
-            // button4
+            // SecondUploadButton
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SecondUploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(513, 256);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 65);
-            this.button4.TabIndex = 48;
-            this.button4.UseVisualStyleBackColor = true;
+            this.SecondUploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.SecondUploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SecondUploadButton.FlatAppearance.BorderSize = 0;
+            this.SecondUploadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SecondUploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SecondUploadButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondUploadButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SecondUploadButton.Location = new System.Drawing.Point(451, 265);
+            this.SecondUploadButton.Name = "SecondUploadButton";
+            this.SecondUploadButton.Size = new System.Drawing.Size(50, 65);
+            this.SecondUploadButton.TabIndex = 48;
+            this.SecondUploadButton.UseVisualStyleBackColor = true;
+            this.SecondUploadButton.Click += new System.EventHandler(this.SecondUploadButton_Click);
             // 
             // panel12
             // 
@@ -1019,7 +1049,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SecondUploadButton;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -1051,5 +1081,7 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button secondPlayButton;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +14,11 @@ namespace ProjectEcho
      * Author(s): C. Segrue
      */
 
+    
     public partial class TaskTwoUserControl : UserControl
     {
+        public String firstVideoPath = "";
+        public String secondVideoPath = "";
         public TaskTwoUserControl()
         {
             InitializeComponent();
@@ -91,8 +95,15 @@ namespace ProjectEcho
             }
         }
 
-        private async void uploadButton_Click(object sender, EventArgs e)
+        private async void FirstUploadButton_Click(object sender, EventArgs e)
         {
+            firstVideoPath = OpenFile();
+           // PlayFile(path);
+        }
+
+        private String OpenFile()
+        {
+            //String strPath = "";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
@@ -102,15 +113,15 @@ namespace ProjectEcho
 
             String path = "";
 
-            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                foreach(string fileName in openFileDialog.FileNames)
+                foreach (string fileName in openFileDialog.FileNames)
                 {
                     path = Path.GetFullPath(fileName);
-                    await analyzeVideoAsync(path);
+                    //await analyzeVideoAsync(path);
                 }
             }
-            PlayFile(path);
+            return path;
         }
 
         private async Task analyzeVideoAsync(String path)
@@ -126,12 +137,16 @@ namespace ProjectEcho
 
         private void PlayFile(String path)
         {
+            try
+            {
+                Process.Start(path);
+            } catch (Exception ex)
+            {
+
+            }
+            
             //clipOneFrame.URL = path;
             //clipOneFrame.Ctlcontrols.play();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -150,6 +165,25 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        
+        private void SecondUploadButton_Click(object sender, EventArgs e)
+        {
+            secondVideoPath = OpenFile();
+        }
+
+        private void FirstPlayButton_Click(object sender, EventArgs e)
+        {
+            if(firstVideoPath != "")
+            {
+                PlayFile(firstVideoPath);
+            }
+        }
+
+        private void SecondPlayButton_Click(object sender, EventArgs e)
+        {
+            if (secondVideoPath != "")
+            {
+                PlayFile(secondVideoPath);
+            }
+        }
     }
 }
