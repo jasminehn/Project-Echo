@@ -132,7 +132,7 @@ namespace ProjectEcho
                     errorCount = errorCount + 1;
                     string errorID = i.rule.category.id;
 
-                    grammarReport = "ERROR #" + errorCount + "\r\n\r\nSentence: " + i.sentence + "\r\n\r\nMessage: " + i.message + "\r\n\r\nLocation: " + i.offset.ToString() + " characters \r\n\r\nReplacements: " + i.replacements + "\r\n" + "_____________________________" + "\r\n\r\n";
+                    grammarReport = "                      Error #" + errorCount + "\r\n\r\nSENTENCE: " + i.sentence + "\r\n\r\nISSUE: " + i.message + "\r\n\r\nLOCATION: " + i.offset.ToString() + " characters \r\n\r\nSUGGESTION(S): " + i.replacements + "\r\n" + "_____________________________" + "\r\n\r\n";
                     Console.WriteLine("ERROR #" + errorCount + "   error type:" + errorID);
                     
                     if (errorID == "TYPOS")
