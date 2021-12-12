@@ -61,7 +61,6 @@ namespace ProjectEcho
                 c.BackColor = Properties.Settings.Default.bgcolor;
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
-            BackColor = Properties.Settings.Default.bgmain;
         }
 
         private void AddRowButton_Click(object sender, EventArgs e)

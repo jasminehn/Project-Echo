@@ -233,6 +233,7 @@ namespace ProjectEcho
 
             float curr = textsizeAdjust.Value; // gets current font size
 
+            
             //Checks if the slider val is getting larger or smaller
             if (prev < curr)
             {
@@ -255,25 +256,50 @@ namespace ProjectEcho
             }
             else
             {
-                foreach (Control c in labels)
+                if (curr == 0)
                 {
-                    FontFamily fon = Font.FontFamily;
-                    FontStyle sty = c.Font.Style;
-                    float adjSize = c.Font.Size - 1;
-                    c.Font = new Font(fon, adjSize, sty);
+                    foreach (Control c in labels)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+                        c.Font = new Font(fon, adjSize, sty);
+                    }
+                    foreach (CheckedListBox c in checkLists)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+                        c.Font = new System.Drawing.Font(fon, adjSize, sty);
+                    }
+
+                    textSizeOffset = textsizeAdjust.Value;
+                    Properties.Settings.Default.textsize = textSizeOffset;
+                    Properties.Settings.Default.Save();
                 }
-                foreach (CheckedListBox c in checkLists)
+                else
                 {
-                    FontFamily fon = Font.FontFamily;
-                    FontStyle sty = c.Font.Style;
-                    float adjSize = c.Font.Size - 1;
-                    c.Font = new System.Drawing.Font(fon, adjSize, sty);
-                }
+                    foreach (Control c in labels)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+                        c.Font = new Font(fon, adjSize, sty);
+                    }
+                    foreach (CheckedListBox c in checkLists)
+                    {
+                        FontFamily fon = Font.FontFamily;
+                        FontStyle sty = c.Font.Style;
+                        float adjSize = c.Font.Size - 1;
+                        c.Font = new System.Drawing.Font(fon, adjSize, sty);
+                    }
+
+                    textSizeOffset = textsizeAdjust.Value;
+                    Properties.Settings.Default.textsize = textSizeOffset;
+                    Properties.Settings.Default.Save();
+                }                
                 prev = curr;
-            }
-            textSizeOffset = textsizeAdjust.Value;
-            Properties.Settings.Default.textsize = textSizeOffset;
-            Properties.Settings.Default.Save();
+            }            
         }
 
         private void applyButton_Click(object sender, EventArgs e)
