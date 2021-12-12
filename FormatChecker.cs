@@ -124,9 +124,8 @@ namespace ProjectEcho
                 }
             }
 
-
-            // :(
-            if(currentFont == "9999999")
+            // When the file has more than one font type, it returns 9999999. Instead, this will return a warning message
+            if (currentFont == "9999999")
             {
                 currentFont = "Multiple fonts detected";
             }

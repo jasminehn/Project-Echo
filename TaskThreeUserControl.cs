@@ -23,15 +23,6 @@ namespace ProjectEcho
         private DocumentHandler dh = new DocumentHandler();
         private FormatChecker fc = new FormatChecker();
 
-        //Variables for the format feedback labels
-        private Label l1; //Left margin
-        private Label l2; //Right margin
-        private Label l3; //Top margin
-        private Label l4; //Bottom margin
-        private Label l5; //Font type
-        private Label l6; //Font size
-        private Label l7; //Document length
-
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
 
@@ -90,7 +81,7 @@ namespace ProjectEcho
 
         private void UploadButton3A2_Click(object sender, EventArgs e)
         {
-            CheckDocument(3, "A", "document", uploadInfo3A2, checkedListBox5,  checkedListBox3, grammarErrors3A, 4);
+            CheckDocument(3, "A", "document", uploadInfo3A2, checkedListBox5,  checkedListBox3, grammarErrors3A, 2);
         }
 
         public void CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
@@ -140,14 +131,7 @@ namespace ProjectEcho
                     }
                 }
 
-                l1.Text = fc.leftMarginFB;
-                l2.Text = fc.rightMarginFB;
-                l3.Text = fc.topMarginFB;
-                l4.Text = fc.bottomMarginFB;
 
-                l5.Text = fc.fontTypeFB;
-                l6.Text = fc.fontSizeFB;
-                l7.Text = fc.pageNumFB;
                 label18.Text = "FINISHED";
             }
 
