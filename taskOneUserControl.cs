@@ -14,7 +14,7 @@ namespace ProjectEcho
      *
      *
      *
-     * Author(s): C. Segrue, J. Nelson
+     * Author(s): C. Segrue, J. Nelson, I. Gnagy
      */
 
     public partial class TaskOneUserControl : UserControl
@@ -74,15 +74,19 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
-           
-            Panel[] panels = new Panel[] { panel3, panel7 };
+            var tabs = settingsHandler.getAll(this, typeof(TabPage));
+            foreach (Control c in tabs)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+            }
+            Panel[] panels = new Panel[] { panel7, panel3, panel4, panel5, panel6};
             foreach (Control c in panels)
             {
                 c.BackColor = Properties.Settings.Default.bgcolor;
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
-            //BackColor = Properties.Settings.Default.bgmain;
+            BackColor = Properties.Settings.Default.bgmain;
         }
 
         private async void UploadButton1A_Click(object sender, EventArgs e)

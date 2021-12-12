@@ -12,7 +12,7 @@ namespace ProjectEcho
      *
      *
      *
-     * Author(s): C. Segrue
+     * Author(s): C. Segrue, I. Gnagy
      */
 
     
