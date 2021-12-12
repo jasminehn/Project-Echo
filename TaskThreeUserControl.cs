@@ -23,13 +23,14 @@ namespace ProjectEcho
         private DocumentHandler dh = new DocumentHandler();
         private FormatChecker fc = new FormatChecker();
 
-        private Label l1;
-        private Label l2;
-        private Label l3;
-        private Label l4;
-        private Label l5;
-        private Label l6;
-        private Label l7;
+        //Variables for the format feedback labels
+        private Label l1; //Left margin
+        private Label l2; //Right margin
+        private Label l3; //Top margin
+        private Label l4; //Bottom margin
+        private Label l5; //Font type
+        private Label l6; //Font size
+        private Label l7; //Document length
 
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
@@ -37,6 +38,9 @@ namespace ProjectEcho
         public TaskThreeUserControl()
         {
             InitializeComponent();
+
+            uploadInfo3A1.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "media");
+            uploadInfo3A2.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "document");
         }
 
         private void TaskThreeUserControl_Load(object sender, EventArgs e)
@@ -81,11 +85,94 @@ namespace ProjectEcho
 
         private void UploadButton3A1_Click(object sender, EventArgs e)
         {
-
+            CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
         }
 
         private void UploadButton3A2_Click(object sender, EventArgs e)
         {
+            CheckDocument(3, "A", "document", uploadInfo3A2, checkedListBox5,  checkedListBox3, grammarErrors3A, 4);
+        }
+
+        public void CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
+        {
+            foreach (int i in formatCL.CheckedIndices)
+            {
+                formatCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+
+
+            String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType);
+
+            uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
+                
+            
+        }
+
+        public void CheckDocument(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL, CheckedListBox grammarCL, TextBox grammarErrorsTextBox,  int pageCount)
+        {
+            //formatCL.ClearSelected(); //clears all format checker boxes
+            foreach (int i in formatCL.CheckedIndices)
+            {
+                formatCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            foreach (int i in grammarCL.CheckedIndices)
+            {
+                grammarCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            
+
+
+            String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType);
+
+            //uploadInfo.Text = "well im here?";
+            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
+            {
+
+
+                uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
+                Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
+
+                for (int i = 0; i < formatCL.Items.Count; i++)
+                {
+                    if (itemsChecked[i].Equals(true))
+                    {
+                        formatCL.SetItemChecked(i, true);
+                    }
+                }
+
+                l1.Text = fc.leftMarginFB;
+                l2.Text = fc.rightMarginFB;
+                l3.Text = fc.topMarginFB;
+                l4.Text = fc.bottomMarginFB;
+
+                l5.Text = fc.fontTypeFB;
+                l6.Text = fc.fontSizeFB;
+                l7.Text = fc.pageNumFB;
+                label18.Text = "FINISHED";
+            }
+
+
+            //await GrammarAPI.returnReport(path); //execute API call
+
+            //string grammarReport = GrammarAPI.reportOutput;
+
+            //grammarErrorsTextBox.Text = grammarReport;
+
+            if (GrammarAPI.spellingErrorCount == 0)
+            {
+                grammarCL.SetItemChecked(0, true);
+            }
+            if (GrammarAPI.grammarErrorCount == 0)
+            {
+                grammarCL.SetItemChecked(1, true);
+            }
+            if (GrammarAPI.styleErrorCount == 0)
+            {
+                grammarCL.SetItemChecked(2, true);
+            }
+            label19.Text = "FINISHED";
+
+            
 
         }
 

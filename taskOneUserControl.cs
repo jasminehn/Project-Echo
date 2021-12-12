@@ -23,13 +23,16 @@ namespace ProjectEcho
         private FormatChecker fc = new FormatChecker();
         public static bool complete = false;
 
-        private Label l1;
-        private Label l2;
-        private Label l3;
-        private Label l4;
-        private Label l5;
-        private Label l6;
-        private Label l7;
+        //Variables for the format feedback labels
+        private Label l1; //Left margin
+        private Label l2; //Right margin
+        private Label l3; //Top margin
+        private Label l4; //Bottom margin
+        private Label l5; //Font type
+        private Label l6; //Font size
+        private Label l7; //Document length
+
+
 
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();

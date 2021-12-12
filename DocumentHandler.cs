@@ -77,16 +77,18 @@ namespace ProjectEcho
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = false;
-            openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx"; //move this            
+            
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            //doctypes: document or media
 
             if(docType == "document")
             {
-
+                openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx"; //move this
             }
             else
             {
-                
+                openFileDialog.Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov|Audio Files(*.mp3; *.mp4; *.m4a; *.wav)|*.mp3; *.mp4; *.m4a; *.wav";
             }
 
             String path = "";
@@ -109,7 +111,7 @@ namespace ProjectEcho
                     string uploadedFile = "taskUpload" + currentTask + currentTabLetter;
 
                     //create user task folder
-                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile;
+                    string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile + "\\" + docType; //i.e. useruploads\taskUpload1a\media
                     try
                     {
                         //If the directory doesn't exist, create it
@@ -123,14 +125,8 @@ namespace ProjectEcho
                         //fail silently
                     }
 
-                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, separatedFileName); //path to upload the user's file
+                    string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, docType, separatedFileName); //path to upload the user's file
 
-                    //deletes all files in task/part folder
-                    DirectoryInfo di = new DirectoryInfo(taskUploadsPath);
-                    foreach (FileInfo file in di.GetFiles())
-                    {
-                        file.Delete();
-                    }
 
                     File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
                 }
@@ -170,6 +166,40 @@ namespace ProjectEcho
             }
             return str;
         }
+
+        public String displayMultipleDocuments(int currentTask, string currentPart, string docType)
+        {
+            string str = "";
+            string currentTab = "x";
+            currentTab = currentPart;
+            char currentTabLetter = currentTab[currentTab.Length - 1];
+
+            string uploadedFile = "taskUpload" + currentTask + currentTabLetter; //generates folder name based on currently selected task/part (i.e. taskUpload1A)
+            string taskUploadsPath = Environment.CurrentDirectory + "\\UserUploads\\" + uploadedFile + "\\" + docType; //finds correct folder path for current section
+            //Console.WriteLine(taskUploadsPath); //test
+            try
+            {
+                //if the directory exists, read all files from it
+                if (Directory.Exists(taskUploadsPath))
+                {
+                    DirectoryInfo d = new DirectoryInfo(taskUploadsPath); //set directory
+                    FileInfo[] Files = d.GetFiles(); //get all files from the folder
+                    //string str = "";
+
+                    foreach (FileInfo file in Files)
+                    {
+                        str = str + "\n" + file.Name; //adds each file name to the string
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                //do nothing
+            }
+            return str;
+        }
+
+
 
     }
 }
