@@ -118,5 +118,17 @@ namespace ProjectEcho.Properties {
                 this["fcolor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string checkerprogress {
+            get {
+                return ((string)(this["checkerprogress"]));
+            }
+            set {
+                this["checkerprogress"] = value;
+            }
+        }
     }
 }

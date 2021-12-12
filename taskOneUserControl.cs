@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -26,8 +27,6 @@ namespace ProjectEcho
         private Label l6;
         private Label l7;
 
-        //string currentTab; //not needed right now but might be used in the future
-
         public TaskOneUserControl()
         {
             InitializeComponent();
@@ -38,6 +37,19 @@ namespace ProjectEcho
             uploadInfo1C.Text = "Uploaded: " + dh.displayDocuments(1, "C");
             uploadInfo1D.Text = "Uploaded: " + dh.displayDocuments(1, "D");
             uploadInfo1E.Text = "Uploaded: " + dh.displayDocuments(1, "E");
+
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.checkerprogress))
+            {
+                Properties.Settings.Default.checkerprogress.Split(',')
+                    .ToList()
+                    .ForEach(item =>
+                    {
+                        var index = this.formatCheckList1A.Items.IndexOf(item);
+                        this.formatCheckList1A.SetItemChecked(index, true);
+                    });
+            }
+            
         }
 
         private async void UploadButton1A_Click(object sender, EventArgs e)
@@ -106,12 +118,23 @@ namespace ProjectEcho
         }
 
         /* This method programatically executed the uploading and checking of a document. 
-         * Because each task part has unique names for certain labels, this is necessary to avoid repeated code.
+         * Because each task part has unique controls, this is necessary to avoid repeated code.
         */
         public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel, CheckedListBox formatCL, CheckedListBox grammarCL, TextBox grammarErrorsTextBox, CheckedListBox contentCL, ListBox missingWordsListBox, int pageCount)
         {
-            formatCL.ClearSelected(); //clears all format checker boxes
-            grammarCL.ClearSelected(); //clears all grammar checker boxes
+            //formatCL.ClearSelected(); //clears all format checker boxes
+            foreach (int i in formatCL.CheckedIndices)
+            {
+                formatCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            foreach (int i in grammarCL.CheckedIndices)
+            {
+                grammarCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            foreach (int i in contentCL.CheckedIndices)
+            {
+                contentCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
 
             //progress bar stuff
             List<string> flist = new List<string>();
@@ -161,7 +184,6 @@ namespace ProjectEcho
                     }
                 }
 
-                //this stuff below will be changed to task-specific variables
                 l1.Text = fc.leftMarginFB;
                 l2.Text = fc.rightMarginFB;
                 l3.Text = fc.topMarginFB;
@@ -203,11 +225,21 @@ namespace ProjectEcho
                 contentCL.SetItemChecked(0, true);
             }
             label21.Text = "FINISHED";
+
+
+
+
+            //save progress of checkbox
+            var indices = this.formatCheckList1A.CheckedItems.Cast<string>().ToArray();
+
+            Properties.Settings.Default.checkerprogress = string.Join(",", indices);
+            Properties.Settings.Default.Save();
+            
         }
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)
         {
-            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes 
+            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -228,9 +260,14 @@ namespace ProjectEcho
                 {
                     progressInfo.PercentComplete = index++ * 100 / totalProcess;
                     progress.Report(progressInfo);
-                    System.Threading.Thread.Sleep(10); //used to siulate length of operation
+                    System.Threading.Thread.Sleep(10); //used to simulate length of operation
                 }
             });
+        }
+
+        private void TaskOneUserControl_Leave(object sender, EventArgs e)
+        {
+            
         }
     }
 }

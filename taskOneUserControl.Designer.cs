@@ -606,7 +606,7 @@ namespace ProjectEcho
             this.missingWordList1A.ItemHeight = 20;
             this.missingWordList1A.Location = new System.Drawing.Point(14, 181);
             this.missingWordList1A.Name = "missingWordList1A";
-            this.missingWordList1A.Size = new System.Drawing.Size(269, 284);
+            this.missingWordList1A.Size = new System.Drawing.Size(269, 304);
             this.missingWordList1A.TabIndex = 37;
             // 
             // label40
@@ -2920,6 +2920,7 @@ namespace ProjectEcho
             this.Name = "TaskOneUserControl";
             this.Size = new System.Drawing.Size(1883, 800);
             this.Load += new System.EventHandler(this.TaskOneUserControl_Load);
+            this.Leave += new System.EventHandler(this.TaskOneUserControl_Leave);
             this.notebookPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel29.ResumeLayout(false);
