@@ -122,7 +122,9 @@ namespace ProjectEcho
                     mainForm.mainMenuPanel.BackColor = backgroundColor;
                     mainForm.mainPanel.BackColor = backgroundColor;
                 }
-
+                Properties.Settings.Default.fcolor = fontColor;
+                Properties.Settings.Default.bgcolor = backgroundColor;
+                Properties.Settings.Default.Save();
             }
             else //OFF
             {
@@ -167,6 +169,9 @@ namespace ProjectEcho
                     mainForm.mainMenuPanel.BackColor = backgroundColor;
                     mainForm.mainPanel.BackColor = backgroundColor;
                 }
+                Properties.Settings.Default.fcolor = fontColor;
+                Properties.Settings.Default.bgcolor = backgroundColor;
+                Properties.Settings.Default.Save();
             }
         }
 
