@@ -114,6 +114,7 @@ namespace ProjectEcho
         private void MainForm_Load(object sender, EventArgs e)
         {
             //Apply saved display settings
+            /*
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in labels)
@@ -140,6 +141,7 @@ namespace ProjectEcho
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
             BackColor = Properties.Settings.Default.bgmain;
+            */
         }
 
         // On-click events for the buttons on the MainForm

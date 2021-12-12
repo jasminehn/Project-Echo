@@ -43,6 +43,7 @@ namespace ProjectEcho
         {
             richTextBox1.Text = Properties.Settings.Default.t3notes; //load last saved notes
 
+            /*
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
@@ -75,6 +76,7 @@ namespace ProjectEcho
                 c.BackColor = Properties.Settings.Default.bgcolor;
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
+            */
         }
 
         private void UploadButton3A1_Click(object sender, EventArgs e)
