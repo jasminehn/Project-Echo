@@ -51,8 +51,14 @@ namespace ProjectEcho
                 float adjSize = c.Font.Size + textSizeOffset;
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-
-            url = FileName1;
+            if(MainForm.pdfIndex == 0)
+            {
+                url = FileName1;
+            } else if(MainForm.pdfIndex == 1)
+            {
+                url = FileName2;
+            }
+            
             comboBox2.Enabled = false;
             CefSettings helpBrowser = new CefSettings();
             Cef.Initialize(helpBrowser);
@@ -116,56 +122,62 @@ namespace ProjectEcho
         {
             await Task.Delay(10); // Do we still need a delay?
 
-            if(comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
+            if (pdfComboBox.SelectedIndex == 0)
             {
-                // urlBox.Text = "idk why we here but we are"; do nothing
-            }
-            else
+                if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
+                {
+                    // urlBox.Text = "idk why we here but we are"; do nothing
+                }
+                else
+                {
+                    //change page depending on selection
+                    if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B") || comboBox2.SelectedItem.Equals("Part C")))
+                    {
+                        url = FileName1 + "#page=1";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    else if (comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
+                    {
+                        url = FileName1 + "#page=2";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    else if (comboBox1.SelectedItem.Equals("Task 2") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B")))
+                    {
+                        url = FileName1 + "#page=3";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part A"))
+                    {
+                        url = FileName1 + "#page=4";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part B"))
+                    {
+                        url = FileName1 + "#page=5";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    else if (comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part C"))
+                    {
+                        url = FileName1 + "#page=6";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    else if (comboBox1.SelectedItem.Equals("Task 3") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
+                    {
+                        url = FileName1 + "#page=7";
+                        urlBox.Text = url;
+                        chrome.Reload();
+                    }
+                    chrome.Load(url);
+                }
+            } else if (pdfComboBox.SelectedIndex == 1)
             {
-                //change page depending on selection
-                if(comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B") || comboBox2.SelectedItem.Equals("Part C")))
-                {
-                    url = FileName1 + "#page=1";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                else if(comboBox1.SelectedItem.Equals("Task 1") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
-                {
-                    url = FileName1 + "#page=2";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                else if(comboBox1.SelectedItem.Equals("Task 2") && (comboBox2.SelectedItem.Equals("Part A") || comboBox2.SelectedItem.Equals("Part B")))
-                {
-                    url = FileName1 + "#page=3";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                else if(comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part A"))
-                {
-                    url = FileName1 + "#page=4";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                else if(comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part B"))
-                {
-                    url = FileName1 + "#page=5";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                else if(comboBox1.SelectedItem.Equals("Task 3") && comboBox2.SelectedItem.Equals("Part C"))
-                {
-                    url = FileName1 + "#page=6";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                else if(comboBox1.SelectedItem.Equals("Task 3") && (comboBox2.SelectedItem.Equals("Part D") || comboBox2.SelectedItem.Equals("Part E")))
-                {
-                    url = FileName1 + "#page=7";
-                    urlBox.Text = url;
-                    chrome.Reload();
-                }
-                chrome.Load(url);
+
             }
         }
 
@@ -216,6 +228,19 @@ namespace ProjectEcho
                 this.Focus();
                 ++focusFlag;
             }
+        }
+
+        private void pdfComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(pdfComboBox.SelectedIndex == 0)
+            {
+                url = FileName1;
+            } else if(pdfComboBox.SelectedIndex == 1)
+            {
+                url = FileName2;
+            }
+            urlBox.Text = url;
+            chrome.Reload();
         }
     }
 }

@@ -45,10 +45,11 @@ namespace ProjectEcho
         public HelpForm hf = new HelpForm(); // Globally available
         int saveHelpResource = 0; // The HelpForm has never been opened, so set to zero.
         public String path;
+        public static int pdfIndex = 0;
 
         //var allLabels = getAll(this, typeof(Label)); //Finds all labels
 
-        SettingsHandler settingsHandler = new SettingsHandler();
+        private SettingsHandler settingsHandler = new SettingsHandler();
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
         
@@ -313,6 +314,13 @@ namespace ProjectEcho
         private void t3videoLaunchButton_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://youtu.be/HSD9YrP_4pc");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            pdfIndex = 1;
+            
+            helpToolStripMenuItem_Click(sender, e);
         }
     }
 }

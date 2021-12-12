@@ -38,14 +38,14 @@ namespace ProjectEcho
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pdfComboBox = new System.Windows.Forms.ComboBox();
             this.nextButton = new System.Windows.Forms.Button();
             this.prevButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ChromiumBrowser = new System.Windows.Forms.Panel();
             this.urlBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@ namespace ProjectEcho
             // 
             this.label2.BackColor = System.Drawing.Color.DarkBlue;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(12, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(606, 18);
             this.label2.TabIndex = 3;
@@ -133,7 +133,7 @@ namespace ProjectEcho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.pdfComboBox);
             this.panel1.Controls.Add(this.nextButton);
             this.panel1.Controls.Add(this.prevButton);
             this.panel1.Controls.Add(this.button1);
@@ -148,6 +148,30 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1340, 102);
             this.panel1.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.DarkBlue;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 18);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Select the Document you would like to use:";
+            // 
+            // pdfComboBox
+            // 
+            this.pdfComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pdfComboBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pdfComboBox.FormattingEnabled = true;
+            this.pdfComboBox.Items.AddRange(new object[] {
+            "Requirements & Rubrics",
+            "Making Good Choices"});
+            this.pdfComboBox.Location = new System.Drawing.Point(242, 22);
+            this.pdfComboBox.Name = "pdfComboBox";
+            this.pdfComboBox.Size = new System.Drawing.Size(363, 21);
+            this.pdfComboBox.TabIndex = 13;
+            this.pdfComboBox.SelectedIndexChanged += new System.EventHandler(this.pdfComboBox_SelectedIndexChanged);
             // 
             // nextButton
             // 
@@ -215,30 +239,6 @@ namespace ProjectEcho
             this.panel2.Size = new System.Drawing.Size(1344, 594);
             this.panel2.TabIndex = 12;
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Task 1",
-            "Task 2",
-            "Task 3"});
-            this.comboBox3.Location = new System.Drawing.Point(242, 22);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(363, 21);
-            this.comboBox3.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.DarkBlue;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 18);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Select the Document you would like to use:";
-            // 
             // HelpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +279,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Button prevButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        public System.Windows.Forms.ComboBox pdfComboBox;
     }
 }
