@@ -130,5 +130,17 @@ namespace ProjectEcho.Properties {
                 this["checkerprogress"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Want to leave some notes for your future self? Write them here.")]
+        public string t3notes {
+            get {
+                return ((string)(this["t3notes"]));
+            }
+            set {
+                this["t3notes"] = value;
+            }
+        }
     }
 }

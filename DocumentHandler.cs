@@ -4,6 +4,13 @@ using System.Windows.Forms;
 
 namespace ProjectEcho
 {
+    /**
+     *
+     *
+     *
+     * Author(s): J. Nelson
+     */
+
     internal class DocumentHandler
     {
         public String uploadDocument(int currentTask, string currentPart)

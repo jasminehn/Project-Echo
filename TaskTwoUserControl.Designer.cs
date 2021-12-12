@@ -147,7 +147,7 @@ namespace ProjectEcho
             this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(249, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 16);
+            this.label10.Size = new System.Drawing.Size(78, 16);
             this.label10.TabIndex = 49;
             this.label10.Text = "ANALYZING...";
             // 
@@ -178,7 +178,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel1.Controls.Add(this.textBox14, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
@@ -249,7 +249,7 @@ namespace ProjectEcho
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(307, 2);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(205, 25);
+            this.label21.Size = new System.Drawing.Size(207, 25);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
@@ -621,7 +621,7 @@ namespace ProjectEcho
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(6, 6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(390, 18);
+            this.label12.Size = new System.Drawing.Size(439, 20);
             this.label12.TabIndex = 15;
             this.label12.Text = "CLIP ONE: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 
@@ -698,7 +698,7 @@ namespace ProjectEcho
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(20, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 23);
+            this.label5.Size = new System.Drawing.Size(340, 22);
             this.label5.TabIndex = 23;
             this.label5.Text = "Context for Learning Information";
             // 
@@ -819,7 +819,7 @@ namespace ProjectEcho
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(249, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 49;
             this.label4.Text = "ANALYZING...";
             // 
@@ -877,7 +877,7 @@ namespace ProjectEcho
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(391, 18);
+            this.label6.Size = new System.Drawing.Size(440, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "CLIP TWO: ENTIRE CLASS/LARGE GROUP INTERACTION";
             // 

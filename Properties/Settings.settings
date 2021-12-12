@@ -29,5 +29,8 @@
     <Setting Name="checkerprogress" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="t3notes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Want to leave some notes for your future self? Write them here.</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
