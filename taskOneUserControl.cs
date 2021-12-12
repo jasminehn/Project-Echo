@@ -3,6 +3,10 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Windows.Media;
 
 namespace ProjectEcho
 {
@@ -27,6 +31,9 @@ namespace ProjectEcho
         private Label l6;
         private Label l7;
 
+        int textSizeOffset = 0;
+        SettingsHandler settingsHandler = new SettingsHandler();
+
         public TaskOneUserControl()
         {
             InitializeComponent();
@@ -50,6 +57,32 @@ namespace ProjectEcho
                     });
             }
             
+        }
+
+        private void TaskOneUserControl_Load(object sender, EventArgs e)
+        {
+            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
+
+            //Apply saved display settings
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
+            {
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
+           
+            Panel[] panels = new Panel[] { panel3, panel7 };
+            foreach (Control c in panels)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+            }
+            //BackColor = Properties.Settings.Default.bgmain;
         }
 
         private async void UploadButton1A_Click(object sender, EventArgs e)
@@ -237,10 +270,7 @@ namespace ProjectEcho
             
         }
 
-        private void TaskOneUserControl_Load(object sender, EventArgs e)
-        {
-            richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
-        }
+        
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {

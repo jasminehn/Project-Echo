@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ProjectEcho
 {
@@ -19,9 +20,48 @@ namespace ProjectEcho
     {
         public String firstVideoPath = "";
         public String secondVideoPath = "";
+
+        int textSizeOffset = 0;
+        SettingsHandler settingsHandler = new SettingsHandler();
+
         public TaskTwoUserControl()
         {
             InitializeComponent();
+        }
+
+        private void TaskTwoUserControl_Load(object sender, EventArgs e)
+        {
+            richTextBox1.Text = Properties.Settings.Default.t2notes; //load last saved notes
+
+            //Apply saved display settings
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
+            {
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
+            foreach (Control c in checkedlistboxes)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
+                float adjSize = c.Font.Size + textSizeOffset;
+
+                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
+            }
+            Panel[] panels = new Panel[] { panel3, panel7 };
+            foreach (Control c in panels)
+            {
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
+            }
+            BackColor = Properties.Settings.Default.bgmain;
         }
 
         private void AddRowButton_Click(object sender, EventArgs e)
@@ -138,10 +178,7 @@ namespace ProjectEcho
             //clipOneFrame.Ctlcontrols.play();
         }
 
-        private void TaskTwoUserControl_Load(object sender, EventArgs e)
-        {
-            richTextBox1.Text = Properties.Settings.Default.t2notes; //load last saved notes
-        }
+        
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {

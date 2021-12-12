@@ -133,14 +133,12 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-
             Panel[] panels = new Panel[] { mainPanel, mainMenuPanel };
-
-            foreach (Panel p in panels)
+            foreach (Control c in panels)
             {
-                p.BackColor = Properties.Settings.Default.bgcolor;
+                c.BackColor = Properties.Settings.Default.bgcolor;
+                c.ForeColor = Properties.Settings.Default.fcolor;
             }
-            //BackColor = Properties.Settings.Default.bgcolor;
             BackColor = Properties.Settings.Default.bgmain;
         }
 
