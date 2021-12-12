@@ -81,12 +81,12 @@ namespace ProjectEcho
             if (switchButton.Checked) //ON
             {
 
-                backgroundColor = ColorTranslator.FromHtml("#121113");
-                backgroundMain = ColorTranslator.FromHtml("#0A070E");
+                backgroundColor = Color.Black; //ColorTranslator.FromHtml("#121113");
+                backgroundMain = Color.Black; //ColorTranslator.FromHtml("#0A070E");
                 fontColor = Color.White;
 
                 if (currback == Color.White)
-                {
+                {   
                     BackColor = backgroundColor;
                     ForeColor = fontColor;
 
@@ -130,7 +130,7 @@ namespace ProjectEcho
                 backgroundMain = Color.White;
                 fontColor = Color.Black;
 
-                if (currback == ColorTranslator.FromHtml("#121113"))
+                if (currback == Color.Black)
                 {
                     BackColor = backgroundColor;
                     ForeColor = fontColor;
