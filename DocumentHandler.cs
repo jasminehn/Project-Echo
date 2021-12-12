@@ -86,7 +86,7 @@ namespace ProjectEcho
             {
                 openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx"; //move this
             }
-            else
+            else //media files
             {
                 openFileDialog.Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov|Audio Files(*.mp3; *.mp4; *.m4a; *.wav)|*.mp3; *.mp4; *.m4a; *.wav";
             }

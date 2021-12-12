@@ -15,7 +15,6 @@ namespace ProjectEcho
 
         //feedback variables
         public string leftMarginFB = "Left margin: ";
-
         public string rightMarginFB = "Right margin: ";
         public string topMarginFB = "Top margin: ";
         public string bottomMarginFB = "Bottom margin: ";
@@ -123,6 +122,13 @@ namespace ProjectEcho
                         break;
                     }
                 }
+            }
+
+
+            // :(
+            if(currentFont == "9999999")
+            {
+                currentFont = "Multiple fonts detected";
             }
 
             fontTypeFB = "Font type: " + currentFont;
