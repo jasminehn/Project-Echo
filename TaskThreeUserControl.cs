@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+
 namespace ProjectEcho
 {
     /**
@@ -79,9 +80,17 @@ namespace ProjectEcho
             */
         }
 
-        private void MediaUploadButton3A_Click(object sender, EventArgs e)
+        private async void MediaUploadButton3A_Click(object sender, EventArgs e)
         {
-            CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
+            
+            try
+            {
+                await CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
         private async void UploadButton3A_Click(object sender, EventArgs e)
@@ -184,8 +193,8 @@ namespace ProjectEcho
             String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType);
 
             uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
-                
-            
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
+
         }
 
         public async Task CheckMipltipleDocuments(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
