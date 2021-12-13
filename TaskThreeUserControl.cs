@@ -31,7 +31,12 @@ namespace ProjectEcho
             InitializeComponent();
 
             uploadInfo3A1.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "media");
+
             uploadInfo3A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "document");
+            uploadInfo3B.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "B", "document");
+            uploadInfo3C.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "C", "document");
+            uploadInfo3D.Text = "Uploaded: " + dh.displayDocuments(3, "D");
+            uploadInfo3E.Text = "Uploaded: " + dh.displayDocuments(3, "E");
         }
 
         private void TaskThreeUserControl_Load(object sender, EventArgs e)
@@ -134,12 +139,14 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(3, "C", uploadInfo3C,
-                    formatCheckList3C, formatTextBox3C,
-                    grammarCheckList3C, grammarTextBox3C,
-                    formatProgressBar3C, formatProgressStatus3C,
-                    grammarProgressBar3C, grammarProgressStatus3C,
-                    2);
+                await CheckDocument(3, "D", uploadInfo3D,
+                    formatCheckList3D, formatTextBox3D,
+                    grammarCheckList3D, grammarTextBox3D,
+                    contentCheckList3D, contentListBox3D,
+                    formatProgressBar3D, formatProgressStatus3D,
+                    grammarProgressBar3D, grammarProgressStatus3D,
+                    contentProgressBar3D, contentProgressStatus3D,
+                    0);
             }
             catch (Exception ex)
             {
@@ -147,9 +154,23 @@ namespace ProjectEcho
             }
         }
 
-        private void UploadButton3E_Click(object sender, EventArgs e)
+        private async void UploadButton3E_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                await CheckDocument(3, "E", uploadInfo3E,
+                    formatCheckList3E, formatTextBox3E,
+                    grammarCheckList3E, grammarTextBox3E,
+                    contentCheckList3E, contentListBox3E,
+                    formatProgressBar3E, formatProgressStatus3E,
+                    grammarProgressBar3E, grammarProgressStatus3E,
+                    contentProgressBar3E, contentProgressStatus3E,
+                    0);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
