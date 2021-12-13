@@ -23,15 +23,6 @@ namespace ProjectEcho
         private DocumentHandler dh = new DocumentHandler();
         private FormatChecker fc = new FormatChecker();
 
-        //Variables for the format feedback labels
-        private Label l1; //Left margin
-        private Label l2; //Right margin
-        private Label l3; //Top margin
-        private Label l4; //Bottom margin
-        private Label l5; //Font type
-        private Label l6; //Font size
-        private Label l7; //Document length
-
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
 
@@ -40,7 +31,7 @@ namespace ProjectEcho
             InitializeComponent();
 
             uploadInfo3A1.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "media");
-            uploadInfo3A2.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "document");
+            uploadInfo3A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "document");
         }
 
         private void TaskThreeUserControl_Load(object sender, EventArgs e)
@@ -83,17 +74,85 @@ namespace ProjectEcho
             */
         }
 
-        private void UploadButton3A1_Click(object sender, EventArgs e)
+        private void MediaUploadButton3A_Click(object sender, EventArgs e)
         {
             CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
         }
 
-        private void UploadButton3A2_Click(object sender, EventArgs e)
+        private async void UploadButton3A_Click(object sender, EventArgs e)
         {
-            CheckDocument(3, "A", "document", uploadInfo3A2, checkedListBox5,  checkedListBox3, grammarErrors3A, 4);
+            try
+            {
+                await CheckMipltipleDocuments(3, "A", "document", uploadInfo3A,
+                    formatCheckList3A, formatTextBox3A,
+                    grammarCheckList3A, grammarTextBox3A,
+                    formatProgressBar3A, formatProgressStatus3A,
+                    grammarProgressBar3A, grammarProgressStatus3A,
+                    2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
         }
 
-        public void CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
+        private async void UploadButton3B_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckMipltipleDocuments(3, "B", "document", uploadInfo3B,
+                    formatCheckList3B, formatTextBox3B,
+                    grammarCheckList3B, grammarTextBox3B,
+                    formatProgressBar3B, formatProgressStatus3B,
+                    grammarProgressBar3B, grammarProgressStatus3B,
+                    2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
+        }
+
+        private async void UploadButton3C_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckMipltipleDocuments(3, "C", "document", uploadInfo3C,
+                    formatCheckList3C, formatTextBox3C,
+                    grammarCheckList3C, grammarTextBox3C,
+                    formatProgressBar3C, formatProgressStatus3C,
+                    grammarProgressBar3C, grammarProgressStatus3C,
+                    2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
+        }
+
+        private async void UploadButton3D_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckDocument(3, "C", uploadInfo3C,
+                    formatCheckList3C, formatTextBox3C,
+                    grammarCheckList3C, grammarTextBox3C,
+                    formatProgressBar3C, formatProgressStatus3C,
+                    grammarProgressBar3C, grammarProgressStatus3C,
+                    2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
+        }
+
+        private void UploadButton3E_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
         {
             foreach (int i in formatCL.CheckedIndices)
             {
@@ -108,9 +167,14 @@ namespace ProjectEcho
             
         }
 
-        public void CheckDocument(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL, CheckedListBox grammarCL, TextBox grammarErrorsTextBox,  int pageCount)
-        {
-            //formatCL.ClearSelected(); //clears all format checker boxes
+        public async Task CheckMipltipleDocuments(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
+            CheckedListBox formatCL, TextBox formatTextBox,
+            CheckedListBox grammarCL, TextBox grammarErrorsTextBox,
+            ProgressBar formatPB, Label formatPS,
+            ProgressBar grammarPB, Label grammarPS,
+            int pageCount)
+        { 
+            //Clears all checkedListBoxes
             foreach (int i in formatCL.CheckedIndices)
             {
                 formatCL.SetItemCheckState(i, CheckState.Unchecked);
@@ -119,17 +183,36 @@ namespace ProjectEcho
             {
                 grammarCL.SetItemCheckState(i, CheckState.Unchecked);
             }
-            
 
+            //progress bar stuff
+            List<string> flist = new List<string>();
+            List<string> glist = new List<string>();
+            for (int i = 0; i < 100; i++)
+            {
+                flist.Add(i.ToString());
+                glist.Add(i.ToString());
+            }
+            var fprogress = new Progress<ProgressInformation>();
+            fprogress.ProgressChanged += (o, report) =>
+            {
+                formatPB.Value = report.PercentComplete;
+                formatPB.Update();
+            };
+            var gprogress = new Progress<ProgressInformation>();
+            gprogress.ProgressChanged += (o, report) =>
+            {
+                grammarPB.Value = report.PercentComplete;
+                grammarPB.Update();
+            };
 
             String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType);
 
-            //uploadInfo.Text = "well im here?";
             if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
+                //Execute format analysis
+                await processData(flist, fprogress); //PROGRESS BAR
 
-
-                uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
+                uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
 
                 for (int i = 0; i < formatCL.Items.Count; i++)
@@ -140,23 +223,25 @@ namespace ProjectEcho
                     }
                 }
 
-                l1.Text = fc.leftMarginFB;
-                l2.Text = fc.rightMarginFB;
-                l3.Text = fc.topMarginFB;
-                l4.Text = fc.bottomMarginFB;
+                formatTextBox.Text = fc.leftMarginFB
+                    + "\r\n\r\n" + fc.rightMarginFB
+                    + "\r\n\r\n" + fc.topMarginFB
+                    + "\r\n\r\n" + fc.bottomMarginFB
+                    + "\r\n\r\n" + fc.fontTypeFB
+                    + "\r\n\r\n" + fc.fontSizeFB
+                    + "\r\n\r\n" + fc.pageNumFB;
 
-                l5.Text = fc.fontTypeFB;
-                l6.Text = fc.fontSizeFB;
-                l7.Text = fc.pageNumFB;
-                label18.Text = "FINISHED";
+                formatPS.Text = "FINISHED";
             }
 
+            //Execute grammar analysis
+            await processData(glist, gprogress);//PROGRES SBAR
 
-            //await GrammarAPI.returnReport(path); //execute API call
+            await GrammarAPI.returnReport(path); //execute API call
 
-            //string grammarReport = GrammarAPI.reportOutput;
+            string grammarReport = GrammarAPI.reportOutput;
 
-            //grammarErrorsTextBox.Text = grammarReport;
+            grammarErrorsTextBox.Text = grammarReport;
 
             if (GrammarAPI.spellingErrorCount == 0)
             {
@@ -170,10 +255,139 @@ namespace ProjectEcho
             {
                 grammarCL.SetItemChecked(2, true);
             }
-            label19.Text = "FINISHED";
+            grammarPS.Text = "FINISHED";
 
-            
+        }
 
+        public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel,
+            CheckedListBox formatCL, TextBox formatTextBox,
+            CheckedListBox grammarCL, TextBox grammarErrorsTextBox,
+            CheckedListBox contentCL, ListBox missingWordsListBox,
+            ProgressBar formatPB, Label formatPS,
+            ProgressBar grammarPB, Label grammarPS,
+            ProgressBar contentPB, Label contentPS,
+            int pageCount)
+        {
+            //Clears all checkedListBoxes
+            foreach (int i in formatCL.CheckedIndices)
+            {
+                formatCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            foreach (int i in grammarCL.CheckedIndices)
+            {
+                grammarCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            foreach (int i in contentCL.CheckedIndices)
+            {
+                contentCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+
+            //progress bar stuff
+            List<string> flist = new List<string>();
+            List<string> glist = new List<string>();
+            List<string> clist = new List<string>();
+            for (int i = 0; i < 100; i++)
+            {
+                flist.Add(i.ToString());
+                glist.Add(i.ToString());
+                clist.Add(i.ToString());
+            }
+            var fprogress = new Progress<ProgressInformation>();
+            fprogress.ProgressChanged += (o, report) =>
+            {
+                formatPB.Value = report.PercentComplete;
+                formatPB.Update();
+            };
+            var gprogress = new Progress<ProgressInformation>();
+            gprogress.ProgressChanged += (o, report) =>
+            {
+                grammarPB.Value = report.PercentComplete;
+                grammarPB.Update();
+            };
+            var cprogress = new Progress<ProgressInformation>();
+            cprogress.ProgressChanged += (o, report) =>
+            {
+                contentPB.Value = report.PercentComplete;
+                contentPB.Update();
+            };
+
+            String path = dh.uploadDocument(taskNum, taskPart);
+
+            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
+            {
+                //Execute format analysis
+                await processData(flist, fprogress); //PROGRESS BAR
+
+                uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
+                Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
+
+                for (int i = 0; i < formatCL.Items.Count; i++)
+                {
+                    if (itemsChecked[i].Equals(true))
+                    {
+                        formatCL.SetItemChecked(i, true);
+                    }
+                }
+
+                formatTextBox.Text = fc.leftMarginFB
+                    + "\r\n\r\n" + fc.rightMarginFB
+                    + "\r\n\r\n" + fc.topMarginFB
+                    + "\r\n\r\n" + fc.bottomMarginFB
+                    + "\r\n\r\n" + fc.fontTypeFB
+                    + "\r\n\r\n" + fc.fontSizeFB
+                    + "\r\n\r\n" + fc.pageNumFB;
+
+                formatPS.Text = "FINISHED";
+            }
+
+            //Execute grammar analysis
+            await processData(glist, gprogress);//PROGRES SBAR
+
+            await GrammarAPI.returnReport(path); //execute API call
+
+            string grammarReport = GrammarAPI.reportOutput;
+
+            grammarErrorsTextBox.Text = grammarReport;
+
+            if (GrammarAPI.spellingErrorCount == 0)
+            {
+                grammarCL.SetItemChecked(0, true);
+            }
+            if (GrammarAPI.grammarErrorCount == 0)
+            {
+                grammarCL.SetItemChecked(1, true);
+            }
+            if (GrammarAPI.styleErrorCount == 0)
+            {
+                grammarCL.SetItemChecked(2, true);
+            }
+            grammarPS.Text = "FINISHED";
+
+            // Execute content analysis
+            await processData(clist, cprogress);//PROGRESS BAR
+            missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
+            if (missingWordsListBox.Items.Count == 0)
+            {
+                contentCL.SetItemChecked(0, true);
+            }
+            contentPS.Text = "FINISHED";
+
+        }
+
+        private Task processData(List<string> list, IProgress<ProgressInformation> progress)
+        {
+            int index = 1;
+            int totalProcess = list.Count;
+            var progressInfo = new ProgressInformation();
+            return Task.Run(() =>
+            {
+                for (int i = 0; i < totalProcess; i++)
+                {
+                    progressInfo.PercentComplete = index++ * 100 / totalProcess;
+                    progress.Report(progressInfo);
+                    System.Threading.Thread.Sleep(10); //used to simulate length of operation
+                }
+            });
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -183,5 +397,6 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
+        
     }
 }

@@ -86,7 +86,14 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "A", uploadInfo1A, formatCheckList1A, formatTextBox1A, grammarCheckList1A, grammarErrors1A, contentCheckList1A, missingWordList1A, 4);
+                await CheckDocument(1, "A", uploadInfo1A, 
+                    formatCheckList1A, formatTextBox1A, 
+                    grammarCheckList1A, grammarErrors1A, 
+                    contentCheckList1A, missingWordList1A,
+                    formatProgressBar1A, formatProgressStatus1A,
+                    grammarProgressBar1A, grammarProgressStatus1A,
+                    contentProgressBar1A, contentProgressStatus1A,
+                    4);
             }
             catch (Exception ex)
             {
@@ -98,7 +105,14 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "B", uploadInfo1B, formatCheckList1B, formatTextBox1B, grammarCheckList1B, grammarErrors1B, contentCheckList1B, missingWordList1B, 0);
+                await CheckDocument(1, "B", uploadInfo1B, 
+                    formatCheckList1B, formatTextBox1B, 
+                    grammarCheckList1B, grammarErrors1B, 
+                    contentCheckList1B, missingWordList1B,
+                    formatProgressBar1B, formatProgressStatus1B,
+                    grammarProgressBar1B, grammarProgressStatus1B,
+                    contentProgressBar1B, contentProgressStatus1B,
+                    0);
             }
             catch (Exception ex)
             {
@@ -110,7 +124,14 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "C", uploadInfo1C, formatCheckList1C, formatTextBox1C, grammarCheckList1C, grammarErrors1C, contentCheckList1C, missingWordList1C, 0);
+                await CheckDocument(1, "C", uploadInfo1C, 
+                    formatCheckList1C, formatTextBox1C, 
+                    grammarCheckList1C, grammarErrors1C, 
+                    contentCheckList1C, missingWordList1C,
+                    formatProgressBar1C, formatProgressStatus1C,
+                    grammarProgressBar1C, grammarProgressStatus1C,
+                    contentProgressBar1C, contentProgressStatus1C,
+                    0);
             }
             catch (Exception ex)
             {
@@ -122,7 +143,14 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "D", uploadInfo1D, formatCheckList1D, formatTextBox1D, grammarCheckList1D, grammarErrors1D, contentCheckList1D, missingWordList1D, 0);
+                await CheckDocument(1, "D", uploadInfo1D, 
+                    formatCheckList1D, formatTextBox1D, 
+                    grammarCheckList1D, grammarErrors1D, 
+                    contentCheckList1D, missingWordList1D,
+                    formatProgressBar1D, formatProgressStatus1D,
+                    grammarProgressBar1D, grammarProgressStatus1D,
+                    contentProgressBar1D, contentProgressStatus1D,
+                    0);
             }
             catch (Exception ex)
             {
@@ -134,7 +162,14 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "E", uploadInfo1E, formatCheckList1E, formatTextBox1E, grammarCheckList1E, grammarErrors1E, contentCheckList1E, missingWordList1E, 9);
+                await CheckDocument(1, "E", uploadInfo1E, 
+                    formatCheckList1E, formatTextBox1E, 
+                    grammarCheckList1E, grammarErrors1E, 
+                    contentCheckList1E, missingWordList1E,
+                    formatProgressBar1E, formatProgressStatus1E,
+                    grammarProgressBar1E, grammarProgressStatus1E,
+                    contentProgressBar1E, contentProgressStatus1E,
+                    9);
             }
             catch (Exception ex)
             {
@@ -145,7 +180,14 @@ namespace ProjectEcho
         /* This method programatically executed the uploading and checking of a document. 
          * Because each task part has unique controls, this is necessary to avoid repeated code.
         */
-        public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel, CheckedListBox formatCL, TextBox formatTextBox, CheckedListBox grammarCL, TextBox grammarErrorsTextBox, CheckedListBox contentCL, ListBox missingWordsListBox, int pageCount)
+        public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel, 
+            CheckedListBox formatCL, TextBox formatTextBox, 
+            CheckedListBox grammarCL, TextBox grammarErrorsTextBox, 
+            CheckedListBox contentCL, ListBox missingWordsListBox, 
+            ProgressBar formatPB, Label formatPS,
+            ProgressBar grammarPB, Label grammarPS,
+            ProgressBar contentPB, Label contentPS,
+            int pageCount)
         {
             //Clears all checkedListBoxes
             foreach (int i in formatCL.CheckedIndices)
@@ -174,30 +216,29 @@ namespace ProjectEcho
             var fprogress = new Progress<ProgressInformation>();
             fprogress.ProgressChanged += (o, report) =>
             {
-                formatProgressBar.Value = report.PercentComplete;
-                formatProgressBar.Update();
+                formatPB.Value = report.PercentComplete;
+                formatPB.Update();
             };
             var gprogress = new Progress<ProgressInformation>();
             gprogress.ProgressChanged += (o, report) =>
             {
-                grammarProgressBar.Value = report.PercentComplete;
-                grammarProgressBar.Update();
+                grammarPB.Value = report.PercentComplete;
+                grammarPB.Update();
             };
             var cprogress = new Progress<ProgressInformation>();
             cprogress.ProgressChanged += (o, report) =>
             {
-                contentProgressBar.Value = report.PercentComplete;
-                contentProgressBar.Update();
+                contentPB.Value = report.PercentComplete;
+                contentPB.Update();
             };
 
             String path = dh.uploadDocument(taskNum, taskPart);
 
-            //uploadInfo.Text = "well im here?";
             if(path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
+                //Execute format analysis
                 await processData(flist, fprogress); //PROGRESS BAR
                 
-
                 uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
 
@@ -217,11 +258,11 @@ namespace ProjectEcho
                     + "\r\n\r\n" + fc.fontSizeFB
                     + "\r\n\r\n" + fc.pageNumFB;
 
-                label18.Text = "FINISHED";
+                formatPS.Text = "FINISHED";
             }
 
+            //Execute grammar analysis
             await processData(glist, gprogress);//PROGRES SBAR
-            
 
             await GrammarAPI.returnReport(path); //execute API call
 
@@ -241,15 +282,17 @@ namespace ProjectEcho
             {
                 grammarCL.SetItemChecked(2, true);
             }
-            label19.Text = "FINISHED";
+            grammarPS.Text = "FINISHED";
 
+            // Execute content analysis
             await processData(clist, cprogress);//PROGRESS BAR
             missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
             if(missingWordsListBox.Items.Count == 0)
             {
                 contentCL.SetItemChecked(0, true);
             }
-            label21.Text = "FINISHED";
+            contentPS.Text = "FINISHED";
+
 
 
 
