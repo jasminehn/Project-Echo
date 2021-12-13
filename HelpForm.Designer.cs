@@ -31,7 +31,7 @@ namespace ProjectEcho
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpForm));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.partComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,13 +66,13 @@ namespace ProjectEcho
             // 
             // comboBox2
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(924, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(281, 21);
-            this.comboBox2.TabIndex = 2;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.partComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.partComboBox.FormattingEnabled = true;
+            this.partComboBox.Location = new System.Drawing.Point(924, 81);
+            this.partComboBox.Name = "comboBox2";
+            this.partComboBox.Size = new System.Drawing.Size(281, 21);
+            this.partComboBox.TabIndex = 2;
+            this.partComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -137,7 +137,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.nextButton);
             this.panel1.Controls.Add(this.prevButton);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.partComboBox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label5);
@@ -264,7 +264,7 @@ namespace ProjectEcho
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox partComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
