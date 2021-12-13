@@ -1,5 +1,6 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
+using Microsoft.WindowsAPICodePack.Shell;
 
 namespace ProjectEcho
 {
@@ -149,20 +150,19 @@ namespace ProjectEcho
 
         public Boolean[] runMediaFormatCheck(String path, int correctLength)
         {
+            Console.WriteLine(">>>>MEDIA DURATION: "+checkMediaLength(path) + " seconds");
+            
+
             Boolean[] isFormatted = { false, false };
 
             return isFormatted;
         }
-        /*
-        public string checkMediaLength()
+        
+        public string checkMediaLength(string inputFile)
         {
-            if (args.Length < 1)
-            {
-                Console.WriteLine("Usage: ConsoleApplication1.exe [Filename to test]");
-                return;
-            }
+            string output = "nope :(";
 
-            string file = args[0];
+            string file = inputFile;
             ShellFile so = ShellFile.FromFilePath(file);
             double nanoseconds;
             double.TryParse(so.Properties.System.Media.Duration.Value.ToString(),
@@ -172,9 +172,11 @@ namespace ProjectEcho
             {
                 double seconds = Convert100NanosecondsToMilliseconds(nanoseconds) / 1000;
                 Console.WriteLine(seconds.ToString());
+                output = seconds.ToString();
             }
+            return output;
         }
-        */
+        
 
         public static double Convert100NanosecondsToMilliseconds(double nanoseconds)
         {
