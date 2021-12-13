@@ -54,7 +54,7 @@ namespace ProjectEcho
             Boolean isCorrectLength = false;
 
             int actualLength = checkLength(document);
-            if(correctLength == actualLength || actualLength < correctLength)
+            if (correctLength == actualLength || actualLength < correctLength)
             {
                 isCorrectLength = true;
             }
@@ -83,7 +83,7 @@ namespace ProjectEcho
             bottomMarginFB = "Bottom margin: " + bottomMargin.ToString() + "\"";
 
             //If any margins are not one inch, return false
-            if((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
+            if ((leftMargin != correctMargin) || (rightMargin != correctMargin) || (topMargin != correctMargin) || (bottomMargin != correctMargin))
             {
                 return false;
             }
@@ -104,8 +104,8 @@ namespace ProjectEcho
             {
                 fontSizeFB = "Font size: " + fontSize.ToString() + "pt";
             }
-            
-            if(fontSize != 11)
+
+            if (fontSize != 11)
             {
                 return false;
             }
@@ -120,13 +120,13 @@ namespace ProjectEcho
             correct.Name = "Arial";
             Font blank = new Font();
             string currentFont = "";
-            foreach(Microsoft.Office.Interop.Word.Paragraph para in document.Paragraphs)
+            foreach (Microsoft.Office.Interop.Word.Paragraph para in document.Paragraphs)
             {
                 currentFont = para.Range.Font.Name;
 
-                if(para.Range.Font.Name.CompareTo(correct.Name) != 0)
+                if (para.Range.Font.Name.CompareTo(correct.Name) != 0)
                 {
-                    if(para.Range.Font.Name.CompareTo(blank.Name) != 0)
+                    if (para.Range.Font.Name.CompareTo(blank.Name) != 0)
                     {
                         isCorrectFont = false;
                         break;

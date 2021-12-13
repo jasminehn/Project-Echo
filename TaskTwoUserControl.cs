@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace ProjectEcho
 {
@@ -15,7 +14,7 @@ namespace ProjectEcho
      * Author(s): C. Segrue, I. Gnagy
      */
 
-    
+
     public partial class TaskTwoUserControl : UserControl
     {
         public String firstVideoPath = "";
@@ -72,21 +71,21 @@ namespace ProjectEcho
             controls[1] = new CheckBox { Anchor = AnchorStyles.Left, AutoSize = true };
             tableLayoutPanel1.Controls.AddRange(controls);
 
-            if((tableLayoutPanel1.Height + 25) < tableLayoutPanel1.MaximumSize.Height)
+            if ((tableLayoutPanel1.Height + 25) < tableLayoutPanel1.MaximumSize.Height)
             {
                 tableLayoutPanel1.Height += 25;
             }
 
             TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
-            foreach(RowStyle style in styles)
+            foreach (RowStyle style in styles)
             {
-                if(style.SizeType != SizeType.Absolute)
+                if (style.SizeType != SizeType.Absolute)
                 {
                     style.SizeType = SizeType.Absolute;
                 }
             }
 
-            foreach(RowStyle sizes in styles)
+            foreach (RowStyle sizes in styles)
             {
                 sizes.Height = 25;
             }
@@ -97,27 +96,27 @@ namespace ProjectEcho
         {
             Console.WriteLine("CLARE:: Number of Controls: " + tableLayoutPanel1.Controls.Count);
             Console.WriteLine("CLARE:: Number of ROWSs: " + tableLayoutPanel1.RowCount);
-            
-            if(tableLayoutPanel1.Controls.Count > 30)
+
+            if (tableLayoutPanel1.Controls.Count > 30)
             {
                 tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
                 tableLayoutPanel1.Controls.RemoveAt(tableLayoutPanel1.Controls.Count - 1);
 
-                if((tableLayoutPanel1.Height - 25) < tableLayoutPanel1.MinimumSize.Height)
+                if ((tableLayoutPanel1.Height - 25) < tableLayoutPanel1.MinimumSize.Height)
                 {
                     tableLayoutPanel1.Height -= 25;
                 }
 
                 TableLayoutRowStyleCollection styles = tableLayoutPanel1.RowStyles;
-                foreach(RowStyle style in styles)
+                foreach (RowStyle style in styles)
                 {
-                    if(style.SizeType != SizeType.Absolute)
+                    if (style.SizeType != SizeType.Absolute)
                     {
                         style.SizeType = SizeType.Absolute;
                     }
                 }
 
-                foreach(RowStyle sizes in styles)
+                foreach (RowStyle sizes in styles)
                 {
                     sizes.Height = 25;
                 }
@@ -170,16 +169,17 @@ namespace ProjectEcho
             try
             {
                 Process.Start(path);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
-            
+
             //clipOneFrame.URL = path;
             //clipOneFrame.Ctlcontrols.play();
         }
 
-        
+
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -195,7 +195,7 @@ namespace ProjectEcho
 
         private void FirstPlayButton_Click(object sender, EventArgs e)
         {
-            if(firstVideoPath != "")
+            if (firstVideoPath != "")
             {
                 PlayFile(firstVideoPath);
             }

@@ -24,9 +24,9 @@ namespace ProjectEcho
 
             String path = "";
 
-            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                foreach(string fileName in openFileDialog.FileNames)
+                foreach (string fileName in openFileDialog.FileNames)
                 {
                     path = Path.GetFullPath(fileName);
 
@@ -46,12 +46,12 @@ namespace ProjectEcho
                     try
                     {
                         //If the directory doesn't exist, create it
-                        if(!Directory.Exists(taskUploadsPath))
+                        if (!Directory.Exists(taskUploadsPath))
                         {
                             Directory.CreateDirectory(taskUploadsPath);
                         }
                     }
-                    catch(Exception)
+                    catch (Exception)
                     {
                         //fail silently
                     }
@@ -60,7 +60,7 @@ namespace ProjectEcho
 
                     //deletes all files in task/part folder
                     DirectoryInfo di = new DirectoryInfo(taskUploadsPath);
-                    foreach(FileInfo file in di.GetFiles())
+                    foreach (FileInfo file in di.GetFiles())
                     {
                         file.Delete();
                     }
@@ -77,12 +77,12 @@ namespace ProjectEcho
             openFileDialog.CheckFileExists = true;
             openFileDialog.AddExtension = true;
             openFileDialog.Multiselect = false;
-            
+
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
             //doctypes: document or media
 
-            if(docType == "document")
+            if (docType == "document")
             {
                 openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx"; //move this
             }
@@ -148,19 +148,19 @@ namespace ProjectEcho
             try
             {
                 //if the directory exists, read all files from it
-                if(Directory.Exists(taskUploadsPath))
+                if (Directory.Exists(taskUploadsPath))
                 {
                     DirectoryInfo d = new DirectoryInfo(taskUploadsPath); //set directory
                     FileInfo[] Files = d.GetFiles(); //get all files from the folder
                     //string str = "";
 
-                    foreach(FileInfo file in Files)
+                    foreach (FileInfo file in Files)
                     {
                         str = str + "\n" + file.Name; //adds each file name to the string
                     }
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 //do nothing
             }

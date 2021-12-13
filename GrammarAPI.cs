@@ -45,7 +45,7 @@ namespace ProjectEcho
             int len = mytext.Length;
             int subLen;
 
-            if(len > 20000)
+            if (len > 20000)
             {
                 subLen = len - 20000;
                 firstDocSegment = mytext.Substring(0, 10000);
@@ -55,7 +55,7 @@ namespace ProjectEcho
                 Console.WriteLine(" second " + secondDocSegment);
                 Console.WriteLine(" third " + thirdDocSegment);
             }
-            else if(len > 10000)
+            else if (len > 10000)
             {
                 subLen = len - 10000;
                 firstDocSegment = mytext.Substring(0, 10000);
@@ -71,10 +71,10 @@ namespace ProjectEcho
             try
             {
                 await GrammarCheck(firstDocSegment).ConfigureAwait(false);
-                if(mytext.Length > 10000)
+                if (mytext.Length > 10000)
                 {
                     await GrammarCheck(secondDocSegment).ConfigureAwait(false);
-                    if(mytext.Length > 20000)
+                    if (mytext.Length > 20000)
                     {
                         Console.WriteLine("*** over 20,000 characters");
 
@@ -82,7 +82,7 @@ namespace ProjectEcho
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Trace.WriteLine(ex);
             }
@@ -118,7 +118,7 @@ namespace ProjectEcho
                 }),
             };
 
-            using(var response = await client.SendAsync(request))
+            using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
@@ -127,19 +127,19 @@ namespace ProjectEcho
                 bool warn = v.warnings.incompleteResults;
                 string grammarReport = " ";
                 List<string> reportList = new List<string>();
-                foreach(var i in v.matches)
+                foreach (var i in v.matches)
                 {
                     errorCount++;
                     string errorID = i.rule.category.id;
 
                     grammarReport = "                      Error #" + errorCount + "\r\n\r\nSENTENCE: " + i.sentence + "\r\n\r\nISSUE: " + i.message + "\r\n\r\nLOCATION: " + i.offset.ToString() + " characters \r\n\r\nSUGGESTION(S): " + i.replacements + "\r\n" + "_____________________________" + "\r\n\r\n";
                     Console.WriteLine("ERROR #" + errorCount + "   error type:" + errorID);
-                    
+
                     if (errorID == "TYPOS")
                     {
                         spellingErrorCount++;
                     }
-                    else if(new[] { "GRAMMAR", "CASING", "PUNCTUATION" }.Contains(errorID))
+                    else if (new[] { "GRAMMAR", "CASING", "PUNCTUATION" }.Contains(errorID))
                     {
                         grammarErrorCount++;
                     }
@@ -148,13 +148,13 @@ namespace ProjectEcho
                         styleErrorCount = styleErrorCount + 1;
                     }
 
-                    Console.WriteLine("spelling error count: "+ spellingErrorCount);
+                    Console.WriteLine("spelling error count: " + spellingErrorCount);
                     Console.WriteLine("grammar error count: " + grammarErrorCount);
                     Console.WriteLine("style error count: " + styleErrorCount);
                     reportList.Add(grammarReport);
                 }
 
-                for(int i = 0; i < reportList.Count; i++)
+                for (int i = 0; i < reportList.Count; i++)
                 {
                     reportList[i] = reportList[i].Replace("[", "");
                     reportList[i] = reportList[i].Replace("]", "");
@@ -172,7 +172,7 @@ namespace ProjectEcho
         public static string OpenWordprocessingDocumentReadonly(string filepath)
         {
             // Uses the filepath to open a Word Document
-            using(WordprocessingDocument wordDocument =
+            using (WordprocessingDocument wordDocument =
                 WordprocessingDocument.Open(filepath, false))
             {
                 Body docInfo = wordDocument.MainDocumentPart.Document.Body;
@@ -215,9 +215,9 @@ namespace ProjectEcho
             string word = "";
             bool wordExists = true;
 
-            for(int i = 0; i < glossary.Length; i++)
+            for (int i = 0; i < glossary.Length; i++)
             {
-                if(documentString.Contains(glossary[i]))
+                if (documentString.Contains(glossary[i]))
                 {
                     //Console.WriteLine("Found word");
 
@@ -234,9 +234,9 @@ namespace ProjectEcho
                     glossaryWordList.Add(glossary[i]);
                 }
             }
-            if(!wordExists)
+            if (!wordExists)
             {
-                foreach(var i in missingWords)
+                foreach (var i in missingWords)
                 {
                     //Console.WriteLine(i);
                 }
@@ -292,41 +292,41 @@ namespace ProjectEcho
         }
     }
 
-/*    public class Matches
-    {
-        public string matches
+    /*    public class Matches
         {
-            get; set;
-        }
+            public string matches
+            {
+                get; set;
+            }
 
-        public string message
-        {
-            get; set;
-        }
+            public string message
+            {
+                get; set;
+            }
 
-        public string shortMessage
-        {
-            get; set;
-        }
+            public string shortMessage
+            {
+                get; set;
+            }
 
-        public string replacements
-        {
-            get; set;
-        }
+            public string replacements
+            {
+                get; set;
+            }
 
-        public int offset
-        {
-            get; set;
-        }
+            public int offset
+            {
+                get; set;
+            }
 
-        public int length
-        {
-            get; set;
-        }
+            public int length
+            {
+                get; set;
+            }
 
-        public string sentence
-        {
-            get; set;
-        }*/
-    
+            public string sentence
+            {
+                get; set;
+            }*/
+
 }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-using System.ComponentModel;
+﻿
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace ProjectEcho
 {
@@ -18,42 +12,42 @@ namespace ProjectEcho
         private Color offBackColor = Color.Gray;
         private Color offToggleColor = Color.Gainsboro;
 
-    /*    public Color OnBackColor
-        {
-            get => onBackColor;
-            set
+        /*    public Color OnBackColor
             {
-                onBackColor = value;
-                this.Invalidate();
+                get => onBackColor;
+                set
+                {
+                    onBackColor = value;
+                    this.Invalidate();
+                }
             }
-        }
-        public Color OnToggleColor
-        {
-            get => onToggleColor;
-            set
+            public Color OnToggleColor
             {
-                onToggleColor = value;
-                this.Invalidate();
+                get => onToggleColor;
+                set
+                {
+                    onToggleColor = value;
+                    this.Invalidate();
+                }
             }
-        }
-        public Color OffBackColor
-        {
-            get => offBackColor;
-            set
+            public Color OffBackColor
             {
-                offBackColor = value;
-                this.Invalidate();
+                get => offBackColor;
+                set
+                {
+                    offBackColor = value;
+                    this.Invalidate();
+                }
             }
-        }
-        public Color OffToggleColor
-        {
-            get => offToggleColor;
-            set
+            public Color OffToggleColor
             {
-                offToggleColor = value;
-                this.Invalidate();
-            }
-        }*/
+                get => offToggleColor;
+                set
+                {
+                    offToggleColor = value;
+                    this.Invalidate();
+                }
+            }*/
 
         public override string Text
         {
@@ -63,7 +57,7 @@ namespace ProjectEcho
             }
             set
             {
-            
+
             }
         }
 
@@ -117,7 +111,7 @@ namespace ProjectEcho
             //paintEvent.Graphics.Clear(this.Parent.BackColor);
             //this.Parent.BackColor = Color.White; //TO CHANGE, SET THIS TO THE THEME COLOR 
 
-            if(this.Checked) //ON
+            if (this.Checked) //ON
             {
                 paintEvent.Graphics.FillPath(new SolidBrush(onBackColor), GetFigurePath()); //Draw Control Surface
                 paintEvent.Graphics.FillEllipse(new SolidBrush(onToggleColor), new Rectangle(this.Width - this.Height + 1, 2, toggleSize, toggleSize)); //Draw Toggle

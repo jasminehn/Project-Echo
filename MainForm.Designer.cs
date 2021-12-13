@@ -120,7 +120,7 @@ namespace ProjectEcho
             this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
             this.forwardButton.Location = new System.Drawing.Point(1305, 7);
             this.forwardButton.Name = "forwardButton";
-            this.forwardButton.Size = new System.Drawing.Size(51, 55);
+            this.forwardButton.Size = new System.Drawing.Size(51, 57);
             this.forwardButton.TabIndex = 1;
             this.forwardButton.UseVisualStyleBackColor = false;
             this.forwardButton.Click += new System.EventHandler(this.forwardButton_Click);
@@ -347,6 +347,7 @@ namespace ProjectEcho
             this.button4.TabIndex = 1;
             this.button4.Text = "READ THE DOCUMENTATION FOR TASK THREE";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.taskThreeDocuButton_Click);
             // 
             // t3videoLaunchButton
             // 
@@ -474,6 +475,7 @@ namespace ProjectEcho
             this.button5.TabIndex = 1;
             this.button5.Text = "READ THE DOCUMENTATION FOR TASK TWO";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.taskTwoDocuButton_Click);
             // 
             // t2videoLaunchButton
             // 
@@ -591,7 +593,7 @@ namespace ProjectEcho
             this.button7.TabIndex = 1;
             this.button7.Text = "READ THE DOCUMENTATION FOR TASK ONE";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.taskOneDocuButton_Click);
             // 
             // t1videoLaunchButton
             // 
@@ -686,7 +688,6 @@ namespace ProjectEcho
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
-            
             // 
             // taskThree
             // 

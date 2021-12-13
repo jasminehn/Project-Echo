@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.IO;
 namespace ProjectEcho
 {
     /**
@@ -184,8 +177,8 @@ namespace ProjectEcho
             String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType);
 
             uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
-                
-            
+
+
         }
 
         public async Task CheckMipltipleDocuments(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
@@ -194,7 +187,7 @@ namespace ProjectEcho
             ProgressBar formatPB, Label formatPS,
             ProgressBar grammarPB, Label grammarPS,
             int pageCount)
-        { 
+        {
             //Clears all checkedListBoxes
             foreach (int i in formatCL.CheckedIndices)
             {
@@ -418,6 +411,6 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        
+
     }
 }

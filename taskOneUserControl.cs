@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Windows.Media;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectEcho
 {
@@ -48,7 +45,7 @@ namespace ProjectEcho
                         this.formatCheckList1A.SetItemChecked(index, true);
                     });
             }
-            
+
         }
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)
@@ -86,9 +83,9 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "A", uploadInfo1A, 
-                    formatCheckList1A, formatTextBox1A, 
-                    grammarCheckList1A, grammarErrors1A, 
+                await CheckDocument(1, "A", uploadInfo1A,
+                    formatCheckList1A, formatTextBox1A,
+                    grammarCheckList1A, grammarErrors1A,
                     contentCheckList1A, missingWordList1A,
                     formatProgressBar1A, formatProgressStatus1A,
                     grammarProgressBar1A, grammarProgressStatus1A,
@@ -105,9 +102,9 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "B", uploadInfo1B, 
-                    formatCheckList1B, formatTextBox1B, 
-                    grammarCheckList1B, grammarErrors1B, 
+                await CheckDocument(1, "B", uploadInfo1B,
+                    formatCheckList1B, formatTextBox1B,
+                    grammarCheckList1B, grammarErrors1B,
                     contentCheckList1B, missingWordList1B,
                     formatProgressBar1B, formatProgressStatus1B,
                     grammarProgressBar1B, grammarProgressStatus1B,
@@ -124,9 +121,9 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "C", uploadInfo1C, 
-                    formatCheckList1C, formatTextBox1C, 
-                    grammarCheckList1C, grammarErrors1C, 
+                await CheckDocument(1, "C", uploadInfo1C,
+                    formatCheckList1C, formatTextBox1C,
+                    grammarCheckList1C, grammarErrors1C,
                     contentCheckList1C, missingWordList1C,
                     formatProgressBar1C, formatProgressStatus1C,
                     grammarProgressBar1C, grammarProgressStatus1C,
@@ -143,9 +140,9 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "D", uploadInfo1D, 
-                    formatCheckList1D, formatTextBox1D, 
-                    grammarCheckList1D, grammarErrors1D, 
+                await CheckDocument(1, "D", uploadInfo1D,
+                    formatCheckList1D, formatTextBox1D,
+                    grammarCheckList1D, grammarErrors1D,
                     contentCheckList1D, missingWordList1D,
                     formatProgressBar1D, formatProgressStatus1D,
                     grammarProgressBar1D, grammarProgressStatus1D,
@@ -162,9 +159,9 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckDocument(1, "E", uploadInfo1E, 
-                    formatCheckList1E, formatTextBox1E, 
-                    grammarCheckList1E, grammarErrors1E, 
+                await CheckDocument(1, "E", uploadInfo1E,
+                    formatCheckList1E, formatTextBox1E,
+                    grammarCheckList1E, grammarErrors1E,
                     contentCheckList1E, missingWordList1E,
                     formatProgressBar1E, formatProgressStatus1E,
                     grammarProgressBar1E, grammarProgressStatus1E,
@@ -180,10 +177,10 @@ namespace ProjectEcho
         /* This method programatically executed the uploading and checking of a document. 
          * Because each task part has unique controls, this is necessary to avoid repeated code.
         */
-        public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel, 
-            CheckedListBox formatCL, TextBox formatTextBox, 
-            CheckedListBox grammarCL, TextBox grammarErrorsTextBox, 
-            CheckedListBox contentCL, ListBox missingWordsListBox, 
+        public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel,
+            CheckedListBox formatCL, TextBox formatTextBox,
+            CheckedListBox grammarCL, TextBox grammarErrorsTextBox,
+            CheckedListBox contentCL, ListBox missingWordsListBox,
             ProgressBar formatPB, Label formatPS,
             ProgressBar grammarPB, Label grammarPS,
             ProgressBar contentPB, Label contentPS,
@@ -234,17 +231,17 @@ namespace ProjectEcho
 
             String path = dh.uploadDocument(taskNum, taskPart);
 
-            if(path.EndsWith(".docx") || path.EndsWith(".doc"))
+            if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
                 //Execute format analysis
                 await processData(flist, fprogress); //PROGRESS BAR
-                
+
                 uploadInfoLabel.Text = "Uploaded: " + dh.displayDocuments(taskNum, taskPart); //updates text displaying the previously uploaded files
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
 
-                for(int i = 0; i < formatCL.Items.Count; i++)
+                for (int i = 0; i < formatCL.Items.Count; i++)
                 {
-                    if(itemsChecked[i].Equals(true))
+                    if (itemsChecked[i].Equals(true))
                     {
                         formatCL.SetItemChecked(i, true);
                     }
@@ -270,7 +267,7 @@ namespace ProjectEcho
 
             grammarErrorsTextBox.Text = grammarReport;
 
-            if(GrammarAPI.spellingErrorCount == 0)
+            if (GrammarAPI.spellingErrorCount == 0)
             {
                 grammarCL.SetItemChecked(0, true);
             }
@@ -287,7 +284,7 @@ namespace ProjectEcho
             // Execute content analysis
             await processData(clist, cprogress);//PROGRESS BAR
             missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
-            if(missingWordsListBox.Items.Count == 0)
+            if (missingWordsListBox.Items.Count == 0)
             {
                 contentCL.SetItemChecked(0, true);
             }
@@ -302,10 +299,10 @@ namespace ProjectEcho
 
             Properties.Settings.Default.checkerprogress = string.Join(",", indices);
             Properties.Settings.Default.Save();
-            
+
         }
 
-        
+
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -332,7 +329,7 @@ namespace ProjectEcho
 
         private void TaskOneUserControl_Leave(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

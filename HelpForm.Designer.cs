@@ -64,12 +64,12 @@ namespace ProjectEcho
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // partComboBox
             // 
             this.partComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.partComboBox.FormattingEnabled = true;
             this.partComboBox.Location = new System.Drawing.Point(924, 81);
-            this.partComboBox.Name = "comboBox2";
+            this.partComboBox.Name = "partComboBox";
             this.partComboBox.Size = new System.Drawing.Size(281, 21);
             this.partComboBox.TabIndex = 2;
             this.partComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
@@ -255,6 +255,7 @@ namespace ProjectEcho
             this.Text = "Help";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HelpForm_FormClosing);
             this.Load += new System.EventHandler(this.HelpForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.HelpForm_VisibleChanged);
             this.MouseEnter += new System.EventHandler(this.HelpForm_MouseEnter);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -64,7 +62,7 @@ namespace ProjectEcho
             fontColor = Properties.Settings.Default.fcolor;
 
             var controls = settingsHandler.getAll(this, typeof(Label));
-            foreach(Control c in controls)
+            foreach (Control c in controls)
             {
                 FontFamily fon = Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
@@ -86,7 +84,7 @@ namespace ProjectEcho
                 fontColor = Color.White;
 
                 if (currback == Color.White)
-                {   
+                {
                     BackColor = backgroundColor;
                     ForeColor = fontColor;
 
@@ -189,7 +187,7 @@ namespace ProjectEcho
             //Checks boldness toggles
             if (boldnessToggle.Checked) //ON
             {
-                foreach(Control c in labels) //Changes every label indivdually
+                foreach (Control c in labels) //Changes every label indivdually
                 {
                     FontFamily fam = c.Font.FontFamily; //Sets current font style
                     float s = c.Font.Size; //Sets current font size
@@ -197,7 +195,7 @@ namespace ProjectEcho
                     //Passes in font style, size and changes to bold
                     c.Font = new System.Drawing.Font(fam, s, FontStyle.Bold);
                 }
-                foreach(CheckedListBox c in checkLists) //Changes every label indivdually
+                foreach (CheckedListBox c in checkLists) //Changes every label indivdually
                 {
                     FontFamily fam = c.Font.FontFamily; //Sets current font style
                     float s = c.Font.Size; //Sets current font size
@@ -208,13 +206,13 @@ namespace ProjectEcho
             }
             else //OFF
             {
-                foreach(Control c in labels)
+                foreach (Control c in labels)
                 {
                     FontFamily fam = c.Font.FontFamily;
                     float s = c.Font.Size;
                     c.Font = new System.Drawing.Font(fam, s, FontStyle.Regular);
                 }
-                foreach(CheckedListBox c in checkLists)
+                foreach (CheckedListBox c in checkLists)
                 {
                     FontFamily fam = c.Font.FontFamily;
                     float s = c.Font.Size;
@@ -238,7 +236,7 @@ namespace ProjectEcho
 
             float curr = textsizeAdjust.Value; // gets current font size
 
-            
+
             //Checks if the slider val is getting larger or smaller
             if (prev < curr)
             {
@@ -302,9 +300,9 @@ namespace ProjectEcho
                     textSizeOffset = textsizeAdjust.Value;
                     Properties.Settings.Default.textsize = textSizeOffset;
                     Properties.Settings.Default.Save();
-                }                
+                }
                 prev = curr;
-            }            
+            }
         }
 
         private void applyButton_Click(object sender, EventArgs e)
@@ -314,7 +312,7 @@ namespace ProjectEcho
             Properties.Settings.Default.darkmode = switchButton.Checked;
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.bgcolor = backgroundColor;
-            Properties.Settings.Default.bgmain= backgroundMain;
+            Properties.Settings.Default.bgmain = backgroundMain;
             Properties.Settings.Default.Save();
 
             this.Close(); //close settings menu when they save te settings
