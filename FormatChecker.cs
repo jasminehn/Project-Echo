@@ -20,7 +20,7 @@ namespace ProjectEcho
         public string bottomMarginFB = "Bottom margin: ";
         public string fontTypeFB = "Font type: ";
         public string fontSizeFB = "Font size: ";
-        public string pageNumFB = "Document length: ";
+        public string pageNumFB = "Length: ";
 
         public Boolean[] runFormatCheck(String path, int correctLength)
         {
@@ -94,8 +94,18 @@ namespace ProjectEcho
 
         public Boolean checkFontSize(Document document)
         {
-            fontSizeFB = "Font size: " + document.Content.Font.Size.ToString() + "pt";
-            if(document.Content.Font.Size != 11)
+            float fontSize = document.Content.Font.Size;
+            // When the file has more than one font type, it returns 9999999. Instead, this will return a warning message
+            if (fontSize == 9999999)
+            {
+                fontSizeFB = "Font size: Multiple fonts detected";
+            }
+            else
+            {
+                fontSizeFB = "Font size: " + fontSize.ToString() + "pt";
+            }
+            
+            if(fontSize != 11)
             {
                 return false;
             }
@@ -124,12 +134,6 @@ namespace ProjectEcho
                 }
             }
 
-            // When the file has more than one font type, it returns 9999999. Instead, this will return a warning message
-            if (currentFont == "9999999")
-            {
-                currentFont = "Multiple fonts detected";
-            }
-
             fontTypeFB = "Font type: " + currentFont;
             progress += 25;
             return isCorrectFont;
@@ -138,9 +142,16 @@ namespace ProjectEcho
         public int checkLength(Document document)
         {
             int numPages = document.Content.get_Information(Microsoft.Office.Interop.Word.WdInformation.wdNumberOfPagesInDocument);
-            pageNumFB = "Document length: " + numPages.ToString() + " page(s)";
+            pageNumFB = "Length: " + numPages.ToString() + " page(s)";
             progress += 25;
             return numPages;
+        }
+
+        public Boolean[] runMediaFormatCheck(String path, int correctLength)
+        {
+            Boolean[] isFormatted = { false, false };
+
+            return isFormatted;
         }
     }
 }
