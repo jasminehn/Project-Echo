@@ -247,10 +247,11 @@ namespace ProjectEcho
         {
             if(pdfComboBox.SelectedIndex == 0)
             {
+                partComboBox.Enabled = true;
                 url = FileName1;
             } else if(pdfComboBox.SelectedIndex == 1)
             {
-
+                partComboBox.Enabled = false;
                 url = FileName2;
             }
             urlBox.Text = url;
