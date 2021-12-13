@@ -98,14 +98,14 @@ namespace ProjectEcho
             this.panel20 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.grammarProgressBar3B = new System.Windows.Forms.ProgressBar();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.grammarProgressStatus3B = new System.Windows.Forms.Label();
+            this.formatProgressBar3B = new System.Windows.Forms.ProgressBar();
             this.label20 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.formatProgressStatus3B = new System.Windows.Forms.Label();
             this.UploadButton3B = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
+            this.uploadInfo3B = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -148,14 +148,14 @@ namespace ProjectEcho
             this.panel11 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.grammarProgressBar3C = new System.Windows.Forms.ProgressBar();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.grammarProgressStatus3C = new System.Windows.Forms.Label();
+            this.formatProgressBar3C = new System.Windows.Forms.ProgressBar();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.formatProgressStatus3C = new System.Windows.Forms.Label();
             this.UploadButton3C = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
+            this.uploadInfo3C = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -218,13 +218,13 @@ namespace ProjectEcho
             this.UploadButton3D = new System.Windows.Forms.Button();
             this.label105 = new System.Windows.Forms.Label();
             this.panel45 = new System.Windows.Forms.Panel();
-            this.progressBar9 = new System.Windows.Forms.ProgressBar();
+            this.formatProgressBar3D = new System.Windows.Forms.ProgressBar();
             this.label106 = new System.Windows.Forms.Label();
             this.uploadInfo1D = new System.Windows.Forms.Label();
             this.label108 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
             this.progressBar10 = new System.Windows.Forms.ProgressBar();
-            this.progressBar11 = new System.Windows.Forms.ProgressBar();
+            this.grammarProgressBar3D = new System.Windows.Forms.ProgressBar();
             this.label110 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
@@ -263,16 +263,16 @@ namespace ProjectEcho
             this.UploadButton3E = new System.Windows.Forms.Button();
             this.label141 = new System.Windows.Forms.Label();
             this.panel58 = new System.Windows.Forms.Panel();
-            this.progressBar8 = new System.Windows.Forms.ProgressBar();
+            this.formatProgressBar3E = new System.Windows.Forms.ProgressBar();
             this.label142 = new System.Windows.Forms.Label();
             this.label143 = new System.Windows.Forms.Label();
             this.label144 = new System.Windows.Forms.Label();
             this.label145 = new System.Windows.Forms.Label();
             this.progressBar14 = new System.Windows.Forms.ProgressBar();
-            this.progressBar15 = new System.Windows.Forms.ProgressBar();
-            this.label146 = new System.Windows.Forms.Label();
+            this.grammarProgressBar3E = new System.Windows.Forms.ProgressBar();
+            this.formatProgressStatus3E = new System.Windows.Forms.Label();
             this.label147 = new System.Windows.Forms.Label();
-            this.label148 = new System.Windows.Forms.Label();
+            this.grammarProgressStatus3E = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
             this.panel28.SuspendLayout();
@@ -710,7 +710,7 @@ namespace ProjectEcho
             "No Spelling Issues",
             "No Grammar Issues",
             "No Style Issues"});
-            this.grammarCheckList3A.Location = new System.Drawing.Point(46, 46);
+            this.grammarCheckList3A.Location = new System.Drawing.Point(14, 46);
             this.grammarCheckList3A.MinimumSize = new System.Drawing.Size(180, 72);
             this.grammarCheckList3A.Name = "grammarCheckList3A";
             this.grammarCheckList3A.Size = new System.Drawing.Size(180, 72);
@@ -1101,14 +1101,14 @@ namespace ProjectEcho
             this.panel20.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel20.Controls.Add(this.label11);
             this.panel20.Controls.Add(this.label17);
-            this.panel20.Controls.Add(this.progressBar2);
+            this.panel20.Controls.Add(this.grammarProgressBar3B);
             this.panel20.Controls.Add(this.label18);
-            this.panel20.Controls.Add(this.label19);
-            this.panel20.Controls.Add(this.progressBar3);
+            this.panel20.Controls.Add(this.grammarProgressStatus3B);
+            this.panel20.Controls.Add(this.formatProgressBar3B);
             this.panel20.Controls.Add(this.label20);
-            this.panel20.Controls.Add(this.label27);
+            this.panel20.Controls.Add(this.formatProgressStatus3B);
             this.panel20.Controls.Add(this.UploadButton3B);
-            this.panel20.Controls.Add(this.label33);
+            this.panel20.Controls.Add(this.uploadInfo3B);
             this.panel20.Controls.Add(this.label34);
             this.panel20.Controls.Add(this.label35);
             this.panel20.Location = new System.Drawing.Point(13, 121);
@@ -1135,13 +1135,13 @@ namespace ProjectEcho
             this.label17.Text = "Warning: Please save your Document and close out of Microsoft Word before uploadi" +
     "ng.";
             // 
-            // progressBar2
+            // grammarProgressBar3B
             // 
-            this.progressBar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar2.Location = new System.Drawing.Point(12, 306);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(224, 16);
-            this.progressBar2.TabIndex = 32;
+            this.grammarProgressBar3B.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grammarProgressBar3B.Location = new System.Drawing.Point(12, 306);
+            this.grammarProgressBar3B.Name = "grammarProgressBar3B";
+            this.grammarProgressBar3B.Size = new System.Drawing.Size(224, 16);
+            this.grammarProgressBar3B.TabIndex = 32;
             // 
             // label18
             // 
@@ -1154,24 +1154,24 @@ namespace ProjectEcho
             this.label18.TabIndex = 33;
             this.label18.Text = "GRAMMAR:";
             // 
-            // label19
+            // grammarProgressStatus3B
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(162, 287);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(78, 16);
-            this.label19.TabIndex = 34;
-            this.label19.Text = "ANALYZING...";
+            this.grammarProgressStatus3B.AutoSize = true;
+            this.grammarProgressStatus3B.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarProgressStatus3B.ForeColor = System.Drawing.Color.White;
+            this.grammarProgressStatus3B.Location = new System.Drawing.Point(162, 287);
+            this.grammarProgressStatus3B.Name = "grammarProgressStatus3B";
+            this.grammarProgressStatus3B.Size = new System.Drawing.Size(78, 16);
+            this.grammarProgressStatus3B.TabIndex = 34;
+            this.grammarProgressStatus3B.Text = "ANALYZING...";
             // 
-            // progressBar3
+            // formatProgressBar3B
             // 
-            this.progressBar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar3.Location = new System.Drawing.Point(12, 236);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(224, 16);
-            this.progressBar3.TabIndex = 29;
+            this.formatProgressBar3B.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.formatProgressBar3B.Location = new System.Drawing.Point(12, 236);
+            this.formatProgressBar3B.Name = "formatProgressBar3B";
+            this.formatProgressBar3B.Size = new System.Drawing.Size(224, 16);
+            this.formatProgressBar3B.TabIndex = 29;
             // 
             // label20
             // 
@@ -1184,16 +1184,16 @@ namespace ProjectEcho
             this.label20.TabIndex = 30;
             this.label20.Text = "FORMAT AND STYLE:";
             // 
-            // label27
+            // formatProgressStatus3B
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(162, 217);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(78, 16);
-            this.label27.TabIndex = 31;
-            this.label27.Text = "ANALYZING...";
+            this.formatProgressStatus3B.AutoSize = true;
+            this.formatProgressStatus3B.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatProgressStatus3B.ForeColor = System.Drawing.Color.White;
+            this.formatProgressStatus3B.Location = new System.Drawing.Point(162, 217);
+            this.formatProgressStatus3B.Name = "formatProgressStatus3B";
+            this.formatProgressStatus3B.Size = new System.Drawing.Size(78, 16);
+            this.formatProgressStatus3B.TabIndex = 31;
+            this.formatProgressStatus3B.Text = "ANALYZING...";
             // 
             // UploadButton3B
             // 
@@ -1209,17 +1209,18 @@ namespace ProjectEcho
             this.UploadButton3B.Size = new System.Drawing.Size(50, 56);
             this.UploadButton3B.TabIndex = 24;
             this.UploadButton3B.UseVisualStyleBackColor = true;
+            this.UploadButton3B.Click += new System.EventHandler(this.UploadButton3B_Click);
             // 
-            // label33
+            // uploadInfo3B
             // 
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(12, 354);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(224, 93);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "Uploaded:";
+            this.uploadInfo3B.BackColor = System.Drawing.Color.Transparent;
+            this.uploadInfo3B.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo3B.ForeColor = System.Drawing.Color.White;
+            this.uploadInfo3B.Location = new System.Drawing.Point(12, 354);
+            this.uploadInfo3B.Name = "uploadInfo3B";
+            this.uploadInfo3B.Size = new System.Drawing.Size(224, 93);
+            this.uploadInfo3B.TabIndex = 19;
+            this.uploadInfo3B.Text = "Uploaded:";
             // 
             // label34
             // 
@@ -1675,14 +1676,14 @@ namespace ProjectEcho
             this.panel11.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel11.Controls.Add(this.label7);
             this.panel11.Controls.Add(this.label8);
-            this.panel11.Controls.Add(this.progressBar4);
+            this.panel11.Controls.Add(this.grammarProgressBar3C);
             this.panel11.Controls.Add(this.label9);
-            this.panel11.Controls.Add(this.label10);
-            this.panel11.Controls.Add(this.progressBar6);
+            this.panel11.Controls.Add(this.grammarProgressStatus3C);
+            this.panel11.Controls.Add(this.formatProgressBar3C);
             this.panel11.Controls.Add(this.label12);
-            this.panel11.Controls.Add(this.label13);
+            this.panel11.Controls.Add(this.formatProgressStatus3C);
             this.panel11.Controls.Add(this.UploadButton3C);
-            this.panel11.Controls.Add(this.label14);
+            this.panel11.Controls.Add(this.uploadInfo3C);
             this.panel11.Controls.Add(this.label15);
             this.panel11.Controls.Add(this.label23);
             this.panel11.Location = new System.Drawing.Point(13, 121);
@@ -1709,13 +1710,13 @@ namespace ProjectEcho
             this.label8.Text = "Warning: Please save your Document and close out of Microsoft Word before uploadi" +
     "ng.";
             // 
-            // progressBar4
+            // grammarProgressBar3C
             // 
-            this.progressBar4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar4.Location = new System.Drawing.Point(12, 306);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(224, 16);
-            this.progressBar4.TabIndex = 32;
+            this.grammarProgressBar3C.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grammarProgressBar3C.Location = new System.Drawing.Point(12, 306);
+            this.grammarProgressBar3C.Name = "grammarProgressBar3C";
+            this.grammarProgressBar3C.Size = new System.Drawing.Size(224, 16);
+            this.grammarProgressBar3C.TabIndex = 32;
             // 
             // label9
             // 
@@ -1728,24 +1729,24 @@ namespace ProjectEcho
             this.label9.TabIndex = 33;
             this.label9.Text = "GRAMMAR:";
             // 
-            // label10
+            // grammarProgressStatus3C
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(162, 287);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 16);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "ANALYZING...";
+            this.grammarProgressStatus3C.AutoSize = true;
+            this.grammarProgressStatus3C.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarProgressStatus3C.ForeColor = System.Drawing.Color.White;
+            this.grammarProgressStatus3C.Location = new System.Drawing.Point(162, 287);
+            this.grammarProgressStatus3C.Name = "grammarProgressStatus3C";
+            this.grammarProgressStatus3C.Size = new System.Drawing.Size(78, 16);
+            this.grammarProgressStatus3C.TabIndex = 34;
+            this.grammarProgressStatus3C.Text = "ANALYZING...";
             // 
-            // progressBar6
+            // formatProgressBar3C
             // 
-            this.progressBar6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar6.Location = new System.Drawing.Point(12, 236);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(224, 16);
-            this.progressBar6.TabIndex = 29;
+            this.formatProgressBar3C.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.formatProgressBar3C.Location = new System.Drawing.Point(12, 236);
+            this.formatProgressBar3C.Name = "formatProgressBar3C";
+            this.formatProgressBar3C.Size = new System.Drawing.Size(224, 16);
+            this.formatProgressBar3C.TabIndex = 29;
             // 
             // label12
             // 
@@ -1758,16 +1759,16 @@ namespace ProjectEcho
             this.label12.TabIndex = 30;
             this.label12.Text = "FORMAT AND STYLE:";
             // 
-            // label13
+            // formatProgressStatus3C
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(162, 217);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 16);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "ANALYZING...";
+            this.formatProgressStatus3C.AutoSize = true;
+            this.formatProgressStatus3C.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatProgressStatus3C.ForeColor = System.Drawing.Color.White;
+            this.formatProgressStatus3C.Location = new System.Drawing.Point(162, 217);
+            this.formatProgressStatus3C.Name = "formatProgressStatus3C";
+            this.formatProgressStatus3C.Size = new System.Drawing.Size(78, 16);
+            this.formatProgressStatus3C.TabIndex = 31;
+            this.formatProgressStatus3C.Text = "ANALYZING...";
             // 
             // UploadButton3C
             // 
@@ -1783,17 +1784,18 @@ namespace ProjectEcho
             this.UploadButton3C.Size = new System.Drawing.Size(50, 56);
             this.UploadButton3C.TabIndex = 24;
             this.UploadButton3C.UseVisualStyleBackColor = true;
+            this.UploadButton3C.Click += new System.EventHandler(this.UploadButton3C_Click);
             // 
-            // label14
+            // uploadInfo3C
             // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(12, 354);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(224, 93);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Uploaded:";
+            this.uploadInfo3C.BackColor = System.Drawing.Color.Transparent;
+            this.uploadInfo3C.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo3C.ForeColor = System.Drawing.Color.White;
+            this.uploadInfo3C.Location = new System.Drawing.Point(12, 354);
+            this.uploadInfo3C.Name = "uploadInfo3C";
+            this.uploadInfo3C.Size = new System.Drawing.Size(224, 93);
+            this.uploadInfo3C.TabIndex = 19;
+            this.uploadInfo3C.Text = "Uploaded:";
             // 
             // label15
             // 
@@ -2502,13 +2504,13 @@ namespace ProjectEcho
             // 
             this.panel45.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel45.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel45.Controls.Add(this.progressBar9);
+            this.panel45.Controls.Add(this.formatProgressBar3D);
             this.panel45.Controls.Add(this.label106);
             this.panel45.Controls.Add(this.uploadInfo1D);
             this.panel45.Controls.Add(this.label108);
             this.panel45.Controls.Add(this.label109);
             this.panel45.Controls.Add(this.progressBar10);
-            this.panel45.Controls.Add(this.progressBar11);
+            this.panel45.Controls.Add(this.grammarProgressBar3D);
             this.panel45.Controls.Add(this.label110);
             this.panel45.Controls.Add(this.label111);
             this.panel45.Controls.Add(this.label112);
@@ -2518,14 +2520,13 @@ namespace ProjectEcho
             this.panel45.Size = new System.Drawing.Size(284, 289);
             this.panel45.TabIndex = 32;
             // 
-            // progressBar9
+            // formatProgressBar3D
             // 
-            this.progressBar9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar9.Location = new System.Drawing.Point(12, 29);
-            this.progressBar9.Name = "progressBar9";
-            this.progressBar9.Size = new System.Drawing.Size(254, 28);
-            this.progressBar9.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar9.TabIndex = 21;
+            this.formatProgressBar3D.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.formatProgressBar3D.Location = new System.Drawing.Point(12, 29);
+            this.formatProgressBar3D.Name = "formatProgressBar3D";
+            this.formatProgressBar3D.Size = new System.Drawing.Size(254, 28);
+            this.formatProgressBar3D.TabIndex = 21;
             // 
             // label106
             // 
@@ -2576,14 +2577,13 @@ namespace ProjectEcho
             this.progressBar10.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar10.TabIndex = 29;
             // 
-            // progressBar11
+            // grammarProgressBar3D
             // 
-            this.progressBar11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar11.Location = new System.Drawing.Point(12, 101);
-            this.progressBar11.Name = "progressBar11";
-            this.progressBar11.Size = new System.Drawing.Size(254, 28);
-            this.progressBar11.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar11.TabIndex = 25;
+            this.grammarProgressBar3D.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grammarProgressBar3D.Location = new System.Drawing.Point(12, 101);
+            this.grammarProgressBar3D.Name = "grammarProgressBar3D";
+            this.grammarProgressBar3D.Size = new System.Drawing.Size(254, 28);
+            this.grammarProgressBar3D.TabIndex = 25;
             // 
             // label110
             // 
@@ -3014,30 +3014,29 @@ namespace ProjectEcho
             // 
             this.panel58.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel58.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel58.Controls.Add(this.progressBar8);
+            this.panel58.Controls.Add(this.formatProgressBar3E);
             this.panel58.Controls.Add(this.label142);
             this.panel58.Controls.Add(this.label143);
             this.panel58.Controls.Add(this.label144);
             this.panel58.Controls.Add(this.label145);
             this.panel58.Controls.Add(this.progressBar14);
-            this.panel58.Controls.Add(this.progressBar15);
-            this.panel58.Controls.Add(this.label146);
+            this.panel58.Controls.Add(this.grammarProgressBar3E);
+            this.panel58.Controls.Add(this.formatProgressStatus3E);
             this.panel58.Controls.Add(this.label147);
-            this.panel58.Controls.Add(this.label148);
+            this.panel58.Controls.Add(this.grammarProgressStatus3E);
             this.panel58.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel58.Location = new System.Drawing.Point(1066, 242);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(284, 289);
             this.panel58.TabIndex = 32;
             // 
-            // progressBar8
+            // formatProgressBar3E
             // 
-            this.progressBar8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar8.Location = new System.Drawing.Point(12, 29);
-            this.progressBar8.Name = "progressBar8";
-            this.progressBar8.Size = new System.Drawing.Size(254, 28);
-            this.progressBar8.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar8.TabIndex = 21;
+            this.formatProgressBar3E.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.formatProgressBar3E.Location = new System.Drawing.Point(12, 29);
+            this.formatProgressBar3E.Name = "formatProgressBar3E";
+            this.formatProgressBar3E.Size = new System.Drawing.Size(254, 28);
+            this.formatProgressBar3E.TabIndex = 21;
             // 
             // label142
             // 
@@ -3088,24 +3087,23 @@ namespace ProjectEcho
             this.progressBar14.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar14.TabIndex = 29;
             // 
-            // progressBar15
+            // grammarProgressBar3E
             // 
-            this.progressBar15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar15.Location = new System.Drawing.Point(12, 101);
-            this.progressBar15.Name = "progressBar15";
-            this.progressBar15.Size = new System.Drawing.Size(254, 28);
-            this.progressBar15.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar15.TabIndex = 25;
+            this.grammarProgressBar3E.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grammarProgressBar3E.Location = new System.Drawing.Point(12, 101);
+            this.grammarProgressBar3E.Name = "grammarProgressBar3E";
+            this.grammarProgressBar3E.Size = new System.Drawing.Size(254, 28);
+            this.grammarProgressBar3E.TabIndex = 25;
             // 
-            // label146
+            // formatProgressStatus3E
             // 
-            this.label146.AutoSize = true;
-            this.label146.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label146.Location = new System.Drawing.Point(188, 10);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(78, 16);
-            this.label146.TabIndex = 28;
-            this.label146.Text = "ANALYZING...";
+            this.formatProgressStatus3E.AutoSize = true;
+            this.formatProgressStatus3E.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatProgressStatus3E.Location = new System.Drawing.Point(188, 10);
+            this.formatProgressStatus3E.Name = "formatProgressStatus3E";
+            this.formatProgressStatus3E.Size = new System.Drawing.Size(78, 16);
+            this.formatProgressStatus3E.TabIndex = 28;
+            this.formatProgressStatus3E.Text = "ANALYZING...";
             // 
             // label147
             // 
@@ -3117,15 +3115,15 @@ namespace ProjectEcho
             this.label147.TabIndex = 26;
             this.label147.Text = "GRAMMAR:";
             // 
-            // label148
+            // grammarProgressStatus3E
             // 
-            this.label148.AutoSize = true;
-            this.label148.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label148.Location = new System.Drawing.Point(188, 82);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(78, 16);
-            this.label148.TabIndex = 27;
-            this.label148.Text = "ANALYZING...";
+            this.grammarProgressStatus3E.AutoSize = true;
+            this.grammarProgressStatus3E.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarProgressStatus3E.Location = new System.Drawing.Point(188, 82);
+            this.grammarProgressStatus3E.Name = "grammarProgressStatus3E";
+            this.grammarProgressStatus3E.Size = new System.Drawing.Size(78, 16);
+            this.grammarProgressStatus3E.TabIndex = 27;
+            this.grammarProgressStatus3E.Text = "ANALYZING...";
             // 
             // label149
             // 
@@ -3317,13 +3315,13 @@ namespace ProjectEcho
         private System.Windows.Forms.Button UploadButton3D;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.ProgressBar progressBar9;
+        private System.Windows.Forms.ProgressBar formatProgressBar3D;
         private System.Windows.Forms.Label label106;
         private System.Windows.Forms.Label uploadInfo1D;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.ProgressBar progressBar10;
-        private System.Windows.Forms.ProgressBar progressBar11;
+        private System.Windows.Forms.ProgressBar grammarProgressBar3D;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.Label label111;
         private System.Windows.Forms.Label label112;
@@ -3409,16 +3407,16 @@ namespace ProjectEcho
         private System.Windows.Forms.Button UploadButton3E;
         private System.Windows.Forms.Label label141;
         private System.Windows.Forms.Panel panel58;
-        private System.Windows.Forms.ProgressBar progressBar8;
+        private System.Windows.Forms.ProgressBar formatProgressBar3E;
         private System.Windows.Forms.Label label142;
         private System.Windows.Forms.Label label143;
         private System.Windows.Forms.Label label144;
         private System.Windows.Forms.Label label145;
         private System.Windows.Forms.ProgressBar progressBar14;
-        private System.Windows.Forms.ProgressBar progressBar15;
-        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.ProgressBar grammarProgressBar3E;
+        private System.Windows.Forms.Label formatProgressStatus3E;
         private System.Windows.Forms.Label label147;
-        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.Label grammarProgressStatus3E;
         private System.Windows.Forms.Label label149;
         private System.Windows.Forms.Label label150;
         public System.Windows.Forms.Panel panel27;
@@ -3434,14 +3432,14 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar grammarProgressBar3B;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.Label grammarProgressStatus3B;
+        private System.Windows.Forms.ProgressBar formatProgressBar3B;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label formatProgressStatus3B;
         private System.Windows.Forms.Button UploadButton3B;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label uploadInfo3B;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label45;
@@ -3479,14 +3477,14 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.ProgressBar grammarProgressBar3C;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.Label grammarProgressStatus3C;
+        private System.Windows.Forms.ProgressBar formatProgressBar3C;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label formatProgressStatus3C;
         private System.Windows.Forms.Button UploadButton3C;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label uploadInfo3C;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label28;

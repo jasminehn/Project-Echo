@@ -96,6 +96,40 @@ namespace ProjectEcho
             }
         }
 
+        private async void UploadButton3B_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckDocument(3, "B", "document", uploadInfo3B,
+                    formatCheckList3B, formatTextBox3B,
+                    grammarCheckList3B, grammarTextBox3B,
+                    formatProgressBar3B, formatProgressStatus3B,
+                    grammarProgressBar3B, grammarProgressStatus3B,
+                    2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
+        }
+
+        private async void UploadButton3C_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckDocument(3, "C", "document", uploadInfo3C,
+                    formatCheckList3C, formatTextBox3C,
+                    grammarCheckList3C, grammarTextBox3C,
+                    formatProgressBar3C, formatProgressStatus3C,
+                    grammarProgressBar3C, grammarProgressStatus3C,
+                    2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
+        }
+
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
         {
             foreach (int i in formatCL.CheckedIndices)
@@ -226,6 +260,6 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-       
+        
     }
 }
