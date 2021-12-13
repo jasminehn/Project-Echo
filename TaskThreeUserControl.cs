@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
+
 namespace ProjectEcho
 {
     /**
@@ -72,9 +75,16 @@ namespace ProjectEcho
             */
         }
 
-        private void MediaUploadButton3A_Click(object sender, EventArgs e)
+        private async void MediaUploadButton3A_Click(object sender, EventArgs e)
         {
-            CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
+            try
+            {
+                await CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
+            } catch(Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
+            }
+            
         }
 
         private async void UploadButton3A_Click(object sender, EventArgs e)
@@ -168,16 +178,15 @@ namespace ProjectEcho
 
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
         {
+
+
             foreach (int i in formatCL.CheckedIndices)
             {
                 formatCL.SetItemCheckState(i, CheckState.Unchecked);
             }
 
-
-            String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType);
-
             uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
-
+            //Boolean[] itemsChecked = fc.runFormatCheck(path, 0);
 
         }
 

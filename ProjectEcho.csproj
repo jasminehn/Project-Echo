@@ -219,12 +219,6 @@
     <Compile Include="TaskTwoUserControl.Designer.cs">
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="VideoPlayerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VideoPlayerControl.Designer.cs">
-      <DependentUpon>VideoPlayerControl.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,9 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskTwoUserControl.resx">
       <DependentUpon>TaskTwoUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VideoPlayerControl.resx">
-      <DependentUpon>VideoPlayerControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="PDF\MakingGoodChoices.pdf" />
@@ -488,7 +479,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="license.txt" />
-    <Content Include="Windows Logo.png" />
     <None Include="Resources\videoIcon.png" />
     <None Include="Resources\bookIcon.png" />
     <None Include="Resources\writingIcon.png" />

@@ -1,6 +1,8 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
 using Microsoft.WindowsAPICodePack.Shell;
+using WMPLib;
+using System.IO;
 
 namespace ProjectEcho
 {
@@ -151,8 +153,6 @@ namespace ProjectEcho
         public Boolean[] runMediaFormatCheck(String path, int correctLength)
         {
             Console.WriteLine(">>>>MEDIA DURATION: "+checkMediaLength(path) + " seconds");
-            
-
             Boolean[] isFormatted = { false, false };
 
             return isFormatted;
@@ -160,29 +160,26 @@ namespace ProjectEcho
         
         public string checkMediaLength(string inputFile)
         {
-            string output = "nope :(";
-
-            string file = inputFile;
-            ShellFile so = ShellFile.FromFilePath(file);
-            double nanoseconds;
-            double.TryParse(so.Properties.System.Media.Duration.Value.ToString(),
-            out nanoseconds);
-            Console.WriteLine("NanaoSeconds: {0}", nanoseconds);
-            if (nanoseconds > 0)
-            {
-                double seconds = Convert100NanosecondsToMilliseconds(nanoseconds) / 1000;
-                Console.WriteLine(seconds.ToString());
-                output = seconds.ToString();
-            }
-            return output;
+            var player = new WindowsMediaPlayer();
+            var clip = player.newMedia(inputFile);
+            String result = (TimeSpan.FromSeconds(clip.duration)).ToString();
+            return result;
         }
-        
 
-        public static double Convert100NanosecondsToMilliseconds(double nanoseconds)
+        public string checkMediaSize(string inputFile)
         {
-            // One million nanoseconds in 1 millisecond, 
-            // but we are passing in 100ns units...
-            return nanoseconds * 0.0001;
+            string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+            double len = new FileInfo(inputFile).Length;
+            int order = 0;
+            while (len >= 1024 && order < sizes.Length - 1)
+            {
+                order++;
+                len = len / 1024;
+            }
+
+            string result = String.Format("{0:0.##} {1}", len, sizes[order]);
+            Console.WriteLine(result);
+            return result;
         }
     }
 }
