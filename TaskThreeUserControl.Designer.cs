@@ -66,20 +66,16 @@ namespace ProjectEcho
             this.label21 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel46 = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.mediaProgressBar3A = new System.Windows.Forms.ProgressBar();
             this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
+            this.mediaProgressStatus3A = new System.Windows.Forms.Label();
             this.MediaUploadButton3A = new System.Windows.Forms.Button();
-            this.uploadInfo3A1 = new System.Windows.Forms.Label();
+            this.mediaUploadInfo3A = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.rightMarginLabel1A = new System.Windows.Forms.Label();
-            this.topMarginLabel1A = new System.Windows.Forms.Label();
-            this.leftMarginLabel1A = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.mediaCheckList3A = new System.Windows.Forms.CheckedListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -192,6 +188,7 @@ namespace ProjectEcho
             this.label32 = new System.Windows.Forms.Label();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel40 = new System.Windows.Forms.Panel();
+            this.formatTextBox3D = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
             this.formatCheckList3D = new System.Windows.Forms.CheckedListBox();
             this.label58 = new System.Windows.Forms.Label();
@@ -228,6 +225,7 @@ namespace ProjectEcho
             this.label126 = new System.Windows.Forms.Label();
             this.panel52 = new System.Windows.Forms.Panel();
             this.panel53 = new System.Windows.Forms.Panel();
+            this.formatTextBox3E = new System.Windows.Forms.TextBox();
             this.label135 = new System.Windows.Forms.Label();
             this.formatCheckList3E = new System.Windows.Forms.CheckedListBox();
             this.label136 = new System.Windows.Forms.Label();
@@ -257,8 +255,7 @@ namespace ProjectEcho
             this.grammarProgressStatus3E = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
-            this.formatTextBox3E = new System.Windows.Forms.TextBox();
-            this.formatTextBox3D = new System.Windows.Forms.TextBox();
+            this.mediaTextBox3A = new System.Windows.Forms.TextBox();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -274,7 +271,6 @@ namespace ProjectEcho
             this.panel1.SuspendLayout();
             this.panel46.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -465,11 +461,11 @@ namespace ProjectEcho
             // label91
             // 
             this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(18, 10);
+            this.label91.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(25, 19);
             this.label91.MinimumSize = new System.Drawing.Size(148, 20);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(204, 22);
+            this.label91.Size = new System.Drawing.Size(182, 21);
             this.label91.TabIndex = 18;
             this.label91.Text = "FORMAT AND STYLE";
             // 
@@ -485,7 +481,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font",
             "No more than 2 pages"});
-            this.formatCheckList3A.Location = new System.Drawing.Point(14, 46);
+            this.formatCheckList3A.Location = new System.Drawing.Point(14, 51);
             this.formatCheckList3A.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList3A.Name = "formatCheckList3A";
             this.formatCheckList3A.Size = new System.Drawing.Size(180, 72);
@@ -674,7 +670,7 @@ namespace ProjectEcho
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(78, 10);
+            this.label67.Location = new System.Drawing.Point(77, 18);
             this.label67.MinimumSize = new System.Drawing.Size(148, 20);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(148, 22);
@@ -692,7 +688,7 @@ namespace ProjectEcho
             "No Spelling Issues",
             "No Grammar Issues",
             "No Style Issues"});
-            this.grammarCheckList3A.Location = new System.Drawing.Point(14, 46);
+            this.grammarCheckList3A.Location = new System.Drawing.Point(14, 51);
             this.grammarCheckList3A.MinimumSize = new System.Drawing.Size(180, 72);
             this.grammarCheckList3A.Name = "grammarCheckList3A";
             this.grammarCheckList3A.Size = new System.Drawing.Size(180, 72);
@@ -736,11 +732,11 @@ namespace ProjectEcho
             // panel46
             // 
             this.panel46.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel46.Controls.Add(this.progressBar1);
+            this.panel46.Controls.Add(this.mediaProgressBar3A);
             this.panel46.Controls.Add(this.label46);
-            this.panel46.Controls.Add(this.label47);
+            this.panel46.Controls.Add(this.mediaProgressStatus3A);
             this.panel46.Controls.Add(this.MediaUploadButton3A);
-            this.panel46.Controls.Add(this.uploadInfo3A1);
+            this.panel46.Controls.Add(this.mediaUploadInfo3A);
             this.panel46.Controls.Add(this.label22);
             this.panel46.Controls.Add(this.label70);
             this.panel46.Location = new System.Drawing.Point(10, 148);
@@ -748,13 +744,13 @@ namespace ProjectEcho
             this.panel46.Size = new System.Drawing.Size(250, 432);
             this.panel46.TabIndex = 53;
             // 
-            // progressBar1
+            // mediaProgressBar3A
             // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar1.Location = new System.Drawing.Point(12, 168);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(224, 16);
-            this.progressBar1.TabIndex = 29;
+            this.mediaProgressBar3A.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mediaProgressBar3A.Location = new System.Drawing.Point(12, 168);
+            this.mediaProgressBar3A.Name = "mediaProgressBar3A";
+            this.mediaProgressBar3A.Size = new System.Drawing.Size(224, 16);
+            this.mediaProgressBar3A.TabIndex = 29;
             // 
             // label46
             // 
@@ -767,16 +763,16 @@ namespace ProjectEcho
             this.label46.TabIndex = 30;
             this.label46.Text = "FORMAT AND STYLE:";
             // 
-            // label47
+            // mediaProgressStatus3A
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(162, 149);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(78, 16);
-            this.label47.TabIndex = 31;
-            this.label47.Text = "ANALYZING...";
+            this.mediaProgressStatus3A.AutoSize = true;
+            this.mediaProgressStatus3A.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaProgressStatus3A.ForeColor = System.Drawing.Color.White;
+            this.mediaProgressStatus3A.Location = new System.Drawing.Point(162, 149);
+            this.mediaProgressStatus3A.Name = "mediaProgressStatus3A";
+            this.mediaProgressStatus3A.Size = new System.Drawing.Size(78, 16);
+            this.mediaProgressStatus3A.TabIndex = 31;
+            this.mediaProgressStatus3A.Text = "ANALYZING...";
             // 
             // MediaUploadButton3A
             // 
@@ -794,16 +790,16 @@ namespace ProjectEcho
             this.MediaUploadButton3A.UseVisualStyleBackColor = true;
             this.MediaUploadButton3A.Click += new System.EventHandler(this.MediaUploadButton3A_Click);
             // 
-            // uploadInfo3A1
+            // mediaUploadInfo3A
             // 
-            this.uploadInfo3A1.BackColor = System.Drawing.Color.Transparent;
-            this.uploadInfo3A1.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadInfo3A1.ForeColor = System.Drawing.Color.White;
-            this.uploadInfo3A1.Location = new System.Drawing.Point(12, 227);
-            this.uploadInfo3A1.Name = "uploadInfo3A1";
-            this.uploadInfo3A1.Size = new System.Drawing.Size(223, 174);
-            this.uploadInfo3A1.TabIndex = 19;
-            this.uploadInfo3A1.Text = "Uploaded:";
+            this.mediaUploadInfo3A.BackColor = System.Drawing.Color.Transparent;
+            this.mediaUploadInfo3A.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaUploadInfo3A.ForeColor = System.Drawing.Color.White;
+            this.mediaUploadInfo3A.Location = new System.Drawing.Point(12, 227);
+            this.mediaUploadInfo3A.Name = "mediaUploadInfo3A";
+            this.mediaUploadInfo3A.Size = new System.Drawing.Size(223, 174);
+            this.mediaUploadInfo3A.TabIndex = 19;
+            this.mediaUploadInfo3A.Text = "Uploaded:";
             // 
             // label22
             // 
@@ -828,85 +824,41 @@ namespace ProjectEcho
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.mediaTextBox3A);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.checkedListBox1);
+            this.panel2.Controls.Add(this.mediaCheckList3A);
             this.panel2.Location = new System.Drawing.Point(276, 148);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 432);
             this.panel2.TabIndex = 52;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.rightMarginLabel1A);
-            this.panel5.Controls.Add(this.topMarginLabel1A);
-            this.panel5.Controls.Add(this.leftMarginLabel1A);
-            this.panel5.Location = new System.Drawing.Point(13, 180);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(186, 221);
-            this.panel5.TabIndex = 51;
-            // 
-            // rightMarginLabel1A
-            // 
-            this.rightMarginLabel1A.AutoSize = true;
-            this.rightMarginLabel1A.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightMarginLabel1A.Location = new System.Drawing.Point(11, 94);
-            this.rightMarginLabel1A.Name = "rightMarginLabel1A";
-            this.rightMarginLabel1A.Size = new System.Drawing.Size(83, 17);
-            this.rightMarginLabel1A.TabIndex = 49;
-            this.rightMarginLabel1A.Text = "Clip length:";
-            // 
-            // topMarginLabel1A
-            // 
-            this.topMarginLabel1A.AutoSize = true;
-            this.topMarginLabel1A.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topMarginLabel1A.Location = new System.Drawing.Point(11, 160);
-            this.topMarginLabel1A.Name = "topMarginLabel1A";
-            this.topMarginLabel1A.Size = new System.Drawing.Size(66, 17);
-            this.topMarginLabel1A.TabIndex = 48;
-            this.topMarginLabel1A.Text = "Volume: ";
-            // 
-            // leftMarginLabel1A
-            // 
-            this.leftMarginLabel1A.AutoSize = true;
-            this.leftMarginLabel1A.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leftMarginLabel1A.Location = new System.Drawing.Point(11, 33);
-            this.leftMarginLabel1A.Name = "leftMarginLabel1A";
-            this.leftMarginLabel1A.Size = new System.Drawing.Size(62, 17);
-            this.leftMarginLabel1A.TabIndex = 46;
-            this.leftMarginLabel1A.Text = "File size: ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 12);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 19);
             this.label1.MinimumSize = new System.Drawing.Size(148, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 21);
+            this.label1.Size = new System.Drawing.Size(195, 20);
             this.label1.TabIndex = 19;
-            this.label1.Text = "FORMAT AND STYLE";
+            this.label1.Text = "MEDIA REQUIREMENTS:";
             // 
-            // checkedListBox1
+            // mediaCheckList3A
             // 
-            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkedListBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.Enabled = false;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.mediaCheckList3A.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mediaCheckList3A.BackColor = System.Drawing.Color.Gainsboro;
+            this.mediaCheckList3A.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mediaCheckList3A.Enabled = false;
+            this.mediaCheckList3A.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaCheckList3A.FormattingEnabled = true;
+            this.mediaCheckList3A.Items.AddRange(new object[] {
             "500 megabytes or less",
-            "Less than 7 minutes long",
-            "Adequate volume"});
-            this.checkedListBox1.Location = new System.Drawing.Point(13, 70);
-            this.checkedListBox1.MinimumSize = new System.Drawing.Size(180, 72);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(186, 72);
-            this.checkedListBox1.TabIndex = 14;
+            "Less than 7 minutes long"});
+            this.mediaCheckList3A.Location = new System.Drawing.Point(13, 77);
+            this.mediaCheckList3A.MinimumSize = new System.Drawing.Size(180, 72);
+            this.mediaCheckList3A.Name = "mediaCheckList3A";
+            this.mediaCheckList3A.Size = new System.Drawing.Size(186, 72);
+            this.mediaCheckList3A.TabIndex = 14;
             // 
             // panel3
             // 
@@ -2191,6 +2143,18 @@ namespace ProjectEcho
             this.panel40.Size = new System.Drawing.Size(292, 516);
             this.panel40.TabIndex = 42;
             // 
+            // formatTextBox3D
+            // 
+            this.formatTextBox3D.AcceptsReturn = true;
+            this.formatTextBox3D.BackColor = System.Drawing.Color.White;
+            this.formatTextBox3D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatTextBox3D.Location = new System.Drawing.Point(14, 181);
+            this.formatTextBox3D.Multiline = true;
+            this.formatTextBox3D.Name = "formatTextBox3D";
+            this.formatTextBox3D.ReadOnly = true;
+            this.formatTextBox3D.Size = new System.Drawing.Size(266, 313);
+            this.formatTextBox3D.TabIndex = 40;
+            // 
             // label57
             // 
             this.label57.AutoSize = true;
@@ -2610,6 +2574,18 @@ namespace ProjectEcho
             this.panel53.Size = new System.Drawing.Size(292, 516);
             this.panel53.TabIndex = 42;
             // 
+            // formatTextBox3E
+            // 
+            this.formatTextBox3E.AcceptsReturn = true;
+            this.formatTextBox3E.BackColor = System.Drawing.Color.White;
+            this.formatTextBox3E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formatTextBox3E.Location = new System.Drawing.Point(14, 181);
+            this.formatTextBox3E.Multiline = true;
+            this.formatTextBox3E.Name = "formatTextBox3E";
+            this.formatTextBox3E.ReadOnly = true;
+            this.formatTextBox3E.Size = new System.Drawing.Size(266, 313);
+            this.formatTextBox3E.TabIndex = 39;
+            // 
             // label135
             // 
             this.label135.AutoSize = true;
@@ -2943,29 +2919,17 @@ namespace ProjectEcho
             this.label150.TabIndex = 15;
             this.label150.Text = "GRAMMAR AND DETAIL REQUIREMENTS CHECK";
             // 
-            // formatTextBox3E
+            // mediaTextBox3A
             // 
-            this.formatTextBox3E.AcceptsReturn = true;
-            this.formatTextBox3E.BackColor = System.Drawing.Color.White;
-            this.formatTextBox3E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formatTextBox3E.Location = new System.Drawing.Point(14, 181);
-            this.formatTextBox3E.Multiline = true;
-            this.formatTextBox3E.Name = "formatTextBox3E";
-            this.formatTextBox3E.ReadOnly = true;
-            this.formatTextBox3E.Size = new System.Drawing.Size(266, 313);
-            this.formatTextBox3E.TabIndex = 39;
-            // 
-            // formatTextBox3D
-            // 
-            this.formatTextBox3D.AcceptsReturn = true;
-            this.formatTextBox3D.BackColor = System.Drawing.Color.White;
-            this.formatTextBox3D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formatTextBox3D.Location = new System.Drawing.Point(14, 181);
-            this.formatTextBox3D.Multiline = true;
-            this.formatTextBox3D.Name = "formatTextBox3D";
-            this.formatTextBox3D.ReadOnly = true;
-            this.formatTextBox3D.Size = new System.Drawing.Size(266, 313);
-            this.formatTextBox3D.TabIndex = 40;
+            this.mediaTextBox3A.AcceptsReturn = true;
+            this.mediaTextBox3A.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mediaTextBox3A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaTextBox3A.Location = new System.Drawing.Point(13, 140);
+            this.mediaTextBox3A.Multiline = true;
+            this.mediaTextBox3A.Name = "mediaTextBox3A";
+            this.mediaTextBox3A.ReadOnly = true;
+            this.mediaTextBox3A.Size = new System.Drawing.Size(180, 280);
+            this.mediaTextBox3A.TabIndex = 41;
             // 
             // TaskThreeUserControl
             // 
@@ -3002,8 +2966,6 @@ namespace ProjectEcho
             this.panel46.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -3141,27 +3103,23 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox mediaCheckList3A;
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label uploadInfo3A1;
+        private System.Windows.Forms.Label mediaUploadInfo3A;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label rightMarginLabel1A;
-        private System.Windows.Forms.Label topMarginLabel1A;
-        private System.Windows.Forms.Label leftMarginLabel1A;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.CheckedListBox grammarCheckList3A;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar mediaProgressBar3A;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label mediaProgressStatus3A;
         private System.Windows.Forms.Button MediaUploadButton3A;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label91;
@@ -3316,5 +3274,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.TextBox formatTextBox3E;
         private System.Windows.Forms.TextBox formatTextBox3D;
+        private System.Windows.Forms.TextBox mediaTextBox3A;
     }
 }

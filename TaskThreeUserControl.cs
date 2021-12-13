@@ -26,7 +26,7 @@ namespace ProjectEcho
         {
             InitializeComponent();
 
-            uploadInfo3A1.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "media");
+            mediaUploadInfo3A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "media");
 
             uploadInfo3A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "document");
             uploadInfo3B.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "B", "document");
@@ -79,8 +79,12 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckVideo(3, "A", "media", uploadInfo3A1, checkedListBox1);
-            } catch(Exception ex)
+                await CheckVideo(3, "A", "media", mediaUploadInfo3A, 
+                    mediaCheckList3A, mediaTextBox3A,
+                    mediaProgressBar3A, mediaProgressStatus3A,
+                    0);
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
             }
@@ -176,17 +180,42 @@ namespace ProjectEcho
             }
         }
 
-        public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel, CheckedListBox formatCL)
+        public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
+            CheckedListBox mediaCL, TextBox mediaTB,
+            ProgressBar mediaPB, Label mediaPS,
+            int mediaLength)
         {
-
-
-            foreach (int i in formatCL.CheckedIndices)
+            //Clears all checkedListBoxes
+            foreach (int i in mediaCL.CheckedIndices)
             {
-                formatCL.SetItemCheckState(i, CheckState.Unchecked);
+                mediaCL.SetItemCheckState(i, CheckState.Unchecked);
             }
 
+            //progress bar
+            List<string> mlist = new List<string>();
+            for (int i = 0; i < 100; i++)
+            {
+                mlist.Add(i.ToString());
+            }
+            var mprogress = new Progress<ProgressInformation>();
+            mprogress.ProgressChanged += (o, report) =>
+            {
+                mediaPB.Value = report.PercentComplete;
+                mediaPB.Update();
+            };
+
+            String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType); //Upload the file
             uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
-            //Boolean[] itemsChecked = fc.runFormatCheck(path, 0);
+
+            await processData(mlist, mprogress); //Start the progress bar
+
+            
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
+
+            mediaTB.Text = fc.mediaSizeFB
+                + "\r\n\r\n" + fc.mediaLengthFB;
+
+            mediaPS.Text = "FINISHED";
 
         }
 

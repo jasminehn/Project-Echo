@@ -16,7 +16,7 @@ namespace ProjectEcho
     {
         public int progress = 0;
 
-        //feedback variables
+        //Document feedback output variables
         public string leftMarginFB = "Left margin: ";
         public string rightMarginFB = "Right margin: ";
         public string topMarginFB = "Top margin: ";
@@ -24,6 +24,10 @@ namespace ProjectEcho
         public string fontTypeFB = "Font type: ";
         public string fontSizeFB = "Font size: ";
         public string pageNumFB = "Length: ";
+
+        //Media feedback output variables
+        public string mediaLengthFB = "Length: ";
+        public string mediaSizeFB = "Size: ";
 
         public Boolean[] runFormatCheck(String path, int correctLength)
         {
@@ -153,6 +157,7 @@ namespace ProjectEcho
         public Boolean[] runMediaFormatCheck(String path, int correctLength)
         {
             Console.WriteLine(">>>>MEDIA DURATION: "+checkMediaLength(path) + " seconds");
+            Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
             Boolean[] isFormatted = { false, false };
 
             return isFormatted;
@@ -163,6 +168,7 @@ namespace ProjectEcho
             var player = new WindowsMediaPlayer();
             var clip = player.newMedia(inputFile);
             String result = (TimeSpan.FromSeconds(clip.duration)).ToString();
+            mediaLengthFB = "Length: " + result;
             return result;
         }
 
@@ -179,7 +185,38 @@ namespace ProjectEcho
 
             string result = String.Format("{0:0.##} {1}", len, sizes[order]);
             Console.WriteLine(result);
+            mediaSizeFB = "Size: " + result;
             return result;
         }
+
+        //remove later
+        /*
+        public string checkMediaLength1(string inputFile)
+        {
+            string output = "nope :(";
+
+            string file = inputFile;
+            ShellFile so = ShellFile.FromFilePath(file);
+            double nanoseconds;
+            double.TryParse(so.Properties.System.Media.Duration.Value.ToString(),
+            out nanoseconds);
+            Console.WriteLine("NanaoSeconds: {0}", nanoseconds);
+            if (nanoseconds > 0)
+            {
+                double seconds = Convert100NanosecondsToMilliseconds(nanoseconds) / 1000;
+                Console.WriteLine(seconds.ToString());
+                output = seconds.ToString();
+            }
+            return output;
+        }
+
+
+        public static double Convert100NanosecondsToMilliseconds(double nanoseconds)
+        {
+            // One million nanoseconds in 1 millisecond, 
+            // but we are passing in 100ns units...
+            return nanoseconds * 0.0001;
+        }
+        */
     }
 }
