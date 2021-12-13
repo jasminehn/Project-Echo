@@ -153,5 +153,34 @@ namespace ProjectEcho
 
             return isFormatted;
         }
+        /*
+        public string checkMediaLength()
+        {
+            if (args.Length < 1)
+            {
+                Console.WriteLine("Usage: ConsoleApplication1.exe [Filename to test]");
+                return;
+            }
+
+            string file = args[0];
+            ShellFile so = ShellFile.FromFilePath(file);
+            double nanoseconds;
+            double.TryParse(so.Properties.System.Media.Duration.Value.ToString(),
+            out nanoseconds);
+            Console.WriteLine("NanaoSeconds: {0}", nanoseconds);
+            if (nanoseconds > 0)
+            {
+                double seconds = Convert100NanosecondsToMilliseconds(nanoseconds) / 1000;
+                Console.WriteLine(seconds.ToString());
+            }
+        }
+        */
+
+        public static double Convert100NanosecondsToMilliseconds(double nanoseconds)
+        {
+            // One million nanoseconds in 1 millisecond, 
+            // but we are passing in 100ns units...
+            return nanoseconds * 0.0001;
+        }
     }
 }
