@@ -64,7 +64,7 @@ namespace ProjectEcho
             var controls = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in controls)
             {
-                FontFamily fon = Font.FontFamily; //Sets font family
+                FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
@@ -242,7 +242,7 @@ namespace ProjectEcho
             {
                 foreach (Control c in labels) //Changes every label indivdually
                 {
-                    FontFamily fon = Font.FontFamily; //Sets font family
+                    FontFamily fon = c.Font.FontFamily; //Sets font family
                     FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                     float adjSize = c.Font.Size + 1;
                     //Passes in family, style, and changes to new size
@@ -250,7 +250,7 @@ namespace ProjectEcho
                 }
                 foreach (CheckedListBox c in checkLists)
                 {
-                    FontFamily fon = Font.FontFamily;
+                    FontFamily fon = c.Font.FontFamily;
                     FontStyle sty = c.Font.Style;
                     float adjSize = c.Font.Size + 1;
                     c.Font = new System.Drawing.Font(fon, adjSize, sty);
@@ -263,46 +263,39 @@ namespace ProjectEcho
                 {
                     foreach (Control c in labels)
                     {
-                        FontFamily fon = Font.FontFamily;
+                        FontFamily fon = c.Font.FontFamily;
                         FontStyle sty = c.Font.Style;
                         float adjSize = c.Font.Size - 1;
                         c.Font = new Font(fon, adjSize, sty);
                     }
                     foreach (CheckedListBox c in checkLists)
                     {
-                        FontFamily fon = Font.FontFamily;
+                        FontFamily fon = c.Font.FontFamily;
                         FontStyle sty = c.Font.Style;
                         float adjSize = c.Font.Size - 1;
                         c.Font = new System.Drawing.Font(fon, adjSize, sty);
                     }
-
-                    textSizeOffset = textsizeAdjust.Value;
-                    Properties.Settings.Default.textsize = textSizeOffset;
-                    Properties.Settings.Default.Save();
                 }
                 else
                 {
                     foreach (Control c in labels)
                     {
-                        FontFamily fon = Font.FontFamily;
+                        FontFamily fon = c.Font.FontFamily;
                         FontStyle sty = c.Font.Style;
                         float adjSize = c.Font.Size - 1;
                         c.Font = new Font(fon, adjSize, sty);
                     }
                     foreach (CheckedListBox c in checkLists)
                     {
-                        FontFamily fon = Font.FontFamily;
+                        FontFamily fon = c.Font.FontFamily;
                         FontStyle sty = c.Font.Style;
                         float adjSize = c.Font.Size - 1;
                         c.Font = new System.Drawing.Font(fon, adjSize, sty);
                     }
-
-                    textSizeOffset = textsizeAdjust.Value;
-                    Properties.Settings.Default.textsize = textSizeOffset;
-                    Properties.Settings.Default.Save();
                 }
                 prev = curr;
             }
+            textSizeOffset = textsizeAdjust.Value;
         }
 
         private void applyButton_Click(object sender, EventArgs e)

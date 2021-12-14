@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Drawing;
 
 namespace ProjectEcho
 {
@@ -39,13 +40,13 @@ namespace ProjectEcho
         {
             richTextBox1.Text = Properties.Settings.Default.t3notes; //load last saved notes
 
-            /*
+            
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in labels)
             {
-                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -54,7 +55,7 @@ namespace ProjectEcho
             var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
             foreach (Control c in checkedlistboxes)
             {
-                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -72,7 +73,7 @@ namespace ProjectEcho
                 c.BackColor = Properties.Settings.Default.bgcolor;
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
-            */
+            
         }
 
         private async void MediaUploadButton3A_Click(object sender, EventArgs e)

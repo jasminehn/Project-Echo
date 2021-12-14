@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ProjectEcho
 {
@@ -219,13 +220,12 @@ namespace ProjectEcho
             }
 
 
-            /*
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in labels)
             {
-                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -243,7 +243,7 @@ namespace ProjectEcho
                 c.BackColor = Properties.Settings.Default.bgcolor;
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
-            */
+            
         }
 
         private async void UploadButton1A_Click(object sender, EventArgs e)

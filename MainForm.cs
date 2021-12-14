@@ -109,6 +109,7 @@ namespace ProjectEcho
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //DELETE LATER
             Console.WriteLine("BING " + taskOne.formatCheckList1A.CheckedItems.Count);
             Console.WriteLine("BONG " + taskOne.formatCheckList1A.Items.Count);
             if (taskOne.formatCheckList1A.CheckedItems.Count == taskOne.formatCheckList1A.Items.Count)
@@ -117,13 +118,14 @@ namespace ProjectEcho
                 taskOneList.SetItemChecked(0, true);
             }
 
+            Console.WriteLine("TEXT SIZE: "+Properties.Settings.Default.textsize);
+
             //Apply saved display settings
-            /*
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
             foreach (Control c in labels)
             {
-                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -132,7 +134,7 @@ namespace ProjectEcho
             var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
             foreach (Control c in checkedlistboxes)
             {
-                System.Drawing.FontFamily fon = Font.FontFamily; //Sets font family
+                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
                 float adjSize = c.Font.Size + textSizeOffset;
 
@@ -145,7 +147,7 @@ namespace ProjectEcho
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
             BackColor = Properties.Settings.Default.bgmain;
-            */
+            
         }
 
         // On-click events for the buttons on the MainForm
@@ -271,15 +273,7 @@ namespace ProjectEcho
             toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SettingsForm sf = new SettingsForm(this, hf, taskOne, taskTwo, taskThree); //pass in the main form and the helpform to the settings form
-
-            if (sf.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Settings opened");
-            }
-        }
+        
 
         private void t1videoLaunchButton_Click(object sender, EventArgs e)
         {
@@ -367,6 +361,16 @@ namespace ProjectEcho
                 dir.Delete(true);
             }
             */
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm sf = new SettingsForm(this, hf, taskOne, taskTwo, taskThree); //pass in the main form and the helpform to the settings form
+
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Settings opened");
+            }
         }
     }
 }
