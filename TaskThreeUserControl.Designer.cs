@@ -72,6 +72,7 @@ namespace ProjectEcho
             this.MediaUploadButton3A = new System.Windows.Forms.Button();
             this.mediaUploadInfo3A = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mediaTextBox3A = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -121,6 +122,7 @@ namespace ProjectEcho
             this.label65 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
+            this.mediaTextBox3B = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
             this.mediaCheckList3B = new System.Windows.Forms.CheckedListBox();
             this.panel47 = new System.Windows.Forms.Panel();
@@ -167,6 +169,7 @@ namespace ProjectEcho
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.mediaTextBox3C = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
             this.mediaCheckList3C = new System.Windows.Forms.CheckedListBox();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -247,9 +250,6 @@ namespace ProjectEcho
             this.grammarProgressStatus3E = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
-            this.mediaTextBox3B = new System.Windows.Forms.TextBox();
-            this.mediaTextBox3C = new System.Windows.Forms.TextBox();
-            this.label70 = new System.Windows.Forms.Label();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -804,6 +804,14 @@ namespace ProjectEcho
             this.label22.Size = new System.Drawing.Size(143, 22);
             this.label22.TabIndex = 23;
             this.label22.Text = "UPLOAD FILE:";
+            // 
+            // label70
+            // 
+            this.label70.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label70.Location = new System.Drawing.Point(12, 94);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(224, 2);
+            this.label70.TabIndex = 21;
             // 
             // panel2
             // 
@@ -1370,6 +1378,18 @@ namespace ProjectEcho
             this.panel35.Size = new System.Drawing.Size(212, 408);
             this.panel35.TabIndex = 52;
             // 
+            // mediaTextBox3B
+            // 
+            this.mediaTextBox3B.AcceptsReturn = true;
+            this.mediaTextBox3B.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mediaTextBox3B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaTextBox3B.Location = new System.Drawing.Point(13, 154);
+            this.mediaTextBox3B.Multiline = true;
+            this.mediaTextBox3B.Name = "mediaTextBox3B";
+            this.mediaTextBox3B.ReadOnly = true;
+            this.mediaTextBox3B.Size = new System.Drawing.Size(180, 242);
+            this.mediaTextBox3B.TabIndex = 42;
+            // 
             // label78
             // 
             this.label78.AutoSize = true;
@@ -1902,6 +1922,18 @@ namespace ProjectEcho
             this.panel24.Size = new System.Drawing.Size(212, 408);
             this.panel24.TabIndex = 52;
             // 
+            // mediaTextBox3C
+            // 
+            this.mediaTextBox3C.AcceptsReturn = true;
+            this.mediaTextBox3C.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mediaTextBox3C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaTextBox3C.Location = new System.Drawing.Point(13, 154);
+            this.mediaTextBox3C.Multiline = true;
+            this.mediaTextBox3C.Name = "mediaTextBox3C";
+            this.mediaTextBox3C.ReadOnly = true;
+            this.mediaTextBox3C.Size = new System.Drawing.Size(180, 242);
+            this.mediaTextBox3C.TabIndex = 42;
+            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -2338,7 +2370,6 @@ namespace ProjectEcho
             this.contentProgressBar3D.Location = new System.Drawing.Point(12, 175);
             this.contentProgressBar3D.Name = "contentProgressBar3D";
             this.contentProgressBar3D.Size = new System.Drawing.Size(254, 28);
-            this.contentProgressBar3D.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.contentProgressBar3D.TabIndex = 29;
             // 
             // grammarProgressBar3D
@@ -2768,7 +2799,6 @@ namespace ProjectEcho
             this.contentProgressBar3E.Location = new System.Drawing.Point(12, 175);
             this.contentProgressBar3E.Name = "contentProgressBar3E";
             this.contentProgressBar3E.Size = new System.Drawing.Size(254, 28);
-            this.contentProgressBar3E.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.contentProgressBar3E.TabIndex = 29;
             // 
             // grammarProgressBar3E
@@ -2827,38 +2857,6 @@ namespace ProjectEcho
             this.label150.Size = new System.Drawing.Size(385, 20);
             this.label150.TabIndex = 15;
             this.label150.Text = "GRAMMAR AND DETAIL REQUIREMENTS CHECK";
-            // 
-            // mediaTextBox3B
-            // 
-            this.mediaTextBox3B.AcceptsReturn = true;
-            this.mediaTextBox3B.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mediaTextBox3B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mediaTextBox3B.Location = new System.Drawing.Point(13, 154);
-            this.mediaTextBox3B.Multiline = true;
-            this.mediaTextBox3B.Name = "mediaTextBox3B";
-            this.mediaTextBox3B.ReadOnly = true;
-            this.mediaTextBox3B.Size = new System.Drawing.Size(180, 242);
-            this.mediaTextBox3B.TabIndex = 42;
-            // 
-            // mediaTextBox3C
-            // 
-            this.mediaTextBox3C.AcceptsReturn = true;
-            this.mediaTextBox3C.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mediaTextBox3C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mediaTextBox3C.Location = new System.Drawing.Point(13, 154);
-            this.mediaTextBox3C.Multiline = true;
-            this.mediaTextBox3C.Name = "mediaTextBox3C";
-            this.mediaTextBox3C.ReadOnly = true;
-            this.mediaTextBox3C.Size = new System.Drawing.Size(180, 242);
-            this.mediaTextBox3C.TabIndex = 42;
-            // 
-            // label70
-            // 
-            this.label70.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label70.Location = new System.Drawing.Point(12, 94);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(224, 2);
-            this.label70.TabIndex = 21;
             // 
             // TaskThreeUserControl
             // 

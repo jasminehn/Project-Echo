@@ -188,7 +188,7 @@ namespace ProjectEcho
             this.titleLabel.Location = new System.Drawing.Point(4, 5);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(130, 28);
+            this.titleLabel.Size = new System.Drawing.Size(144, 30);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
             // 
@@ -398,7 +398,7 @@ namespace ProjectEcho
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 23);
+            this.label3.Size = new System.Drawing.Size(239, 22);
             this.label3.TabIndex = 30;
             this.label3.Text = "TASK THREE: ASSESSING";
             // 
@@ -512,7 +512,7 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 23);
+            this.label2.Size = new System.Drawing.Size(269, 22);
             this.label2.TabIndex = 30;
             this.label2.Text = "TASK TWO: IMPLEMENTING";
             // 
@@ -630,7 +630,7 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 23);
+            this.label1.Size = new System.Drawing.Size(226, 22);
             this.label1.TabIndex = 30;
             this.label1.Text = "TASK ONE: PLANNING";
             // 
@@ -676,7 +676,7 @@ namespace ProjectEcho
             this.taskTwo.Location = new System.Drawing.Point(993, 49);
             this.taskTwo.Margin = new System.Windows.Forms.Padding(0);
             this.taskTwo.Name = "taskTwo";
-            this.taskTwo.Size = new System.Drawing.Size(1633, 772);
+            this.taskTwo.Size = new System.Drawing.Size(2177, 951);
             this.taskTwo.TabIndex = 17;
             // 
             // button1

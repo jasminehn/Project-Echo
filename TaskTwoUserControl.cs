@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace ProjectEcho
 {
@@ -19,6 +20,9 @@ namespace ProjectEcho
     {
         public String firstVideoPath = "";
         public String secondVideoPath = "";
+
+        private DocumentHandler dh = new DocumentHandler();
+        private FormatChecker fc = new FormatChecker();
 
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
@@ -127,6 +131,7 @@ namespace ProjectEcho
         {
             firstVideoPath = OpenFile();
 
+            //CheckVideo(2, "A", "media", ) //finish later
         }
 
         private String OpenFile()
@@ -148,6 +153,27 @@ namespace ProjectEcho
                 {
                     path = Path.GetFullPath(fileName);
                     AnalyzeVideoAsync(path);
+
+
+                    //MOVE THIS LATER
+                    string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
+                    uploadInfo2c1.Text = "Uploaded: \n" + separatedFileName;
+
+                    List<string> mlist = new List<string>();
+                    for (int i = 0; i < 100; i++)
+                    {
+                        mlist.Add(i.ToString());
+                    }
+                    var mprogress = new Progress<ProgressInformation>();
+                    mprogress.ProgressChanged += (o, report) =>
+                    {
+                        progressBar4.Value = report.PercentComplete;
+                        progressBar4.Update();
+                    };
+                    processData(mlist, mprogress);
+
+                    t1paCL.SetItemChecked(1, true);
+                    //MOVE THIS LATER (END)
                 }
             }
             return path;
@@ -162,6 +188,45 @@ namespace ProjectEcho
 
             //VideoProperties videoProperties = await sampleFile.Properties.GetVideoPropertiesAsync();
             //Console.WriteLine("CLARE:: " + videoProperties.Duration);
+        }
+
+        //FINISH LATER
+        public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
+            CheckedListBox mediaCL, TextBox mediaTB,
+            ProgressBar mediaPB, Label mediaPS,
+            int mediaLength)
+        {
+            //Clears all checkedListBoxes
+            foreach (int i in mediaCL.CheckedIndices)
+            {
+                mediaCL.SetItemCheckState(i, CheckState.Unchecked);
+            }
+
+            //progress bar
+            List<string> mlist = new List<string>();
+            for (int i = 0; i < 100; i++)
+            {
+                mlist.Add(i.ToString());
+            }
+            var mprogress = new Progress<ProgressInformation>();
+            mprogress.ProgressChanged += (o, report) =>
+            {
+                mediaPB.Value = report.PercentComplete;
+                mediaPB.Update();
+            };
+
+            String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType); //Upload the file
+            uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
+
+            await processData(mlist, mprogress); //Start the progress bar
+
+
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
+
+            mediaTB.Text = fc.mediaSizeFB
+                + "\r\n\r\n" + fc.mediaLengthFB;
+
+            mediaPS.Text = "FINISHED";
         }
 
         private void PlayFile(String path)
@@ -179,7 +244,21 @@ namespace ProjectEcho
             //clipOneFrame.Ctlcontrols.play();
         }
 
-
+        private Task processData(List<string> list, IProgress<ProgressInformation> progress)
+        {
+            int index = 1;
+            int totalProcess = list.Count;
+            var progressInfo = new ProgressInformation();
+            return Task.Run(() =>
+            {
+                for (int i = 0; i < totalProcess; i++)
+                {
+                    progressInfo.PercentComplete = index++ * 100 / totalProcess;
+                    progress.Report(progressInfo);
+                    System.Threading.Thread.Sleep(10); //used to simulate length of operation
+                }
+            });
+        }
 
         private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {

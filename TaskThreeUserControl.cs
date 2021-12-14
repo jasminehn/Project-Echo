@@ -83,6 +83,8 @@ namespace ProjectEcho
                     mediaCheckList3A, mediaTextBox3A,
                     mediaProgressBar3A, mediaProgressStatus3A,
                     0);
+
+                mediaCheckList3A.SetItemChecked(1, true);//DELETE LATER
             }
             catch(Exception ex)
             {
