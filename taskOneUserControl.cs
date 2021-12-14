@@ -33,24 +33,49 @@ namespace ProjectEcho
             uploadInfo1C.Text = "Uploaded: " + dh.displayDocuments(1, "C");
             uploadInfo1D.Text = "Uploaded: " + dh.displayDocuments(1, "D");
             uploadInfo1E.Text = "Uploaded: " + dh.displayDocuments(1, "E");
-
-            //load saved checkboxes
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.checkerprogress))
-            {
-                Properties.Settings.Default.checkerprogress.Split(',')
-                    .ToList()
-                    .ForEach(item =>
-                    {
-                        var index = this.formatCheckList1A.Items.IndexOf(item);
-                        this.formatCheckList1A.SetItemChecked(index, true);
-                    });
-            }
-
         }
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)
         {
             richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
+
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl1a))
+            {
+                Properties.Settings.Default.fcl1a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = this.formatCheckList1A.Items.IndexOf(item);
+                    this.formatCheckList1A.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.gcl1a))
+            {
+                Properties.Settings.Default.gcl1a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = this.grammarCheckList1A.Items.IndexOf(item);
+                    this.grammarCheckList1A.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.ccl1a))
+            {
+                Properties.Settings.Default.ccl1a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = this.contentCheckList1A.Items.IndexOf(item);
+                    this.contentCheckList1A.SetItemChecked(index, true);
+                });
+            }
+
+            //load saved feedback
+            formatTextBox1A.Text = Properties.Settings.Default.ftb1a;
+            grammarTextBox1A.Text = Properties.Settings.Default.gtb1a;
+            //contentListBox1A = Properties.Settings.Default.clb1a;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.clb1a))
+            {
+                Properties.Settings.Default.clb1a.Split(',').ToList().ForEach(item =>
+                {
+                    contentListBox1A.Items.Add(item); 
+                });
+            }
 
             /*
             //Apply saved display settings
@@ -85,8 +110,8 @@ namespace ProjectEcho
             {
                 await CheckDocument(1, "A", uploadInfo1A,
                     formatCheckList1A, formatTextBox1A,
-                    grammarCheckList1A, grammarErrors1A,
-                    contentCheckList1A, missingWordList1A,
+                    grammarCheckList1A, grammarTextBox1A,
+                    contentCheckList1A, contentListBox1A,
                     formatProgressBar1A, formatProgressStatus1A,
                     grammarProgressBar1A, grammarProgressStatus1A,
                     contentProgressBar1A, contentProgressStatus1A,
@@ -290,19 +315,30 @@ namespace ProjectEcho
             }
             contentPS.Text = "FINISHED";
 
-
-
-
-
-            //save progress of checkbox
-            var indices = this.formatCheckList1A.CheckedItems.Cast<string>().ToArray();
-
-            Properties.Settings.Default.checkerprogress = string.Join(",", indices);
-            Properties.Settings.Default.Save();
-
+            saveProgress();
         }
 
+        private void saveProgress()
+        {
+            //save progress of all checkListBoxes
+            var fcl1a = this.formatCheckList1A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.fcl1a = string.Join(",", fcl1a);
+            var gcl1a = this.grammarCheckList1A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.gcl1a = string.Join(",", gcl1a);
+            var ccl1a = this.contentCheckList1A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.ccl1a = string.Join(",", ccl1a);
 
+            //save feedback
+            string ftb1a = formatTextBox1A.Text;
+            Properties.Settings.Default.ftb1a = ftb1a;
+            string gtb1a = grammarTextBox1A.Text;
+            Properties.Settings.Default.gtb1a = gtb1a;
+            var clb1a = this.contentListBox1A.Items.Cast<string>().ToArray();
+            Properties.Settings.Default.clb1a = string.Join(",", clb1a);
+
+
+            Properties.Settings.Default.Save();
+        }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {

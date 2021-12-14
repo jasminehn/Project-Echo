@@ -121,18 +121,6 @@ namespace ProjectEcho.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string checkerprogress {
-            get {
-                return ((string)(this["checkerprogress"]));
-            }
-            set {
-                this["checkerprogress"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Want to leave some notes for your future self? Write them here.")]
         public string t3notes {
             get {
@@ -140,6 +128,78 @@ namespace ProjectEcho.Properties {
             }
             set {
                 this["t3notes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl1a {
+            get {
+                return ((string)(this["fcl1a"]));
+            }
+            set {
+                this["fcl1a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl1a {
+            get {
+                return ((string)(this["gcl1a"]));
+            }
+            set {
+                this["gcl1a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl1a {
+            get {
+                return ((string)(this["ccl1a"]));
+            }
+            set {
+                this["ccl1a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb1a {
+            get {
+                return ((string)(this["ftb1a"]));
+            }
+            set {
+                this["ftb1a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb1a {
+            get {
+                return ((string)(this["gtb1a"]));
+            }
+            set {
+                this["gtb1a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb1a {
+            get {
+                return ((string)(this["clb1a"]));
+            }
+            set {
+                this["clb1a"] = value;
             }
         }
     }

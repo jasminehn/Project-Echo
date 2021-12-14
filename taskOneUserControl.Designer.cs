@@ -47,11 +47,11 @@ namespace ProjectEcho
             this.label23 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.missingWordList1A = new System.Windows.Forms.ListBox();
+            this.contentListBox1A = new System.Windows.Forms.ListBox();
             this.label40 = new System.Windows.Forms.Label();
             this.contentCheckList1A = new System.Windows.Forms.CheckedListBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.grammarErrors1A = new System.Windows.Forms.TextBox();
+            this.grammarTextBox1A = new System.Windows.Forms.TextBox();
             this.foundGrammarIssuesLabel = new System.Windows.Forms.Label();
             this.grammarCheckList1A = new System.Windows.Forms.CheckedListBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -270,7 +270,7 @@ namespace ProjectEcho
             this.notebookPanel.Controls.Add(this.pictureBox1);
             this.notebookPanel.Controls.Add(this.panel29);
             this.notebookPanel.Location = new System.Drawing.Point(1912, 50);
-            this.notebookPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.notebookPanel.Margin = new System.Windows.Forms.Padding(4);
             this.notebookPanel.Name = "notebookPanel";
             this.notebookPanel.Size = new System.Drawing.Size(600, 943);
             this.notebookPanel.TabIndex = 21;
@@ -281,7 +281,7 @@ namespace ProjectEcho
             this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(29, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(532, 62);
             this.pictureBox1.TabIndex = 1;
@@ -293,7 +293,7 @@ namespace ProjectEcho
             this.panel29.Controls.Add(this.label6);
             this.panel29.Controls.Add(this.richTextBox1);
             this.panel29.Location = new System.Drawing.Point(40, 70);
-            this.panel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(516, 860);
             this.panel29.TabIndex = 2;
@@ -316,7 +316,7 @@ namespace ProjectEcho
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(19, 44);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox1.Size = new System.Drawing.Size(481, 727);
@@ -333,7 +333,7 @@ namespace ProjectEcho
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(20, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1869, 949);
@@ -347,9 +347,9 @@ namespace ProjectEcho
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1861, 916);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Part A";
@@ -367,7 +367,7 @@ namespace ProjectEcho
             this.panel7.Controls.Add(this.label12);
             this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(11, 36);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1816, 822);
             this.panel7.TabIndex = 21;
@@ -391,7 +391,7 @@ namespace ProjectEcho
             this.panel8.Controls.Add(this.panel27);
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Location = new System.Drawing.Point(19, 139);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1321, 674);
             this.panel8.TabIndex = 38;
@@ -404,7 +404,7 @@ namespace ProjectEcho
             this.panel30.Controls.Add(this.formatCheckList1A);
             this.panel30.Controls.Add(this.label23);
             this.panel30.Location = new System.Drawing.Point(27, 18);
-            this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(389, 635);
             this.panel30.TabIndex = 42;
@@ -415,7 +415,7 @@ namespace ProjectEcho
             this.formatTextBox1A.BackColor = System.Drawing.Color.WhiteSmoke;
             this.formatTextBox1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formatTextBox1A.Location = new System.Drawing.Point(19, 223);
-            this.formatTextBox1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatTextBox1A.Margin = new System.Windows.Forms.Padding(4);
             this.formatTextBox1A.Multiline = true;
             this.formatTextBox1A.Name = "formatTextBox1A";
             this.formatTextBox1A.ReadOnly = true;
@@ -448,7 +448,7 @@ namespace ProjectEcho
             "Size 11 Font",
             "4 pages or less"});
             this.formatCheckList1A.Location = new System.Drawing.Point(27, 63);
-            this.formatCheckList1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatCheckList1A.Margin = new System.Windows.Forms.Padding(4);
             this.formatCheckList1A.MinimumSize = new System.Drawing.Size(240, 89);
             this.formatCheckList1A.Name = "formatCheckList1A";
             this.formatCheckList1A.Size = new System.Drawing.Size(240, 72);
@@ -468,11 +468,11 @@ namespace ProjectEcho
             // 
             this.panel27.BackColor = System.Drawing.Color.Gainsboro;
             this.panel27.Controls.Add(this.label28);
-            this.panel27.Controls.Add(this.missingWordList1A);
+            this.panel27.Controls.Add(this.contentListBox1A);
             this.panel27.Controls.Add(this.label40);
             this.panel27.Controls.Add(this.contentCheckList1A);
             this.panel27.Location = new System.Drawing.Point(901, 18);
-            this.panel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel27.Margin = new System.Windows.Forms.Padding(4);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(389, 635);
             this.panel27.TabIndex = 40;
@@ -487,17 +487,17 @@ namespace ProjectEcho
             this.label28.TabIndex = 35;
             this.label28.Text = "SUGGESTED TERMINOLOGY:";
             // 
-            // missingWordList1A
+            // contentListBox1A
             // 
-            this.missingWordList1A.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.missingWordList1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missingWordList1A.FormattingEnabled = true;
-            this.missingWordList1A.ItemHeight = 20;
-            this.missingWordList1A.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.missingWordList1A.Name = "missingWordList1A";
-            this.missingWordList1A.Size = new System.Drawing.Size(357, 364);
-            this.missingWordList1A.TabIndex = 37;
+            this.contentListBox1A.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contentListBox1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentListBox1A.FormattingEnabled = true;
+            this.contentListBox1A.ItemHeight = 20;
+            this.contentListBox1A.Location = new System.Drawing.Point(19, 223);
+            this.contentListBox1A.Margin = new System.Windows.Forms.Padding(4);
+            this.contentListBox1A.Name = "contentListBox1A";
+            this.contentListBox1A.Size = new System.Drawing.Size(357, 364);
+            this.contentListBox1A.TabIndex = 37;
             // 
             // label40
             // 
@@ -522,7 +522,7 @@ namespace ProjectEcho
             this.contentCheckList1A.Items.AddRange(new object[] {
             "Contains all required words"});
             this.contentCheckList1A.Location = new System.Drawing.Point(37, 63);
-            this.contentCheckList1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentCheckList1A.Margin = new System.Windows.Forms.Padding(4);
             this.contentCheckList1A.MinimumSize = new System.Drawing.Size(240, 89);
             this.contentCheckList1A.Name = "contentCheckList1A";
             this.contentCheckList1A.Size = new System.Drawing.Size(279, 72);
@@ -531,29 +531,29 @@ namespace ProjectEcho
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel10.Controls.Add(this.grammarErrors1A);
+            this.panel10.Controls.Add(this.grammarTextBox1A);
             this.panel10.Controls.Add(this.foundGrammarIssuesLabel);
             this.panel10.Controls.Add(this.grammarCheckList1A);
             this.panel10.Controls.Add(this.label15);
             this.panel10.Location = new System.Drawing.Point(464, 18);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(389, 635);
             this.panel10.TabIndex = 39;
             // 
-            // grammarErrors1A
+            // grammarTextBox1A
             // 
-            this.grammarErrors1A.AcceptsReturn = true;
-            this.grammarErrors1A.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.grammarErrors1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarErrors1A.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grammarErrors1A.Multiline = true;
-            this.grammarErrors1A.Name = "grammarErrors1A";
-            this.grammarErrors1A.ReadOnly = true;
-            this.grammarErrors1A.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarErrors1A.Size = new System.Drawing.Size(353, 384);
-            this.grammarErrors1A.TabIndex = 38;
+            this.grammarTextBox1A.AcceptsReturn = true;
+            this.grammarTextBox1A.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.grammarTextBox1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarTextBox1A.Location = new System.Drawing.Point(19, 223);
+            this.grammarTextBox1A.Margin = new System.Windows.Forms.Padding(4);
+            this.grammarTextBox1A.Multiline = true;
+            this.grammarTextBox1A.Name = "grammarTextBox1A";
+            this.grammarTextBox1A.ReadOnly = true;
+            this.grammarTextBox1A.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grammarTextBox1A.Size = new System.Drawing.Size(353, 384);
+            this.grammarTextBox1A.TabIndex = 38;
             // 
             // foundGrammarIssuesLabel
             // 
@@ -578,7 +578,7 @@ namespace ProjectEcho
             "No Grammar Issues",
             "No Style Issues"});
             this.grammarCheckList1A.Location = new System.Drawing.Point(19, 63);
-            this.grammarCheckList1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarCheckList1A.Margin = new System.Windows.Forms.Padding(4);
             this.grammarCheckList1A.MinimumSize = new System.Drawing.Size(240, 89);
             this.grammarCheckList1A.Name = "grammarCheckList1A";
             this.grammarCheckList1A.Size = new System.Drawing.Size(240, 72);
@@ -603,7 +603,7 @@ namespace ProjectEcho
             this.panel9.Controls.Add(this.uploadButton1A);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Location = new System.Drawing.Point(1421, 150);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(379, 81);
             this.panel9.TabIndex = 34;
@@ -620,7 +620,7 @@ namespace ProjectEcho
             this.uploadButton1A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton1A.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.uploadButton1A.Location = new System.Drawing.Point(288, 9);
-            this.uploadButton1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadButton1A.Margin = new System.Windows.Forms.Padding(4);
             this.uploadButton1A.Name = "uploadButton1A";
             this.uploadButton1A.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1A.TabIndex = 17;
@@ -655,7 +655,7 @@ namespace ProjectEcho
             this.panel1.Controls.Add(this.grammarProgressStatus1A);
             this.panel1.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel1.Location = new System.Drawing.Point(1421, 298);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 356);
             this.panel1.TabIndex = 32;
@@ -664,7 +664,7 @@ namespace ProjectEcho
             // 
             this.formatProgressBar1A.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.formatProgressBar1A.Location = new System.Drawing.Point(16, 36);
-            this.formatProgressBar1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatProgressBar1A.Margin = new System.Windows.Forms.Padding(4);
             this.formatProgressBar1A.Name = "formatProgressBar1A";
             this.formatProgressBar1A.Size = new System.Drawing.Size(339, 34);
             this.formatProgressBar1A.TabIndex = 21;
@@ -717,7 +717,7 @@ namespace ProjectEcho
             // 
             this.contentProgressBar1A.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contentProgressBar1A.Location = new System.Drawing.Point(16, 215);
-            this.contentProgressBar1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentProgressBar1A.Margin = new System.Windows.Forms.Padding(4);
             this.contentProgressBar1A.Name = "contentProgressBar1A";
             this.contentProgressBar1A.Size = new System.Drawing.Size(339, 34);
             this.contentProgressBar1A.TabIndex = 29;
@@ -726,7 +726,7 @@ namespace ProjectEcho
             // 
             this.grammarProgressBar1A.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grammarProgressBar1A.Location = new System.Drawing.Point(16, 124);
-            this.grammarProgressBar1A.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarProgressBar1A.Margin = new System.Windows.Forms.Padding(4);
             this.grammarProgressBar1A.Name = "grammarProgressBar1A";
             this.grammarProgressBar1A.Size = new System.Drawing.Size(339, 34);
             this.grammarProgressBar1A.TabIndex = 25;
@@ -792,7 +792,7 @@ namespace ProjectEcho
             this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(4, 912);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1853, 0);
             this.panel2.TabIndex = 19;
@@ -815,9 +815,9 @@ namespace ProjectEcho
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1861, 916);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Part B";
@@ -836,7 +836,7 @@ namespace ProjectEcho
             this.panel3.Controls.Add(this.label90);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(11, 36);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1816, 822);
             this.panel3.TabIndex = 24;
@@ -860,7 +860,7 @@ namespace ProjectEcho
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel32);
             this.panel11.Location = new System.Drawing.Point(19, 139);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1321, 674);
             this.panel11.TabIndex = 38;
@@ -873,7 +873,7 @@ namespace ProjectEcho
             this.panel12.Controls.Add(this.formatCheckList1B);
             this.panel12.Controls.Add(this.label34);
             this.panel12.Location = new System.Drawing.Point(27, 18);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(389, 635);
             this.panel12.TabIndex = 42;
@@ -884,7 +884,7 @@ namespace ProjectEcho
             this.formatTextBox1B.BackColor = System.Drawing.Color.White;
             this.formatTextBox1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formatTextBox1B.Location = new System.Drawing.Point(19, 223);
-            this.formatTextBox1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatTextBox1B.Margin = new System.Windows.Forms.Padding(4);
             this.formatTextBox1B.Multiline = true;
             this.formatTextBox1B.Name = "formatTextBox1B";
             this.formatTextBox1B.ReadOnly = true;
@@ -916,7 +916,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font"});
             this.formatCheckList1B.Location = new System.Drawing.Point(27, 63);
-            this.formatCheckList1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatCheckList1B.Margin = new System.Windows.Forms.Padding(4);
             this.formatCheckList1B.MinimumSize = new System.Drawing.Size(240, 89);
             this.formatCheckList1B.Name = "formatCheckList1B";
             this.formatCheckList1B.Size = new System.Drawing.Size(240, 72);
@@ -940,7 +940,7 @@ namespace ProjectEcho
             this.panel14.Controls.Add(this.label78);
             this.panel14.Controls.Add(this.contentCheckList1B);
             this.panel14.Location = new System.Drawing.Point(901, 18);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(389, 635);
             this.panel14.TabIndex = 40;
@@ -961,7 +961,7 @@ namespace ProjectEcho
             this.missingWordList1B.FormattingEnabled = true;
             this.missingWordList1B.ItemHeight = 20;
             this.missingWordList1B.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.missingWordList1B.Margin = new System.Windows.Forms.Padding(4);
             this.missingWordList1B.Name = "missingWordList1B";
             this.missingWordList1B.Size = new System.Drawing.Size(357, 364);
             this.missingWordList1B.TabIndex = 37;
@@ -989,7 +989,7 @@ namespace ProjectEcho
             this.contentCheckList1B.Items.AddRange(new object[] {
             "Contains all required words"});
             this.contentCheckList1B.Location = new System.Drawing.Point(37, 63);
-            this.contentCheckList1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentCheckList1B.Margin = new System.Windows.Forms.Padding(4);
             this.contentCheckList1B.MinimumSize = new System.Drawing.Size(240, 89);
             this.contentCheckList1B.Name = "contentCheckList1B";
             this.contentCheckList1B.Size = new System.Drawing.Size(279, 72);
@@ -1003,7 +1003,7 @@ namespace ProjectEcho
             this.panel32.Controls.Add(this.grammarCheckList1B);
             this.panel32.Controls.Add(this.label80);
             this.panel32.Location = new System.Drawing.Point(464, 18);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(389, 635);
             this.panel32.TabIndex = 39;
@@ -1014,7 +1014,7 @@ namespace ProjectEcho
             this.grammarErrors1B.BackColor = System.Drawing.Color.White;
             this.grammarErrors1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1B.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarErrors1B.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1B.Multiline = true;
             this.grammarErrors1B.Name = "grammarErrors1B";
             this.grammarErrors1B.ReadOnly = true;
@@ -1045,7 +1045,7 @@ namespace ProjectEcho
             "No Grammar Issues",
             "No Style Issues"});
             this.grammarCheckList1B.Location = new System.Drawing.Point(19, 63);
-            this.grammarCheckList1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarCheckList1B.Margin = new System.Windows.Forms.Padding(4);
             this.grammarCheckList1B.MinimumSize = new System.Drawing.Size(240, 89);
             this.grammarCheckList1B.Name = "grammarCheckList1B";
             this.grammarCheckList1B.Size = new System.Drawing.Size(240, 72);
@@ -1070,7 +1070,7 @@ namespace ProjectEcho
             this.panel33.Controls.Add(this.uploadButton1B);
             this.panel33.Controls.Add(this.label81);
             this.panel33.Location = new System.Drawing.Point(1421, 150);
-            this.panel33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel33.Margin = new System.Windows.Forms.Padding(4);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(379, 81);
             this.panel33.TabIndex = 34;
@@ -1087,7 +1087,7 @@ namespace ProjectEcho
             this.uploadButton1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton1B.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.uploadButton1B.Location = new System.Drawing.Point(288, 9);
-            this.uploadButton1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadButton1B.Margin = new System.Windows.Forms.Padding(4);
             this.uploadButton1B.Name = "uploadButton1B";
             this.uploadButton1B.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1B.TabIndex = 17;
@@ -1122,7 +1122,7 @@ namespace ProjectEcho
             this.panel34.Controls.Add(this.grammarProgressStatus1B);
             this.panel34.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel34.Location = new System.Drawing.Point(1421, 298);
-            this.panel34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel34.Margin = new System.Windows.Forms.Padding(4);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(379, 356);
             this.panel34.TabIndex = 32;
@@ -1131,7 +1131,7 @@ namespace ProjectEcho
             // 
             this.formatProgressBar1B.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.formatProgressBar1B.Location = new System.Drawing.Point(16, 36);
-            this.formatProgressBar1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatProgressBar1B.Margin = new System.Windows.Forms.Padding(4);
             this.formatProgressBar1B.Name = "formatProgressBar1B";
             this.formatProgressBar1B.Size = new System.Drawing.Size(339, 34);
             this.formatProgressBar1B.TabIndex = 21;
@@ -1184,7 +1184,7 @@ namespace ProjectEcho
             // 
             this.contentProgressBar1B.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contentProgressBar1B.Location = new System.Drawing.Point(16, 215);
-            this.contentProgressBar1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentProgressBar1B.Margin = new System.Windows.Forms.Padding(4);
             this.contentProgressBar1B.Name = "contentProgressBar1B";
             this.contentProgressBar1B.Size = new System.Drawing.Size(339, 34);
             this.contentProgressBar1B.TabIndex = 29;
@@ -1193,7 +1193,7 @@ namespace ProjectEcho
             // 
             this.grammarProgressBar1B.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grammarProgressBar1B.Location = new System.Drawing.Point(16, 124);
-            this.grammarProgressBar1B.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarProgressBar1B.Margin = new System.Windows.Forms.Padding(4);
             this.grammarProgressBar1B.Name = "grammarProgressBar1B";
             this.grammarProgressBar1B.Size = new System.Drawing.Size(339, 34);
             this.grammarProgressBar1B.TabIndex = 25;
@@ -1270,7 +1270,7 @@ namespace ProjectEcho
             this.tabPage3.Controls.Add(this.panel4);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1861, 916);
             this.tabPage3.TabIndex = 2;
@@ -1290,7 +1290,7 @@ namespace ProjectEcho
             this.panel4.Controls.Add(this.label102);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(11, 36);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1816, 822);
             this.panel4.TabIndex = 25;
@@ -1314,7 +1314,7 @@ namespace ProjectEcho
             this.panel15.Controls.Add(this.panel18);
             this.panel15.Controls.Add(this.panel35);
             this.panel15.Location = new System.Drawing.Point(19, 139);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1321, 674);
             this.panel15.TabIndex = 38;
@@ -1327,7 +1327,7 @@ namespace ProjectEcho
             this.panel16.Controls.Add(this.formatCheckList1C);
             this.panel16.Controls.Add(this.label46);
             this.panel16.Location = new System.Drawing.Point(27, 18);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(389, 635);
             this.panel16.TabIndex = 42;
@@ -1338,7 +1338,7 @@ namespace ProjectEcho
             this.formatTextBox1C.BackColor = System.Drawing.Color.White;
             this.formatTextBox1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formatTextBox1C.Location = new System.Drawing.Point(19, 223);
-            this.formatTextBox1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatTextBox1C.Margin = new System.Windows.Forms.Padding(4);
             this.formatTextBox1C.Multiline = true;
             this.formatTextBox1C.Name = "formatTextBox1C";
             this.formatTextBox1C.ReadOnly = true;
@@ -1370,7 +1370,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font"});
             this.formatCheckList1C.Location = new System.Drawing.Point(27, 63);
-            this.formatCheckList1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatCheckList1C.Margin = new System.Windows.Forms.Padding(4);
             this.formatCheckList1C.MinimumSize = new System.Drawing.Size(240, 89);
             this.formatCheckList1C.Name = "formatCheckList1C";
             this.formatCheckList1C.Size = new System.Drawing.Size(240, 72);
@@ -1394,7 +1394,7 @@ namespace ProjectEcho
             this.panel18.Controls.Add(this.label83);
             this.panel18.Controls.Add(this.contentCheckList1C);
             this.panel18.Location = new System.Drawing.Point(901, 18);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(389, 635);
             this.panel18.TabIndex = 40;
@@ -1415,7 +1415,7 @@ namespace ProjectEcho
             this.missingWordList1C.FormattingEnabled = true;
             this.missingWordList1C.ItemHeight = 20;
             this.missingWordList1C.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.missingWordList1C.Margin = new System.Windows.Forms.Padding(4);
             this.missingWordList1C.Name = "missingWordList1C";
             this.missingWordList1C.Size = new System.Drawing.Size(357, 364);
             this.missingWordList1C.TabIndex = 37;
@@ -1443,7 +1443,7 @@ namespace ProjectEcho
             this.contentCheckList1C.Items.AddRange(new object[] {
             "Contains all required words"});
             this.contentCheckList1C.Location = new System.Drawing.Point(37, 63);
-            this.contentCheckList1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentCheckList1C.Margin = new System.Windows.Forms.Padding(4);
             this.contentCheckList1C.MinimumSize = new System.Drawing.Size(240, 89);
             this.contentCheckList1C.Name = "contentCheckList1C";
             this.contentCheckList1C.Size = new System.Drawing.Size(279, 72);
@@ -1457,7 +1457,7 @@ namespace ProjectEcho
             this.panel35.Controls.Add(this.grammarCheckList1C);
             this.panel35.Controls.Add(this.label92);
             this.panel35.Location = new System.Drawing.Point(464, 18);
-            this.panel35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel35.Margin = new System.Windows.Forms.Padding(4);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(389, 635);
             this.panel35.TabIndex = 39;
@@ -1468,7 +1468,7 @@ namespace ProjectEcho
             this.grammarErrors1C.BackColor = System.Drawing.Color.White;
             this.grammarErrors1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1C.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarErrors1C.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1C.Multiline = true;
             this.grammarErrors1C.Name = "grammarErrors1C";
             this.grammarErrors1C.ReadOnly = true;
@@ -1499,7 +1499,7 @@ namespace ProjectEcho
             "No Grammar Issues",
             "No Style Issues"});
             this.grammarCheckList1C.Location = new System.Drawing.Point(19, 63);
-            this.grammarCheckList1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarCheckList1C.Margin = new System.Windows.Forms.Padding(4);
             this.grammarCheckList1C.MinimumSize = new System.Drawing.Size(240, 89);
             this.grammarCheckList1C.Name = "grammarCheckList1C";
             this.grammarCheckList1C.Size = new System.Drawing.Size(240, 72);
@@ -1524,7 +1524,7 @@ namespace ProjectEcho
             this.panel36.Controls.Add(this.uploadButton1C);
             this.panel36.Controls.Add(this.label93);
             this.panel36.Location = new System.Drawing.Point(1421, 150);
-            this.panel36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel36.Margin = new System.Windows.Forms.Padding(4);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(379, 81);
             this.panel36.TabIndex = 34;
@@ -1541,7 +1541,7 @@ namespace ProjectEcho
             this.uploadButton1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton1C.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.uploadButton1C.Location = new System.Drawing.Point(288, 9);
-            this.uploadButton1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadButton1C.Margin = new System.Windows.Forms.Padding(4);
             this.uploadButton1C.Name = "uploadButton1C";
             this.uploadButton1C.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1C.TabIndex = 17;
@@ -1576,7 +1576,7 @@ namespace ProjectEcho
             this.panel37.Controls.Add(this.grammarProgressStatus1C);
             this.panel37.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel37.Location = new System.Drawing.Point(1421, 298);
-            this.panel37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel37.Margin = new System.Windows.Forms.Padding(4);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(379, 356);
             this.panel37.TabIndex = 32;
@@ -1585,7 +1585,7 @@ namespace ProjectEcho
             // 
             this.formatProgressBar1C.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.formatProgressBar1C.Location = new System.Drawing.Point(16, 36);
-            this.formatProgressBar1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatProgressBar1C.Margin = new System.Windows.Forms.Padding(4);
             this.formatProgressBar1C.Name = "formatProgressBar1C";
             this.formatProgressBar1C.Size = new System.Drawing.Size(339, 34);
             this.formatProgressBar1C.TabIndex = 21;
@@ -1638,7 +1638,7 @@ namespace ProjectEcho
             // 
             this.contentProgressBar1C.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contentProgressBar1C.Location = new System.Drawing.Point(16, 215);
-            this.contentProgressBar1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentProgressBar1C.Margin = new System.Windows.Forms.Padding(4);
             this.contentProgressBar1C.Name = "contentProgressBar1C";
             this.contentProgressBar1C.Size = new System.Drawing.Size(339, 34);
             this.contentProgressBar1C.TabIndex = 29;
@@ -1647,7 +1647,7 @@ namespace ProjectEcho
             // 
             this.grammarProgressBar1C.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grammarProgressBar1C.Location = new System.Drawing.Point(16, 124);
-            this.grammarProgressBar1C.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarProgressBar1C.Margin = new System.Windows.Forms.Padding(4);
             this.grammarProgressBar1C.Name = "grammarProgressBar1C";
             this.grammarProgressBar1C.Size = new System.Drawing.Size(339, 34);
             this.grammarProgressBar1C.TabIndex = 25;
@@ -1724,7 +1724,7 @@ namespace ProjectEcho
             this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1861, 916);
             this.tabPage4.TabIndex = 3;
@@ -1744,7 +1744,7 @@ namespace ProjectEcho
             this.panel5.Controls.Add(this.label114);
             this.panel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(11, 36);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1816, 822);
             this.panel5.TabIndex = 26;
@@ -1768,7 +1768,7 @@ namespace ProjectEcho
             this.panel19.Controls.Add(this.panel22);
             this.panel19.Controls.Add(this.panel38);
             this.panel19.Location = new System.Drawing.Point(19, 139);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(1321, 674);
             this.panel19.TabIndex = 38;
@@ -1781,7 +1781,7 @@ namespace ProjectEcho
             this.panel20.Controls.Add(this.formatCheckList1D);
             this.panel20.Controls.Add(this.label58);
             this.panel20.Location = new System.Drawing.Point(27, 18);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(389, 635);
             this.panel20.TabIndex = 42;
@@ -1792,7 +1792,7 @@ namespace ProjectEcho
             this.formatTextBox1D.BackColor = System.Drawing.Color.White;
             this.formatTextBox1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formatTextBox1D.Location = new System.Drawing.Point(19, 223);
-            this.formatTextBox1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatTextBox1D.Margin = new System.Windows.Forms.Padding(4);
             this.formatTextBox1D.Multiline = true;
             this.formatTextBox1D.Name = "formatTextBox1D";
             this.formatTextBox1D.ReadOnly = true;
@@ -1824,7 +1824,7 @@ namespace ProjectEcho
             "Arial Font",
             "Size 11 Font"});
             this.formatCheckList1D.Location = new System.Drawing.Point(27, 63);
-            this.formatCheckList1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatCheckList1D.Margin = new System.Windows.Forms.Padding(4);
             this.formatCheckList1D.MinimumSize = new System.Drawing.Size(240, 89);
             this.formatCheckList1D.Name = "formatCheckList1D";
             this.formatCheckList1D.Size = new System.Drawing.Size(240, 72);
@@ -1848,7 +1848,7 @@ namespace ProjectEcho
             this.panel22.Controls.Add(this.label95);
             this.panel22.Controls.Add(this.contentCheckList1D);
             this.panel22.Location = new System.Drawing.Point(901, 18);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(389, 635);
             this.panel22.TabIndex = 40;
@@ -1869,7 +1869,7 @@ namespace ProjectEcho
             this.missingWordList1D.FormattingEnabled = true;
             this.missingWordList1D.ItemHeight = 20;
             this.missingWordList1D.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.missingWordList1D.Margin = new System.Windows.Forms.Padding(4);
             this.missingWordList1D.Name = "missingWordList1D";
             this.missingWordList1D.Size = new System.Drawing.Size(357, 364);
             this.missingWordList1D.TabIndex = 37;
@@ -1897,7 +1897,7 @@ namespace ProjectEcho
             this.contentCheckList1D.Items.AddRange(new object[] {
             "Contains all required words"});
             this.contentCheckList1D.Location = new System.Drawing.Point(37, 63);
-            this.contentCheckList1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentCheckList1D.Margin = new System.Windows.Forms.Padding(4);
             this.contentCheckList1D.MinimumSize = new System.Drawing.Size(240, 89);
             this.contentCheckList1D.Name = "contentCheckList1D";
             this.contentCheckList1D.Size = new System.Drawing.Size(279, 72);
@@ -1911,7 +1911,7 @@ namespace ProjectEcho
             this.panel38.Controls.Add(this.grammarCheckList1D);
             this.panel38.Controls.Add(this.label104);
             this.panel38.Location = new System.Drawing.Point(464, 18);
-            this.panel38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel38.Margin = new System.Windows.Forms.Padding(4);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(389, 635);
             this.panel38.TabIndex = 39;
@@ -1922,7 +1922,7 @@ namespace ProjectEcho
             this.grammarErrors1D.BackColor = System.Drawing.Color.White;
             this.grammarErrors1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1D.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarErrors1D.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1D.Multiline = true;
             this.grammarErrors1D.Name = "grammarErrors1D";
             this.grammarErrors1D.ReadOnly = true;
@@ -1953,7 +1953,7 @@ namespace ProjectEcho
             "No Grammar Issues",
             "No Style Issues"});
             this.grammarCheckList1D.Location = new System.Drawing.Point(19, 63);
-            this.grammarCheckList1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarCheckList1D.Margin = new System.Windows.Forms.Padding(4);
             this.grammarCheckList1D.MinimumSize = new System.Drawing.Size(240, 89);
             this.grammarCheckList1D.Name = "grammarCheckList1D";
             this.grammarCheckList1D.Size = new System.Drawing.Size(240, 72);
@@ -1978,7 +1978,7 @@ namespace ProjectEcho
             this.panel39.Controls.Add(this.uploadButton1D);
             this.panel39.Controls.Add(this.label105);
             this.panel39.Location = new System.Drawing.Point(1421, 150);
-            this.panel39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel39.Margin = new System.Windows.Forms.Padding(4);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(379, 81);
             this.panel39.TabIndex = 34;
@@ -1995,7 +1995,7 @@ namespace ProjectEcho
             this.uploadButton1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton1D.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.uploadButton1D.Location = new System.Drawing.Point(288, 9);
-            this.uploadButton1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadButton1D.Margin = new System.Windows.Forms.Padding(4);
             this.uploadButton1D.Name = "uploadButton1D";
             this.uploadButton1D.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1D.TabIndex = 17;
@@ -2030,7 +2030,7 @@ namespace ProjectEcho
             this.panel40.Controls.Add(this.grammarProgressStatus1D);
             this.panel40.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel40.Location = new System.Drawing.Point(1421, 298);
-            this.panel40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel40.Margin = new System.Windows.Forms.Padding(4);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(379, 356);
             this.panel40.TabIndex = 32;
@@ -2039,7 +2039,7 @@ namespace ProjectEcho
             // 
             this.formatProgressBar1D.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.formatProgressBar1D.Location = new System.Drawing.Point(16, 36);
-            this.formatProgressBar1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatProgressBar1D.Margin = new System.Windows.Forms.Padding(4);
             this.formatProgressBar1D.Name = "formatProgressBar1D";
             this.formatProgressBar1D.Size = new System.Drawing.Size(339, 34);
             this.formatProgressBar1D.TabIndex = 21;
@@ -2092,7 +2092,7 @@ namespace ProjectEcho
             // 
             this.contentProgressBar1D.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contentProgressBar1D.Location = new System.Drawing.Point(16, 215);
-            this.contentProgressBar1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentProgressBar1D.Margin = new System.Windows.Forms.Padding(4);
             this.contentProgressBar1D.Name = "contentProgressBar1D";
             this.contentProgressBar1D.Size = new System.Drawing.Size(339, 34);
             this.contentProgressBar1D.TabIndex = 29;
@@ -2101,7 +2101,7 @@ namespace ProjectEcho
             // 
             this.grammarProgressBar1D.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grammarProgressBar1D.Location = new System.Drawing.Point(16, 124);
-            this.grammarProgressBar1D.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarProgressBar1D.Margin = new System.Windows.Forms.Padding(4);
             this.grammarProgressBar1D.Name = "grammarProgressBar1D";
             this.grammarProgressBar1D.Size = new System.Drawing.Size(339, 34);
             this.grammarProgressBar1D.TabIndex = 25;
@@ -2178,7 +2178,7 @@ namespace ProjectEcho
             this.tabPage5.Controls.Add(this.panel6);
             this.tabPage5.Controls.Add(this.label71);
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1861, 916);
             this.tabPage5.TabIndex = 4;
@@ -2198,7 +2198,7 @@ namespace ProjectEcho
             this.panel6.Controls.Add(this.label126);
             this.panel6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(11, 36);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1816, 822);
             this.panel6.TabIndex = 28;
@@ -2222,7 +2222,7 @@ namespace ProjectEcho
             this.panel23.Controls.Add(this.panel26);
             this.panel23.Controls.Add(this.panel41);
             this.panel23.Location = new System.Drawing.Point(19, 139);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(1321, 674);
             this.panel23.TabIndex = 38;
@@ -2235,7 +2235,7 @@ namespace ProjectEcho
             this.panel24.Controls.Add(this.formatCheckList1E);
             this.panel24.Controls.Add(this.label69);
             this.panel24.Location = new System.Drawing.Point(27, 18);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(389, 635);
             this.panel24.TabIndex = 42;
@@ -2246,7 +2246,7 @@ namespace ProjectEcho
             this.formatTextBox1E.BackColor = System.Drawing.Color.White;
             this.formatTextBox1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formatTextBox1E.Location = new System.Drawing.Point(19, 223);
-            this.formatTextBox1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatTextBox1E.Margin = new System.Windows.Forms.Padding(4);
             this.formatTextBox1E.Multiline = true;
             this.formatTextBox1E.Name = "formatTextBox1E";
             this.formatTextBox1E.ReadOnly = true;
@@ -2279,7 +2279,7 @@ namespace ProjectEcho
             "Size 11 Font",
             "9 pages or less"});
             this.formatCheckList1E.Location = new System.Drawing.Point(27, 63);
-            this.formatCheckList1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatCheckList1E.Margin = new System.Windows.Forms.Padding(4);
             this.formatCheckList1E.MinimumSize = new System.Drawing.Size(240, 89);
             this.formatCheckList1E.Name = "formatCheckList1E";
             this.formatCheckList1E.Size = new System.Drawing.Size(240, 72);
@@ -2303,7 +2303,7 @@ namespace ProjectEcho
             this.panel26.Controls.Add(this.label107);
             this.panel26.Controls.Add(this.contentCheckList1E);
             this.panel26.Location = new System.Drawing.Point(901, 18);
-            this.panel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(389, 635);
             this.panel26.TabIndex = 40;
@@ -2324,7 +2324,7 @@ namespace ProjectEcho
             this.missingWordList1E.FormattingEnabled = true;
             this.missingWordList1E.ItemHeight = 20;
             this.missingWordList1E.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.missingWordList1E.Margin = new System.Windows.Forms.Padding(4);
             this.missingWordList1E.Name = "missingWordList1E";
             this.missingWordList1E.Size = new System.Drawing.Size(357, 364);
             this.missingWordList1E.TabIndex = 37;
@@ -2352,7 +2352,7 @@ namespace ProjectEcho
             this.contentCheckList1E.Items.AddRange(new object[] {
             "Contains all required words"});
             this.contentCheckList1E.Location = new System.Drawing.Point(37, 63);
-            this.contentCheckList1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentCheckList1E.Margin = new System.Windows.Forms.Padding(4);
             this.contentCheckList1E.MinimumSize = new System.Drawing.Size(240, 89);
             this.contentCheckList1E.Name = "contentCheckList1E";
             this.contentCheckList1E.Size = new System.Drawing.Size(279, 72);
@@ -2366,7 +2366,7 @@ namespace ProjectEcho
             this.panel41.Controls.Add(this.grammarCheckList1E);
             this.panel41.Controls.Add(this.label116);
             this.panel41.Location = new System.Drawing.Point(464, 18);
-            this.panel41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel41.Margin = new System.Windows.Forms.Padding(4);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(389, 635);
             this.panel41.TabIndex = 39;
@@ -2377,7 +2377,7 @@ namespace ProjectEcho
             this.grammarErrors1E.BackColor = System.Drawing.Color.White;
             this.grammarErrors1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grammarErrors1E.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarErrors1E.Margin = new System.Windows.Forms.Padding(4);
             this.grammarErrors1E.Multiline = true;
             this.grammarErrors1E.Name = "grammarErrors1E";
             this.grammarErrors1E.ReadOnly = true;
@@ -2408,7 +2408,7 @@ namespace ProjectEcho
             "No Grammar Issues",
             "No Style Issues"});
             this.grammarCheckList1E.Location = new System.Drawing.Point(19, 63);
-            this.grammarCheckList1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarCheckList1E.Margin = new System.Windows.Forms.Padding(4);
             this.grammarCheckList1E.MinimumSize = new System.Drawing.Size(240, 89);
             this.grammarCheckList1E.Name = "grammarCheckList1E";
             this.grammarCheckList1E.Size = new System.Drawing.Size(240, 72);
@@ -2433,7 +2433,7 @@ namespace ProjectEcho
             this.panel42.Controls.Add(this.uploadButton1E);
             this.panel42.Controls.Add(this.label117);
             this.panel42.Location = new System.Drawing.Point(1421, 150);
-            this.panel42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel42.Margin = new System.Windows.Forms.Padding(4);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(379, 81);
             this.panel42.TabIndex = 34;
@@ -2450,7 +2450,7 @@ namespace ProjectEcho
             this.uploadButton1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadButton1E.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.uploadButton1E.Location = new System.Drawing.Point(288, 9);
-            this.uploadButton1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadButton1E.Margin = new System.Windows.Forms.Padding(4);
             this.uploadButton1E.Name = "uploadButton1E";
             this.uploadButton1E.Size = new System.Drawing.Size(67, 69);
             this.uploadButton1E.TabIndex = 17;
@@ -2485,7 +2485,7 @@ namespace ProjectEcho
             this.panel43.Controls.Add(this.grammarProgressStatus1E);
             this.panel43.ForeColor = System.Drawing.Color.GhostWhite;
             this.panel43.Location = new System.Drawing.Point(1421, 298);
-            this.panel43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel43.Margin = new System.Windows.Forms.Padding(4);
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(379, 356);
             this.panel43.TabIndex = 32;
@@ -2494,7 +2494,7 @@ namespace ProjectEcho
             // 
             this.formatProgressBar1E.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.formatProgressBar1E.Location = new System.Drawing.Point(16, 36);
-            this.formatProgressBar1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formatProgressBar1E.Margin = new System.Windows.Forms.Padding(4);
             this.formatProgressBar1E.Name = "formatProgressBar1E";
             this.formatProgressBar1E.Size = new System.Drawing.Size(339, 34);
             this.formatProgressBar1E.TabIndex = 21;
@@ -2547,7 +2547,7 @@ namespace ProjectEcho
             // 
             this.contentProgressBar1E.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.contentProgressBar1E.Location = new System.Drawing.Point(16, 215);
-            this.contentProgressBar1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contentProgressBar1E.Margin = new System.Windows.Forms.Padding(4);
             this.contentProgressBar1E.Name = "contentProgressBar1E";
             this.contentProgressBar1E.Size = new System.Drawing.Size(339, 34);
             this.contentProgressBar1E.TabIndex = 29;
@@ -2556,7 +2556,7 @@ namespace ProjectEcho
             // 
             this.grammarProgressBar1E.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grammarProgressBar1E.Location = new System.Drawing.Point(16, 124);
-            this.grammarProgressBar1E.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grammarProgressBar1E.Margin = new System.Windows.Forms.Padding(4);
             this.grammarProgressBar1E.Name = "grammarProgressBar1E";
             this.grammarProgressBar1E.Size = new System.Drawing.Size(339, 34);
             this.grammarProgressBar1E.TabIndex = 25;
@@ -2634,7 +2634,7 @@ namespace ProjectEcho
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.notebookPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaskOneUserControl";
             this.Size = new System.Drawing.Size(2511, 985);
             this.Load += new System.EventHandler(this.TaskOneUserControl_Load);
@@ -2741,11 +2741,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ListBox missingWordList1A;
+        private System.Windows.Forms.ListBox contentListBox1A;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.CheckedListBox contentCheckList1A;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox grammarErrors1A;
+        private System.Windows.Forms.TextBox grammarTextBox1A;
         private System.Windows.Forms.Label foundGrammarIssuesLabel;
         private System.Windows.Forms.CheckedListBox grammarCheckList1A;
         private System.Windows.Forms.Label label15;
