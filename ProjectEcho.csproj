@@ -258,7 +258,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TestDoc.docx" />
     <None Include="vlclib\hrtfs\dodeca_and_7channel_3DSL_HRTF.sofa" />
     <None Include="vlclib\locale\ach\LC_MESSAGES\vlc.mo" />
     <None Include="vlclib\locale\af\LC_MESSAGES\vlc.mo" />
