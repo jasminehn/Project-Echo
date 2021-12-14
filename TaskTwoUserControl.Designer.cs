@@ -1,5 +1,5 @@
 ﻿
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     partial class TaskTwoUserControl
     {
@@ -579,7 +579,7 @@ namespace ProjectEcho
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::ProjectEcho.Properties.Resources.playButton;
+            this.button1.Image = global::EducationCapstoneChecker.Properties.Resources.playButton;
             this.button1.Location = new System.Drawing.Point(503, 255);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 51);
@@ -677,7 +677,7 @@ namespace ProjectEcho
             // 
             this.clipOneUpload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clipOneUpload.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.clipOneUpload.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__13_;
             this.clipOneUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.clipOneUpload.FlatAppearance.BorderSize = 0;
             this.clipOneUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -764,7 +764,7 @@ namespace ProjectEcho
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
+            this.pictureBox1.Image = global::EducationCapstoneChecker.Properties.Resources.notebookSpirals;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(22, 10);
             this.pictureBox1.Name = "pictureBox1";
@@ -792,7 +792,7 @@ namespace ProjectEcho
             this.secondPlayButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.secondPlayButton.FlatAppearance.BorderSize = 0;
             this.secondPlayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secondPlayButton.Image = global::ProjectEcho.Properties.Resources.playButton;
+            this.secondPlayButton.Image = global::EducationCapstoneChecker.Properties.Resources.playButton;
             this.secondPlayButton.Location = new System.Drawing.Point(507, 265);
             this.secondPlayButton.Name = "secondPlayButton";
             this.secondPlayButton.Size = new System.Drawing.Size(60, 51);
@@ -846,7 +846,7 @@ namespace ProjectEcho
             // 
             this.SecondUploadButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SecondUploadButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__13_;
+            this.SecondUploadButton.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__13_;
             this.SecondUploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.SecondUploadButton.FlatAppearance.BorderSize = 0;
             this.SecondUploadButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

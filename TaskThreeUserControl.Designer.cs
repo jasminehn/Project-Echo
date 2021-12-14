@@ -1,5 +1,5 @@
 ﻿
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     partial class TaskThreeUserControl
     {
@@ -355,7 +355,7 @@ namespace ProjectEcho
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
+            this.pictureBox1.Image = global::EducationCapstoneChecker.Properties.Resources.notebookSpirals;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(22, 10);
             this.pictureBox1.Name = "pictureBox1";
@@ -580,7 +580,7 @@ namespace ProjectEcho
             // 
             // UploadButton3A
             // 
-            this.UploadButton3A.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.UploadButton3A.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.UploadButton3A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.UploadButton3A.FlatAppearance.BorderSize = 0;
             this.UploadButton3A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -768,7 +768,7 @@ namespace ProjectEcho
             // 
             // MediaUploadButton3A
             // 
-            this.MediaUploadButton3A.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.MediaUploadButton3A.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.MediaUploadButton3A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MediaUploadButton3A.FlatAppearance.BorderSize = 0;
             this.MediaUploadButton3A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1126,7 +1126,7 @@ namespace ProjectEcho
             // 
             // UploadButton3B
             // 
-            this.UploadButton3B.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.UploadButton3B.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.UploadButton3B.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.UploadButton3B.FlatAppearance.BorderSize = 0;
             this.UploadButton3B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1314,7 +1314,7 @@ namespace ProjectEcho
             // 
             // MediaUploadButton3B
             // 
-            this.MediaUploadButton3B.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.MediaUploadButton3B.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.MediaUploadButton3B.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MediaUploadButton3B.FlatAppearance.BorderSize = 0;
             this.MediaUploadButton3B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1658,7 +1658,7 @@ namespace ProjectEcho
             // 
             // UploadButton3C
             // 
-            this.UploadButton3C.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.UploadButton3C.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.UploadButton3C.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.UploadButton3C.FlatAppearance.BorderSize = 0;
             this.UploadButton3C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1846,7 +1846,7 @@ namespace ProjectEcho
             // 
             // MediaUploadButton3C
             // 
-            this.MediaUploadButton3C.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.MediaUploadButton3C.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.MediaUploadButton3C.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MediaUploadButton3C.FlatAppearance.BorderSize = 0;
             this.MediaUploadButton3C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -2239,7 +2239,7 @@ namespace ProjectEcho
             // 
             this.UploadButton3D.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UploadButton3D.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.UploadButton3D.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.UploadButton3D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.UploadButton3D.FlatAppearance.BorderSize = 0;
             this.UploadButton3D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -2670,7 +2670,7 @@ namespace ProjectEcho
             // 
             this.UploadButton3E.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UploadButton3E.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.UploadButton3E.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.UploadButton3E.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.UploadButton3E.FlatAppearance.BorderSize = 0;
             this.UploadButton3E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WMPLib;
 
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     /**
      *
@@ -79,12 +77,12 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckVideo(3, "A", "media", mediaUploadInfo3A, 
+                await CheckVideo(3, "A", "media", mediaUploadInfo3A,
                     mediaCheckList3A, mediaTextBox3A,
                     mediaProgressBar3A, mediaProgressStatus3A,
                     0);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
             }
@@ -238,7 +236,7 @@ namespace ProjectEcho
 
             await processData(mlist, mprogress); //Start the progress bar
 
-            
+
             Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
 
             mediaTB.Text = fc.mediaSizeFB
@@ -477,6 +475,6 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        
+
     }
 }

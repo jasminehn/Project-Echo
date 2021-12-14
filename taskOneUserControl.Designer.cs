@@ -1,5 +1,5 @@
 ﻿
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     partial class TaskOneUserControl
     {
@@ -278,7 +278,7 @@ namespace ProjectEcho
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjectEcho.Properties.Resources.notebookSpirals;
+            this.pictureBox1.Image = global::EducationCapstoneChecker.Properties.Resources.notebookSpirals;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(29, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -612,7 +612,7 @@ namespace ProjectEcho
             // 
             this.uploadButton1A.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton1A.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton1A.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.uploadButton1A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.uploadButton1A.FlatAppearance.BorderSize = 0;
             this.uploadButton1A.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1079,7 +1079,7 @@ namespace ProjectEcho
             // 
             this.uploadButton1B.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton1B.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton1B.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.uploadButton1B.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.uploadButton1B.FlatAppearance.BorderSize = 0;
             this.uploadButton1B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1533,7 +1533,7 @@ namespace ProjectEcho
             // 
             this.uploadButton1C.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton1C.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton1C.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.uploadButton1C.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.uploadButton1C.FlatAppearance.BorderSize = 0;
             this.uploadButton1C.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -1987,7 +1987,7 @@ namespace ProjectEcho
             // 
             this.uploadButton1D.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton1D.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton1D.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.uploadButton1D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.uploadButton1D.FlatAppearance.BorderSize = 0;
             this.uploadButton1D.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -2442,7 +2442,7 @@ namespace ProjectEcho
             // 
             this.uploadButton1E.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uploadButton1E.BackgroundImage = global::ProjectEcho.Properties.Resources.Untitled_design__14_;
+            this.uploadButton1E.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Untitled_design__14_;
             this.uploadButton1E.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.uploadButton1E.FlatAppearance.BorderSize = 0;
             this.uploadButton1E.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

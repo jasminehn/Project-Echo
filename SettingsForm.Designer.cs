@@ -1,5 +1,5 @@
 
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     partial class SettingsForm
     {
@@ -32,8 +32,8 @@ namespace ProjectEcho
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textsizeAdjust = new System.Windows.Forms.TrackBar();
-            this.switchButton = new ProjectEcho.SwitchButton();
-            this.boldnessToggle = new ProjectEcho.SwitchButton();
+            this.switchButton = new EducationCapstoneChecker.SwitchButton();
+            this.boldnessToggle = new EducationCapstoneChecker.SwitchButton();
             this.darkmodeLabel = new System.Windows.Forms.Label();
             this.textsizeLabel = new System.Windows.Forms.Label();
             this.boldnessLabel = new System.Windows.Forms.Label();

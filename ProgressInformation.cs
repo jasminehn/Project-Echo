@@ -1,4 +1,4 @@
-﻿namespace ProjectEcho
+﻿namespace EducationCapstoneChecker
 {
     class ProgressInformation
     {

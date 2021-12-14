@@ -15,7 +15,7 @@ using System.Windows.Forms;
  *  
  *  Authors: C. Segrue, J. Nelson, E. MacDonald, I. Gnagy
  */
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     /** Each task is built with something called a 'User Control'. If you take a look at the Designer, you can get 
      *  a better sense of what's going on below. (Hint: Right click anywhere on the code and at the top of the 

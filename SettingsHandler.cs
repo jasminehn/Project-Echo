@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     class SettingsHandler
     {

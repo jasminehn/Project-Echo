@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectEcho
+namespace EducationCapstoneChecker
 {
     /**
      *
