@@ -84,11 +84,11 @@ namespace ProjectEcho
             this.label34 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label35 = new System.Windows.Forms.Label();
-            this.missingWordList1B = new System.Windows.Forms.ListBox();
+            this.contentListBox1B = new System.Windows.Forms.ListBox();
             this.label78 = new System.Windows.Forms.Label();
             this.contentCheckList1B = new System.Windows.Forms.CheckedListBox();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.grammarErrors1B = new System.Windows.Forms.TextBox();
+            this.grammarTextBox1B = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
             this.grammarCheckList1B = new System.Windows.Forms.CheckedListBox();
             this.label80 = new System.Windows.Forms.Label();
@@ -120,11 +120,11 @@ namespace ProjectEcho
             this.label46 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
-            this.missingWordList1C = new System.Windows.Forms.ListBox();
+            this.contentListBox1C = new System.Windows.Forms.ListBox();
             this.label83 = new System.Windows.Forms.Label();
             this.contentCheckList1C = new System.Windows.Forms.CheckedListBox();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.grammarErrors1C = new System.Windows.Forms.TextBox();
+            this.grammarTextBox1C = new System.Windows.Forms.TextBox();
             this.label91 = new System.Windows.Forms.Label();
             this.grammarCheckList1C = new System.Windows.Forms.CheckedListBox();
             this.label92 = new System.Windows.Forms.Label();
@@ -156,11 +156,11 @@ namespace ProjectEcho
             this.label58 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label59 = new System.Windows.Forms.Label();
-            this.missingWordList1D = new System.Windows.Forms.ListBox();
+            this.contentListBox1D = new System.Windows.Forms.ListBox();
             this.label95 = new System.Windows.Forms.Label();
             this.contentCheckList1D = new System.Windows.Forms.CheckedListBox();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.grammarErrors1D = new System.Windows.Forms.TextBox();
+            this.grammarTextBox1D = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.grammarCheckList1D = new System.Windows.Forms.CheckedListBox();
             this.label104 = new System.Windows.Forms.Label();
@@ -192,11 +192,11 @@ namespace ProjectEcho
             this.label69 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label70 = new System.Windows.Forms.Label();
-            this.missingWordList1E = new System.Windows.Forms.ListBox();
+            this.contentListBox1E = new System.Windows.Forms.ListBox();
             this.label107 = new System.Windows.Forms.Label();
             this.contentCheckList1E = new System.Windows.Forms.CheckedListBox();
             this.panel41 = new System.Windows.Forms.Panel();
-            this.grammarErrors1E = new System.Windows.Forms.TextBox();
+            this.grammarTextBox1E = new System.Windows.Forms.TextBox();
             this.label115 = new System.Windows.Forms.Label();
             this.grammarCheckList1E = new System.Windows.Forms.CheckedListBox();
             this.label116 = new System.Windows.Forms.Label();
@@ -936,7 +936,7 @@ namespace ProjectEcho
             // 
             this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel14.Controls.Add(this.label35);
-            this.panel14.Controls.Add(this.missingWordList1B);
+            this.panel14.Controls.Add(this.contentListBox1B);
             this.panel14.Controls.Add(this.label78);
             this.panel14.Controls.Add(this.contentCheckList1B);
             this.panel14.Location = new System.Drawing.Point(901, 18);
@@ -955,16 +955,16 @@ namespace ProjectEcho
             this.label35.TabIndex = 35;
             this.label35.Text = "SUGGESTED TERMINOLOGY:";
             // 
-            // missingWordList1B
+            // contentListBox1B
             // 
-            this.missingWordList1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missingWordList1B.FormattingEnabled = true;
-            this.missingWordList1B.ItemHeight = 20;
-            this.missingWordList1B.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1B.Margin = new System.Windows.Forms.Padding(4);
-            this.missingWordList1B.Name = "missingWordList1B";
-            this.missingWordList1B.Size = new System.Drawing.Size(357, 364);
-            this.missingWordList1B.TabIndex = 37;
+            this.contentListBox1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentListBox1B.FormattingEnabled = true;
+            this.contentListBox1B.ItemHeight = 20;
+            this.contentListBox1B.Location = new System.Drawing.Point(19, 223);
+            this.contentListBox1B.Margin = new System.Windows.Forms.Padding(4);
+            this.contentListBox1B.Name = "contentListBox1B";
+            this.contentListBox1B.Size = new System.Drawing.Size(357, 364);
+            this.contentListBox1B.TabIndex = 37;
             // 
             // label78
             // 
@@ -998,7 +998,7 @@ namespace ProjectEcho
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel32.Controls.Add(this.grammarErrors1B);
+            this.panel32.Controls.Add(this.grammarTextBox1B);
             this.panel32.Controls.Add(this.label79);
             this.panel32.Controls.Add(this.grammarCheckList1B);
             this.panel32.Controls.Add(this.label80);
@@ -1008,19 +1008,19 @@ namespace ProjectEcho
             this.panel32.Size = new System.Drawing.Size(389, 635);
             this.panel32.TabIndex = 39;
             // 
-            // grammarErrors1B
+            // grammarTextBox1B
             // 
-            this.grammarErrors1B.AcceptsReturn = true;
-            this.grammarErrors1B.BackColor = System.Drawing.Color.White;
-            this.grammarErrors1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarErrors1B.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1B.Margin = new System.Windows.Forms.Padding(4);
-            this.grammarErrors1B.Multiline = true;
-            this.grammarErrors1B.Name = "grammarErrors1B";
-            this.grammarErrors1B.ReadOnly = true;
-            this.grammarErrors1B.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarErrors1B.Size = new System.Drawing.Size(353, 384);
-            this.grammarErrors1B.TabIndex = 38;
+            this.grammarTextBox1B.AcceptsReturn = true;
+            this.grammarTextBox1B.BackColor = System.Drawing.Color.White;
+            this.grammarTextBox1B.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarTextBox1B.Location = new System.Drawing.Point(19, 223);
+            this.grammarTextBox1B.Margin = new System.Windows.Forms.Padding(4);
+            this.grammarTextBox1B.Multiline = true;
+            this.grammarTextBox1B.Name = "grammarTextBox1B";
+            this.grammarTextBox1B.ReadOnly = true;
+            this.grammarTextBox1B.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grammarTextBox1B.Size = new System.Drawing.Size(353, 384);
+            this.grammarTextBox1B.TabIndex = 38;
             // 
             // label79
             // 
@@ -1390,7 +1390,7 @@ namespace ProjectEcho
             // 
             this.panel18.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel18.Controls.Add(this.label47);
-            this.panel18.Controls.Add(this.missingWordList1C);
+            this.panel18.Controls.Add(this.contentListBox1C);
             this.panel18.Controls.Add(this.label83);
             this.panel18.Controls.Add(this.contentCheckList1C);
             this.panel18.Location = new System.Drawing.Point(901, 18);
@@ -1409,16 +1409,16 @@ namespace ProjectEcho
             this.label47.TabIndex = 35;
             this.label47.Text = "SUGGESTED TERMINOLOGY:";
             // 
-            // missingWordList1C
+            // contentListBox1C
             // 
-            this.missingWordList1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missingWordList1C.FormattingEnabled = true;
-            this.missingWordList1C.ItemHeight = 20;
-            this.missingWordList1C.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1C.Margin = new System.Windows.Forms.Padding(4);
-            this.missingWordList1C.Name = "missingWordList1C";
-            this.missingWordList1C.Size = new System.Drawing.Size(357, 364);
-            this.missingWordList1C.TabIndex = 37;
+            this.contentListBox1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentListBox1C.FormattingEnabled = true;
+            this.contentListBox1C.ItemHeight = 20;
+            this.contentListBox1C.Location = new System.Drawing.Point(19, 223);
+            this.contentListBox1C.Margin = new System.Windows.Forms.Padding(4);
+            this.contentListBox1C.Name = "contentListBox1C";
+            this.contentListBox1C.Size = new System.Drawing.Size(357, 364);
+            this.contentListBox1C.TabIndex = 37;
             // 
             // label83
             // 
@@ -1452,7 +1452,7 @@ namespace ProjectEcho
             // panel35
             // 
             this.panel35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel35.Controls.Add(this.grammarErrors1C);
+            this.panel35.Controls.Add(this.grammarTextBox1C);
             this.panel35.Controls.Add(this.label91);
             this.panel35.Controls.Add(this.grammarCheckList1C);
             this.panel35.Controls.Add(this.label92);
@@ -1462,19 +1462,19 @@ namespace ProjectEcho
             this.panel35.Size = new System.Drawing.Size(389, 635);
             this.panel35.TabIndex = 39;
             // 
-            // grammarErrors1C
+            // grammarTextBox1C
             // 
-            this.grammarErrors1C.AcceptsReturn = true;
-            this.grammarErrors1C.BackColor = System.Drawing.Color.White;
-            this.grammarErrors1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarErrors1C.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1C.Margin = new System.Windows.Forms.Padding(4);
-            this.grammarErrors1C.Multiline = true;
-            this.grammarErrors1C.Name = "grammarErrors1C";
-            this.grammarErrors1C.ReadOnly = true;
-            this.grammarErrors1C.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarErrors1C.Size = new System.Drawing.Size(353, 384);
-            this.grammarErrors1C.TabIndex = 38;
+            this.grammarTextBox1C.AcceptsReturn = true;
+            this.grammarTextBox1C.BackColor = System.Drawing.Color.White;
+            this.grammarTextBox1C.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarTextBox1C.Location = new System.Drawing.Point(19, 223);
+            this.grammarTextBox1C.Margin = new System.Windows.Forms.Padding(4);
+            this.grammarTextBox1C.Multiline = true;
+            this.grammarTextBox1C.Name = "grammarTextBox1C";
+            this.grammarTextBox1C.ReadOnly = true;
+            this.grammarTextBox1C.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grammarTextBox1C.Size = new System.Drawing.Size(353, 384);
+            this.grammarTextBox1C.TabIndex = 38;
             // 
             // label91
             // 
@@ -1844,7 +1844,7 @@ namespace ProjectEcho
             // 
             this.panel22.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel22.Controls.Add(this.label59);
-            this.panel22.Controls.Add(this.missingWordList1D);
+            this.panel22.Controls.Add(this.contentListBox1D);
             this.panel22.Controls.Add(this.label95);
             this.panel22.Controls.Add(this.contentCheckList1D);
             this.panel22.Location = new System.Drawing.Point(901, 18);
@@ -1863,16 +1863,16 @@ namespace ProjectEcho
             this.label59.TabIndex = 35;
             this.label59.Text = "SUGGESTED TERMINOLOGY:";
             // 
-            // missingWordList1D
+            // contentListBox1D
             // 
-            this.missingWordList1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missingWordList1D.FormattingEnabled = true;
-            this.missingWordList1D.ItemHeight = 20;
-            this.missingWordList1D.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1D.Margin = new System.Windows.Forms.Padding(4);
-            this.missingWordList1D.Name = "missingWordList1D";
-            this.missingWordList1D.Size = new System.Drawing.Size(357, 364);
-            this.missingWordList1D.TabIndex = 37;
+            this.contentListBox1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentListBox1D.FormattingEnabled = true;
+            this.contentListBox1D.ItemHeight = 20;
+            this.contentListBox1D.Location = new System.Drawing.Point(19, 223);
+            this.contentListBox1D.Margin = new System.Windows.Forms.Padding(4);
+            this.contentListBox1D.Name = "contentListBox1D";
+            this.contentListBox1D.Size = new System.Drawing.Size(357, 364);
+            this.contentListBox1D.TabIndex = 37;
             // 
             // label95
             // 
@@ -1906,7 +1906,7 @@ namespace ProjectEcho
             // panel38
             // 
             this.panel38.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel38.Controls.Add(this.grammarErrors1D);
+            this.panel38.Controls.Add(this.grammarTextBox1D);
             this.panel38.Controls.Add(this.label103);
             this.panel38.Controls.Add(this.grammarCheckList1D);
             this.panel38.Controls.Add(this.label104);
@@ -1916,19 +1916,19 @@ namespace ProjectEcho
             this.panel38.Size = new System.Drawing.Size(389, 635);
             this.panel38.TabIndex = 39;
             // 
-            // grammarErrors1D
+            // grammarTextBox1D
             // 
-            this.grammarErrors1D.AcceptsReturn = true;
-            this.grammarErrors1D.BackColor = System.Drawing.Color.White;
-            this.grammarErrors1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarErrors1D.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1D.Margin = new System.Windows.Forms.Padding(4);
-            this.grammarErrors1D.Multiline = true;
-            this.grammarErrors1D.Name = "grammarErrors1D";
-            this.grammarErrors1D.ReadOnly = true;
-            this.grammarErrors1D.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarErrors1D.Size = new System.Drawing.Size(353, 384);
-            this.grammarErrors1D.TabIndex = 38;
+            this.grammarTextBox1D.AcceptsReturn = true;
+            this.grammarTextBox1D.BackColor = System.Drawing.Color.White;
+            this.grammarTextBox1D.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarTextBox1D.Location = new System.Drawing.Point(19, 223);
+            this.grammarTextBox1D.Margin = new System.Windows.Forms.Padding(4);
+            this.grammarTextBox1D.Multiline = true;
+            this.grammarTextBox1D.Name = "grammarTextBox1D";
+            this.grammarTextBox1D.ReadOnly = true;
+            this.grammarTextBox1D.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grammarTextBox1D.Size = new System.Drawing.Size(353, 384);
+            this.grammarTextBox1D.TabIndex = 38;
             // 
             // label103
             // 
@@ -2299,7 +2299,7 @@ namespace ProjectEcho
             // 
             this.panel26.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel26.Controls.Add(this.label70);
-            this.panel26.Controls.Add(this.missingWordList1E);
+            this.panel26.Controls.Add(this.contentListBox1E);
             this.panel26.Controls.Add(this.label107);
             this.panel26.Controls.Add(this.contentCheckList1E);
             this.panel26.Location = new System.Drawing.Point(901, 18);
@@ -2318,16 +2318,16 @@ namespace ProjectEcho
             this.label70.TabIndex = 35;
             this.label70.Text = "SUGGESTED TERMINOLOGY:";
             // 
-            // missingWordList1E
+            // contentListBox1E
             // 
-            this.missingWordList1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.missingWordList1E.FormattingEnabled = true;
-            this.missingWordList1E.ItemHeight = 20;
-            this.missingWordList1E.Location = new System.Drawing.Point(19, 223);
-            this.missingWordList1E.Margin = new System.Windows.Forms.Padding(4);
-            this.missingWordList1E.Name = "missingWordList1E";
-            this.missingWordList1E.Size = new System.Drawing.Size(357, 364);
-            this.missingWordList1E.TabIndex = 37;
+            this.contentListBox1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contentListBox1E.FormattingEnabled = true;
+            this.contentListBox1E.ItemHeight = 20;
+            this.contentListBox1E.Location = new System.Drawing.Point(19, 223);
+            this.contentListBox1E.Margin = new System.Windows.Forms.Padding(4);
+            this.contentListBox1E.Name = "contentListBox1E";
+            this.contentListBox1E.Size = new System.Drawing.Size(357, 364);
+            this.contentListBox1E.TabIndex = 37;
             // 
             // label107
             // 
@@ -2361,7 +2361,7 @@ namespace ProjectEcho
             // panel41
             // 
             this.panel41.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel41.Controls.Add(this.grammarErrors1E);
+            this.panel41.Controls.Add(this.grammarTextBox1E);
             this.panel41.Controls.Add(this.label115);
             this.panel41.Controls.Add(this.grammarCheckList1E);
             this.panel41.Controls.Add(this.label116);
@@ -2371,19 +2371,19 @@ namespace ProjectEcho
             this.panel41.Size = new System.Drawing.Size(389, 635);
             this.panel41.TabIndex = 39;
             // 
-            // grammarErrors1E
+            // grammarTextBox1E
             // 
-            this.grammarErrors1E.AcceptsReturn = true;
-            this.grammarErrors1E.BackColor = System.Drawing.Color.White;
-            this.grammarErrors1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grammarErrors1E.Location = new System.Drawing.Point(19, 223);
-            this.grammarErrors1E.Margin = new System.Windows.Forms.Padding(4);
-            this.grammarErrors1E.Multiline = true;
-            this.grammarErrors1E.Name = "grammarErrors1E";
-            this.grammarErrors1E.ReadOnly = true;
-            this.grammarErrors1E.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grammarErrors1E.Size = new System.Drawing.Size(353, 384);
-            this.grammarErrors1E.TabIndex = 38;
+            this.grammarTextBox1E.AcceptsReturn = true;
+            this.grammarTextBox1E.BackColor = System.Drawing.Color.White;
+            this.grammarTextBox1E.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grammarTextBox1E.Location = new System.Drawing.Point(19, 223);
+            this.grammarTextBox1E.Margin = new System.Windows.Forms.Padding(4);
+            this.grammarTextBox1E.Multiline = true;
+            this.grammarTextBox1E.Name = "grammarTextBox1E";
+            this.grammarTextBox1E.ReadOnly = true;
+            this.grammarTextBox1E.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grammarTextBox1E.Size = new System.Drawing.Size(353, 384);
+            this.grammarTextBox1E.TabIndex = 38;
             // 
             // label115
             // 
@@ -2777,11 +2777,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ListBox missingWordList1B;
+        private System.Windows.Forms.ListBox contentListBox1B;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.CheckedListBox contentCheckList1B;
         private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.TextBox grammarErrors1B;
+        private System.Windows.Forms.TextBox grammarTextBox1B;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.CheckedListBox grammarCheckList1B;
         private System.Windows.Forms.Label label80;
@@ -2812,11 +2812,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ListBox missingWordList1C;
+        private System.Windows.Forms.ListBox contentListBox1C;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.CheckedListBox contentCheckList1C;
         private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.TextBox grammarErrors1C;
+        private System.Windows.Forms.TextBox grammarTextBox1C;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.CheckedListBox grammarCheckList1C;
         private System.Windows.Forms.Label label92;
@@ -2847,11 +2847,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.ListBox missingWordList1D;
+        private System.Windows.Forms.ListBox contentListBox1D;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.CheckedListBox contentCheckList1D;
         private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.TextBox grammarErrors1D;
+        private System.Windows.Forms.TextBox grammarTextBox1D;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.CheckedListBox grammarCheckList1D;
         private System.Windows.Forms.Label label104;
@@ -2882,11 +2882,11 @@ namespace ProjectEcho
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.ListBox missingWordList1E;
+        private System.Windows.Forms.ListBox contentListBox1E;
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.CheckedListBox contentCheckList1E;
         private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.TextBox grammarErrors1E;
+        private System.Windows.Forms.TextBox grammarTextBox1E;
         private System.Windows.Forms.Label label115;
         private System.Windows.Forms.CheckedListBox grammarCheckList1E;
         private System.Windows.Forms.Label label116;

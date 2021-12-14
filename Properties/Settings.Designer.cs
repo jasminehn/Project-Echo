@@ -202,5 +202,293 @@ namespace ProjectEcho.Properties {
                 this["clb1a"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl1b {
+            get {
+                return ((string)(this["fcl1b"]));
+            }
+            set {
+                this["fcl1b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl1b {
+            get {
+                return ((string)(this["gcl1b"]));
+            }
+            set {
+                this["gcl1b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl1b {
+            get {
+                return ((string)(this["ccl1b"]));
+            }
+            set {
+                this["ccl1b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb1b {
+            get {
+                return ((string)(this["ftb1b"]));
+            }
+            set {
+                this["ftb1b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb1b {
+            get {
+                return ((string)(this["gtb1b"]));
+            }
+            set {
+                this["gtb1b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb1b {
+            get {
+                return ((string)(this["clb1b"]));
+            }
+            set {
+                this["clb1b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl1c {
+            get {
+                return ((string)(this["fcl1c"]));
+            }
+            set {
+                this["fcl1c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl1c {
+            get {
+                return ((string)(this["gcl1c"]));
+            }
+            set {
+                this["gcl1c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl1c {
+            get {
+                return ((string)(this["ccl1c"]));
+            }
+            set {
+                this["ccl1c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb1c {
+            get {
+                return ((string)(this["ftb1c"]));
+            }
+            set {
+                this["ftb1c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb1c {
+            get {
+                return ((string)(this["gtb1c"]));
+            }
+            set {
+                this["gtb1c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb1c {
+            get {
+                return ((string)(this["clb1c"]));
+            }
+            set {
+                this["clb1c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl1d {
+            get {
+                return ((string)(this["fcl1d"]));
+            }
+            set {
+                this["fcl1d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl1d {
+            get {
+                return ((string)(this["gcl1d"]));
+            }
+            set {
+                this["gcl1d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl1d {
+            get {
+                return ((string)(this["ccl1d"]));
+            }
+            set {
+                this["ccl1d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb1d {
+            get {
+                return ((string)(this["ftb1d"]));
+            }
+            set {
+                this["ftb1d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb1d {
+            get {
+                return ((string)(this["gtb1d"]));
+            }
+            set {
+                this["gtb1d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb1d {
+            get {
+                return ((string)(this["clb1d"]));
+            }
+            set {
+                this["clb1d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl1e {
+            get {
+                return ((string)(this["fcl1e"]));
+            }
+            set {
+                this["fcl1e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl1e {
+            get {
+                return ((string)(this["gcl1e"]));
+            }
+            set {
+                this["gcl1e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl1e {
+            get {
+                return ((string)(this["ccl1e"]));
+            }
+            set {
+                this["ccl1e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb1e {
+            get {
+                return ((string)(this["ftb1e"]));
+            }
+            set {
+                this["ftb1e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb1e {
+            get {
+                return ((string)(this["gtb1e"]));
+            }
+            set {
+                this["gtb1e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb1e {
+            get {
+                return ((string)(this["clb1e"]));
+            }
+            set {
+                this["clb1e"] = value;
+            }
+        }
     }
 }
