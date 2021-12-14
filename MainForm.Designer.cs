@@ -1,5 +1,5 @@
 
-namespace EducationCapstoneChecker
+namespace ProjectEcho
 {
     partial class MainForm
     {
@@ -73,10 +73,10 @@ namespace EducationCapstoneChecker
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
-            this.taskOne = new EducationCapstoneChecker.TaskOneUserControl();
-            this.taskTwo = new EducationCapstoneChecker.TaskTwoUserControl();
+            this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.button1 = new System.Windows.Forms.Button();
-            this.taskThree = new EducationCapstoneChecker.TaskThreeUserControl();
+            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
@@ -117,7 +117,7 @@ namespace EducationCapstoneChecker
             this.forwardButton.FlatAppearance.BorderSize = 0;
             this.forwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.forwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forwardButton.Image = global::EducationCapstoneChecker.Properties.Resources.Copy_of_Untitled__8_;
+            this.forwardButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__8_;
             this.forwardButton.Location = new System.Drawing.Point(1305, 7);
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(51, 57);
@@ -131,7 +131,7 @@ namespace EducationCapstoneChecker
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Image = global::EducationCapstoneChecker.Properties.Resources.Copy_of_Untitled__9_;
+            this.backButton.Image = global::ProjectEcho.Properties.Resources.Copy_of_Untitled__9_;
             this.backButton.Location = new System.Drawing.Point(1248, 8);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(51, 55);
@@ -144,7 +144,7 @@ namespace EducationCapstoneChecker
             // 
             this.returnToMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.returnToMenuButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnToMenuButton.BackgroundImage = global::EducationCapstoneChecker.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
+            this.returnToMenuButton.BackgroundImage = global::ProjectEcho.Properties.Resources.Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Untitled__1_;
             this.returnToMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.returnToMenuButton.FlatAppearance.BorderSize = 0;
             this.returnToMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -340,7 +340,7 @@ namespace EducationCapstoneChecker
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::EducationCapstoneChecker.Properties.Resources.bookIcon;
+            this.button4.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button4.Location = new System.Drawing.Point(255, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(58, 69);
@@ -355,7 +355,7 @@ namespace EducationCapstoneChecker
             this.t3videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t3videoLaunchButton.ForeColor = System.Drawing.Color.White;
-            this.t3videoLaunchButton.Image = global::EducationCapstoneChecker.Properties.Resources.videoIcon;
+            this.t3videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
             this.t3videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t3videoLaunchButton.Name = "t3videoLaunchButton";
             this.t3videoLaunchButton.Size = new System.Drawing.Size(57, 69);
@@ -410,7 +410,7 @@ namespace EducationCapstoneChecker
             this.taskThreeButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
-            this.taskThreeButton.Image = global::EducationCapstoneChecker.Properties.Resources.testIcon;
+            this.taskThreeButton.Image = global::ProjectEcho.Properties.Resources.testIcon;
             this.taskThreeButton.Location = new System.Drawing.Point(316, 0);
             this.taskThreeButton.Name = "taskThreeButton";
             this.taskThreeButton.Size = new System.Drawing.Size(212, 123);
@@ -468,7 +468,7 @@ namespace EducationCapstoneChecker
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::EducationCapstoneChecker.Properties.Resources.bookIcon;
+            this.button5.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button5.Location = new System.Drawing.Point(255, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(58, 68);
@@ -483,7 +483,7 @@ namespace EducationCapstoneChecker
             this.t2videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t2videoLaunchButton.ForeColor = System.Drawing.Color.White;
-            this.t2videoLaunchButton.Image = global::EducationCapstoneChecker.Properties.Resources.videoIcon;
+            this.t2videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
             this.t2videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t2videoLaunchButton.Name = "t2videoLaunchButton";
             this.t2videoLaunchButton.Size = new System.Drawing.Size(57, 68);
@@ -524,7 +524,7 @@ namespace EducationCapstoneChecker
             this.taskTwoButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskTwoButton.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.taskTwoButton.Image = global::EducationCapstoneChecker.Properties.Resources.cameraIcon;
+            this.taskTwoButton.Image = global::ProjectEcho.Properties.Resources.cameraIcon;
             this.taskTwoButton.Location = new System.Drawing.Point(316, 0);
             this.taskTwoButton.Name = "taskTwoButton";
             this.taskTwoButton.Size = new System.Drawing.Size(212, 122);
@@ -586,7 +586,7 @@ namespace EducationCapstoneChecker
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::EducationCapstoneChecker.Properties.Resources.bookIcon;
+            this.button7.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button7.Location = new System.Drawing.Point(255, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(57, 66);
@@ -601,7 +601,7 @@ namespace EducationCapstoneChecker
             this.t1videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t1videoLaunchButton.ForeColor = System.Drawing.Color.White;
-            this.t1videoLaunchButton.Image = global::EducationCapstoneChecker.Properties.Resources.videoIcon;
+            this.t1videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
             this.t1videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t1videoLaunchButton.Name = "t1videoLaunchButton";
             this.t1videoLaunchButton.Size = new System.Drawing.Size(57, 66);
@@ -642,7 +642,7 @@ namespace EducationCapstoneChecker
             this.task1Button.Dock = System.Windows.Forms.DockStyle.Right;
             this.task1Button.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.task1Button.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.task1Button.Image = global::EducationCapstoneChecker.Properties.Resources.writingIcon;
+            this.task1Button.Image = global::ProjectEcho.Properties.Resources.writingIcon;
             this.task1Button.Location = new System.Drawing.Point(315, 0);
             this.task1Button.Name = "task1Button";
             this.task1Button.Size = new System.Drawing.Size(211, 120);

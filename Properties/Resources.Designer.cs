@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EducationCapstoneChecker.Properties {
+namespace ProjectEcho.Properties {
     using System;
     
     

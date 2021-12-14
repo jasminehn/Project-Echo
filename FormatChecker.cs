@@ -1,9 +1,10 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
-using System.IO;
+using Microsoft.WindowsAPICodePack.Shell;
 using WMPLib;
+using System.IO;
 
-namespace EducationCapstoneChecker
+namespace ProjectEcho
 {
     /**
 	 *
@@ -155,13 +156,13 @@ namespace EducationCapstoneChecker
 
         public Boolean[] runMediaFormatCheck(String path, int correctLength)
         {
-            Console.WriteLine(">>>>MEDIA DURATION: " + checkMediaLength(path) + " seconds");
+            Console.WriteLine(">>>>MEDIA DURATION: "+checkMediaLength(path) + " seconds");
             Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
             Boolean[] isFormatted = { false, false };
 
             return isFormatted;
         }
-
+        
         public string checkMediaLength(string inputFile)
         {
             var player = new WindowsMediaPlayer();

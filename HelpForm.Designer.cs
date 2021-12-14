@@ -1,5 +1,5 @@
 ﻿
-namespace EducationCapstoneChecker
+namespace ProjectEcho
 {
     partial class HelpForm
     {

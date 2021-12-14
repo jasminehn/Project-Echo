@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EducationCapstoneChecker
+namespace ProjectEcho
 {
     /**
      * The HelpForm was made to help lead students to the best pre-existing edTPA documentation
@@ -182,13 +182,13 @@ namespace EducationCapstoneChecker
                 {
                     url = FileName2 + "#page=9";
                     //urlBox.Text = url;
-
+                    
                 }
                 else if (comboBox1.SelectedItem.Equals("Task 2"))
                 {
                     url = FileName2 + "#page=18";
                     //urlBox.Text = url;
-
+                    
                 }
                 else if (comboBox1.SelectedItem.Equals("Task 3"))
                 {

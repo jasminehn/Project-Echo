@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace EducationCapstoneChecker
+namespace ProjectEcho
 {
     static class Program
     {
