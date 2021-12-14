@@ -2,6 +2,8 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Reflection;
+using System.Diagnostics;
 
 /**
  *  To the next owners --
@@ -107,6 +109,14 @@ namespace ProjectEcho
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            Console.WriteLine("BING " + taskOne.formatCheckList1A.CheckedItems.Count);
+            Console.WriteLine("BONG " + taskOne.formatCheckList1A.Items.Count);
+            if (taskOne.formatCheckList1A.CheckedItems.Count == taskOne.formatCheckList1A.Items.Count)
+            {
+                Console.WriteLine("task 1 part a complete");
+                taskOneList.SetItemChecked(0, true);
+            }
+
             //Apply saved display settings
             /*
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
@@ -173,6 +183,18 @@ namespace ProjectEcho
 
         public void setControlActive(int i)
         {
+            //delete later
+            Console.WriteLine("checked " + taskOne.formatCheckList1A.CheckedItems.Count);
+            Console.WriteLine("count " + taskOne.formatCheckList1A.Items.Count);
+            if (taskOne.formatCheckList1A.CheckedItems.Count == taskOne.formatCheckList1A.Items.Count)
+            {
+                Console.WriteLine("task 1 part a complete");
+                taskOneList.SetItemChecked(0, true);
+            }
+
+
+
+
             headerPanel.Dock = DockStyle.Top;
             currentControl.Visible = false; // Set the current control to invisible
             currentControl.Dock = DockStyle.None;
@@ -321,7 +343,13 @@ namespace ProjectEcho
 
         private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //open useruploads
+            //open useruploads (FIX LATER)
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string xslLocation = Path.Combine(executableLocation, "UserUploads");
+
+            Console.WriteLine(xslLocation);
+
+            Process.Start(xslLocation);
         }
     }
 }

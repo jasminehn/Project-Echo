@@ -2737,7 +2737,6 @@ namespace ProjectEcho
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckedListBox formatCheckList1A;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label28;
@@ -2913,5 +2912,6 @@ namespace ProjectEcho
         private System.Windows.Forms.TextBox formatTextBox1C;
         private System.Windows.Forms.TextBox formatTextBox1D;
         private System.Windows.Forms.TextBox formatTextBox1E;
+        public System.Windows.Forms.CheckedListBox formatCheckList1A;
     }
 }

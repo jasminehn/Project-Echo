@@ -23,6 +23,8 @@ namespace ProjectEcho
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
 
+        public bool partAcomplete = false;
+
         public TaskOneUserControl()
         {
             InitializeComponent();
@@ -37,6 +39,9 @@ namespace ProjectEcho
 
         private void TaskOneUserControl_Load(object sender, EventArgs e)
         {
+            
+
+
             richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
 
 
@@ -453,6 +458,12 @@ namespace ProjectEcho
             contentPS.Text = "FINISHED";
 
             saveProgress();
+
+            //DELETE LATER
+            if (formatCheckList1A.CheckedItems.Count == formatCheckList1A.Items.Count)
+            {
+                partAcomplete = true;
+            }
         }
 
         private void saveProgress()

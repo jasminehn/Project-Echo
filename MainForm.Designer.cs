@@ -228,20 +228,20 @@ namespace ProjectEcho
             // recentFilesToolStripMenuItem
             // 
             this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
-            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.recentFilesToolStripMenuItem.Text = "Recent Files";
             this.recentFilesToolStripMenuItem.Click += new System.EventHandler(this.recentFilesToolStripMenuItem_Click);
             // 
             // clearLocalFilesToolStripMenuItem
             // 
             this.clearLocalFilesToolStripMenuItem.Name = "clearLocalFilesToolStripMenuItem";
-            this.clearLocalFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearLocalFilesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.clearLocalFilesToolStripMenuItem.Text = "Clear Local Files";
             // 
             // exitApplicationToolStripMenuItem
             // 
             this.exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
-            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exitApplicationToolStripMenuItem.Text = "Exit Application";
             this.exitApplicationToolStripMenuItem.Click += new System.EventHandler(this.exitApplicationToolStripMenuItem_Click);
             // 
