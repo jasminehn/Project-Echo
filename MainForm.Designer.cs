@@ -187,7 +187,7 @@ namespace ProjectEcho
             this.titleLabel.Location = new System.Drawing.Point(4, 5);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(144, 30);
+            this.titleLabel.Size = new System.Drawing.Size(130, 28);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "WELCOME";
             // 
@@ -228,21 +228,21 @@ namespace ProjectEcho
             // recentFilesToolStripMenuItem
             // 
             this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
-            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.recentFilesToolStripMenuItem.Text = "Recent Files";
             this.recentFilesToolStripMenuItem.Click += new System.EventHandler(this.recentFilesToolStripMenuItem_Click);
             // 
             // clearLocalFilesToolStripMenuItem
             // 
             this.clearLocalFilesToolStripMenuItem.Name = "clearLocalFilesToolStripMenuItem";
-            this.clearLocalFilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearLocalFilesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.clearLocalFilesToolStripMenuItem.Text = "Clear Local Files";
             this.clearLocalFilesToolStripMenuItem.Click += new System.EventHandler(this.clearLocalFilesToolStripMenuItem_Click);
             // 
             // exitApplicationToolStripMenuItem
             // 
             this.exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
-            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exitApplicationToolStripMenuItem.Text = "Exit Application";
             this.exitApplicationToolStripMenuItem.Click += new System.EventHandler(this.exitApplicationToolStripMenuItem_Click);
             // 
@@ -329,10 +329,10 @@ namespace ProjectEcho
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Goldenrod;
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.button4.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button4.Location = new System.Drawing.Point(255, 3);
             this.button4.Name = "button4";
@@ -344,10 +344,10 @@ namespace ProjectEcho
             // 
             // t3videoLaunchButton
             // 
-            this.t3videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.t3videoLaunchButton.BackColor = System.Drawing.Color.White;
             this.t3videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t3videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t3videoLaunchButton.ForeColor = System.Drawing.Color.White;
+            this.t3videoLaunchButton.ForeColor = System.Drawing.Color.MidnightBlue;
             this.t3videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
             this.t3videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t3videoLaunchButton.Name = "t3videoLaunchButton";
@@ -391,18 +391,18 @@ namespace ProjectEcho
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 22);
+            this.label3.Size = new System.Drawing.Size(220, 23);
             this.label3.TabIndex = 30;
             this.label3.Text = "TASK THREE: ASSESSING";
             // 
             // taskThreeButton
             // 
             this.taskThreeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.taskThreeButton.BackColor = System.Drawing.Color.White;
+            this.taskThreeButton.BackColor = System.Drawing.Color.Goldenrod;
             this.taskThreeButton.CausesValidation = false;
             this.taskThreeButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.taskThreeButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskThreeButton.ForeColor = System.Drawing.Color.Navy;
+            this.taskThreeButton.ForeColor = System.Drawing.Color.White;
             this.taskThreeButton.Image = global::ProjectEcho.Properties.Resources.testIcon;
             this.taskThreeButton.Location = new System.Drawing.Point(316, 0);
             this.taskThreeButton.Name = "taskThreeButton";
@@ -457,10 +457,10 @@ namespace ProjectEcho
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Goldenrod;
+            this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.MidnightBlue;
             this.button5.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button5.Location = new System.Drawing.Point(255, 3);
             this.button5.Name = "button5";
@@ -472,10 +472,10 @@ namespace ProjectEcho
             // 
             // t2videoLaunchButton
             // 
-            this.t2videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.t2videoLaunchButton.BackColor = System.Drawing.Color.White;
             this.t2videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t2videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t2videoLaunchButton.ForeColor = System.Drawing.Color.White;
+            this.t2videoLaunchButton.ForeColor = System.Drawing.Color.MidnightBlue;
             this.t2videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
             this.t2videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t2videoLaunchButton.Name = "t2videoLaunchButton";
@@ -505,18 +505,18 @@ namespace ProjectEcho
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 22);
+            this.label2.Size = new System.Drawing.Size(245, 23);
             this.label2.TabIndex = 30;
             this.label2.Text = "TASK TWO: IMPLEMENTING";
             // 
             // taskTwoButton
             // 
             this.taskTwoButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.taskTwoButton.BackColor = System.Drawing.Color.White;
+            this.taskTwoButton.BackColor = System.Drawing.Color.Goldenrod;
             this.taskTwoButton.CausesValidation = false;
             this.taskTwoButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.taskTwoButton.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskTwoButton.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.taskTwoButton.ForeColor = System.Drawing.Color.White;
             this.taskTwoButton.Image = global::ProjectEcho.Properties.Resources.cameraIcon;
             this.taskTwoButton.Location = new System.Drawing.Point(316, 0);
             this.taskTwoButton.Name = "taskTwoButton";
@@ -575,10 +575,10 @@ namespace ProjectEcho
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Goldenrod;
+            this.button7.BackColor = System.Drawing.Color.White;
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.ForeColor = System.Drawing.Color.MidnightBlue;
             this.button7.Image = global::ProjectEcho.Properties.Resources.bookIcon;
             this.button7.Location = new System.Drawing.Point(255, 3);
             this.button7.Name = "button7";
@@ -590,10 +590,10 @@ namespace ProjectEcho
             // 
             // t1videoLaunchButton
             // 
-            this.t1videoLaunchButton.BackColor = System.Drawing.Color.Goldenrod;
+            this.t1videoLaunchButton.BackColor = System.Drawing.Color.White;
             this.t1videoLaunchButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.t1videoLaunchButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t1videoLaunchButton.ForeColor = System.Drawing.Color.White;
+            this.t1videoLaunchButton.ForeColor = System.Drawing.Color.MidnightBlue;
             this.t1videoLaunchButton.Image = global::ProjectEcho.Properties.Resources.videoIcon;
             this.t1videoLaunchButton.Location = new System.Drawing.Point(192, 3);
             this.t1videoLaunchButton.Name = "t1videoLaunchButton";
@@ -623,18 +623,18 @@ namespace ProjectEcho
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 22);
+            this.label1.Size = new System.Drawing.Size(205, 23);
             this.label1.TabIndex = 30;
             this.label1.Text = "TASK ONE: PLANNING";
             // 
             // task1Button
             // 
             this.task1Button.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.task1Button.BackColor = System.Drawing.Color.White;
+            this.task1Button.BackColor = System.Drawing.Color.Goldenrod;
             this.task1Button.CausesValidation = false;
             this.task1Button.Dock = System.Windows.Forms.DockStyle.Right;
             this.task1Button.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.task1Button.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.task1Button.ForeColor = System.Drawing.Color.White;
             this.task1Button.Image = global::ProjectEcho.Properties.Resources.writingIcon;
             this.task1Button.Location = new System.Drawing.Point(315, 0);
             this.task1Button.Name = "task1Button";
