@@ -88,7 +88,6 @@ namespace ProjectEcho
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
             }
-            
         }
 
         private async void UploadButton3A_Click(object sender, EventArgs e)
@@ -108,6 +107,21 @@ namespace ProjectEcho
             }
         }
 
+        private async void MediaUploadButton3B_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckVideo(3, "B", "media", mediaUploadInfo3B,
+                    mediaCheckList3B, mediaTextBox3B,
+                    mediaProgressBar3B, mediaProgressStatus3B,
+                    0);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
+            }
+        }
+
         private async void UploadButton3B_Click(object sender, EventArgs e)
         {
             try
@@ -122,6 +136,21 @@ namespace ProjectEcho
             catch (Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack trace: " + ex);
+            }
+        }
+
+        private async void MediaUploadButton3C_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await CheckVideo(3, "C", "media", mediaUploadInfo3C,
+                    mediaCheckList3C, mediaTextBox3C,
+                    mediaProgressBar3C, mediaProgressStatus3C,
+                    0);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
             }
         }
 
@@ -216,7 +245,6 @@ namespace ProjectEcho
                 + "\r\n\r\n" + fc.mediaLengthFB;
 
             mediaPS.Text = "FINISHED";
-
         }
 
         public async Task CheckMipltipleDocuments(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
@@ -449,6 +477,6 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-
+        
     }
 }
