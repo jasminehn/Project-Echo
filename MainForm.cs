@@ -318,5 +318,10 @@ namespace ProjectEcho
                            // shut down.
             }
         }
+
+        private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //open useruploads
+        }
     }
 }
