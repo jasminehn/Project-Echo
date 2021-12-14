@@ -351,5 +351,22 @@ namespace ProjectEcho
 
             Process.Start(xslLocation);
         }
+
+        private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //delete everything in useruploads (FIX LATER)
+            /*
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string xslLocation = Path.Combine(executableLocation, "UserUploads");
+
+            System.IO.DirectoryInfo useruploads = new DirectoryInfo(xslLocation);
+
+            
+            foreach (DirectoryInfo dir in useruploads.GetDirectories())
+            {
+                dir.Delete(true);
+            }
+            */
+        }
     }
 }
