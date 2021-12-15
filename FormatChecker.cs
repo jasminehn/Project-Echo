@@ -29,6 +29,8 @@ namespace ProjectEcho
         public string mediaLengthFB = "Length: ";
         public string mediaSizeFB = "Size: ";
 
+        int medialength = 0;
+
         public Boolean[] runFormatCheck(String path, int correctLength)
         {
             Application ap = new Application();
@@ -68,9 +70,7 @@ namespace ProjectEcho
             Boolean[] isFormatted = { isAligned, isArial, isFontSize, isCorrectLength };
 
             document.Close();
-
             ap.Quit();
-
             return isFormatted;
         }
 
@@ -102,6 +102,7 @@ namespace ProjectEcho
         public Boolean checkFontSize(Document document)
         {
             float fontSize = document.Content.Font.Size;
+
             // When the file has more than one font type, it returns 9999999. Instead, this will return a warning message
             if (fontSize == 9999999)
             {
@@ -156,20 +157,54 @@ namespace ProjectEcho
 
         public Boolean[] runMediaFormatCheck(String path, int correctLength)
         {
-            Console.WriteLine(">>>>MEDIA DURATION: "+checkMediaLength(path) + " seconds");
+            Console.WriteLine(">>>>MEDIA DURATION: "+ getMediaLength(path) + " seconds");
             Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
-            Boolean[] isFormatted = { false, false };
+
+            Boolean isCorrectLength = checkMediaLength(path, correctLength);
+            //Boolean isArial = checkFont(document);
+            //Boolean isFontSize = checkFontSize(document);
+            //Boolean isCorrectLength = false;
+            //checkMediaLength(path,7);
+
+            Boolean[] isFormatted = { false, isCorrectLength };
 
             return isFormatted;
         }
         
-        public string checkMediaLength(string inputFile)
+        public string getMediaLength(string inputFile)
         {
             var player = new WindowsMediaPlayer();
             var clip = player.newMedia(inputFile);
             String result = (TimeSpan.FromSeconds(clip.duration)).ToString();
-            mediaLengthFB = "Length: " + result;
+            
+
             return result;
+        }
+
+        public Boolean checkMediaLength(string inputFile, int requiredFileLength)
+        {
+            //get input length
+            var player = new WindowsMediaPlayer();
+            var clip = player.newMedia(inputFile);
+            var inputFileLength = TimeSpan.FromSeconds(clip.duration);
+            string fileLength = inputFileLength.ToString();
+            //Console.WriteLine(inputFileLength.ToString());
+
+            //get required length
+            double minToSec = requiredFileLength * 60;
+            var desiredlength = TimeSpan.FromSeconds(minToSec);
+            //Console.WriteLine(desiredlength.ToString());
+
+            //compare
+            if (inputFileLength > desiredlength)
+            {
+                Console.WriteLine(desiredlength + " is NOT more than " + inputFileLength);
+                return false;
+            }
+
+            mediaLengthFB = "Length: " + fileLength;
+
+            return true;
         }
 
         public string checkMediaSize(string inputFile)

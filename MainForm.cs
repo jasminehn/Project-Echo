@@ -109,17 +109,6 @@ namespace ProjectEcho
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //DELETE LATER
-            Console.WriteLine("BING " + taskOne.formatCheckList1A.CheckedItems.Count);
-            Console.WriteLine("BONG " + taskOne.formatCheckList1A.Items.Count);
-            if (taskOne.formatCheckList1A.CheckedItems.Count == taskOne.formatCheckList1A.Items.Count)
-            {
-                Console.WriteLine("task 1 part a complete");
-                taskOneList.SetItemChecked(0, true);
-            }
-
-            Console.WriteLine("TEXT SIZE: "+Properties.Settings.Default.textsize);
-
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
@@ -185,18 +174,6 @@ namespace ProjectEcho
 
         public void setControlActive(int i)
         {
-            //delete later
-            Console.WriteLine("checked " + taskOne.formatCheckList1A.CheckedItems.Count);
-            Console.WriteLine("count " + taskOne.formatCheckList1A.Items.Count);
-            if (taskOne.formatCheckList1A.CheckedItems.Count == taskOne.formatCheckList1A.Items.Count)
-            {
-                Console.WriteLine("task 1 part a complete");
-                taskOneList.SetItemChecked(0, true);
-            }
-
-
-
-
             headerPanel.Dock = DockStyle.Top;
             currentControl.Visible = false; // Set the current control to invisible
             currentControl.Dock = DockStyle.None;

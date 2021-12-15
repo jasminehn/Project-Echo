@@ -45,6 +45,7 @@ namespace ProjectEcho
             this.clearLocalFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlContainerPanel = new System.Windows.Forms.Panel();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,13 +73,12 @@ namespace ProjectEcho
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.task1Button = new System.Windows.Forms.Button();
-            this.taskOne = new ProjectEcho.TaskOneUserControl();
-            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
             this.button1 = new System.Windows.Forms.Button();
-            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taskOne = new ProjectEcho.TaskOneUserControl();
+            this.taskTwo = new ProjectEcho.TaskTwoUserControl();
+            this.taskThree = new ProjectEcho.TaskThreeUserControl();
             this.panel1.SuspendLayout();
             this.titlePanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -255,6 +255,13 @@ namespace ProjectEcho
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
             // controlContainerPanel
             // 
             this.controlContainerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -282,6 +289,7 @@ namespace ProjectEcho
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(534, 388);
             this.mainMenuPanel.TabIndex = 40;
+            this.mainMenuPanel.Tag = "changebg";
             // 
             // tableLayoutPanel1
             // 
@@ -646,6 +654,33 @@ namespace ProjectEcho
             this.task1Button.UseVisualStyleBackColor = false;
             this.task1Button.Click += new System.EventHandler(this.task1Button_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1475, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.mainPanel.Controls.Add(this.controlContainerPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1364, 749);
+            this.mainPanel.TabIndex = 1;
+            this.mainPanel.Tag = "changebg";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // taskOne
             // 
             this.taskOne.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -674,16 +709,6 @@ namespace ProjectEcho
             this.taskTwo.Size = new System.Drawing.Size(2177, 951);
             this.taskTwo.TabIndex = 17;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1475, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
             // taskThree
             // 
             this.taskThree.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -697,29 +722,6 @@ namespace ProjectEcho
             this.taskThree.Name = "taskThree";
             this.taskThree.Size = new System.Drawing.Size(263, 147);
             this.taskThree.TabIndex = 17;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.AutoSize = true;
-            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.mainPanel.BackColor = System.Drawing.Color.MidnightBlue;
-            this.mainPanel.Controls.Add(this.controlContainerPanel);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1364, 749);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // MainForm
             // 
