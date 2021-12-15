@@ -67,7 +67,7 @@ namespace ProjectEcho
                 c.BackColor = Properties.Settings.Default.bgcolor;
                 c.ForeColor = Properties.Settings.Default.fcolor;
             }
-            Panel[] panels = new Panel[] { panel1, panel4, panel17, panel6, panel38, panel51, panel35, panel19, panel23, panel9 };
+            Panel[] panels = new Panel[] { panel1, panel4, panel17, panel18, panel33, panel6, panel38, panel51, panel9, panel27, panel22 };
             foreach (Control c in panels)
             {
                 c.BackColor = Properties.Settings.Default.bgcolor;
