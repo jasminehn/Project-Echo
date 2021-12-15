@@ -16,16 +16,6 @@ namespace ProjectEcho
     public partial class SettingsForm : Form
     {
         SettingsHandler settingsHandler = new SettingsHandler();
-
-        //button colors
-        private Color buttonOnColor = ColorTranslator.FromHtml("#5ac993");
-        private Color buttonOffColor = SystemColors.ControlDark;
-        //light mode colors
-        private Color lightBG = Color.WhiteSmoke;
-        private Color lightText = Color.Black;
-        //dark mode colors
-        private Color darkBG = ColorTranslator.FromHtml("#121113");
-        private Color darkText = Color.WhiteSmoke;
         //creates vars for repeated use
         private Color backgroundColor;
         private Color backgroundMain;
