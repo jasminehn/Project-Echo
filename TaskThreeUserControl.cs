@@ -241,11 +241,18 @@ namespace ProjectEcho
 
             await processData(mlist, mprogress); //Start the progress bar
 
-            
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, mediaLength);
 
-            mediaTB.Text = fc.mediaSizeFB
-                + "\r\n\r\n" + fc.mediaLengthFB;
+            for (int i = 0; i < mediaCL.Items.Count; i++)
+            {
+                if (itemsChecked[i].Equals(true))
+                {
+                    mediaCL.SetItemChecked(i, true);
+                }
+            }
+
+            mediaTB.Text = "\r\n\r\n" + fc.mediaSizeFB
+               + "\r\n\r\n\r\n\r\n" + fc.mediaLengthFB;
 
             mediaPS.Text = "FINISHED";
         }

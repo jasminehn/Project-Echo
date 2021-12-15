@@ -189,6 +189,7 @@ namespace ProjectEcho
             var inputFileLength = TimeSpan.FromSeconds(clip.duration);
             string fileLength = inputFileLength.ToString();
             //Console.WriteLine(inputFileLength.ToString());
+            mediaLengthFB = "Length: " + fileLength;
 
             //get required length
             double minToSec = requiredFileLength * 60;
@@ -202,7 +203,7 @@ namespace ProjectEcho
                 return false;
             }
 
-            mediaLengthFB = "Length: " + fileLength;
+            
 
             return true;
         }
