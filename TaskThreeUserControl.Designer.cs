@@ -1486,9 +1486,9 @@ namespace ProjectEcho
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(3, 3);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(199, 22);
+            this.label29.Size = new System.Drawing.Size(388, 22);
             this.label29.TabIndex = 23;
-            this.label29.Text = "Observation Notes";
+            this.label29.Text = "Observation Notes and Work Samples";
             // 
             // tabPage3
             // 
