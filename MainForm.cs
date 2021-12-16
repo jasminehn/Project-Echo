@@ -333,7 +333,7 @@ namespace ProjectEcho
 
         private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Opens the UserUploads folder stored on the user's machine
+            //Open the UserUploads folder stored on the user's machine
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
             Process.Start(useruploadsPath);
@@ -341,19 +341,15 @@ namespace ProjectEcho
 
         private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //delete everything in useruploads (FIX LATER)
-            /*
+            //Delete everything in useruploads
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string xslLocation = Path.Combine(executableLocation, "UserUploads");
-
-            System.IO.DirectoryInfo useruploads = new DirectoryInfo(xslLocation);
-
-            
+            string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
+            System.IO.DirectoryInfo useruploads = new DirectoryInfo(useruploadsPath);
             foreach (DirectoryInfo dir in useruploads.GetDirectories())
             {
                 dir.Delete(true);
             }
-            */
+            System.Windows.Forms.MessageBox.Show("Local files have been cleared. Your UserUploads folder is now empty.");
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
