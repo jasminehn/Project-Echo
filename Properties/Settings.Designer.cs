@@ -490,5 +490,29 @@ namespace ProjectEcho.Properties {
                 this["clb1e"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Gainsboro")]
+        public global::System.Drawing.Color abcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["abcolor"]));
+            }
+            set {
+                this["abcolor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("WhiteSmoke")]
+        public global::System.Drawing.Color fbcolor {
+            get {
+                return ((global::System.Drawing.Color)(this["fbcolor"]));
+            }
+            set {
+                this["fbcolor"] = value;
+            }
+        }
     }
 }

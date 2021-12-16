@@ -134,7 +134,6 @@ namespace ProjectEcho
             {
                 if ((c.Tag != null) && (c.Tag.ToString() == "changebg")) //white to black
                 {
-                    //Console.WriteLine(c.Name.ToString() + "FUKYALIFE");
                     c.BackColor = Properties.Settings.Default.bgcolor;
                 }
             }

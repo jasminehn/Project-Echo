@@ -676,7 +676,7 @@ namespace ProjectEcho
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1364, 749);
             this.mainPanel.TabIndex = 1;
-            this.mainPanel.Tag = "panelBW";
+            this.mainPanel.Tag = "";
             // 
             // toolTip1
             // 

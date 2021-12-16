@@ -365,7 +365,7 @@ namespace ProjectEcho
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1362, 668);
             this.panel7.TabIndex = 21;
-            this.panel7.Tag = "changebg";
+            this.panel7.Tag = "panelBW";
             // 
             // warningLabel
             // 
@@ -401,6 +401,7 @@ namespace ProjectEcho
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(292, 516);
             this.panel30.TabIndex = 42;
+            this.panel30.Tag = "analysisDM";
             // 
             // formatTextBox1A
             // 
@@ -413,6 +414,7 @@ namespace ProjectEcho
             this.formatTextBox1A.ReadOnly = true;
             this.formatTextBox1A.Size = new System.Drawing.Size(266, 313);
             this.formatTextBox1A.TabIndex = 51;
+            this.formatTextBox1A.Tag = "feedbackDM";
             // 
             // label14
             // 
@@ -423,6 +425,7 @@ namespace ProjectEcho
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(204, 22);
             this.label14.TabIndex = 18;
+            this.label14.Tag = "labelBW";
             this.label14.Text = "FORMAT AND STYLE";
             // 
             // formatCheckList1A
@@ -443,6 +446,7 @@ namespace ProjectEcho
             this.formatCheckList1A.Name = "formatCheckList1A";
             this.formatCheckList1A.Size = new System.Drawing.Size(180, 72);
             this.formatCheckList1A.TabIndex = 14;
+            this.formatCheckList1A.Tag = "checklistDM";
             // 
             // label23
             // 
@@ -451,6 +455,7 @@ namespace ProjectEcho
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(231, 20);
             this.label23.TabIndex = 35;
+            this.label23.Tag = "labelBW";
             this.label23.Text = "FORMAT AND STYLE FEEDBACK:";
             // 
             // panel27
@@ -464,6 +469,7 @@ namespace ProjectEcho
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(292, 516);
             this.panel27.TabIndex = 40;
+            this.panel27.Tag = "analysisDM";
             // 
             // label28
             // 
@@ -472,6 +478,7 @@ namespace ProjectEcho
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(273, 19);
             this.label28.TabIndex = 35;
+            this.label28.Tag = "labelBW";
             this.label28.Text = "SUGGESTED TERMINOLOGY:";
             // 
             // contentListBox1A
@@ -484,6 +491,7 @@ namespace ProjectEcho
             this.contentListBox1A.Name = "contentListBox1A";
             this.contentListBox1A.Size = new System.Drawing.Size(269, 304);
             this.contentListBox1A.TabIndex = 37;
+            this.contentListBox1A.Tag = "feedbackDM";
             // 
             // label40
             // 
@@ -494,6 +502,7 @@ namespace ProjectEcho
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(103, 22);
             this.label40.TabIndex = 38;
+            this.label40.Tag = "labelBW";
             this.label40.Text = "CONTENT";
             // 
             // contentCheckList1A
@@ -511,6 +520,7 @@ namespace ProjectEcho
             this.contentCheckList1A.Name = "contentCheckList1A";
             this.contentCheckList1A.Size = new System.Drawing.Size(209, 72);
             this.contentCheckList1A.TabIndex = 37;
+            this.contentCheckList1A.Tag = "checklistDM";
             // 
             // panel10
             // 
@@ -523,6 +533,7 @@ namespace ProjectEcho
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(292, 516);
             this.panel10.TabIndex = 39;
+            this.panel10.Tag = "analysisDM";
             // 
             // grammarTextBox1A
             // 
@@ -536,6 +547,7 @@ namespace ProjectEcho
             this.grammarTextBox1A.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grammarTextBox1A.Size = new System.Drawing.Size(266, 313);
             this.grammarTextBox1A.TabIndex = 38;
+            this.grammarTextBox1A.Tag = "feedbackDM";
             // 
             // foundGrammarIssuesLabel
             // 
@@ -544,6 +556,7 @@ namespace ProjectEcho
             this.foundGrammarIssuesLabel.Name = "foundGrammarIssuesLabel";
             this.foundGrammarIssuesLabel.Size = new System.Drawing.Size(231, 20);
             this.foundGrammarIssuesLabel.TabIndex = 35;
+            this.foundGrammarIssuesLabel.Tag = "labelBW";
             this.foundGrammarIssuesLabel.Text = "FOUND GRAMMAR ISSUES:";
             // 
             // grammarCheckList1A
@@ -563,6 +576,7 @@ namespace ProjectEcho
             this.grammarCheckList1A.Name = "grammarCheckList1A";
             this.grammarCheckList1A.Size = new System.Drawing.Size(180, 72);
             this.grammarCheckList1A.TabIndex = 36;
+            this.grammarCheckList1A.Tag = "checklistDM";
             // 
             // label15
             // 
@@ -573,6 +587,7 @@ namespace ProjectEcho
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(122, 22);
             this.label15.TabIndex = 20;
+            this.label15.Tag = "labelBW";
             this.label15.Text = "GRAMMAR";
             // 
             // panel9
@@ -803,6 +818,7 @@ namespace ProjectEcho
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1362, 668);
             this.panel3.TabIndex = 24;
+            this.panel3.Tag = "panelBW";
             // 
             // label1
             // 
@@ -860,6 +876,7 @@ namespace ProjectEcho
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(204, 22);
             this.label33.TabIndex = 18;
+            this.label33.Tag = "labelBW";
             this.label33.Text = "FORMAT AND STYLE";
             // 
             // formatCheckList1B
@@ -887,6 +904,7 @@ namespace ProjectEcho
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(231, 20);
             this.label34.TabIndex = 35;
+            this.label34.Tag = "labelBW";
             this.label34.Text = "FORMAT AND STYLE FEEDBACK:";
             // 
             // panel14
@@ -908,6 +926,7 @@ namespace ProjectEcho
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(273, 20);
             this.label35.TabIndex = 35;
+            this.label35.Tag = "labelBW";
             this.label35.Text = "SUGGESTED TERMINOLOGY:";
             // 
             // contentListBox1B
@@ -931,6 +950,7 @@ namespace ProjectEcho
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(103, 22);
             this.label78.TabIndex = 38;
+            this.label78.Tag = "labelBW";
             this.label78.Text = "CONTENT";
             // 
             // contentCheckList1B
@@ -982,6 +1002,7 @@ namespace ProjectEcho
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(231, 20);
             this.label79.TabIndex = 35;
+            this.label79.Tag = "labelBW";
             this.label79.Text = "FOUND GRAMMAR ISSUES:";
             // 
             // grammarCheckList1B
@@ -1011,6 +1032,7 @@ namespace ProjectEcho
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(122, 22);
             this.label80.TabIndex = 20;
+            this.label80.Tag = "labelBW";
             this.label80.Text = "GRAMMAR";
             // 
             // panel33
