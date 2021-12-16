@@ -71,9 +71,7 @@ namespace ProjectEcho
             taskControls[2] = taskTwo; // taskTwo is created in the Designer
             taskControls[3] = taskThree;  // Will be changed once Task Three is built.
 
-            //this.taskThreeUserControl1.tabControl1.Fore
-
-            currentControl = taskControls[0]; // When the 
+            currentControl = taskControls[0]; 
             taskOne.Visible = false;
             taskTwo.Visible = false;
             taskThree.Visible = false;
@@ -335,13 +333,10 @@ namespace ProjectEcho
 
         private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //open useruploads (FIX LATER)
+            //Opens the UserUploads folder stored on the user's machine
             string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string xslLocation = Path.Combine(executableLocation, "UserUploads");
-
-            Console.WriteLine(xslLocation);
-
-            Process.Start(xslLocation);
+            string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
+            Process.Start(useruploadsPath);
         }
 
         private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
