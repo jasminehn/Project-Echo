@@ -267,7 +267,7 @@ namespace ProjectEcho
 
             await processData(mlist, mprogress); //Start the progress bar
 
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, mediaLength);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, mediaLength, 500.0);
 
             for (int i = 0; i < mediaCL.Items.Count; i++)
             {

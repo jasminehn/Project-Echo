@@ -155,17 +155,17 @@ namespace ProjectEcho
             return numPages;
         }
 
-        public Boolean[] runMediaFormatCheck(String path, int correctLength)
+        public Boolean[] runMediaFormatCheck(String path, int correctLength, double correctSize)
         {
-            Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
+            //Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
 
             Boolean isCorrectLength = checkMediaLength(path, correctLength);
-            //Boolean isArial = checkFont(document);
+            Boolean isCorrentSize = checkMediaSize(path, correctSize);
             //Boolean isFontSize = checkFontSize(document);
             //Boolean isCorrectLength = false;
             //checkMediaLength(path,7);
 
-            Boolean[] isFormatted = { false, isCorrectLength };
+            Boolean[] isFormatted = { isCorrentSize, isCorrectLength };
 
             return isFormatted;
         }
@@ -193,7 +193,7 @@ namespace ProjectEcho
             return true;
         }
 
-        public string checkMediaSize(string inputFile)
+        public Boolean checkMediaSize(string inputFile, double requiredFileSize)
         {
             string[] sizes = { "B", "KB", "MB", "GB", "TB" };
             double len = new FileInfo(inputFile).Length;
@@ -205,9 +205,15 @@ namespace ProjectEcho
             }
 
             string result = String.Format("{0:0.##} {1}", len, sizes[order]);
-            Console.WriteLine(result);
             mediaSizeFB = "Size: " + result;
-            return result;
+
+            //compare
+            if (len > requiredFileSize)
+            {
+                return false;
+            }
+
+            return true;
         }
 
     }

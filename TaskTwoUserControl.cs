@@ -222,7 +222,7 @@ namespace ProjectEcho
             await processData(mlist, mprogress); //Start the progress bar
 
 
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0, 500);
 
             mediaTB.Text = fc.mediaSizeFB
                 + "\r\n\r\n" + fc.mediaLengthFB;
