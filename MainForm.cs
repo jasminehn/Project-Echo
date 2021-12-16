@@ -120,8 +120,10 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
-            foreach (Control c in checkedlistboxes)
+            //Apply saved display settings
+            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
+            var labels = settingsHandler.getAll(this, typeof(Label));
+            foreach (Control c in labels)
             {
                 System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
                 FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
@@ -130,17 +132,43 @@ namespace ProjectEcho
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
 
-            //apply saved darkmode settings
-            var panels = settingsHandler.getAll(this, typeof(Panel));
-            foreach (Control c in panels)
+            //Apply saved darkmode settings
+            var everything = settingsHandler.getAllControls(this);
+
+            foreach (Control c in everything)
             {
-                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW")) //white to black
+                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW"))
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "analysisDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.fbcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "labelBW"))
+                {
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "tabPageBW"))
                 {
                     c.BackColor = Properties.Settings.Default.bgcolor;
                 }
             }
-            BackColor = Properties.Settings.Default.bgmain;
-            
         }
 
         // On-click events for the buttons on the MainForm

@@ -37,7 +37,6 @@ namespace ProjectEcho
         {
             richTextBox1.Text = Properties.Settings.Default.t2notes; //load last saved notes
 
-            
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
@@ -49,24 +48,44 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            var checkedlistboxes = settingsHandler.getAll(this, typeof(CheckedListBox));
-            foreach (Control c in checkedlistboxes)
-            {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
-                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
-                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
-                float adjSize = c.Font.Size + textSizeOffset;
 
-                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
-            }
-            Panel[] panels = new Panel[] { panel3, panel7 };
-            foreach (Control c in panels)
+            //Apply saved darkmode settings
+            var everything = settingsHandler.getAllControls(this);
+
+            foreach (Control c in everything)
             {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
+                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW"))
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "analysisDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.fbcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "labelBW"))
+                {
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "tabPageBW"))
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
             }
-            
         }
 
         private void AddRowButton_Click(object sender, EventArgs e)

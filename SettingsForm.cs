@@ -70,11 +70,11 @@ namespace ProjectEcho
             //Checks darkmode toggle
             if (switchButton.Checked) //ON
             {
-                backgroundColor = ColorTranslator.FromHtml("#0A070E");
-                backgroundMain = ColorTranslator.FromHtml("#0A070E");
+                backgroundColor = Color.Black; //ColorTranslator.FromHtml("#0A070E");
+                backgroundMain = Color.Black; //ColorTranslator.FromHtml("#0A070E");
                 fontColor = Color.White;
-                analysisBoxColor = ColorTranslator.FromHtml("#121212");
-                feedbackBoxColor = ColorTranslator.FromHtml("#333337");
+                analysisBoxColor = Color.LightGray; //ColorTranslator.FromHtml("#121212");
+                feedbackBoxColor = Color.WhiteSmoke; //ColorTranslator.FromHtml("#333337");
             }
             else //OFF
             {
