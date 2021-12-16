@@ -153,7 +153,7 @@ namespace ProjectEcho
                 await CheckVideo(2, "A", "video", mediaUploadInfo2A,
                     mediaCheckList2A, mediaTextBox2A,
                     mediaProgressBar2A, mediaProgressStatus2A,
-                    11, 3);
+                    11, 3, "firstVideoPath");
             }
             catch (Exception ex)
             {
@@ -185,6 +185,15 @@ namespace ProjectEcho
             return path;
         }
 
+        private String getpath(string pathd)
+        {
+            String path = "";
+
+            path = pathd;
+
+            return path;
+        }
+
         private async Task AnalyzeVideoAsync(String path)
         {
             //Windows.Storage.StorageFolder storageFolder =
@@ -199,7 +208,7 @@ namespace ProjectEcho
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
             CheckedListBox mediaCL, TextBox mediaTB,
             ProgressBar mediaPB, Label mediaPS,
-            int maxLength, int minLength)
+            int maxLength, int minLength, String videoPath)
         {
             //Clears all checkedListBoxes
             foreach (int i in mediaCL.CheckedIndices)
@@ -221,7 +230,7 @@ namespace ProjectEcho
             };
 
             String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType); //Upload the file
-            firstVideoPath = path;
+
             uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
 
             await processData(mlist, mprogress); //Start the progress bar
@@ -240,6 +249,15 @@ namespace ProjectEcho
                 + "\r\n\r\n" + fc.mediaLengthFB;
 
             mediaPS.Text = "FINISHED";
+
+            if(videoPath == "firstVideoPath")
+            {
+                firstVideoPath = path;
+            }
+            else if(videoPath == "secondVideoPath")
+            {
+                secondVideoPath = path;
+            }
         }
 
         private void PlayFile(String path)

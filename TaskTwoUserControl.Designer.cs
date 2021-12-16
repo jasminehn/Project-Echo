@@ -32,6 +32,7 @@ namespace ProjectEcho
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskTwoUserControl));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.mediaUploadInfo2A = new System.Windows.Forms.Label();
             this.mediaProgressStatus2A = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.mediaProgressBar2A = new System.Windows.Forms.ProgressBar();
@@ -73,11 +74,11 @@ namespace ProjectEcho
             this.label7 = new System.Windows.Forms.Label();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.mediaUploadInfo2A = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.mediaTextBox2A = new System.Windows.Forms.TextBox();
             this.mediaCheckList2A = new System.Windows.Forms.CheckedListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -90,9 +91,13 @@ namespace ProjectEcho
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.uploadInfo2c2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.secondPlayButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.uploadInfo2c2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -102,11 +107,6 @@ namespace ProjectEcho
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.mediaTextBox2A = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -119,11 +119,11 @@ namespace ProjectEcho
             this.panel29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -139,6 +139,17 @@ namespace ProjectEcho
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(278, 106);
             this.panel5.TabIndex = 46;
+            // 
+            // mediaUploadInfo2A
+            // 
+            this.mediaUploadInfo2A.BackColor = System.Drawing.Color.Transparent;
+            this.mediaUploadInfo2A.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaUploadInfo2A.ForeColor = System.Drawing.Color.White;
+            this.mediaUploadInfo2A.Location = new System.Drawing.Point(9, 55);
+            this.mediaUploadInfo2A.Name = "mediaUploadInfo2A";
+            this.mediaUploadInfo2A.Size = new System.Drawing.Size(259, 46);
+            this.mediaUploadInfo2A.TabIndex = 48;
+            this.mediaUploadInfo2A.Text = "Uploaded:";
             // 
             // mediaProgressStatus2A
             // 
@@ -176,7 +187,7 @@ namespace ProjectEcho
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tableLayoutPanel1.Controls.Add(this.textBox14, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label21, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
@@ -247,7 +258,7 @@ namespace ProjectEcho
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(307, 2);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(214, 25);
+            this.label21.Size = new System.Drawing.Size(216, 25);
             this.label21.TabIndex = 19;
             this.label21.Text = "PERMISSION SLIP?\r\n";
             // 
@@ -572,17 +583,6 @@ namespace ProjectEcho
             this.panel7.TabIndex = 24;
             this.panel7.Tag = "";
             // 
-            // mediaUploadInfo2A
-            // 
-            this.mediaUploadInfo2A.BackColor = System.Drawing.Color.Transparent;
-            this.mediaUploadInfo2A.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mediaUploadInfo2A.ForeColor = System.Drawing.Color.White;
-            this.mediaUploadInfo2A.Location = new System.Drawing.Point(9, 55);
-            this.mediaUploadInfo2A.Name = "mediaUploadInfo2A";
-            this.mediaUploadInfo2A.Size = new System.Drawing.Size(259, 46);
-            this.mediaUploadInfo2A.TabIndex = 48;
-            this.mediaUploadInfo2A.Text = "Uploaded:";
-            // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -628,6 +628,18 @@ namespace ProjectEcho
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(249, 172);
             this.panel6.TabIndex = 38;
+            // 
+            // mediaTextBox2A
+            // 
+            this.mediaTextBox2A.AcceptsReturn = true;
+            this.mediaTextBox2A.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mediaTextBox2A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediaTextBox2A.Location = new System.Drawing.Point(26, 88);
+            this.mediaTextBox2A.Multiline = true;
+            this.mediaTextBox2A.Name = "mediaTextBox2A";
+            this.mediaTextBox2A.ReadOnly = true;
+            this.mediaTextBox2A.Size = new System.Drawing.Size(197, 67);
+            this.mediaTextBox2A.TabIndex = 49;
             // 
             // mediaCheckList2A
             // 
@@ -784,16 +796,59 @@ namespace ProjectEcho
             this.panel3.TabIndex = 42;
             this.panel3.Tag = "";
             // 
-            // uploadInfo2c2
+            // panel4
             // 
-            this.uploadInfo2c2.BackColor = System.Drawing.Color.Transparent;
-            this.uploadInfo2c2.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadInfo2c2.ForeColor = System.Drawing.Color.White;
-            this.uploadInfo2c2.Location = new System.Drawing.Point(9, 55);
-            this.uploadInfo2c2.Name = "uploadInfo2c2";
-            this.uploadInfo2c2.Size = new System.Drawing.Size(259, 46);
-            this.uploadInfo2c2.TabIndex = 51;
-            this.uploadInfo2c2.Text = "Uploaded:";
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.textBox15);
+            this.panel4.Controls.Add(this.checkedListBox1);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(318, 157);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(249, 172);
+            this.panel4.TabIndex = 51;
+            // 
+            // textBox15
+            // 
+            this.textBox15.AcceptsReturn = true;
+            this.textBox15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(26, 88);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(197, 67);
+            this.textBox15.TabIndex = 49;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.checkedListBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.Enabled = false;
+            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "500 megabytes or less",
+            "Less than 11 minutes long",
+            "Greater than 3 minutes long"});
+            this.checkedListBox1.Location = new System.Drawing.Point(26, 19);
+            this.checkedListBox1.MinimumSize = new System.Drawing.Size(180, 72);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(208, 72);
+            this.checkedListBox1.TabIndex = 14;
+            this.checkedListBox1.Tag = "";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, -38);
+            this.label1.MinimumSize = new System.Drawing.Size(148, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "VIDEO FORMAT AND QUALITY:";
             // 
             // secondPlayButton
             // 
@@ -821,6 +876,17 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 106);
             this.panel1.TabIndex = 49;
+            // 
+            // uploadInfo2c2
+            // 
+            this.uploadInfo2c2.BackColor = System.Drawing.Color.Transparent;
+            this.uploadInfo2c2.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadInfo2c2.ForeColor = System.Drawing.Color.White;
+            this.uploadInfo2c2.Location = new System.Drawing.Point(9, 55);
+            this.uploadInfo2c2.Name = "uploadInfo2c2";
+            this.uploadInfo2c2.Size = new System.Drawing.Size(259, 46);
+            this.uploadInfo2c2.TabIndex = 51;
+            this.uploadInfo2c2.Text = "Uploaded:";
             // 
             // label4
             // 
@@ -913,72 +979,6 @@ namespace ProjectEcho
             this.panel2.Size = new System.Drawing.Size(555, 788);
             this.panel2.TabIndex = 25;
             // 
-            // mediaTextBox2A
-            // 
-            this.mediaTextBox2A.AcceptsReturn = true;
-            this.mediaTextBox2A.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mediaTextBox2A.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mediaTextBox2A.Location = new System.Drawing.Point(26, 88);
-            this.mediaTextBox2A.Multiline = true;
-            this.mediaTextBox2A.Name = "mediaTextBox2A";
-            this.mediaTextBox2A.ReadOnly = true;
-            this.mediaTextBox2A.Size = new System.Drawing.Size(197, 67);
-            this.mediaTextBox2A.TabIndex = 49;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Controls.Add(this.textBox15);
-            this.panel4.Controls.Add(this.checkedListBox1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(318, 157);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(249, 172);
-            this.panel4.TabIndex = 51;
-            // 
-            // textBox15
-            // 
-            this.textBox15.AcceptsReturn = true;
-            this.textBox15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(26, 88);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(197, 67);
-            this.textBox15.TabIndex = 49;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.checkedListBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.Enabled = false;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "500 megabytes or less",
-            "Less than 11 minutes long",
-            "Greater than 3 minutes long"});
-            this.checkedListBox1.Location = new System.Drawing.Point(26, 19);
-            this.checkedListBox1.MinimumSize = new System.Drawing.Size(180, 72);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(208, 72);
-            this.checkedListBox1.TabIndex = 14;
-            this.checkedListBox1.Tag = "";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, -38);
-            this.label1.MinimumSize = new System.Drawing.Size(148, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 20);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "VIDEO FORMAT AND QUALITY:";
-            // 
             // TaskTwoUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1008,6 +1008,8 @@ namespace ProjectEcho
             this.panel29.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -1015,8 +1017,6 @@ namespace ProjectEcho
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
