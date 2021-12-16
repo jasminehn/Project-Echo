@@ -109,17 +109,7 @@ namespace ProjectEcho
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //Apply saved display settings
-            textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
-            var labels = settingsHandler.getAll(this, typeof(Label));
-            foreach (Control c in labels)
-            {
-                System.Drawing.FontFamily fon = c.Font.FontFamily; //Sets font family
-                FontStyle sty = c.Font.Style; //Sets style (ie. bold, italic, reg)
-                float adjSize = c.Font.Size + textSizeOffset;
-
-                c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
-            }
+            
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
@@ -150,7 +140,6 @@ namespace ProjectEcho
                 if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
                 {
                     c.BackColor = Properties.Settings.Default.fbcolor;
-                    c.ForeColor = Properties.Settings.Default.fcolor;
                 }
 
                 if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))

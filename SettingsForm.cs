@@ -135,7 +135,6 @@ namespace ProjectEcho
                 if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
                 {
                     c.BackColor = feedbackBoxColor;
-                    c.ForeColor = fontColor;
                 }
             }
             

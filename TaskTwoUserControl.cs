@@ -67,7 +67,6 @@ namespace ProjectEcho
                 if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
                 {
                     c.BackColor = Properties.Settings.Default.fbcolor;
-                    c.ForeColor = Properties.Settings.Default.fcolor;
                 }
 
                 if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))
