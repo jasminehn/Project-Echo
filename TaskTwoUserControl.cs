@@ -148,9 +148,17 @@ namespace ProjectEcho
 
         private async void FirstUploadButton_Click(object sender, EventArgs e)
         {
-            firstVideoPath = OpenFile();
-
-            //CheckVideo(2, "A", "media", ) //finish later
+            try
+            {
+                await CheckVideo(2, "A", "video", mediaUploadInfo2A,
+                    mediaCheckList2A, mediaTextBox2A,
+                    mediaProgressBar2A, mediaProgressStatus2A,
+                    11);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
+            }
         }
 
         private String OpenFile()
@@ -175,8 +183,8 @@ namespace ProjectEcho
 
 
                     //MOVE THIS LATER
-                    string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
-                    uploadInfo2c1.Text = "Uploaded: \n" + separatedFileName;
+                    /*string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
+                    mediaUploadInfo2A.Text = "Uploaded: \n" + separatedFileName;
 
                     List<string> mlist = new List<string>();
                     for (int i = 0; i < 100; i++)
@@ -186,12 +194,12 @@ namespace ProjectEcho
                     var mprogress = new Progress<ProgressInformation>();
                     mprogress.ProgressChanged += (o, report) =>
                     {
-                        progressBar4.Value = report.PercentComplete;
-                        progressBar4.Update();
+                        mediaProgressBar2A.Value = report.PercentComplete;
+                        mediaProgressBar2A.Update();
                     };
                     processData(mlist, mprogress);
 
-                    t1paCL.SetItemChecked(1, true);
+                    mediaCheckList2A.SetItemChecked(1, true);*/
                     //MOVE THIS LATER (END)
                 }
             }
@@ -209,7 +217,6 @@ namespace ProjectEcho
             //Console.WriteLine("CLARE:: " + videoProperties.Duration);
         }
 
-        //FINISH LATER
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
             CheckedListBox mediaCL, TextBox mediaTB,
             ProgressBar mediaPB, Label mediaPS,
@@ -235,12 +242,12 @@ namespace ProjectEcho
             };
 
             String path = dh.uploadMultipleDocuments(taskNum, taskPart, documentType); //Upload the file
+            firstVideoPath = path;
             uploadInfoLabel.Text = "Uploaded: " + dh.displayMultipleDocuments(taskNum, taskPart, documentType); //updates text displaying the previously uploaded files
 
             await processData(mlist, mprogress); //Start the progress bar
 
-
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0, 500);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, mediaLength, 500.0);
 
             mediaTB.Text = fc.mediaSizeFB
                 + "\r\n\r\n" + fc.mediaLengthFB;

@@ -80,11 +80,14 @@ namespace ProjectEcho
 
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            //doctypes: document or media
-
+            //doctypes: document, video, or media
             if (docType == "document")
             {
-                openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx"; //move this
+                openFileDialog.Filter = "Document Files(*.doc; *.docx)|*.doc; *.docx";
+            }
+            else if (docType == "video")
+            {
+                openFileDialog.Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov";
             }
             else //media files
             {
@@ -131,6 +134,7 @@ namespace ProjectEcho
                     File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
                 }
             }
+            Console.WriteLine("WHAT IS PATH: "+path);
             return path;
         }
 

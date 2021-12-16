@@ -127,6 +127,9 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <data name="label3.Text" xml:space="preserve">
+    <value>The second clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
+  </data>
   <data name="label13.Text" xml:space="preserve">
     <value>The first clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
   </data>
@@ -532,9 +535,6 @@
         hmRIhmRIhuT8ROH8oUQyJEMyJEMyJOcnCucPJZIhGZIhGZIhOT9ROH8okQzJkAzJkAzJ+YnC+UOJZEiG
         ZEiGZEjOTxTOH0okQzIkQzIkQ3J+onD+ABKJJP1/zYdPVIqg/CsAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>The second clip you submit must be a group interaction with a minimum of four children in the video at all times, according to the edTPA 2019 Rubric. Please be sure to verify that the requirements in the current edition of the edTPA Early Childhood Development Handbook are the same as the list below. Follow the current edition's specifications if they differ.</value>
   </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
