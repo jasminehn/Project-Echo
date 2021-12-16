@@ -123,7 +123,7 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckMipltipleDocuments(3, "A", "document", uploadInfo3A,
+                await CheckMultipleDocuments(3, "A", "document", uploadInfo3A,
                     formatCheckList3A, formatTextBox3A,
                     grammarCheckList3A, grammarTextBox3A,
                     formatProgressBar3A, formatProgressStatus3A,
@@ -155,7 +155,7 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckMipltipleDocuments(3, "B", "document", uploadInfo3B,
+                await CheckMultipleDocuments(3, "B", "document", uploadInfo3B,
                     formatCheckList3B, formatTextBox3B,
                     grammarCheckList3B, grammarTextBox3B,
                     formatProgressBar3B, formatProgressStatus3B,
@@ -187,7 +187,7 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckMipltipleDocuments(3, "C", "document", uploadInfo3C,
+                await CheckMultipleDocuments(3, "C", "document", uploadInfo3C,
                     formatCheckList3C, formatTextBox3C,
                     grammarCheckList3C, grammarTextBox3C,
                     formatProgressBar3C, formatProgressStatus3C,
@@ -283,7 +283,7 @@ namespace ProjectEcho
             mediaPS.Text = "FINISHED";
         }
 
-        public async Task CheckMipltipleDocuments(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
+        public async Task CheckMultipleDocuments(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
             CheckedListBox formatCL, TextBox formatTextBox,
             CheckedListBox grammarCL, TextBox grammarErrorsTextBox,
             ProgressBar formatPB, Label formatPS,

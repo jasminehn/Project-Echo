@@ -128,7 +128,7 @@ namespace ProjectEcho
             }
         }
 
-        private void FirstUploadButton_Click(object sender, EventArgs e)
+        private async void FirstUploadButton_Click(object sender, EventArgs e)
         {
             firstVideoPath = OpenFile();
 
