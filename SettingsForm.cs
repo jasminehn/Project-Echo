@@ -63,103 +63,86 @@ namespace ProjectEcho
 
         private void switchButton_Click(object sender, EventArgs e)
         {
-            Color currback = this.BackColor;
-
             //Checks darkmode toggle
             if (switchButton.Checked) //ON
             {
-
-                backgroundColor = Color.Black; //ColorTranslator.FromHtml("#121113");
-                backgroundMain = Color.Black; //ColorTranslator.FromHtml("#0A070E");
+                backgroundColor = ColorTranslator.FromHtml("#121113");
+                backgroundMain = ColorTranslator.FromHtml("#0A070E");
                 fontColor = Color.White;
-
-                if (currback == Color.White)
-                {
-                    BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //settings menu changes
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //Changes color for slider
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    //Changes color for button
-                    applyButton.BackColor = backgroundColor;
-
-                    //main form changes 
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
-                }
-                else
-                {
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    applyButton.BackColor = backgroundColor;
-
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
-                }
-                Properties.Settings.Default.fcolor = fontColor;
-                Properties.Settings.Default.bgcolor = backgroundColor;
-                Properties.Settings.Default.Save();
             }
             else //OFF
             {
                 backgroundColor = Color.White;
-                backgroundMain = Color.White;
+                backgroundMain = SystemColors.Control;
                 fontColor = Color.Black;
+            }
 
-                if (currback == Color.Black)
+            //settings menu changes
+            BackColor = backgroundColor;
+            panel1.BackColor = backgroundColor;
+            ForeColor = fontColor;
+
+            //Changes color for slider
+            textsizeAdjust.BackColor = backgroundColor;
+            textsizeAdjust.ForeColor = fontColor;
+
+            //Changes color for button
+            applyButton.BackColor = backgroundColor;
+
+            //main form changes 
+            /*
+            mainForm.BackColor = backgroundMain;
+            mainForm.mainMenuPanel.BackColor = backgroundColor;
+            mainForm.mainPanel.BackColor = backgroundColor;*/
+
+            //task 1 changes
+            //taskOne.tabPage1.BackColor = backgroundColor;
+            //taskOne.tabPage1.ForeColor = fontColor;
+
+            var panels = settingsHandler.getAll(mainForm, typeof(Panel));
+            var t1panels = settingsHandler.getAll(taskOne, typeof(Panel));
+            var t2panels = settingsHandler.getAll(taskTwo, typeof(Panel));
+            var t3panels = settingsHandler.getAll(taskThree, typeof(Panel));
+            panels = panels.Concat(t1panels).Concat(t2panels).Concat(t3panels); //adds all form panels to IEnumerable of panels
+
+            var labels = settingsHandler.getAll(mainForm, typeof(Label));
+            var t1labels = settingsHandler.getAll(taskOne, typeof(Label));
+            var t2labels = settingsHandler.getAll(taskTwo, typeof(Label));
+            var t3labels = settingsHandler.getAll(taskThree, typeof(Label));
+            labels = labels.Concat(t1labels).Concat(t2labels).Concat(t3labels); //adds all form labels to IEnumerable of labels
+
+            var tabPages = settingsHandler.getAll(mainForm, typeof(Label)); ;
+            var t1tabPages = settingsHandler.getAll(taskOne, typeof(TabPage));
+            var t2tabPages = settingsHandler.getAll(taskTwo, typeof(TabPage));
+            var t3tabPages = settingsHandler.getAll(taskThree, typeof(TabPage));
+            tabPages = tabPages.Concat(t1tabPages).Concat(t2tabPages).Concat(t3tabPages); //adds all form labels to IEnumerable of labels
+
+            foreach (Control c in panels)
+            {
+                if((c.Tag != null) && (c.Tag.ToString() == "panelBW")) //white to black
                 {
-                    BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //settings menu changes
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    //Changes color for slider
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    //Changes color for button
-                    applyButton.BackColor = backgroundColor;
-
-                    //main form changes 
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
+                    c.BackColor = backgroundColor;
                 }
-                else
+                else if ((c.Tag != null) && (c.Tag.ToString() == "changebg2")) 
                 {
-                    BackColor = backgroundColor;
-                    panel1.BackColor = backgroundColor;
-                    ForeColor = fontColor;
-
-                    textsizeAdjust.BackColor = backgroundColor;
-                    textsizeAdjust.ForeColor = fontColor;
-
-                    applyButton.BackColor = backgroundColor;
-
-                    mainForm.BackColor = backgroundMain;
-                    mainForm.mainMenuPanel.BackColor = backgroundColor;
-                    mainForm.mainPanel.BackColor = backgroundColor;
+                    c.BackColor = backgroundMain;
                 }
-                Properties.Settings.Default.fcolor = fontColor;
-                Properties.Settings.Default.bgcolor = backgroundColor;
-                Properties.Settings.Default.Save();
+            }
+            //change label color from default black to white
+            foreach (Control c in labels)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "labelBW")) //black to white
+                {
+                    c.ForeColor = fontColor;
+                }
+            }
+            //change tab page color from default white to black
+            foreach (Control c in tabPages)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "tabPageBW"))
+                {
+                    c.BackColor = backgroundColor;
+                }
             }
         }
 

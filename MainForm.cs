@@ -129,11 +129,14 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            Panel[] panels = new Panel[] { mainPanel, mainMenuPanel };
+            var panels = settingsHandler.getAll(this, typeof(Panel));
             foreach (Control c in panels)
             {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
+                if ((c.Tag != null) && (c.Tag.ToString() == "changebg")) //white to black
+                {
+                    //Console.WriteLine(c.Name.ToString() + "FUKYALIFE");
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
             }
             BackColor = Properties.Settings.Default.bgmain;
             

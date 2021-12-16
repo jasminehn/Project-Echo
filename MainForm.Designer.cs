@@ -109,6 +109,7 @@ namespace ProjectEcho
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1364, 73);
             this.panel1.TabIndex = 10;
+            this.panel1.Tag = "changebg2";
             // 
             // forwardButton
             // 
@@ -289,7 +290,7 @@ namespace ProjectEcho
             this.mainMenuPanel.Name = "mainMenuPanel";
             this.mainMenuPanel.Size = new System.Drawing.Size(534, 388);
             this.mainMenuPanel.TabIndex = 40;
-            this.mainMenuPanel.Tag = "changebg";
+            this.mainMenuPanel.Tag = "panelBW";
             // 
             // tableLayoutPanel1
             // 
@@ -675,7 +676,7 @@ namespace ProjectEcho
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1364, 749);
             this.mainPanel.TabIndex = 1;
-            this.mainPanel.Tag = "changebg";
+            this.mainPanel.Tag = "panelBW";
             // 
             // toolTip1
             // 
