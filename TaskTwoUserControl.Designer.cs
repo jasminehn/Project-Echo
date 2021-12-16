@@ -695,7 +695,7 @@ namespace ProjectEcho
             this.clipOneUpload.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.clipOneUpload.Location = new System.Drawing.Point(70, 153);
             this.clipOneUpload.Name = "clipOneUpload";
-            this.clipOneUpload.Size = new System.Drawing.Size(56, 76);
+            this.clipOneUpload.Size = new System.Drawing.Size(56, 59);
             this.clipOneUpload.TabIndex = 22;
             this.clipOneUpload.UseVisualStyleBackColor = true;
             this.clipOneUpload.Click += new System.EventHandler(this.FirstUploadButton_Click);

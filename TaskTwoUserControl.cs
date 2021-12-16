@@ -31,6 +31,9 @@ namespace ProjectEcho
         public TaskTwoUserControl()
         {
             InitializeComponent();
+
+            mediaUploadInfo2A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "video");
+            uploadInfo2c2.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "video");
         }
 
         private void TaskTwoUserControl_Load(object sender, EventArgs e)
@@ -298,9 +301,21 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        private void SecondUploadButton_Click(object sender, EventArgs e)
+        private async void SecondUploadButton_Click(object sender, EventArgs e)
         {
-            secondVideoPath = OpenFile();
+            //secondVideoPath = OpenFile();
+
+            try
+            {
+                await CheckVideo(2, "A", "video", uploadInfo2c2,
+                    checkedListBox1, textBox15,
+                    progressBar1, label4,
+                    11, 3, "secondVideoPath");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
+            }
         }
 
         private void FirstPlayButton_Click(object sender, EventArgs e)
