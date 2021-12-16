@@ -15,5 +15,16 @@ namespace ProjectEcho
             return controls.SelectMany(ctrl => getAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
         }
 
+        public IEnumerable<Control> getAllControls(Control container)
+        {
+            List<Control> controlList = new List<Control>();
+            foreach (Control c in container.Controls)
+            {
+                controlList.AddRange(getAllControls(c));
+                controlList.Add(c);
+            }
+            return controlList;
+        }
+
     }
 }

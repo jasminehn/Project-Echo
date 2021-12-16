@@ -70,11 +70,11 @@ namespace ProjectEcho
             //Checks darkmode toggle
             if (switchButton.Checked) //ON
             {
-                backgroundColor = ColorTranslator.FromHtml("#121113");
+                backgroundColor = ColorTranslator.FromHtml("#0A070E");
                 backgroundMain = ColorTranslator.FromHtml("#0A070E");
                 fontColor = Color.White;
-                analysisBoxColor = ColorTranslator.FromHtml("#2d2d30");
-                feedbackBoxColor = ColorTranslator.FromHtml("#252526");
+                analysisBoxColor = ColorTranslator.FromHtml("#121212");
+                feedbackBoxColor = ColorTranslator.FromHtml("#333337");
             }
             else //OFF
             {
@@ -94,36 +94,16 @@ namespace ProjectEcho
             applyButton.BackColor = backgroundColor;
 
             var panels = settingsHandler.getAll(mainForm, typeof(Panel));
-            /*var t1panels = settingsHandler.getAll(taskOne, typeof(Panel));
-            var t2panels = settingsHandler.getAll(taskTwo, typeof(Panel));
-            var t3panels = settingsHandler.getAll(taskThree, typeof(Panel));
-            panels = panels.Concat(t1panels).Concat(t2panels).Concat(t3panels); //adds all form panels to IEnumerable of panels*/
 
             var labels = settingsHandler.getAll(mainForm, typeof(Label));
-            /*var t1labels = settingsHandler.getAll(taskOne, typeof(Label));
-            var t2labels = settingsHandler.getAll(taskTwo, typeof(Label));
-            var t3labels = settingsHandler.getAll(taskThree, typeof(Label));
-            labels = labels.Concat(t1labels).Concat(t2labels).Concat(t3labels); //adds all form labels to IEnumerable of labels*/
 
             var tabPages = settingsHandler.getAll(mainForm, typeof(TabPage));
-            /*var t1tabPages = settingsHandler.getAll(taskOne, typeof(TabPage));
-            var t2tabPages = settingsHandler.getAll(taskTwo, typeof(TabPage));
-            var t3tabPages = settingsHandler.getAll(taskThree, typeof(TabPage));
-            tabPages = tabPages.Concat(t1tabPages).Concat(t2tabPages).Concat(t3tabPages); //adds all form labels to IEnumerable of labels*/
 
-            var t1textBoxes = settingsHandler.getAll(taskOne, typeof(TextBox));
-            var t2textBoxes = settingsHandler.getAll(taskTwo, typeof(TextBox));
-            var t3textBoxes = settingsHandler.getAll(taskThree, typeof(TextBox));
-            var t1listBoxes = settingsHandler.getAll(taskOne, typeof(ListBox));
-            var t2listBoxes = settingsHandler.getAll(taskTwo, typeof(ListBox));
-            var t3listBoxes = settingsHandler.getAll(taskThree, typeof(ListBox));
-            t1textBoxes = t1textBoxes.Concat(t2textBoxes).Concat(t3textBoxes).Concat(t1listBoxes).Concat(t2listBoxes).Concat(t3listBoxes);
+            var textBoxes = settingsHandler.getAll(mainForm, typeof(TextBox));
+            var listBoxes = settingsHandler.getAll(mainForm, typeof(ListBox));
+            textBoxes = textBoxes.Concat(listBoxes);
 
             var checkLists = settingsHandler.getAll(mainForm, typeof(CheckedListBox));
-            /*var t1checkLists = settingsHandler.getAll(taskOne, typeof(CheckedListBox));
-            var t2checkLists = settingsHandler.getAll(taskTwo, typeof(CheckedListBox));
-            var t3checkLists = settingsHandler.getAll(taskThree, typeof(CheckedListBox));
-            checkLists = checkLists.Concat(t1checkLists).Concat(t2checkLists).Concat(t3checkLists);*/
 
             foreach (Control c in panels)
             {
@@ -140,17 +120,7 @@ namespace ProjectEcho
                     c.BackColor = analysisBoxColor;
                 }
             }
-            //change 
-            foreach (Control c in t1textBoxes)
-            {
-                if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
-                {
-                    c.BackColor = feedbackBoxColor;
-                    c.ForeColor = fontColor;
-                    
-                }
-            }
-            //change 
+            //change analysis checklists
             foreach (Control c in checkLists)
             {
                 if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))
@@ -159,6 +129,16 @@ namespace ProjectEcho
                     c.ForeColor = fontColor;
                 }
             }
+            //change feedback textboxes and checklistboxes
+            foreach (Control c in textBoxes)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
+                {
+                    c.BackColor = feedbackBoxColor;
+                    c.ForeColor = fontColor;
+                }
+            }
+            
             //change label color from default black to white
             foreach (Control c in labels)
             {
@@ -310,6 +290,9 @@ namespace ProjectEcho
             Properties.Settings.Default.textsize = textSizeOffset;
             Properties.Settings.Default.bgcolor = backgroundColor;
             Properties.Settings.Default.bgmain = backgroundMain;
+            Properties.Settings.Default.fcolor = fontColor;
+            Properties.Settings.Default.abcolor = analysisBoxColor;
+            Properties.Settings.Default.fbcolor = feedbackBoxColor;
             Properties.Settings.Default.Save();
 
             this.Close(); //close settings menu when they save te settings

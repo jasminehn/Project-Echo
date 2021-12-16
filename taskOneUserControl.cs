@@ -55,17 +55,43 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            var tabs = settingsHandler.getAll(this, typeof(TabPage));
-            foreach (Control c in tabs)
+            
+            //Apply saved darkmode settings
+            var everything = settingsHandler.getAllControls(this);
+
+            foreach (Control c in everything)
             {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
-            }
-            Panel[] panels = new Panel[] { panel7, panel3, panel4, panel5, panel6};
-            foreach (Control c in panels)
-            {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
+                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW"))
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "analysisDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.fbcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "labelBW"))
+                {
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+
+                if ((c.Tag != null) && (c.Tag.ToString() == "tabPageBW"))
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
             }
         }
 

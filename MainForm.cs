@@ -129,10 +129,12 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
+
+            //apply saved darkmode settings
             var panels = settingsHandler.getAll(this, typeof(Panel));
             foreach (Control c in panels)
             {
-                if ((c.Tag != null) && (c.Tag.ToString() == "changebg")) //white to black
+                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW")) //white to black
                 {
                     c.BackColor = Properties.Settings.Default.bgcolor;
                 }

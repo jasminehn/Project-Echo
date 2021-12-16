@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.Drawing;
+using System.Linq;
 
 namespace ProjectEcho
 {
@@ -61,19 +62,63 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            var tabs = settingsHandler.getAll(this, typeof(TabPage));
-            foreach (Control c in tabs)
-            {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
-            }
-            Panel[] panels = new Panel[] { panel1, panel4, panel17, panel18, panel33, panel6, panel38, panel51, panel9, panel27, panel22 };
+            //Apply saved darkmode settings
+            var panels = settingsHandler.getAll(this, typeof(Panel));
+
+            var tabPages = settingsHandler.getAll(this, typeof(TabPage));
+
+            var textBoxes = settingsHandler.getAll(this, typeof(TextBox));
+            var listBoxes = settingsHandler.getAll(this, typeof(ListBox));
+            textBoxes = textBoxes.Concat(listBoxes);
+
+            var checkLists = settingsHandler.getAll(this, typeof(CheckedListBox));
+
             foreach (Control c in panels)
             {
-                c.BackColor = Properties.Settings.Default.bgcolor;
-                c.ForeColor = Properties.Settings.Default.fcolor;
+                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW")) //white to black
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
+                else if ((c.Tag != null) && (c.Tag.ToString() == "analysisDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                }
             }
-            
+            //change 
+            foreach (Control c in textBoxes)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "feedbackDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.fbcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+            }
+            //change 
+            foreach (Control c in checkLists)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "checklistDM"))
+                {
+                    c.BackColor = Properties.Settings.Default.abcolor;
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+            }
+            //change label color from default black to white
+            foreach (Control c in labels)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "labelBW")) //black to white
+                {
+                    c.ForeColor = Properties.Settings.Default.fcolor;
+                }
+            }
+            //change tab page color from default white to black
+            foreach (Control c in tabPages)
+            {
+                if ((c.Tag != null) && (c.Tag.ToString() == "tabPageBW"))
+                {
+                    c.BackColor = Properties.Settings.Default.bgcolor;
+                }
+            }
+
         }
 
         private async void MediaUploadButton3A_Click(object sender, EventArgs e)
