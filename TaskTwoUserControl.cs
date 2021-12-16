@@ -147,7 +147,7 @@ namespace ProjectEcho
             }
         }
 
-        private void FirstUploadButton_Click(object sender, EventArgs e)
+        private async void FirstUploadButton_Click(object sender, EventArgs e)
         {
             firstVideoPath = OpenFile();
 
@@ -241,7 +241,7 @@ namespace ProjectEcho
             await processData(mlist, mprogress); //Start the progress bar
 
 
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 0, 500);
 
             mediaTB.Text = fc.mediaSizeFB
                 + "\r\n\r\n" + fc.mediaLengthFB;

@@ -155,30 +155,19 @@ namespace ProjectEcho
             return numPages;
         }
 
-        public Boolean[] runMediaFormatCheck(String path, int correctLength)
+        public Boolean[] runMediaFormatCheck(String path, int correctLength, double correctSize)
         {
-            Console.WriteLine(">>>>MEDIA DURATION: "+ getMediaLength(path) + " seconds");
-            Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
+            //Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
 
             Boolean isCorrectLength = checkMediaLength(path, correctLength);
-            //Boolean isArial = checkFont(document);
+            Boolean isCorrentSize = checkMediaSize(path, correctSize);
             //Boolean isFontSize = checkFontSize(document);
             //Boolean isCorrectLength = false;
             //checkMediaLength(path,7);
 
-            Boolean[] isFormatted = { false, isCorrectLength };
+            Boolean[] isFormatted = { isCorrentSize, isCorrectLength };
 
             return isFormatted;
-        }
-        
-        public string getMediaLength(string inputFile)
-        {
-            var player = new WindowsMediaPlayer();
-            var clip = player.newMedia(inputFile);
-            String result = (TimeSpan.FromSeconds(clip.duration)).ToString();
-            
-
-            return result;
         }
 
         public Boolean checkMediaLength(string inputFile, int requiredFileLength)
@@ -188,27 +177,23 @@ namespace ProjectEcho
             var clip = player.newMedia(inputFile);
             var inputFileLength = TimeSpan.FromSeconds(clip.duration);
             string fileLength = inputFileLength.ToString();
-            //Console.WriteLine(inputFileLength.ToString());
+            //Console.WriteLine("MEDIA DURATION: " + inputFileLength.ToString());
             mediaLengthFB = "Length: " + fileLength;
 
             //get required length
             double minToSec = requiredFileLength * 60;
             var desiredlength = TimeSpan.FromSeconds(minToSec);
-            //Console.WriteLine(desiredlength.ToString());
 
             //compare
             if (inputFileLength > desiredlength)
             {
-                Console.WriteLine(desiredlength + " is NOT more than " + inputFileLength);
                 return false;
             }
-
-            
 
             return true;
         }
 
-        public string checkMediaSize(string inputFile)
+        public Boolean checkMediaSize(string inputFile, double requiredFileSize)
         {
             string[] sizes = { "B", "KB", "MB", "GB", "TB" };
             double len = new FileInfo(inputFile).Length;
@@ -220,39 +205,16 @@ namespace ProjectEcho
             }
 
             string result = String.Format("{0:0.##} {1}", len, sizes[order]);
-            Console.WriteLine(result);
             mediaSizeFB = "Size: " + result;
-            return result;
-        }
 
-        //remove later
-        /*
-        public string checkMediaLength1(string inputFile)
-        {
-            string output = "nope :(";
-
-            string file = inputFile;
-            ShellFile so = ShellFile.FromFilePath(file);
-            double nanoseconds;
-            double.TryParse(so.Properties.System.Media.Duration.Value.ToString(),
-            out nanoseconds);
-            Console.WriteLine("NanaoSeconds: {0}", nanoseconds);
-            if (nanoseconds > 0)
+            //compare
+            if (len > requiredFileSize)
             {
-                double seconds = Convert100NanosecondsToMilliseconds(nanoseconds) / 1000;
-                Console.WriteLine(seconds.ToString());
-                output = seconds.ToString();
+                return false;
             }
-            return output;
+
+            return true;
         }
 
-
-        public static double Convert100NanosecondsToMilliseconds(double nanoseconds)
-        {
-            // One million nanoseconds in 1 millisecond, 
-            // but we are passing in 100ns units...
-            return nanoseconds * 0.0001;
-        }
-        */
     }
 }
