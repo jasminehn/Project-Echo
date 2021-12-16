@@ -153,7 +153,7 @@ namespace ProjectEcho
                 await CheckVideo(2, "A", "video", mediaUploadInfo2A,
                     mediaCheckList2A, mediaTextBox2A,
                     mediaProgressBar2A, mediaProgressStatus2A,
-                    11);
+                    11, 3);
             }
             catch (Exception ex)
             {
@@ -180,27 +180,6 @@ namespace ProjectEcho
                 {
                     path = Path.GetFullPath(fileName);
                     AnalyzeVideoAsync(path);
-
-
-                    //MOVE THIS LATER
-                    /*string separatedFileName = Path.GetFileName(fileName); //gets only the file name + extension
-                    mediaUploadInfo2A.Text = "Uploaded: \n" + separatedFileName;
-
-                    List<string> mlist = new List<string>();
-                    for (int i = 0; i < 100; i++)
-                    {
-                        mlist.Add(i.ToString());
-                    }
-                    var mprogress = new Progress<ProgressInformation>();
-                    mprogress.ProgressChanged += (o, report) =>
-                    {
-                        mediaProgressBar2A.Value = report.PercentComplete;
-                        mediaProgressBar2A.Update();
-                    };
-                    processData(mlist, mprogress);
-
-                    mediaCheckList2A.SetItemChecked(1, true);*/
-                    //MOVE THIS LATER (END)
                 }
             }
             return path;
@@ -220,7 +199,7 @@ namespace ProjectEcho
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
             CheckedListBox mediaCL, TextBox mediaTB,
             ProgressBar mediaPB, Label mediaPS,
-            int mediaLength)
+            int maxLength, int minLength)
         {
             //Clears all checkedListBoxes
             foreach (int i in mediaCL.CheckedIndices)
@@ -247,7 +226,15 @@ namespace ProjectEcho
 
             await processData(mlist, mprogress); //Start the progress bar
 
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, mediaLength, 500.0);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 500.0, maxLength, minLength);
+
+            for (int i = 0; i < mediaCL.Items.Count; i++)
+            {
+                if (itemsChecked[i].Equals(true))
+                {
+                    mediaCL.SetItemChecked(i, true);
+                }
+            }
 
             mediaTB.Text = fc.mediaSizeFB
                 + "\r\n\r\n" + fc.mediaLengthFB;

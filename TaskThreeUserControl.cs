@@ -110,7 +110,7 @@ namespace ProjectEcho
                 await CheckVideo(3, "A", "media", mediaUploadInfo3A, 
                     mediaCheckList3A, mediaTextBox3A,
                     mediaProgressBar3A, mediaProgressStatus3A,
-                    7);
+                    7, 0);
             }
             catch(Exception ex)
             {
@@ -142,7 +142,7 @@ namespace ProjectEcho
                 await CheckVideo(3, "B", "media", mediaUploadInfo3B,
                     mediaCheckList3B, mediaTextBox3B,
                     mediaProgressBar3B, mediaProgressStatus3B,
-                    0);
+                    5, 0);
             }
             catch (Exception ex)
             {
@@ -174,7 +174,7 @@ namespace ProjectEcho
                 await CheckVideo(3, "C", "media", mediaUploadInfo3C,
                     mediaCheckList3C, mediaTextBox3C,
                     mediaProgressBar3C, mediaProgressStatus3C,
-                    0);
+                    10, 0);
             }
             catch (Exception ex)
             {
@@ -240,7 +240,7 @@ namespace ProjectEcho
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
             CheckedListBox mediaCL, TextBox mediaTB,
             ProgressBar mediaPB, Label mediaPS,
-            int mediaLength)
+            int maxLength, int minLength)
         {
             //Clears all checkedListBoxes
             foreach (int i in mediaCL.CheckedIndices)
@@ -266,7 +266,7 @@ namespace ProjectEcho
 
             await processData(mlist, mprogress); //Start the progress bar
 
-            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, mediaLength, 500.0);
+            Boolean[] itemsChecked = fc.runMediaFormatCheck(path, 500.0, maxLength, minLength);
 
             for (int i = 0; i < mediaCL.Items.Count; i++)
             {

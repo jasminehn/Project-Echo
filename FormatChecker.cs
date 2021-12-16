@@ -155,19 +155,38 @@ namespace ProjectEcho
             return numPages;
         }
 
-        public Boolean[] runMediaFormatCheck(String path, int correctLength, double correctSize)
+        public Boolean[] runMediaFormatCheck(String path, double correctSize, int correctMaxLength, int correctMinLength)
         {
-            //Console.WriteLine(">>>>MEDIA SIZE: " + checkMediaSize(path));
-
-            Boolean isCorrectLength = checkMediaLength(path, correctLength);
             Boolean isCorrentSize = checkMediaSize(path, correctSize);
-            //Boolean isFontSize = checkFontSize(document);
-            //Boolean isCorrectLength = false;
-            //checkMediaLength(path,7);
+            Boolean isCorrectMaxLength = checkMediaLength(path, correctMaxLength);
+            Boolean isCorrectMinLength = checkMinLength(path, correctMinLength);
 
-            Boolean[] isFormatted = { isCorrentSize, isCorrectLength };
+            Boolean[] isFormatted = { isCorrentSize, isCorrectMaxLength, isCorrectMinLength };
 
             return isFormatted;
+        }
+
+        public Boolean checkMediaSize(string inputFile, double requiredFileSize)
+        {
+            string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+            double len = new FileInfo(inputFile).Length;
+            int order = 0;
+            while (len >= 1024 && order < sizes.Length - 1)
+            {
+                order++;
+                len = len / 1024;
+            }
+
+            string result = String.Format("{0:0.##} {1}", len, sizes[order]);
+            mediaSizeFB = "Size: " + result;
+
+            //compare
+            if (len > requiredFileSize)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public Boolean checkMediaLength(string inputFile, int requiredFileLength)
@@ -193,28 +212,30 @@ namespace ProjectEcho
             return true;
         }
 
-        public Boolean checkMediaSize(string inputFile, double requiredFileSize)
+        public Boolean checkMinLength(string inputFile, int requiredFileLength)
         {
-            string[] sizes = { "B", "KB", "MB", "GB", "TB" };
-            double len = new FileInfo(inputFile).Length;
-            int order = 0;
-            while (len >= 1024 && order < sizes.Length - 1)
-            {
-                order++;
-                len = len / 1024;
-            }
+            //get input length
+            var player = new WindowsMediaPlayer();
+            var clip = player.newMedia(inputFile);
+            var inputFileLength = TimeSpan.FromSeconds(clip.duration);
+            string fileLength = inputFileLength.ToString();
+            //Console.WriteLine("MEDIA DURATION: " + inputFileLength.ToString());
+            mediaLengthFB = "Length: " + fileLength;
 
-            string result = String.Format("{0:0.##} {1}", len, sizes[order]);
-            mediaSizeFB = "Size: " + result;
+            //get required length
+            double minToSec = requiredFileLength * 60;
+            var desiredlength = TimeSpan.FromSeconds(minToSec);
 
             //compare
-            if (len > requiredFileSize)
+            if (inputFileLength < desiredlength)
             {
                 return false;
             }
 
             return true;
         }
+
+        
 
     }
 }

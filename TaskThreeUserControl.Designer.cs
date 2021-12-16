@@ -476,7 +476,7 @@ namespace ProjectEcho
             "1\" Margins on All Sides",
             "Arial Font",
             "Size 11 Font",
-            "No more than 2 pages"});
+            "2 pages or less"});
             this.formatCheckList3A.Location = new System.Drawing.Point(14, 70);
             this.formatCheckList3A.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList3A.Name = "formatCheckList3A";
@@ -1038,7 +1038,7 @@ namespace ProjectEcho
             "1\" Margins on All Sides",
             "Arial Font",
             "Size 11 Font",
-            "No more than 2 pages"});
+            "2 pages or less"});
             this.formatCheckList3B.Location = new System.Drawing.Point(14, 70);
             this.formatCheckList3B.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList3B.Name = "formatCheckList3B";
@@ -1583,8 +1583,7 @@ namespace ProjectEcho
             this.formatCheckList3C.Items.AddRange(new object[] {
             "1\" Margins on All Sides",
             "Arial Font",
-            "Size 11 Font",
-            "No more than 2 pages"});
+            "Size 11 Font"});
             this.formatCheckList3C.Location = new System.Drawing.Point(14, 70);
             this.formatCheckList3C.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList3C.Name = "formatCheckList3C";
@@ -2136,7 +2135,7 @@ namespace ProjectEcho
             "1\" Margins on All Sides",
             "Arial Font",
             "Size 11 Font",
-            "4 pages or less"});
+            "10 pages or less"});
             this.formatCheckList3D.Location = new System.Drawing.Point(20, 51);
             this.formatCheckList3D.MinimumSize = new System.Drawing.Size(180, 72);
             this.formatCheckList3D.Name = "formatCheckList3D";

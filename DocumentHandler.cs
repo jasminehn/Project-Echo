@@ -134,7 +134,6 @@ namespace ProjectEcho
                     File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
                 }
             }
-            Console.WriteLine("WHAT IS PATH: "+path);
             return path;
         }
 
