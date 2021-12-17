@@ -1,10 +1,7 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
-using Microsoft.WindowsAPICodePack.Shell;
 using WMPLib;
 using System.IO;
-using System.Windows.Forms;
-using Application = Microsoft.Office.Interop.Word.Application;
 
 namespace ProjectEcho
 {

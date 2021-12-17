@@ -42,8 +42,6 @@ namespace ProjectEcho
         public static int pdfIndex = 3;
         public static String pdfPage = "Task One";
 
-        //var allLabels = getAll(this, typeof(Label)); //Finds all labels
-
         private SettingsHandler settingsHandler = new SettingsHandler();
         private int textSizeOffset = 0; //keeps track of how much the text size has changed
 
@@ -126,9 +124,9 @@ namespace ProjectEcho
             }
 
             //Apply saved darkmode settings
-            var everything = settingsHandler.getAllControls(this);
+            var allControls = settingsHandler.getAllControls(this);
 
-            foreach (Control c in everything)
+            foreach (Control c in allControls)
             {
                 if ((c.Tag != null) && (c.Tag.ToString() == "panelBW"))
                 {
@@ -198,6 +196,8 @@ namespace ProjectEcho
 
         public void setControlActive(int i)
         {
+            checkProgress(taskOne.taskProgress, taskOneList);
+
             headerPanel.Dock = DockStyle.Top;
             currentControl.Visible = false; // Set the current control to invisible
             currentControl.Dock = DockStyle.None;
@@ -242,7 +242,6 @@ namespace ProjectEcho
                 }
             }
 
-            checkProgress(taskOne.taskProgress, taskOneList);
         }
 
         /* The Tool Strip is the list of items displated along the top of the application.
@@ -267,6 +266,36 @@ namespace ProjectEcho
         private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit(); // Exits out of the whole application
+        }
+
+        private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Open the UserUploads folder stored on the user's machine
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
+            Process.Start(useruploadsPath);
+        }
+
+        private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Delete everything in useruploads
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
+            System.IO.DirectoryInfo useruploads = new DirectoryInfo(useruploadsPath);
+            foreach (DirectoryInfo dir in useruploads.GetDirectories())
+            {
+                dir.Delete(true);
+            }
+            System.Windows.Forms.MessageBox.Show("Local files have been cleared. Your UserUploads folder is now empty.");
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm sf = new SettingsForm(this, hf, taskOne, taskTwo, taskThree); //pass in the main form and the helpform to the settings form
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                Console.Write("Settings opened");
+            }
         }
 
         // Not working
@@ -337,46 +366,22 @@ namespace ProjectEcho
             }
         }
 
-        private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
+        public void checkProgress(Boolean[] taskProgress, CheckedListBox taskChecklist)
         {
-            //Open the UserUploads folder stored on the user's machine
-            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
-            Process.Start(useruploadsPath);
-        }
-
-        private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Delete everything in useruploads
-            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
-            System.IO.DirectoryInfo useruploads = new DirectoryInfo(useruploadsPath);
-            foreach (DirectoryInfo dir in useruploads.GetDirectories())
+            //Clears all checkedListBoxes
+            foreach (int i in taskChecklist.CheckedIndices)
             {
-                dir.Delete(true);
+                taskChecklist.SetItemCheckState(i, CheckState.Unchecked);
             }
-            System.Windows.Forms.MessageBox.Show("Local files have been cleared. Your UserUploads folder is now empty.");
-        }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SettingsForm sf = new SettingsForm(this, hf, taskOne, taskTwo, taskThree); //pass in the main form and the helpform to the settings form
-
-            if (sf.ShowDialog() == DialogResult.OK)
-            {
-                Console.Write("Settings opened");
-            }
-        }
-
-        public void checkProgress(Boolean[] taskProgress, CheckedListBox cl)
-        {
-            for (int i = 0; i < cl.Items.Count; i++)
+            for (int i = 0; i < taskChecklist.Items.Count; i++)
             {
                 if (taskProgress[i].Equals(true))
                 {
-                    cl.SetItemChecked(i, true);
+                    taskChecklist.SetItemChecked(i, true);
                 }
             }
+            Console.WriteLine("HELLO????????");
         }
     }
 }

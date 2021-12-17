@@ -250,7 +250,7 @@ namespace ProjectEcho
 
             if (path.EndsWith(".docx") || path.EndsWith(".doc"))
             {
-                //Execute format analysis
+                /*  Execute format analysis */
                 await processData(flist, fprogress); //PROGRESS BAR
 
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
@@ -274,7 +274,7 @@ namespace ProjectEcho
                 formatPS.Text = "FINISHED";
             }
 
-            //Execute grammar analysis
+            /*  Execute grammar analysis    */
             await processData(glist, gprogress);//PROGRES SBAR
 
             await GrammarAPI.returnReport(path); //execute API call
@@ -297,7 +297,7 @@ namespace ProjectEcho
             }
             grammarPS.Text = "FINISHED";
 
-            // Execute content analysis
+            /*  Execute content analysis    */
             await processData(clist, cprogress);//PROGRESS BAR
             missingWordsListBox.DataSource = GrammarAPI.glossaryWordList;
             if (missingWordsListBox.Items.Count == 0)
@@ -308,18 +308,7 @@ namespace ProjectEcho
 
             saveProgress();
 
-            /*CheckedListBox[] allCheckboxes = { formatCheckList1A, formatCheckList1B, formatCheckList1C, formatCheckList1D, formatCheckList1E,
-                grammarCheckList1A, grammarCheckList1B, grammarCheckList1C, grammarCheckList1D, grammarCheckList1E};*/
-
-            /*CheckedListBox[,] allCheckboxes = { {formatCheckList1A, grammarCheckList1A }, { formatCheckList1B, grammarCheckList1B },
-            {formatCheckList1C, grammarCheckList1C }, { formatCheckList1D, grammarCheckList1D }, {formatCheckList1E, grammarCheckList1E } };*/
-
             updateTaskProgress();
-
-            //taskProgress = { partAComplete, partBComplete, partCComplete, partDComplete, partEComplete };
-
-            //get the mainform to read the taskprogress bool array, then check off items based on array
-            //fc.checkProgress(taskProgress, )
         }
 
         public void printprog()
@@ -329,6 +318,7 @@ namespace ProjectEcho
             {
                 Console.WriteLine(item + " -UH- " + item.ToString());
             }
+            Console.WriteLine();
         }
 
         public void updateTaskProgress()
