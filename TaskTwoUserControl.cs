@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectEcho
 {
@@ -213,11 +212,11 @@ namespace ProjectEcho
 
             mediaPS.Text = "FINISHED";
 
-            if(videoPath == "firstVideoPath")
+            if (videoPath == "firstVideoPath")
             {
                 firstVideoPath = path;
             }
-            else if(videoPath == "secondVideoPath")
+            else if (videoPath == "secondVideoPath")
             {
                 secondVideoPath = path;
             }

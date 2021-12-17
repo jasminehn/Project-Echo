@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WMPLib;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectEcho
 {
@@ -46,7 +44,7 @@ namespace ProjectEcho
         private void TaskThreeUserControl_Load(object sender, EventArgs e)
         {
             richTextBox1.Text = Properties.Settings.Default.t3notes; //load last saved notes
-            
+
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
@@ -111,12 +109,12 @@ namespace ProjectEcho
         {
             try
             {
-                await CheckVideo(3, "A", "media", mediaUploadInfo3A, 
+                await CheckVideo(3, "A", "media", mediaUploadInfo3A,
                     mediaCheckList3A, mediaTextBox3A,
                     mediaProgressBar3A, mediaProgressStatus3A,
                     7, 0);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Open File Dialog closed by user. Stack Trace " + ex);
             }

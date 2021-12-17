@@ -1,7 +1,7 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
-using WMPLib;
 using System.IO;
+using WMPLib;
 
 namespace ProjectEcho
 {

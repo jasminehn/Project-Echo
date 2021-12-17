@@ -182,13 +182,13 @@ namespace ProjectEcho
                 {
                     url = FileName2 + "#page=9";
                     //urlBox.Text = url;
-                    
+
                 }
                 else if (comboBox1.SelectedItem.Equals("Task 2"))
                 {
                     url = FileName2 + "#page=18";
                     //urlBox.Text = url;
-                    
+
                 }
                 else if (comboBox1.SelectedItem.Equals("Task 3"))
                 {

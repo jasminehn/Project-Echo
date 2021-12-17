@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace ProjectEcho
 {
@@ -54,7 +54,7 @@ namespace ProjectEcho
 
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
-            
+
             //Apply saved darkmode settings
             var everything = settingsHandler.getAllControls(this);
 
@@ -350,7 +350,7 @@ namespace ProjectEcho
         {
             //check if all checkboxes are complete, if so return true
             Boolean isComplete = true;
-            foreach( CheckedListBox cb in checkedListBoxes)
+            foreach (CheckedListBox cb in checkedListBoxes)
             {
                 if (cb.CheckedItems.Count != cb.Items.Count)
                 {

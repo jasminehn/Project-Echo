@@ -1,9 +1,9 @@
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Windows.Forms;
 using System.Reflection;
-using System.Diagnostics;
+using System.Windows.Forms;
 
 /**
  *  To the next owners --
@@ -113,10 +113,10 @@ namespace ProjectEcho
             }
         }
 
-         /*
-            Apply saved display settings
-            Author: @J. Nelson
-            */
+        /*
+           Apply saved display settings
+           Author: @J. Nelson
+           */
         private void MainForm_Load(object sender, EventArgs e)
         {
             //Apply saved display settings
@@ -131,7 +131,7 @@ namespace ProjectEcho
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
 
-            
+
             /*
             Apply saved darkmode settings
             Author: @J. Nelson
@@ -175,7 +175,7 @@ namespace ProjectEcho
         /*
         On-click events for the buttons on the MainForm
         Author: @C. Segrue
-        */ 
+        */
         private void task1Button_Click(object sender, EventArgs e)
         {
             setControlActive(1);
@@ -220,7 +220,7 @@ namespace ProjectEcho
         public void setControlActive(int i)
         {
             //Checking progress on all of the tasks
-            checkProgress(taskOne.taskProgress, taskOneList); 
+            checkProgress(taskOne.taskProgress, taskOneList);
             checkProgress(taskTwo.taskProgress, taskTwoList);
             checkProgress(taskThree.taskProgress, taskThreeList);
 
@@ -315,8 +315,8 @@ namespace ProjectEcho
             string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
             Process.Start(useruploadsPath);
         }
-        
-        
+
+
         //Author: @J. Nelson
         private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -347,7 +347,7 @@ namespace ProjectEcho
             toolTip1.SetToolTip(menuStrip1, "View the edTPA Submission Rubric");
         }
 
-        
+
         /*
         The following Video Launch methods link to unlisted YouTube videos, owned by Dr. DiLisi. These videos
         are instructional guides for how to submit/gather material for each area.

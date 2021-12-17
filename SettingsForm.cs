@@ -107,11 +107,11 @@ namespace ProjectEcho
 
             foreach (Control c in panels)
             {
-                if((c.Tag != null) && (c.Tag.ToString() == "panelBW")) //white to black
+                if ((c.Tag != null) && (c.Tag.ToString() == "panelBW")) //white to black
                 {
                     c.BackColor = backgroundColor;
                 }
-                else if ((c.Tag != null) && (c.Tag.ToString() == "changebg2")) 
+                else if ((c.Tag != null) && (c.Tag.ToString() == "changebg2"))
                 {
                     c.BackColor = backgroundMain;
                 }
@@ -137,7 +137,7 @@ namespace ProjectEcho
                     c.BackColor = feedbackBoxColor;
                 }
             }
-            
+
             //change label color from default black to white
             foreach (Control c in labels)
             {
