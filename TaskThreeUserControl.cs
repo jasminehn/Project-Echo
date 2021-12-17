@@ -613,9 +613,9 @@ namespace ProjectEcho
                     formatCheckList3B.SetItemChecked(index, true);
                 });
             }
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3b))
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.gcl3b))
             {
-                Properties.Settings.Default.fcl3b.Split(',').ToList().ForEach(item =>
+                Properties.Settings.Default.gcl3b.Split(',').ToList().ForEach(item =>
                 {
                     var index = grammarCheckList3B.Items.IndexOf(item);
                     grammarCheckList3B.SetItemChecked(index, true);
