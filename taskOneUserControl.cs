@@ -564,6 +564,7 @@ namespace ProjectEcho
 
         private void saveProgress()
         {
+            /*  TASK 1 PART A   */
             //save progress of all checkListBoxes task 1 part A
             var fcl1a = this.formatCheckList1A.CheckedItems.Cast<string>().ToArray();
             Properties.Settings.Default.fcl1a = string.Join(",", fcl1a);

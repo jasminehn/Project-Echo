@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace ProjectEcho
 {
@@ -27,9 +28,13 @@ namespace ProjectEcho
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
 
+        public Boolean[] taskProgress = { false, false };
+
         public TaskTwoUserControl()
         {
             InitializeComponent();
+
+            loadProgress();
 
             mediaUploadInfo2A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "video");
             uploadInfo2c2.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "video");
@@ -163,41 +168,6 @@ namespace ProjectEcho
             }
         }
 
-        private String OpenFile()
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog
-            {
-                CheckFileExists = true,
-                AddExtension = true,
-                Multiselect = false,
-                Filter = "Video Files(*.mp4; *.mov; *.mp3)|*.mp3; *.mp4; *.mov",
-                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
-            };
-
-            String path = "";
-
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                foreach (string fileName in openFileDialog.FileNames)
-                {
-                    path = Path.GetFullPath(fileName);
-                    AnalyzeVideoAsync(path);
-                }
-            }
-            return path;
-        }
-
-        private async Task AnalyzeVideoAsync(String path)
-        {
-            //Windows.Storage.StorageFolder storageFolder =
-            //Windows.Storage.ApplicationData.Current.LocalFolder;
-            //Windows.Storage.StorageFile sampleFile = await storageFolder.CreateFileAsync(path,
-            //Windows.Storage.CreationCollisionOption.ReplaceExisting);
-
-            //VideoProperties videoProperties = await sampleFile.Properties.GetVideoPropertiesAsync();
-            //Console.WriteLine("CLARE:: " + videoProperties.Duration);
-        }
-
         public async Task CheckVideo(int taskNum, string taskPart, string documentType, Label uploadInfoLabel,
             CheckedListBox mediaCL, TextBox mediaTB,
             ProgressBar mediaPB, Label mediaPS,
@@ -251,6 +221,37 @@ namespace ProjectEcho
             {
                 secondVideoPath = path;
             }
+
+            saveProgress();
+
+            updateTaskProgress();
+        }
+
+        public void updateTaskProgress()
+        {
+            CheckedListBox[] progressPartA = { mediaCheckList2A };
+            Boolean partAComplete = evaluateProgress(progressPartA);
+
+            CheckedListBox[] progressPartB = { checkedListBox1 };
+            Boolean partBComplete = evaluateProgress(progressPartB);
+
+            taskProgress.SetValue(partAComplete, 0);
+            taskProgress.SetValue(partBComplete, 1);
+        }
+
+        public Boolean evaluateProgress(CheckedListBox[] checkedListBoxes)
+        {
+            //check if all checkboxes are complete, if so return true
+            Boolean isComplete = true;
+            foreach (CheckedListBox cb in checkedListBoxes)
+            {
+                if (cb.CheckedItems.Count != cb.Items.Count)
+                {
+                    isComplete = false;
+                    break;
+                }
+            }
+            return isComplete;
         }
 
         private void PlayFile(String path)
@@ -324,11 +325,33 @@ namespace ProjectEcho
             }
         }
 
-        public Boolean taskComplete()
+        private void loadProgress()
         {
-            //check if all checkboxes are complete, if so return true
-            //if()
-            return false;
+            /*  PART A  */
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.mcl2a))
+            {
+                Properties.Settings.Default.mcl2a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = mediaCheckList2A.Items.IndexOf(item);
+                    mediaCheckList2A.SetItemChecked(index, true);
+                });
+            }
+            //load saved feedback
+            mediaTextBox2A.Text = Properties.Settings.Default.mtb2a;
+        }
+
+        private void saveProgress()
+        {
+            /*  TASK 2 PART A   */
+            //save progress of all checkListBoxes task 2 part A
+            var mcl2a = this.mediaCheckList2A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.mcl2a = string.Join(",", mcl2a);
+            //save progress of all feedback task 1 part A
+            string mtb2a = mediaTextBox2A.Text;
+            Properties.Settings.Default.mtb2a = mtb2a;
+
+            Properties.Settings.Default.Save();
         }
     }
 }

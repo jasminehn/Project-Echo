@@ -514,5 +514,29 @@ namespace ProjectEcho.Properties {
                 this["fbcolor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mcl2a {
+            get {
+                return ((string)(this["mcl2a"]));
+            }
+            set {
+                this["mcl2a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mtb2a {
+            get {
+                return ((string)(this["mtb2a"]));
+            }
+            set {
+                this["mtb2a"] = value;
+            }
+        }
     }
 }

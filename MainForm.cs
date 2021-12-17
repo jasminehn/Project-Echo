@@ -77,12 +77,13 @@ namespace ProjectEcho
 
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
-
             taskOne.updateTaskProgress();
             checkProgress(taskOne.taskProgress, taskOneList);
 
             string[] taskTwoArray = { "Video Clips", "Commentary" };
             taskTwoList.Items.AddRange(taskTwoArray);
+            taskTwo.updateTaskProgress();
+            checkProgress(taskTwo.taskProgress, taskTwoList);
 
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
             taskThreeList.Items.AddRange(taskThreeArray);
@@ -197,6 +198,8 @@ namespace ProjectEcho
         public void setControlActive(int i)
         {
             checkProgress(taskOne.taskProgress, taskOneList);
+            checkProgress(taskTwo.taskProgress, taskTwoList);
+            //checkProgress(taskThree.taskProgress, taskThreeList);
 
             headerPanel.Dock = DockStyle.Top;
             currentControl.Visible = false; // Set the current control to invisible
@@ -381,7 +384,6 @@ namespace ProjectEcho
                     taskChecklist.SetItemChecked(i, true);
                 }
             }
-            Console.WriteLine("HELLO????????");
         }
     }
 }

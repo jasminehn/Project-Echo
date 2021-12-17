@@ -125,5 +125,11 @@
     <Setting Name="fbcolor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">WhiteSmoke</Value>
     </Setting>
+    <Setting Name="mcl2a" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="mtb2a" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
