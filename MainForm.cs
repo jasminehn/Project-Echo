@@ -64,30 +64,34 @@ namespace ProjectEcho
              * switching the Main Menu would have forced us to mess with our Save State code.
              * So the first value in the array is purposely empty, because it's a sort of placeholder for the Main Menu.
              */
-            taskControls[0] = t1; // purposely empty
+            taskControls[0] = t1; // purposely empty, holding spot for the main menu panel
             taskControls[1] = taskOne; // taskOne is created in the Designer
             taskControls[2] = taskTwo; // taskTwo is created in the Designer
             taskControls[3] = taskThree;  // Will be changed once Task Three is built.
 
-            currentControl = taskControls[0]; 
-            taskOne.Visible = false;
+            currentControl = taskControls[0]; // setting the current control on start, which should always be the main menu
+            taskOne.Visible = false; // Setting all of the other controls invisible in case we mess it up in the designer
             taskTwo.Visible = false;
             taskThree.Visible = false;
-            setControlActive(0);
+            setControlActive(0); // Call to the set Control active method, which handles most to all UI changes
 
+
+            // Maintains progress for the first task and allows users to see that progress on the main menu
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
-            taskOne.updateTaskProgress();
+            taskOne.updateTaskProgress(); // Checks to see if there is any pre-existing progress on start
             checkProgress(taskOne.taskProgress, taskOneList);
 
+            // Maintains progress for the second task and allows users to see that progress on the main menu
             string[] taskTwoArray = { "Video Clips", "Commentary" };
             taskTwoList.Items.AddRange(taskTwoArray);
-            taskTwo.updateTaskProgress();
+            taskTwo.updateTaskProgress(); // Checks to see if there is any pre-existing progress on start
             checkProgress(taskTwo.taskProgress, taskTwoList);
 
+            // Maintains progress for the third task and allows users to see that progress on the main menu
             string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary", "Evaluation Criteria" };
             taskThreeList.Items.AddRange(taskThreeArray);
-            taskThree.updateTaskProgress();
+            taskThree.updateTaskProgress(); // Checks to see if there is any pre-existing progress on start
             checkProgress(taskThree.taskProgress, taskThreeList);
 
             //string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
@@ -107,13 +111,14 @@ namespace ProjectEcho
             {
                 //fail silently
             }
-
-            
         }
 
+         /*
+            Apply saved display settings
+            Author: @J. Nelson
+            */
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
             var labels = settingsHandler.getAll(this, typeof(Label));
@@ -126,9 +131,12 @@ namespace ProjectEcho
                 c.Font = new Font(fon, adjSize, sty); //Passes in family, style, new size
             }
 
-            //Apply saved darkmode settings
+            
+            /*
+            Apply saved darkmode settings
+            Author: @J. Nelson
+            */
             var allControls = settingsHandler.getAllControls(this);
-
             foreach (Control c in allControls)
             {
                 if ((c.Tag != null) && (c.Tag.ToString() == "panelBW"))
@@ -164,7 +172,10 @@ namespace ProjectEcho
             }
         }
 
-        // On-click events for the buttons on the MainForm
+        /*
+        On-click events for the buttons on the MainForm
+        Author: @C. Segrue
+        */ 
         private void task1Button_Click(object sender, EventArgs e)
         {
             setControlActive(1);
@@ -197,27 +208,45 @@ namespace ProjectEcho
             setControlActive(i + 1);
         }
 
+        /**
+        The setControlActive method requires an int to be passed in, representing the position in the array the control to 
+        be set active is in. This method takes the currently set control, hides it from view, and then makes the new
+        control visible. In addition, it hides/shows UI elements, such as the Return to Main Menu button, based on the control
+        that is active.
+
+        Author: @C. Segrue
+
+        */
         public void setControlActive(int i)
         {
-            checkProgress(taskOne.taskProgress, taskOneList);
+            //Checking progress on all of the tasks
+            checkProgress(taskOne.taskProgress, taskOneList); 
             checkProgress(taskTwo.taskProgress, taskTwoList);
             checkProgress(taskThree.taskProgress, taskThreeList);
 
-            headerPanel.Dock = DockStyle.Top;
+            /*
+            On the designer, none of the elements are properly docked. We want all of the controls/main menu to be DockStyle.Fill 
+            once they are set active, but only one element can be in this position. Everytime this method is called, the currentControl's
+            DockStyle is removed so the new control can take it's place.
+            */
+
+            headerPanel.Dock = DockStyle.Top; //Verifying that the header stays at the top. Probably redundant.
             currentControl.Visible = false; // Set the current control to invisible
-            currentControl.Dock = DockStyle.None;
+            currentControl.Dock = DockStyle.None; //Removing the DockStyle so the new element can take it's place
             currentControl = taskControls[i]; // reset the global currentControl variable to the new position in the array
-            currentControl.Dock = DockStyle.Fill;
+            currentControl.Dock = DockStyle.Fill; //Resizes and sets the new control to the correct bounds within the form.
             currentControl.Visible = true; // set this new control visible
 
             if (i.Equals(0)) // First position is the Main Menu
             {
-                titleLabel.Text = "MAIN MENU";
-                currentControl.Dock = DockStyle.None;
+                titleLabel.Text = "MAIN MENU"; // Setting the title label 
+                currentControl.Dock = DockStyle.None; //This only needs to be done here because the first element in that array isn't being used,
+                                                      // it's just holding the place for the MainMenu. As a result, we still need to set
+                                                      // the DockStyle on the Main Menu Panel to fill
                 mainMenuPanel.Dock = DockStyle.Fill;
                 mainMenuPanel.Visible = true;  // Same sort of operation as the controls above, but we need to do it for the panel which
                                                // is not a control
-                returnToMenuButton.Visible = false;
+                returnToMenuButton.Visible = false; // Setting UI buttons inactive as you can't return to the MM while on the MM
                 forwardButton.Visible = true;
                 backButton.Visible = false; // Nothing to go back to, set this invisible so we can't use it
 
@@ -259,20 +288,26 @@ namespace ProjectEcho
          * Settings and Help have their own Designers and code, so please navigate there
          * if you would like to see what those are doing.
          *
+         * Author: @C. Segrue
+         *
          */
 
-        // Creates the HelpForm after user clicks the Help tool menu item
+        /* Creates the HelpForm after user clicks the Help tool menu item
+        Author: @C.Segrue
+        */
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pdfIndex = 0;
+            pdfIndex = 0; // Since this is the generic Help Button, we load the first PDF
             LaunchHelpForm();
         }
 
+        //Author: @C.Segrue
         private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit(); // Exits out of the whole application
         }
 
+        //Author: @J. Nelson
         private void recentFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Open the UserUploads folder stored on the user's machine
@@ -280,7 +315,9 @@ namespace ProjectEcho
             string useruploadsPath = Path.Combine(executableLocation, "UserUploads");
             Process.Start(useruploadsPath);
         }
-
+        
+        
+        //Author: @J. Nelson
         private void clearLocalFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Delete everything in useruploads
@@ -294,6 +331,7 @@ namespace ProjectEcho
             System.Windows.Forms.MessageBox.Show("Local files have been cleared. Your UserUploads folder is now empty.");
         }
 
+        //Author: @C.Segrue
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SettingsForm sf = new SettingsForm(this, hf, taskOne, taskTwo, taskThree); //pass in the main form and the helpform to the settings form
@@ -310,25 +348,35 @@ namespace ProjectEcho
         }
 
         
+        /*
+        The following Video Launch methods link to unlisted YouTube videos, owned by Dr. DiLisi. These videos
+        are instructional guides for how to submit/gather material for each area.
 
+        Author: @C.Segrue
+        */
         private void t1videoLaunchButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://youtu.be/IsNq-4qV1ZY");
+            System.Diagnostics.Process.Start("https://youtu.be/IsNq-4qV1ZY"); //Launches the link to the first YouTube video in the user's default browser
         }
 
         private void t2videoLaunchButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://youtu.be/AwW2rk4-aNA");
+            System.Diagnostics.Process.Start("https://youtu.be/AwW2rk4-aNA"); //Launches the link to the second YouTube video in the user's default browser
         }
 
         private void t3videoLaunchButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://youtu.be/HSD9YrP_4pc");
+            System.Diagnostics.Process.Start("https://youtu.be/HSD9YrP_4pc"); //Launches the link to the third YouTube video in the user's default browser
         }
 
+        /*
+        
+
+        */
         private void taskOneDocuButton_Click(object sender, EventArgs e)
         {
-            MainForm.pdfIndex = 1;
+            // Setting the currently desired
+            pdfIndex = 1;
             pdfPage = "#page=9";
             helpToolStripMenuItem_Click(sender, e);
         }
@@ -347,6 +395,7 @@ namespace ProjectEcho
             LaunchHelpForm();
         }
 
+        //Author: @C.Segrue
         private void LaunchHelpForm()
         {
 
@@ -371,6 +420,7 @@ namespace ProjectEcho
             }
         }
 
+        //Author: @J.Nelson
         public void checkProgress(Boolean[] taskProgress, CheckedListBox taskChecklist)
         {
             //Clears all checkedListBoxes
