@@ -129,7 +129,6 @@ namespace ProjectEcho
 
                     string targetPath = Path.Combine(Environment.CurrentDirectory, @"UserUploads\", uploadedFile, docType, separatedFileName); //path to upload the user's file
 
-
                     File.Copy(fileName, targetPath, true); //saves a copy of the user's file; the 'true' means that it will overwrite existing files of the same name
                 }
             }
@@ -200,8 +199,5 @@ namespace ProjectEcho
             }
             return str;
         }
-
-
-
     }
 }

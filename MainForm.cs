@@ -132,9 +132,9 @@ namespace ProjectEcho
             }
 
 
-            /*
-            Apply saved darkmode settings
-            Author: @J. Nelson
+           /*
+            *Apply saved darkmode settings
+            *Author: @J. Nelson
             */
             var allControls = settingsHandler.getAllControls(this);
             foreach (Control c in allControls)
@@ -178,17 +178,17 @@ namespace ProjectEcho
         */
         private void task1Button_Click(object sender, EventArgs e)
         {
-            setControlActive(1);
+            setControlActive(1); // Calling the set control method to change the display
         }
 
         private void taskTwoButton_Click(object sender, EventArgs e)
         {
-            setControlActive(2);
+            setControlActive(2); // Calling the set control method to change the display
         }
 
         private void taskThreeButton_Click(object sender, EventArgs e)
         {
-            setControlActive(3);
+            setControlActive(3);// Calling the set control method to change the display
         }
 
         private void returnToMenuButton_Click(object sender, EventArgs e)
@@ -198,14 +198,14 @@ namespace ProjectEcho
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            int i = Array.IndexOf(taskControls, currentControl);
-            setControlActive(i - 1);
+            int i = Array.IndexOf(taskControls, currentControl); // Getting the position of the currently active control
+            setControlActive(i - 1); // previous control
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
-            int i = Array.IndexOf(taskControls, currentControl);
-            setControlActive(i + 1);
+            int i = Array.IndexOf(taskControls, currentControl); // Getting the position of the currently active control
+            setControlActive(i + 1); // next control
         }
 
         /**
@@ -261,7 +261,7 @@ namespace ProjectEcho
                 if (i.Equals(1))
                 {
                     titleLabel.Text = "TASK ONE";
-                    forwardButton.Visible = true; // All of these guarentee that if they aren't visible/invisible
+                    forwardButton.Visible = true; // All of these guarentee that if the element isn't visible/invisible
                                                   // when they need to be, they will get changed.
                 }
                 else if (i.Equals(2))
@@ -292,9 +292,8 @@ namespace ProjectEcho
          *
          */
 
-        /* Creates the HelpForm after user clicks the Help tool menu item
-        Author: @C.Segrue
-        */
+        //Creates the HelpForm after user clicks the Help tool menu item
+        //Author: @C.Segrue
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pdfIndex = 0; // Since this is the generic Help Button, we load the first PDF
@@ -369,29 +368,28 @@ namespace ProjectEcho
             System.Diagnostics.Process.Start("https://youtu.be/HSD9YrP_4pc"); //Launches the link to the third YouTube video in the user's default browser
         }
 
-        /*
-        
-
-        */
+        /* The following methods launch the Help Form, but with a specific PDF and page number 
+         * ready to use.
+         */
         private void taskOneDocuButton_Click(object sender, EventArgs e)
         {
-            // Setting the currently desired
+            // Setting the currently desired PDF
             pdfIndex = 1;
-            pdfPage = "#page=9";
-            helpToolStripMenuItem_Click(sender, e);
+            //pdfPage = "#page=9"; // Setting the page number in the PDF 
+            LaunchHelpForm();
         }
 
         private void taskTwoDocuButton_Click(object sender, EventArgs e)
         {
             pdfIndex = 1;
-            pdfPage = "#page=18";
+            //pdfPage = "#page=18"; // Setting the page number in the PDF 
             LaunchHelpForm();
         }
 
         private void taskThreeDocuButton_Click(object sender, EventArgs e)
         {
             pdfIndex = 1;
-            pdfPage = "#page=27";
+            //pdfPage = "#page=27"; // Setting the page number in the PDF 
             LaunchHelpForm();
         }
 

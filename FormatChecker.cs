@@ -17,6 +17,7 @@ namespace ProjectEcho
 
         //Document feedback output variables
         public string leftMarginFB = "Left margin: ";
+
         public string rightMarginFB = "Right margin: ";
         public string topMarginFB = "Top margin: ";
         public string bottomMarginFB = "Bottom margin: ";
@@ -26,6 +27,7 @@ namespace ProjectEcho
 
         //Media feedback output variables
         public string mediaLengthFB = "Length: ";
+
         public string mediaSizeFB = "Size: ";
 
         public Boolean[] runFormatCheck(String path, int correctLength)
@@ -231,6 +233,5 @@ namespace ProjectEcho
 
             return true;
         }
-
     }
 }
