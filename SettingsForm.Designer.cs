@@ -84,7 +84,6 @@ namespace ProjectEcho
             this.textsizeAdjust.TabIndex = 4;
             this.textsizeAdjust.TabStop = false;
             this.textsizeAdjust.Scroll += new System.EventHandler(this.textsizeAdjust_Scroll);
-            this.textsizeAdjust.ValueChanged += new System.EventHandler(this.textsizeAdjust_ValueChanged);
             // 
             // switchButton
             // 

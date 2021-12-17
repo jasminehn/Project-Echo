@@ -296,10 +296,5 @@ namespace ProjectEcho
 
             this.Close(); //close settings menu when they save te settings
         }
-
-        private void textsizeAdjust_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
