@@ -20,13 +20,17 @@ namespace ProjectEcho
     {
         private DocumentHandler dh = new DocumentHandler();
         private FormatChecker fc = new FormatChecker();
+        SettingsHandler settingsHandler = new SettingsHandler();
 
         int textSizeOffset = 0;
-        SettingsHandler settingsHandler = new SettingsHandler();
+
+        public Boolean[] taskProgress = { false, false, false, false, false };
 
         public TaskThreeUserControl()
         {
             InitializeComponent();
+
+            loadProgress();
 
             mediaUploadInfo3A.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "A", "media");
             mediaUploadInfo3B.Text = "Uploaded: " + dh.displayMultipleDocuments(3, "B", "media");
@@ -372,6 +376,9 @@ namespace ProjectEcho
             }
             grammarPS.Text = "FINISHED";
 
+            saveProgress();
+
+            updateTaskProgress();
         }
 
         public async Task CheckDocument(int taskNum, string taskPart, Label uploadInfoLabel,
@@ -487,6 +494,48 @@ namespace ProjectEcho
             }
             contentPS.Text = "FINISHED";
 
+            saveProgress();
+
+            updateTaskProgress();
+        }
+
+        public void updateTaskProgress()
+        {
+            CheckedListBox[] progressPartA = { mediaCheckList3A, formatCheckList3A, grammarCheckList3A };
+            Boolean partAComplete = evaluateProgress(progressPartA);
+
+            CheckedListBox[] progressPartB = { mediaCheckList3B, formatCheckList3B, grammarCheckList3B };
+            Boolean partBComplete = evaluateProgress(progressPartB);
+
+            CheckedListBox[] progressPartC = { mediaCheckList3C, formatCheckList3C, grammarCheckList3C };
+            Boolean partCComplete = evaluateProgress(progressPartC);
+
+            CheckedListBox[] progressPartD = { formatCheckList3D, grammarCheckList3D, contentCheckList3D };
+            Boolean partDComplete = evaluateProgress(progressPartD);
+
+            CheckedListBox[] progressPartE = { formatCheckList3E, grammarCheckList3E, contentCheckList3E };
+            Boolean partEComplete = evaluateProgress(progressPartE);
+
+            taskProgress.SetValue(partAComplete, 0);
+            taskProgress.SetValue(partBComplete, 1);
+            taskProgress.SetValue(partCComplete, 2);
+            taskProgress.SetValue(partDComplete, 3);
+            taskProgress.SetValue(partEComplete, 4);
+        }
+
+        public Boolean evaluateProgress(CheckedListBox[] checkedListBoxes)
+        {
+            //check if all checkboxes are complete, if so return true
+            Boolean isComplete = true;
+            foreach (CheckedListBox cb in checkedListBoxes)
+            {
+                if (cb.CheckedItems.Count != cb.Items.Count)
+                {
+                    isComplete = false;
+                    break;
+                }
+            }
+            return isComplete;
         }
 
         private Task processData(List<string> list, IProgress<ProgressInformation> progress)
@@ -512,6 +561,262 @@ namespace ProjectEcho
             Properties.Settings.Default.Save();
         }
 
-        
+        private void loadProgress()
+        {
+            /*  PART A  */
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.mcl3a))
+            {
+                Properties.Settings.Default.mcl3a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = mediaCheckList3A.Items.IndexOf(item);
+                    mediaCheckList3A.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3a))
+            {
+                Properties.Settings.Default.fcl3a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = formatCheckList3A.Items.IndexOf(item);
+                    formatCheckList3A.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.gcl3a))
+            {
+                Properties.Settings.Default.gcl3a.Split(',').ToList().ForEach(item =>
+                {
+                    var index = grammarCheckList3A.Items.IndexOf(item);
+                    grammarCheckList3A.SetItemChecked(index, true);
+                });
+            }
+            //load saved feedback
+            mediaTextBox3A.Text = Properties.Settings.Default.mtb3a;
+            formatTextBox3A.Text = Properties.Settings.Default.ftb3a;
+            grammarTextBox3A.Text = Properties.Settings.Default.gtb3a;
+
+
+            /*  PART B  */
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.mcl3b))
+            {
+                Properties.Settings.Default.mcl3b.Split(',').ToList().ForEach(item =>
+                {
+                    var index = mediaCheckList3B.Items.IndexOf(item);
+                    mediaCheckList3B.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3b))
+            {
+                Properties.Settings.Default.fcl3b.Split(',').ToList().ForEach(item =>
+                {
+                    var index = formatCheckList3B.Items.IndexOf(item);
+                    formatCheckList3B.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3b))
+            {
+                Properties.Settings.Default.fcl3b.Split(',').ToList().ForEach(item =>
+                {
+                    var index = grammarCheckList3B.Items.IndexOf(item);
+                    grammarCheckList3B.SetItemChecked(index, true);
+                });
+            }
+            //load saved feedback
+            mediaTextBox3B.Text = Properties.Settings.Default.mtb3b;
+            formatTextBox3B.Text = Properties.Settings.Default.ftb3b;
+            grammarTextBox3B.Text = Properties.Settings.Default.gtb3b;
+
+
+            /*  PART C  */
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.mcl3c))
+            {
+                Properties.Settings.Default.mcl3c.Split(',').ToList().ForEach(item =>
+                {
+                    var index = mediaCheckList3C.Items.IndexOf(item);
+                    mediaCheckList3C.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3c))
+            {
+                Properties.Settings.Default.fcl3c.Split(',').ToList().ForEach(item =>
+                {
+                    var index = formatCheckList3C.Items.IndexOf(item);
+                    formatCheckList3C.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.gcl3c))
+            {
+                Properties.Settings.Default.gcl3c.Split(',').ToList().ForEach(item =>
+                {
+                    var index = grammarCheckList3C.Items.IndexOf(item);
+                    grammarCheckList3C.SetItemChecked(index, true);
+                });
+            }
+            //load saved feedback
+            mediaTextBox3C.Text = Properties.Settings.Default.mtb3c;
+            formatTextBox3C.Text = Properties.Settings.Default.ftb3c;
+            grammarTextBox3C.Text = Properties.Settings.Default.gtb3c;
+
+
+            /*  PART D  */
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3d))
+            {
+                Properties.Settings.Default.fcl3d.Split(',').ToList().ForEach(item =>
+                {
+                    var index = formatCheckList3D.Items.IndexOf(item);
+                    formatCheckList3D.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.gcl3d))
+            {
+                Properties.Settings.Default.gcl3d.Split(',').ToList().ForEach(item =>
+                {
+                    var index = grammarCheckList3D.Items.IndexOf(item);
+                    grammarCheckList3D.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.ccl3d))
+            {
+                Properties.Settings.Default.ccl3d.Split(',').ToList().ForEach(item =>
+                {
+                    var index = contentCheckList3D.Items.IndexOf(item);
+                    contentCheckList3D.SetItemChecked(index, true);
+                });
+            }
+            //load saved feedback
+            formatTextBox3D.Text = Properties.Settings.Default.ftb3d;
+            grammarTextBox3D.Text = Properties.Settings.Default.gtb3d;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.clb3d))
+            {
+                Properties.Settings.Default.clb3d.Split(',').ToList().ForEach(item => { contentCheckList3D.Items.Add(item); });
+            }
+
+
+            /*  PART E  */
+            //load saved checkboxes
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.fcl3e))
+            {
+                Properties.Settings.Default.fcl3e.Split(',').ToList().ForEach(item =>
+                {
+                    var index = formatCheckList3E.Items.IndexOf(item);
+                    formatCheckList3E.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.gcl3e))
+            {
+                Properties.Settings.Default.gcl3e.Split(',').ToList().ForEach(item =>
+                {
+                    var index = grammarCheckList3E.Items.IndexOf(item);
+                    grammarCheckList3E.SetItemChecked(index, true);
+                });
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.ccl3e))
+            {
+                Properties.Settings.Default.ccl3e.Split(',').ToList().ForEach(item =>
+                {
+                    var index = contentCheckList3E.Items.IndexOf(item);
+                    contentCheckList3E.SetItemChecked(index, true);
+                });
+            }
+            //load saved feedback
+            formatTextBox3E.Text = Properties.Settings.Default.ftb3e;
+            grammarTextBox3E.Text = Properties.Settings.Default.gtb3e;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.clb3e))
+            {
+                Properties.Settings.Default.clb3e.Split(',').ToList().ForEach(item => { contentListBox3E.Items.Add(item); });
+            }
+        }
+
+        private void saveProgress()
+        {
+            /*  TASK 3 PART A   */
+            //save progress of all checkListBoxes task 3 part A
+            var mcl3a = this.mediaCheckList3A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.mcl3a = string.Join(",", mcl3a);
+            var fcl3a = this.formatCheckList3A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.fcl3a = string.Join(",", fcl3a);
+            var gcl3a = this.grammarCheckList3A.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.gcl3a = string.Join(",", gcl3a);
+            //save progress of all feedback task 3 part A
+            string mtb3a = mediaTextBox3A.Text;
+            Properties.Settings.Default.mtb3a = mtb3a;
+            string ftb3a = formatTextBox3A.Text;
+            Properties.Settings.Default.ftb3a = ftb3a;
+            string gtb3a = grammarTextBox3A.Text;
+            Properties.Settings.Default.gtb3a = gtb3a;
+
+
+            /*  TASK 3 PART B   */
+            //save progress of all checkListBoxes task 3 part B
+            var mcl3b = this.mediaCheckList3B.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.mcl3b = string.Join(",", mcl3b);
+            var fcl3b = this.formatCheckList3B.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.fcl3b = string.Join(",", fcl3b);
+            var gcl3b = this.grammarCheckList3B.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.gcl3b = string.Join(",", gcl3b);
+            //save progress of all feedback task 3 part B
+            string mtb3b = mediaTextBox3B.Text;
+            Properties.Settings.Default.mtb3b = mtb3b;
+            string ftb3b = formatTextBox3B.Text;
+            Properties.Settings.Default.ftb3b = ftb3b;
+            string gtb3b = grammarTextBox3B.Text;
+            Properties.Settings.Default.gtb3b = gtb3b;
+
+
+            /*  TASK 3 PART C   */
+            //save progress of all checkListBoxes task 3 part B
+            var mcl3c = this.mediaCheckList3C.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.mcl3c = string.Join(",", mcl3c);
+            var fcl3c = this.formatCheckList3C.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.fcl3c = string.Join(",", fcl3c);
+            var gcl3c = this.grammarCheckList3C.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.gcl3c = string.Join(",", gcl3c);
+            //save progress of all feedback task 3 part B
+            string mtb3c = mediaTextBox3C.Text;
+            Properties.Settings.Default.mtb3c = mtb3c;
+            string ftb3c = formatTextBox3C.Text;
+            Properties.Settings.Default.ftb3c = ftb3c;
+            string gtb3c = grammarTextBox3C.Text;
+            Properties.Settings.Default.gtb3c = gtb3c;
+
+
+            /*  TASK 3 PART D   */
+            //save progress of all checkListBoxes task 3 part B
+            var fcl3d = this.formatCheckList3D.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.fcl3d = string.Join(",", fcl3d);
+            var gcl3d = this.grammarCheckList3D.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.gcl3d = string.Join(",", gcl3d);
+            var ccl3d = this.contentCheckList3D.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.ccl3d = string.Join(",", ccl3d);
+            //save progress of all feedback task 3 part B
+            string ftb3d = formatTextBox3D.Text;
+            Properties.Settings.Default.ftb3d = ftb3d;
+            string gtb3d = grammarTextBox3D.Text;
+            Properties.Settings.Default.gtb3d = gtb3d;
+            var clb3d = this.contentListBox3D.Items.Cast<string>().ToArray();
+            Properties.Settings.Default.clb3d = string.Join(",", clb3d);
+
+
+            /*  TASK 3 PART E   */
+            //save progress of all checkListBoxes task 3 part B
+            var fcl3e = this.formatCheckList3E.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.fcl3e = string.Join(",", fcl3e);
+            var gcl3e = this.grammarCheckList3E.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.gcl3e = string.Join(",", gcl3e);
+            var ccl3e = this.contentCheckList3E.CheckedItems.Cast<string>().ToArray();
+            Properties.Settings.Default.ccl3e = string.Join(",", ccl3e);
+            //save progress of all feedback task 3 part B
+            string ftb3e = formatTextBox3E.Text;
+            Properties.Settings.Default.ftb3e = ftb3e;
+            string gtb3e = grammarTextBox3E.Text;
+            Properties.Settings.Default.gtb3e = gtb3e;
+            var clb3e = this.contentListBox3E.Items.Cast<string>().ToArray();
+            Properties.Settings.Default.clb3e = string.Join(",", clb3e);
+
+            Properties.Settings.Default.Save();
+        }
+
     }
 }

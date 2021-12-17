@@ -24,9 +24,9 @@ namespace ProjectEcho
 
         private DocumentHandler dh = new DocumentHandler();
         private FormatChecker fc = new FormatChecker();
+        SettingsHandler settingsHandler = new SettingsHandler();
 
         int textSizeOffset = 0;
-        SettingsHandler settingsHandler = new SettingsHandler();
 
         public Boolean[] taskProgress = { false, false };
 

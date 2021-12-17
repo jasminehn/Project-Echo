@@ -538,5 +538,365 @@ namespace ProjectEcho.Properties {
                 this["mtb2a"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mcl3a {
+            get {
+                return ((string)(this["mcl3a"]));
+            }
+            set {
+                this["mcl3a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl3a {
+            get {
+                return ((string)(this["fcl3a"]));
+            }
+            set {
+                this["fcl3a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl3a {
+            get {
+                return ((string)(this["gcl3a"]));
+            }
+            set {
+                this["gcl3a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mtb3a {
+            get {
+                return ((string)(this["mtb3a"]));
+            }
+            set {
+                this["mtb3a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb3a {
+            get {
+                return ((string)(this["ftb3a"]));
+            }
+            set {
+                this["ftb3a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb3a {
+            get {
+                return ((string)(this["gtb3a"]));
+            }
+            set {
+                this["gtb3a"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mcl3b {
+            get {
+                return ((string)(this["mcl3b"]));
+            }
+            set {
+                this["mcl3b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl3b {
+            get {
+                return ((string)(this["fcl3b"]));
+            }
+            set {
+                this["fcl3b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl3b {
+            get {
+                return ((string)(this["gcl3b"]));
+            }
+            set {
+                this["gcl3b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mtb3b {
+            get {
+                return ((string)(this["mtb3b"]));
+            }
+            set {
+                this["mtb3b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb3b {
+            get {
+                return ((string)(this["ftb3b"]));
+            }
+            set {
+                this["ftb3b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb3b {
+            get {
+                return ((string)(this["gtb3b"]));
+            }
+            set {
+                this["gtb3b"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mcl3c {
+            get {
+                return ((string)(this["mcl3c"]));
+            }
+            set {
+                this["mcl3c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl3c {
+            get {
+                return ((string)(this["fcl3c"]));
+            }
+            set {
+                this["fcl3c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl3c {
+            get {
+                return ((string)(this["gcl3c"]));
+            }
+            set {
+                this["gcl3c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mtb3c {
+            get {
+                return ((string)(this["mtb3c"]));
+            }
+            set {
+                this["mtb3c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb3c {
+            get {
+                return ((string)(this["ftb3c"]));
+            }
+            set {
+                this["ftb3c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb3c {
+            get {
+                return ((string)(this["gtb3c"]));
+            }
+            set {
+                this["gtb3c"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl3d {
+            get {
+                return ((string)(this["fcl3d"]));
+            }
+            set {
+                this["fcl3d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl3d {
+            get {
+                return ((string)(this["gcl3d"]));
+            }
+            set {
+                this["gcl3d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl3d {
+            get {
+                return ((string)(this["ccl3d"]));
+            }
+            set {
+                this["ccl3d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb3d {
+            get {
+                return ((string)(this["ftb3d"]));
+            }
+            set {
+                this["ftb3d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb3d {
+            get {
+                return ((string)(this["gtb3d"]));
+            }
+            set {
+                this["gtb3d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb3d {
+            get {
+                return ((string)(this["clb3d"]));
+            }
+            set {
+                this["clb3d"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fcl3e {
+            get {
+                return ((string)(this["fcl3e"]));
+            }
+            set {
+                this["fcl3e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gcl3e {
+            get {
+                return ((string)(this["gcl3e"]));
+            }
+            set {
+                this["gcl3e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ccl3e {
+            get {
+                return ((string)(this["ccl3e"]));
+            }
+            set {
+                this["ccl3e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ftb3e {
+            get {
+                return ((string)(this["ftb3e"]));
+            }
+            set {
+                this["ftb3e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string gtb3e {
+            get {
+                return ((string)(this["gtb3e"]));
+            }
+            set {
+                this["gtb3e"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string clb3e {
+            get {
+                return ((string)(this["clb3e"]));
+            }
+            set {
+                this["clb3e"] = value;
+            }
+        }
     }
 }

@@ -85,8 +85,10 @@ namespace ProjectEcho
             taskTwo.updateTaskProgress();
             checkProgress(taskTwo.taskProgress, taskTwoList);
 
-            string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary" };
+            string[] taskThreeArray = { "Video Conference", "Notes", "Feedback", "Commentary", "Evaluation Criteria" };
             taskThreeList.Items.AddRange(taskThreeArray);
+            taskThree.updateTaskProgress();
+            checkProgress(taskThree.taskProgress, taskThreeList);
 
             //string[] reviewArray = { "Task 1", "Task 2", "Task 3" };
             //reviewList.Items.AddRange(reviewArray);
@@ -199,7 +201,7 @@ namespace ProjectEcho
         {
             checkProgress(taskOne.taskProgress, taskOneList);
             checkProgress(taskTwo.taskProgress, taskTwoList);
-            //checkProgress(taskThree.taskProgress, taskThreeList);
+            checkProgress(taskThree.taskProgress, taskThreeList);
 
             headerPanel.Dock = DockStyle.Top;
             currentControl.Visible = false; // Set the current control to invisible
