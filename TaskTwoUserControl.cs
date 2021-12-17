@@ -13,9 +13,8 @@ namespace ProjectEcho
      *
      *
      *
-     * Author(s): C. Segrue, I. Gnagy
+     * Author(s): C. Segrue, I. Gnagy, J. Nelson
      */
-
 
     public partial class TaskTwoUserControl : UserControl
     {
@@ -188,15 +187,6 @@ namespace ProjectEcho
             return path;
         }
 
-        private String getpath(string pathd)
-        {
-            String path = "";
-
-            path = pathd;
-
-            return path;
-        }
-
         private async Task AnalyzeVideoAsync(String path)
         {
             //Windows.Storage.StorageFolder storageFolder =
@@ -332,6 +322,13 @@ namespace ProjectEcho
             {
                 PlayFile(secondVideoPath);
             }
+        }
+
+        public Boolean taskComplete()
+        {
+            //check if all checkboxes are complete, if so return true
+            //if()
+            return false;
         }
     }
 }

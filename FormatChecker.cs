@@ -3,6 +3,8 @@ using System;
 using Microsoft.WindowsAPICodePack.Shell;
 using WMPLib;
 using System.IO;
+using System.Windows.Forms;
+using Application = Microsoft.Office.Interop.Word.Application;
 
 namespace ProjectEcho
 {
@@ -28,8 +30,6 @@ namespace ProjectEcho
         //Media feedback output variables
         public string mediaLengthFB = "Length: ";
         public string mediaSizeFB = "Size: ";
-
-        int medialength = 0;
 
         public Boolean[] runFormatCheck(String path, int correctLength)
         {
@@ -158,7 +158,7 @@ namespace ProjectEcho
         public Boolean[] runMediaFormatCheck(String path, double correctSize, int correctMaxLength, int correctMinLength)
         {
             Boolean isCorrentSize = checkMediaSize(path, correctSize);
-            Boolean isCorrectMaxLength = checkMediaLength(path, correctMaxLength);
+            Boolean isCorrectMaxLength = checkMaxLength(path, correctMaxLength);
             Boolean isCorrectMinLength = checkMinLength(path, correctMinLength);
 
             Boolean[] isFormatted = { isCorrentSize, isCorrectMaxLength, isCorrectMinLength };
@@ -189,7 +189,7 @@ namespace ProjectEcho
             return true;
         }
 
-        public Boolean checkMediaLength(string inputFile, int requiredFileLength)
+        public Boolean checkMaxLength(string inputFile, int requiredFileLength)
         {
             //get input length
             var player = new WindowsMediaPlayer();

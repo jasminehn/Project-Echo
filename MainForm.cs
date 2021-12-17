@@ -80,6 +80,9 @@ namespace ProjectEcho
             string[] taskOneArray = { "Context for learning information", "Plans for Learning segment", "Instructional Materials", "Assessments", "Planning Commentary" };
             taskOneList.Items.AddRange(taskOneArray);
 
+            taskOne.updateTaskProgress();
+            checkProgress(taskOne.taskProgress, taskOneList);
+
             string[] taskTwoArray = { "Video Clips", "Commentary" };
             taskTwoList.Items.AddRange(taskTwoArray);
 
@@ -103,6 +106,8 @@ namespace ProjectEcho
             {
                 //fail silently
             }
+
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -237,6 +242,7 @@ namespace ProjectEcho
                 }
             }
 
+            checkProgress(taskOne.taskProgress, taskOneList);
         }
 
         /* The Tool Strip is the list of items displated along the top of the application.
@@ -359,6 +365,17 @@ namespace ProjectEcho
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 Console.Write("Settings opened");
+            }
+        }
+
+        public void checkProgress(Boolean[] taskProgress, CheckedListBox cl)
+        {
+            for (int i = 0; i < cl.Items.Count; i++)
+            {
+                if (taskProgress[i].Equals(true))
+                {
+                    cl.SetItemChecked(i, true);
+                }
             }
         }
     }

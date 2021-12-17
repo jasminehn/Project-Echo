@@ -24,11 +24,13 @@ namespace ProjectEcho
         int textSizeOffset = 0;
         SettingsHandler settingsHandler = new SettingsHandler();
 
-        public bool partAcomplete = false;
+        public Boolean[] taskProgress = { false, false, false, false, false };
 
         public TaskOneUserControl()
         {
             InitializeComponent();
+
+            loadProgress();
 
             //Displays the currently uploaded documents for each task part
             uploadInfo1A.Text = "Uploaded: " + dh.displayDocuments(1, "A");
@@ -41,8 +43,6 @@ namespace ProjectEcho
         private void TaskOneUserControl_Load(object sender, EventArgs e)
         {
             richTextBox1.Text = Properties.Settings.Default.t1notes; //load last saved notes
-
-            loadProgress();
 
             //Apply saved display settings
             textSizeOffset = Properties.Settings.Default.textsize; //sets offset to saved value
@@ -253,7 +253,6 @@ namespace ProjectEcho
                 //Execute format analysis
                 await processData(flist, fprogress); //PROGRESS BAR
 
-                
                 Boolean[] itemsChecked = fc.runFormatCheck(path, pageCount);
 
                 for (int i = 0; i < formatCL.Items.Count; i++)
@@ -309,11 +308,68 @@ namespace ProjectEcho
 
             saveProgress();
 
-            //DELETE LATER
-            if (formatCheckList1A.CheckedItems.Count == formatCheckList1A.Items.Count)
+            /*CheckedListBox[] allCheckboxes = { formatCheckList1A, formatCheckList1B, formatCheckList1C, formatCheckList1D, formatCheckList1E,
+                grammarCheckList1A, grammarCheckList1B, grammarCheckList1C, grammarCheckList1D, grammarCheckList1E};*/
+
+            /*CheckedListBox[,] allCheckboxes = { {formatCheckList1A, grammarCheckList1A }, { formatCheckList1B, grammarCheckList1B },
+            {formatCheckList1C, grammarCheckList1C }, { formatCheckList1D, grammarCheckList1D }, {formatCheckList1E, grammarCheckList1E } };*/
+
+            updateTaskProgress();
+
+            //taskProgress = { partAComplete, partBComplete, partCComplete, partDComplete, partEComplete };
+
+            //get the mainform to read the taskprogress bool array, then check off items based on array
+            //fc.checkProgress(taskProgress, )
+        }
+
+        public void printprog()
+        {
+            Console.WriteLine();
+            foreach (var item in taskProgress)
             {
-                partAcomplete = true;
+                Console.WriteLine(item + " -UH- " + item.ToString());
             }
+        }
+
+        public void updateTaskProgress()
+        {
+            CheckedListBox[] progressPartA = { formatCheckList1A, grammarCheckList1A };
+            Boolean partAComplete = evaluateProgress(progressPartA);
+
+            CheckedListBox[] progressPartB = { formatCheckList1B, grammarCheckList1B };
+            Boolean partBComplete = evaluateProgress(progressPartB);
+
+            CheckedListBox[] progressPartC = { formatCheckList1C, grammarCheckList1C };
+            Boolean partCComplete = evaluateProgress(progressPartC);
+
+            CheckedListBox[] progressPartD = { formatCheckList1D, grammarCheckList1D };
+            Boolean partDComplete = evaluateProgress(progressPartD);
+
+            CheckedListBox[] progressPartE = { formatCheckList1E, grammarCheckList1E };
+            Boolean partEComplete = evaluateProgress(progressPartE);
+
+            taskProgress.SetValue(partAComplete, 0);
+            taskProgress.SetValue(partBComplete, 1);
+            taskProgress.SetValue(partCComplete, 2);
+            taskProgress.SetValue(partDComplete, 3);
+            taskProgress.SetValue(partEComplete, 4);
+
+            printprog();
+        }
+
+        public Boolean evaluateProgress(CheckedListBox[] checkedListBoxes)
+        {
+            //check if all checkboxes are complete, if so return true
+            Boolean isComplete = true;
+            foreach( CheckedListBox cb in checkedListBoxes)
+            {
+                if (cb.CheckedItems.Count != cb.Items.Count)
+                {
+                    isComplete = false;
+                    break;
+                }
+            }
+            return isComplete;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -602,13 +658,6 @@ namespace ProjectEcho
             Properties.Settings.Default.clb1e = string.Join(",", clb1e);
 
             Properties.Settings.Default.Save();
-        }
-
-        
-
-        private void TaskOneUserControl_Leave(object sender, EventArgs e)
-        {
-
         }
     }
 }
