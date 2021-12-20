@@ -2,6 +2,8 @@
 
 ![image](https://user-images.githubusercontent.com/88569965/136859411-8316f0c4-073a-44d8-9602-b0abafc4654b.png)
 
+***Last updated: October 11, 2021***
+
 As part of the capstone experience for education majors, they must submit a collection of 15 items (5 Planning, 5 Instruction, and 5 Assessment), each with very specific criteria (edTPA Education Teacher Performance Assessment). Missing items or submitted items that do not conform to the criteria prevent a successful submission. The software for this project would develop a submission checker. All aspects of the submission that can be automatically checked, would be checked and approved by the software. All aspects of the submission that cannot be easily checked, would be interactively queried of the user by the software. This would be a Turbo-Tax-style application that would walk the user through the submission process. There is a second (extended) component to the project that would involve a more complex algorithm to do analysis on parts of the application and help the students improve their submission. The first part would be the primary focus of the effort; the second component would integrated into the checker –it would be a greater challenge, but not the primary focus of the project.
 
 ## ⚙️ Tech stack
